@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KitchenBreeze Zutatenfinder</title>
+
+
+<style>
+
+    .logo-container {
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.logo {
+    width:180px;
+}
+
+
+/* Einführung */
+
+.intro {
+    text-align:center;
+    color:#ddd;
+    margin-bottom:35px;
+}
+
+
+.steps-info {
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+
+    margin-bottom:40px;
+
+}
+
+
+.info-step {
+
+    background:#171718;
+
+    padding:20px;
+
+    border-radius:16px;
+
+    width:220px;
+
+    text-align:center;
+
+}
+
+
+.info-step span {
+
+    display:block;
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+}
+
+body {
+    margin:0;
+    font-family:Georgia, serif;
+    background:#0f0f10;
+    color:#f2eee9;
+}
+
+
+.container {
+    max-width:900px;
+    margin:auto;
+    padding:30px;
+}
+
+
+h1 {
+    text-align:center;
+    font-weight:300;
+    font-size:40px;
+}
+
+
+.back {
+    color:#b8b2aa;
+    text-decoration:none;
+}
+
+
+/* SUCHFELD */
+
+.search-box {
+    margin-top:40px;
+    text-align:center;
+}
+
+
+#ingredientInput {
+
+    width:80%;
+    max-width:500px;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    border:1px solid #333;
+
+    background:#171718;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+
+
+/* AUSWAHL */
+
+.options {
+
+    margin:25px auto;
+
+    text-align:center;
+
+}
+
+
+
+.mode-option {
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    color:#ddd;
+
+    cursor:pointer;
+
+    margin:12px 0;
+
+}
+
+
+
+.mode-option input {
+
+    display:none;
+
+}
+
+
+
+.mode-option span {
+
+    width:18px;
+
+    height:18px;
+
+    border:2px solid #777;
+
+    border-radius:4px;
+
+    display:inline-block;
+
+    position:relative;
+
+}
+
+
+
+.mode-option input:checked + span {
+
+    background:white;
+
+    border-color:white;
+
+}
+
+
+
+.mode-option input:checked + span::after {
+
+    content:"✓";
+
+    color:#111;
+
+    position:absolute;
+
+    font-size:14px;
+
+    left:2px;
+
+    top:-2px;
+
+}
+
+
+
+/* BUTTON */
+
+button {
+
+    background:#171718;
+
+    border:1px solid #333;
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+}
+
+
+
+button:hover {
+
+    background:#222;
+
+}
+
+
+
+/* REZEPTE */
+
+.recipe-card {
+
+    display:flex;
+
+    gap:20px;
+
+    background:#171718;
+
+    padding:15px;
+
+    border-radius:16px;
+
+    margin-top:20px;
+
+}
+
+
+
+.recipe-card img {
+
+    width:120px;
+
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+}
+
+
+
+.recipe-card h2 {
+
+    margin:0;
+
+    font-weight:300;
+
+}
+
+
+
+a {
+
+    color:white;
+
+    text-decoration:none;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+    <a class="back" href="index.html">
+← Zurück
+</a>
+
+
+
+<h1>
+Zutatenfinder
+</h1>
+
+<div class="intro">
+
+
+<p>
+Du hast Zutaten zuhause und weißt nicht, was du damit kochen sollst?
+Der KitchenBreeze Zutatenfinder hilft dir dabei, passende Rezepte zu entdecken.
+</p>
+
+</div>
+
+
+<div class="finder-steps">
+
+<p>
+1. Schreibe die Zutaten, die du zuhause hast, in das Suchfeld.</p>
+
+<p>
+    2. Wähle aus ob alle oder nur einzelne Zutaten enthalten sein sollen</p>
+
+
+<p>
+    3. Wähle das passende Rezept aus und Los geht's mit dem Kochen!</p>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div class="search-box">
+
+
+<input 
+id="ingredientInput"
+placeholder="z.B. Kartoffeln Käse Tomaten"
+>
+
+
+
+<div class="options">
+
+
+<label class="mode-option">
+
+<input 
+type="radio" 
+name="mode" 
+value="all" 
+checked
+>
+
+<span></span>
+
+Alle Zutaten müssen enthalten sein
+
+</label>
+
+
+
+<label class="mode-option">
+
+<input 
+type="radio" 
+name="mode" 
+value="one"
+>
+
+<span></span>
+
+Mindestens eine Zutat reicht
+
+</label>
+
+
+
+<br>
+
+
+<button onclick="searchIngredients()">
+🔍 Suchen
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+<div id="results"></div>
+
+
+
+</div>
+
+
+
+<script src="recipes.js"></script>
+
+
+
+<script>
+
+
+function getAllIngredients(recipe){
+
+    if(!recipe.ingredients){
+        return [];
+    }
+
+
+    if(Array.isArray(recipe.ingredients)){
+        return recipe.ingredients;
+    }
+
+
+    let all=[];
+
+
+    Object.values(recipe.ingredients)
+    .forEach(group=>{
+
+        if(Array.isArray(group)){
+            all.push(...group);
+        }
+
+    });
+
+
+    return all;
+
+}
+
+
+
+
+
+function searchIngredients() {
+
+
+    const input = document
+        .getElementById("ingredientInput")
+        .value
+        .toLowerCase();
+
+
+
+    const wanted = input
+        .split(/[\s,]+/)
+        .map(i => i.trim())
+        .filter(i => i);
+
+
+
+    const mode = document.querySelector(
+        'input[name="mode"]:checked'
+    ).value;
+
+
+
+    const results = document.getElementById("results");
+
+    results.innerHTML = "";
+
+
+
+    let matches = [];
+
+
+
+    RECIPES.forEach(recipe => {
+
+
+
+        const ingredients = getAllIngredients(recipe)
+           .map(i => 
+    i.replace(/<[^>]*>/g,"").toLowerCase()
+);
+
+
+
+        let found = [];
+
+        let missing = [];
+
+
+
+        wanted.forEach(search => {
+
+
+
+            const match = ingredients.find(i => {
+
+    const cleanIngredient = i
+        .replace(/[0-9.,\/½¼¾]+/g, "")
+        .replace(/\b(g|kg|ml|l|tl|el)\b/g, "")
+        .trim()
+        .toLowerCase();
+
+    const a = cleanIngredient.replace(/en$|e$|n$|s$/, "");
+    const b = search.replace(/en$|e$|n$|s$/, "");
+
+    // Sonderfall: "Lauch" soll NICHT "Knoblauch" finden
+    if (b === "lauch" && cleanIngredient.includes("knoblauch")) {
+        return false;
+    }
+
+  // kurze Begriffe nur als eigenes Wort suchen
+// kurze Suchbegriffe: nur Wortanfänge erlauben
+if (b.length <= 3) {
+
+    const words = a.split(/\s+/);
+
+    return words.some(word => 
+        word.startsWith(b)
+    );
+
+}
+
+
+// längere Begriffe dürfen enthalten sein
+return a.includes(b);
+
+
+// längere Begriffe dürfen Teil eines Wortes sein
+return (
+    a.includes(b)
+);
+
+});
+
+
+
+            if(match){
+
+                found.push(search);
+
+            } else {
+
+                missing.push(search);
+
+            }
+
+
+
+        });
+
+
+
+
+        let ok;
+
+
+
+        if(mode === "all"){
+
+            ok = missing.length === 0;
+
+        } else {
+
+            ok = found.length > 0;
+
+        }
+
+
+
+        if(ok){
+
+            matches.push({
+
+                recipe,
+                found,
+                missing
+
+            });
+
+        }
+
+
+
+    });
+
+
+
+
+    matches.sort((a,b)=>
+
+        a.missing.length - b.missing.length
+
+    );
+
+
+
+
+    results.innerHTML = `
+
+    <p style="
+    text-align:center;
+    color:#b8b2aa;
+    margin-top:20px;
+    ">
+
+    ${matches.length} passende Rezepte gefunden
+
+    </p>
+
+    `;
+
+
+
+
+    matches.forEach(match=>{
+
+
+        results.innerHTML += `
+
+
+<a href="recipe.html?id=${match.recipe.id}">
+
+
+<div class="recipe-card">
+
+
+<img src="${match.recipe.image}">
+
+
+<div>
+
+
+<h2>${match.recipe.title}</h2>
+
+
+<p>${match.recipe.description}</p>
+
+
+
+${
+match.missing.length === 0
+
+?
+
+`
+<p style="color:#8fd18f;">
+✅ Alle Zutaten vorhanden
+</p>
+`
+
+:
+
+`
+<p style="color:#e5c66b;">
+Fehlt noch:<br>
+${match.missing.join(", ")}
+</p>
+`
+
+}
+
+
+
+</div>
+
+
+</div>
+
+
+</a>
+
+
+`;
+
+
+
+});
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

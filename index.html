@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KitchenBreeze</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ☰ Menü Button -->
+<div id="menuBtn" class="menu-btn">
+    ☰
+</div>
+
+<!-- Menü -->
+<div id="sideMenu" class="side-menu">
+
+    <div class="menu-header">
+        KitchenBreeze
+    </div>
+
+    <a href="index.html"> Rezepte</a>
+
+    <a href="zutatenfinder.html"> Zutatenfinder</a>
+
+<a href="favoriten.html">❤️ Favoriten</a>
+</div>
+
+<!-- Hintergrund -->
+<div id="overlay" class="overlay"></div>
+
+<!-- 🌿 HERO -->
+<div class="hero">
+    <img src="images/logo1.png" alt="KitchenBreeze">
+    <p>Selbst gemacht schmeckt einfach besser.</p>
+</div>
+
+<!-- 🔍 SEARCH -->
+<div class="search">
+    <input id="searchInput" type="text" placeholder="Rezept suchen...">
+</div>
+
+<!-- 🍽️ FILTER -->
+<div class="filter-container">
+
+    <div class="filter-button" id="filterBtn">
+        Kategorien ▾
+    </div>
+
+    <div class="filter-dropdown" id="filterDropdown">
+
+       <div class="filter-item" data-cat="all"> Alle</div>
+       <div class="filter-item" data-cat="Pasta">Pasta</div>
+          <div class="filter-item" data-cat="Reis">Reis</div>
+       <div class="filter-item" data-cat="Suppen & Eintöpfe">Suppen & Eintöpfe</div>
+
+       <div class="filter-item" data-cat="Salate"> Salate</div>
+        
+             <div class="filter-item" data-cat="Beilagen">Beilagen</div>
+          <div class="filter-item" data-cat="Aufstriche & Dips">Aufstriche & Dips</div>
+        <div class="filter-item" data-cat="Snacks">Snacks</div>
+        <div class="filter-item" data-cat="süße Hauptgerichte">süße Hauptgerichte</div>
+        <div class="filter-item" data-cat="süßes Gebäck">süßes Gebäck</div>
+         <div class="filter-item" data-cat="herzhaftes Gebäck">herzhaftes Gebäck</div>
+          <div class="filter-item" data-cat="Fleisch">Fleisch</div>
+        <div class="filter-item" data-cat="Fisch">Fisch</div>
+        <div class="filter-item" data-cat="Vegetarisch">Vegetarisch</div>
+        <div class="filter-item" data-cat="Vegan">Vegan</div>
+
+    </div>
+</div>
+
+<!-- 🍽️ GRID -->
+<div class="grid" id="recipeGrid"></div>
+
+<!-- 🧾 FOOTER -->
+<footer>
+    © 2026 KitchenBreeze – Alle Rechte vorbehalten
+</footer>
+
+<!-- ✔ REZEPTE LADEN -->
+<script src="recipes.js"></script>
+
+<script>
+
+console.log("KitchenBreeze läuft");
+
+let selectedCategories = ["all"];
+
+const filterItems = document.querySelectorAll(".filter-item");
+const dropdown = document.getElementById("filterDropdown");
+const btn = document.getElementById("filterBtn");
+const grid = document.getElementById("recipeGrid");
+const searchInput = document.getElementById("searchInput");
+
+/* =========================
+DROPDOWN
+========================= */
+
+btn.addEventListener("click", (e) => {
+    dropdown.classList.toggle("active");
+    e.stopPropagation();
+});
+
+document.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target) && e.target !== btn) {
+        dropdown.classList.remove("active");
+    }
+});
+
+/* =========================
+FILTER
+========================= */
+
+filterItems.forEach(item => {
+
+    item.addEventListener("click", () => {
+
+        const cat = item.dataset.cat;
+
+        if (cat === "all") {
+
+            selectedCategories = ["all"];
+
+            filterItems.forEach(i => i.classList.remove("active"));
+            item.classList.add("active");
+
+            render();
+            return;
+        }
+
+        selectedCategories = selectedCategories.filter(c => c !== "all");
+
+        if (selectedCategories.includes(cat)) {
+            selectedCategories = selectedCategories.filter(c => c !== cat);
+            item.classList.remove("active");
+        } else {
+            selectedCategories.push(cat);
+            item.classList.add("active");
+        }
+
+        if (selectedCategories.length === 0) {
+            selectedCategories = ["all"];
+            document.querySelector('[data-cat="all"]').classList.add("active");
+        }
+
+        render();
+    });
+});
+
+/* =========================
+SEARCH
+========================= */
+
+searchInput.addEventListener("input", render);
+
+/* =========================
+RENDER
+========================= */
+
+function render() {
+
+    if (typeof RECIPES === "undefined") {
+        console.error("RECIPES fehlt! recipes.js prüfen!");
+        return;
+    }
+
+    grid.innerHTML = "";
+
+    RECIPES
+    .slice() // 🔥 Kopie (wichtig!)
+    .sort((a, b) => Number(b.id) - Number(a.id)) // 🔥 NEU: neueste oben
+    .filter(r => {
+    if (selectedCategories.includes("all")) {
+        return true;
+    }
+
+    return selectedCategories.some(cat =>
+        r.category.includes(cat)
+    );
+})
+    .filter(r =>
+        r.title.toLowerCase().includes(searchInput.value.toLowerCase())
+    )
+    .forEach(r => {
+
+        grid.innerHTML += `
+        <a class="card" href="recipe.html?id=${r.id}">
+            <img src="${r.image}" alt="${r.title}">
+            <div class="card-content">
+                <h2>${r.title}</h2>
+                <p>${r.description}</p>
+            </div>
+        </a>
+        `;
+    });
+
+}
+
+render();
+
+/* =========================
+☰ MENÜ
+========================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const sideMenu = document.getElementById("sideMenu");
+const overlay = document.getElementById("overlay");
+
+menuBtn.addEventListener("click", () => {
+    sideMenu.classList.toggle("open");
+    overlay.classList.toggle("show");
+});
+
+overlay.addEventListener("click", () => {
+    sideMenu.classList.remove("open");
+    overlay.classList.remove("show");
+});
+
+</script>
+
+</body>
+</html>

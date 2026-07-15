@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KitchenBreeze Rezept</title>
+
+
+<style>
+.step-images {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:10px;
+}
+
+.step-image {
+    width:280px;
+    height:280px;
+    object-fit:contain;
+    border-radius:20px;
+}
+    
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background-color: #0f0f10;
+    color: #f2eee9;
+}
+
+/* TOP */
+.topbar {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    color: #b8b2aa;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* HERO */
+.hero-img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* TITLE */
+.title {
+    font-size: 40px;
+    font-weight: 300;
+    margin: 20px 0 5px;
+    text-align: center;
+}
+
+/* TIME + INFO */
+.time-row,
+.info-row {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 60px;
+    text-align: center;
+    width: fit-content;
+    margin: 25px auto;
+}
+
+.time-row strong {
+    display: block;
+    margin-top: 6px;
+    font-size: 18px;
+    color: white;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    background: #171718;
+    border: 1px solid #2a2a2a;
+    color: #f2eee9;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #222;
+}
+
+/* CARD */
+.card {
+    background: #171718;
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* INGREDIENTS */
+.ingredient-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ingredient-list li {
+    margin-bottom: 10px;
+}
+
+.ingredient-list label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: #ddd;
+}
+
+.ingredient-list input {
+    width: 18px;
+    height: 18px;
+    accent-color: white;
+}
+
+/* STEPS */
+.step {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.step-number {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    border-radius: 50%;
+    background: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-text {
+    color: #ddd;
+    flex:1;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="content"></div>
+
+<script src="recipes.js"></script>
+
+<script>
+
+const id = new URLSearchParams(window.location.search).get("id");
+const recipe = RECIPES.find(r => r.id === id);
+
+const container = document.getElementById("content");
+
+if(!recipe){
+
+    container.innerHTML = "<p style='text-align:center;'>Rezept nicht gefunden</p>";
+
+} else {
+
+container.innerHTML = `
+
+<div class="topbar">
+    <a class="back" href="index.html">← Zur Übersicht</a>
+</div>
+
+<div class="container">
+
+    <img class="hero-img" src="${recipe.image}">
+
+    <h1 class="title">${recipe.title}</h1>
+
+    <!-- ZEITEN -->
+    <div class="time-row">
+
+        <div>
+            ⏱ Zubereitung<br>
+            <strong>${recipe.time.preparation}</strong>
+        </div>
+
+        ${recipe.time.cooking ? `
+        <div>
+            🍳 Kochen<br>
+            <strong>${recipe.time.cooking}</strong>
+        </div>` : ""}
+
+        ${recipe.time.baking ? `
+        <div>
+            🔥 Backen<br>
+            <strong>${recipe.time.baking}</strong>
+        </div>` : ""}
+
+        ${recipe.time.rising ? `
+<div>
+    🍞 Gehzeit<br>
+    <strong>${recipe.time.rising}</strong>
+</div>` : ""}
+
+        ${recipe.time.cooling ? `
+        <div>
+            ❄️ Abkühlen<br>
+            <strong>${recipe.time.cooling}</strong>
+        </div>` : ""}
+
+        
+        <div>
+            ⏳ Gesamt<br>
+            <strong>${recipe.time.total}</strong>
+        </div>
+
+    </div>
+
+    <!-- INFO -->
+    <div class="info-row">
+        <div>👥 ${recipe.portions}</div>
+        <div>🔥 ${recipe.difficulty}</div>
+        <div>🍝 ${recipe.category}</div>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="buttons">
+        <button onclick="window.print()">🖨️ Drucken</button>
+      <button id="favoriteBtn">
+    ❤️ Favorit
+</button>
+    </div>
+
+    <p style="text-align:center; color:#b8b2aa;">
+        ${recipe.description}
+    </p>
+
+    <!-- ZUTATEN -->
+    <div class="card">
+        <h2>Zutaten</h2>
+
+        ${
+            Array.isArray(recipe.ingredients)
+
+            ? `
+                <ul class="ingredient-list">
+                    ${recipe.ingredients.map(i => `
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>${i}</span>
+                            </label>
+                        </li>
+                    `).join("")}
+                </ul>
+            `
+
+            : Object.entries(recipe.ingredients).map(([section, items]) => `
+                <h3 style="margin-top:15px;">${section}</h3>
+
+                <ul class="ingredient-list">
+                    ${items.map(i => `
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>${i}</span>
+                            </label>
+                        </li>
+                    `).join("")}
+                </ul>
+            `).join("")
+        }
+
+    </div>
+
+    <!-- ZUBEREITUNG -->
+    <div class="card">
+        <h2>Zubereitung</h2>
+${recipe.steps.map((step, i) => `
+
+<div class="step">
+
+    <div class="step-number">${i + 1}</div>
+
+    <div class="step-text">
+
+        <p>${typeof step === "string" ? step : step.text}</p>
+
+        ${
+            typeof step !== "string" && step.images
+            ? `
+           <div class="step-images" style="width:100%;">
+                ${step.images.map(img => `
+                    <img src="${img}" class="step-image">
+                `).join("")}
+            </div>
+            `
+            : ""
+        }
+
+    </div>
+
+</div>
+
+`).join("")}
+
+
+
+
+
+    ${recipe.tips ? `
+    <div class="card">
+        <h2>💡 Tipps</h2>
+        <ul>
+            ${recipe.tips.map(t => `<li>${t}</li>`).join("")}
+        </ul>
+    </div>
+    ` : ""}
+
+</div>
+
+`;
+
+}
+
+// FAVORITEN
+
+const favoriteBtn = document.getElementById("favoriteBtn");
+
+let favorites = JSON.parse(
+    localStorage.getItem("favorites")
+) || [];
+
+
+function updateFavoriteButton(){
+
+    if(favorites.includes(recipe.id)){
+
+        favoriteBtn.innerHTML = "❤️ Gespeichert";
+
+    } else {
+
+        favoriteBtn.innerHTML = "♡ Favorit";
+
+    }
+
+}
+
+
+favoriteBtn.onclick = function(){
+
+    if(favorites.includes(recipe.id)){
+
+        favorites = favorites.filter(
+            id => id !== recipe.id
+        );
+
+    } else {
+
+        favorites.push(recipe.id);
+
+    }
+
+
+    localStorage.setItem(
+        "favorites",
+        JSON.stringify(favorites)
+    );
+
+
+    updateFavoriteButton();
+
+};
+
+
+updateFavoriteButton();
+
+</script>
+
+</body>
+</html>

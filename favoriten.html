@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Meine Favoriten - KitchenBreeze</title>
+
+<style>
+
+body {
+    margin:0;
+    font-family:Georgia, serif;
+    background:#0f0f10;
+    color:#f2eee9;
+}
+
+.container {
+    max-width:900px;
+    margin:auto;
+    padding:30px;
+}
+
+h1 {
+    text-align:center;
+    font-weight:300;
+}
+
+.back {
+    color:#b8b2aa;
+    text-decoration:none;
+}
+
+
+.recipe-card {
+
+    display:flex;
+    gap:20px;
+
+    background:#171718;
+
+    padding:15px;
+
+    border-radius:16px;
+
+    margin-top:20px;
+
+}
+
+
+.recipe-card img {
+
+    width:120px;
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+}
+
+
+a {
+    color:white;
+    text-decoration:none;
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<a class="back" href="index.html">
+← Zurück
+</a>
+
+
+<h1>
+❤️ Meine Favoriten
+</h1>
+
+
+<div id="favorites"></div>
+
+
+</div>
+
+
+
+<script src="recipes.js"></script>
+
+
+<script>
+
+
+const container = document.getElementById("favorites");
+
+
+const favorites = JSON.parse(
+    localStorage.getItem("favorites")
+) || [];
+
+
+
+const recipes = RECIPES.filter(recipe =>
+    favorites.includes(recipe.id)
+);
+
+
+
+if(recipes.length === 0){
+
+    container.innerHTML = `
+    <p style="text-align:center;color:#b8b2aa;">
+    Noch keine Favoriten gespeichert.
+    </p>
+    `;
+
+}
+
+
+
+recipes.forEach(recipe => {
+
+
+container.innerHTML += `
+
+<a href="recipe.html?id=${recipe.id}">
+
+
+<div class="recipe-card">
+
+
+<img src="${recipe.image}">
+
+
+<div>
+
+<h2>${recipe.title}</h2>
+
+<p>${recipe.description}</p>
+
+
+</div>
+
+
+</div>
+
+
+</a>
+
+
+`;
+
+
+});
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -501,7 +501,7 @@ id: "9",
     id: "10",
     title: "Dreierlei Karlsbader Schnitte",
     category: ["herzhaftes Gebäck"],
-    image: "images/karl.jpeg",
+    image: "images/Karl.jpeg",
     time:{
         preparation:"5 min",
         baking:"15 min",

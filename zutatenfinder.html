@@ -491,9 +491,10 @@ function searchIngredients() {
 
 
         const ingredients = getAllIngredients(recipe)
-           .map(i => 
-    i.replace(/<[^>]*>/g,"").toLowerCase()
-);
+            .map(i =>
+                i.replace(/<[^>]*>/g, "")
+                .toLowerCase()
+            );
 
 
 
@@ -509,43 +510,67 @@ function searchIngredients() {
 
             const match = ingredients.find(i => {
 
-    const cleanIngredient = i
-        .replace(/[0-9.,\/½¼¾]+/g, "")
-        .replace(/\b(g|kg|ml|l|tl|el)\b/g, "")
-        .trim()
-        .toLowerCase();
 
-    const a = cleanIngredient.replace(/en$|e$|n$|s$/, "");
-    const b = search.replace(/en$|e$|n$|s$/, "");
-
-    // Sonderfall: "Lauch" soll NICHT "Knoblauch" finden
-    if (b === "lauch" && cleanIngredient.includes("knoblauch")) {
-        return false;
-    }
-
-  // kurze Begriffe nur als eigenes Wort suchen
-// kurze Suchbegriffe: nur Wortanfänge erlauben
-if (b.length <= 3) {
-
-    const words = a.split(/\s+/);
-
-    return words.some(word => 
-        word.startsWith(b)
-    );
-
-}
+                const cleanIngredient = i
+                    .replace(/[0-9.,\/½¼¾]+/g, "")
+                    .replace(/\b(g|kg|ml|l|tl|el)\b/g, "")
+                    .trim()
+                    .toLowerCase();
 
 
-// längere Begriffe dürfen enthalten sein
-return a.includes(b);
+
+                let a = cleanIngredient;
+                let b = search;
 
 
-// längere Begriffe dürfen Teil eines Wortes sein
-return (
-    a.includes(b)
-);
 
-});
+                // Sonderfall: Lauch soll nicht Knoblauch finden
+                if (
+                    b === "lauch" &&
+                    a.includes("knoblauch")
+                ) {
+                    return false;
+                }
+
+
+
+                // Wörter einzeln prüfen
+                const words = a.split(/\s+/);
+
+
+
+                // kurze Begriffe (Ei, Öl, Salz)
+                // nur echte Wörter oder einfache Pluralformen
+                if (b.length <= 3) {
+
+                    return words.some(word => {
+
+                        return (
+                            word === b ||
+                            word === b + "e" ||
+                            word === b + "er" ||
+                            word === b + "en"
+                        );
+
+                    });
+
+                }
+
+
+
+                // längere Begriffe
+                return words.some(word => {
+
+                    return (
+                        word === b ||
+                        word.startsWith(b) ||
+                        word.includes(b)
+                    );
+
+                });
+
+
+            });
 
 
 
@@ -601,11 +626,13 @@ return (
 
 
 
-    matches.sort((a,b)=>
+
+    matches.sort((a,b) =>
 
         a.missing.length - b.missing.length
 
     );
+
 
 
 
@@ -627,7 +654,9 @@ return (
 
 
 
-    matches.forEach(match=>{
+
+    matches.forEach(match => {
+
 
 
         results.innerHTML += `
@@ -689,7 +718,7 @@ ${match.missing.join(", ")}
 
 
 
-});
+    });
 
 
 }

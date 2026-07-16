@@ -76,11 +76,19 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    gap: 25px;
     text-align: center;
     width: 100%;
     margin: 25px auto;
 }
+
+.time-row > div,
+.info-row > div {
+    text-align: center;
+    min-width: 120px;
+}
+
 .time-row strong {
     display: block;
     margin-top: 6px;
@@ -171,13 +179,22 @@ button:hover {
         font-size: 30px;
     }
 
-    .time-row,
-    .info-row {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        width: 100%;
-    }
+   .time-row,
+.info-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.time-row > div,
+.info-row > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
     .time-row strong {
         font-size: 16px;

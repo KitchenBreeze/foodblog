@@ -2356,7 +2356,7 @@ id: "9",
 {
     id: "43",
     title: "Marillenknödel",
-    category: ["süßes Gebäck", "Dessert", "Vegetarisch"], 
+    category: ["süßes Gebäck"], 
     image: "images/mari.jpeg",
     time:{
         preparation: "20 min",
@@ -2421,4 +2421,70 @@ id: "9",
     ]
 },
 
+{
+    id: "44",
+    title: "Gnocchisalat",
+    category: ["Salate",], 
+    image: "images/gs.jpeg",
+    time:{
+        preparation: "20 min",
+        cooking: "10 min",
+        total:"30 min"
+    },
+    portions: "6 Portionen",
+    difficulty: "Einfach",
+    rating: 4.6,
+    description: "Fluffige Quarkknödel mit fruchtig-süßer Füllung und knusprigem Mantel.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients:{
+
+
+    "Teig": [
+
+        "250g Quark",
+        "125g Mehl (Type 405)",
+        "1 Ei",
+        "25g Zucker",
+        "1 TL Vanillezucker",
+        "50g weiche Butter",
+        "1 Prise Salz"
+
+    ],
+
+    "Füllung": [
+        "6 Aprikosen",
+        "3 TL Zucker"
+    ],
+
+    "Topping": [
+        "80g Semmelbrösel",
+        "30g Butter",
+        "1 Prise Zimt",
+        "1 TL Zucker",
+        "1 Prise Salz"
+    ]
+
+    },
+
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+
+        "Den Quark in ein sauberes Küchentuch geben und gut ausdrücken.",
+
+        "Für den Teig das Ei mit dem Zucker und dem Vanillezucker mit einem Schneebesen leicht schaumig schlagen. Den ausgedrückten Quark und das Salz unterrühren. Dann das Mehl und die Butter in kleinen Würfeln dazugeben und solange mit einem Löffel verrühren, bis keine großen Butterstückchen mehr zu sehen sind.",
+
+        "Den Teig abdecken und ca. 30min im Kühlschrank ruhen lassen. In der Zwischenzeit einen großen Topf mit leicht gesalzenem Wasser zum Kochen bringen. Die Aprikosen waschen, halbieren und die Kerne entfernen.",
+
+        "In einer kleinen Pfanne die Butter für das Topping schmelzen, bis sie schäumt. Die Brösel mit Zucker, Zimt und Salz vermengen, in der schäumenden Butter ca. 5min knusprig anbraten und anschließend auf einen Teller geben.",
+
+        "Den Teig in 6 Portionen à ca. 80g teilen. Die Hände leicht befeuchten und jeweils eine Portion zu einer Kugel formen. Die Kugel in der Hand flach drücken, eine halbe Aprikose in die Mitte legen, je 1/2 TL Zucker hineingeben, den Teig darum klappen bzw. verstreichen, vorsichtig verschließen und wieder zu einer Kugel formen.",
+
+        "Die Hitze des kochenden Wassers reduzieren, sodass es nur noch siedet. Die Knödel vorsichtig hineingeben, den Deckel schließen und bei mittlerer Hitze ca. 20min ziehen lassen, bis sie aufgestiegen sind und etwas an der Oberfläche schwimmen. <i>(Falls sie nach 20min noch nicht oben schwimmen, vorsichtig mit einer Schaumkelle durchs Wasser fahren, da sie eventuell am Boden festkleben.)</i>",
+
+        "Die Knödel mit einer Schaumkelle herausnehmen, etwas abtropfen lassen und anschließend in den Bröseln wälzen. Mit etwas Puderzucker bestreuen und nach Belieben mit Vanillesoße servieren."
+
+    ]
+},
 ];

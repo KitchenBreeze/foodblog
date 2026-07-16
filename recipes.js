@@ -2424,7 +2424,7 @@ id: "9",
 {
     id: "44",
     title: "Gnocchisalat",
-    category: ["Salate",], 
+    category: ["Salate"], 
     image: "images/gs.jpeg",
     time:{
         preparation: "20 min",
@@ -2434,35 +2434,39 @@ id: "9",
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Fluffige Quarkknödel mit fruchtig-süßer Füllung und knusprigem Mantel.",
+    description: "Knuspriger Gnocchi-Salat mit cremigem Avocado-Dressing, frischen Kirschtomaten, würzigem Bacon und gehobeltem Parmesan.",
 
     /* 🍽️ ZUTATEN */
     ingredients:{
 
 
-    "Teig": [
+    "Gnocchi": [
 
-        "250g Quark",
-        "125g Mehl (Type 405)",
-        "1 Ei",
-        "25g Zucker",
-        "1 TL Vanillezucker",
-        "50g weiche Butter",
-        "1 Prise Salz"
+        "600g Mini-Gnocchi",
+        "1 TL Paprikapulver",
+        "1 EL Öl",
+        "Salz",
+        "Pfeffer"
 
     ],
 
-    "Füllung": [
-        "6 Aprikosen",
-        "3 TL Zucker"
+    "Salat": [
+        "400g Kirschtomaten",
+        "150g Bacon",
+        "80g Rucola",
+        "1 rote Zwiebel",
+        "35g gehobelter Parmesan"
     ],
 
-    "Topping": [
-        "80g Semmelbrösel",
-        "30g Butter",
-        "1 Prise Zimt",
-        "1 TL Zucker",
-        "1 Prise Salz"
+    "Dressing": [
+        "1 Avocado",
+        "1 kleine Knoblauchzehe",
+        "2 EL Olivenöl",
+        "12 EL Wasser",
+        "1 TL Balsamicoessig",
+        "1/2 TL Chiliflocken",
+        "Salz",
+        "Pfeffer"
     ]
 
     },
@@ -2471,19 +2475,15 @@ id: "9",
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
 
-        "Den Quark in ein sauberes Küchentuch geben und gut ausdrücken.",
+        "1 EL Öl in einer großen Pfanne erhitzen. Das Paprikapulver einrühren, bis es duftet. Die Gnocchi dazugeben, mit Salz und Pfeffer würzen und unter gelegentlichem Wenden ca. 10min knusprig anbraten.",
 
-        "Für den Teig das Ei mit dem Zucker und dem Vanillezucker mit einem Schneebesen leicht schaumig schlagen. Den ausgedrückten Quark und das Salz unterrühren. Dann das Mehl und die Butter in kleinen Würfeln dazugeben und solange mit einem Löffel verrühren, bis keine großen Butterstückchen mehr zu sehen sind.",
+        "In der Zwischenzeit die Tomaten dritteln und die Zwiebel schälen und fein hacken. Beides in eine große Schüssel geben und etwas abkühlen lassen. Den Rucola waschen, gut trocknen und gegebenenfalls etwas kleiner zupfen.",
 
-        "Den Teig abdecken und ca. 30min im Kühlschrank ruhen lassen. In der Zwischenzeit einen großen Topf mit leicht gesalzenem Wasser zum Kochen bringen. Die Aprikosen waschen, halbieren und die Kerne entfernen.",
+        "Den Bacon auf ein mit Backpapier belegtes Backblech legen und im Ofen bei höchster Grillstufe im oberen Drittel ca. 6min knusprig braten. Anschließend herausnehmen und zwischen Küchenpapier abkühlen lassen.",
 
-        "In einer kleinen Pfanne die Butter für das Topping schmelzen, bis sie schäumt. Die Brösel mit Zucker, Zimt und Salz vermengen, in der schäumenden Butter ca. 5min knusprig anbraten und anschließend auf einen Teller geben.",
+        "Für das Dressing die Avocado schälen, den Kern entfernen, den Knoblauch schälen und zusammen mit den restlichen Dressing-Zutaten in einen Food Processor geben. Alles cremig pürieren.",
 
-        "Den Teig in 6 Portionen à ca. 80g teilen. Die Hände leicht befeuchten und jeweils eine Portion zu einer Kugel formen. Die Kugel in der Hand flach drücken, eine halbe Aprikose in die Mitte legen, je 1/2 TL Zucker hineingeben, den Teig darum klappen bzw. verstreichen, vorsichtig verschließen und wieder zu einer Kugel formen.",
-
-        "Die Hitze des kochenden Wassers reduzieren, sodass es nur noch siedet. Die Knödel vorsichtig hineingeben, den Deckel schließen und bei mittlerer Hitze ca. 20min ziehen lassen, bis sie aufgestiegen sind und etwas an der Oberfläche schwimmen. <i>(Falls sie nach 20min noch nicht oben schwimmen, vorsichtig mit einer Schaumkelle durchs Wasser fahren, da sie eventuell am Boden festkleben.)</i>",
-
-        "Die Knödel mit einer Schaumkelle herausnehmen, etwas abtropfen lassen und anschließend in den Bröseln wälzen. Mit etwas Puderzucker bestreuen und nach Belieben mit Vanillesoße servieren."
+        "Die Gnocchi mit den Tomaten, dem Rucola, dem gehobelten Parmesan und dem Dressing in eine große Schüssel geben und gut vermengen. Den Bacon klein schneiden und über dem Salat verteilen."
 
     ]
 },

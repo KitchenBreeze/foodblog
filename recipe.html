@@ -207,6 +207,58 @@ button:hover {
     }
 
 }
+@media print {
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .topbar,
+    .buttons,
+    .back {
+        display: none;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .hero-img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+    }
+
+    .title {
+        color: black;
+        font-size: 32px;
+    }
+
+    .card {
+        background: white;
+        border: 1px solid #ddd;
+        color: black;
+    }
+
+    .card p,
+    .step-text,
+    .description {
+        color: black !important;
+    }
+
+    .time-row,
+    .info-row {
+        color: black;
+    }
+
+    .step-number {
+        background: #ddd;
+        color: black;
+    }
+
+}
 
 </style>
 

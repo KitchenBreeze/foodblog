@@ -2578,4 +2578,63 @@ id: "9",
         }
     ]
 },
+
+{
+    id: "46",
+    title: "Gyrospasta",
+    category: ["Pasta", "Fleisch",], 
+    image: "images/gyp.jpeg",
+    time:{
+        preparation: "10 min",
+        cooling: "1 std 30 min",
+        cooking: "20 min",
+        total:"2 std"
+    },
+    portions: "6 Portionen",
+    difficulty: "Einfach",
+    rating: 4.6,
+    description: "Cremige Spaghetti mit würzigem Hähnchen und leckerer Käsekruste.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients:{
+
+
+    "Gyros": [
+
+        "400g Hähnchengeschnetzeltes",
+        "4 EL Olivenöl",
+        "1 EL Weißweinessig",
+        "1 TL Paprikapulver",
+        "1 1/2 TL getrockneter Oregano",
+        "1/2 TL getrockneter Thymian",
+        "1/4 TL getrockneter Majoran",
+        "2 Knoblauchzehen",
+        "1/2 große weiße Zwiebel",
+        "1 TL Salz",
+        "Pfeffer"
+
+    ],
+
+    "Außerdem": [
+        "500g Spaghetti (Nr. 5)",
+        "250ml Kochsahne",
+        "250g geriebener Gouda",
+    ],
+
+    },
+
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+"Die Hähnchenstücke jeweils in dünne Scheiben schneiden. Für die Marinade die Zwiebel und den Knoblauch schälen und fein hacken.  Die restlichen Zutaten für die Marinade mit dem Öl vermengen und zusammen mit dem Knoblauch, der Zwiebel und dem Fleisch in eine Box mit Deckel geben. das Fleisch mit der Würze etwas einmassieren, abdecken und für mind. 1 1/2 Stunden im Kühlschrank ziehen lassen.",
+
+"Kurz vor Ende der Ruhezeit einen Topf mit Salzwasser aufsetzen und einen Topf ohne Öl erhitzen.",
+
+"Das Fleisch, mitsamt der Marinade, in dem Topf ohne Öl, unter gelegentlichem Rühren ca. 8min scharf anbraten. In der Zwischenzeit die Nudeln in dem kochenden Salzwasser ca. 2min bis vor dem Ende der auf der Packung angegebenen Garzeit kochen.",
+
+"Das Fleisch mit der Sahne ablöschen, die Nudeln unterrühren, 1 Kelle Pastawasser dazugeben, aufkochen und ca. 5 fertig kochen, bis die Nudeln al dente sind und die Soße cremig.",
+
+"Die Nudeln in eine kleine Auflaufform füllen, den Käse auf den Nudeln verteilen und im Backofen, bei höchster Grillstufe ca. 7 min goldbraun backen."
+    ]
+},
 ];

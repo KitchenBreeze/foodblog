@@ -410,5 +410,11 @@ footer {
         width:90%;
     }
 
+    .print-footer {
+    text-align: right;
+    font-size: 10pt;
+    color: #777;
+    margin-top: 40px;
+}
 
 }

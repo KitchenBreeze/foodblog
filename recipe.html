@@ -172,91 +172,150 @@ button:hover {
     color: #ddd;
     flex:1;
 }
-@media (max-width: 600px){
-
-    .title {
-        font-size: 30px;
-    }
-
-    .time-row,
-    .info-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        width: 100%;
-        text-align: center;
-    }
-
-    .time-row > div,
-    .info-row > div {
-        width: 130px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .time-row strong {
-        font-size: 16px;
-    }
-
-    .info-row div {
-        font-size: 14px;
-    }
-
-}
 @media print {
 
-    body {
-        background: white;
-        color: black;
+    @page {
+        size: A4;
+        margin: 1.5cm;
     }
 
+    body {
+        background: white !important;
+        color: black !important;
+        font-family: Georgia, serif;
+        font-size: 12pt;
+    }
+
+    /* Ausblenden */
     .topbar,
     .buttons,
-    .back {
-        display: none;
+    .back,
+    input[type="checkbox"] {
+        display: none !important;
     }
 
+    /* Allgemein */
     .container {
         max-width: 100%;
         padding: 0;
+        margin: 0 auto;
     }
 
-    .hero-img {
-        width: 100%;
-        max-height: 400px;
-        object-fit: cover;
-    }
-
+    /* Titel */
     .title {
+        text-align: center;
+        font-size: 28pt;
         color: black;
-        font-size: 32px;
+        margin-bottom: 20px;
+        page-break-after: avoid;
     }
 
-    .card {
-        background: white;
-        border: 1px solid #ddd;
+    /* Bild */
+.hero-img {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 45%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+    /* Beschreibung ausblenden */
+    p[style*="text-align:center"] {
+        display: none;
+    }
+
+    /* Zeiten */
+.time-row,
+.info-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    margin: 8px 0;
+    color: black;
+    font-size: 11pt;
+}
+    .time-row strong {
+        display: block;
+        font-size: 13pt;
+        margin-top: 4px;
+    }
+
+    /* Karten */
+  .card {
+    background: white !important;
+    border: none;
+    color: black;
+    padding: 0;
+    margin-top: 15px;
+    page-break-inside: avoid;
+}
+    .card h2 {
+        border-bottom: 1px solid #999;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+
+    /* Zutaten */
+    .ingredient-list {
+        list-style: disc;
+        padding-left: 20px;
+    }
+
+    .ingredient-list label {
+        display: inline;
         color: black;
     }
 
-    .card p,
-    .step-text,
-    .description {
-        color: black !important;
+    .ingredient-list input {
+        display: none;
     }
 
-    .time-row,
-    .info-row {
-        color: black;
+    /* Zubereitung */
+    .step {
+        display: flex;
+        margin-bottom: 15px;
+        page-break-inside: avoid;
     }
 
     .step-number {
-        background: #ddd;
+        background: none;
+        color: black;
+        font-weight: bold;
+        width: 25px;
+    }
+
+    .step-text {
+        color: black !important;
+    }
+
+    .step-images img {
+        max-width: 180px;
+        max-height: 180px;
+        margin-top: 10px;
+    }
+
+    /* Tipps */
+    ul {
         color: black;
     }
+
+    /* Footer */
+    footer {
+        display: none;
+    }
+
+    .print-footer {
+    text-align: center;
+    font-size: 8pt;
+    color: #888;
+    margin-top: 60px;
+}
+.step-images {
+    display: none !important;
+}
 
 }
 
@@ -436,7 +495,12 @@ ${recipe.steps.map((step, i) => `
     </div>
     ` : ""}
 
+    <div class="print-footer">
+    KitchenBreeze
 </div>
+
+</div>
+
 
 `;
 

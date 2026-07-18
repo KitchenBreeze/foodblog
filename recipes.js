@@ -2487,4 +2487,95 @@ id: "9",
 
     ]
 },
+
+{
+    id: "45",
+    title: "Kirschhefeschnecken",
+    category: ["süßes Gebäck", "Vegetarisch"],
+    image: "images/kh.jpeg",
+    time:{
+        preparation: "45 min",
+        rising: "1 std 30 min",
+        baking: "30 min",
+        cooling:"5 min",
+        total:"2 std 50 min"
+    },
+    portions: "10 Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+    description: "Herrlich fluffige Hefeschnecken mit fruchtiger Kirschfüllung und süßem Zuckerguss.",
+
+    ingredients:{
+
+        "Teig":[
+            "300g Mehl (Type 405)",
+            "7g Trockenhefe",
+            "170ml zimmerwarme Milch",
+            "30g Zucker",
+            "30g Butter",
+            "1 TL Salz"
+        ],
+
+        "Füllung":[
+            "300g Kirschen",
+            "15g Speisestärke",
+            "15g brauner Zucker",
+            "15g weißer Zucker",
+            "1/2 TL Zitronenschale",
+            "etwas Vanilleextrakt",
+            "10g Butter",
+            "1 Prise Salz"
+        ],
+
+        "Topping":[
+            "100g Puderzucker",
+            "ca. 3 EL Wasser"
+        ]
+    },
+
+    steps:[
+        {
+            text:"Für die Kirschfüllung die Kirschen waschen, die Stängel und Kerne entfernen und achteln. Die Kirschen mitsamt dem ausgetretenen Saft mit dem weißen Zucker, dem braunen Zucker, dem Vanilleextrakt, der Zitronenschale sowie dem Salz vermengen und beiseitestellen."
+        },
+
+        {
+            text:"Dann für den Teig das Mehl mit der Hefe, dem Zucker und dem Salz vermengen, in der Mitte eine Mulde formen und die Milch hineingeben."
+        },
+
+        {
+            text:"Alles mit dem Knethaken der Küchenmaschine auf mittlerer Stufe ca. 5 Minuten kneten. In der Zwischenzeit die Butter in kleine Stücke schneiden. Anschließend die Butter zum Teig geben und weitere 5 Minuten zu einem elastischen, nicht mehr klebrigen Teig kneten."
+        },
+
+        {
+            text:"Eine Box mit Deckel leicht einölen, den Teig hineingeben, etwas flach drücken und abgedeckt ca. 60 Minuten bei Raumtemperatur ruhen lassen, bis er sein Volumen verdoppelt hat."
+        },
+
+        {
+            text:"In der Zwischenzeit die Butter in einem Topf schmelzen. Die Kirschen mitsamt dem ausgetretenen Saft dazugeben und aufkochen. Die Speisestärke mit ca. 3 EL Wasser glattrühren, unterrühren und erneut aufkochen. Anschließend ca. 1 Minute bei mittlerer Hitze unter ständigem Rühren köcheln lassen, bis die Masse deutlich angedickt ist. Vom Herd nehmen, in eine Schüssel füllen, direkt an der Oberfläche mit Frischhaltefolie abdecken und beiseitestellen. Eine Auflaufform (ca. 30 × 20 cm) gut einfetten."
+        },
+
+        {
+            text:"Den Teig auf eine leicht bemehlte Arbeitsfläche geben, mit etwas Mehl bestäuben und zu einem ca. 40 × 35 cm großen Rechteck ausrollen. Die Kirschfüllung gleichmäßig darauf verteilen, dabei rundherum einen etwa 2 cm breiten Rand frei lassen.",
+            images:[
+                "images/fül.jpeg"
+            ]
+        },
+
+        {text:"So aufrollen, dass man entlang der kurzen Seite eng aufrollt. Die Naht gut verschließen, die Enden der Rolle leicht abschneiden und die Rolle mit einem scharfen Messer oder einem Stück Zahnseide in ca. 4 cm breite Schnecken schneiden.",
+            images: [  "images/rol.jpeg"]
+        },
+
+        {
+            text:"Die Schnecken mit etwas Abstand in die Auflaufform setzen und abgedeckt ca. 30 Minuten bei Zimmertemperatur ruhen lassen, bis sie ihr Volumen deutlich vergrößert haben. Währenddessen den Ofen auf 180 °C Ober-/Unterhitze vorheizen."
+        },
+
+        {
+            text:"Die Schnecken im vorgeheizten Backofen ca. 30 Minuten goldbraun backen. Werden sie zu dunkel, die letzten 10 Minuten locker mit Alufolie abdecken."
+        },
+
+        {
+            text:"Für die Glasur den Puderzucker mit dem Wasser verrühren. Mit einem Löffel auf den noch warmen Hefeschnecken verteilen und diese anschließend noch 5–10 Minuten abkühlen lassen."
+        }
+    ]
+},
 ];

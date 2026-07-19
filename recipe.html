@@ -6,6 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>KitchenBreeze Rezept</title>
+<link rel="icon" type="image/png" href="logo1.png">
+<link rel="stylesheet" href="recipe-style.css">
 
 
 <style>
@@ -358,37 +360,42 @@ container.innerHTML = `
     <div class="time-row">
 
         <div>
-            ⏱ Zubereitung<br>
+             Zubereitung<br>
             <strong>${recipe.time.preparation}</strong>
         </div>
 
         ${recipe.time.cooking ? `
         <div>
-            🍳 Kochen<br>
+             Kochen<br>
             <strong>${recipe.time.cooking}</strong>
         </div>` : ""}
 
         ${recipe.time.baking ? `
         <div>
-            🔥 Backen<br>
+             Backen<br>
             <strong>${recipe.time.baking}</strong>
         </div>` : ""}
 
         ${recipe.time.rising ? `
 <div>
-    🍞 Gehzeit<br>
+     Gehzeit<br>
     <strong>${recipe.time.rising}</strong>
 </div>` : ""}
 
+       ${recipe.time.resting ? `
+<div>
+     Ruhen<br>
+    <strong>${recipe.time.resting}</strong>
+</div>` : ""}
         ${recipe.time.cooling ? `
         <div>
-            ❄️ Abkühlen<br>
+             Abkühlen<br>
             <strong>${recipe.time.cooling}</strong>
         </div>` : ""}
 
         
         <div>
-            ⏳ Gesamt<br>
+             Gesamt<br>
             <strong>${recipe.time.total}</strong>
         </div>
 
@@ -396,9 +403,9 @@ container.innerHTML = `
 
     <!-- INFO -->
     <div class="info-row">
-        <div>👥 ${recipe.portions}</div>
-        <div>🔥 ${recipe.difficulty}</div>
-        <div>🍝 ${recipe.category}</div>
+        <div>Portionen: ${recipe.portions}</div>
+        <div>Schwierigkeit: ${recipe.difficulty}</div>
+        <div>Kategorie: ${recipe.category}</div>
     </div>
 
     <!-- BUTTONS -->
@@ -494,15 +501,20 @@ ${recipe.steps.map((step, i) => `
         </ul>
     </div>
     ` : ""}
+<div class="related-section">
 
+    <h2>❤️ Das könnte dich auch interessieren</h2>
 
+    <div class="related-container" id="relatedRecipes"></div>
 
+</div>
 </div>
 
 
 `;
 
 }
+
 
 // FAVORITEN
 
@@ -555,6 +567,36 @@ favoriteBtn.onclick = function(){
 
 
 updateFavoriteButton();
+const relatedContainer = document.getElementById("relatedRecipes");
+
+if(recipe.related && relatedContainer){
+
+    recipe.related.forEach(id => {
+
+        const related = RECIPES.find(r => r.id == id);
+
+        if(related){
+
+            relatedContainer.innerHTML += `
+
+            <a class="related-card" href="recipe.html?id=${related.id}">
+
+                <img src="${related.image}" alt="${related.title}">
+
+                <div class="related-content">
+                    <h3>${related.title}</h3>
+                    <p>${related.time.total}</p>
+                </div>
+
+            </a>
+
+            `;
+
+        }
+
+    });
+
+}
 
 </script>
 

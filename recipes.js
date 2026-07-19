@@ -11,6 +11,7 @@ const RECIPES = [
         cooking: "25 min",
         total:"30 min"
     },
+    related: [2, 5, 8],
     portions: 6,
     difficulty: "Einfach",
     rating: 4.6,
@@ -53,6 +54,7 @@ const RECIPES = [
         preparation:"45 min",
         total:"45 min"
     },
+    related: ["1", "10", "20"],
     portions: 6,
     difficulty: "Einfach",
     rating: 4.6,
@@ -113,6 +115,7 @@ const RECIPES = [
         cooling:"1 Std.",
         total:"1 Std. 55 min"
     },
+    related: ["9", "40", "36"],
     portions: "1 Kuchen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -164,6 +167,7 @@ const RECIPES = [
         cooking:"15 min",
         total:"50 min"
     },
+    related: ["2", "7", "33"],
     portions: "12 kleine Klöße",
     difficulty: "Einfach",
     rating: 1,
@@ -216,6 +220,7 @@ const RECIPES = [
         cooking:"18 min",
         total:"40 min"
     },
+    related: ["2", "10", "25"],
     portions: 6,
     difficulty: "Einfach",
     rating: 4.6,
@@ -281,6 +286,7 @@ const RECIPES = [
     category: ["Aufstriche & Dips", "Vegetarisch"],
     image: "images/avocreme.jpeg",
     time: "5 min",
+    related: ["9", "5", "38"],
     portions: "6 kleine Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -312,6 +318,7 @@ const RECIPES = [
         baking:"20 min",
         total:"25 min"
     },
+    related: ["2", "22", "32"],
     portions: "4 Stück",
     difficulty: "Einfach",
     rating: 4.6,
@@ -351,6 +358,7 @@ const RECIPES = [
         preparation:"45 min",
         total:"45 min"
     },
+    related: ["15", "38", "28"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -413,6 +421,7 @@ id: "9",
     cooking: "20 min",
     total:"3 Std."
 },
+related: ["45", "7", "20"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -507,6 +516,7 @@ id: "9",
         baking:"15 min",
         total:"20 min"
     },
+    related: ["42", "36", "27"],
     portions: "20 Brote",
     difficulty: "Einfach",
     rating: 4.6,
@@ -564,13 +574,14 @@ id: "9",
         baking:"15 min",
         total:"30 min"
     },
+    related: ["2", "19", "41"],
     portions: "3 Stück",
     difficulty: "Einfach",
     rating: 4.6,
     description: "Fluffiger Brezelteig getoppt mit salzigem Schinken, saftiger Ananas und leckerem Käse.",
 
     ingredients: [
-        "3 80g-gelaugte Brezelteiglinge (alternativ 3 angetaute TK-Brezeln)",
+        "3 80g-gelaugte <a href='recipe.html?id=35'>Brezelteiglinge</a> (alternativ 3 angetaute TK-Brezeln)",
         "30g Kochschinken",
         "50g Dosenananas",
         "120g geriebener Gouda (z.B. mittelalt)",
@@ -598,6 +609,7 @@ id: "9",
         cooking:"40 min",
         total:"45 min"
     },
+    related: ["10", "13", "32"],
     portions: "6",
     difficulty: "Einfach",
     rating: 5,
@@ -652,11 +664,26 @@ id: "9",
         cooking:"40 min",
         total:"50 min"
     },
+        related: ["29", "5", "42"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
     description: "Cremige, warme Brokkolisuppe. Perfekt für kalte Tage.",
 
+    ingredients: {
+        "": [
+            "170g TK-Brokkoli",
+            "1,5kg Kartoffeln",
+            "2 Zwiebeln",
+            "1,2l Gemüsebrühe",
+            "250ml Kochsahne",
+            "1/2 TL Knoblauchpulver",
+            "Salz",
+            "Pfeffer"
+        ],
+
+      
+    },
     steps: [
         "Die Zwiebeln schälen und vierteln. Die Kartoffeln schälen und in kleine Würfel schneiden.",
 
@@ -684,11 +711,24 @@ id: "9",
         cooling:"2 Std.",
         total:"2 Std. 10 min"
     },
+        related: ["1", "19", "32"],
     portions: "12 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
     description: "Knusprig-fluffiges italienisches Brot mit herrlich aromatischem Tomatentopping.",
 
+    ingredients: {
+        "": [
+            "7 große Tomaten",
+            "5 Knoblauchzehen",
+            "2 TL getrockneter Basilikum",
+            "5 TL Olivenöl",
+            "Salz",
+            "Pfeffer"
+        ],
+
+      
+    },
     steps: [
         "Die Tomaten fein würfeln und in eine Schüssel mit Deckel geben.",
 
@@ -711,6 +751,7 @@ id: "9",
         cooking:"30 min",
         total:"1 Std."
     },
+        related: ["1", "4", "26"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -767,6 +808,7 @@ id: "9",
    cooling: "15 min",
     total:" 40 min"
 },
+    related: ["17", "16", "37"],
     portions: "8 Stück",
     difficulty: "Einfach",
     rating: 4.6,
@@ -820,6 +862,7 @@ id: "9",
     cooking:"30 min",
     total:" 1 std"
 },
+    related: ["44", "46", "12"],
     portions: "7 Stück",
     difficulty: "Einfach",
     rating: 4.6,
@@ -873,6 +916,7 @@ id: "9",
     cooking:"30 min",
     total:" 35 min"
 },
+    related: ["37", "13", "42"],
     portions: "4 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -925,6 +969,7 @@ id: "9",
     cooling:"2 Std.",
     total:" 3 Std."
 },
+    related: ["10", "9", "3"],
     portions: "1 Blech",
     difficulty: "Einfach",
     rating: 4.6,
@@ -984,6 +1029,7 @@ id: "9",
     cooking:"10 min",
     total:" 20 min"
 },
+    related: ["10", "13", "32"],
     portions: "10 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -1030,6 +1076,7 @@ id: "9",
     cooking:"30 min",
     total:" 45 min"
 },
+    related: ["47","3","2"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -1088,6 +1135,7 @@ id: "9",
     cooking:"18 min",
     total:" 30 min"
 },
+    related: ["42", "49", "1"],
     portions: "6 Stück",
     difficulty: "Einfach",
     rating: 4.6,
@@ -1151,6 +1199,7 @@ id: "9",
     cooking:"5 min",
     total:" 25 min"
 },
+  related: ["21", "49", "15"],
     portions: "8 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -1200,6 +1249,7 @@ id: "9",
     baking: "1 std 30min",
     total:"2 Std"
 },
+  related: ["31", "0", "19"],
     portions: "1 Stück (für ca. 6 Portionen)",
     difficulty: "Einfach",
     rating: 4.6,
@@ -1264,6 +1314,7 @@ id: "9",
     cooling:"(60 min)",
     total:" 20 min"
 },
+  related: ["2", "5", "9"],
     portions: "6 Stück",
     difficulty: "Einfach",
     rating: 4.6,
@@ -1320,6 +1371,7 @@ id: "9",
     preparation:"30 min",
     total:" 30 min"
 },
+  related: ["24", "33", "14"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -1392,6 +1444,7 @@ id: "9",
     cooling: "30min",
     total:" 1 std 45 min"
 },
+  related: ["21", "38", "17"],
     portions: "1 Kuchen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -1447,6 +1500,7 @@ id: "9",
         cooking:"30 min",
         total:"50 min"
     },
+      related: ["4", "6", "7"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -1511,6 +1565,7 @@ id: "9",
         cooking:"10 min",
         total:"45 min"
     },
+      related: ["50", "41", "7"],
     portions: "8 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -1562,6 +1617,7 @@ id: "9",
         cooking:"30 min",
         total:"35 min"
     },
+      related: ["20", "38", "33"],
     portions:"7 Portionen",
     difficulty:"Einfach",
     rating:4.6,
@@ -1606,6 +1662,7 @@ id: "9",
         cooking:"30 min",
         total:"45 min"
     },
+      related: ["42", "49", "1"],
     portions:"15 Stück",
     difficulty:"Einfach",
     rating:4.6,
@@ -1649,6 +1706,7 @@ id: "9",
         rising: "17 Std 30 min",
         total:"18 Std 15 min"
     },
+      related: ["42", "10", "21"],
     portions: "1 Stück",
     difficulty: "Einfach",
     rating: 4.6,
@@ -1701,6 +1759,7 @@ id: "9",
         baking: "15 min",
         total:"30 min"
     },
+      related: ["12", "20", "47"],
     portions: "15 Stück",
     difficulty: "Einfach",
     rating: 4.6,
@@ -1746,6 +1805,7 @@ id: "9",
         rising: "2 Std 30 min",
         total:"6 Std 15 min"
     },
+      related: ["46", "36", "26"],
     portions: "1 Brot",
     difficulty: "Mittel",
     rating: 4.6,
@@ -1806,6 +1866,7 @@ id: "9",
         cooking: "35 min",
         total:"50 min"
     },
+      related: ["47", "34", "5"],
     portions: "8 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -1875,6 +1936,7 @@ id: "9",
         rising:"1 Std 10 min",
         total:"2 Std 22 min"
     },
+      related: ["2", "3", "4"],
     portions:"10 Stück",
     difficulty:"Mittel",
     rating:4.6,
@@ -1962,6 +2024,7 @@ id: "9",
         rising:"1 Std 10 min",
         total:"2 Std 22 min"
     },
+      related: ["33", "19", "9"],
     portions:"10 Stück",
     difficulty:"Mittel",
     rating:4.6,
@@ -2040,6 +2103,7 @@ id: "9",
         cooling:"1 Std 10 min",
         total:"1 Std 50 min"
     },
+      related: ["12", "22", "32"],
     portions:"6 Portionen",
     difficulty:"Einfach",
     rating:4.6,
@@ -2090,6 +2154,7 @@ id: "9",
         cooking: "15 min",
         total:"20 min"
     },
+      related: ["51", "15", "1"],
     portions: "3 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -2133,6 +2198,7 @@ id: "9",
         baking: "25 min",
         total:"1 Std 10 min"
     },
+      related: ["11", "22", "33"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -2210,6 +2276,7 @@ id: "9",
         cooking: "10 min",
         total:"15 min"
     },
+      related: ["42", "49", "1"],
     portions: "8 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -2245,6 +2312,7 @@ id: "9",
         cooking: "10 min",
         total:"15 min"
     },
+      related: ["10", "20", "30"],
     portions: "8 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -2304,6 +2372,7 @@ id: "9",
         cooking: "5 min",
         total:"30 min"
     },
+      related: ["40", "29", "11"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -2364,6 +2433,7 @@ id: "9",
         cooking: "20 min",
         total:"1 std 10 min"
     },
+      related: ["4", "45", "13"],
     portions: "3 Portionen",
     difficulty: "Mittel",
     rating: 4.6,
@@ -2431,6 +2501,7 @@ id: "9",
         cooking: "10 min",
         total:"30 min"
     },
+      related: ["17", "22", "15"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -2500,6 +2571,7 @@ id: "9",
         cooling:"5 min",
         total:"2 std 50 min"
     },
+      related: ["2", "39", "21"],
     portions: "10 Stück",
     difficulty: "Einfach",
     rating: 4.6,
@@ -2590,6 +2662,7 @@ id: "9",
         cooking: "20 min",
         total:"2 std"
     },
+      related: ["47", "13", "12"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -2635,6 +2708,101 @@ id: "9",
 "Das Fleisch mit der Sahne ablöschen, die Nudeln unterrühren, 1 Kelle Pastawasser dazugeben, aufkochen und ca. 5 fertig kochen, bis die Nudeln al dente sind und die Soße cremig.",
 
 "Die Nudeln in eine kleine Auflaufform füllen, den Käse auf den Nudeln verteilen und im Backofen, bei höchster Grillstufe ca. 7 min goldbraun backen."
+    ]
+},
+
+{
+    id: "47",
+    title: "Gurkensalat",
+    category: ["Salate", "Beilagen", "Vegan", "Vegetarisch"], 
+    image: "images/gurki.jpeg",
+    time:{
+        preparation: "5 min",
+        resting: "15 min",
+        total:"20 min"
+    },
+    related: ["46", "1", "2"],
+    portions: "4 Portionen",
+    difficulty: "Einfach",
+    rating: 4.6,
+    description: "Hauchdünne Gurkenscheiben in leckerem Dressing.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients:{
+
+        "Gurke":[
+            "1 Salatgurke",
+            "1 EL Salz"
+        ],
+
+        "Dressing":[
+            "2 EL Olivenöl",
+            "1 TL Weißweinessig",
+            "1 TL gefriergetrocknete Salatkräuter",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps:[
+        "Die Enden von der Gurke entfernen und die Gurke in feine Scheiben hobeln. Mit dem Salz vermengen und ca. 10-15 Minuten ziehen lassen.",
+
+        "Alle Dressingzutaten miteinander vermischen.",
+
+        "Das überschüssige Wasser von den Gurken abgießen und die Gurken etwas ausdrücken. Das Dressing zu den Gurken geben und alles gut vermischen."
+    
+    ]
+},
+
+{
+    id: "48",
+    title: "Johannisbeer-Joghurt-Muffins",
+    category: ["süßes Gebäck", "Vegetarisch"], 
+    image: "images/jomu.jpeg",
+    time:{
+        preparation: "10 min",
+        baking: "22 min",
+        cooling: "10 min",
+        total:"42 min"
+    },
+    related: ["45", "40", "2"],
+    portions: "12 Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+    description: "Saftige Muffins mit süß-sauren Johannisbeeren.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients:{
+
+        "":[
+            "200g Mehl (Type 405)",
+            "90g Zucker",
+            "1 TL Vanillezucker",
+            "2 TL Backpulver",
+            "1 Prise Salz",
+            "65g Joghurt",
+            "120ml Milch",
+            "75ml Öl",
+            "2 Eier",
+            "60g Johannisbeeren (vom Strunk entfernt)"
+        ]
+
+    },
+
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps:[
+        "Den Backofen auf 180 Grad Ober-/Unterhitze vorheizen und ein Muffinblech mit Muffinförmchen auskleiden.",
+
+        "Das Mehl mit dem Salz, dem Backpulver, dem Zucker und dem Vanillezucker in einer Schüssel vermengen und in der Mitte eine Mulde formen.",
+
+        "Das Öl, die Milch, den Joghurt und die Eier in die Mulde geben und alles mit einem Schneebesen verrühren, bis keine Mehlklümpchen mehr zu sehen sind.",
+
+        "Die Johannisbeeren vorsichtig unterheben und den Teig mit einem Eisportionierer auf die vorbereiteten Muffinförmchen aufteilen.",
+
+        "Im vorgeheizten Backofen ca. 22 Minuten backen (Stäbchenprobe!). Aus dem Backofen nehmen, mindestens 10 Minuten abkühlen lassen und anschließend aus der Form lösen."
     ]
 },
 ];

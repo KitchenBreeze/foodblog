@@ -216,12 +216,7 @@ footer {
     gap: 10px;
     margin-top: 10px;
 }
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-}
+
 
 .ingredient-list {
     list-style: none;
@@ -418,3 +413,44 @@ footer {
 }
 
 }
+
+.related-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+}
+
+.related-card {
+    display: block;
+    width: 160px;
+    min-width: 160px;
+    background: #171718;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #f2eee9;
+}
+
+.related-card img {
+    display: block;
+}
+
+.related-card h3 {
+    color: #f2eee9;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.related-card p {
+    color: #b8b2aa;
+    font-size: 13px;
+    margin: 0 10px 12px;
+}
+
+.related-card:visited,
+.related-card:hover,
+.related-card:active {
+    color: #f2eee9;
+    text-decoration: none;
+}
+

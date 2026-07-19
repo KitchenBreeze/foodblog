@@ -1,0 +1,71 @@
+/* =========================
+LINKS IN ZUTATEN UND TIPPS
+========================= */
+
+.ingredient-list a,
+.tips a {
+    color: white;
+    text-decoration: underline;
+}
+
+.ingredient-list a:hover,
+.tips a:hover {
+    opacity: 0.8;
+}
+
+
+/* =========================
+RELATED KARTEN
+========================= */
+
+.related-section {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.related-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.related-card {
+    display: block;
+    flex: 0 0 160px;
+    background: #171718;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #f2eee9;
+}
+
+.related-card img {
+    width: 160px;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+}
+
+.related-content {
+    padding: 10px;
+}
+
+.related-content h3 {
+    margin: 0 0 8px;
+    font-size: 15px;
+    color: #f2eee9;
+}
+
+.related-content p {
+    margin: 0;
+    font-size: 13px;
+    color: #b8b2aa;
+}
+
+.related-card:hover,
+.related-card:visited,
+.related-card:active {
+    color: #f2eee9;
+    text-decoration: none;
+}

@@ -916,7 +916,7 @@ related: ["45", "7", "20"],
     cooking:"30 min",
     total:" 35 min"
 },
-    related: ["37", "13", "42"],
+    related: ["37", "31", "42"],
     portions: "4 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -2803,6 +2803,113 @@ related: ["45", "7", "20"],
         "Die Johannisbeeren vorsichtig unterheben und den Teig mit einem Eisportionierer auf die vorbereiteten Muffinförmchen aufteilen.",
 
         "Im vorgeheizten Backofen ca. 22 Minuten backen (Stäbchenprobe!). Aus dem Backofen nehmen, mindestens 10 Minuten abkühlen lassen und anschließend aus der Form lösen."
+    ]
+},
+
+{
+    id: "49",
+    title: "Griechischer Salat",
+    category: ["Salate", "Vegetarisch"],
+    image: "images/griechischer-Salat.jpg",
+    time:{
+        preparation: "30 min",
+        total: "30 min"
+    },
+    related: ["50", "12", "2"],
+    portions: "6 Portionen",
+    difficulty: "Einfach",
+    rating: 4.6,
+    description: "Buntes, knackiges Gemüse mit weißen Bohnen in einem cremig-würzigen Dressing.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients:{
+
+        "Salat":[
+            "2 Salatgurken",
+            "600g Fleischtomaten <i>(ca. 3 Stück)</i>",
+            "1 Dose weiße Bohnen (à 800g)",
+            "2 rote Spitzpaprika",
+            "2 rote Zwiebeln",
+            "100g grüne Oliven"
+        ],
+
+        "Dressing":[
+            "75g griechischer Joghurt",
+            "4 EL Wasser",
+            "3 EL Olivenöl",
+            "2 Knoblauchzehen",
+            "1 TL getrockneter Oregano",
+            "1 TL Zitronenschale",
+            "Salz",
+            "Pfeffer"
+        ]
+
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps:[
+        "Die Gurken nach Belieben schälen, vierteln und in Scheiben schneiden. Die Tomaten und die Paprika grob würfeln. Die Zwiebeln schälen, vierteln und in feine Ringe schneiden.",
+
+        "Die Bohnen in ein Sieb abgießen und gut abtropfen lassen. Die Oliven halbieren.",
+
+        "Für das Dressing den Knoblauch schälen, durch eine Knoblauchpresse pressen und mit den restlichen Zutaten cremig verrühren.",
+
+        "Das Gemüse, die Bohnen, die Oliven und das Dressing in eine große Schüssel geben und gut vermengen."
+    ]
+},
+{
+    id: "50",
+    title: "Griechische Mini-Lagana",
+    category: ["herzhaftes Gebäck", "Vegetarisch", "Vegan"], 
+    image: "images/Mini-Lagana.jpeg",
+    time:{
+        preparation: "25 min",
+        baking: "20 min",
+        rising: "1 std 30 min",
+        cooling: "10 min",
+        total:"2 std 25 min"
+    },
+    related: ["49", "6", "13"],
+    portions: "3 Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+    description: "Herrlich weiche und fluffige Sesamfladen mit knuspriger, goldbrauner Kruste.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients:{
+
+        "Teig":[
+            "250g Mehl (Type 550)",
+            "160ml lauwarmes Wasser",
+            "4g Trockenhefe",
+            "5g Salz",
+            "1 Prise Zucker",
+            "1 EL Olivenöl"
+        ],
+
+        "Topping":[
+            "weißer Sesam",
+            "Wasser"
+        ]
+
+    },
+
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps:[
+        "Das lauwarme Wasser mit dem Zucker und der Hefe verrühren und ca. 5 Minuten ruhen lassen. In der Zwischenzeit das Mehl mit dem Salz in einer Schüssel vermengen, in der Mitte eine Mulde formen und das Hefewasser sowie das Olivenöl dazugeben. Alles ca. 10 Minuten auf mittlerer bis hoher Stufe zu einem klebrigen Teig kneten, bis er sich vom Schüsselrand löst.",
+
+        "Den Teig in eine geölte Schüssel legen, leicht mit Öl bestreichen und abgedeckt bei Zimmertemperatur ca. 60 Minuten gehen lassen, bis er sein Volumen verdoppelt hat.",
+
+        "Den Ofen auf 200 Grad Ober-/Unterhitze vorheizen und ein Backblech mit Backpapier belegen.",
+
+        "Den Teig auf eine leicht bemehlte Arbeitsfläche geben, in 3 Teile à ca. 140g teilen und rundwirken. Jedes Teigstück auf das Backpapier legen und zu einem ca. 1 cm dicken Oval zurechtdrücken.",
+
+        "Abdecken und erneut ca. 30 Minuten gehen lassen.",
+
+        "Dann mit den Fingerspitzen vorsichtig ein Schachbrettmuster in den Teig drücken. Mit etwas Wasser bestreichen, mit Sesam bestreuen und im vorgeheizten Backofen ca. 20 Minuten backen, bis der Boden goldbraun ist und sich das Brot beim Klopfen auf die Unterseite hohl anhört.",
+
+        "Die noch warmen Brote in ein Küchentuch wickeln und ca. 10 Minuten darin auskühlen lassen."
     ]
 },
 ];

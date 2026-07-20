@@ -27,7 +27,18 @@ RELATED KARTEN
     display: flex;
     justify-content: center;
     gap: 15px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+
+.related-container::-webkit-scrollbar {
+    display: none;
+}
+
+.related-container {
+    scrollbar-width: none;
 }
 
 .related-card {

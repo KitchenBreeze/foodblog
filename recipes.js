@@ -2809,13 +2809,16 @@ related: ["45", "7", "20"],
 {
     id: "49",
     title: "Griechischer Salat",
+    tips: [
+        "Zu diesem Salat passen <a href='recipe.html?id=50'>Griechische Mini-Lagana</a> super."
+    ],
     category: ["Salate", "Vegetarisch"],
     image: "images/griechischer-Salat.jpg",
     time:{
         preparation: "30 min",
         total: "30 min"
     },
-    related: ["50", "12", "2"],
+    related: ["44", "12", "2"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -2910,6 +2913,106 @@ related: ["45", "7", "20"],
         "Dann mit den Fingerspitzen vorsichtig ein Schachbrettmuster in den Teig drücken. Mit etwas Wasser bestreichen, mit Sesam bestreuen und im vorgeheizten Backofen ca. 20 Minuten backen, bis der Boden goldbraun ist und sich das Brot beim Klopfen auf die Unterseite hohl anhört.",
 
         "Die noch warmen Brote in ein Küchentuch wickeln und ca. 10 Minuten darin auskühlen lassen."
+    ]
+},
+{
+    id: "51",
+    title: "Hackbällchen-Nudelpfanne",
+    category: ["Pasta", "Fleisch"],
+    image: "images/hackbällchen-nudelpfanne.jpeg",
+    time:{
+        preparation: "35 min",
+        cooking:"25 min",
+        total: "1 std"
+    },
+    related: ["16", "1", "23"],
+    portions: "5 Portionen",
+    difficulty: "Mittel",
+    rating: 4.6,
+    description: "Cremige Pasta mit saftigen, mit Käse gefüllten Hackbällchen.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients:{
+
+        "Hackbällchen":[
+            "500g Rinderhack",
+            "1 Ei",
+            "100g Magerquark",
+            "50g Paniermehl",
+            "1 TL Worcestersauce",
+            "1 gehäufter TL Senf",
+            "1 große Zwiebel",
+            "1 große Knoblauchzehe",
+            "1/2 TL Paprikapulver",
+            "1 TL getrocknete Petersilie",
+            "4 Cheddarscheiben (ca. 100g)",
+            "Salz",
+            "Pfeffer",
+            "Olivenöl"
+        ],
+
+        "Soße":[
+            "1 EL Tomatenmark",
+            "250ml Kochsahne",
+            "1 kleine Zwiebel",
+            "Bratfett der Hackbällchen"
+        ],
+
+        "Außerdem":[
+            "500g Farfalle"
+        ]
+
+    },
+
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps:[
+
+        {
+            text:"Für die Hackfleischmasse die Zwiebel schälen und fein hacken. Den Knoblauch ebenfalls schälen und durch eine Knoblauchpresse drücken. Das Hackfleisch mit dem Ei, dem Magerquark, dem Paniermehl, der Worcestersauce, dem Senf, der Zwiebel, dem Knoblauch, dem Paprikapulver, der Petersilie, Salz und Pfeffer vermengen."
+        },
+
+        {
+            text:"Je 2 Cheddarscheiben übereinanderlegen und 24 kleine Würfelstapel daraus schneiden <i>(sodass jeder Würfelstapel aus zwei Scheiben Käse besteht)</i>. Dies mit den anderen beiden Scheiben wiederholen."
+        },
+
+        {
+            text:"Je einen leicht gehäuften Teelöffel Hackfleischmasse nehmen, zu einer Kugel formen und flach drücken. Einen Würfelstapel in die Mitte legen, die Seiten darüberklappen und erneut zu einer Kugel formen. Auf diese Weise 48 kleine Bällchen formen.",
+            images:[
+                "images/flach.jpeg",
+                "images/flach2.jpeg",
+                "images/flach3.jpeg",
+                "images/flach4.jpeg"
+            ]
+        },
+
+        {
+            text:"In einem beschichteten Topf so viel Olivenöl erhitzen, dass der Boden gerade so bedeckt ist. Außerdem einen Topf mit Salzwasser zum Kochen bringen."
+        },
+
+        {
+            text:"Die Bällchen in 2 Runden (je ca. 24 Bällchen) unter gelegentlichem Wenden rundherum ca. 5 Minuten knusprig anbraten. <i>(Am einfachsten geht das Wenden und Herausnehmen mit einer Schaumkelle.)</i>"
+        },
+
+        {
+            text:"Die fertigen Bällchen auf einen Teller mit Küchenpapier geben und im 50 Grad warmen Ofen warmhalten."
+        },
+
+        {
+            text:"Wenn die zweite Runde Hackbällchen in den Topf kommt, die Nudeln in das kochende Salzwasser geben und bis ca. 2 Minuten vor Ende der angegebenen Garzeit kochen."
+        },
+
+        {
+            text:"In der Zwischenzeit die Zwiebel für die Soße schälen und fein hacken."
+        },
+
+        {
+            text:"Wenn die zweite Runde Hackbällchen fertig ist, die Hitze reduzieren und die Zwiebel im Bratfett ca. 2 Minuten glasig dünsten. Das Tomatenmark dazugeben und weitere 2 Minuten mitrösten. Die Nudeln dazugeben und mit der Sahne sowie einer kleinen Kelle Pastawasser ablöschen. Alles aufkochen und ca. 5 Minuten unter gelegentlichem Rühren kochen, bis die Soße cremig ist und die Nudeln al dente sind."
+        },
+
+        {
+            text:"Die Hackbällchen unterheben und ca. 1 Minute fertig kochen."
+        }
     ]
 },
 ];

@@ -3,13 +3,13 @@ LINKS IN ZUTATEN UND TIPPS
 ========================= */
 
 .ingredient-list a,
-.tips a {
+.card ul a {
     color: white;
     text-decoration: underline;
 }
 
 .ingredient-list a:hover,
-.tips a:hover {
+.card ul a:hover {
     opacity: 0.8;
 }
 

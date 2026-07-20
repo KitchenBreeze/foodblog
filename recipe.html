@@ -188,139 +188,217 @@ button:hover {
         font-size: 12pt;
     }
 
-    /* Ausblenden */
+
+    /* AUSBLENDEN */
+
     .topbar,
     .buttons,
     .back,
-    input[type="checkbox"] {
+    input[type="checkbox"],
+    footer,
+    .related-section {
         display: none !important;
     }
 
-    /* Allgemein */
+
+    /* CONTAINER */
+
     .container {
         max-width: 100%;
         padding: 0;
         margin: 0 auto;
     }
 
-    /* Titel */
+
+    /* TITEL */
+
     .title {
         text-align: center;
         font-size: 28pt;
-        color: black;
+        color: black !important;
         margin-bottom: 20px;
         page-break-after: avoid;
     }
 
-    /* Bild */
-.hero-img {
-    display: block;
-    margin: 0 auto 10px auto;
-    width: 45%;
-    max-height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-}
 
-    /* Beschreibung ausblenden */
-    p[style*="text-align:center"] {
-        display: none;
+    /* HAUPTBILD */
+
+    .hero-img {
+        display: block;
+        margin: 0 auto 10px auto;
+        width: 45%;
+        max-height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
     }
 
-    /* Zeiten */
-.time-row,
-.info-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    text-align: center;
-    margin: 8px 0;
-    color: black;
-    font-size: 11pt;
-}
+
+    /* BESCHREIBUNG AUSBLENDEN */
+
+    p[style*="text-align:center"] {
+        display: none !important;
+    }
+
+
+    /* ZEITEN + INFOS */
+
+    .time-row,
+    .info-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        text-align: center;
+        margin: 8px 0;
+        color: black !important;
+        font-size: 11pt;
+    }
+
+
     .time-row strong {
         display: block;
         font-size: 13pt;
         margin-top: 4px;
+        color: black !important;
     }
 
-    /* Karten */
-  .card {
-    background: white !important;
-    border: none;
-    color: black;
-    padding: 0;
-    margin-top: 15px;
-    page-break-inside: avoid;
-}
+
+    /* ZUTATEN / ZUBEREITUNG BOXEN */
+
+    .card {
+
+        background: white !important;
+        color: black !important;
+
+        border: none;
+        padding: 0;
+        margin-top: 15px;
+
+        page-break-inside: avoid;
+    }
+
+
     .card h2 {
+
+        color: black !important;
+
         border-bottom: 1px solid #999;
         padding-bottom: 5px;
         margin-bottom: 15px;
     }
 
-    /* Zutaten */
+
+
+    /* ZUTATEN */
+
     .ingredient-list {
+
         list-style: disc;
         padding-left: 20px;
     }
 
+
     .ingredient-list label {
+
         display: inline;
-        color: black;
-    }
-
-    .ingredient-list input {
-        display: none;
-    }
-
-    /* Zubereitung */
-    .step {
-        display: flex;
-        margin-bottom: 15px;
-        page-break-inside: avoid;
-    }
-
-    .step-number {
-        background: none;
-        color: black;
-        font-weight: bold;
-        width: 25px;
-    }
-
-    .step-text {
         color: black !important;
     }
 
-    .step-images img {
-        max-width: 180px;
-        max-height: 180px;
-        margin-top: 10px;
-    }
 
-    /* Tipps */
-    ul {
-        color: black;
-    }
+    .ingredient-list input {
 
-    /* Footer */
-    footer {
         display: none;
     }
 
+
+
+    /* ZUBEREITUNG */
+
+    .step {
+
+        display: flex !important;
+
+        gap: 12px;
+
+        margin-bottom: 15px;
+
+        page-break-inside: avoid;
+    }
+
+
+    .step-number {
+
+        display: flex !important;
+
+        align-items: center;
+        justify-content: center;
+
+        background: none !important;
+
+        color: black !important;
+
+        font-weight: bold;
+
+        width: 25px;
+        min-width: 25px;
+    }
+
+
+    .step-text {
+
+        display: block !important;
+
+        flex: 1;
+
+        color: black !important;
+    }
+
+
+    .step-text p {
+
+        color: black !important;
+    }
+
+
+
+    /* SCHRITTBILDER AUSBLENDEN */
+
+    .step-images {
+
+        display: none !important;
+    }
+
+
+
+    /* LISTEN / TIPPS */
+
+    ul {
+
+        color: black !important;
+    }
+
+
+    li {
+
+        color: black !important;
+    }
+
+
+
+    /* PRINT FOOTER */
+
     .print-footer {
-    text-align: center;
-    font-size: 8pt;
-    color: #888;
-    margin-top: 60px;
-}
-.step-images {
-    display: none !important;
-}
-.related-section {
-    display: none !important;
-}
+
+        display: block;
+
+        text-align: center;
+
+        font-size: 8pt;
+
+        color: #888;
+
+        margin-top: 60px;
+    }
 
 }
 

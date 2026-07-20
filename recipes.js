@@ -2916,8 +2916,11 @@ related: ["45", "7", "20"],
     ]
 },
 {
-    id: "51",
+    id: "52",
     title: "Hackbällchen-Nudelpfanne",
+      tips: [
+        "Aus dem restlichen Quark kannst du super <a href='recipe.html?id=51'>Glücksschweinchen</a> backen."
+    ],
     category: ["Pasta", "Fleisch"],
     image: "images/hackbällchen-nudelpfanne.jpeg",
     time:{
@@ -3013,6 +3016,73 @@ related: ["45", "7", "20"],
         {
             text:"Die Hackbällchen unterheben und ca. 1 Minute fertig kochen."
         }
+    ]
+},
+
+{
+    id: "51",
+    title: "Glücksschweinchen",
+    category: ["süßes Gebäck", "Vegetarisch"],
+    image: "images/glücksschweinchen.jpeg",
+    time:{
+        preparation: "10 min",
+        baking:"20 min",
+        total: "30 min"
+    },
+    related: ["45", "3", "43"],
+    portions: "7 Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+    description: "Fluffige Quark-Öl-Teig-Schweinchen – perfekt für Silvester.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients:{
+
+        "Teig":[
+            "300g Mehl (type 405)",
+            "150g Magerquark",
+            "70g Zucker",
+            "1 Pck. Backpulver",
+            "80ml neutrales Öl",
+            "80ml Milch",
+            "1 Prise Salz"
+        ],
+
+        "Topping":[
+            "etwas Nuss-Nougat-Creme"
+        ]
+
+    },
+
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps:[
+
+        {
+            text:"Den Ofen auf 180 Grad Ober/Unterhitze vorheizen."
+        },
+
+        {
+            text:"Für den Teig alle trockenen Zutaten in einer Schüssel vermengen und in der Mitte eine Mulde formen. Den Quark, die Milch und das Öl mit einem Schneebesen verrühren und in die Mulde geben. Alles mit einem Löffel verrühren, bis sich die Zutaten verbunden haben. Anschließend mit den Händen zu einem glatten Teig verkneten, bis kein trockenes Mehl mehr zu sehen ist."
+        },
+
+        {
+            text:"Den Teig auf eine leicht bemehlte Arbeitsfläche geben, mit etwas Mehl bestäuben und ca. 1cm dick ausrollen. Mit einem runden Gefäß mit ca. 8cm Durchmesser 7 Kreise ausstechen und mit etwas Abstand auf ein mit Backpapier belegtes Backblech legen. Den restlichen Teig erneut ca. 6mm dick ausrollen und mit einem runden Ausstecher mit 4cm Durchmesser 14 Kreise ausstechen. Die Hälfte davon als Nasen auf die großen Kreise legen. Die restlichen Kreise in der Mitte halbieren und jeweils zwei Hälften als Ohren an den Rand der Schweinchen legen und leicht andrücken.",
+            images:[
+                "images/schwein.jpeg",
+                "images/schwein1.jpeg",
+                "images/schwein2.jpeg"
+            ]
+        },
+
+        {
+            text:"Die Schweinchen im vorgeheizten Backofen ca. 20min goldbraun backen."
+        },
+
+        {
+            text:"Aus dem Ofen nehmen und mit einem Holzspieß etwas Nuss-Nougat-Creme aufnehmen. Je zwei Augen auf die Schweinchen malen und warm oder kalt servieren."
+        }
+
     ]
 },
 ];

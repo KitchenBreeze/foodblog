@@ -3089,18 +3089,21 @@ related: ["45", "7", "20"],
 {
     id: "53",
     title: "Köttbullar aus dem Ofen",
+    tips: [
+        "Zu den Köttbullar passt das <a href='recipe.html?id=54'>cremige Kartoffelpüree</a> super."
+    ],
     category: ["Fleisch"],
     image: "images/köttbullar-ofen.jpeg",
     time:{
-        preparation: "10 min",
-        baking:"20 min",
-        total: "30 min"
+        preparation: "15 min",
+        baking:"25 min",
+        total: "40 min"
     },
     related: ["52", "50", "46"],
     portions: "24 Stück",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "saftige Hackbällchen-der Schweden Klassiker im Ofen gemacht.",
+    description: "Saftige Hackbällchen – der schwedische Klassiker aus dem Ofen.",
 
     /* 🍽️ ZUTATEN */
     ingredients:{
@@ -3111,14 +3114,13 @@ related: ["45", "7", "20"],
             "150ml Milch",
             "2 Eier",
             "1/2 weiße Zwiebel",
-            "1 EL ÖL",
-            "1 EL Worcesthire Sauce",
+            "1 EL Öl",
+            "1 EL Worcestersauce",
             "1 gehäufter TL Senf",
             "3 Kugeln Piment",
-            "1 EL Alkrydda <i>(alternativ: Salz)</i>",
+            "1 EL Allkrydda <i>(alternativ: Salz)</i>",
             "Pfeffer"
-        ],
-
+        ]
 
     },
 
@@ -3133,16 +3135,56 @@ related: ["45", "7", "20"],
         {
             text:"Das Paniermehl mit der Milch übergießen und etwas quellen lassen."
         },
-        {
-            text:"In der Zwischenzeit die Zwiebel schälen und fein hacken. Das Öl i einer kleinen Pfanne erhitzen und die Zwiebel darin mit dem Piment ca. 5 min bei mittlerer Hitze glasig dünsten." },
 
         {
-            text:"Das Hackfleisch in eine große Schüssel geben, die Pimentkugeln aus den Zwiebeln entfernen und die Zwiebel, mitsamt Bratfett, die gequellten Semmelbrösel, die Eier, den Senf, die worcesthire sauce, die Alkrydda und den Pfeffer dazugeben und zu einer glatten Masse verkneten."
+            text:"In der Zwischenzeit die Zwiebel schälen und fein hacken. Das Öl in einer kleinen Pfanne erhitzen und die Zwiebel darin zusammen mit dem Piment ca. 5min bei mittlerer Hitze glasig dünsten."
         },
 
         {
-            text:"Aus der Masse 24 kleine Bällchen formen, auf ein leicht gefettetes Backblech geben und im vorgeheizten Backofen ca 20min backen. Die SChale mit dem Wasser aus dem Ofen nehmen und die Bällchen bei höchster Grillstufe ca. 5min fertig backen." }
+            text:"Das Hackfleisch in eine große Schüssel geben. Die Pimentkugeln aus den Zwiebeln entfernen und die Zwiebeln mitsamt Bratfett, die gequollenen Semmelbrösel, die Eier, den Senf, die Worcestersauce, die Allkrydda und den Pfeffer dazugeben. Alles zu einer glatten Masse verkneten."
+        },
 
+        {
+            text:"Aus der Masse 24 kleine Bällchen formen, auf ein leicht gefettetes Backblech geben und im vorgeheizten Backofen ca. 20min backen. Die Schale mit dem Wasser aus dem Ofen nehmen und die Bällchen anschließend bei höchster Grillstufe ca. 5min fertig backen."
+        }
+
+    ]
+},
+
+{
+    id: "54",
+    title: "Cremiges Kartoffelpüree",
+    tips: [
+        "Im Prinzip kannst du jede Kartoffelsorte für das Püree nehmen, am cremigsten wird es allerdings mit mehligkochenden Kartoffeln."
+    ],
+    category: ["Beilage", "Vegetarisch"],
+    image: "images/kartoffelpüree.jpeg",
+    time:{
+        preparation: "10 min",
+        cooking: "20 min",
+        total: "30 min"
+    },
+    related: ["53", "39", "34"],
+    portions: "6 Portionen",
+    difficulty: "Einfach",
+    rating: 4.6,
+    description: "Herrlich cremiges Kartoffelpüree – super einfach, schnell und aus wenigen Zutaten selbst gemacht.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients:[
+        "1,5 kg Kartoffeln",
+        "30g Butter",
+        "200ml Milch",
+        "Salz",
+        "Pfeffer",
+        "1 Prise Muskat"
+    ],
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps:[
+        "Die Kartoffeln schälen, in grobe Würfel schneiden, in einen Topf geben, mit Salzwasser bedecken, aufkochen und ca. 20min leise köcheln lassen, bis sie beim Einstechen mit einer Gabel weich sind.",
+
+        "Die Kartoffeln gut abgießen, die Milch, die Butter in kleinen Stücken sowie Salz, Pfeffer und Muskat dazugeben und mit einem Kartoffelstampfer zu einem feinen Püree stampfen."
     ]
 },
 ];

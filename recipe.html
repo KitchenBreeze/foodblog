@@ -9,6 +9,8 @@
 
 <meta id="metaDescription" name="description" content="">
 
+<script id="recipeSchema" type="application/ld+json"></script>
+
 <link rel="icon" type="image/png" href="logo1.png">
 <link rel="stylesheet" href="recipe-style.css">
 
@@ -440,6 +442,60 @@ if(recipe){
         );
 
     }
+    // Google Rezept Schema
+
+const schema = document.getElementById("recipeSchema");
+
+if(schema){
+
+    schema.textContent = JSON.stringify({
+
+        "@context": "https://schema.org",
+        "@type": "Recipe",
+
+        "name": recipe.title,
+
+        "image": [
+            window.location.origin + "/" + recipe.image
+        ],
+
+        "description": recipe.description,
+
+        "author": {
+            "@type": "Organization",
+            "name": "KitchenBreeze"
+        },
+
+        "recipeYield": recipe.portions,
+
+        "prepTime": recipe.time.preparation,
+
+        "cookTime":
+            recipe.time.cooking ||
+            recipe.time.baking ||
+            undefined,
+
+        "totalTime": recipe.time.total,
+
+        "recipeIngredient":
+            Object.values(recipe.ingredients)
+            .flat(),
+
+        "recipeInstructions":
+            recipe.steps.map(step => ({
+
+                "@type": "HowToStep",
+
+                "text":
+                    typeof step === "string"
+                    ? step
+                    : step.text
+
+            }))
+
+    });
+
+}
 
 }
 if(!recipe){

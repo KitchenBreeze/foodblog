@@ -6,9 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>KitchenBreeze Rezept</title>
+
+<meta id="metaDescription" name="description" content="">
+
 <link rel="icon" type="image/png" href="logo1.png">
 <link rel="stylesheet" href="recipe-style.css">
-
 
 <style>
 .step-images {
@@ -419,6 +421,27 @@ const recipe = RECIPES.find(r => r.id === id);
 
 const container = document.getElementById("content");
 
+// SEO Daten setzen
+
+if(recipe){
+
+    // Titel im Browser ändern
+    document.title = recipe.title + " – KitchenBreeze";
+
+
+    // Google Beschreibung setzen
+    const metaDescription = document.getElementById("metaDescription");
+
+    if(metaDescription){
+
+        metaDescription.setAttribute(
+            "content",
+            recipe.description
+        );
+
+    }
+
+}
 if(!recipe){
 
     container.innerHTML = "<p style='text-align:center;'>Rezept nicht gefunden</p>";

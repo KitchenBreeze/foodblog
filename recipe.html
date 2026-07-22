@@ -475,11 +475,13 @@ if(schema){
             recipe.time.baking ||
             undefined,
 
-        "totalTime": recipe.time.total,
+      "totalTime": recipe.time.total,
 
-        "recipeIngredient":
-            Object.values(recipe.ingredients)
-            .flat(),
+"recipeCategory": recipe.category.join(", "),
+
+"recipeIngredient":
+    Object.values(recipe.ingredients)
+    .flat(),
 
         "recipeInstructions":
             recipe.steps.map(step => ({

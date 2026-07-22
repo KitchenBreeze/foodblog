@@ -3085,4 +3085,64 @@ related: ["45", "7", "20"],
 
     ]
 },
+
+{
+    id: "53",
+    title: "Köttbullar aus dem Ofen",
+    category: ["Fleisch"],
+    image: "images/köttbullar-ofen.jpeg",
+    time:{
+        preparation: "10 min",
+        baking:"20 min",
+        total: "30 min"
+    },
+    related: ["52", "50", "46"],
+    portions: "24 Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+    description: "saftige Hackbällchen-der Schweden Klassiker im Ofen gemacht.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients:{
+
+        "":[
+            "800g Rinderhackfleisch",
+            "70g Paniermehl",
+            "150ml Milch",
+            "2 Eier",
+            "1/2 weiße Zwiebel",
+            "1 EL ÖL",
+            "1 EL Worcesthire Sauce",
+            "1 gehäufter TL Senf",
+            "3 Kugeln Piment",
+            "1 EL Alkrydda <i>(alternativ: Salz)</i>",
+            "Pfeffer"
+        ],
+
+
+    },
+
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps:[
+
+        {
+            text:"Den Ofen auf 200 Grad Ober/Unterhitze vorheizen und eine feuerfeste Schale mit Wasser auf den Ofenboden stellen."
+        },
+
+        {
+            text:"Das Paniermehl mit der Milch übergießen und etwas quellen lassen."
+        },
+        {
+            text:"In der Zwischenzeit die Zwiebel schälen und fein hacken. Das Öl i einer kleinen Pfanne erhitzen und die Zwiebel darin mit dem Piment ca. 5 min bei mittlerer Hitze glasig dünsten." },
+
+        {
+            text:"Das Hackfleisch in eine große Schüssel geben, die Pimentkugeln aus den Zwiebeln entfernen und die Zwiebel, mitsamt Bratfett, die gequellten Semmelbrösel, die Eier, den Senf, die worcesthire sauce, die Alkrydda und den Pfeffer dazugeben und zu einer glatten Masse verkneten."
+        },
+
+        {
+            text:"Aus der Masse 24 kleine Bällchen formen, auf ein leicht gefettetes Backblech geben und im vorgeheizten Backofen ca 20min backen. Die SChale mit dem Wasser aus dem Ofen nehmen und die Bällchen bei höchster Grillstufe ca. 5min fertig backen." }
+
+    ]
+},
 ];

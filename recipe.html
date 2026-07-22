@@ -456,7 +456,10 @@ container.innerHTML = `
 
 <div class="container">
 
-    <img class="hero-img" src="${recipe.image}">
+  <img 
+class="hero-img" 
+src="${recipe.image}" 
+alt="${recipe.title} – KitchenBreeze">
 
     <h1 class="title">${recipe.title}</h1>
 
@@ -580,7 +583,10 @@ ${recipe.steps.map((step, i) => `
             ? `
            <div class="step-images" style="width:100%;">
                 ${step.images.map(img => `
-                    <img src="${img}" class="step-image">
+                    <img 
+src="${img}" 
+class="step-image"
+alt="${recipe.title} Zubereitung Schritt">
                 `).join("")}
             </div>
             `

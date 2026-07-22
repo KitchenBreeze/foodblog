@@ -3187,4 +3187,64 @@ related: ["45", "7", "20"],
         "Die Kartoffeln gut abgießen, die Milch, die Butter in kleinen Stücken sowie Salz, Pfeffer und Muskat dazugeben und mit einem Kartoffelstampfer zu einem feinen Püree stampfen."
     ]
 },
+
+{
+    id: "55",
+    title: "Linsen mit Spätzle",
+    category: ["Fleisch"],
+    image: "images/linsen-mit-spätzle.jpeg",
+    time:{
+        preparation: "5 min",
+        cooking: "45 min",
+        total: "50 min"
+    },
+    related: ["21", "19", "4"],
+    portions: "8 Portionen",
+    difficulty: "Einfach",
+    rating: 4.6,
+    description: "Der schwäbische Wohlfühlteller mit würzigen Linsen, weichen Spätzle und goldbraun gebratener Wurst.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients:{
+        "Linsen": [
+            "500g Berglinsen",
+            "1,5l Gemüsebrühe",
+            "150g Bauchspeckstück",
+            "1 große Gemüsezwiebel",
+            "1 TL Zucker <i>(ca. 5g)</i>",
+            "40g Butter",
+            "40g Mehl",
+            "3 Lorbeerblätter",
+            "1 EL Balsamicoessig",
+            "Salz",
+            "Pfeffer"
+        ],
+
+        "Außerdem": [
+            "2 Pck. Geflügelfleischwurst (à 500g)",
+            "500g Spätzle"
+        ]
+    },
+
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps:[
+
+        "Für die Linsen die Zwiebel schälen und fein würfeln. 100g des Specks in kleine Würfel schneiden.",
+
+        "Die Butter in einem Topf erhitzen und die Zwiebel darin bei mittlerer Hitze ca. 2min glasig dünsten.",
+
+        "Die Speckwürfel dazugeben und weitere 2min auf höchster Stufe unter gelegentlichem Rühren mitrösten. Den Zucker unterrühren und ca. 1min unter gelegentlichem Rühren etwas karamellisieren.",
+
+        "Das Mehl mit einem Schneebesen unterrühren, kurz anschwitzen und mit der Gemüsebrühe ablöschen. Die Linsen, das restliche Speckstück und die Lorbeerblätter hinzufügen, aufkochen und bei mittlerer Hitze ca. 35min unter gelegentlichem Rühren gar kochen.",
+
+        "Währenddessen die Wurst in grobe Würfel schneiden, auf ein doppelt mit Backpapier belegtes Backblech verteilen und im Ofen bei Grillstufe 2 im oberen Drittel ca. 20min goldbraun braten. Dabei nach der Hälfte der Zeit einmal wenden.",
+
+        "Sobald die Wurst im Ofen ist, einen Topf mit Salzwasser zum Kochen bringen. Die Spätzle in das kochende Wasser geben und nach Packungsbeilage gar kochen. Anschließend abgießen und mit etwas Öl vermengen.",
+
+        "Wenn die Linsen fertig sind, den Topf vom Herd nehmen. Das Speckstück und die Lorbeerblätter entfernen, den Essig unterrühren, mit Salz und Pfeffer abschmecken und mindestens 5min ziehen lassen.",
+
+        "Die Wurst aus dem Ofen nehmen und zusammen mit den Spätzle und den Linsen servieren."
+    ]
+},
 ];

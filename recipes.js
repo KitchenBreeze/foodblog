@@ -18,7 +18,8 @@ const RECIPES = [
     description: "Der italienische Klassiker. Mit wenigen Zutaten zum großen Genuss.",
 
     /* 🍽️ ZUTATEN */
-    ingredients: [
+    ingredients:{
+        "": [
         "600g Spaghetti (Nr. 5)",
         "7 große Knoblauchzehen",
         "1/2 TL Chiliflocken",
@@ -27,7 +28,7 @@ const RECIPES = [
         "Pfeffer",
         "Parmesan (optional)",
     ],
-
+    },
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
         "Den Knoblauch schälen, 4 der Knoblauchzehen mit einer Knoblauchpresse in eine kleine Schale pressen, den Rest in dünne Scheiben schneiden und mit in die Schale geben.",
@@ -61,7 +62,8 @@ const RECIPES = [
     description: "Süß-sauer trifft auf herzhaft-salzig.",
 
     /* 🍽️ ZUTATEN */
-    ingredients: [
+    ingredients: {
+        "":[
         "450g TK-Prinzessinnenbohnen",
         "1 Ananas (ca. 1,6kg)",
         "1 Salatgurke",
@@ -76,6 +78,7 @@ const RECIPES = [
         "Salz",
         "Pfeffer",
     ],
+    },
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
@@ -122,7 +125,8 @@ const RECIPES = [
     description: "Der einfache Klassiker mit Kirschen.",
 
     /* 🍽️ ZUTATEN */
-    ingredients: [
+    ingredients: {
+        "":[
         "115g Glaskirschen (abgetropft)",
         "280g Mehl",
         "20g Speisestärke",
@@ -137,6 +141,7 @@ const RECIPES = [
         "100g Schokostreusel",
         "1 Prise Salz",
     ],
+    },
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
@@ -293,13 +298,15 @@ const RECIPES = [
     description: "Ein cremiger Aufstrich. Perfekt für Burger, Sandwiches, Wraps & Co.",
 
     /* 🍽️ ZUTATEN */
-    ingredients: [
+    ingredients: {
+        "":[
         "2 Avocados",
         "100g Frischkäse",
         "1 Spritzer Limettensaft",
         "Salz",
         "Pfeffer",
     ],
+},
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
@@ -325,7 +332,8 @@ const RECIPES = [
     description: "Schnelle Muffins mit Zutaten, die du sicher schon zuhause hast.",
 
     /* 🍽️ ZUTATEN */
-    ingredients: [
+    ingredients: {
+        "":[
         "50g Mehl (Type 405)",
         "20g Zucker",
         "2g Backpulver",
@@ -337,7 +345,7 @@ const RECIPES = [
         "20ml neutrales Öl",
         "1 TL Apfelessig",
     ],
-
+    },
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
         "Den Ofen auf 180°C Ober-/Unterhitze vorheizen und ein Muffinblech einfetten (alternativ mit Muffinförmchen auskleiden).",
@@ -580,12 +588,14 @@ related: ["45", "7", "20"],
     rating: 4.6,
     description: "Fluffiger Brezelteig getoppt mit salzigem Schinken, saftiger Ananas und leckerem Käse.",
 
-    ingredients: [
+    ingredients: {
+        "":[
         "3 80g-gelaugte <a href='recipe.html?id=35'>Brezelteiglinge</a> (alternativ 3 angetaute TK-Brezeln)",
         "30g Kochschinken",
         "50g Dosenananas",
         "120g geriebener Gouda (z.B. mittelalt)",
     ],
+},
 
     steps: [
         "Den Ofen mind. 15 min auf 230°C Ober-/Unterhitze vorheizen.",
@@ -615,7 +625,8 @@ related: ["45", "7", "20"],
     rating: 5,
     description: "Leckere Bohnen in würziger Tomatensoße.",
 
-    ingredients: [
+    ingredients: {
+        "":[
         "2 Dosen weiße Bohnen (à 800g)",
         "2 EL Tomatenmark",
         "400g gehackte Tomaten",
@@ -631,6 +642,7 @@ related: ["45", "7", "20"],
         "Salz",
         "Pfeffer",
     ],
+},
 
     steps: [
         "Die Zwiebeln schälen und fein hacken. Den Knoblauch schälen und pressen.",
@@ -815,7 +827,8 @@ related: ["45", "7", "20"],
     description: "Der englische Teeklassiker, mal anders.",
 
     /* 🍽️ ZUTATEN */
-    ingredients: [
+    ingredients: {
+        "":[
         
         "250g Mehl (Type 405)",
         "60g sehr kalte Butter",
@@ -825,6 +838,7 @@ related: ["45", "7", "20"],
         "1/2 TL Salz",
         "1 TL Paprikapulver",
     ],
+},
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
@@ -869,7 +883,8 @@ related: ["45", "7", "20"],
     description: "Das unwiderstehliche Schnitzelupgrade.",
 
     /* 🍽️ ZUTATEN */
-    ingredients: [
+    ingredients: {
+        "":[
         
         "7 Putenschnitzel",
         "7 Scheiben Prosciutto Cotto",
@@ -884,7 +899,7 @@ related: ["45", "7", "20"],
         "Pfeffer",
         "Butterschmalz",
     ],
-
+    },
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
 
@@ -923,7 +938,8 @@ related: ["45", "7", "20"],
     description: "Western-Bohnenpfanne im Shakshuka-Style.",
 
     /* 🍽️ ZUTATEN */
-    ingredients: [
+    ingredients: {
+        "":[
         
         "3 Dosen baked beans (à 400g)",
         "1 TL Worcestershire Sauce",
@@ -939,6 +955,8 @@ related: ["45", "7", "20"],
         "Pfeffer",
 
     ],
+
+},
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
@@ -1036,7 +1054,8 @@ related: ["45", "7", "20"],
     description: "Der Eierklassiker, verfeinert mit leckeren Speckwürfeln.",
 
     /* 🍽️ ZUTATEN */
-    ingredients: [
+    ingredients: {
+        "":[
         
         "10 Eier",
         "25g Mayonnaise",
@@ -1050,6 +1069,7 @@ related: ["45", "7", "20"],
         "Salz",
         "Pfeffer"
     ],
+    },
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
@@ -1206,7 +1226,8 @@ related: ["45", "7", "20"],
     description: "Schneller Couscoussalat. Auch super für Meal-Prep.",
 
     /* 🍽️ ZUTATEN */
-    ingredients: [
+    ingredients: {
+        "": [
 
      
             "500g Couscous",
@@ -1221,6 +1242,7 @@ related: ["45", "7", "20"],
             "Salz",
             "Pfeffer",
     ],
+},
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
@@ -1451,7 +1473,8 @@ related: ["45", "7", "20"],
     description: "Leckerer Bananenkuchen mit herrlichem Nussgeschmack.",
 
     /* 🍽️ ZUTATEN */
-    ingredients: [
+    ingredients: {
+        "":[
         "ca. 300g überreife Bananen",
         "50g Erdnussbutter",
         "2 Eier (Größe L)",
@@ -1466,6 +1489,7 @@ related: ["45", "7", "20"],
         "1 Prise Salz",
         "1 TL Vanilleextrakt",
     ],
+},
 
         
 
@@ -1624,7 +1648,8 @@ related: ["45", "7", "20"],
     description:"Flammkuchen trifft Pasta: Spaghetti in cremiger Soße mit knusprigem Speck.",
 
     /* 🍽️ ZUTATEN */
-    ingredients:[
+    ingredients:{
+        "":[
         "600g Spaghetti (Nr. 5)",
         "2 Pck. Crème fraîche (à 200g)",
         "250g Schinkenwürfel",
@@ -1635,7 +1660,7 @@ related: ["45", "7", "20"],
         "Salz",
         "Pfeffer",
     ],
-
+    },
     /* 👨‍🍳 ZUBEREITUNG */
     steps:[
         "Die Nudeln nach Packungsbeilage zubereiten, abgießen, dabei 1 Kelle Pastawasser auffangen. Die Nudeln mit etwas Öl vermengen und beiseitestellen.",
@@ -1669,7 +1694,8 @@ related: ["45", "7", "20"],
     description:"Fluffige Pfannkuchen – ob zum Frühstück oder Abendessen, immer ein Genuss.",
 
     /* 🍽️ ZUTATEN */
-    ingredients:[
+    ingredients:{
+    "":[
         "500g Mehl (Type 405)",
         "2 EL Zucker",
         "1 TL Backpulver",
@@ -1678,7 +1704,8 @@ related: ["45", "7", "20"],
         "940ml Milch",
         "80ml Sprudelwasser",
         "neutrales Öl",
-    ],
+    ]
+},
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps:[
@@ -2161,7 +2188,8 @@ related: ["45", "7", "20"],
     description: "Schnelle, leckere Gemüsepfanne mit mediterranem Touch.",
 
     /* 🍽️ ZUTATEN */
-    ingredients: [
+    ingredients:{
+        "": [
 
         "1 große weiße Zwiebel",
         "2 Knoblauchzehen",
@@ -2173,6 +2201,7 @@ related: ["45", "7", "20"],
         "Salz",
         "Pfeffer"
     ],
+},
 
         
 
@@ -2283,7 +2312,8 @@ related: ["45", "7", "20"],
     description: "Cremig-würzige Fussili mit saftigem Thunfisch und buntem Mexico-Mix.",
 
     /* 🍽️ ZUTATEN */
-    ingredients: [
+    ingredients: {
+        "":[
 
         "750g Fussili",
         "4 Dosen Thunfisch in Sonnenblumenöl (à 185g)",
@@ -2291,7 +2321,7 @@ related: ["45", "7", "20"],
         "Salz",
         "Pfeffer"
     ],
-
+    },
         
 
     /* 👨‍🍳 ZUBEREITUNG */
@@ -3171,7 +3201,8 @@ related: ["45", "7", "20"],
     description: "Herrlich cremiges Kartoffelpüree – super einfach, schnell und aus wenigen Zutaten selbst gemacht.",
 
     /* 🍽️ ZUTATEN */
-    ingredients:[
+    ingredients:{
+        "":[
         "1,5 kg Kartoffeln",
         "30g Butter",
         "200ml Milch",
@@ -3179,6 +3210,7 @@ related: ["45", "7", "20"],
         "Pfeffer",
         "1 Prise Muskat"
     ],
+},
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps:[
@@ -3245,6 +3277,64 @@ related: ["45", "7", "20"],
         "Wenn die Linsen fertig sind, den Topf vom Herd nehmen. Das Speckstück und die Lorbeerblätter entfernen, den Essig unterrühren, mit Salz und Pfeffer abschmecken und mindestens 5min ziehen lassen.",
 
         "Die Wurst aus dem Ofen nehmen und zusammen mit den Spätzle und den Linsen servieren."
+    ]
+},
+
+{
+    id: "56",
+    title: "Tortellinisalat",
+    category: ["Pasta"],
+    image: "images/tortellinisalat.jpeg",
+    time:{
+        preparation: "30 min",
+        total: "30 min"
+    },
+    related: ["44", "19", "42"],
+    portions: "6 Portionen",
+    difficulty: "Einfach",
+    rating: 4.6,
+    description: "Der schwäbische Wohlfühlteller mit würzigen Linsen, weichen Spätzle und goldbraun gebratener Wurst.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients:{
+        "Salat": [
+            "750g Tortellini",
+            "400g Kirschtomaten",
+            "60g getrocknete Tomaten",
+            "3 Pck. Mini-Mozzarella",
+            "60g Rucola",
+            "40g Pinienkerne",
+            "60g Parmesan",
+        ],
+
+        "Pesto": [
+            "25g Basilikumblätter (Blätter von einem Topf)",
+            "1 sehr kleine Knoblauchzehe",
+            "35g Parmesan",
+            "10g der Pinienkerne",
+            "30g Olivenöl",
+            "etwas Salz",
+            "Pfeffer"
+        ]
+    },
+
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps:[
+
+        "Die Tortellini nach Packungsbeilage zubereiten, abgießen in ein Sieb geben und etwas abkühlen lassen.",
+
+"In der Zwischenzeit für das Pesto die Kerne in einer heißen Pfanne ohne Öl kurz unter schwenken goldbraun anrösten.",
+
+"Die Knoblauchzehe schälen und den Parmesan fein reiben.",
+
+"10g der Pinienkerne mit dem Knoblauch, etwas Salz und Pfeffer in den Mixer geben und kurz etwas klein pürieren. Den Basilikum und das Öl dazugeben und solange in kleinen Intervallen pürieren, bis keine großen Stücke mehr zu sehen sind. Den Parmesan dazugeben und alles fertig zu einem cremigen Pesto pürieren. Das fertige Pesto in den Kühlschrank stellen.",
+
+"Die Mozzarellakugeln halbieren, den Parmesan hobeln und beides noch unter die leicht warmen Tortellini in eine Schüssel geben.",
+
+"In der Zwischenzeit, die Tomaten halbieren oder je nach Größe vierteln. Die getrockneten Tomaten klein würfeln. Den Rucola waschen,abtrocknen und etwas klein zupfen. Unter die Tortellini heben und gut vermengen.",
+
+"Das Pesto unterheben, nach Belieben salzen und pfeffern und mit den restlichen Pinienkernen servieren."
     ]
 },
 ];

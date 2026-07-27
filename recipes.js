@@ -3293,7 +3293,7 @@ related: ["45", "7", "20"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Der schwäbische Wohlfühlteller mit würzigen Linsen, weichen Spätzle und goldbraun gebratener Wurst.",
+    description: "Leckere Tortellini mit saftigen Tomaten, weichem Mozzarella, salzigem Parmesan und knackigen Pinienkernen in cremig, aromatischem Pesto.",
 
     /* 🍽️ ZUTATEN */
     ingredients:{
@@ -3338,3 +3338,4 @@ related: ["45", "7", "20"],
     ]
 },
 ];
+module.exports = { RECIPES };

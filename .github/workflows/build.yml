@@ -14,5 +14,10 @@ jobs:
       - name: Repository auschecken
         uses: actions/checkout@v4
 
-      - name: Test
-        run: echo "KitchenBreeze Build erfolgreich gestartet!"
+      - name: Testdatei erzeugen
+        run: |
+          mkdir -p build-output
+          echo "KitchenBreeze automatischer Build funktioniert!" > build-output/test-build.html
+
+      - name: Ergebnis anzeigen
+        run: ls -la build-output

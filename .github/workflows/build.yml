@@ -14,10 +14,8 @@ jobs:
       - name: Repository auschecken
         uses: actions/checkout@v4
 
-      - name: Testdatei erzeugen
-        run: |
-          mkdir -p build-output
-          echo "KitchenBreeze automatischer Build funktioniert!" > build-output/test-build.html
+      - name: Python Version prüfen
+        run: python --version
 
-      - name: Ergebnis anzeigen
-        run: ls -la build-output
+      - name: Generator testen
+        run: python generator/build-generator.py

@@ -1,16 +1,25 @@
 import re
 
-title = "Spaghetti aglio e olio"
+with open("recipes.js", "r", encoding="utf-8") as file:
+    content = file.read()
 
-slug = title.lower()
+titles = re.findall(
+    r'title:\s*"([^"]+)"',
+    content
+)
 
-slug = slug.replace("ä", "ae")
-slug = slug.replace("ö", "oe")
-slug = slug.replace("ü", "ue")
-slug = slug.replace("ß", "ss")
+for title in titles[:5]:
 
-slug = re.sub(r"[^a-z0-9\s-]", "", slug)
-slug = re.sub(r"\s+", "-", slug)
+    slug = title.lower()
 
-print("Titel:", title)
-print("Slug:", slug)
+    slug = slug.replace("ä", "ae")
+    slug = slug.replace("ö", "oe")
+    slug = slug.replace("ü", "ue")
+    slug = slug.replace("ß", "ss")
+
+    slug = re.sub(r"[^a-z0-9\s-]", "", slug)
+    slug = re.sub(r"\s+", "-", slug)
+
+    print(title)
+    print("→", slug)
+    print()

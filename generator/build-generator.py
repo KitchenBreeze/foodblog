@@ -9,38 +9,32 @@ titles = re.findall(
     recipes_content
 )
 
-title = titles[0]
+for title in titles:
 
+    slug = title.lower()
 
-slug = title.lower()
+    slug = slug.replace("ä", "ae")
+    slug = slug.replace("ö", "oe")
+    slug = slug.replace("ü", "ue")
+    slug = slug.replace("ß", "ss")
 
-slug = slug.replace("ä", "ae")
-slug = slug.replace("ö", "oe")
-slug = slug.replace("ü", "ue")
-slug = slug.replace("ß", "ss")
+    slug = re.sub(r"[^a-z0-9\s-]", "", slug)
+    slug = re.sub(r"\s+", "-", slug)
 
-slug = re.sub(r"[^a-z0-9\s-]", "", slug)
-slug = re.sub(r"\s+", "-", slug)
+    with open("templates/recipe-template.html", "r", encoding="utf-8") as file:
+        template = file.read()
 
+    template = template.replace(
+        "<title>KitchenBreeze Rezept</title>",
+        f"<title>{title} – KitchenBreeze</title>"
+    )
 
-with open("templates/recipe-template.html", "r", encoding="utf-8") as file:
-    template = file.read()
+    os.makedirs("recipes", exist_ok=True)
 
+    filename = f"recipes/{slug}.html"
 
-template = template.replace(
-    "<title>KitchenBreeze Rezept</title>",
-    f"<title>{title} – KitchenBreeze</title>"
-)
+    with open(filename, "w", encoding="utf-8") as file:
+        file.write(template)
 
-
-os.makedirs("recipes", exist_ok=True)
-
-filename = f"recipes/{slug}.html"
-
-
-with open(filename, "w", encoding="utf-8") as file:
-    file.write(template)
-
-
-print("Erzeugt:")
-print(filename)
+    print("Erzeugt:")
+    print(filename)

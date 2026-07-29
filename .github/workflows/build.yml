@@ -26,4 +26,4 @@ jobs:
       - name: Erzeugte Dateien speichern
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Automatisch erzeugte Rezeptseiten aktualisiert"
+         commit_message: "Automatisch erzeugte Rezeptseiten aktualisiert [skip ci]"

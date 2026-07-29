@@ -414,12 +414,11 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+<!-- RECIPE_DATA -->
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

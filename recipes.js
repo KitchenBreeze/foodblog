@@ -11,7 +11,7 @@ const RECIPES = [
         cooking: "25 min",
         total:"30 min"
     },
-    related: [2, 5, 8],
+    related: ["2", "5", "8"],
     portions: 6,
     difficulty: "Einfach",
     rating: 4.6,

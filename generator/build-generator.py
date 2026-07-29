@@ -71,3 +71,40 @@ for recipe in recipes:
 
     print("Verarbeite:")
     print(filename)
+
+
+    with open(
+        "templates/recipe-template.html",
+        "r",
+        encoding="utf-8"
+    ) as file:
+        template = file.read()
+
+
+    recipe_data = json.dumps(
+        recipe,
+        ensure_ascii=False,
+        indent=4
+    )
+
+
+    template = template.replace(
+        "<!-- RECIPE_DATA -->",
+        f"""
+<script>
+const RECIPE_DATA = {recipe_data};
+</script>
+"""
+    )
+
+
+    with open(
+        filename,
+        "w",
+        encoding="utf-8"
+    ) as file:
+        file.write(template)
+
+
+    print("Erstellt:")
+    print(filename)

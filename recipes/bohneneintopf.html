@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bohneneintopf – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,63 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "12",
+    "title": "Bohneneintopf",
+    "category": [
+        "Vegetarisch"
+    ],
+    "image": "images/bohneneintopf.jpg",
+    "time": {
+        "preparation": "5 min",
+        "cooking": "40 min",
+        "total": "45 min"
+    },
+    "related": [
+        "10",
+        "13",
+        "32"
+    ],
+    "portions": "6",
+    "difficulty": "Einfach",
+    "rating": 5,
+    "description": "Leckere Bohnen in würziger Tomatensoße.",
+    "ingredients": {
+        "": [
+            "2 Dosen weiße Bohnen (à 800g)",
+            "2 EL Tomatenmark",
+            "400g gehackte Tomaten",
+            "400g Tomate al Frito",
+            "125ml Gemüsebrühe",
+            "6 Knoblauchzehen",
+            "2 Zwiebeln",
+            "2 TL Kreuzkümmelpulver",
+            "1 TL Paprikapulver",
+            "1/2 TL Kurkumapulver",
+            "1/4 TL Ingwerpulver",
+            "1 TL getrocknete Petersilie",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "Die Zwiebeln schälen und fein hacken. Den Knoblauch schälen und pressen.",
+        "Etwas Olivenöl in einem beschichteten Topf erhitzen und die Zwiebeln bei mittlerer bis hoher Hitze ca. 5 min glasig dünsten.",
+        "Den Knoblauch dazugeben und ca. 1 Minute mit anschwitzen. Das Tomatenmark unterrühren und ca. 2 min mitbraten. Die Gewürze, Salz und Pfeffer dazugeben und ca. 30 sek unterrühren und mit anschwitzen.",
+        "Mit Gemüsebrühe und gehackten Tomaten ablöschen, aufkochen und auf mittlerer Hitze ca. 10 min köcheln.",
+        "In der Zwischenzeit die Bohnen abgießen.",
+        "Die Bohnen und das Tomate al Frito dazugeben, erneut aufkochen und ca. 20 min bei mittelhoher Hitze unter gelegentlichem Rühren fertig köcheln.",
+        "Die Petersilie unterrühren, salzen, pfeffern und mit Brötchen servieren."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

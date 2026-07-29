@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Eifreies Frenchtoast – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,70 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "21",
+    "title": "Eifreies Frenchtoast",
+    "tips": [
+        "Die fertigen Brote kannst du im 50°C warmen Ofen warm halten, bis die anderen fertig sind."
+    ],
+    "category": [
+        "Brot"
+    ],
+    "image": "images/Eifreies-Frenchtoast.jpeg",
+    "time": {
+        "preparation": "12 min",
+        "cooking": "18 min",
+        "total": " 30 min"
+    },
+    "related": [
+        "42",
+        "49",
+        "1"
+    ],
+    "portions": "6 Stück",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Keine Eier zu Hause, aber trotzdem Lust auf Frenchtoast? Das geht ganz einfach mit diesem Rezept!",
+    "ingredients": {
+        "Tränke": [
+            "250ml Milch",
+            "1 TL Mehl",
+            "20g Stärke",
+            "1/4 TL Natron",
+            "1 TL Balsamicoessig",
+            "1/2 TL Paprikapulver",
+            "1/2 Knoblauchpulver",
+            "1/2 TL Kurkuma",
+            "1 Prise Muskatnuss",
+            "Salz",
+            "Pfeffer"
+        ],
+        "Brot": [
+            "12 Scheiben Weißbrot oder Toastbrot",
+            "6 Scheiben Kochschinken",
+            "6 Scheiben Gouda"
+        ],
+        "Ausbacken": [
+            "Butter"
+        ]
+    },
+    "steps": [
+        "Für die Tränke alle Zutaten in einer flachen Schale mit einem Schneebesen verrühren, bis keine Klümpchen mehr zu sehen sind.",
+        "Für die Brote je eine Scheibe Toast mit einer Scheibe Schinken und einer Scheibe Gouda belegen und eine zweite Brothälfte daraufklappen.",
+        "20g Butter in einer Pfanne erhitzen.",
+        "Jedes Brot nur ganz kurz in die Tränke tauchen, eher dippen und etwas ausdrücken (es saugt sich sehr schnell voll).",
+        "Je zwei Brote in die Pfanne geben, gut andrücken und bei mittlerer Hitze ca. 3 min pro Seite ausbacken. (Zwischendurch die Tränke immer mal wieder rühren, da sich am Boden die Stärke absetzt)",
+        "Erneut 20g Butter in der Pfanne erhitzen und die nächsten Brote ausbacken. Solange wiederholen, bis alle Brote fertig sind."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

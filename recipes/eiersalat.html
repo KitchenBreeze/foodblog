@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Eiersalat – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,57 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "19",
+    "title": "Eiersalat",
+    "category": [
+        "Aufstriche & Dips"
+    ],
+    "image": "images/eiersalat.jpeg",
+    "time": {
+        "preparation": "10 min",
+        "cooking": "10 min",
+        "total": " 20 min"
+    },
+    "related": [
+        "10",
+        "13",
+        "32"
+    ],
+    "portions": "10 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Der Eierklassiker, verfeinert mit leckeren Speckwürfeln.",
+    "ingredients": {
+        "": [
+            "10 Eier",
+            "25g Mayonnaise",
+            "200g Schmand",
+            "1 TL Senf",
+            "6 Cornichons",
+            "130g Tiroler Speckwürfel",
+            "4 TL saure Gurkenwasser",
+            "Schnittlauch",
+            "etwas Öl",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "Die Eier ca. 10 min hart kochen. Abschrecken und etwas abkühlen lassen.",
+        "Währenddessen etwas Öl in einer beschichteten Pfanne erhitzen und die Speckwürfel darin ca. 4 min auf höchster Stufe braten.",
+        "In der Zwischenzeit den Schmand mit der Mayonnaise, dem Senf und dem Gurkenwasser verrühren. Die Cornichons klein schneiden, den Schnittlauch mit einer Schere in feine Ringe schneiden, den Speck mitsamt der Bratflüssigkeit dazugeben und unterrühren.",
+        "Die Eier schälen und im Eierschneider in Scheiben schneiden, um 90 Grad drehen und erneut durchschneiden. Die Eier unterheben, salzen und pfeffern und nach Belieben mit Schnittlauch garnieren."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

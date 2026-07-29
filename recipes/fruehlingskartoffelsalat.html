@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Frühlingskartoffelsalat – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,67 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "37",
+    "title": "Frühlingskartoffelsalat",
+    "tips": [
+        "Du kannst den Salat auch gut schon 1–2 Tage vorher vorbereiten und im Kühlschrank aufbewahren. Dann schmeckt er sogar noch besser."
+    ],
+    "category": [
+        "Vegetarisch",
+        "Salate",
+        "Vegan"
+    ],
+    "image": "images/Frühlingskartoffelsalat.jpeg",
+    "time": {
+        "preparation": "20 min",
+        "cooking": "20 min",
+        "cooling": "1 Std 10 min",
+        "total": "1 Std 50 min"
+    },
+    "related": [
+        "12",
+        "22",
+        "32"
+    ],
+    "portions": "6 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Klassischer Kartoffelsalat mit frühlingshafter Note.",
+    "ingredients": {
+        "Salat": [
+            "2kg festkochende Kartoffeln",
+            "1 Bund Radieschen",
+            "1 Bund Frühlingszwiebeln",
+            "1 Salatgurke",
+            "1 EL Weißweinessig"
+        ],
+        "Dressing": [
+            "300ml Gemüsebrühe",
+            "4 EL Olivenöl",
+            "2 EL Senf",
+            "1 TL Weißweinessig",
+            "1 EL gefriergetrocknete Salatkräuter",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "Die Kartoffeln in einen Topf geben, vollständig mit Wasser bedecken und aufkochen lassen. Die Hitze etwas reduzieren und ca. 20 Minuten sanft köcheln lassen, bis sie weich sind, wenn man mit einer Gabel hineinsticht. Das Wasser abgießen und die Kartoffeln ca. 5 Minuten ausdampfen lassen, bis man sie einigermaßen anfassen kann.",
+        "Die Kartoffeln pellen, in Scheiben schneiden und in eine große Schüssel geben. 1 EL Weißweinessig untermischen und gemeinsam ca. 5 Minuten abkühlen lassen.",
+        "In der Zwischenzeit die Frühlingszwiebeln in Ringe schneiden und die Radieschen vierteln und in Scheiben schneiden. Beides zu den Kartoffeln geben.",
+        "Die Gemüsebrühe mit Senf, Öl, 1 TL Weißweinessig und den Gartenkräutern vermischen und über die Kartoffeln gießen. Salz und Pfeffer dazugeben und alles gut vermengen. Die Schüssel abdecken und mindestens 1 Stunde ziehen lassen. <b>(Je länger der Salat zieht, desto besser schmeckt er.)</b>",
+        "Nach der Ruhezeit die Gurke halbieren, nach Belieben schälen und das Innere mit einem Löffel entfernen. Das feste Gurkenfleisch in Würfel schneiden, zu den Kartoffeln geben und den Salat nochmals mit Salz und Pfeffer abschmecken."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

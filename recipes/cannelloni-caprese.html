@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cannelloni Caprese – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,63 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "14",
+    "title": "Cannelloni Caprese",
+    "category": [
+        "Pasta"
+    ],
+    "image": "images/canneloni-caprese.jpeg",
+    "time": {
+        "preparation": "30 min",
+        "cooking": "30 min",
+        "total": "1 Std."
+    },
+    "related": [
+        "1",
+        "4",
+        "26"
+    ],
+    "portions": "6 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Leckere Cannelloni, gefüllt mit saftigen Tomaten und geschmolzenem Mozzarella, in einer cremigen Tomatensauce.",
+    "ingredients": {
+        "Nudeln": [
+            "270g Cannelloni (30 Stück)",
+            "5 Pck. Mini-Mozzarella (à 250g)",
+            "450g Datteltomaten",
+            "250g geriebener Käse (z.B. Gouda)"
+        ],
+        "Sauce": [
+            "500g passierte Tomaten",
+            "1 EL Tomatenmark",
+            "3 Knoblauchzehen",
+            "2 EL Olivenöl",
+            "500ml Kochsahne",
+            "1 TL italienische Kräuter",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "Den Knoblauch schälen und pressen.",
+        "Das Olivenöl in einem kleinen Topf erhitzen. Den Knoblauch bei mittlerer Hitze ca. 30 sek in dem Öl anschwitzen, bis es duftet. Das Tomatenmark dazugeben und unter Rühren ca. 1–2 min mitrösten. Mit den passierten Tomaten ablöschen, die italienischen Kräuter dazugeben, aufkochen und bei mittlerer Hitze ca. 15 min sanft köcheln lassen.",
+        "In der Zwischenzeit den Ofen auf 200°C Ober-/Unterhitze vorheizen, die Tomaten halbieren und den Mozzarella abgießen.",
+        "Jede Cannelloni mit 1 Mozzarellakugel, 1 Tomatenhälfte, 1 Mozzarellakugel und 1 Tomatenhälfte füllen. Dies solange wiederholen, bis alle Cannelloni gefüllt sind.",
+        "Die Cannelloni einschichtig in eine große Auflaufform (ca. 40cm x 30cm) geben.",
+        "Die restlichen Mozzarellakugeln halbieren. Die Tomatensauce vom Herd nehmen, ordentlich salzen und pfeffern und die Sahne unterrühren. Die Sauce gleichmäßig über die Cannelloni gießen, den geriebenen Käse darüber streuen und die halbierten Mozzarellakugeln gleichmäßig darüber verteilen.",
+        "Die Cannelloni im vorgeheizten Backofen ca. 30 min backen, bis der Käse goldbraun ist und die Nudeln weich sind."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

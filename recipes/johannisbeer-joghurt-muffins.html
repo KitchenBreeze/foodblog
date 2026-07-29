@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Johannisbeer-Joghurt-Muffins – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,59 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "48",
+    "title": "Johannisbeer-Joghurt-Muffins",
+    "category": [
+        "süßes Gebäck",
+        "Vegetarisch"
+    ],
+    "image": "images/Johannisbeer-Joghurt-Muffins.jpeg",
+    "time": {
+        "preparation": "10 min",
+        "baking": "22 min",
+        "cooling": "10 min",
+        "total": "42 min"
+    },
+    "related": [
+        "45",
+        "40",
+        "2"
+    ],
+    "portions": "12 Stück",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Saftige Muffins mit süß-sauren Johannisbeeren.",
+    "ingredients": {
+        "": [
+            "200g Mehl (Type 405)",
+            "90g Zucker",
+            "1 TL Vanillezucker",
+            "2 TL Backpulver",
+            "1 Prise Salz",
+            "65g Joghurt",
+            "120ml Milch",
+            "75ml Öl",
+            "2 Eier",
+            "60g Johannisbeeren (vom Strunk entfernt)"
+        ]
+    },
+    "steps": [
+        "Den Backofen auf 180 Grad Ober-/Unterhitze vorheizen und ein Muffinblech mit Muffinförmchen auskleiden.",
+        "Das Mehl mit dem Salz, dem Backpulver, dem Zucker und dem Vanillezucker in einer Schüssel vermengen und in der Mitte eine Mulde formen.",
+        "Das Öl, die Milch, den Joghurt und die Eier in die Mulde geben und alles mit einem Schneebesen verrühren, bis keine Mehlklümpchen mehr zu sehen sind.",
+        "Die Johannisbeeren vorsichtig unterheben und den Teig mit einem Eisportionierer auf die vorbereiteten Muffinförmchen aufteilen.",
+        "Im vorgeheizten Backofen ca. 22 Minuten backen (Stäbchenprobe!). Aus dem Backofen nehmen, mindestens 10 Minuten abkühlen lassen und anschließend aus der Form lösen."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

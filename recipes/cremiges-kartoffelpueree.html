@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cremiges Kartoffelpüree – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,54 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "54",
+    "title": "Cremiges Kartoffelpüree",
+    "tips": [
+        "Im Prinzip kannst du jede Kartoffelsorte für das Püree nehmen, am cremigsten wird es allerdings mit mehligkochenden Kartoffeln."
+    ],
+    "category": [
+        "Beilage",
+        "Vegetarisch"
+    ],
+    "image": "images/kartoffelpüree.jpeg",
+    "time": {
+        "preparation": "10 min",
+        "cooking": "20 min",
+        "total": "30 min"
+    },
+    "related": [
+        "53",
+        "39",
+        "34"
+    ],
+    "portions": "6 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Herrlich cremiges Kartoffelpüree – super einfach, schnell und aus wenigen Zutaten selbst gemacht.",
+    "ingredients": {
+        "": [
+            "1,5 kg Kartoffeln",
+            "30g Butter",
+            "200ml Milch",
+            "Salz",
+            "Pfeffer",
+            "1 Prise Muskat"
+        ]
+    },
+    "steps": [
+        "Die Kartoffeln schälen, in grobe Würfel schneiden, in einen Topf geben, mit Salzwasser bedecken, aufkochen und ca. 20min leise köcheln lassen, bis sie beim Einstechen mit einer Gabel weich sind.",
+        "Die Kartoffeln gut abgießen, die Milch, die Butter in kleinen Stücken sowie Salz, Pfeffer und Muskat dazugeben und mit einem Kartoffelstampfer zu einem feinen Püree stampfen."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

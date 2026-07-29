@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Spaghetti aglio e olio – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,55 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "1",
+    "title": "Spaghetti aglio e olio",
+    "category": [
+        "Pasta"
+    ],
+    "image": "images/spaghetti-aglio-e-olio.jpeg",
+    "time": {
+        "preparation": "5 min",
+        "cooking": "25 min",
+        "total": "30 min"
+    },
+    "related": [
+        "2",
+        "5",
+        "8"
+    ],
+    "portions": 6,
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Der italienische Klassiker. Mit wenigen Zutaten zum großen Genuss.",
+    "ingredients": {
+        "": [
+            "600g Spaghetti (Nr. 5)",
+            "7 große Knoblauchzehen",
+            "1/2 TL Chiliflocken",
+            "80ml Olivenöl",
+            "Salz",
+            "Pfeffer",
+            "Parmesan (optional)"
+        ]
+    },
+    "steps": [
+        "Den Knoblauch schälen, 4 der Knoblauchzehen mit einer Knoblauchpresse in eine kleine Schale pressen, den Rest in dünne Scheiben schneiden und mit in die Schale geben.",
+        "In einer Pfanne das Olivenöl bei mittlerer Hitze <b>MIT</b> dem Knoblauch und dem Chili zusammen unter gelegentlichem Rühren langsam erhitzen, bis der Knoblauch stark duftet und leicht goldgelb wird (ca. 15 min).",
+        "Währenddessen die Spaghetti in kochendem Salzwasser (3,5l mit ca. 35g Salz) kochen.",
+        "Dann die Pfanne von der heißen Herdplatte ziehen, die Nudeln ca. 2 min vor Ende der Kochzeit in die Soße geben und einrühren.",
+        "Auf die Herdplatte zurückziehen, ca. 2 Kellen Pastawasser dazugeben und die Nudeln unter Rühren auf höchster Stufe fertig kochen.",
+        "Pfeffern und nach Belieben mit Parmesan servieren."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

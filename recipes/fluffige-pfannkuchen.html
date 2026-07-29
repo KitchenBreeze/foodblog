@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>fluffige Pfannkuchen – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,58 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "30",
+    "title": "fluffige Pfannkuchen",
+    "tips": [
+        "Die bereits fertigen Pfannkuchen kannst du auf einem Teller bei 50°C im Backofen warm halten."
+    ],
+    "category": [
+        "süße Hauptgerichte"
+    ],
+    "image": "images/fluffige-Pfannkuchen.jpeg",
+    "time": {
+        "preparation": "15 min",
+        "cooking": "30 min",
+        "total": "45 min"
+    },
+    "related": [
+        "42",
+        "49",
+        "1"
+    ],
+    "portions": "15 Stück",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Fluffige Pfannkuchen – ob zum Frühstück oder Abendessen, immer ein Genuss.",
+    "ingredients": {
+        "": [
+            "500g Mehl (Type 405)",
+            "2 EL Zucker",
+            "1 TL Backpulver",
+            "1 TL Salz",
+            "8 Eier",
+            "940ml Milch",
+            "80ml Sprudelwasser",
+            "neutrales Öl"
+        ]
+    },
+    "steps": [
+        "Das Mehl mit Zucker, Salz und Backpulver in einer großen Schüssel vermengen und in der Mitte eine Mulde formen.",
+        "Die Eier trennen. Das Eigelb zusammen mit der Milch und dem Sprudelwasser in die Mulde zu den restlichen Zutaten geben. Das Eiweiß in eine separate Schüssel geben.",
+        "Alle Zutaten in der großen Schüssel mit einem Schneebesen verrühren, bis keine Mehlklümpchen mehr zu sehen sind. Den Teig beiseitestellen. Während der Teig etwas ruht, das Eiweiß steif schlagen und vorsichtig mit einem Teigschaber unter den Teig heben.",
+        "Etwas Öl in einer beschichteten Pfanne erhitzen. Eine große Kelle Teig hineingeben, etwas verteilen und jeden Pfannkuchen ca. 1–3 Minuten pro Seite auf hoher Stufe ausbacken. (Die zweite Seite benötigt meist etwas weniger Zeit.) Wenn der Rand fester geworden ist und sich viele Bläschen gebildet haben, kann der Pfannkuchen gewendet werden. Sollte dabei etwas Teig in die Pfanne spritzen, kann man den Pfannkuchen durch Schwenken der Pfanne bewegen, bis die Spritzer wieder aufgenommen wurden.",
+        "Den fertigen Pfannkuchen aus der Pfanne nehmen, erneut etwas Öl hineingeben und den nächsten Pfannkuchen ausbacken."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

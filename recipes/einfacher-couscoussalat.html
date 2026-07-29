@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>einfacher Couscoussalat – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,58 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "22",
+    "title": "einfacher Couscoussalat",
+    "category": [
+        "Vegetarisch",
+        "Salate",
+        "Vegan"
+    ],
+    "image": "images/einfacher-Couscoussalat.jpeg",
+    "time": {
+        "preparation": "20 min",
+        "cooking": "5 min",
+        "total": " 25 min"
+    },
+    "related": [
+        "21",
+        "49",
+        "15"
+    ],
+    "portions": "8 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Schneller Couscoussalat. Auch super für Meal-Prep.",
+    "ingredients": {
+        "": [
+            "500g Couscous",
+            "750ml Gemüsebrühe",
+            "1 TL Kreuzkümmelpulver",
+            "1 TL Paprikapulver edelsüß",
+            "1/2 TL Korianderpulver",
+            "1/2 TL Ingwerpulver",
+            "500g Kirschtomaten",
+            "1 Salatgurke",
+            "1 Zwiebel",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "Den Couscous nach Packungsbeilage zubereiten.",
+        "In der Zwischenzeit die Zwiebel schälen und fein hacken, die Gurke sowie die Paprika in Würfel schneiden und die Tomaten je nach Größe halbieren oder vierteln.",
+        "Den Couscous mit den Gewürzen vermengen, das Gemüse unterheben und direkt servieren oder noch etwas ziehen lassen."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Erdnusscurry – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,74 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "27",
+    "title": "Erdnusscurry",
+    "category": [
+        "Vegetarisch",
+        "Vegan",
+        "Reis"
+    ],
+    "image": "images/Erdnusscurry.jpeg",
+    "time": {
+        "preparation": "20 min",
+        "cooking": "30 min",
+        "total": "50 min"
+    },
+    "related": [
+        "4",
+        "6",
+        "7"
+    ],
+    "portions": "6 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Buntes Gemüse in cremiger Erdnusssoße.",
+    "ingredients": {
+        "Curry": [
+            "1 Zucchini",
+            "1 rote Spitzpaprika",
+            "2 rote Zwiebeln",
+            "2 Knoblauchzehen",
+            "2 Karotten",
+            "1 Dose Kidneybohnen (à 400g)",
+            "1 Brokkoli",
+            "1 Dose Kokosmilch (à 400g)",
+            "400ml Gemüsebrühe",
+            "90g Erdnussbutter",
+            "1/2 TL Chiliflocken",
+            "1 TL Kreuzkümmelpulver",
+            "6g frischer Ingwer",
+            "1 TL Paprikapulver edelsüß",
+            "1 TL Kurkuma",
+            "1/2 TL Limettensaft",
+            "2 EL Erdnussöl",
+            "Salz",
+            "Pfeffer"
+        ],
+        "Beilage": [
+            "260g Basmatireis",
+            "<i>optional gehackte Erdnüsse</i>"
+        ]
+    },
+    "steps": [
+        "Die Zwiebeln schälen, vierteln und in Streifen schneiden. Den Knoblauch sowie den Ingwer schälen und fein hacken.",
+        "Die Zucchini in mundgerechte Stücke würfeln. Den Strunk vom Brokkoli entfernen und den Kopf in kleine Röschen schneiden. Die Karotten schälen und wie die Paprika in mundgerechte Streifen schneiden.",
+        "Die Bohnen abgießen und abspülen.",
+        "Das Erdnussöl in einem großen Topf erhitzen. Die Zwiebeln bei mittlerer Hitze ca. 2–3 Minuten glasig dünsten, die Karotten dazugeben und weitere 2–3 Minuten mit anschwitzen. Den Ingwer, den Knoblauch und die Gewürze unterrühren und kurz mitrösten, bis es duftet.",
+        "Mit der Gemüsebrühe ablöschen, die Kokosmilch und die Erdnussbutter unterrühren und aufkochen lassen.",
+        "Dann den Brokkoli, die Zucchini, die Paprika und die Bohnen hinzugeben, erneut aufkochen und alles bei mittlerer Hitze ca. 20 Minuten sanft köcheln lassen.",
+        "Den Limettensaft unterrühren, mit Salz und Pfeffer abschmecken und nach Belieben mit Reis und Erdnüssen servieren."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

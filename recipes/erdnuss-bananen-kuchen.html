@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Erdnuss-Bananen-Kuchen – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,67 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "26",
+    "title": "Erdnuss-Bananen-Kuchen",
+    "tips": [
+        "Du kannst diesen Kuchen auch wunderbar mit gefrorenen Bananen zubereiten. Dann nimmst du sie am Abend vorher aus dem Tiefkühler und lässt sie über Nacht im Kühlschrank auftauen.",
+        "Bei ungefrorenen Bananen gilt: Je brauner die Banane, desto süßer und aromatischer ist sie."
+    ],
+    "category": [
+        "süßes Gebäck"
+    ],
+    "image": "images/Erdnuss-Bananen-Kuchen.jpeg",
+    "time": {
+        "preparation": "15 min",
+        "baking": "1 std",
+        "cooling": "30min",
+        "total": " 1 std 45 min"
+    },
+    "related": [
+        "21",
+        "38",
+        "17"
+    ],
+    "portions": "1 Kuchen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Leckerer Bananenkuchen mit herrlichem Nussgeschmack.",
+    "ingredients": {
+        "": [
+            "ca. 300g überreife Bananen",
+            "50g Erdnussbutter",
+            "2 Eier (Größe L)",
+            "30g brauner Zucker",
+            "30g weißer Zucker",
+            "100ml Milch",
+            "50ml neutrales Öl",
+            "50g Schokostreusel",
+            "220g Mehl (Type 405)",
+            "2 TL Backpulver",
+            "1/4 TL Zimt",
+            "1 Prise Salz",
+            "1 TL Vanilleextrakt"
+        ]
+    },
+    "steps": [
+        "Die Eier mit dem Zucker ca. 5min mit dem Rührbesen der Küchenmaschine auf höchster Stufe cremig schlagen.",
+        "In der Zwischenzeit den Ofen auf 180°C Ober/Unterhitze vorheizen und eine Kastenform (25cm x 8cm) gut einfetten.",
+        "Das Öl langsam zu der Eier-Zuckermasse dazugießen, das Vanilleextrakt hinzufügen und weitere 2 min mitschlagen.",
+        "Währenddessen die Bananen zerdrücken und mit der Milch und der Erdnussbutter vermengen. Zu der Eimasse geben und ca. 2 weitere Minuten weiterschlagen.",
+        "Das Mehl mit dem Backpulver, dem Zimt, den Schokostreuseln und dem Salz vermengen und vorsichtig unter die Eimasse heben.",
+        "Den Teig in eine vorgefettete Kastenform geben, glattstreichen und im vorgeheizten Backofen ca. 60min backen. Nach ca. 15min einmal längs einschneiden. (Stäbchenprobe!!! – Es sollen nur noch vereinzelte feuchte Krümel am Stäbchen kleben. Dann ist der Kuchen fertig)",
+        "Den Kuchen auf einem Kuchenrost ca. 30min abkühlen lassen, dann vorsichtig aus der Form lösen."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

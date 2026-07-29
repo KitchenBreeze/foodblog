@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Überbackene Gnocchipfanne – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,64 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "41",
+    "title": "Überbackene Gnocchipfanne",
+    "category": [
+        "Pasta"
+    ],
+    "image": "images/Überbackene-Gnocchipfanne.jpeg",
+    "time": {
+        "preparation": "5 min",
+        "cooking": "10 min",
+        "total": "15 min"
+    },
+    "related": [
+        "10",
+        "20",
+        "30"
+    ],
+    "portions": "8 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Selbstgemachte Gnocchi, goldbraun gebraten in Knoblauch-Kräuterbutter mit einer leckeren Käsekruste.",
+    "ingredients": {
+        "Gnocchi": [
+            "500g Kartoffeln",
+            "100g Mehl <i>(oder mehr nach Bedarf)</i>",
+            "3/4 TL Salz",
+            "1 Prise Muskat"
+        ],
+        "Soße": [
+            "1 große Knoblauchzehe",
+            "1 TL italienische Kräuter",
+            "20g Butter",
+            "Salz",
+            "Pfeffer"
+        ],
+        "Topping": [
+            "40g geriebener Gouda",
+            "75g Kirschtomaten"
+        ]
+    },
+    "steps": [
+        "Die Kartoffeln schälen, in einen Topf geben, mit Salzwasser bedecken und aufkochen. Anschließend ca. 25min weich kochen. Abgießen, durch eine Kartoffelpresse drücken und etwas ausdampfen lassen. Sobald die Kartoffeln abgekühlt sind, die Gewürze hinzufügen und das Mehl kurz unterkneten. Nicht zu lange kneten, da der Teig sonst klebrig wird.",
+        "Den Teig auf einer leicht bemehlten Arbeitsfläche in kleinere Portionen teilen, zu etwa fingerdicken Strängen rollen und ca. 2cm lange Stücke abschneiden.",
+        "Die einzelnen Stücke zu kleinen Kugeln formen und mit etwas Mehl bestäuben. <i>(Wer gerne das typische Muster möchte, kann die Stücke nun über die Rückseite einer Gabel rollen.)</i>",
+        "Die Temperatur des Wassers reduzieren, sodass es nur noch siedet. Die Gnocchi darin ca. 3-4min kochen, bis sie an die Oberfläche steigen. Mit einer Schaumkelle herausnehmen und in ein Sieb geben.",
+        "Die Butter in einer Pfanne bei mittlerer Hitze schmelzen. Die Kräuter dazugeben und den Knoblauch hineinpressen. Ca. 1min anschwitzen, bis es duftet. Die Gnocchi dazugeben und bei hoher Hitze ca. 10min anbraten, bis sie goldbraun sind.",
+        "Die Gnocchi in eine flache Auflaufform geben, den Käse darüberstreuen und im Ofen bei höchster Grillstufe ca. 5min goldbraun überbacken.",
+        "Währenddessen die Tomaten klein schneiden und die fertigen Gnocchi mit den Tomatenhälften servieren."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

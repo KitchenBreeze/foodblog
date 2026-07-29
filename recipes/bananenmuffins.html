@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bananenmuffins – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,55 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "7",
+    "title": "Bananenmuffins",
+    "category": [
+        "süßes Gebäck"
+    ],
+    "image": "images/bananenmuffin.jpg",
+    "time": {
+        "preparation": "5 min",
+        "baking": "20 min",
+        "total": "25 min"
+    },
+    "related": [
+        "2",
+        "22",
+        "32"
+    ],
+    "portions": "4 Stück",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Schnelle Muffins mit Zutaten, die du sicher schon zuhause hast.",
+    "ingredients": {
+        "": [
+            "50g Mehl (Type 405)",
+            "20g Zucker",
+            "2g Backpulver",
+            "2g Natron",
+            "1 Prise Salz",
+            "15g Bananenkabapulver",
+            "50ml Milch",
+            "15ml Sprudelwasser",
+            "20ml neutrales Öl",
+            "1 TL Apfelessig"
+        ]
+    },
+    "steps": [
+        "Den Ofen auf 180°C Ober-/Unterhitze vorheizen und ein Muffinblech einfetten (alternativ mit Muffinförmchen auskleiden).",
+        "Alle trockenen Zutaten in einer Schüssel vermengen, in der Mitte eine Mulde formen, die flüssigen Zutaten dazugeben und alles mit einem Schneebesen nur solange verrühren, bis sich alle Zutaten miteinander verbunden haben und kein trockenes Mehl mehr zu sehen ist.",
+        "Den Teig in die vorbereitete Muffinform geben und im vorgeheizten Backofen auf mittlerer Schiene ca. 20 min backen. (Stäbchenprobe!)"
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

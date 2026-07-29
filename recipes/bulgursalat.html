@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bulgursalat – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,63 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "28",
+    "title": "Bulgursalat",
+    "category": [
+        "Vegetarisch",
+        "Vegan",
+        "Salate"
+    ],
+    "image": "images/Bulgursalat.jpeg",
+    "time": {
+        "preparation": "35 min",
+        "cooking": "10 min",
+        "total": "45 min"
+    },
+    "related": [
+        "50",
+        "41",
+        "7"
+    ],
+    "portions": "8 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Einfacher Bulgursalat mit knackigem Gemüse, cremiger Avocado und einem Hauch von Mexiko.",
+    "ingredients": {
+        "Bulgur": [
+            "450g Bulgur",
+            "1 L Wasser",
+            "1 TL Chili con Carne Gewürz"
+        ],
+        "Gemüse": [
+            "2 Dosen Kidneybohnen (à 400g)",
+            "1 Dose Mais (à 340g)",
+            "1 Salatgurke",
+            "500g Datteltomaten",
+            "1 Bund Frühlingszwiebeln",
+            "2 Avocados",
+            "1 TL italienische Kräuter",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "Einen Topf mit dem Wasser und etwas Salz zum Kochen bringen. In der Zwischenzeit den Bulgur in ein Sieb geben und mit kaltem Wasser waschen, bis das Wasser fast klar ist. Den Bulgur in das kochende Salzwasser geben, aufkochen und ca. 10 Minuten bei niedriger Hitze mit geschlossenem Deckel köcheln lassen. Vom Herd nehmen und bei geschlossenem Deckel 5 Minuten ziehen lassen.",
+        "Das Chili con Carne Gewürz unter den fertigen Bulgur mengen, in eine große Schüssel geben und etwas abkühlen lassen.",
+        "Währenddessen die Bohnen und den Mais in ein Sieb geben, abspülen und gut abtropfen lassen.",
+        "Die Gurke und die Avocado in kleine Würfel, die Frühlingszwiebeln in feine Ringe und die Tomaten in Scheiben schneiden.",
+        "Alles außer der Avocado mit den italienischen Kräutern, Salz und Pfeffer unter den etwas abgekühlten Bulgur mengen. Mit einem Teil der Avocado toppen und die restliche Avocado dazu servieren."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

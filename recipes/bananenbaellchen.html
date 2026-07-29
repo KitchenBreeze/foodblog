@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bananenbällchen – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,59 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "32",
+    "title": "Bananenbällchen",
+    "tips": [
+        "Du kannst diese Bällchen auch wunderbar mit gefrorenen Bananen zubereiten. Dafür nimmst du sie am Abend vorher aus dem Tiefkühler und lässt sie über Nacht im Kühlschrank auftauen.",
+        "Bei ungefrorenen Bananen gilt: Je brauner die Banane, desto süßer und aromatischer ist sie."
+    ],
+    "category": [
+        "süßes Gebäck"
+    ],
+    "image": "images/Bananenbällchen.jpeg",
+    "time": {
+        "preparation": "12 min",
+        "baking": "15 min",
+        "total": "30 min"
+    },
+    "related": [
+        "12",
+        "20",
+        "47"
+    ],
+    "portions": "15 Stück",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Schnelle, fluffige Bananenbällchen mit knusprigem Zuckermantel.",
+    "ingredients": {
+        "Teig": [
+            "140g geschälte Banane",
+            "190g Mehl (Type 405)",
+            "1 EL Milch",
+            "3 TL Backpulver",
+            "1 Prise Salz"
+        ],
+        "Mantel & Füllung": [
+            "1 EL Nuss-Nougat-Creme",
+            "3 EL Zimt und Zucker",
+            "2 EL geschmolzene Butter"
+        ]
+    },
+    "steps": [
+        "Die Banane mit einer Gabel zerdrücken. Das Mehl mit dem Backpulver und dem Salz vermengen, zu der Banane geben und verrühren, bis sich alles grob verbunden hat. Die Milch hinzufügen und alles zu einem glatten Teig verkneten.",
+        "Den Teig in 15 gleich große Stücke teilen und jeweils zu kleinen Bällchen formen. Mit etwas Abstand auf einem Backpapier im Airfryer verteilen und ca. 8min bei 170°C backen.",
+        "Die warmen Bällchen direkt nach dem Backen mit Butter bestreichen und in Zimt und Zucker wälzen. Sobald sie etwas abgekühlt sind, die Nuss-Nougat-Creme in einen Spritzbeutel geben und jedes Bällchen damit füllen."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

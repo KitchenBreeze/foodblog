@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Flammkuchenspaghetti – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,56 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "29",
+    "title": "Flammkuchenspaghetti",
+    "category": [
+        "Fleisch",
+        "Pasta"
+    ],
+    "image": "images/Flammkuchenspaghetti.jpeg",
+    "time": {
+        "preparation": "5 min",
+        "cooking": "30 min",
+        "total": "35 min"
+    },
+    "related": [
+        "20",
+        "38",
+        "33"
+    ],
+    "portions": "7 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Flammkuchen trifft Pasta: Spaghetti in cremiger Soße mit knusprigem Speck.",
+    "ingredients": {
+        "": [
+            "600g Spaghetti (Nr. 5)",
+            "2 Pck. Crème fraîche (à 200g)",
+            "250g Schinkenwürfel",
+            "3 rote Zwiebeln",
+            "2 Knoblauchzehen",
+            "1/2 TL Muskatnuss",
+            "etwas neutrales Öl",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "Die Nudeln nach Packungsbeilage zubereiten, abgießen, dabei 1 Kelle Pastawasser auffangen. Die Nudeln mit etwas Öl vermengen und beiseitestellen.",
+        "In der Zwischenzeit die Zwiebeln und den Knoblauch schälen. Den Knoblauch fein hacken und die Zwiebeln vierteln und in feine Streifen schneiden.",
+        "Etwas Öl in einem Topf erhitzen und die Zwiebeln darin ca. 3 Minuten glasig dünsten. Die Schinkenwürfel dazugeben und weitere 2 Minuten mitbraten. Anschließend den Knoblauch hinzufügen und ebenfalls ca. 1 Minute mitbraten.",
+        "Die Crème fraîche einrühren, aufkochen lassen und das Pastawasser hinzufügen. Alles kurz aufkochen und ca. 5 Minuten köcheln lassen, bis die Soße leicht angedickt ist. Die Nudeln unterheben, mit Salz, Pfeffer und Muskatnuss würzen, nochmals 1–2 Minuten auf dem Herd ziehen lassen, umrühren und servieren."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

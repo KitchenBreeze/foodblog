@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Glasnudelsalat – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,68 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "42",
+    "title": "Glasnudelsalat",
+    "category": [
+        "Vegetarisch",
+        "Vegan",
+        "Salate"
+    ],
+    "image": "images/Glasnudelsalat.jpeg",
+    "time": {
+        "preparation": "25 min",
+        "cooking": "5 min",
+        "total": "30 min"
+    },
+    "related": [
+        "40",
+        "29",
+        "11"
+    ],
+    "portions": "6 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Leckerer Glasnudelsalat mit knackigen Sojasprossen, buntem Gemüse und cremigem Erdnussdressing.",
+    "ingredients": {
+        "Salat": [
+            "200g Glasnudeln",
+            "1 Zucchini",
+            "1 Spitzpaprika",
+            "2 Karotten",
+            "1 Bund Frühlingszwiebeln",
+            "180g Sojasprossen",
+            "Koriander",
+            "weißer Sesam",
+            "<i>optional: gehackte Erdnüsse</i>"
+        ],
+        "Dressing": [
+            "75g Erdnussbutter",
+            "7 EL heißes Wasser",
+            "1 EL Limettensaft",
+            "2 TL Sesamöl",
+            "1 TL Ingwerpulver",
+            "1 TL Chiliflocken",
+            "2 EL Sojasauce",
+            "etwas Salz"
+        ]
+    },
+    "steps": [
+        "Die Glasnudeln nach Packungsanleitung in Salzwasser kochen. Anschließend in ein Sieb geben, mit kaltem Wasser abschrecken, mit einer Küchenschere etwas zerkleinern und gut abtropfen lassen.",
+        "Die Enden der Zucchini und Karotten entfernen. Die Karotten schälen, beides mit einem Spiralschneider zu Gemüsespaghetti drehen und anschließend etwas kleiner schneiden.",
+        "Die Paprika in feine Streifen und die Frühlingszwiebeln in Ringe schneiden. Alles zusammen mit den Glasnudeln und den Sojasprossen in eine große Schüssel geben.",
+        "Für das Dressing die Erdnussbutter mit dem heißen Wasser glatt rühren. Sobald sie flüssig ist, die restlichen Zutaten hinzufügen und alles zu einem cremigen Dressing verrühren. Anschließend unter die restlichen Zutaten mischen.",
+        "Mit Sesam und etwas gehacktem Koriander garnieren und nach Belieben mit gehackten Erdnüssen servieren."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

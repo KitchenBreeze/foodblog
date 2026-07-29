@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Veganer gebratener Blumenkohl – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,61 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "20",
+    "title": "Veganer gebratener Blumenkohl",
+    "category": [
+        "Vegan"
+    ],
+    "image": "images/Veganer-gebratener-Blumenkohl.jpeg",
+    "time": {
+        "preparation": "15 min",
+        "cooking": "30 min",
+        "total": " 45 min"
+    },
+    "related": [
+        "47",
+        "3",
+        "2"
+    ],
+    "portions": "6 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Blumenkohl in knuspriger Panade, ganz ohne Ei.",
+    "ingredients": {
+        "": [
+            "1 großer Blumenkohl",
+            "45g Mehl"
+        ],
+        "Eiersatz": [
+            "125g Speisestärke",
+            "1 TL Senf",
+            "1 TL Paprikapulver",
+            "1 TL Knoblauchpulver",
+            "1 TL Salz",
+            "Pfeffer"
+        ],
+        "Paniermehl": [
+            "150g Paniermehl",
+            "etwas Salz"
+        ]
+    },
+    "steps": [
+        "Einen großen Topf mit Salzwasser zum Kochen bringen und den Blumenkohl in grobe Röschen schneiden.",
+        "Die Temperatur des Wassers etwas verringern, sodass es nur noch siedet, und die Röschen darin ca. 2 min blanchieren. Mit einer Schaumkelle herausholen, in ein Sieb geben, mit kaltem Wasser abschrecken und gut abtrocknen.",
+        "Das Mehl in eine kleine Schale geben. Die Stärke in einer Schüssel mit ca. 120ml kaltem Wasser anrühren (sodass es eine Konsistenz wie ein dünner Crêpe-Teig bekommt). Falls die Mischung im Laufe des Panierens zu dick wird, einfach noch etwas Wasser unterrühren.",
+        "Die Stärkemischung mit dem Senf, dem Paprikapulver, dem Salz, dem Pfeffer und dem Knoblauchpulver vermengen. Das Paniermehl in einer Schüssel mit etwas Salz vermengen und eine Pfanne mit reichlich Öl erhitzen, sodass der Boden gut bedeckt ist.",
+        "Jedes Röschen zuerst im Mehl wenden, dann mit einer Gabel in die Stärkemischung tauchen und abtropfen lassen, sodass es gut benetzt ist. Daraufhin im Paniermehl wenden und gut andrücken. Jedes Röschen ca. 5-6 min bei mittlerer Hitze goldbraun anbraten, dabei immer wieder wenden. Auf etwas Küchenpapier abtropfen lassen und nach Belieben mit Ketchup servieren."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

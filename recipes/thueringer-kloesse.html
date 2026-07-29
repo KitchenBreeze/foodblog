@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Thüringer Klöße – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,59 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "4",
+    "title": "Thüringer Klöße",
+    "category": [
+        "Beilage"
+    ],
+    "image": "images/Thüringer-Klöße.jpeg",
+    "time": {
+        "preparation": "35 min",
+        "cooking": "15 min",
+        "total": "50 min"
+    },
+    "related": [
+        "2",
+        "7",
+        "33"
+    ],
+    "portions": "12 kleine Klöße",
+    "difficulty": "Einfach",
+    "rating": 1,
+    "description": "Der Beilagenklassiker. Ob zu Fleisch, Soße oder Gemüse. Einfach immer köstlich.",
+    "ingredients": {
+        "Kloßteig": [
+            "1,5kg mehligkochende Kartoffeln",
+            "1/2 TL Salz"
+        ],
+        "Semmelbrösel": [
+            "1 Kaisersemmel",
+            "30g Butter",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "1/3 der Kartoffeln (=500g) ungeschält in Salzwasser ca. 25 min weich kochen und abkühlen. (Diesen Schritt kannst du auch schon am Vortag machen)",
+        "Ein Küchentuch in eine Glasschüssel legen und die restlichen 2/3 der rohen Kartoffeln (=1kg) schälen und mit einer Sternreibe fein hineinraspeln.",
+        "Die Flüssigkeit aus den geraspelten Kartoffeln mit dem Tuch gut auspressen und beiseitestellen, bis sich die Stärke abgesetzt hat (ca. 10 min).",
+        "In der Zwischenzeit die Butter in einer Pfanne schmelzen, das Brötchen in Würfel schneiden und in der Pfanne mit Salz und Pfeffer knusprig braten.",
+        "Dann einen großen Topf mit Salzwasser zum Kochen bringen.",
+        "Vorsichtig das Wasser von der abgesetzten Stärke abgießen, mit einem Löffel gut umrühren, die gekochten Kartoffeln durch eine Kartoffelpresse pressen und mit den geraspelten Kartoffeln, Stärke und dem Salz gut vermengen, bis sich alles gut verbunden hat und man einen gut formbaren Teig erhält. (Nicht zu lange, da er sonst zäh wird)",
+        "Je ein Stück Teig nehmen, zu einer Kugel formen, flach drücken, einen Semmelbrösel hineingeben, verschließen und wieder zu einer Kugel formen.",
+        "Die Hitze reduzieren, bis das Salzwasser nur noch siedet.",
+        "Die Klöße mit einer Schaumkelle hineingeben und bei geschlossenem Deckel auf mittlerer Hitze ca. 15 min ziehen lassen, bis sie an der Oberfläche schwimmen, und mit einer Schaumkelle herausnehmen."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

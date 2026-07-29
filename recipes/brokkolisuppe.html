@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Brokkolisuppe – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,60 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "13",
+    "title": "Brokkolisuppe",
+    "tips": [
+        "Dazu schmecken Garnelen oder Pfannenbrot hervorragend.",
+        "Falls dir die Suppe zu dick ist, kannst du nach dem Kochen noch mehr Gemüsebrühe dazugeben."
+    ],
+    "category": [
+        "Suppen & Eintöpfe",
+        "Vegetarisch"
+    ],
+    "image": "images/brokkolisuppe.jpeg",
+    "time": {
+        "preparation": "10 min",
+        "cooking": "40 min",
+        "total": "50 min"
+    },
+    "related": [
+        "29",
+        "5",
+        "42"
+    ],
+    "portions": "6 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Cremige, warme Brokkolisuppe. Perfekt für kalte Tage.",
+    "ingredients": {
+        "": [
+            "170g TK-Brokkoli",
+            "1,5kg Kartoffeln",
+            "2 Zwiebeln",
+            "1,2l Gemüsebrühe",
+            "250ml Kochsahne",
+            "1/2 TL Knoblauchpulver",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "Die Zwiebeln schälen und vierteln. Die Kartoffeln schälen und in kleine Würfel schneiden.",
+        "Etwas Öl in einem großen Topf erhitzen und die Zwiebeln darin ca. 3 min anbraten, die Kartoffeln dazugeben und mit der Gemüsebrühe ablöschen. Den Deckel schließen und die Kartoffeln für circa 20 Minuten gar kochen.",
+        "Wenn die Kartoffeln gar sind, den Brokkoli dazugeben und weitere 10 Minuten köcheln lassen.",
+        "Den Topf vom Herd nehmen, die Sahne dazugeben. Salzen, pfeffern, das Knoblauchpulver dazugeben und alles gut durchpürieren.",
+        "Noch einmal aufkochen lassen und servieren."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Thunfisch-Nudel-Salat – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,50 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "40",
+    "title": "Thunfisch-Nudel-Salat",
+    "category": [
+        "Fisch",
+        "Salate"
+    ],
+    "image": "images/Thunfisch-Nudel-Salat.jpeg",
+    "time": {
+        "preparation": "5 min",
+        "cooking": "10 min",
+        "total": "15 min"
+    },
+    "related": [
+        "42",
+        "49",
+        "1"
+    ],
+    "portions": "8 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Cremig-würzige Fussili mit saftigem Thunfisch und buntem Mexico-Mix.",
+    "ingredients": {
+        "": [
+            "750g Fussili",
+            "4 Dosen Thunfisch in Sonnenblumenöl (à 185g)",
+            "2 Dosen Mexico-Mix (à 300g)",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "Die Nudeln nach Packungsbeilage zubereiten, abgießen und mit dem <b>GESAMTEN</b> Inhalt der Thunfischdosen vermengen. <i>(Also auch das Öl verwenden.)</i>",
+        "Das Wasser aus den Mexico-Mix-Dosen abgießen. Die Mischung zu den Nudeln geben, reichlich salzen und pfeffern und alles gut miteinander vermengen und warm oder kalt servieren."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

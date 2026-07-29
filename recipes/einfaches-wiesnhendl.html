@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>einfaches Wiesnhendl – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,71 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "23",
+    "title": "einfaches Wiesnhendl",
+    "tips": [
+        "Alles, was übrig bleibt, kannst du abgekühlt, luftdicht verpackt (z.B. in Alufolie oder einer Box) und dann ca. 2 Tage im Kühlschrank aufbewahren."
+    ],
+    "category": [
+        "Fleisch"
+    ],
+    "image": "images/einfaches-Wiesnhendl.jpeg",
+    "time": {
+        "preparation": "30 min",
+        "cooling": "30 min",
+        "baking": "1 std 30min",
+        "total": "2 Std"
+    },
+    "related": [
+        "31",
+        "0",
+        "19"
+    ],
+    "portions": "1 Stück (für ca. 6 Portionen)",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Der leckere Oktoberfestklassiker ganz einfach Zuhause gemacht.",
+    "ingredients": {
+        "": [
+            "<b>BITTE BEACHTE: Du musst das Hähnchen spätestens am Abend vorher aus dem Tiefkühler in den Kühlschrank legen, damit es antauen kann.</b>"
+        ],
+        "Hähnchen": [
+            "1 TK Brathähnchen (1,2 kg)",
+            "15g Salz",
+            "1 EL Paprikapulver",
+            "1 TL Pfeffer",
+            "1/2 TL Majoran",
+            "1/2 TL Knoblauchpulver",
+            "70g sehr weiche Butter"
+        ],
+        "Füllung": [
+            "1 kleine Zwiebel",
+            "10g Butter"
+        ],
+        "Bestreichen": [
+            "30g weiche Butter",
+            "1/2 TL Paprikapulver",
+            "1/2 TL Salz"
+        ]
+    },
+    "steps": [
+        "Das Hähnchen spätestens am Abend vorher in den Kühlschrank legen, damit es antauen kann.",
+        "Am nächsten Tag das Hähnchen von innen und außen gut mit Küchenpapier trocken tupfen. Eine Zwiebel schälen und halbieren. Das Salz mit dem Pfeffer, dem Majoran, der Butter, dem Knoblauchpulver und dem Paprikapulver vermengen und das Hähnchen rundherum, von innen und außen, gut mit der Würze einreiben.",
+        "Die Zwiebel mit der Butter in den Bauch geben und das marinierte Hähnchen für ca. 30min im Kühlschrank ruhen lassen. In der Zwischenzeit den Ofen auf 200°C Ober/Unterhitze vorheizen.",
+        "Das Hähnchen mit der Brustseite nach oben auf einen Rost legen und so in den vorgeheizten Backofen geben. Ein Backblech mit etwas Wasser (ca. 1 cm) eine Schiene darunter schieben, um das Fett aufzufangen. Das Hähnchen ca. 1 1/2 Std. min schön knusprig braun backen. Dabei das Hähnchen alle 15min mit der Bratflüssigkeit übergießen.",
+        "Die Butter schmelzen und mit dem Paprikapulver und dem Salz vermengen. 30min vor Ende nicht mit der Bratflüssigkeit übergießen, sondern mit der Butterwürze bestreichen.",
+        "5 min weiter backen, das Hähnchen wenden und von dieser Seite ebenfalls mit der Butterwürze bestreichen. 15min vor Ende nochmal mit der Bratflüssigkeit übergießen und in den letzten 3 min auf höchster Grillstufe fertig backen, damit die Haut extra knusprig wird."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

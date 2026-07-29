@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ameisenkuchen mit Kirschen – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,63 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "3",
+    "title": "Ameisenkuchen mit Kirschen",
+    "category": [
+        "süßes Gebäck"
+    ],
+    "image": "images/ameisenkuchen-mit-kirschen.jpeg",
+    "time": {
+        "preparation": "10 min",
+        "baking": "45 min",
+        "cooling": "1 Std.",
+        "total": "1 Std. 55 min"
+    },
+    "related": [
+        "9",
+        "40",
+        "36"
+    ],
+    "portions": "1 Kuchen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Der einfache Klassiker mit Kirschen.",
+    "ingredients": {
+        "": [
+            "115g Glaskirschen (abgetropft)",
+            "280g Mehl",
+            "20g Speisestärke",
+            "175g Zucker",
+            "1 TL Zitronenschale",
+            "1 TL Vanilleextrakt",
+            "300ml Milch",
+            "100ml neutrales Öl",
+            "1/2 Pck. Backpulver",
+            "1/2 TL Natron",
+            "1 EL Apfelessig",
+            "100g Schokostreusel",
+            "1 Prise Salz"
+        ]
+    },
+    "steps": [
+        "Den Ofen auf 180°C Ober-/Unterhitze vorheizen und eine Kastenform (30x11cm) gut einfetten.",
+        "Die Kirschen halbieren.",
+        "Das Mehl mit der Speisestärke, dem Zucker, dem Backpulver, dem Salz, dem Natron und der Zitronenschale vermengen und in der Mitte eine Mulde formen.",
+        "Die Milch, das Öl, den Apfelessig sowie den Vanilleextrakt dazugeben und alles kurz mit einem Schneebesen verrühren, bis sich alles verbunden hat.",
+        "Die Kirschen und die Streusel dazugeben und vorsichtig unterheben, in die Kastenform geben und glattstreichen.",
+        "Im vorgeheizten Backofen ca. 45 min backen (Stäbchenprobe!) und nach ca. 15 min einmal der Länge nach einschneiden.",
+        "Vollständig auskühlen lassen und dann aus der Form lösen."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

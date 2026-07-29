@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cowboy Shakshuka – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,61 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "17",
+    "title": "Cowboy Shakshuka",
+    "category": [
+        "Vegetarisch"
+    ],
+    "image": "images/Cowboy-shakshuka.jpeg",
+    "time": {
+        "preparation": "5 min",
+        "cooking": "30 min",
+        "total": " 35 min"
+    },
+    "related": [
+        "37",
+        "31",
+        "42"
+    ],
+    "portions": "4 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Western-Bohnenpfanne im Shakshuka-Style.",
+    "ingredients": {
+        "": [
+            "3 Dosen baked beans (à 400g)",
+            "1 TL Worcestershire Sauce",
+            "2 große weiße Zwiebeln",
+            "2 große Knoblauchzehen",
+            "125g Speckwürfel",
+            "1 TL Paprikapulver rosenscharf",
+            "1 TL Paprikapulver edelsüß",
+            "1/4 TL getrockneter Thymian",
+            "4 Eier",
+            "Olivenöl",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "Den Knoblauch schälen und pressen.",
+        "Die Zwiebeln schälen und grob hacken. Den Knoblauch ebenfalls schälen und fein hacken.",
+        "Eine Pfanne mit etwas Olivenöl erhitzen, die Zwiebeln dazugeben und ca. 2-3 min leicht braun braten.",
+        "Den Speck hinzufügen und ca. 3 min mitbraten. Die Gewürze und den Knoblauch unter Rühren mitrösten, bis es duftet.",
+        "Die Bohnen dazugeben, alles mit Salz, Pfeffer, Worcestersauce und Thymian vermischen, aufkochen und auf mittlerer Hitze ca. 3 min köcheln.",
+        "Nochmals gut durchmischen und glatt streichen. Mit einem Löffel 4 Mulden für die Eier hineindrücken, die Eier wie Spiegeleier hineinschlagen und bei geschlossenem Deckel auf niedriger bis mittlerer Hitze ca. 20 min sanft köcheln, bis die Eier gar sind.",
+        "Nach Belieben mit Toast servieren."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

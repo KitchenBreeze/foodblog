@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gurkensalat – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,57 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "47",
+    "title": "Gurkensalat",
+    "category": [
+        "Salate",
+        "Beilagen",
+        "Vegan",
+        "Vegetarisch"
+    ],
+    "image": "images/Gurkensalat.jpeg",
+    "time": {
+        "preparation": "5 min",
+        "resting": "15 min",
+        "total": "20 min"
+    },
+    "related": [
+        "46",
+        "1",
+        "2"
+    ],
+    "portions": "4 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Hauchdünne Gurkenscheiben in leckerem Dressing.",
+    "ingredients": {
+        "Gurke": [
+            "1 Salatgurke",
+            "1 EL Salz"
+        ],
+        "Dressing": [
+            "2 EL Olivenöl",
+            "1 TL Weißweinessig",
+            "1 TL gefriergetrocknete Salatkräuter",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "Die Enden von der Gurke entfernen und die Gurke in feine Scheiben hobeln. Mit dem Salz vermengen und ca. 10-15 Minuten ziehen lassen.",
+        "Alle Dressingzutaten miteinander vermischen.",
+        "Das überschüssige Wasser von den Gurken abgießen und die Gurken etwas ausdrücken. Das Dressing zu den Gurken geben und alles gut vermischen."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

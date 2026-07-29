@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Laugenstangen – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,86 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "36",
+    "title": "Laugenstangen",
+    "tips": [
+        "Du wirst die Laugenstangen auf zwei Bleche aufteilen müssen. Deshalb kannst du die eine Hälfte der fertigen Teiglinge nach bestandenem Fingertest in den Tiefkühler und die andere Hälfte in den Kühlschrank stellen. Sobald du die eine Hälfte zum Belaugen holst, kannst du die andere in den Tiefkühler stellen."
+    ],
+    "category": [
+        "herzhaftes Gebäck"
+    ],
+    "image": "images/Laugenstangen.jpeg",
+    "time": {
+        "preparation": "30 min",
+        "cooling": "30 min",
+        "baking": "12 min",
+        "rising": "1 Std 10 min",
+        "total": "2 Std 22 min"
+    },
+    "related": [
+        "33",
+        "36",
+        "9"
+    ],
+    "portions": "10 Stück",
+    "difficulty": "Mittel",
+    "rating": 4.6,
+    "description": "Fluffige Laugenstangen, ganz einfach selbst gemacht.",
+    "ingredients": {
+        "Teig": [
+            "500g Mehl (Type 550)",
+            "7g Trockenhefe",
+            "275ml kaltes Wasser",
+            "10g Honig",
+            "25g weiche Butter",
+            "13g Salz"
+        ],
+        "Natronlauge": [
+            "1 L Wasser",
+            "50g Haushaltsnatron"
+        ],
+        "Außerdem": [
+            "grobes Meersalz"
+        ]
+    },
+    "steps": [
+        {
+            "text": "Das Mehl mit der Hefe vermengen. In der Mitte eine Mulde formen und das Wasser, die Butter in kleinen Stücken sowie den Honig hinzufügen. Danach mit dem Knethaken der Küchenmaschine auf mittlerer Stufe ca. 8 Minuten zu einem glatten, elastischen und nicht klebrigen Teig kneten. Das Salz während der ersten 2–3 Minuten nach und nach einarbeiten. Den Teig in Portionen à 83g teilen, rundwirken und auf einem leicht bemehlten Küchentuch ca. 10 Minuten abgedeckt entspannen lassen."
+        },
+        {
+            "text": "Die Teiglinge zu ca. 12cm langen Ovalen ausrollen und straff zu einem Strang aufrollen. Die Naht gut verschließen und den Strang anschließend von innen nach außen noch etwas dünner ausrollen.",
+            "images": [
+                "images/5.jpg",
+                "images/6.jpg",
+                "images/7.jpg"
+            ]
+        },
+        {
+            "text": "Die fertig geformten Laugenstangen auf einem leicht bemehlten Küchentuch abgedeckt ca. 60 Minuten ruhen lassen, bis sie den Fingertest bestehen."
+        },
+        {
+            "text": "Den Ofen mindestens 20 Minuten auf 230°C Ober-/Unterhitze vorheizen."
+        },
+        {
+            "text": "Die Teiglinge, die den Fingertest bestanden haben, mindestens 15 Minuten mitsamt dem Brett in den Tiefkühler geben. In der Zwischenzeit das Wasser in einem kleinen, hohen Topf aufkochen. Dann das Natronpulver dazugeben <b>(Achtung: Es kocht stark hoch!)</b> und die Hitze reduzieren, sodass das Wasser nur noch siedet."
+        },
+        {
+            "text": "Jeden angefrorenen Teigling mit einer Schaumkelle mit der Oberseite nach unten in die Lauge geben und ca. 10 Sekunden vollständig bedeckt darin schwimmen lassen. Mit einer Schaumkelle herausnehmen, kurz abtropfen lassen, mit der Oberseite nach oben auf ein mit Backpapier belegtes Backblech legen, dreimal im 45°-Winkel einschneiden, mit Salz bestreuen und sofort in den vorgeheizten Backofen geben. Den Ofen etwas beschwaden, die Ofentür schließen und die Laugenstangen ca. 6 Minuten backen. Danach die Ofentür einmal öffnen, den Dampf entweichen lassen und die Teiglinge je nach Größe weitere ca. 6 Minuten fertig backen, bis sie schön braun sind und sich beim Klopfen auf die Unterseite hohl anhören."
+        },
+        {
+            "text": "Auf ein Kuchenrost legen und mindestens 15 Minuten abkühlen lassen."
+        }
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

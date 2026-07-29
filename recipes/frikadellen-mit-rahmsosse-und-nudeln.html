@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Frikadellen mit Rahmsoße und Nudeln – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,73 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "34",
+    "title": "Frikadellen mit Rahmsoße und Nudeln",
+    "category": [
+        "Fleisch",
+        "Pasta"
+    ],
+    "image": "images/Frikadellen-mit-Rahmsoße-und-Nudeln.jpeg",
+    "time": {
+        "preparation": "15 min",
+        "cooking": "35 min",
+        "total": "50 min"
+    },
+    "related": [
+        "47",
+        "34",
+        "5"
+    ],
+    "portions": "8 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Saftige Frikadellen mit cremiger Soße und leckeren Nudeln.",
+    "ingredients": {
+        "Frikadellen": [
+            "1kg gemischtes Hackfleisch",
+            "250g Magerquark",
+            "100g Paniermehl",
+            "2 Eier",
+            "2 EL scharfer Senf",
+            "2 EL Tomatenmark",
+            "2 EL gefriergetrocknete Salatkräuter",
+            "1 TL Allkrydda <i>(alternativ Salz)</i>",
+            "1 TL Worcestersauce",
+            "Pfeffer"
+        ],
+        "Soße": [
+            "Bratfett der Frikadellen",
+            "500ml Rinderbrühe",
+            "250ml Kochsahne",
+            "1 EL Sojasauce",
+            "1 TL Senf",
+            "2 EL Speisestärke",
+            "1/2 TL Knoblauchpulver",
+            "1 TL Worcestersauce"
+        ],
+        "Außerdem": [
+            "400g Hörnchennudeln",
+            "<i>optional: Preiselbeeren</i>"
+        ]
+    },
+    "steps": [
+        "Die Nudeln nach Packungsbeilage zubereiten, abgießen, mit etwas Öl vermengen und beiseite stellen.",
+        "Für die Frikadellen alle Zutaten in eine Schüssel geben und zu einer homogenen Masse verkneten. Aus der Masse ca. 18 Kugeln formen und diese auf einem Brett leicht flach drücken.",
+        "So viel Öl in einer Pfanne erhitzen, dass der Boden gerade bedeckt ist. Die Frikadellen bei mittlerer Hitze ca. 7min pro Seite braten. <b>(Die Frikadellen am Rand der Pfanne benötigen meist etwas länger.)</b>",
+        "Den Ofen auf ca. 50°C Ober-/Unterhitze vorheizen. Die fertigen Frikadellen auf einen Teller geben und im Ofen warm halten.",
+        "Für die Soße die flüssigen Zutaten zum Bratfett der Frikadellen in die Pfanne geben und aufkochen lassen.",
+        "Die Speisestärke mit etwas Wasser anrühren und unter Rühren zur Soße geben. Erneut aufkochen und ca. 5min köcheln lassen, bis die Soße eindickt und den Löffeltest besteht. <i>(Dafür einen Löffel in die Soße tauchen und mit dem Finger über die Rückseite streichen. Läuft die Soße nicht zusammen, ist sie fertig.)</i>"
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

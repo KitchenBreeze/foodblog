@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Erdbeersalat – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,69 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "25",
+    "title": "Erdbeersalat",
+    "category": [
+        "Salate",
+        "Vegetarisch"
+    ],
+    "image": "images/Erdbeersalat.jpeg",
+    "time": {
+        "preparation": "30 min",
+        "total": " 30 min"
+    },
+    "related": [
+        "24",
+        "33",
+        "14"
+    ],
+    "portions": "6 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Süße Erdbeere trifft auf salzigen Feta, knusprige Kichererbsen und frischen Salat.",
+    "ingredients": {
+        "Salat": [
+            "500g Erdbeeren",
+            "100g Feldsalat",
+            "100g Babyblattspinat",
+            "2 Avocados",
+            "1 Bund Frühlingszwiebeln",
+            "180g Feta",
+            "Kürbiskerne"
+        ],
+        "Kichererbsen": [
+            "1 Dose Kichererbsen (à 400g)",
+            "1 TL neutrales Öl",
+            "1/2 TL Paprikapulver",
+            "1/2 TL Salz",
+            "Pfeffer"
+        ],
+        "Dressing": [
+            "3 EL Olivenöl",
+            "2 TL Balsamicoessig",
+            "1 TL Ahornsirup",
+            "1 EL Wasser",
+            "1 TL Orangenschale",
+            "1 TL fein gehackte Minze",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "Die Kichererbsen abgießen, abspülen und gut abtrocknen. Mit Salz, Pfeffer, Paprikapulver und Öl vermengen, im Airfryer nicht überlappend verteilen und bei 190 Grad ca. 20min knusprig backen. (Dabei ca. alle 5min durchschütteln)",
+        "In der Zwischenzeit die groben Strünke vom Salat und dem Spinat entfernen, die Blätter etwas kleiner zupfen, waschen und trocken tupfen. Die Lauchzwiebeln in feine Ringe schneiden. Die Erdbeeren putzen, den Strunk entfernen und in Scheiben schneiden. Die Avocados schälen, den Kern entfernen und sowie den Feta klein würfeln. Alles in eine Schale geben.",
+        "Für das Dressing das Öl mit den restlichen Zutaten zu einem cremigen Dressing verrühren. Das Dressing unter den Salat rühren und die Kichererbsen unterheben."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Asianstyle Pilz-Brokkoli-Pfanne – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,74 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "5",
+    "title": "Asianstyle Pilz-Brokkoli-Pfanne",
+    "category": [
+        "Vegetarisch",
+        "Vegan",
+        "Reis"
+    ],
+    "image": "images/Asianstyle-Pilz-Brokkoli-Pfanne.jpeg",
+    "time": {
+        "preparation": "22 min",
+        "cooking": "18 min",
+        "total": "40 min"
+    },
+    "related": [
+        "2",
+        "10",
+        "25"
+    ],
+    "portions": 6,
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Pilz-Brokkoli-Pfanne mit einem Hauch von Asien",
+    "ingredients": {
+        "Gemüse": [
+            "800g Champignons",
+            "2 Brokkoli",
+            "1 große Gemüsezwiebel",
+            "2 Knoblauchzehen",
+            "Erdnussöl"
+        ],
+        "Soße": [
+            "150ml Gemüsebrühe",
+            "4 EL Sojasauce",
+            "1 TL Reisessig",
+            "1 TL Honig",
+            "2 EL Speisestärke",
+            "1 TL Sesamöl",
+            "1/2 TL Chiliflocken"
+        ],
+        "Beilage": [
+            "300g Basmatireis",
+            "450ml Wasser",
+            "Salz"
+        ]
+    },
+    "steps": [
+        "Einen Topf mit Salzwasser zum Kochen bringen.",
+        "Den Reis waschen, bis das Wasser klar ist, in einen Topf mit dem Wasser geben und ca. 15 min einweichen lassen, aufkochen und bei mittlerer Hitze und geschlossenem Deckel ca. 8 min sanft köcheln, bis das Wasser absorbiert wurde.",
+        "Währenddessen die Zwiebel schälen, vierteln und in Streifen schneiden. Vom Brokkoli den Strunk entfernen und den Kopf in kleinere Röschen schneiden. Die Pilze putzen, halbieren und in Scheiben schneiden.",
+        "Den Brokkoli in das kochende Salzwasser geben und 1 min blanchieren. Mit einer Schaumkelle herausnehmen und mit kaltem Wasser abschrecken.",
+        "Für die Soße die Stärke in etwas Wasser glattrühren und mit den restlichen Zutaten für die Soße vermischen.",
+        "In der Zwischenzeit in einer beschichteten Pfanne etwas Erdnussöl erhitzen.",
+        "Die Zwiebeln dazugeben und ca. 1–2 min unter Rühren braten.",
+        "Den Knoblauch solange unterrühren, bis er duftet. Dann die Pilze dazugeben und ca. 5 min unter gelegentlichem Rühren braten, bis sie braun sind.",
+        "Den Brokkoli in die Pfanne geben und weitere 5 Minuten unter gelegentlichem Rühren braten. Dabei nach ca. 1–2 min das Wasser abgießen.",
+        "Die Soße dazugeben, aufkochen und ca. 5 min fertig köcheln.",
+        "Vom Herd nehmen und ca. 5 min abkühlen lassen, sodass die Soße noch etwas andicken kann. Gut durchrühren und mit Reis servieren."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

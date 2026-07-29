@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cheesescones – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,61 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "15",
+    "title": "Cheesescones",
+    "tips": [
+        "Lieber zu wenig als zu viel kneten, damit die Butter nicht zu warm wird."
+    ],
+    "category": [
+        "herzhaftes Gebäck"
+    ],
+    "image": "images/cheesescone.jpeg",
+    "time": {
+        "preparation": "10 min",
+        "baking": "15 min",
+        "cooling": "15 min",
+        "total": " 40 min"
+    },
+    "related": [
+        "17",
+        "16",
+        "37"
+    ],
+    "portions": "8 Stück",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Der englische Teeklassiker, mal anders.",
+    "ingredients": {
+        "": [
+            "250g Mehl (Type 405)",
+            "60g sehr kalte Butter",
+            "1 Pck. Backpulver",
+            "80g kräftiger Käse (z.B. Red Leicester)",
+            "150ml kalte Milch (und etwas mehr zum Bestreichen)",
+            "1/2 TL Salz",
+            "1 TL Paprikapulver"
+        ]
+    },
+    "steps": [
+        "Den Ofen auf 220°C Ober-/Unterhitze vorheizen.",
+        "Das Mehl mit dem Salz und dem Paprikapulver in einer Schüssel vermengen. Die Butter in sehr kleine Stücke schneiden und alles mit den Händen zu einem krümeligen Sand kneten und reiben.",
+        "Den Käse fein dazureiben und unterrühren.",
+        "In der Mitte eine Mulde formen, die Milch hineinschütten und mit einem Löffel das Mehl unterheben, nur solange, bis die Milch sich gut verteilt hat. (Jetzt solltest du eine Art großen Klümpchen-Teig haben)",
+        "Etwas zusammendrücken, damit man ihn auf eine Arbeitsfläche geben kann. Dann den Teig zu einem ca. 2 cm dicken Rechteck vorsichtig ausrollen, das obere Drittel zur Mitte falten und das untere Drittel darüber klappen. Den Teig um 90 Grad drehen, erneut vorsichtig zu einem ca. 2 cm dicken Rechteck ausrollen, wieder das obere Drittel zur Mitte falten und das untere Drittel darüber klappen. Noch einmal um 90 Grad drehen und zu einem ca. 3 cm dicken Rechteck ausrollen.",
+        "Mit einem Glas Kreise ausstechen, hierbei nur herunterdrücken und nicht drehen, sodass die Schichten an den Seiten nicht verschlossen werden. (Alternativ kannst du auch Vierecke ausschneiden)",
+        "<i><b>Wenn du noch etwas Zeit hast, stell die Scones am besten noch 10-15 min in den Kühlschrank, sodass die Butter schön kalt ist und die Scones besser aufgehen.</b></i>",
+        "Die Teiglinge auf ein Backblech mit Backpapier legen, mit etwas Milch bestreichen. Die Ofentemperatur auf 200 Grad reduzieren, die Scones in den Ofen schieben und im vorgeheizten Ofen ca. 12-15 min goldbraun backen."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

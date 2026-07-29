@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Baguette – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,58 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "31",
+    "title": "Baguette",
+    "category": [
+        "herzhaftes Gebäck"
+    ],
+    "image": "images/Baguette.jpeg",
+    "time": {
+        "preparation": "20 min",
+        "cooling": "5 min",
+        "baking": "20 min",
+        "rising": "17 Std. 30 min",
+        "total": "18 Std. 15 min"
+    },
+    "related": [
+        "42",
+        "10",
+        "21"
+    ],
+    "portions": "1 Stück",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Einfaches, fluffiges Baguette mit herrlich knuspriger Kruste.",
+    "ingredients": {
+        "Hinweis": [
+            "<b>Bitte beachte: Der Teig muss mindestens 16 Stunden im Kühlschrank ruhen.</b>"
+        ],
+        "Teig": [
+            "250g Mehl (Type 550)",
+            "5g Salz",
+            "2g Trockenhefe",
+            "175ml lauwarmes Wasser (ca. 30°C)"
+        ]
+    },
+    "steps": [
+        "Das Mehl mit dem Salz und der Trockenhefe in einer Schüssel vermengen. In der Mitte eine Mulde formen, das Wasser hineingeben und alles mit einem Löffel verrühren, bis kein trockenes Mehl mehr zu sehen ist.",
+        "Eine Box mit Deckel leicht einölen, den Teig hineingeben, abdecken und 30min bei Zimmertemperatur ruhen lassen. Anschließend einmal dehnen und falten: Mit feuchten Händen ein Stück vom Teigrand nehmen, vorsichtig nach oben ziehen, bis ein Widerstand spürbar ist, und zur Mitte klappen. Dies einmal rundherum wiederholen, bis der gesamte Rand gedehnt wurde. Den Teig wieder abdecken, weitere 30min ruhen lassen, erneut dehnen und falten und anschließend für ca. 16 Std. in den Kühlschrank stellen.",
+        "Am nächsten Tag den Backofen auf 240°C Ober-/Unterhitze vorheizen und eine feuerfeste Schale mit Wasser auf den Boden des Ofens stellen.",
+        "Den Teig mit einer Teigkarte vorsichtig auf eine bemehlte Arbeitsfläche geben und behutsam zu einem ca. 20cm × 25cm großen Rechteck formen. <b>Dabei möglichst wenig Luft aus dem Teig drücken.</b> Das untere Drittel des Teiges zur Mitte falten, das obere Drittel darüberklappen und die Naht sowie die Enden gut zusammendrücken.",
+        "Den Teigstrang anschließend von der Mitte aus gleichmäßig mit den Händen zu einem ca. 35cm langen Strang <i>(optional mit spitz zulaufenden Enden)</i> ausrollen. Auf ein Baguetteblech legen <i>(alternativ funktioniert auch ein mit Backpapier belegtes Backblech)</i>, abdecken und weitere ca. 45min ruhen lassen.",
+        "Das Baguette optional drei Mal mit einem scharfen Messer im 45-Grad-Winkel einschneiden. Im vorgeheizten Backofen zunächst 15min backen. Anschließend die Wasserschale aus dem Ofen nehmen und das Baguette weitere ca. 5min fertig backen, bis es goldbraun ist und beim Klopfen auf die Unterseite hohl klingt. <i>(Falls es dir zu dunkel wird, locker mit Alufolie abdecken.)</i>",
+        "Aus dem Ofen nehmen und auf einem Kuchengitter mindestens 5min abkühlen lassen."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

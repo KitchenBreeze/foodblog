@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Griechischer Salat – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,65 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "49",
+    "title": "Griechischer Salat",
+    "tips": [
+        "Zu diesem Salat passen <a href='recipe.html?id=50'>Griechische Mini-Lagana</a> super."
+    ],
+    "category": [
+        "Salate",
+        "Vegetarisch"
+    ],
+    "image": "images/griechischer-Salat.jpg",
+    "time": {
+        "preparation": "30 min",
+        "total": "30 min"
+    },
+    "related": [
+        "44",
+        "12",
+        "2"
+    ],
+    "portions": "6 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Buntes, knackiges Gemüse mit weißen Bohnen in einem cremig-würzigen Dressing.",
+    "ingredients": {
+        "Salat": [
+            "2 Salatgurken",
+            "600g Fleischtomaten <i>(ca. 3 Stück)</i>",
+            "1 Dose weiße Bohnen (à 800g)",
+            "2 rote Spitzpaprika",
+            "2 rote Zwiebeln",
+            "100g grüne Oliven"
+        ],
+        "Dressing": [
+            "75g griechischer Joghurt",
+            "4 EL Wasser",
+            "3 EL Olivenöl",
+            "2 Knoblauchzehen",
+            "1 TL getrockneter Oregano",
+            "1 TL Zitronenschale",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "Die Gurken nach Belieben schälen, vierteln und in Scheiben schneiden. Die Tomaten und die Paprika grob würfeln. Die Zwiebeln schälen, vierteln und in feine Ringe schneiden.",
+        "Die Bohnen in ein Sieb abgießen und gut abtropfen lassen. Die Oliven halbieren.",
+        "Für das Dressing den Knoblauch schälen, durch eine Knoblauchpresse pressen und mit den restlichen Zutaten cremig verrühren.",
+        "Das Gemüse, die Bohnen, die Oliven und das Dressing in eine große Schüssel geben und gut vermengen."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

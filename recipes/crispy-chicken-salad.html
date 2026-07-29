@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Crispy Chicken Salad – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,99 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "9",
+    "title": "Crispy Chicken Salad",
+    "category": [
+        "Salate"
+    ],
+    "image": "images/Crispy-Chicken-Salad.jpeg",
+    "time": {
+        "preparation": "40 min",
+        "cooling": "2 Std",
+        "cooking": "20 min",
+        "total": "3 Std."
+    },
+    "related": [
+        "45",
+        "7",
+        "20"
+    ],
+    "portions": "6 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Frisches, buntes und knackiges Gemüse mit saftigem Hähnchen in knuspriger Panade.",
+    "ingredients": {
+        "Hähnchen": [
+            "3 Hähnchenbrustfilets",
+            "200g Joghurt",
+            "1 TL Knoblauchpulver",
+            "1 TL Paprikapulver",
+            "1 TL italienische Kräuter",
+            "1/4 TL Zitronenschale",
+            "Salz",
+            "Pfeffer"
+        ],
+        "Panade": [
+            "40g Mehl",
+            "10g Speisestärke",
+            "1/2 TL Paprikapulver",
+            "1/2 TL Knoblauchpulver",
+            "100g Paniermehl",
+            "Salz",
+            "Pfeffer",
+            "neutrales Öl"
+        ],
+        "Salat": [
+            "1 Romanasalat",
+            "400g Kirschtomaten",
+            "1 Salatgurke",
+            "1 Avocado",
+            "1 rote Zwiebel",
+            "1 rote Spitzpaprika",
+            "60g Parmesan"
+        ],
+        "Dressing": [
+            "80g Joghurt",
+            "2 TL Olivenöl",
+            "2 EL Wasser",
+            "1 EL getrocknete Salatkräuter",
+            "1 TL Balsamicoessig",
+            "1/2 TL Knoblauchpulver",
+            "1/2 TL Senf",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        {
+            "text": "Die Filets längs halbieren, sodass flachere und möglichst gleichmäßig dicke Stücke entstehen."
+        },
+        {
+            "text": "Den Joghurt mit den Gewürzen vermischen und über die Hähnchenstücke in einen flachen Behälter geben. Alles gut einmassieren, sodass das Fleisch vollständig bedeckt ist. Abdecken und für 2-3 Stunden im Kühlschrank marinieren lassen."
+        },
+        "Etwa kurz vor Ende der Marinierzeit den Romanasalat für den Salat klein schneiden, waschen und gut trocknen. Die Zwiebel schälen und fein hacken. Die Gurke und die Paprika in kleine Würfel schneiden, die Avocado schälen, entkernen und ebenfalls würfeln. Die Tomaten je nach Größe halbieren oder vierteln und den Parmesan hobeln.",
+        {
+            "text": "Alles zusammen in eine große Schüssel geben.",
+            "images": [
+                "images/wow.jpeg"
+            ]
+        },
+        "Für die Panade zwei Teller vorbereiten: Auf dem ersten Teller das Mehl mit der Speisestärke und den Gewürzen vermischen. Auf dem zweiten Teller das Paniermehl verteilen.",
+        "Währenddessen so viel Öl in einer Pfanne bei mittlerer Hitze erhitzen, dass der Boden <b>gerade so</b> bedeckt ist.",
+        "Die Hähnchenstücke etwas abtropfen lassen und gegebenenfalls leicht abstreifen. Zuerst im Mehl wenden, sodass sie leicht bedeckt sind, anschließend mehrfach im Paniermehl wenden und die Panade gut andrücken. Die panierten Hähnchenstücke in die Pfanne geben und bei mittlerer Hitze ca. 5 Minuten pro Seite goldbraun braten. Nach dem Braten etwa 5 Minuten ruhen lassen und anschließend in mundgerechte Stücke schneiden.",
+        "Während das Hähnchen ruht, alle Zutaten für das Dressing miteinander verrühren, bis ein cremiges Dressing entsteht. Dieses über den Salat geben und alles gut vermengen.",
+        "Zum Servieren den Salat auf Tellern anrichten und das knusprige Hähnchen darauf verteilen."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

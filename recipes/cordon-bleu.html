@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cordon bleu – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,64 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "16",
+    "title": "Cordon bleu",
+    "tips": [
+        "Die fertigen Cordon bleues kannst du im Ofen bei ca. 50°C auf einem Kuchenrost warm halten."
+    ],
+    "category": [
+        "Fleisch"
+    ],
+    "image": "images/cordon-bleu.jpeg",
+    "time": {
+        "preparation": "30 min",
+        "cooking": "30 min",
+        "total": " 1 std"
+    },
+    "related": [
+        "44",
+        "46",
+        "12"
+    ],
+    "portions": "7 Stück",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Das unwiderstehliche Schnitzelupgrade.",
+    "ingredients": {
+        "": [
+            "7 Putenschnitzel",
+            "7 Scheiben Prosciutto Cotto",
+            "7 Scheiben Käse (z.B. Emmentaler oder Gouda)",
+            "3 Eier (Größe L)",
+            "180g Paniermehl",
+            "60g Mehl",
+            "10g Speisestärke",
+            "1 TL Paprikapulver",
+            "1/2 TL Knoblauchpulver",
+            "Salz",
+            "Pfeffer",
+            "Butterschmalz"
+        ]
+    },
+    "steps": [
+        "Die Schnitzel jeweils auf einem großen Brett zwischen zwei Stück Frischhaltefolie legen und mit einem Fleischklopfer sehr dünn klopfen.",
+        "Jedes Schnitzel auf beiden Seiten ordentlich salzen und pfeffern und beiseite stellen.",
+        "Für die Panierstraße Mehl, Stärke, Knoblauch und Paprikapulver vermengen und auf dem ersten Teller verteilen, das Ei verquirlt mit Salz und Pfeffer auf dem nächsten und das Paniermehl auf dem letzten tiefen Teller verteilen.",
+        "In einer großen Pfanne 2 große EL Butterschmalz auf mittelhoher Hitze erhitzen.",
+        "Die Käsescheiben vierteln oder halbieren (je nach Größe des Schnitzels) und die 4 Viertel bzw. 2 Hälften aufeinander legen. Den Stapel auf die eine Hälfte der Schinkenscheibe legen, die andere Hälfte darüber klappen. Das Schinkenpäckchen auf die eine Hälfte des Schnitzels legen, dabei einen kleinen Rand lassen. Die andere Hälfte des Schnitzels darüber klappen und an den Rändern gut andrücken.",
+        "Jedes Cordon bleu im Mehl und in dem Ei wenden, ins Paniermehl geben, mehrfach wenden und gut andrücken.",
+        "In die heiße Pfanne geben und ca. 6 min pro Seite in genügend (sodass der Boden gut bedeckt ist) Butterschmalz ausbacken."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

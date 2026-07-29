@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cracker – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,64 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "18",
+    "title": "Cracker",
+    "category": [
+        "Snacks"
+    ],
+    "image": "images/cracker.jpeg",
+    "time": {
+        "preparation": "10 min",
+        "baking": "10 min",
+        "cooling": "2 Std.",
+        "total": " 3 Std."
+    },
+    "related": [
+        "10",
+        "9",
+        "3"
+    ],
+    "portions": "1 Blech",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Knusprige Cracker, in leckerer Würze.",
+    "ingredients": {
+        "Mürbeteig": [
+            "40g Mehl (Type 405)",
+            "20g sehr kalte Butter",
+            "10ml eiskaltes Wasser"
+        ],
+        "Paste": [
+            "1 EL Olivenöl",
+            "1 TL Sojasauce",
+            "1 TL Salz",
+            "1/2 TL Paprikapulver edelsüß",
+            "1/2 TL Knoblauchpulver"
+        ],
+        "Panade": [
+            "1 TL Salz",
+            "1/4 TL Paprikapulver",
+            "1/4 TL Knoblauchpulver edelsüß"
+        ]
+    },
+    "steps": [
+        "Mehl, Butter und Salz für den Teig mit den Händen verkneten, sodass krümeliger „Sand“ entsteht. Eine Mulde in der Mitte formen, Wasser dazugeben und die Mehlkrümel von der Seite unterschieben (am besten nicht mehr kneten), bis alles gerade so zusammenhält. In Frischhaltefolie wickeln und für mind. 2 Stunden im Kühlschrank ruhen lassen. (Am besten über Nacht)",
+        "Den Teig aus dem Kühlschrank nehmen, damit er ca. 30 Minuten vor dem Ausrollen aus dem Kühlschrank kommt. In der Zwischenzeit den Ofen auf 200°C Ober-/Unterhitze vorheizen und ein Backblech mit Backpapier belegen.",
+        "Dann den Teig auf einer bemehlten Arbeitsfläche circa 3 mm dick ausrollen und kleine Formen ausstechen. (Alternativ kleine Vierecke ausschneiden)",
+        "Für die Paste alle Zutaten gut miteinander vermengen und die Cracker damit bestreichen.",
+        "Die Cracker im vorgeheizten Backofen ca. 9 min backen.",
+        "Währenddessen die Zutaten für die Panade in einer Box mit Deckel vermengen, die warmen Kekse dazugeben und einmal ordentlich durchschütteln."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

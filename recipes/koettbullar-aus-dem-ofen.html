@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Köttbullar aus dem Ofen – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,71 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "53",
+    "title": "Köttbullar aus dem Ofen",
+    "tips": [
+        "Zu den Köttbullar passt das <a href='recipe.html?id=54'>cremige Kartoffelpüree</a> super."
+    ],
+    "category": [
+        "Fleisch"
+    ],
+    "image": "images/köttbullar-ofen.jpeg",
+    "time": {
+        "preparation": "15 min",
+        "baking": "25 min",
+        "total": "40 min"
+    },
+    "related": [
+        "52",
+        "50",
+        "46"
+    ],
+    "portions": "24 Stück",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Saftige Hackbällchen – der schwedische Klassiker aus dem Ofen.",
+    "ingredients": {
+        "": [
+            "800g Rinderhackfleisch",
+            "70g Paniermehl",
+            "150ml Milch",
+            "2 Eier",
+            "1/2 weiße Zwiebel",
+            "1 EL Öl",
+            "1 EL Worcestersauce",
+            "1 gehäufter TL Senf",
+            "3 Kugeln Piment",
+            "1 EL Allkrydda <i>(alternativ: Salz)</i>",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        {
+            "text": "Den Ofen auf 200 Grad Ober/Unterhitze vorheizen und eine feuerfeste Schale mit Wasser auf den Ofenboden stellen."
+        },
+        {
+            "text": "Das Paniermehl mit der Milch übergießen und etwas quellen lassen."
+        },
+        {
+            "text": "In der Zwischenzeit die Zwiebel schälen und fein hacken. Das Öl in einer kleinen Pfanne erhitzen und die Zwiebel darin zusammen mit dem Piment ca. 5min bei mittlerer Hitze glasig dünsten."
+        },
+        {
+            "text": "Das Hackfleisch in eine große Schüssel geben. Die Pimentkugeln aus den Zwiebeln entfernen und die Zwiebeln mitsamt Bratfett, die gequollenen Semmelbrösel, die Eier, den Senf, die Worcestersauce, die Allkrydda und den Pfeffer dazugeben. Alles zu einer glatten Masse verkneten."
+        },
+        {
+            "text": "Aus der Masse 24 kleine Bällchen formen, auf ein leicht gefettetes Backblech geben und im vorgeheizten Backofen ca. 20min backen. Die Schale mit dem Wasser aus dem Ofen nehmen und die Bällchen anschließend bei höchster Grillstufe ca. 5min fertig backen."
+        }
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

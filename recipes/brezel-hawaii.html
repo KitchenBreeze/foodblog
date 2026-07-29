@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Brezel Hawaii – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,50 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "11",
+    "title": "Brezel Hawaii",
+    "category": [
+        "herzhaftes Gebäck"
+    ],
+    "image": "images/brezel-hawaii.jpeg",
+    "time": {
+        "preparation": "15 min",
+        "baking": "15 min",
+        "total": "30 min"
+    },
+    "related": [
+        "2",
+        "19",
+        "41"
+    ],
+    "portions": "3 Stück",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Fluffiger Brezelteig getoppt mit salzigem Schinken, saftiger Ananas und leckerem Käse.",
+    "ingredients": {
+        "": [
+            "3 80g-gelaugte <a href='recipe.html?id=35'>Brezelteiglinge</a> (alternativ 3 angetaute TK-Brezeln)",
+            "30g Kochschinken",
+            "50g Dosenananas",
+            "120g geriebener Gouda (z.B. mittelalt)"
+        ]
+    },
+    "steps": [
+        "Den Ofen mind. 15 min auf 230°C Ober-/Unterhitze vorheizen.",
+        "Die Ananasstücke in kleine Würfel schneiden und den Schinken in kleinere Stücke reißen.",
+        "Ca. 3/4 des Käses gleichmäßig über den Brezeln verteilen, die Ananas und den Schinken darauf verteilen und den restlichen Käse darüber streuen.",
+        "Die Brezeln ca. 15 min im vorgeheizten Backofen backen."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

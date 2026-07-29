@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gnocchisalat – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,69 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "44",
+    "title": "Gnocchisalat",
+    "category": [
+        "Salate"
+    ],
+    "image": "images/Gnocchisalat.jpeg",
+    "time": {
+        "preparation": "20 min",
+        "cooking": "10 min",
+        "total": "30 min"
+    },
+    "related": [
+        "17",
+        "22",
+        "15"
+    ],
+    "portions": "6 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Knuspriger Gnocchi-Salat mit cremigem Avocado-Dressing, frischen Kirschtomaten, würzigem Bacon und gehobeltem Parmesan.",
+    "ingredients": {
+        "Gnocchi": [
+            "600g Mini-Gnocchi",
+            "1 TL Paprikapulver",
+            "1 EL Öl",
+            "Salz",
+            "Pfeffer"
+        ],
+        "Salat": [
+            "400g Kirschtomaten",
+            "150g Bacon",
+            "80g Rucola",
+            "1 rote Zwiebel",
+            "35g gehobelter Parmesan"
+        ],
+        "Dressing": [
+            "1 Avocado",
+            "1 kleine Knoblauchzehe",
+            "2 EL Olivenöl",
+            "12 EL Wasser",
+            "1 TL Balsamicoessig",
+            "1/2 TL Chiliflocken",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "1 EL Öl in einer großen Pfanne erhitzen. Das Paprikapulver einrühren, bis es duftet. Die Gnocchi dazugeben, mit Salz und Pfeffer würzen und unter gelegentlichem Wenden ca. 10min knusprig anbraten.",
+        "In der Zwischenzeit die Tomaten dritteln und die Zwiebel schälen und fein hacken. Beides in eine große Schüssel geben und etwas abkühlen lassen. Den Rucola waschen, gut trocknen und gegebenenfalls etwas kleiner zupfen.",
+        "Den Bacon auf ein mit Backpapier belegtes Backblech legen und im Ofen bei höchster Grillstufe im oberen Drittel ca. 6min knusprig braten. Anschließend herausnehmen und zwischen Küchenpapier abkühlen lassen.",
+        "Für das Dressing die Avocado schälen, den Kern entfernen, den Knoblauch schälen und zusammen mit den restlichen Dressing-Zutaten in einen Food Processor geben. Alles cremig pürieren.",
+        "Die Gnocchi mit den Tomaten, dem Rucola, dem gehobelten Parmesan und dem Dressing in eine große Schüssel geben und gut vermengen. Den Bacon klein schneiden und über dem Salat verteilen."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

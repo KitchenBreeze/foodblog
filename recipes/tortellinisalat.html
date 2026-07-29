@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tortellinisalat – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,64 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "56",
+    "title": "Tortellinisalat",
+    "category": [
+        "Pasta"
+    ],
+    "image": "images/tortellinisalat.jpeg",
+    "time": {
+        "preparation": "30 min",
+        "total": "30 min"
+    },
+    "related": [
+        "44",
+        "19",
+        "42"
+    ],
+    "portions": "6 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Leckere Tortellini mit saftigen Tomaten, weichem Mozzarella, salzigem Parmesan und knackigen Pinienkernen in cremig, aromatischem Pesto.",
+    "ingredients": {
+        "Salat": [
+            "750g Tortellini",
+            "400g Kirschtomaten",
+            "60g getrocknete Tomaten",
+            "3 Pck. Mini-Mozzarella",
+            "60g Rucola",
+            "40g Pinienkerne",
+            "60g Parmesan"
+        ],
+        "Pesto": [
+            "25g Basilikumblätter (Blätter von einem Topf)",
+            "1 sehr kleine Knoblauchzehe",
+            "35g Parmesan",
+            "10g der Pinienkerne",
+            "30g Olivenöl",
+            "etwas Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "Die Tortellini nach Packungsbeilage zubereiten, abgießen in ein Sieb geben und etwas abkühlen lassen.",
+        "In der Zwischenzeit für das Pesto die Kerne in einer heißen Pfanne ohne Öl kurz unter schwenken goldbraun anrösten.",
+        "Die Knoblauchzehe schälen und den Parmesan fein reiben.",
+        "10g der Pinienkerne mit dem Knoblauch, etwas Salz und Pfeffer in den Mixer geben und kurz etwas klein pürieren. Den Basilikum und das Öl dazugeben und solange in kleinen Intervallen pürieren, bis keine großen Stücke mehr zu sehen sind. Den Parmesan dazugeben und alles fertig zu einem cremigen Pesto pürieren. Das fertige Pesto in den Kühlschrank stellen.",
+        "Die Mozzarellakugeln halbieren, den Parmesan hobeln und beides noch unter die leicht warmen Tortellini in eine Schüssel geben.",
+        "In der Zwischenzeit, die Tomaten halbieren oder je nach Größe vierteln. Die getrockneten Tomaten klein würfeln. Den Rucola waschen,abtrocknen und etwas klein zupfen. Unter die Tortellini heben und gut vermengen.",
+        "Das Pesto unterheben, nach Belieben salzen und pfeffern und mit den restlichen Pinienkernen servieren."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>fluffiges Weißbrot – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,68 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "33",
+    "title": "fluffiges Weißbrot",
+    "category": [
+        "herzhaftes Gebäck"
+    ],
+    "image": "images/fluffiges-Weißbrot.jpeg",
+    "time": {
+        "preparation": "50 min",
+        "cooling": "2 Std 10 min",
+        "baking": "45 min",
+        "rising": "2 Std 30 min",
+        "total": "6 Std 15 min"
+    },
+    "related": [
+        "46",
+        "36",
+        "26"
+    ],
+    "portions": "1 Brot",
+    "difficulty": "Mittel",
+    "rating": 4.6,
+    "description": "Wunderbar fluffiges Weißbrot mit Tangzhong.",
+    "ingredients": {
+        "Tangzhong": [
+            "30g Mehl (Type 550)",
+            "150ml Milch"
+        ],
+        "Hauptteig": [
+            "470g Mehl (Type 550)",
+            "20g Magermilchpulver",
+            "9g Salz",
+            "5g Trockenhefe",
+            "1 Eigelb",
+            "15g Honig",
+            "1/2 TL Zitronensaft",
+            "25g Butter",
+            "10g Öl",
+            "280g Milch",
+            "60ml Wasser"
+        ]
+    },
+    "steps": [
+        "Für den Tangzhong das Mehl mit der Milch in einem kleinen Topf vermengen und bei niedriger bis mittlerer Hitze (ca. 65°C) unter ständigem Rühren erhitzen, bis eine puddingartige Konsistenz entsteht. Vom Herd nehmen, in eine flache Schale umfüllen, mit Frischhaltefolie abdecken und an einem kühlen Ort mindestens 1 1/2 Std. abkühlen lassen. <i>(Alternativ kannst du diesen Schritt auch schon am Vorabend vorbereiten.)</i>",
+        "Nach ca. 1 Stunde Kühlzeit das Mehl, das Wasser und die Milch für den Hauptteig kurz vermengen, bis kein trockenes Mehl mehr zu sehen ist. Abdecken und 30min ruhen lassen.",
+        "Nach der Ruhezeit das Milchpulver, die Hefe, den Honig, das Eigelb, den Zitronensaft und den abgekühlten Tangzhong dazugeben. Alles mit dem Knethaken der Küchenmaschine ca. 5min auf niedriger Stufe kneten, bis sich alle Zutaten verbunden haben. Anschließend weitere 3min auf niedriger Stufe kneten und dabei das Salz langsam einarbeiten. Danach den Teig weitere 10min auf mittlerer Stufe kneten und anschließend auf höchster Stufe ca. 5min zu einem glatten, elastischen Teig auskneten, bis er den Fenstertest besteht. Die weiche Butter in kleinen Stücken und das Öl dazugeben, weitere ca. 5min auf mittlerer Stufe einarbeiten und anschließend ca. 2min auf höchster Stufe fertig kneten, bis der Teig den Fenstertest erneut besteht.",
+        "Den Teig in eine saubere Schüssel geben, mit einem feuchten Tuch abdecken und ca. 1 1/2 Std. bei Raumtemperatur gehen lassen, bis sich das Volumen verdoppelt hat.",
+        "Den Teig auf einer leicht geölten Arbeitsfläche vorsichtig in zwei gleich große Teile teilen, rundwirken, auf ein bemehltes Brett legen, mit Mehl bestäuben und ca. 10min im Kühlschrank entspannen lassen.",
+        "In der Zwischenzeit eine Kastenform (30cm x 11cm) gut einfetten.",
+        "Jedes Teigstück mit etwas Mehl bestäuben und auf einer leicht bemehlten Arbeitsfläche zu einem Rechteck drücken und ziehen, dessen Seiten etwas länger als die Form sind. Den Teig eng und straff aufrollen, die Enden einklappen und beide Teigrollen nebeneinander in die Form legen. Mit etwas Mehl bestäuben, mit einem Tuch abdecken und weitere ca. 60min an einem warmen Ort gehen lassen, bis sich der Teig deutlich vergrößert hat und den Fingertest besteht. Mindestens 30min vor Ende der Gehzeit den Ofen auf 180°C Ober-/Unterhitze vorheizen.",
+        "Das fertige Brot erneut mit etwas Mehl bestäuben. Anschließend im unteren Drittel des vorgeheizten Backofens ca. 45min backen, bis es goldbraun ist. <i>(Falls es zu dunkel wird, locker mit Alufolie abdecken.)</i>",
+        "Nach dem Backen das Brot aus der Form nehmen, für ca. 15min in ein sauberes Tuch wickeln, anschließend auswickeln, auf ein Kuchenrost legen und vollständig auskühlen lassen."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

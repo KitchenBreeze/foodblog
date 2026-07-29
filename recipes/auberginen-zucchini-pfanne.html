@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Auberginen-Zucchini-Pfanne – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,57 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "38",
+    "title": "Auberginen-Zucchini-Pfanne",
+    "category": [
+        "Vegetarisch",
+        "Beilage",
+        "Vegan"
+    ],
+    "image": "images/Auberginen-Zucchini-Pfanne.jpeg",
+    "time": {
+        "preparation": "5 min",
+        "cooking": "15 min",
+        "total": "20 min"
+    },
+    "related": [
+        "51",
+        "15",
+        "1"
+    ],
+    "portions": "3 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Schnelle, leckere Gemüsepfanne mit mediterranem Touch.",
+    "ingredients": {
+        "": [
+            "1 große weiße Zwiebel",
+            "2 Knoblauchzehen",
+            "1 Aubergine",
+            "1 große Zucchini",
+            "1 TL getrockneter Rosmarin",
+            "1 TL getrockneter Thymian",
+            "Olivenöl",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "Die Zwiebel schälen, vierteln und in dünne Streifen schneiden. Die Zucchini und die Aubergine in grobe Würfel schneiden. Den Knoblauch schälen, grob hacken und in einem kleinen Schälchen mit dem Thymian, dem Rosmarin, Salz und Pfeffer vermengen.",
+        "Reichlich Olivenöl in einer Pfanne erhitzen und die Zwiebeln darin bei mittlerer Hitze ca. 5 Minuten anschwitzen.",
+        "Die Aubergine dazugeben und unter gelegentlichem Rühren bei höchster Stufe ca. 5 weitere Minuten mitbraten.",
+        "Anschließend die Zucchini und den Inhalt des kleinen Schälchens dazugeben und weitere 5 Minuten unter gelegentlichem Rühren fertig braten."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

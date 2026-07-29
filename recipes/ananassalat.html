@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ananassalat – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,64 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "2",
+    "title": "Ananassalat",
+    "category": [
+        "Salate"
+    ],
+    "image": "images/ananassalat.jpeg",
+    "time": {
+        "preparation": "45 min",
+        "total": "45 min"
+    },
+    "related": [
+        "1",
+        "10",
+        "20"
+    ],
+    "portions": 6,
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Süß-sauer trifft auf herzhaft-salzig.",
+    "ingredients": {
+        "": [
+            "450g TK-Prinzessinnenbohnen",
+            "1 Ananas (ca. 1,6kg)",
+            "1 Salatgurke",
+            "3 rote Spitzpaprika",
+            "1 große rote Zwiebel",
+            "2 Rollen Ziegenkäse (à 180g)",
+            "150g Bacon",
+            "3 EL Olivenöl",
+            "1 TL Limettensaft",
+            "1/2 TL Chiliflocken",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "Einen kleinen Topf mit Salzwasser zum Kochen bringen.",
+        "Jede Ziegenkäserolle in 10 Scheiben schneiden und jede Scheibe nochmals vierteln.",
+        "Jede Baconscheibe in 8 gleich große Stücke schneiden, jedes Ziegenkäsestück mit einem Baconstück umwickeln und auf ein mit Backpapier belegtes Backblech legen.",
+        "Die Bohnen in das Wasser geben, aufkochen, ca. 7 min sanft köcheln lassen, in ein Sieb abgießen, kalt abspülen und abtropfen lassen.",
+        "Die Gurke schälen, halbieren, erneut vierteln und in kleine Würfel schneiden.",
+        "Die Zwiebel schälen und fein hacken.",
+        "Die Paprika in kleine Würfel schneiden.",
+        "Für das Dressing alle Zutaten vermengen.",
+        "Die Ziegenkäsescheiben im Ofen bei höchster Grillstufe ca. 7 min im oberen Drittel backen, bis der Bacon knusprig ist.",
+        "In der Zwischenzeit den Strunk von der Ananas entfernen, die Schale abschneiden und das Fruchtfleisch in Würfel schneiden, dabei die holzige Mitte herausschneiden.",
+        "Den Käse aus dem Ofen nehmen, die Ananas, die Bohnen, die Gurke, die Zwiebel und die Paprika in eine große Schüssel geben, mit dem Dressing vermengen und mit einem Teil der Ziegenkäsestückchen toppen."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

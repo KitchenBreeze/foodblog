@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Blauschimmelkäsesalat – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,71 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "8",
+    "title": "Blauschimmelkäsesalat",
+    "category": [
+        "Salate",
+        "Vegetarisch"
+    ],
+    "image": "images/blauschimmelkäsesalat.jpg",
+    "time": {
+        "preparation": "45 min",
+        "total": "45 min"
+    },
+    "related": [
+        "15",
+        "38",
+        "28"
+    ],
+    "portions": "6 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Ein einfacher Herbstsalat mit cremigem Blauschimmelkäse, süßem Obst und knackigen Nüssen.",
+    "ingredients": {
+        "Salat": [
+            "400g Blauschimmelkäse",
+            "2 Birnen",
+            "150g Feldsalat",
+            "2 rote Zwiebeln",
+            "300g rote Weintrauben",
+            "50g gehackte Walnüsse"
+        ],
+        "Kartoffeln": [
+            "500g Drillingskartoffeln",
+            "1 TL getrockneter Thymian",
+            "1 EL Olivenöl",
+            "1 TL Salz",
+            "Pfeffer"
+        ],
+        "Dressing": [
+            "3 EL Olivenöl",
+            "1 EL Wasser",
+            "2 TL Balsamicoessig",
+            "1 TL Honig",
+            "1 TL Senf",
+            "1/2 TL Orangenschale",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "Die Kartoffeln in kleine Würfel schneiden, mit Salz und Wasser bedecken, aufkochen und ca. 8 min garen, abgießen und ca. 10 min (am besten auf einer flachen Fläche) ausdampfen lassen.",
+        "In der Zwischenzeit den Ofen auf 200°C Umluft vorheizen.",
+        "Die Kartoffeln mit den restlichen Zutaten vermengen, auf ein mit Backpapier belegtes Backblech nicht überlappend verteilen und im vorgeheizten Backofen ca. 30 min goldbraun backen. In den letzten 5 min auf Grill knusprig backen und nach der Hälfte der Zeit einmal wenden.",
+        "Die Zwiebel schälen und in kleine Würfel hacken. Die Strünke von den Weintrauben entfernen, halbieren und die Birnen in Würfel schneiden.",
+        "Für das Dressing alle Zutaten mit einem Schneebesen gut verrühren.",
+        "Die Kartoffeln in eine große Schüssel geben, das Gemüse, den Salat und das Dressing hinzufügen und vermengen. Den Käse würfeln, vorsichtig unterheben und mit den Nüssen servieren."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

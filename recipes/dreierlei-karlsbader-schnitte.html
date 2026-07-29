@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dreierlei Karlsbader Schnitte – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,65 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "10",
+    "title": "Dreierlei Karlsbader Schnitte",
+    "category": [
+        "herzhaftes Gebäck"
+    ],
+    "image": "images/Karlsbader-Schnitte.jpeg",
+    "time": {
+        "preparation": "5 min",
+        "baking": "15 min",
+        "total": "20 min"
+    },
+    "related": [
+        "42",
+        "36",
+        "27"
+    ],
+    "portions": "20 Brote",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Drei verschiedene Varianten. Aber eins haben sie alle gemeinsam: Schnell, einfach und super lecker!",
+    "ingredients": {
+        " ": [
+            "1 großes Weißbrot (z.B. 750g Brotbackmischung oder 20 Scheiben Toastbrot)"
+        ],
+        "Schinken, Ei (8 Brote)": [
+            "4 Scheiben Prosciutto Cotto (ca. 115g)",
+            "4 Scheiben Emmentaler (ca. 125g)",
+            "8 Eier"
+        ],
+        "Salami (6 Brote)": [
+            "30 kleine Scheiben Edelsalami (ca. 100g)",
+            "6 Scheiben Schmelzkäse"
+        ],
+        "Schinken, Ananas": [
+            "3 Scheiben Prosciutto Cotto (ca. 85g)",
+            "6 Scheiben Ananas",
+            "6 Schmelzkäsescheiben"
+        ],
+        "Nach Belieben": [
+            "Paprikapulver edelsüß"
+        ]
+    },
+    "steps": [
+        "Den Ofen auf 180°C Ober-/Unterhitze vorheizen.",
+        "Das Brot in Scheiben schneiden und auf einem mit Backpapier belegten Backblech verteilen.",
+        "Nach Belieben belegen, z.B. 1. halbe Scheibe Schinken, halbe Scheibe Emmentaler und Spiegelei; 2. 5 Scheiben Salami und 1 Scheibe Schmelzkäse; 3. halbe Scheibe Schinken, (eine Scheibe Ananas), 1 Scheibe Schmelzkäse und evtl. mit etwas Paprikapulver bestreuen.",
+        "Die Brote im Ofen ca. 10–15 min backen, bis der Käse schön geschmolzen ist.",
+        "Für die Ei-Variante in der Zwischenzeit die Spiegeleier braten. Dafür etwas Öl in einer Pfanne erhitzen, die Eier hineinschlagen, ca. 5 min braten, umdrehen und ca. 2 min fertig braten (für ein festes Eigelb)."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bruschetta – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,56 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "0",
+    "title": "Bruschetta",
+    "tips": [
+        "Je länger das Topping zieht, desto besser und intensiver schmeckt es."
+    ],
+    "category": [
+        "Brot",
+        "Vegetarisch"
+    ],
+    "image": "images/bruschetta.jpg",
+    "time": {
+        "preparation": "10 min",
+        "cooling": "2 Std.",
+        "total": "2 Std. 10 min"
+    },
+    "related": [
+        "1",
+        "19",
+        "32"
+    ],
+    "portions": "12 Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Knusprig-fluffiges italienisches Brot mit herrlich aromatischem Tomatentopping.",
+    "ingredients": {
+        "": [
+            "7 große Tomaten",
+            "5 Knoblauchzehen",
+            "2 TL getrockneter Basilikum",
+            "5 TL Olivenöl",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "Die Tomaten fein würfeln und in eine Schüssel mit Deckel geben.",
+        "Den Knoblauch schälen und zu den Tomaten pressen. Mit Salz und Pfeffer würzen, den Basilikum sowie das Öl dazugeben, alles vermengen, mit dem Deckel verschließen und mind. eine Stunde im Kühlschrank ziehen lassen.",
+        "Das Brot in Scheiben schneiden, mit etwas Olivenöl bestreichen und in einer beschichteten Pfanne ohne Öl kurz anrösten.",
+        "Das Topping auf die Brotscheiben geben und servieren."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

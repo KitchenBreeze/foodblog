@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Avocadocreme – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,45 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "6",
+    "title": "Avocadocreme",
+    "category": [
+        "Aufstriche & Dips",
+        "Vegetarisch"
+    ],
+    "image": "images/avocadocreme.jpeg",
+    "time": "5 min",
+    "related": [
+        "9",
+        "5",
+        "38"
+    ],
+    "portions": "6 kleine Portionen",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Ein cremiger Aufstrich. Perfekt für Burger, Sandwiches, Wraps & Co.",
+    "ingredients": {
+        "": [
+            "2 Avocados",
+            "100g Frischkäse",
+            "1 Spritzer Limettensaft",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+    "steps": [
+        "Die Avocados schälen, den Kern entfernen und mit den restlichen Zutaten in einem Häcksler glatt pürieren."
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

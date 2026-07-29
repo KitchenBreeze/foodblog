@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Erdbeermuffins – KitchenBreeze</title>
+<title>KitchenBreeze Rezept</title>
 
 <meta id="metaDescription" name="description" content="">
 
@@ -414,12 +414,62 @@ button:hover {
 
 <div id="content"></div>
 
-<script src="recipes.js"></script>
+
+<script>
+const RECIPE_DATA = {
+    "id": "24",
+    "title": "Erdbeermuffins",
+    "category": [
+        "süßes Gebäck"
+    ],
+    "image": "images/Erdbeermuffins.jpeg",
+    "time": {
+        "preparation": "5 min",
+        "baking": "15 min",
+        "cooling": "(60 min)",
+        "total": " 20 min"
+    },
+    "related": [
+        "2",
+        "5",
+        "9"
+    ],
+    "portions": "6 Stück",
+    "difficulty": "Einfach",
+    "rating": 4.6,
+    "description": "Leckere, schnelle Muffins mit Erdbeergeschmack.",
+    "ingredients": {
+        "Muffins": [
+            "100g Mehl (Type 405)",
+            "50g Zucker",
+            "3g Backpulver",
+            "2g Natron",
+            "1 Prise Salz",
+            "15g Kaba Erdbeerpulver",
+            "1 TL Vanilleextrakt",
+            "100ml Milch",
+            "40ml Öl",
+            "1 TL Apfelessig"
+        ],
+        "<i>Glasur (optional)": [
+            "30g Puderzucker",
+            "10g Erdbeerpulver",
+            "2 EL Milch</i>"
+        ]
+    },
+    "steps": [
+        "Den Ofen auf 180°C Ober/Unterhitze vorheizen und ein Muffinblech mit Papierförmchen auskleiden.",
+        "Alle Zutaten für den Teig in einer Schüssel mit einem Schneebesen zu einem glatten Teig rühren. (Nur solange, bis sich alle Zutaten vereint haben)",
+        "Den Teig mit 2 Löffeln auf die Förmchen verteilen und auf mittlerer Schiene im vorgeheizten Backofen ca. 15min backen. (Stäbchenprobe)",
+        "<i>Optional: Vollständig abkühlen lassen. Dann für die Glasur den Puderzucker mit dem Pulver vermengen und die Milch dazugeben, sodass eine dickflüssige Masse entsteht. Auf den vollständig abgekühlten Muffins verteilen und trocknen lassen.</i>"
+    ]
+};
+</script>
+
 
 <script>
 
-const id = new URLSearchParams(window.location.search).get("id");
-const recipe = RECIPES.find(r => r.id === id);
+const recipe = RECIPE_DATA;
 
 const container = document.getElementById("content");
 

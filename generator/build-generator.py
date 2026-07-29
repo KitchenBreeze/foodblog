@@ -68,11 +68,16 @@ for recipe in recipes:
 
     # Bildpfade für recipes-Unterordner anpassen
 
-    if "image" in recipe:
-        recipe["image"] = "../" + recipe["image"]
+    recipe_copy = json.loads(
+        json.dumps(recipe)
+    )
 
 
-    for step in recipe.get("steps", []):
+    if "image" in recipe_copy:
+        recipe_copy["image"] = "../" + recipe_copy["image"]
+
+
+    for step in recipe_copy.get("steps", []):
         if isinstance(step, dict) and "images" in step:
             step["images"] = [
                 "../" + img
@@ -96,7 +101,7 @@ for recipe in recipes:
 
 
     recipe_data = json.dumps(
-        recipe,
+        recipe_copy,
         ensure_ascii=False,
         indent=4
     )

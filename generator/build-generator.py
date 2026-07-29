@@ -69,23 +69,37 @@ for recipe in recipes:
     filename = f"recipes/{slug}.html"
 
 
-    print("Verarbeite:")
-    print(filename)
+print("Verarbeite:")
+print(filename)
 
 
-    with open(
-        "templates/recipe-template.html",
-        "r",
-        encoding="utf-8"
-    ) as file:
-        template = file.read()
+# Bildpfade anpassen für recipes-Unterordner
+
+if "image" in recipe:
+    recipe["image"] = "../" + recipe["image"]
 
 
-    recipe_data = json.dumps(
-        recipe,
-        ensure_ascii=False,
-        indent=4
-    )
+for step in recipe.get("steps", []):
+    if isinstance(step, dict) and "images" in step:
+        step["images"] = [
+            "../" + img
+            for img in step["images"]
+        ]
+
+
+with open(
+    "templates/recipe-template.html",
+    "r",
+    encoding="utf-8"
+) as file:
+    template = file.read()
+
+
+recipe_data = json.dumps(
+    recipe,
+    ensure_ascii=False,
+    indent=4
+)
 
 
     template = template.replace(

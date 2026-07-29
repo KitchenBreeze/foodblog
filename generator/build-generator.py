@@ -95,11 +95,11 @@ with open(
     template = file.read()
 
 
-recipe_data = json.dumps(
-    recipe,
-    ensure_ascii=False,
-    indent=4
-)
+    recipe_data = json.dumps(
+        recipe,
+        ensure_ascii=False,
+        indent=4
+    )
 
 
     template = template.replace(

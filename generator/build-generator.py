@@ -1,13 +1,21 @@
 import re
 import os
 
+# recipes.js lesen
 with open("recipes.js", "r", encoding="utf-8") as file:
     recipes_content = file.read()
 
+
+# Titel auslesen
 titles = re.findall(
     r'title:\s*"([^"]+)"',
     recipes_content
 )
+
+
+# Ordner sicherstellen
+os.makedirs("recipes", exist_ok=True)
+
 
 for title in titles:
 
@@ -21,20 +29,37 @@ for title in titles:
     slug = re.sub(r"[^a-z0-9\s-]", "", slug)
     slug = re.sub(r"\s+", "-", slug)
 
-    with open("templates/recipe-template.html", "r", encoding="utf-8") as file:
+    filename = f"recipes/{slug}.html"
+
+
+    # Nur neue Dateien erzeugen
+    if os.path.exists(filename):
+        print("Vorhanden:")
+        print(filename)
+        continue
+
+
+    with open(
+        "templates/recipe-template.html",
+        "r",
+        encoding="utf-8"
+    ) as file:
         template = file.read()
+
 
     template = template.replace(
         "<title>KitchenBreeze Rezept</title>",
         f"<title>{title} – KitchenBreeze</title>"
     )
 
-    os.makedirs("recipes", exist_ok=True)
 
-    filename = f"recipes/{slug}.html"
-
-    with open(filename, "w", encoding="utf-8") as file:
+    with open(
+        filename,
+        "w",
+        encoding="utf-8"
+    ) as file:
         file.write(template)
+
 
     print("Erzeugt:")
     print(filename)

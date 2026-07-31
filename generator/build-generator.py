@@ -39,6 +39,7 @@ recipes = json.loads(result.stdout)
 os.makedirs("recipes", exist_ok=True)
 
 
+
 # Slug erstellen
 def create_slug(title):
 
@@ -68,16 +69,15 @@ def create_slug(title):
 
 
 
-# Zutaten-Links erstellen
+# [[slug|Text]] in HTML-Link umwandeln
 def replace_recipe_links(text):
 
-    pattern = r"\[\[(.*?)\]\]"
+    pattern = r"\[\[(.*?)\|(.*?)\]\]"
 
     def replace(match):
 
-        title = match.group(1)
-
-        slug = create_slug(title)
+        slug = match.group(1)
+        title = match.group(2)
 
         return f'<a href="{slug}.html">{title}</a>'
 
@@ -92,16 +92,19 @@ def replace_recipe_links(text):
 
 for recipe in recipes:
 
+
     slug = create_slug(recipe["title"])
 
 
-    # Kopie erstellen, damit recipes.js unverändert bleibt
+    # Kopie erstellen
     recipe_copy = json.loads(
         json.dumps(recipe)
     )
 
 
-    # Bildpfade für recipes-Unterordner
+
+    # Hauptbild anpassen
+
     if "image" in recipe_copy:
 
         recipe_copy["image"] = (
@@ -111,6 +114,7 @@ for recipe in recipes:
 
 
     # Schrittbilder anpassen
+
     for step in recipe_copy.get("steps", []):
 
         if isinstance(step, dict) and "images" in step:
@@ -123,13 +127,44 @@ for recipe in recipes:
 
 
     # Zutatenlinks umwandeln
-    for section, items in recipe_copy.get("ingredients", {}).items():
 
-        recipe_copy["ingredients"][section] = [
+    ingredients = recipe_copy.get("ingredients")
+
+
+    if isinstance(ingredients, dict):
+
+        for section, items in ingredients.items():
+
+            recipe_copy["ingredients"][section] = [
+
+                replace_recipe_links(item)
+
+                for item in items
+
+            ]
+
+
+    elif isinstance(ingredients, list):
+
+        recipe_copy["ingredients"] = [
 
             replace_recipe_links(item)
 
-            for item in items
+            for item in ingredients
+
+        ]
+
+
+
+    # Tipps verlinken
+
+    if "tips" in recipe_copy:
+
+        recipe_copy["tips"] = [
+
+            replace_recipe_links(tip)
+
+            for tip in recipe_copy["tips"]
 
         ]
 

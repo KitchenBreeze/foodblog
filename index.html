@@ -212,7 +212,7 @@ function render() {
     .forEach(r => {
 
         grid.innerHTML += `
-<a class="card" href="recipes/${createSlug(r.title)}.html" onclick="saveScroll()">
+<a class="card" href="recipe.html?id=${r.id}" onclick="saveScroll()">
             <img src="${r.image}" alt="${r.title}">
             <div class="card-content">
                 <h2>${r.title}</h2>

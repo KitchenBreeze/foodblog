@@ -590,7 +590,7 @@ related: ["45", "7", "20"],
 
     ingredients: {
         "":[
-        "3 80g-gelaugte  [[Brezeln|Brezelteiglinge]] (alternativ 3 angetaute TK-Brezeln)",
+        "3 80g-gelaugte  [[brezeln|Brezelteiglinge]] (alternativ 3 angetaute TK-Brezeln)",
         "30g Kochschinken",
         "50g Dosenananas",
         "120g geriebener Gouda (z.B. mittelalt)",
@@ -2840,7 +2840,7 @@ related: ["45", "7", "20"],
     id: "49",
     title: "Griechischer Salat",
     tips: [
-        "Zu diesem Salat passen <a href='recipe.html?id=50'>Griechische Mini-Lagana</a> super."
+        "Zu diesem Salat passen [[griechische-mini-lagana|Griechische Mini-Lagana]] super."
     ],
     category: ["Salate", "Vegetarisch"],
     image: "images/griechischer-Salat.jpg",
@@ -2949,7 +2949,7 @@ related: ["45", "7", "20"],
     id: "52",
     title: "Hackbällchen-Nudelpfanne",
       tips: [
-        "Aus dem restlichen Quark kannst du super fluffige [[Glücksschweinchen]] backen."
+        "Aus dem restlichen Quark kannst du super fluffige [[gluecksschweinchen|Glücksschweinchen]] backen."
     ],
     category: ["Pasta", "Fleisch"],
     image: "images/hackbällchen-nudelpfanne.jpeg",
@@ -3120,7 +3120,7 @@ related: ["45", "7", "20"],
     id: "53",
     title: "Köttbullar aus dem Ofen",
     tips: [
-        "Zu den Köttbullar passt das <a href='recipe.html?id=54'>cremige Kartoffelpüree</a> super."
+        "Zu den Köttbullar passt [[kartoffelpueree|Kartoffelpüree]] super."
     ],
     category: ["Fleisch"],
     image: "images/köttbullar-ofen.jpeg",

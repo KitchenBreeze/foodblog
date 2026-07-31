@@ -722,7 +722,7 @@ alt="${recipe.title} Zubereitung Schritt">
         <h2>💡 Tipps</h2>
         <ul>
             ${recipe.tips.map(t => `
-            <li>${t.replace(/\[\[(.*?)\|(.*?)\]\]/g, '<a href="$1.html">$2</a>')}</li>
+            <li>${t.replace(/\[\[(.*?)\|(.*?)\]\]/g, '<a href="../recipes/$1.html">$2</a>')}</li>
             `).join("")}
         </ul>
     </div>

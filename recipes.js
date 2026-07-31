@@ -590,7 +590,7 @@ related: ["45", "7", "20"],
 
     ingredients: {
         "":[
-        "3 80g-gelaugte, ungebackene [[brezeln|Brezelteiglinge]] (alternativ 3 angetaute TK-Brezeln)",
+        "3 80g-gelaugte, ungebackene [[Brezeln|Brezelteiglinge]] (alternativ 3 angetaute TK-Brezeln)",
         "30g Kochschinken",
         "50g Dosenananas",
         "120g geriebener Gouda (z.B. mittelalt)",

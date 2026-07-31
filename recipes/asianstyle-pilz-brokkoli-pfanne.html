@@ -660,7 +660,7 @@ alt="${recipe.title} – KitchenBreeze">
                         <li>
                             <label>
                                 <input type="checkbox">
-                                <span>${i}</span>
+                                <span>${i.replace(/\[\[(.*?)\|(.*?)\]\]/g, '<a href="../recipes/$1.html">$2</a>')}</span>
                             </label>
                         </li>
                     `).join("")}

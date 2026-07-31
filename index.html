@@ -120,6 +120,19 @@ const btn = document.getElementById("filterBtn");
 const grid = document.getElementById("recipeGrid");
 const searchInput = document.getElementById("searchInput");
 
+function createSlug(title) {
+
+    return title
+        .toLowerCase()
+        .replaceAll("ä", "ae")
+        .replaceAll("ö", "oe")
+        .replaceAll("ü", "ue")
+        .replaceAll("ß", "ss")
+        .replace(/[^a-z0-9\s-]/g, "")
+        .replace(/\s+/g, "-");
+
+}
+
 /* =========================
 DROPDOWN
 ========================= */
@@ -212,7 +225,7 @@ function render() {
     .forEach(r => {
 
         grid.innerHTML += `
-<a class="card" href="recipe.html?id=${r.id}" onclick="saveScroll()">
+<a class="card" href="recipes/${createSlug(r.title)}.html" onclick="saveScroll()">
             <img src="${r.image}" alt="${r.title}">
             <div class="card-content">
                 <h2>${r.title}</h2>

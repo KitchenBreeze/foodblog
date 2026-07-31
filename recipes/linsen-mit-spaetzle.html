@@ -666,7 +666,7 @@ alt="${recipe.title} – KitchenBreeze">
                         <li>
                             <label>
                                 <input type="checkbox">
-                                <span>${i.replace(/\[\[(.*?)\]\]/g, '<a href="$1.html">$1</a>')}</span>
+                                <span>${i.replace(/\[\[(.*?)\|(.*?)\]\]/g, '<a href="$1.html">$2</a>')}</span>
                             </label>
                         </li>
                     `).join("")}
@@ -718,7 +718,9 @@ alt="${recipe.title} Zubereitung Schritt">
     <div class="card">
         <h2>💡 Tipps</h2>
         <ul>
-            ${recipe.tips.map(t => `<li>${t}</li>`).join("")}
+            ${recipe.tips.map(t => `
+            <li>${t.replace(/\[\[(.*?)\|(.*?)\]\]/g, '<a href="$1.html">$2</a>')}</li>
+            `).join("")}
         </ul>
     </div>
     ` : ""}

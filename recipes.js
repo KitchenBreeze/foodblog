@@ -2949,7 +2949,7 @@ related: ["45", "7", "20"],
     id: "52",
     title: "Hackbällchen-Nudelpfanne",
       tips: [
-        "Aus dem restlichen Quark kannst du super <a href='recipe.html?id=51'>Glücksschweinchen</a> backen."
+        "Aus dem restlichen Quark kannst du super fluffige [[Glücksschweinchen]] backen."
     ],
     category: ["Pasta", "Fleisch"],
     image: "images/hackbällchen-nudelpfanne.jpeg",

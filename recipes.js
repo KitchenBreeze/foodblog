@@ -608,7 +608,6 @@ related: ["45", "7", "20"],
     ]
 },
 
-
 {
     id: "12",
     title: "Bohneneintopf",

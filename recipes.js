@@ -517,7 +517,7 @@ related: ["45", "7", "20"],
 {
     id: "10",
     title: "Dreierlei Karlsbader Schnitte",
-    category: ["herzhaftes Gebäck"],
+    category: ["herzhaftes Gebäck", "Ofengerichte"],
     image: "images/Karlsbader-Schnitte.jpeg",
     time:{
         preparation:"5 min",
@@ -755,7 +755,7 @@ related: ["45", "7", "20"],
 {
     id: "14",
     title: "Cannelloni Caprese",
-    category: ["Pasta"],
+    category: ["Pasta", "Ofengerichte"],
     image: "images/canneloni-caprese.jpeg",
     time:{
         preparation:"30 min",
@@ -1262,7 +1262,7 @@ related: ["45", "7", "20"],
     tips: [
         "Alles, was übrig bleibt, kannst du abgekühlt, luftdicht verpackt (z.B. in Alufolie oder einer Box) und dann ca. 2 Tage im Kühlschrank aufbewahren."
     ],
-    category: ["Fleisch"], 
+    category: ["Fleisch", "Ofengerichte"], 
     image: "images/einfaches-Wiesnhendl.jpeg",
         time:{
     preparation:"30 min",
@@ -2219,7 +2219,7 @@ related: ["45", "7", "20"],
 {
     id: "39",
     title: "Fischfilet aus dem Ofen",
-    category: ["Fisch"], 
+    category: ["Fisch", "Ofengerichte"], 
     image: "images/Fischfilet-aus-dem-Ofen.jpeg",
     time:{
         preparation: "45 min",
@@ -2334,7 +2334,7 @@ related: ["45", "7", "20"],
 {
     id: "41",
     title: "Überbackene Gnocchipfanne",
-    category: ["Pasta"], 
+    category: ["Pasta", "Ofengerichte"], 
     image: "images/Überbackene-Gnocchipfanne.jpeg",
     time:{
         preparation: "5 min",
@@ -2683,7 +2683,7 @@ related: ["45", "7", "20"],
 {
     id: "46",
     title: "Gyrospasta",
-    category: ["Pasta", "Fleisch",], 
+    category: ["Pasta", "Fleisch", "Ofengerichte"], 
     image: "images/Gyrospasta.jpeg",
     time:{
         preparation: "10 min",
@@ -3121,7 +3121,7 @@ related: ["45", "7", "20"],
     tips: [
         "Zu den Köttbullar passt [[kartoffelpueree|Kartoffelpüree]] super."
     ],
-    category: ["Fleisch"],
+    category: ["Fleisch", "Ofengerichte"],
     image: "images/köttbullar-ofen.jpeg",
     time:{
         preparation: "15 min",
@@ -3516,6 +3516,118 @@ related: ["45", "7", "20"],
 "Im vorgeheizten Backofen ca. 60min backen bis schön garen und nur noch leicht wackelt.",
 
 "Vollständig auskühlen lassen und erst daraufhin vorsichtig aus der Form lösen",
+    ]
+},
+
+{
+    id: "60",
+    title: "Pizzapasta-Salat",
+    tips: [
+        "Der Salat schmeckt sowohl warm als auch kalt oder am nächsten Tag hervorragend."
+    ],
+    category: ["Pasta", "Salate"],
+    image: "images/pizzapasta-salat.jpeg",
+    time: {
+        preparation: "20 min",
+        cooking: "10 min",
+        total: "30 min"
+    },
+    related: ["1", "40", "46"],
+    portions: "7 Portionen",
+    difficulty: "Einfach",
+    rating: 4.6,
+    description: "Leckerer Nudelsalat mit knackiger Paprika, saftigen Tomaten, cremigem Mozzarella, würzigem Parmesan und herzhafter Edelschimmelsalami.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "": [
+            "500g Fusilli",
+            "2 EL Olivenöl",
+            "200g Parmesan",
+            "3 Pck. Mini-Mozzarella (à 125g)",
+            "400g Cherrytomaten",
+            "2 Paprika",
+            "100g Edelschimmelsalami",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+
+        "Die Nudeln nach Packungsbeilage in kochendem Salzwasser gar kochen. Währenddessen den Parmesan fein hobeln.",
+
+        "Sobald die Nudeln fertig sind, abgießen und mit dem Olivenöl vermengen. Die Nudeln in eine große Schüssel geben und mit der Hälfte des Parmesans vermengen.",
+
+        "Die Mini-Mozzarellakugeln abgießen, halbieren und unter die Parmesan-Nudeln mischen.",
+
+        "Die Tomaten vierteln und die Paprika in kleine Würfel schneiden. Beides unter die Nudeln heben und mit Salz und Pfeffer abschmecken.",
+
+        "Die Edelschimmelsalami in Scheiben schneiden und anschließend vierteln. Die Salamistücke unter den Salat heben oder erst beim Servieren darübergeben.",
+
+        "Den Salat mit dem restlichen Parmesan und den Salamistücken servieren."
+    ]
+},
+
+{
+    id: "61",
+    title: "Reisauflauf",
+    category: ["Reis", "Ofengerichte", "Vegetarisch"],
+    image: "images/reisauflauf.jpeg",
+    time: {
+        preparation: "20 min",
+        cooking: "30 min",
+        total: "50 min"
+    },
+    related: ["55", "59", "56"],
+    portions: "8 Portionen",
+    difficulty: "Einfach",
+    rating: 4.6,
+    description: "Cremiger Reisauflauf mit knackigem Gemüse und einer herrlich, goldbraunen Käsekruste.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "": [
+            "350g Basmatireis",
+            "10g Butter",
+            "2 Stangen Lauch",
+            "1 kleiner Brokkoli (ca. 200g)",
+            "300g Karotten",
+            "200g TK-Erbsen",
+            "2 Knoblauchzehen",
+            "250g geriebener Gouda",
+            "Salz",
+            "Pfeffer"
+        ],
+
+        "Soße": [
+            "250ml Kochsahne",
+            "850ml Gemüsebrühe",
+            "1 TL Salz",
+            "Pfeffer",
+            "1 Prise Muskat"
+        ]
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+
+        "Den Ofen auf 190 °C Ober-/Unterhitze vorheizen.",
+
+        "Die Enden vom Lauch entfernen und den Lauch in Ringe schneiden. Die Karotten schälen und in kleine Würfel schneiden.",
+
+        "Die Butter in einer Pfanne schmelzen und den Lauch darin ca. 5 min bei mittlerer Hitze anschwitzen. Die Karotten dazugeben und weitere 5 min mit anschwitzen. Dann die Erbsen unterrühren und unter gelegentlichem Rühren weitere 2–3 min mitbraten. Den Knoblauch schälen, durch eine Knoblauchpresse zum Gemüse pressen, mit Salz und Pfeffer würzen, verrühren und ca. 1 min mitbraten.",
+
+        "In der Zwischenzeit den Strunk vom Brokkoli entfernen und den Kopf in sehr kleine Röschen schneiden.",
+
+        "Für die Soße die Gemüsebrühe mit der Kochsahne, dem Salz, dem Pfeffer und dem Muskat in einem kleinen Topf kurz aufkochen.",
+
+        "Den ungekochten Reis, den Brokkoli und das angebratene Gemüse in eine große Auflaufform geben. Die heiße Soße darüber gießen und alles gut miteinander vermengen.",
+
+        "Den geriebenen Gouda gleichmäßig auf der Oberfläche verteilen und den Auflauf im vorgeheizten Backofen ca. 30–35 min backen, bis der Reis gar und der Käse schön goldbraun ist."
     ]
 },
 

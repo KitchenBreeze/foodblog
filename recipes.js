@@ -3400,55 +3400,54 @@ related: ["45", "7", "20"],
     title: "Kartoffelsalat ohne Mayo",
     category: ["Vegetarisch", "Vegan", "Salate"],
     image: "images/kartoffelsalat-ohne-mayo.jpeg",
-    time:{
+    time: {
         preparation: "10 min",
-        cooking:"20 min",
-        resting:"2 std",
-        cooling:"15 min",
-        total: "2 std 45 min"
+        cooking: "20 min",
+        resting: "2 Std",
+        cooling: "15 min",
+        total: "2 Std 45 min"
     },
     related: ["54", "47", "37"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Leckere Tortellini mit saftigen Tomaten, weichem Mozzarella, salzigem Parmesan und knackigen Pinienkernen in cremig, aromatischem Pesto.",
+    description: "Kartoffelsalat ohne Mayo mit knackigen Zwiebeln, italienischen Kräutern und würzigem Dressing.",
 
     /* 🍽️ ZUTATEN */
-    ingredients:{
+    ingredients: {
+
         "Salat": [
-            "1,5 kg festkochende Kartoffeln <i>(mit essbarer Schale z.B. Drillinge)</i>",
+            "1,5 kg festkochende Kartoffeln <i>(mit essbarer Schale, z. B. Drillinge)</i>",
             "1 EL Weißweinessig",
             "2 EL italienische Kräuter",
             "1 große rote Zwiebel",
             "Salz",
-            "Pfeffer",
-    
+            "Pfeffer"
         ],
 
         "Dressing": [
-            "120ml Olivenöl",
+            "120 ml Olivenöl",
             "2 TL Senf",
-            "1 TL Basamicoessig",
+            "1 TL Balsamicoessig",
             "1 TL Salz",
             "Pfeffer"
         ]
     },
 
-
     /* 👨‍🍳 ZUBEREITUNG */
-    steps:[
+    steps: [
 
-        "Die Kartoffeln in einen Topf geben, mit kaltem Wasser bedecken und aufkochen. Sobald es kocht das Wasser salzen und ca. 20min leise köcheln lassen, bis die Kartoffeln gar sind.",
+        "Die Kartoffeln gründlich waschen, in einen Topf geben, mit kaltem Wasser bedecken und aufkochen. Sobald das Wasser kocht, salzen und die Kartoffeln ca. 20 min bei mittlerer Hitze leise köcheln lassen, bis sie gar sind.",
 
-"Sobald sie fertig sind abgießen und ca. 5 min abkühlen lassen, das man sie gerade so anfassen kann.",
+        "Sobald die Kartoffeln gar sind, abgießen und ca. 5 min abkühlen lassen, sodass man sie gerade noch anfassen kann.",
 
-"In mundgerechte Stücke schneiden, in eine große Schüssel mit Deckel oder einen Topf geben, mit dem Essig vermischen und ca. 10min, bei geöffnetem Deckel, gemeinsam abkühlen lassen. <i>(Ca. 10min)</i>",
+        "Die Kartoffeln in mundgerechte Stücke schneiden und in eine große Schüssel mit Deckel oder einen Topf geben. Mit dem Weißweinessig vermischen und bei geöffnetem Deckel ca. 10 min weiter abkühlen lassen.",
 
-"In der Zwischenzeit, die Zwiebel schälen und fein hacken und mit den Kräutern mischen.",
+        "In der Zwischenzeit die Zwiebel schälen und fein hacken und mit den italienischen Kräutern vermengen.",
 
-"Für das Dressing alle Zutaten mit einem Schneebesen solange verrühren, bis sich alles gleichmäßig verbunden hat.",
+        "Für das Dressing das Olivenöl, den Senf, den Balsamicoessig, das Salz und den Pfeffer mit einem Schneebesen verrühren, bis sich alles gleichmäßig verbunden hat.",
 
-"Die Zwiebeln und das Dressing zu den Kartoffeln geben, alles gut vermengen, nach Belieben noch einmal  Salzen und Pfeffern und mind. 2 Stunden, besser über Nacht an einem kühlen Ort ziehen lassen.",
+        "Die Zwiebeln und das Dressing zu den Kartoffeln geben und alles vorsichtig miteinander vermengen. Nach Belieben noch einmal mit Salz und Pfeffer abschmecken und mindestens 2 Std, besser über Nacht, an einem kühlen Ort ziehen lassen."
     ]
 },
 

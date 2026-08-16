@@ -3282,7 +3282,7 @@ related: ["45", "7", "20"],
 {
     id: "56",
     title: "Tortellinisalat",
-    category: ["Pasta"],
+    category: ["Pasta", "Salate"],
     image: "images/tortellinisalat.jpeg",
     time:{
         preparation: "30 min",
@@ -3394,5 +3394,64 @@ related: ["45", "7", "20"],
         "Die Tartelettes aus dem Ofen nehmen und vollständig abkühlen lassen. Für den Zuckerguss den Puderzucker mit 1 EL Milch verrühren und die restliche Milch nach und nach dazugeben, bis ein dickflüssiger Guss entsteht. Diesen gleichmäßig mit einem Pinsel auf den Tartelettes verteilen und trocknen lassen."
     ]
 },
+
+{
+    id: "58",
+    title: "Kartoffelsalat ohne Mayo",
+    category: ["Vegetarisch", "Vegan", "Salate"],
+    image: "images/kartoffelsalat-ohne-mayo.jpeg",
+    time:{
+        preparation: "10 min",
+        cooking:"20 min",
+        resting:"2 std",
+        cooling:"15 min",
+        total: "2 std 45 min"
+    },
+    related: ["54", "47", "37"],
+    portions: "6 Portionen",
+    difficulty: "Einfach",
+    rating: 4.6,
+    description: "Leckere Tortellini mit saftigen Tomaten, weichem Mozzarella, salzigem Parmesan und knackigen Pinienkernen in cremig, aromatischem Pesto.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients:{
+        "Salat": [
+            "1,5 kg festkochende Kartoffeln <i>(mit essbarer Schale z.B. Drillinge)</i>",
+            "1 EL Weißweinessig",
+            "2 EL italienische Kräuter",
+            "1 große rote Zwiebel",
+            "Salz",
+            "Pfeffer",
+    
+        ],
+
+        "Dressing": [
+            "120ml Olivenöl",
+            "2 TL Senf",
+            "1 TL Basamicoessig",
+            "1 TL Salz",
+            "Pfeffer"
+        ]
+    },
+
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps:[
+
+        "Die Kartoffeln in einen Topf geben, mit kaltem Wasser bedecken und aufkochen. Sobald es kocht das Wasser salzen und ca. 20min leise köcheln lassen, bis die Kartoffeln gar sind.",
+
+"Sobald sie fertig sind abgießen und ca. 5 min abkühlen lassen, das man sie gerade so anfassen kann.",
+
+"In mundgerechte Stücke schneiden, in eine große Schüssel mit Deckel oder einen Topf geben, mit dem Essig vermischen und ca. 10min, bei geöffnetem Deckel, gemeinsam abkühlen lassen. <i>(Ca. 10min)</i>",
+
+"In der Zwischenzeit, die Zwiebel schälen und fein hacken und mit den Kräutern mischen.",
+
+"Für das Dressing alle Zutaten mit einem Schneebesen solange verrühren, bis sich alles gleichmäßig verbunden hat.",
+
+"Die Zwiebeln und das Dressing zu den Kartoffeln geben, alles gut vermengen, nach Belieben noch einmal  Salzen und Pfeffern und mind. 2 Stunden, besser über Nacht an einem kühlen Ort ziehen lassen.",
+    ]
+},
+
+
 ];
 module.exports = { RECIPES };

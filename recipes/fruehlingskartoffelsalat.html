@@ -3809,6 +3809,20 @@ favoriteBtn.onclick = function(){
 
 
 updateFavoriteButton();
+
+function createSlug(title) {
+
+    return title
+        .toLowerCase()
+        .replaceAll("ä", "ae")
+        .replaceAll("ö", "oe")
+        .replaceAll("ü", "ue")
+        .replaceAll("ß", "ss")
+        .replace(/[^a-z0-9\s-]/g, "")
+        .replace(/\s+/g, "-");
+
+}
+
 const relatedContainer = document.getElementById("relatedRecipes");
 
 if (recipe.related && relatedContainer) {

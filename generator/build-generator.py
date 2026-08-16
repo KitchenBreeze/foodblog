@@ -262,3 +262,48 @@ const RECIPES = {all_recipes_data};
 
     print("Erstellt:")
     print(filename)
+
+    # ============================================================
+# SITEMAP AUTOMATISCH ERSTELLEN
+# ============================================================
+
+sitemap_lines = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    '',
+    '    <url>',
+    '        <loc>https://kitchenbreeze.github.io/foodblog/</loc>',
+    '    </url>',
+    ''
+]
+
+
+for recipe in recipes:
+
+    slug = create_slug(recipe["title"])
+
+    sitemap_lines.extend([
+        '    <url>',
+        f'        <loc>https://kitchenbreeze.github.io/foodblog/recipes/{slug}.html</loc>',
+        '    </url>',
+        ''
+    ])
+
+
+sitemap_lines.append('</urlset>')
+
+
+with open(
+    "sitemap.xml",
+    "w",
+    encoding="utf-8"
+) as file:
+
+    file.write(
+        "\n".join(sitemap_lines)
+    )
+
+
+print("Sitemap erstellt:")
+print("sitemap.xml")

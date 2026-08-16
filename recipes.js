@@ -3339,7 +3339,7 @@ related: ["45", "7", "20"],
 {
     id: "57",
     title: "Apfel-Aprikosenmus-Tartelettes",
-    category: ["süßes Gebäck"],
+    category: ["süßes Gebäck", "Vegetarisch"],
     image: "images/apfel-aprikosenmus-tartelettes.jpeg",
     time: {
         preparation: "15 min",
@@ -3347,7 +3347,7 @@ related: ["45", "7", "20"],
         cooling: "1 Std 45 min",
         total: "2 Std 30 min"
     },
-    related: ["44", "19", "42"],
+    related: ["5", "45", "50"],
     portions: "4 Stück",
     difficulty: "Einfach",
     rating: 4.6,

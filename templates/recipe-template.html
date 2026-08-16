@@ -738,33 +738,41 @@ favoriteBtn.onclick = function(){
 updateFavoriteButton();
 const relatedContainer = document.getElementById("relatedRecipes");
 
-if(recipe.related && relatedContainer){
+if (recipe.related && relatedContainer) {
 
     recipe.related.forEach(id => {
 
-        const related = null;
+        const related = RECIPES.find(
+            r => Number(r.id) === Number(id)
+        );
 
-        if(related){
+        if (related) {
+
+            const slug = createSlug(related.title);
 
             relatedContainer.innerHTML += `
 
-            <a class="related-card" href="recipe.html?id=${related.id}">
+                <a class="related-card" href="${slug}.html">
 
-                <img src="${related.image}" alt="${related.title}">
+                    <img
+                        src="../${related.image}"
+                        alt="${related.title}"
+                    >
 
-                <div class="related-content">
-                    <h3>${related.title}</h3>
-                    <p>${related.time.total}</p>
-                </div>
+                    <div class="related-content">
 
-            </a>
+                        <h3>${related.title}</h3>
+
+                        <p>${related.description}</p>
+
+                    </div>
+
+                </a>
 
             `;
-
         }
 
     });
-
 }
 
 </script>

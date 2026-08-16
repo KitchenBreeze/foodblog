@@ -4,7 +4,10 @@ import json
 import subprocess
 
 
+# ============================================================
 # recipes.js mit Node auslesen
+# ============================================================
+
 node_script = r"""
 const fs = require("fs");
 
@@ -39,8 +42,10 @@ recipes = json.loads(result.stdout)
 os.makedirs("recipes", exist_ok=True)
 
 
-
+# ============================================================
 # Slug erstellen
+# ============================================================
+
 def create_slug(title):
 
     slug = title.lower()
@@ -68,8 +73,10 @@ def create_slug(title):
     return slug
 
 
-
+# ============================================================
 # [[slug|Text]] in HTML-Link umwandeln
+# ============================================================
+
 def replace_recipe_links(text):
 
     pattern = r"\[\[(.*?)\|(.*?)\]\]"
@@ -81,7 +88,6 @@ def replace_recipe_links(text):
 
         return f'<a href="{slug}.html">{title}</a>'
 
-
     return re.sub(
         pattern,
         replace,
@@ -89,21 +95,39 @@ def replace_recipe_links(text):
     )
 
 
+# ============================================================
+# Alle Rezepte als JSON vorbereiten
+# Für "Das könnte dich auch interessieren"
+# ============================================================
+
+all_recipes_data = json.dumps(
+    recipes,
+    ensure_ascii=False,
+    indent=4
+)
+
+
+# ============================================================
+# Jedes Rezept erzeugen
+# ============================================================
 
 for recipe in recipes:
-
 
     slug = create_slug(recipe["title"])
 
 
+    # --------------------------------------------------------
     # Kopie erstellen
+    # --------------------------------------------------------
+
     recipe_copy = json.loads(
         json.dumps(recipe)
     )
 
 
-
-    # Hauptbild anpassen
+    # --------------------------------------------------------
+    # Hauptbild für recipes-Unterordner
+    # --------------------------------------------------------
 
     if "image" in recipe_copy:
 
@@ -112,8 +136,9 @@ for recipe in recipes:
         )
 
 
-
-    # Schrittbilder anpassen
+    # --------------------------------------------------------
+    # Schrittbilder für recipes-Unterordner
+    # --------------------------------------------------------
 
     for step in recipe_copy.get("steps", []):
 
@@ -125,8 +150,9 @@ for recipe in recipes:
             ]
 
 
-
-    # Zutatenlinks umwandeln
+    # --------------------------------------------------------
+    # Zutatenlinks
+    # --------------------------------------------------------
 
     ingredients = recipe_copy.get("ingredients")
 
@@ -155,8 +181,9 @@ for recipe in recipes:
         ]
 
 
-
+    # --------------------------------------------------------
     # Tipps verlinken
+    # --------------------------------------------------------
 
     if "tips" in recipe_copy:
 
@@ -169,6 +196,9 @@ for recipe in recipes:
         ]
 
 
+    # --------------------------------------------------------
+    # Dateiname
+    # --------------------------------------------------------
 
     filename = f"recipes/{slug}.html"
 
@@ -177,6 +207,9 @@ for recipe in recipes:
     print(filename)
 
 
+    # --------------------------------------------------------
+    # Template laden
+    # --------------------------------------------------------
 
     with open(
         "templates/recipe-template.html",
@@ -187,6 +220,9 @@ for recipe in recipes:
         template = file.read()
 
 
+    # --------------------------------------------------------
+    # Aktuelles Rezept als JSON
+    # --------------------------------------------------------
 
     recipe_data = json.dumps(
         recipe_copy,
@@ -195,17 +231,25 @@ for recipe in recipes:
     )
 
 
+    # --------------------------------------------------------
+    # RECIPE_DATA + RECIPES ins Template einsetzen
+    # --------------------------------------------------------
 
     template = template.replace(
         "<!-- RECIPE_DATA -->",
         f"""
 <script>
 const RECIPE_DATA = {recipe_data};
+
+const RECIPES = {all_recipes_data};
 </script>
 """
     )
 
 
+    # --------------------------------------------------------
+    # HTML speichern
+    # --------------------------------------------------------
 
     with open(
         filename,
@@ -214,7 +258,6 @@ const RECIPE_DATA = {recipe_data};
     ) as file:
 
         file.write(template)
-
 
 
     print("Erstellt:")

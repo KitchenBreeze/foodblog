@@ -3336,5 +3336,63 @@ related: ["45", "7", "20"],
 "Das Pesto unterheben, nach Belieben salzen und pfeffern und mit den restlichen Pinienkernen servieren."
     ]
 },
+{
+    id: "57",
+    title: "Apfel-Aprikosenmus-Tartelettes",
+    category: ["süßes Gebäck"],
+    image: "images/apfel-aprikosenmus-tartelettes.jpeg",
+    time: {
+        preparation: "15 min",
+        baking: "30 min",
+        cooling: "1 Std 45 min",
+        total: "2 Std 30 min"
+    },
+    related: ["44", "19", "42"],
+    portions: "4 Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+    description: "Leckere Tartelettes aus knusprigem Mürbeteig mit fruchtigem Aprikosenmus und süßem Zuckerguss.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "Teig": [
+            "180g Mehl (Type 405)",
+            "20g gemahlene Mandeln",
+            "1/2 Pck. Vanillezucker",
+            "60g Zucker",
+            "1 TL Backpulver",
+            "120g kalte Butter",
+            "1 Prise Salz"
+        ],
+
+        "Füllung": [
+            "180g Aprikosenmus"
+        ],
+
+        "Topping": [
+            "75g Puderzucker",
+            "ca. 2 EL Milch"
+        ]
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+
+        "Für den Teig das Mehl mit den Mandeln, dem Backpulver, dem Zucker, dem Vanillezucker und dem Salz vermengen. Die kalte Butter in kleinen Stücken dazugeben und alles zügig zu einem glatten Teig verkneten.",
+
+        "Die Tarteletteförmchen gut einfetten und mit etwas Mehl bestäuben. Ca. 3/4 des Teiges in 4 Teile teilen und jeweils einen Teil in ein Tarteletteförmchen drücken, sodass Boden und Rand gleichmäßig bedeckt sind.",
+
+        "Die Förmchen für ca. 15 min in den Kühlschrank stellen. In der Zwischenzeit den Backofen auf 180 °C Ober-/Unterhitze vorheizen.",
+
+        "Währenddessen den restlichen Teig mit 1 TL eiskaltem Wasser verkneten, auf einer gut bemehlten Arbeitsfläche dünn ausrollen und mit einer weiteren Tarteletteform 4 Kreise ausstechen.",
+
+        "Die gekühlten Böden mehrfach mit einer Gabel einstechen und das Aprikosenmus gleichmäßig darauf verteilen. Je einen Teigdeckel vorsichtig mit einem Pfannenwender oder einem anderen flachen Gegenstand von der Arbeitsfläche lösen, auf das gefüllte Tartelette legen und an den Rändern gut andrücken.",
+
+        "Die Tartelettes im vorgeheizten Backofen ca. 30 min goldbraun backen.",
+
+        "Die Tartelettes aus dem Ofen nehmen und vollständig abkühlen lassen. Für den Zuckerguss den Puderzucker mit 1 EL Milch verrühren und die restliche Milch nach und nach dazugeben, bis ein dickflüssiger Guss entsteht. Diesen gleichmäßig mit einem Pinsel auf den Tartelettes verteilen und trocknen lassen."
+    ]
+},
 ];
 module.exports = { RECIPES };

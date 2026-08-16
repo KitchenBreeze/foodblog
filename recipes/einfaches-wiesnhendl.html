@@ -3827,23 +3827,33 @@ function createSlug(title) {
 
 }
 
-const relatedContainer = document.getElementById("relatedRecipes");
+
+const relatedContainer =
+    document.getElementById("relatedRecipes");
+
 
 if (recipe.related && relatedContainer) {
 
     recipe.related.forEach(id => {
 
         const related = RECIPES.find(
-            r => Number(r.id) === Number(id)
+            r => String(r.id) === String(id)
         );
+
 
         if (related) {
 
-            const slug = createSlug(related.title);
+            const slug = createSlug(
+                related.title
+            );
+
 
             relatedContainer.innerHTML += `
 
-                <a class="related-card" href="${slug}.html">
+                <a
+                    class="related-card"
+                    href="${slug}.html"
+                >
 
                     <img
                         src="../${related.image}"
@@ -3852,18 +3862,24 @@ if (recipe.related && relatedContainer) {
 
                     <div class="related-content">
 
-                        <h3>${related.title}</h3>
+                        <h3>
+                            ${related.title}
+                        </h3>
 
-                        <p>${related.description}</p>
+                        <p>
+                            ${related.description}
+                        </p>
 
                     </div>
 
                 </a>
 
             `;
+
         }
 
     });
+
 }
 
 </script>

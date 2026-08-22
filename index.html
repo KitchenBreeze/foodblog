@@ -2,125 +2,520 @@
 <html lang="de">
 
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="KitchenBreeze – entdecke einfache und selbst entwickelte Rezepte zum Backen, Kochen und Genießen. Mit Schritt-für-Schritt-Anleitungen, Tipps und vielen leckeren Ideen für jeden Tag.">
-<meta name="keywords" content="KitchenBreeze, Rezepte, Kochrezepte, einfache Rezepte">
 
+<meta
+    name="description"
+    content="KitchenBreeze – einfache, selbstgemachte Rezepte für jeden Tag."
+>
 
-<meta name="google-site-verification" content="rFGtMZBx11V6ijtk7jvfmQirgEFh4n7b2a50t98i3SY" />
+<title>KitchenBreeze – Selbst gemacht schmeckt einfach besser.</title>
 
-<title>KitchenBreeze – Selbstgemachte Rezepte</title>
-<link rel="icon" type="image/png" sizes="48x48" href="facion.png">
+<link rel="icon" type="image/png" href="facion.png">
 <link rel="apple-touch-icon" href="facion.png">
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="home.css">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "KitchenBreeze",
-  "url": "https://kitchenbreeze.github.io/foodblog/",
-  "logo": "https://kitchenbreeze.github.io/foodblog/logo1.png"
-}
-</script>
+<script src="recipes.js"></script>
 
 </head>
 
+
 <body>
 
-    <h1 class="visually-hidden">
-    Einfache selbstgemachte Rezepte von KitchenBreeze
-</h1>
-    <!-- ☰ Menü Button -->
-<div id="menuBtn" class="menu-btn">
-    ☰
-</div>
 
-<!-- Menü -->
-<div id="sideMenu" class="side-menu">
+<!-- =========================================
+     MENÜ
+========================================= -->
 
-    <div class="menu-header">
-        KitchenBreeze
-    </div>
+<button
+    class="home-menu-button"
+    id="menuBtn"
+    aria-label="Menü öffnen"
+    aria-controls="sideMenu"
+    aria-expanded="false"
+>
 
-    <a href="index.html">Rezepte</a>
+    <span></span>
+    <span></span>
+    <span></span>
 
-    <a href="zutatenfinder.html">Zutatenfinder</a>
+</button>
 
-    <a href="favoriten.html">❤️ Favoriten</a>
 
-</div>
+<nav
+    class="home-side-menu"
+    id="sideMenu"
+    aria-label="Hauptnavigation"
+>
 
-<!-- Hintergrund -->
-<div id="overlay" class="overlay"></div>
+    <div class="home-menu-logo">
 
-<!-- 🌿 HERO -->
-<div class="hero">
-    <img src="images/logo1.png" alt="KitchenBreeze">
-
-    <p>Selbst gemacht schmeckt einfach besser.</p>
-</div>
-
-<!-- 🔍 SEARCH -->
-<div class="search">
-    <input id="searchInput" type="text" placeholder="Rezept suchen...">
-</div>
-
-<!-- 🍽️ FILTER -->
-<div class="filter-container">
-
-    <div class="filter-button" id="filterBtn">
-        Kategorien ▾
-    </div>
-
-    <div class="filter-dropdown" id="filterDropdown">
-
-       <div class="filter-item" data-cat="all"> Alle</div>
-       <div class="filter-item" data-cat="Pasta">Pasta</div>
-          <div class="filter-item" data-cat="Reis">Reis</div>
-       <div class="filter-item" data-cat="Suppen & Eintöpfe">Suppen & Eintöpfe</div>
-
-       <div class="filter-item" data-cat="Salate"> Salate</div>
-        
-             <div class="filter-item" data-cat="Beilagen">Beilagen</div>
-          <div class="filter-item" data-cat="Aufstriche & Dips">Aufstriche & Dips</div>
-        <div class="filter-item" data-cat="Snacks">Snacks</div>
-        <div class="filter-item" data-cat="süße Hauptgerichte">süße Hauptgerichte</div>
-        <div class="filter-item" data-cat="süßes Gebäck">süßes Gebäck</div>
-          <div class="filter-item" data-cat="Ofengerichte">Ofengerichte</div>
-         <div class="filter-item" data-cat="herzhaftes Gebäck">herzhaftes Gebäck</div>
-          <div class="filter-item" data-cat="Fleisch">Fleisch</div>
-        <div class="filter-item" data-cat="Fisch">Fisch</div>
-        <div class="filter-item" data-cat="Vegetarisch">Vegetarisch</div>
-        <div class="filter-item" data-cat="Vegan">Vegan</div>
+        <img
+            src="images/logo1.png"
+            alt="KitchenBreeze"
+        >
 
     </div>
+
+
+    <a href="index.html" class="active">
+        Startseite
+    </a>
+
+    <a href="rezepte.html">
+        Rezepte
+    </a>
+
+    <a href="zutatenfinder.html">
+        Zutatenfinder
+    </a>
+
+    <a href="favoriten.html">
+        Favoriten
+    </a>
+
+</nav>
+
+
+<div
+    class="home-overlay"
+    id="overlay"
+>
 </div>
 
-<!-- 🍽️ GRID -->
-<div class="grid" id="recipeGrid"></div>
 
-<!-- 🧾 FOOTER -->
-<footer>
-    © 2026 KitchenBreeze – Alle Rechte vorbehalten
+
+<main>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="home-hero">
+
+    <div class="home-hero-inner">
+
+
+        <img
+            class="home-logo"
+            src="images/logo1.png"
+            alt="KitchenBreeze"
+        >
+
+
+        <p class="home-claim">
+            Selbst gemacht schmeckt einfach besser.
+        </p>
+
+
+        <h1>
+            Was möchtest du heute kochen?
+        </h1>
+
+
+        <p class="home-subtitle">
+            Entdecke einfache, leckere Rezepte für jeden Tag.
+        </p>
+
+
+
+        <!-- =====================================
+             SUCHLEISTE
+        ====================================== -->
+
+        <form
+            class="home-search"
+            id="homeSearch"
+        >
+
+            <span class="search-icon">
+                ⌕
+            </span>
+
+
+            <input
+                id="searchInput"
+                type="search"
+                placeholder="Rezept, Zutat oder Gericht suchen ..."
+                autocomplete="off"
+                aria-label="Rezepte durchsuchen"
+            >
+
+        </form>
+
+
+
+        <!-- =====================================
+             ZUTATENFINDER
+        ====================================== -->
+
+        <a
+            class="ingredient-button"
+            id="ingredientButton"
+            href="zutatenfinder.html"
+        >
+            Zutatenfinder
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     SUCHERGEBNISSE
+========================================= -->
+
+<section
+    class="home-search-results"
+    id="searchResults"
+>
+
+    <div class="home-section-heading">
+
+        <span>
+            Suche
+        </span>
+
+        <h2>
+            Gefundene Rezepte
+        </h2>
+
+    </div>
+
+
+    <div
+        class="home-recipe-grid"
+        id="searchResultsGrid"
+    >
+    </div>
+
+
+    <div
+        class="home-no-results"
+        id="noSearchResults"
+    >
+
+        <h3>
+            Keine Rezepte gefunden
+        </h3>
+
+        <p>
+            Versuche einen anderen Suchbegriff.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     NORMALER HOME-INHALT
+========================================= -->
+
+<div id="normalHomeContent">
+
+
+<!-- =========================================
+     REZEPT-BEREICHE
+========================================= -->
+
+<section class="home-sections">
+
+    <div class="home-section-heading">
+
+        <span>
+            Entdecken
+        </span>
+
+        <h2>
+            Was passt heute?
+        </h2>
+
+        <p>
+            Finde schnell das passende Rezept für deinen Tag.
+        </p>
+
+    </div>
+
+
+
+    <div class="home-category-grid">
+
+
+        <!-- ALLE REZEPTE -->
+
+        <a
+            href="rezepte.html"
+            class="home-category-card category-all"
+        >
+
+            <div class="category-content">
+
+                <span>
+                    Alle Rezepte
+                </span>
+
+                <h3>
+                    Rezeptwelt
+                </h3>
+
+                <p>
+                    Alle KitchenBreeze-Rezepte auf einen Blick.
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- VEGETARISCH -->
+
+        <a
+            href="rezepte.html?category=Vegetarisch"
+            class="home-category-card category-vegetarian"
+        >
+
+            <div class="category-content">
+
+                <span>
+                    Vegetarisch
+                </span>
+
+                <h3>
+                    Frisch & vegetarisch
+                </h3>
+
+                <p>
+                    Leckere Ideen ganz ohne Fleisch.
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- VEGAN -->
+
+        <a
+            href="rezepte.html?category=Vegan"
+            class="home-category-card category-vegan"
+        >
+
+            <div class="category-content">
+
+                <span>
+                    Vegan
+                </span>
+
+                <h3>
+                    Pflanzlich genießen
+                </h3>
+
+                <p>
+                    Einfache vegane Rezepte für jeden Tag.
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- SCHNELL -->
+
+        <a
+            href="rezepte.html?quick=true"
+            class="home-category-card category-quick"
+        >
+
+            <div class="category-content">
+
+                <span>
+                    Schnell & einfach
+                </span>
+
+                <h3>
+                    Wenn es schnell gehen soll
+                </h3>
+
+                <p>
+                    Leckere Gerichte ohne lange Wartezeit.
+                </p>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     NEUESTE REZEPTE
+========================================= -->
+
+<section class="home-latest">
+
+    <div class="home-section-heading">
+
+        <span>
+            KitchenBreeze
+        </span>
+
+        <h2>
+            Neueste Rezepte
+        </h2>
+
+        <p>
+            Entdecke die zuletzt hinzugefügten Rezepte.
+        </p>
+
+    </div>
+
+
+
+    <div
+        class="home-recipe-grid"
+        id="latestRecipes"
+    >
+    </div>
+
+
+
+    <div class="home-more">
+
+        <a href="rezepte.html">
+            Alle Rezepte ansehen
+        </a>
+
+    </div>
+
+</section>
+
+
+</div>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer
+    class="home-footer"
+    id="homeFooter"
+>
+
+    <div>
+
+        <strong>
+            KitchenBreeze
+        </strong>
+
+        <p>
+            Selbst gemacht schmeckt einfach besser.
+        </p>
+
+    </div>
+
+
+
+    <div class="footer-links">
+
+        <a href="rezepte.html">
+            Rezepte
+        </a>
+
+        <a href="zutatenfinder.html">
+            Zutatenfinder
+        </a>
+
+        <a href="favoriten.html">
+            Favoriten
+        </a>
+
+    </div>
+
 </footer>
 
-<!-- ✔ REZEPTE LADEN -->
-<script src="recipes.js"></script>
+
 
 <script>
 
-console.log("KitchenBreeze läuft");
-history.scrollRestoration = "manual";
-let selectedCategories = ["all"];
 
-const filterItems = document.querySelectorAll(".filter-item");
-const dropdown = document.getElementById("filterDropdown");
-const btn = document.getElementById("filterBtn");
-const grid = document.getElementById("recipeGrid");
-const searchInput = document.getElementById("searchInput");
+/* =========================================
+   MENÜ
+========================================= */
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const sideMenu =
+    document.getElementById("sideMenu");
+
+const overlay =
+    document.getElementById("overlay");
+
+
+menuBtn.addEventListener(
+    "click",
+    () => {
+
+        const open =
+            sideMenu.classList.toggle("open");
+
+        overlay.classList.toggle(
+            "show",
+            open
+        );
+
+        menuBtn.setAttribute(
+            "aria-expanded",
+            open
+        );
+
+    }
+);
+
+
+overlay.addEventListener(
+    "click",
+    () => {
+
+        sideMenu.classList.remove("open");
+
+        overlay.classList.remove("show");
+
+        menuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    }
+);
+
+
+
+/* =========================================
+   SLUG
+========================================= */
 
 function createSlug(title) {
 
@@ -130,179 +525,390 @@ function createSlug(title) {
         .replaceAll("ö", "oe")
         .replaceAll("ü", "ue")
         .replaceAll("ß", "ss")
-        .replace(/[^a-z0-9\s-]/g, "")
-        .replace(/\s+/g, "-");
-
-}
-
-/* =========================
-DROPDOWN
-========================= */
-
-btn.addEventListener("click", (e) => {
-    dropdown.classList.toggle("active");
-    e.stopPropagation();
-});
-
-document.addEventListener("click", (e) => {
-    if (!dropdown.contains(e.target) && e.target !== btn) {
-        dropdown.classList.remove("active");
-    }
-});
-
-/* =========================
-FILTER
-========================= */
-
-filterItems.forEach(item => {
-
-    item.addEventListener("click", () => {
-
-        const cat = item.dataset.cat;
-
-        if (cat === "all") {
-
-            selectedCategories = ["all"];
-
-            filterItems.forEach(i => i.classList.remove("active"));
-            item.classList.add("active");
-
-            render();
-            return;
-        }
-
-        selectedCategories = selectedCategories.filter(c => c !== "all");
-
-        if (selectedCategories.includes(cat)) {
-            selectedCategories = selectedCategories.filter(c => c !== cat);
-            item.classList.remove("active");
-        } else {
-            selectedCategories.push(cat);
-            item.classList.add("active");
-        }
-
-        if (selectedCategories.length === 0) {
-            selectedCategories = ["all"];
-            document.querySelector('[data-cat="all"]').classList.add("active");
-        }
-
-        render();
-    });
-});
-
-/* =========================
-SEARCH
-========================= */
-
-searchInput.addEventListener("input", render);
-
-/* =========================
-RENDER
-========================= */
-
-function render() {
-
-    if (typeof RECIPES === "undefined") {
-        console.error("RECIPES fehlt! recipes.js prüfen!");
-        return;
-    }
-
-    grid.innerHTML = "";
-
-    RECIPES
-    .slice() // 🔥 Kopie (wichtig!)
-    .sort((a, b) => Number(b.id) - Number(a.id)) // 🔥 NEU: neueste oben
-    .filter(r => {
-    if (selectedCategories.includes("all")) {
-        return true;
-    }
-
-    return selectedCategories.some(cat =>
-        r.category.includes(cat)
-    );
-})
-    .filter(r =>
-        r.title.toLowerCase().includes(searchInput.value.toLowerCase())
-    )
-    .forEach(r => {
-
-        grid.innerHTML += `
-<a class="card" href="recipes/${createSlug(r.title)}.html" onclick="saveScroll()">
-            <img src="${r.image}" alt="${r.title}">
-            <div class="card-content">
-                <h2>${r.title}</h2>
-                <p>${r.description}</p>
-            </div>
-        </a>
-        `;
-    });
-
-}
-
-document.addEventListener("click", e => {
-
-    const card = e.target.closest(".card");
-
-    if(card){
-
-        sessionStorage.setItem(
-            "scrollPosition",
-            window.scrollY
+        .replace(
+            /[^a-z0-9\s-]/g,
+            ""
+        )
+        .replace(
+            /\s+/g,
+            "-"
         );
 
-    }
+}
 
-});
 
-function saveScroll(){
 
-    sessionStorage.setItem(
-        "scrollPosition",
-        window.scrollY
+/* =========================================
+   ELEMENTE
+========================================= */
+
+const latestContainer =
+    document.getElementById(
+        "latestRecipes"
     );
+
+
+const searchForm =
+    document.getElementById(
+        "homeSearch"
+    );
+
+
+const searchInput =
+    document.getElementById(
+        "searchInput"
+    );
+
+
+const searchResults =
+    document.getElementById(
+        "searchResults"
+    );
+
+
+const searchResultsGrid =
+    document.getElementById(
+        "searchResultsGrid"
+    );
+
+
+const noSearchResults =
+    document.getElementById(
+        "noSearchResults"
+    );
+
+
+const normalHomeContent =
+    document.getElementById(
+        "normalHomeContent"
+    );
+
+
+const homeFooter =
+    document.getElementById(
+        "homeFooter"
+    );
+
+
+const ingredientButton =
+    document.getElementById(
+        "ingredientButton"
+    );
+
+
+
+/* =========================================
+   NEUESTE REZEPTE
+========================================= */
+
+if (
+    typeof RECIPES !== "undefined" &&
+    latestContainer
+) {
+
+    RECIPES
+        .slice()
+        .sort(
+            (a, b) =>
+                Number(b.id) -
+                Number(a.id)
+        )
+        .slice(0, 6)
+        .forEach(
+            recipe => {
+
+                latestContainer.innerHTML += `
+
+                    <a
+                        class="home-recipe-card"
+                        href="recipes/${createSlug(recipe.title)}.html"
+                    >
+
+                        <div class="home-recipe-image">
+
+                            <img
+                                src="${recipe.image}"
+                                alt="${recipe.title}"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+
+                        <div class="home-recipe-content">
+
+                            <h3>
+                                ${recipe.title}
+                            </h3>
+
+                            <p>
+                                ${recipe.description}
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                `;
+
+            }
+        );
 
 }
 
-render();
 
-window.addEventListener("load", () => {
 
-    const pos = sessionStorage.getItem("scrollPosition");
+/* =========================================
+   REZEPTKARTE ERSTELLEN
+========================================= */
 
-    if(pos){
+function createRecipeCard(recipe) {
 
-        setTimeout(() => {
+    return `
 
-            window.scrollTo(0, Number(pos));
+        <a
+            class="home-recipe-card"
+            href="recipes/${createSlug(recipe.title)}.html"
+        >
 
-        }, 100);
+            <div class="home-recipe-image">
 
-        sessionStorage.removeItem("scrollPosition");
+                <img
+                    src="${recipe.image}"
+                    alt="${recipe.title}"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="home-recipe-content">
+
+                <h3>
+                    ${recipe.title}
+                </h3>
+
+                <p>
+                    ${recipe.description}
+                </p>
+
+            </div>
+
+        </a>
+
+    `;
+
+}
+
+
+
+/* =========================================
+   SUCHE
+========================================= */
+
+function showSearchResults() {
+
+    const query =
+        searchInput.value
+            .trim()
+            .toLowerCase();
+
+
+
+    /* =====================================
+       SUCHFELD LEER
+    ===================================== */
+
+    if (!query) {
+
+        searchResults.classList.remove(
+            "active"
+        );
+
+
+        normalHomeContent.style.display =
+            "";
+
+
+        homeFooter.style.display =
+            "";
+
+
+        ingredientButton.style.display =
+            "";
+
+
+        searchResultsGrid.innerHTML =
+            "";
+
+
+        noSearchResults.style.display =
+            "none";
+
+
+        return;
 
     }
 
-});
 
-/* =========================
-☰ MENÜ
-========================= */
 
-const menuBtn = document.getElementById("menuBtn");
-const sideMenu = document.getElementById("sideMenu");
-const overlay = document.getElementById("overlay");
+    /* =====================================
+       SUCHE AKTIV
+    ===================================== */
 
-menuBtn.addEventListener("click", () => {
-    sideMenu.classList.toggle("open");
-    overlay.classList.toggle("show");
-});
+    searchResults.classList.add(
+        "active"
+    );
 
-overlay.addEventListener("click", () => {
-    sideMenu.classList.remove("open");
-    overlay.classList.remove("show");
-});
+
+    normalHomeContent.style.display =
+        "none";
+
+
+    homeFooter.style.display =
+        "none";
+
+
+    ingredientButton.style.display =
+        "none";
+
+
+
+    /* =====================================
+       REZEPTE FILTERN
+    ===================================== */
+
+    const results =
+        typeof RECIPES !== "undefined"
+            ? RECIPES.filter(recipe => {
+
+                const title =
+                    String(
+                        recipe.title || ""
+                    ).toLowerCase();
+
+
+                const description =
+                    String(
+                        recipe.description || ""
+                    ).toLowerCase();
+
+
+                const category =
+                    Array.isArray(
+                        recipe.category
+                    )
+                        ? recipe.category
+                            .join(" ")
+                            .toLowerCase()
+                        : String(
+                            recipe.category || ""
+                        ).toLowerCase();
+
+
+                let ingredients = "";
+
+
+                if (
+                    Array.isArray(
+                        recipe.ingredients
+                    )
+                ) {
+
+                    ingredients =
+                        recipe.ingredients
+                            .join(" ")
+                            .toLowerCase();
+
+                } else if (
+                    recipe.ingredients
+                ) {
+
+                    ingredients =
+                        Object.values(
+                            recipe.ingredients
+                        )
+                        .flat()
+                        .join(" ")
+                        .toLowerCase();
+
+                }
+
+
+                return (
+                    title.includes(query) ||
+                    description.includes(query) ||
+                    category.includes(query) ||
+                    ingredients.includes(query)
+                );
+
+            })
+            : [];
+
+
+
+    /* =====================================
+       ERGEBNISSE AUSGEBEN
+    ===================================== */
+
+    searchResultsGrid.innerHTML =
+        results
+            .map(
+                recipe =>
+                    createRecipeCard(recipe)
+            )
+            .join("");
+
+
+
+    /* =====================================
+       KEINE ERGEBNISSE
+    ===================================== */
+
+    if (results.length === 0) {
+
+        noSearchResults.style.display =
+            "block";
+
+    } else {
+
+        noSearchResults.style.display =
+            "none";
+
+    }
+
+}
+
+
+
+/* =========================================
+   SUCHFORM
+========================================= */
+
+searchForm.addEventListener(
+    "submit",
+    event => {
+
+        event.preventDefault();
+
+    }
+);
+
+
+
+/* =========================================
+   LIVE-SUCHE
+========================================= */
+
+searchInput.addEventListener(
+    "input",
+    showSearchResults
+);
 
 
 </script>
 
+
 </body>
+
 </html>

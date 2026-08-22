@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="Alle KitchenBreeze Rezepte – einfache, selbstgemachte Rezepte zum Kochen und Backen."
+>
+
+<title>Rezepte – KitchenBreeze</title>
+
+<link
+    rel="icon"
+    type="image/png"
+    href="facion.png"
+>
+
+<link
+    rel="stylesheet"
+    href="rezepte.css"
+>
+
+</head>
+
+<body>
+
+<div class="recipes-back">
+    <a href="index.html">← Zur Übersicht</a>
+</div>
+
+
+<!-- =========================================
+     KOPF
+========================================= -->
+
+<header class="recipes-header">
+
+    <a
+        href="index.html"
+        class="recipes-logo"
+    >
+
+        <img
+            src="images/logo1.png"
+            alt="KitchenBreeze"
+        >
+
+    </a>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================================
+     TITEL
+========================================= -->
+
+<section class="recipes-hero">
+
+    <div class="recipes-hero-inner">
+
+        
+
+        <h1>
+            Rezeptsammlung
+        </h1>
+
+       
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     SUCHE
+========================================= -->
+
+<section class="recipes-tools">
+
+    <div class="recipes-search">
+
+        <span class="recipes-search-icon">
+            ⌕
+        </span>
+
+        <input
+            id="searchInput"
+            type="search"
+            placeholder="Rezept suchen ..."
+            autocomplete="off"
+            aria-label="Rezepte durchsuchen"
+        >
+
+    </div>
+
+
+
+    <div class="filter-container">
+
+        <button
+            class="filter-button"
+            id="filterBtn"
+            type="button"
+        >
+            Kategorien
+            <span>⌄</span>
+        </button>
+
+
+        <div
+            class="filter-dropdown"
+            id="filterDropdown"
+        >
+
+            <button
+                class="filter-item active"
+                data-cat="all"
+                type="button"
+            >
+                Alle
+            </button>
+
+            <button class="filter-item" data-cat="Pasta" type="button">
+                Pasta
+            </button>
+
+            <button class="filter-item" data-cat="Reis" type="button">
+                Reis
+            </button>
+
+            <button class="filter-item" data-cat="Suppen & Eintöpfe" type="button">
+                Suppen & Eintöpfe
+            </button>
+
+            <button class="filter-item" data-cat="Salate" type="button">
+                Salate
+            </button>
+
+            <button class="filter-item" data-cat="Beilagen" type="button">
+                Beilagen
+            </button>
+
+            <button class="filter-item" data-cat="Aufstriche & Dips" type="button">
+                Aufstriche & Dips
+            </button>
+
+            <button class="filter-item" data-cat="Snacks" type="button">
+                Snacks
+            </button>
+
+            <button class="filter-item" data-cat="süße Hauptgerichte" type="button">
+                Süße Hauptgerichte
+            </button>
+
+            <button class="filter-item" data-cat="süßes Gebäck" type="button">
+                Süßes Gebäck
+            </button>
+
+            <button class="filter-item" data-cat="Ofengerichte" type="button">
+                Ofengerichte
+            </button>
+
+            <button class="filter-item" data-cat="herzhaftes Gebäck" type="button">
+                Herzhaftes Gebäck
+            </button>
+
+            <button class="filter-item" data-cat="Fleisch" type="button">
+                Fleisch
+            </button>
+
+            <button class="filter-item" data-cat="Fisch" type="button">
+                Fisch
+            </button>
+
+            <button class="filter-item" data-cat="Vegetarisch" type="button">
+                Vegetarisch
+            </button>
+
+            <button class="filter-item" data-cat="Vegan" type="button">
+                Vegan
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     REZEPTE
+========================================= -->
+
+<section class="recipes-section">
+
+    <div
+        class="recipe-grid"
+        id="recipeGrid"
+    ></div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="recipes-footer">
+
+    <strong>
+        KitchenBreeze
+    </strong>
+
+    <p>
+        Selbst gemacht schmeckt einfach besser.
+    </p>
+
+</footer>
+
+
+
+<script src="recipes.js"></script>
+
+
+<script>
+
+/* =========================================
+   SLUG
+========================================= */
+
+function createSlug(title) {
+
+    return title
+        .toLowerCase()
+        .replaceAll("ä", "ae")
+        .replaceAll("ö", "oe")
+        .replaceAll("ü", "ue")
+        .replaceAll("ß", "ss")
+        .replace(/[^a-z0-9\s-]/g, "")
+        .replace(/\s+/g, "-");
+
+}
+
+
+
+/* =========================================
+   ELEMENTE
+========================================= */
+
+const grid =
+    document.getElementById("recipeGrid");
+
+const searchInput =
+    document.getElementById("searchInput");
+
+const filterBtn =
+    document.getElementById("filterBtn");
+
+const filterDropdown =
+    document.getElementById("filterDropdown");
+
+const filterItems =
+    document.querySelectorAll(".filter-item");
+
+
+let selectedCategories = ["all"];
+
+
+
+/* =========================================
+   FILTER MENÜ
+========================================= */
+
+filterBtn.addEventListener("click", event => {
+
+    event.stopPropagation();
+
+    filterDropdown.classList.toggle("open");
+
+});
+
+
+document.addEventListener("click", event => {
+
+    if (
+        !filterDropdown.contains(event.target) &&
+        event.target !== filterBtn
+    ) {
+
+        filterDropdown.classList.remove("open");
+
+    }
+
+});
+
+
+
+/* =========================================
+   KATEGORIEN
+========================================= */
+
+filterItems.forEach(item => {
+
+    item.addEventListener("click", () => {
+
+        const category =
+            item.dataset.cat;
+
+
+        if (category === "all") {
+
+            selectedCategories = ["all"];
+
+            filterItems.forEach(button => {
+
+                button.classList.remove("active");
+
+            });
+
+            item.classList.add("active");
+
+            render();
+
+            return;
+
+        }
+
+
+        selectedCategories =
+            selectedCategories.filter(
+                cat => cat !== "all"
+            );
+
+
+        if (
+            selectedCategories.includes(category)
+        ) {
+
+            selectedCategories =
+                selectedCategories.filter(
+                    cat => cat !== category
+                );
+
+            item.classList.remove("active");
+
+        } else {
+
+            selectedCategories.push(category);
+
+            item.classList.add("active");
+
+        }
+
+
+        if (
+            selectedCategories.length === 0
+        ) {
+
+            selectedCategories = ["all"];
+
+            document
+                .querySelector('[data-cat="all"]')
+                .classList.add("active");
+
+        }
+
+
+        render();
+
+    });
+
+});
+
+
+
+/* =========================================
+   SUCHE
+========================================= */
+
+searchInput.addEventListener(
+    "input",
+    render
+);
+
+
+
+/* =========================================
+   RENDER
+========================================= */
+
+function render() {
+
+    if (
+        typeof RECIPES === "undefined"
+    ) {
+
+        console.error(
+            "RECIPES fehlt! recipes.js prüfen!"
+        );
+
+        return;
+
+    }
+
+
+    const search =
+        searchInput.value
+            .trim()
+            .toLowerCase();
+
+
+    const filtered =
+        RECIPES
+            .slice()
+            .sort(
+                (a, b) =>
+                    Number(b.id) -
+                    Number(a.id)
+            )
+            .filter(recipe => {
+
+                if (
+                    selectedCategories.includes("all")
+                ) {
+
+                    return true;
+
+                }
+
+
+                return selectedCategories.some(
+                    category =>
+                        Array.isArray(recipe.category) &&
+                        recipe.category.includes(category)
+                );
+
+            })
+            .filter(recipe => {
+
+                if (!search) {
+
+                    return true;
+
+                }
+
+
+                return (
+                    recipe.title
+                        .toLowerCase()
+                        .includes(search)
+                    ||
+                    (recipe.description || "")
+                        .toLowerCase()
+                        .includes(search)
+                );
+
+            });
+
+
+    grid.innerHTML = "";
+
+
+    filtered.forEach(recipe => {
+
+        grid.innerHTML += `
+
+            <a
+                class="recipe-card"
+                href="recipes/${createSlug(recipe.title)}.html"
+            >
+
+                <div class="recipe-card-image">
+
+                    <img
+                        src="${recipe.image}"
+                        alt="${recipe.title}"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <div class="recipe-card-content">
+
+                    <h2>
+                        ${recipe.title}
+                    </h2>
+
+                    <p>
+                        ${recipe.description || ""}
+                    </p>
+
+                </div>
+
+            </a>
+
+        `;
+
+    });
+
+
+    if (!filtered.length) {
+
+        grid.innerHTML = `
+
+            <div class="no-results">
+
+                <h2>
+                    Keine Rezepte gefunden
+                </h2>
+
+                <p>
+                    Versuche eine andere Suche oder Kategorie.
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+render();
+
+</script>
+
+
+</body>
+</html>
+

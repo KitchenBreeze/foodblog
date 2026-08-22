@@ -1,0 +1,1256 @@
+/* =========================================
+   KITCHENBREEZE HOME
+   Dunkles KitchenBreeze Design
+========================================= */
+
+:root {
+    --kb-bg: #0f0f10;
+    --kb-card: #171718;
+    --kb-card-hover: #1c1c1d;
+
+    --kb-text: #f2eee9;
+    --kb-muted: #b8b2aa;
+
+    --kb-accent: #a88b6a;
+    --kb-accent-dark: #8f7355;
+
+    --kb-border: rgba(242, 238, 233, 0.10);
+
+    --kb-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35);
+
+    --kb-radius: 22px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--kb-bg);
+    color: var(--kb-text);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+}
+
+
+/* =========================================
+   MENÜ BUTTON
+========================================= */
+
+.home-menu-button {
+    position: fixed;
+    top: 22px;
+    left: 22px;
+
+    z-index: 1001;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid var(--kb-border);
+    border-radius: 50%;
+
+    background: rgba(23, 23, 24, 0.95);
+
+    box-shadow: var(--kb-shadow);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.home-menu-button:hover {
+    transform: translateY(-2px);
+
+    background: #1c1c1d;
+
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.45);
+}
+
+.home-menu-button span {
+    width: 19px;
+    height: 2px;
+
+    border-radius: 2px;
+
+    background: var(--kb-text);
+}
+
+
+/* =========================================
+   SEITENMENÜ
+========================================= */
+
+.home-side-menu {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 300px;
+    height: 100vh;
+
+    z-index: 1000;
+
+    background: var(--kb-card);
+
+    box-shadow:
+        12px 0 40px rgba(0, 0, 0, 0.55);
+
+    padding: 38px 24px;
+
+    transform: translateX(-105%);
+
+    transition:
+        transform 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.home-side-menu.open {
+    transform: translateX(0);
+}
+
+
+/* =========================================
+   MENÜ LOGO
+========================================= */
+
+.home-menu-logo {
+    padding:
+        10px 20px 35px;
+}
+
+.home-menu-logo img {
+    width: 180px;
+    max-width: 100%;
+
+    display: block;
+}
+
+
+/* =========================================
+   MENÜ LINKS
+========================================= */
+
+.home-side-menu a {
+    display: block;
+
+    padding: 15px 18px;
+    margin-bottom: 6px;
+
+    color: var(--kb-text);
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 16px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.home-side-menu a:hover,
+.home-side-menu a.active {
+    background: #222223;
+    color: var(--kb-accent);
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.home-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 999;
+
+    background:
+        rgba(0, 0, 0, 0.55);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+.home-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.home-hero {
+    min-height: 680px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding:
+        90px 24px 80px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            #1a1a1b 0,
+            #121213 45%,
+            var(--kb-bg) 100%
+        );
+}
+
+.home-hero-inner {
+    width: min(900px, 100%);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.home-logo {
+    width: 280px;
+    max-width: 70%;
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   CLAIM
+========================================= */
+
+.home-claim {
+    margin:
+        0 0 55px;
+
+    color: var(--kb-muted);
+
+    font-size: 17px;
+
+    font-style: italic;
+}
+
+
+/* =========================================
+   HERO ÜBERSCHRIFT
+========================================= */
+
+.home-hero h1 {
+    margin: 0;
+
+    font-size:
+        clamp(38px, 6vw, 68px);
+
+    line-height: 1.05;
+
+    font-weight: 500;
+
+    letter-spacing: -1.5px;
+
+    color: var(--kb-text);
+}
+
+
+/* =========================================
+   HERO SUBTITLE
+========================================= */
+
+.home-subtitle {
+    margin:
+        22px auto 34px;
+
+    max-width: 580px;
+
+    color: var(--kb-muted);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   SUCHE
+========================================= */
+
+.home-search {
+    width: min(680px, 100%);
+
+    margin: 0 auto;
+
+    position: relative;
+}
+
+.home-search input {
+    width: 100%;
+
+    height: 62px;
+
+    padding:
+        0 24px 0 58px;
+
+    border:
+        1px solid var(--kb-border);
+
+    border-radius: 18px;
+
+    background: #171718;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.30);
+
+    outline: none;
+
+    color: var(--kb-text);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 16px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.home-search input::placeholder {
+    color: #858078;
+}
+
+.home-search input:focus {
+    border-color:
+        rgba(168, 139, 106, 0.70);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(168, 139, 106, 0.12);
+}
+
+
+/* =========================================
+   SUCH-ICON
+========================================= */
+
+.search-icon {
+    position: absolute;
+
+    left: 22px;
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 26px;
+
+    color:
+        var(--kb-accent);
+}
+
+
+/* =========================================
+   ZUTATENFINDER BUTTON
+========================================= */
+
+.ingredient-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 18px;
+
+    min-height: 50px;
+
+    padding:
+        0 26px;
+
+    border-radius: 14px;
+
+    background:
+        var(--kb-accent);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 15px;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.ingredient-button:hover {
+    background:
+        var(--kb-accent-dark);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.home-sections,
+.home-latest {
+    width:
+        min(1180px, calc(100% - 40px));
+
+    margin: 0 auto;
+
+    padding:
+        85px 0;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.home-section-heading {
+    margin-bottom: 38px;
+}
+
+.home-section-heading > span {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color:
+        var(--kb-accent);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+}
+
+.home-section-heading h2 {
+    margin: 0;
+
+    font-size:
+        clamp(30px, 4vw, 42px);
+
+    font-weight: 500;
+
+    color:
+        var(--kb-text);
+}
+
+.home-section-heading p {
+    margin:
+        10px 0 0;
+
+    color:
+        var(--kb-muted);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   KATEGORIEN
+========================================= */
+
+.home-category-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   KATEGORIEN KARTEN
+========================================= */
+
+.home-category-card {
+    min-height: 260px;
+
+    padding: 32px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius:
+        var(--kb-radius);
+
+    color: white;
+
+    text-decoration: none;
+
+    box-shadow:
+        var(--kb-shadow);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.home-category-card:hover {
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 18px 38px
+        rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================
+   KATEGORIEN FARBEN
+========================================= */
+
+.category-all {
+    background:
+        linear-gradient(
+            135deg,
+            #756048,
+            #9a8062
+        );
+}
+
+.category-vegetarian {
+    background:
+        linear-gradient(
+            135deg,
+            #59664f,
+            #78866a
+        );
+}
+
+.category-vegan {
+    background:
+        linear-gradient(
+            135deg,
+            #4f6254,
+            #6f856f
+        );
+}
+
+.category-quick {
+    background:
+        linear-gradient(
+            135deg,
+            #795b4b,
+            #9a7560
+        );
+}
+
+
+/* =========================================
+   CATEGORY CONTENT
+========================================= */
+
+.category-content {
+    max-width: 560px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.category-content span {
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.2px;
+
+    opacity: 0.85;
+}
+
+.category-content h3 {
+    margin:
+        8px 0;
+
+    font-size: 29px;
+
+    font-weight: 500;
+}
+
+.category-content p {
+    margin: 0;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    opacity: 0.9;
+}
+
+
+/* =========================================
+   REZEPT-BEREICH
+========================================= */
+
+.home-latest {
+    padding-top: 20px;
+}
+
+
+/* =========================================
+   REZEPT-GRID
+========================================= */
+
+.home-recipe-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================================
+   REZEPTKARTE
+========================================= */
+
+.home-recipe-card {
+    overflow: hidden;
+
+    background:
+        var(--kb-card);
+
+    border:
+        1px solid var(--kb-border);
+
+    border-radius:
+        var(--kb-radius);
+
+    color:
+        var(--kb-text);
+
+    text-decoration: none;
+
+    box-shadow:
+        0 8px 24px
+        rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.home-recipe-card:hover {
+    transform:
+        translateY(-5px);
+
+    background:
+        var(--kb-card-hover);
+
+    box-shadow:
+        0 16px 35px
+        rgba(0, 0, 0, 0.40);
+}
+
+
+/* =========================================
+   REZEPTBILD
+========================================= */
+
+.home-recipe-image {
+    aspect-ratio:
+        4 / 3;
+
+    overflow: hidden;
+}
+
+.home-recipe-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.4s ease;
+}
+
+.home-recipe-card:hover
+.home-recipe-image img {
+    transform:
+        scale(1.04);
+}
+
+
+/* =========================================
+   REZEPT CONTENT
+========================================= */
+
+.home-recipe-content {
+    padding: 21px;
+}
+
+.home-recipe-content h3 {
+    margin:
+        0 0 9px;
+
+    font-size: 22px;
+
+    font-weight: 500;
+
+    color:
+        var(--kb-text);
+}
+
+.home-recipe-content p {
+    margin: 0;
+
+    color:
+        var(--kb-muted);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 2;
+
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   MEHR BUTTON
+========================================= */
+
+.home-more {
+    text-align: center;
+
+    margin-top: 35px;
+}
+
+.home-more a {
+    display: inline-block;
+
+    padding:
+        13px 22px;
+
+    border:
+        1px solid
+        var(--kb-accent);
+
+    border-radius: 12px;
+
+    color:
+        var(--kb-accent);
+
+    text-decoration: none;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.home-more a:hover {
+    background:
+        var(--kb-accent);
+
+    color:
+        #fff;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.home-footer {
+    margin-top: 30px;
+
+    padding:
+        45px max(
+            24px,
+            calc((100vw - 1180px) / 2)
+        );
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background:
+        #171718;
+
+    border-top:
+        1px solid var(--kb-border);
+
+    color:
+        var(--kb-text);
+}
+
+.home-footer strong {
+    font-size: 20px;
+}
+
+.home-footer p {
+    margin:
+        8px 0 0;
+
+    color:
+        var(--kb-muted);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+
+    gap: 22px;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color:
+        var(--kb-text);
+
+    text-decoration: none;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+
+    transition:
+        color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color:
+        var(--kb-accent);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .home-hero {
+        min-height: 650px;
+
+        padding:
+            85px 20px 60px;
+    }
+
+    .home-logo {
+    width: 220px;
+    }
+
+    .home-claim {
+        margin-bottom: 45px;
+
+        font-size: 15px;
+    }
+
+    .home-hero h1 {
+        font-size:
+            clamp(36px, 10vw, 52px);
+    }
+
+    .home-subtitle {
+        font-size: 15px;
+    }
+
+    .home-category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-category-card {
+        min-height: 220px;
+
+        padding: 26px;
+    }
+
+    .home-recipe-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+    .home-recipe-content {
+        padding: 16px;
+    }
+
+    .home-recipe-content h3 {
+        font-size: 18px;
+    }
+
+    .home-recipe-content p {
+        font-size: 13px;
+    }
+
+    .home-footer {
+        flex-direction: column;
+    }
+}
+
+
+/* =========================================
+   KLEINE SMARTPHONES
+========================================= */
+
+@media (max-width: 500px) {
+
+    .home-menu-button {
+        top: 15px;
+        left: 15px;
+
+        width: 44px;
+        height: 44px;
+    }
+
+    .home-side-menu {
+        width: 280px;
+    }
+
+    .home-hero {
+        padding-top: 90px;
+    }
+
+    .home-search input {
+        height: 57px;
+
+        font-size: 15px;
+    }
+
+    .home-sections,
+    .home-latest {
+        width:
+            calc(100% - 30px);
+
+        padding:
+            60px 0;
+    }
+
+    .home-recipe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-category-card {
+        min-height: 200px;
+    }
+
+    .category-content h3 {
+        font-size: 25px;
+    }
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline:
+        3px solid
+        rgba(168, 139, 106, 0.65);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        transition: none !important;
+
+        animation: none !important;
+    }
+}
+
+/* =========================================
+   SUCHERGEBNISSE AUF DER STARTSEITE
+========================================= */
+
+.home-search-results {
+    display: none;
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 45px 0 80px;
+}
+
+.home-search-results.active {
+    display: block;
+}
+
+.home-search-results-heading {
+    margin-bottom: 30px;
+}
+
+.home-search-results-heading span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--kb-accent);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.home-search-results-heading h2 {
+    margin: 0;
+    font-size: clamp(30px, 4vw, 42px);
+    font-weight: 500;
+    color: var(--kb-text);
+}
+
+.home-search-results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* gleiche Karten wie auf der Startseite */
+
+.home-search-result-card {
+    overflow: hidden;
+    background: var(--kb-card);
+    border: 1px solid var(--kb-border);
+    border-radius: var(--kb-radius);
+    color: var(--kb-text);
+    text-decoration: none;
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.25);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.home-search-result-card:hover {
+    transform: translateY(-5px);
+    background: var(--kb-card-hover);
+    box-shadow:
+        0 16px 35px rgba(0, 0, 0, 0.40);
+}
+
+.home-search-result-image {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.home-search-result-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.home-search-result-content {
+    padding: 21px;
+}
+
+.home-search-result-content h3 {
+    margin: 0 0 9px;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--kb-text);
+}
+
+.home-search-result-content p {
+    margin: 0;
+    color: var(--kb-muted);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Keine Ergebnisse */
+
+.home-no-results {
+    padding: 35px;
+    text-align: center;
+    background: var(--kb-card);
+    border: 1px solid var(--kb-border);
+    border-radius: var(--kb-radius);
+    color: var(--kb-muted);
+    font-family: Arial, sans-serif;
+}
+
+.home-no-results h3 {
+    margin: 0 0 10px;
+    color: var(--kb-text);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.home-no-results p {
+    margin: 0;
+}
+
+/* Während der Suche alles unterhalb der Suchleiste ausblenden */
+
+body.search-active .home-sections,
+body.search-active .home-latest,
+body.search-active .home-footer {
+    display: none;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .home-search-results-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .home-search-results {
+        width: calc(100% - 30px);
+        padding-top: 35px;
+    }
+
+    .home-search-result-content {
+        padding: 16px;
+    }
+
+    .home-search-result-content h3 {
+        font-size: 18px;
+    }
+
+    .home-search-result-content p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .home-search-results {
+        width: calc(100% - 30px);
+        padding-top: 30px;
+    }
+
+    .home-search-results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-search-result-content h3 {
+        font-size: 20px;
+    }
+}

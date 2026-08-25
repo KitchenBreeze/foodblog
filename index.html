@@ -813,16 +813,24 @@ if (
         ${recipe.title}
     </h3>
 
-    <p>
-        Gesamtzeit:
+    <p class="home-recipe-time">
+
+    <span
+        class="home-time-icon"
+        aria-hidden="true"
+    ></span>
+
+    <span>
         ${
             recipe.totalTime ||
             recipe.time ||
             recipe.duration ||
             ""
         }
-        Minuten
-    </p>
+        Min.
+    </span>
+
+</p>
 
 </div>
 

@@ -3867,10 +3867,21 @@ const RECIPES = [
 <script>
 
 /* =========================================
+   REZEPTDATEN
+========================================= */
+
+const recipe = RECIPE_DATA;
+
+const container =
+    document.getElementById("content");
+
+
+/* =========================================
    SLUG
 ========================================= */
 
 function createSlug(title) {
+
     return title
         .toLowerCase()
         .replaceAll("ä", "ae")
@@ -3879,273 +3890,55 @@ function createSlug(title) {
         .replaceAll("ß", "ss")
         .replace(/[^a-z0-9\s-]/g, "")
         .replace(/\s+/g, "-");
-}
-
-
-/* =========================================
-   ELEMENTE
-========================================= */
-
-const grid =
-    document.getElementById("recipeGrid");
-
-const searchInput =
-    document.getElementById("searchInput");
-
-const filterBtn =
-    document.getElementById("filterBtn");
-
-const filterDropdown =
-    document.getElementById("filterDropdown");
-
-const filterItems =
-    document.querySelectorAll(".filter-item");
-
-
-/* =========================================
-   URL-PARAMETER
-========================================= */
-
-const urlParams =
-    new URLSearchParams(window.location.search);
-
-const urlCategories =
-    urlParams.get("categories");
-
-const quickFilter =
-    urlParams.get("quick") === "true";
-
-
-/* =========================================
-   AUS URL GELADENE KATEGORIEN
-========================================= */
-
-let selectedCategories = [];
-
-if (urlCategories) {
-
-    selectedCategories =
-        urlCategories
-            .split(",")
-            .map(category =>
-                decodeURIComponent(category)
-            )
-            .filter(Boolean);
-
-}
-
-if (selectedCategories.length === 0) {
-    selectedCategories = ["all"];
-}
-
-
-/* =========================================
-   FILTER BUTTONS AKTIVIEREN
-========================================= */
-
-filterItems.forEach(item => {
-
-    const category =
-        item.dataset.cat;
-
-    item.classList.remove("active");
-
-    if (
-        selectedCategories.includes(category)
-    ) {
-        item.classList.add("active");
-    }
-
-});
-
-
-/* =========================================
-   "ALLE" AKTIVIEREN
-========================================= */
-
-if (
-    selectedCategories.includes("all")
-) {
-
-    const allButton =
-        document.querySelector(
-            '[data-cat="all"]'
-        );
-
-    if (allButton) {
-        allButton.classList.add("active");
-    }
 
 }
 
 
 /* =========================================
-   FILTER MENÜ
+   ZURÜCK-LINK
+   FILTER + SCHNELLFILTER BEIBEHALTEN
 ========================================= */
 
-filterBtn.addEventListener("click", event => {
-
-    event.stopPropagation();
-
-    filterDropdown.classList.toggle("open");
-
-});
-
-
-document.addEventListener("click", event => {
-
-    if (
-        !filterDropdown.contains(event.target) &&
-        event.target !== filterBtn
-    ) {
-
-        filterDropdown.classList.remove("open");
-
-    }
-
-});
-
-
-/* =========================================
-   KATEGORIEN
-========================================= */
-
-filterItems.forEach(item => {
-
-    item.addEventListener("click", () => {
-
-        const category =
-            item.dataset.cat;
-
-
-        /* ================================
-           ALLE
-        ================================= */
-
-        if (category === "all") {
-
-            selectedCategories = ["all"];
-
-            filterItems.forEach(button => {
-                button.classList.remove("active");
-            });
-
-            item.classList.add("active");
-
-            updateUrl();
-
-            render();
-
-            return;
-        }
-
-
-        /* ================================
-           "ALLE" ENTFERNEN
-        ================================= */
-
-        selectedCategories =
-            selectedCategories.filter(
-                cat => cat !== "all"
-            );
-
-
-        /* ================================
-           KATEGORIE AN / AUS
-        ================================= */
-
-        if (
-            selectedCategories.includes(category)
-        ) {
-
-            selectedCategories =
-                selectedCategories.filter(
-                    cat => cat !== category
-                );
-
-            item.classList.remove("active");
-
-        } else {
-
-            selectedCategories.push(category);
-
-            item.classList.add("active");
-
-        }
-
-
-        /* ================================
-           KEINE KATEGORIE
-        ================================= */
-
-        if (
-            selectedCategories.length === 0
-        ) {
-
-            selectedCategories = ["all"];
-
-            filterItems.forEach(button => {
-                button.classList.remove("active");
-            });
-
-            const allButton =
-                document.querySelector(
-                    '[data-cat="all"]'
-                );
-
-            if (allButton) {
-                allButton.classList.add("active");
-            }
-
-        }
-
-
-        updateUrl();
-
-        render();
-
-    });
-
-});
-
-
-/* =========================================
-   URL AKTUALISIEREN
-========================================= */
-
-function updateUrl() {
+function getBackUrl() {
 
     const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+    const backParams =
         new URLSearchParams();
 
 
-    /* Kategorien */
+    /* -----------------------------------------
+       KATEGORIEN
+       
+       Beispiel:
+       ?categories=Vegetarisch,Pasta
+    ----------------------------------------- */
 
     const categories =
-        selectedCategories.filter(
-            category => category !== "all"
-        );
+        params.get("categories");
 
+    if (categories) {
 
-    if (categories.length > 0) {
-
-        params.set(
+        backParams.set(
             "categories",
             categories
-                .map(category =>
-                    encodeURIComponent(category)
-                )
-                .join(",")
         );
 
     }
 
 
-    /* Schnellfilter */
+    /* -----------------------------------------
+       SCHNELLFILTER
+    ----------------------------------------- */
 
-    if (quickFilter) {
+    if (
+        params.get("quick") === "true"
+    ) {
 
-        params.set(
+        backParams.set(
             "quick",
             "true"
         );
@@ -4153,460 +3946,838 @@ function updateUrl() {
     }
 
 
+    /* -----------------------------------------
+       ZURÜCK ZU REZEPTE.HTML
+    ----------------------------------------- */
+
     const query =
-        params.toString();
+        backParams.toString();
+
+    return query
+        ? `../rezepte.html?${query}`
+        : "../rezepte.html";
+
+}
 
 
-    const newUrl =
-        query
-            ? `${window.location.pathname}?${query}`
-            : window.location.pathname;
+/* =========================================
+   SEO
+========================================= */
+
+if (recipe) {
+
+    document.title =
+        recipe.title +
+        " – KitchenBreeze";
 
 
-    window.history.replaceState(
-        {},
-        "",
-        newUrl
+    const metaDescription =
+        document.getElementById(
+            "metaDescription"
+        );
+
+    if (metaDescription) {
+
+        metaDescription.setAttribute(
+            "content",
+            recipe.description || ""
+        );
+
+    }
+
+
+    /* =====================================
+       GOOGLE RECIPE SCHEMA
+    ===================================== */
+
+    const schema =
+        document.getElementById(
+            "recipeSchema"
+        );
+
+    if (schema) {
+
+        schema.textContent =
+            JSON.stringify({
+
+                "@context":
+                    "https://schema.org",
+
+                "@type":
+                    "Recipe",
+
+                "name":
+                    recipe.title,
+
+                "image": [
+
+                    window.location.origin +
+                    "/" +
+                    recipe.image
+
+                ],
+
+                "description":
+                    recipe.description || "",
+
+                "author": {
+
+                    "@type":
+                        "Organization",
+
+                    "name":
+                        "KitchenBreeze"
+
+                },
+
+                "recipeYield":
+                    recipe.portions,
+
+                "prepTime":
+                    recipe.time?.preparation,
+
+                "cookTime":
+                    recipe.time?.cooking ||
+                    recipe.time?.baking ||
+                    undefined,
+
+                "totalTime":
+                    recipe.time?.total,
+
+                "recipeCategory":
+                    Array.isArray(
+                        recipe.category
+                    )
+                        ? recipe.category.join(", ")
+                        : recipe.category,
+
+                "recipeIngredient":
+                    recipe.ingredients
+                        ? (
+                            Array.isArray(
+                                recipe.ingredients
+                            )
+                                ? recipe.ingredients
+                                : Object.values(
+                                    recipe.ingredients
+                                ).flat()
+                        )
+                        : [],
+
+                "recipeInstructions":
+                    Array.isArray(
+                        recipe.steps
+                    )
+                        ? recipe.steps.map(
+                            step => ({
+
+                                "@type":
+                                    "HowToStep",
+
+                                "text":
+                                    typeof step === "string"
+                                        ? step
+                                        : step.text
+
+                            })
+                        )
+                        : []
+
+            });
+
+    }
+
+}
+
+
+/* =========================================
+   REZEPT NICHT GEFUNDEN
+========================================= */
+
+if (!recipe) {
+
+    container.innerHTML =
+        "<p style='text-align:center;'>Rezept nicht gefunden</p>";
+
+}
+
+
+/* =========================================
+   REZEPT AUSGEBEN
+========================================= */
+
+else {
+
+    container.innerHTML = `
+
+        <div class="topbar">
+
+            <a
+                class="back"
+                id="backToRecipes"
+                href="${getBackUrl()}"
+            >
+                ← Zur Rezeptsammlung
+            </a>
+
+        </div>
+
+
+        <div class="container">
+
+
+            <!-- HAUPTBILD -->
+
+            <img
+                class="hero-img"
+                src="../${recipe.image}"
+                alt="${recipe.title} – KitchenBreeze"
+            >
+
+
+            <!-- TITEL -->
+
+            <h1 class="title">
+                ${recipe.title}
+            </h1>
+
+
+            <!-- =================================
+                 ZEITEN
+            ================================== -->
+
+            <div class="time-row">
+
+                ${
+                    recipe.time?.preparation
+                        ? `
+                            <div>
+                                Zubereitung<br>
+                                <strong>
+                                    ${recipe.time.preparation}
+                                </strong>
+                            </div>
+                          `
+                        : ""
+                }
+
+
+                ${
+                    recipe.time?.cooking
+                        ? `
+                            <div>
+                                Kochen<br>
+                                <strong>
+                                    ${recipe.time.cooking}
+                                </strong>
+                            </div>
+                          `
+                        : ""
+                }
+
+
+                ${
+                    recipe.time?.baking
+                        ? `
+                            <div>
+                                Backen<br>
+                                <strong>
+                                    ${recipe.time.baking}
+                                </strong>
+                            </div>
+                          `
+                        : ""
+                }
+
+
+                ${
+                    recipe.time?.rising
+                        ? `
+                            <div>
+                                Gehzeit<br>
+                                <strong>
+                                    ${recipe.time.rising}
+                                </strong>
+                            </div>
+                          `
+                        : ""
+                }
+
+
+                ${
+                    recipe.time?.resting
+                        ? `
+                            <div>
+                                Ruhen<br>
+                                <strong>
+                                    ${recipe.time.resting}
+                                </strong>
+                            </div>
+                          `
+                        : ""
+                }
+
+
+                ${
+                    recipe.time?.cooling
+                        ? `
+                            <div>
+                                Abkühlen<br>
+                                <strong>
+                                    ${recipe.time.cooling}
+                                </strong>
+                            </div>
+                          `
+                        : ""
+                }
+
+
+                ${
+                    recipe.time?.total
+                        ? `
+                            <div>
+                                Gesamt<br>
+                                <strong>
+                                    ${recipe.time.total}
+                                </strong>
+                            </div>
+                          `
+                        : ""
+                }
+
+            </div>
+
+
+            <!-- =================================
+                 INFO
+            ================================== -->
+
+            <div class="info-row">
+
+                <div>
+                    Portionen:
+                    ${recipe.portions || ""}
+                </div>
+
+
+                <div>
+                    Schwierigkeit:
+                    ${recipe.difficulty || ""}
+                </div>
+
+
+                <div>
+                    Kategorie:
+                    ${
+                        Array.isArray(
+                            recipe.category
+                        )
+                            ? recipe.category.join(", ")
+                            : recipe.category || ""
+                    }
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 BUTTONS
+            ================================== -->
+
+            <div class="buttons">
+
+                <button
+                    onclick="window.print()"
+                >
+                    🖨️ Drucken
+                </button>
+
+
+                <button
+                    id="favoriteBtn"
+                >
+                    ♡ Favorit
+                </button>
+
+            </div>
+
+
+            <!-- =================================
+                 BESCHREIBUNG
+            ================================== -->
+
+            <p
+                style="
+                    text-align:center;
+                    color:#b8b2aa;
+                "
+            >
+                ${recipe.description || ""}
+            </p>
+
+
+            <!-- =================================
+                 ZUTATEN
+            ================================== -->
+
+            <div class="card">
+
+                <h2>
+                    Zutaten
+                </h2>
+
+
+                ${
+                    Array.isArray(
+                        recipe.ingredients
+                    )
+
+                        ? `
+
+                            <ul class="ingredient-list">
+
+                                ${
+                                    recipe.ingredients
+                                        .map(
+                                            ingredient => `
+
+                                                <li>
+
+                                                    <label>
+
+                                                        <input
+                                                            type="checkbox"
+                                                        >
+
+                                                        <span>
+                                                            ${replaceRecipeLinks(
+                                                                ingredient
+                                                            )}
+                                                        </span>
+
+                                                    </label>
+
+                                                </li>
+
+                                            `
+                                        )
+                                        .join("")
+                                }
+
+                            </ul>
+
+                          `
+
+                        : Object.entries(
+                            recipe.ingredients || {}
+                          )
+                            .map(
+                                ([section, items]) => `
+
+                                    <h3
+                                        style="
+                                            margin-top:15px;
+                                        "
+                                    >
+                                        ${section}
+                                    </h3>
+
+
+                                    <ul
+                                        class="ingredient-list"
+                                    >
+
+                                        ${
+                                            items
+                                                .map(
+                                                    ingredient => `
+
+                                                        <li>
+
+                                                            <label>
+
+                                                                <input
+                                                                    type="checkbox"
+                                                                >
+
+                                                                <span>
+                                                                    ${replaceRecipeLinks(
+                                                                        ingredient
+                                                                    )}
+                                                                </span>
+
+                                                            </label>
+
+                                                        </li>
+
+                                                    `
+                                                )
+                                                .join("")
+                                        }
+
+                                    </ul>
+
+                                `
+                            )
+                            .join("")
+                }
+
+            </div>
+
+
+            <!-- =================================
+                 ZUBEREITUNG
+            ================================== -->
+
+            <div class="card">
+
+                <h2>
+                    Zubereitung
+                </h2>
+
+
+                ${
+                    Array.isArray(recipe.steps)
+
+                        ? recipe.steps
+                            .map(
+                                (step, i) => `
+
+                                    <div class="step">
+
+                                        <div
+                                            class="step-number"
+                                        >
+                                            ${i + 1}
+                                        </div>
+
+
+                                        <div
+                                            class="step-text"
+                                        >
+
+                                            <p>
+                                                ${
+                                                    typeof step === "string"
+                                                        ? step
+                                                        : step.text
+                                                }
+                                            </p>
+
+
+                                            ${
+                                                typeof step !== "string" &&
+                                                step.images &&
+                                                step.images.length
+                                                    ? `
+
+                                                        <div
+                                                            class="step-images"
+                                                            style="width:100%;"
+                                                        >
+
+                                                            ${
+                                                                step.images
+                                                                    .map(
+                                                                        image => `
+
+                                                                            <img
+                                                                                src="../${image}"
+                                                                                class="step-image"
+                                                                                alt="${recipe.title} Zubereitung Schritt"
+                                                                            >
+
+                                                                        `
+                                                                    )
+                                                                    .join("")
+                                                            }
+
+                                                        </div>
+
+                                                      `
+                                                    : ""
+                                            }
+
+                                        </div>
+
+                                    </div>
+
+                                `
+                            )
+                            .join("")
+
+                        : ""
+                }
+
+            </div>
+
+
+            <!-- =================================
+                 TIPPS
+            ================================== -->
+
+            ${
+                recipe.tips &&
+                recipe.tips.length
+
+                    ? `
+
+                        <div class="card">
+
+                            <h2>
+                                💡 Tipps
+                            </h2>
+
+
+                            <ul>
+
+                                ${
+                                    recipe.tips
+                                        .map(
+                                            tip => `
+
+                                                <li>
+                                                    ${replaceRecipeLinks(
+                                                        tip
+                                                    )}
+                                                </li>
+
+                                            `
+                                        )
+                                        .join("")
+                                }
+
+                            </ul>
+
+                        </div>
+
+                      `
+
+                    : ""
+            }
+
+
+            <!-- =================================
+                 VERWANDTE REZEPTE
+            ================================== -->
+
+            <div class="related-section">
+
+                <h2>
+                    ❤️ Das könnte dich auch interessieren
+                </h2>
+
+
+                <div
+                    class="related-container"
+                    id="relatedRecipes"
+                ></div>
+
+            </div>
+
+
+        </div>
+
+    `;
+
+}
+
+
+/* =========================================
+   REZEPT-LINKS ERSETZEN
+========================================= */
+
+function replaceRecipeLinks(text) {
+
+    if (!text) {
+        return "";
+    }
+
+    return String(text).replace(
+        /\[\[(.*?)\|(.*?)\]\]/g,
+        (match, slug, title) => {
+
+            return `
+                <a href="../recipes/${slug}.html">
+                    ${title}
+                </a>
+            `;
+
+        }
     );
 
 }
 
 
 /* =========================================
-   SUCHE
+   FAVORITEN
 ========================================= */
 
-searchInput.addEventListener(
-    "input",
-    render
-);
+const favoriteBtn =
+    document.getElementById(
+        "favoriteBtn"
+    );
 
 
-/* =========================================
-   GESAMTZEIT IN MINUTEN
-========================================= */
-
-function getTotalMinutes(recipe) {
-
-    if (
-        !recipe ||
-        !recipe.time ||
-        !recipe.time.total
-    ) {
-        return Infinity;
-    }
-
-
-    const time =
-        String(recipe.time.total)
-            .toLowerCase()
-            .trim();
-
-
-    let minutes = 0;
-
-
-    /* Stunden */
-
-    const hoursMatch =
-        time.match(
-            /(\d+(?:[.,]\d+)?)\s*(?:stunden?|std\.?|h)/
-        );
-
-
-    if (hoursMatch) {
-
-        minutes +=
-            parseFloat(
-                hoursMatch[1]
-                    .replace(",", ".")
-            ) * 60;
-
-    }
-
-
-    /* Minuten */
-
-    const minutesMatch =
-        time.match(
-            /(\d+)\s*(?:minuten?|min\.?|m)/
-        );
-
-
-    if (minutesMatch) {
-
-        minutes +=
-            parseInt(
-                minutesMatch[1],
-                10
-            );
-
-    }
-
-
-    /* Falls nur eine Zahl gespeichert ist */
-
-    if (
-        !hoursMatch &&
-        !minutesMatch
-    ) {
-
-        const numberOnly =
-            time.match(/^\d+$/);
-
-        if (numberOnly) {
-
-            minutes =
-                parseInt(
-                    numberOnly[0],
-                    10
-                );
-
-        }
-
-    }
-
-
-    return minutes || Infinity;
-
-}
-
-
-/* =========================================
-   ZUTATEN FÜR SUCHE
-========================================= */
-
-function getIngredientsText(recipe) {
-
-    if (!recipe.ingredients) {
-        return "";
-    }
-
-
-    if (Array.isArray(recipe.ingredients)) {
-
-        return recipe.ingredients
-            .join(" ")
-            .toLowerCase();
-
-    }
-
-
-    if (
-        typeof recipe.ingredients === "object"
-    ) {
-
-        return Object.values(
-            recipe.ingredients
+let favorites =
+    JSON.parse(
+        localStorage.getItem(
+            "favorites"
         )
-        .flat()
-        .join(" ")
-        .toLowerCase();
+    ) || [];
 
+
+function updateFavoriteButton() {
+
+    if (
+        !favoriteBtn ||
+        !recipe
+    ) {
+        return;
     }
 
 
-    return String(
-        recipe.ingredients
-    ).toLowerCase();
+    if (
+        favorites.includes(
+            recipe.id
+        )
+    ) {
+
+        favoriteBtn.innerHTML =
+            "❤️ Gespeichert";
+
+    }
+
+    else {
+
+        favoriteBtn.innerHTML =
+            "♡ Favorit";
+
+    }
 
 }
 
 
-/* =========================================
-   RENDER
-========================================= */
+if (favoriteBtn) {
 
-function render() {
-
-    if (
-        typeof RECIPES === "undefined"
-    ) {
-
-        console.error(
-            "RECIPES fehlt! recipes.js prüfen!"
-        );
-
-        return;
-
-    }
-
-
-    const search =
-        searchInput.value
-            .trim()
-            .toLowerCase();
-
-
-    const filtered =
-        RECIPES
-            .slice()
-
-
-            /* =============================
-               NEUESTE ZUERST
-            ============================= */
-
-            .sort(
-                (a, b) =>
-                    Number(b.id) -
-                    Number(a.id)
-            )
-
-
-            /* =============================
-               KATEGORIEN
-            ============================= */
-
-            .filter(recipe => {
-
-                if (
-                    selectedCategories.includes("all")
-                ) {
-                    return true;
-                }
-
-
-                const categories =
-                    Array.isArray(recipe.category)
-                        ? recipe.category
-                        : [];
-
-
-                return selectedCategories.some(
-                    category =>
-                        categories.includes(category)
-                );
-
-            })
-
-
-            /* =============================
-               SCHNELL & EINFACH
-               GESAMTZEIT <= 45 MINUTEN
-            ============================= */
-
-            .filter(recipe => {
-
-                if (!quickFilter) {
-                    return true;
-                }
-
-
-                return (
-                    getTotalMinutes(recipe) <= 45
-                );
-
-            })
-
-
-            /* =============================
-               SUCHE
-            ============================= */
-
-            .filter(recipe => {
-
-                if (!search) {
-                    return true;
-                }
-
-
-                const title =
-                    String(
-                        recipe.title || ""
-                    ).toLowerCase();
-
-
-                const description =
-                    String(
-                        recipe.description || ""
-                    ).toLowerCase();
-
-
-                const ingredients =
-                    getIngredientsText(recipe);
-
-
-                const category =
-                    Array.isArray(recipe.category)
-                        ? recipe.category
-                            .join(" ")
-                            .toLowerCase()
-                        : "";
-
-
-                return (
-                    title.includes(search) ||
-                    description.includes(search) ||
-                    ingredients.includes(search) ||
-                    category.includes(search)
-                );
-
-            });
-
-
-    /* =====================================
-       GRID LEEREN
-    ===================================== */
-
-    grid.innerHTML = "";
-
-
-    /* =====================================
-       REZEPTE AUSGEBEN
-    ===================================== */
-
-    filtered.forEach(recipe => {
-
-
-        /* =================================
-           FILTER FÜR REZEPT SPEICHERN
-        ================================= */
-
-        const params =
-            new URLSearchParams();
-
-
-        const activeCategories =
-            selectedCategories.filter(
-                category =>
-                    category !== "all"
-            );
-
+    favoriteBtn.onclick = function () {
 
         if (
-            activeCategories.length > 0
+            favorites.includes(
+                recipe.id
+            )
         ) {
 
-            params.set(
-                "categories",
-                activeCategories
-                    .map(category =>
-                        encodeURIComponent(category)
-                    )
-                    .join(",")
+            favorites =
+                favorites.filter(
+                    id =>
+                        id !== recipe.id
+                );
+
+        }
+
+        else {
+
+            favorites.push(
+                recipe.id
             );
 
         }
 
 
-        /* Schnellfilter */
-
-        if (quickFilter) {
-
-            params.set(
-                "quick",
-                "true"
-            );
-
-        }
+        localStorage.setItem(
+            "favorites",
+            JSON.stringify(
+                favorites
+            )
+        );
 
 
-        /* =================================
-           REZEPT URL
-        ================================= */
+        updateFavoriteButton();
 
-        let recipeUrl =
-            `recipes/${createSlug(recipe.title)}.html`;
-
-
-        const query =
-            params.toString();
-
-
-        if (query) {
-
-            recipeUrl +=
-                `?${query}`;
-
-        }
-
-
-        /* =================================
-           REZEPTKARTE
-        ================================= */
-
-        grid.innerHTML += `
-
-            <a
-                class="recipe-card"
-                href="${recipeUrl}"
-            >
-
-                <div class="recipe-card-image">
-
-                    <img
-                        src="${recipe.image}"
-                        alt="${recipe.title}"
-                        loading="lazy"
-                    >
-
-                </div>
-
-
-                <div class="recipe-card-content">
-
-                    <h2>
-                        ${recipe.title}
-                    </h2>
-
-                    <p>
-                        ${recipe.description || ""}
-                    </p>
-
-                </div>
-
-            </a>
-
-        `;
-
-    });
-
-
-    /* =====================================
-       KEINE ERGEBNISSE
-    ===================================== */
-
-    if (!filtered.length) {
-
-        let message =
-            "Versuche eine andere Suche oder Kategorie.";
-
-
-        if (quickFilter) {
-
-            message =
-                "Es gibt keine Rezepte mit einer Gesamtzeit von höchstens 45 Minuten.";
-
-        }
-
-
-        grid.innerHTML = `
-
-            <div class="no-results">
-
-                <h2>
-                    Keine Rezepte gefunden
-                </h2>
-
-                <p>
-                    ${message}
-                </p>
-
-            </div>
-
-        `;
-
-    }
+    };
 
 }
 
 
+updateFavoriteButton();
+
+
 /* =========================================
-   START
+   VERWANDTE REZEPTE
 ========================================= */
 
-render();
+const relatedContainer =
+    document.getElementById(
+        "relatedRecipes"
+    );
+
+
+if (
+    recipe &&
+    recipe.related &&
+    relatedContainer &&
+    typeof RECIPES !== "undefined"
+) {
+
+    recipe.related.forEach(
+        id => {
+
+            const related =
+                RECIPES.find(
+                    item =>
+                        String(item.id) ===
+                        String(id)
+                );
+
+
+            if (!related) {
+                return;
+            }
+
+
+            const slug =
+                createSlug(
+                    related.title
+                );
+
+
+            relatedContainer.innerHTML += `
+
+                <a
+                    class="related-card"
+                    href="${slug}.html"
+                >
+
+                    <img
+                        src="../${related.image}"
+                        alt="${related.title}"
+                    >
+
+
+                    <div
+                        class="related-content"
+                    >
+
+                        <h3>
+                            ${related.title}
+                        </h3>
+
+
+                        <p>
+                            ${related.description || ""}
+                        </p>
+
+                    </div>
+
+                </a>
+
+            `;
+
+        }
+    );
+
+}
 
 </script>
 

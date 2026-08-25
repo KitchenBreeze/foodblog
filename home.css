@@ -1802,57 +1802,143 @@ body.search-active .home-footer {
 }
 
 /* =========================================
-   SLIDER – MOBILE
-   Komplettes Bild + Name darunter
+   SLIDER MOBILE
+   Einheitliche Bilder + Titel + Gesamtzeit
 ========================================= */
 
 @media (max-width: 800px) {
 
+    .home-slider {
+        width: 100%;
+    }
+
     .home-slider-window {
+        width: 100%;
+        max-width: 100%;
         border-radius: 18px;
+        overflow: hidden;
+    }
+
+    .home-slider-track {
+        width: 100%;
     }
 
     .home-slider-track .home-recipe-card {
         flex: 0 0 100%;
         width: 100%;
+        border: none;
         border-radius: 18px;
+        background: var(--kb-card);
+        overflow: hidden;
+        box-shadow: none;
+    }
+
+
+    /* =====================================
+       EINHEITLICHES BILDFENSTER
+    ===================================== */
+
+    .home-slider-track .home-recipe-image {
+        width: 100%;
+        height: 280px;
+        aspect-ratio: auto;
+        background: var(--kb-card);
+        display: flex;
+        align-items: center;
+        justify-content: center;
         overflow: hidden;
     }
 
-    /* Bild vollständig anzeigen */
-    .home-slider-track .home-recipe-image {
-        width: 100%;
-        height: auto;
-        aspect-ratio: auto;
-        display: block;
-        overflow: hidden;
-        background: var(--kb-card);
-    }
+
+    /* =====================================
+       KOMPLETTES BILD SICHTBAR
+    ===================================== */
 
     .home-slider-track .home-recipe-image img {
         width: 100%;
-        height: auto;
+        height: 100%;
         display: block;
         object-fit: contain;
-        transform: none;
+        object-position: center;
+        transform: none !important;
     }
 
-    /* Nur der Name unter dem Bild */
+
+    /* =====================================
+       CONTENT
+    ===================================== */
+
     .home-slider-track .home-recipe-content {
-        padding: 16px 12px 18px;
+        padding: 18px 12px 20px;
         text-align: center;
     }
 
+
+    /* =====================================
+       NAME
+    ===================================== */
+
     .home-slider-track .home-recipe-content h3 {
         margin: 0;
+        color: var(--kb-text);
         font-size: 21px;
         line-height: 1.25;
         font-weight: 500;
+        text-align: center;
     }
 
-    /* Beschreibung auf dem Handy ausblenden */
+
+    /* =====================================
+       BESCHREIBUNG AUSBLENDEN
+    ===================================== */
+
     .home-slider-track .home-recipe-content p {
         display: none;
+    }
+
+
+    /* =====================================
+       GESAMTZEIT
+       Wird über data-time angezeigt
+    ===================================== */
+
+    .home-slider-track .home-recipe-content::after {
+        content: attr(data-time);
+        display: block;
+        margin-top: 8px;
+        color: var(--kb-muted);
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        text-align: center;
+    }
+
+
+    /* =====================================
+       PFEILE
+    ===================================== */
+
+    .home-slider-arrow {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        font-size: 26px;
+    }
+
+    .home-slider-prev {
+        left: 8px;
+    }
+
+    .home-slider-next {
+        right: 8px;
+    }
+
+
+    /* =====================================
+       PUNKTE
+    ===================================== */
+
+    .home-slider-dots {
+        margin-top: 14px;
     }
 
 }

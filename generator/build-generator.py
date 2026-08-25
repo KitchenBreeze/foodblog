@@ -39,7 +39,6 @@ if result.returncode != 0:
 
 try:
     recipes = json.loads(result.stdout)
-
 except json.JSONDecodeError:
     print("FEHLER: recipes.js konnte nicht als JSON gelesen werden.")
     print(result.stdout)
@@ -102,17 +101,17 @@ def create_slug(title):
 
 
 # ============================================================
-# Bildpfad für Rezeptseiten korrigieren
+# Bildpfad für Rezeptseiten
 #
-# Die Rezeptseiten liegen in:
+# Rezeptseiten liegen in:
 #
 # recipes/rezept-name.html
 #
-# Bilder liegen normalerweise z.B. in:
+# Bilder liegen z.B. in:
 #
 # images/rezept.jpg
 #
-# Deshalb muss auf der Rezeptseite daraus werden:
+# Deshalb:
 #
 # ../images/rezept.jpg
 # ============================================================
@@ -127,26 +126,26 @@ def recipe_page_image_path(path):
     if not path:
         return path
 
-    # Externe Bilder nicht verändern
+    # Externe Bilder
     if path.startswith("http://"):
         return path
 
     if path.startswith("https://"):
         return path
 
-    # Daten-URLs nicht verändern
+    # Data URLs
     if path.startswith("data:"):
         return path
 
-    # Bereits korrekter relativer Pfad
+    # Bereits relativer Pfad für Rezeptseite
     if path.startswith("../"):
         return path
 
-    # Absolute Website-Pfade nicht verändern
+    # Absolute Pfade
     if path.startswith("/"):
         return path
 
-    # Bereits ./ entfernen
+    # ./ entfernen
     if path.startswith("./"):
         path = path[2:]
 
@@ -188,9 +187,11 @@ def replace_recipe_links(text):
 
 def prepare_recipe_for_page(recipe):
 
+    # Tiefe Kopie
     recipe_copy = json.loads(
         json.dumps(recipe)
     )
+
 
     # --------------------------------------------------------
     # Hauptbild
@@ -293,12 +294,13 @@ def prepare_recipe_for_page(recipe):
 #
 # Wichtig:
 # Auch "Das könnte dich auch interessieren"
-# befindet sich auf einer Seite im recipes/-Ordner.
+# befindet sich auf einer Rezeptseite.
 #
-# Deshalb brauchen auch dort die Bilder ../
+# Deshalb werden auch dort die Bilder angepasst.
 # ============================================================
 
 recipes_for_recipe_pages = []
+
 
 for recipe in recipes:
 
@@ -363,7 +365,7 @@ if "<!-- RECIPE_DATA -->" not in template_original:
 
 
 # ============================================================
-# ALLE REZEPTE ERZEUGEN
+# ALLE REZEPTSEITEN ERZEUGEN
 # ============================================================
 
 created_count = 0
@@ -411,7 +413,7 @@ for recipe in recipes:
 
 
     # --------------------------------------------------------
-    # Rezeptdaten für diese Rezeptseite
+    # Rezeptdaten vorbereiten
     # --------------------------------------------------------
 
     recipe_copy = prepare_recipe_for_page(
@@ -454,7 +456,7 @@ for recipe in recipes:
 
 
     # --------------------------------------------------------
-    # Daten in Template einsetzen
+    # RECIPE_DATA + RECIPES einsetzen
     # --------------------------------------------------------
 
     replacement = f"""
@@ -516,22 +518,30 @@ const RECIPES = {all_recipes_data};
 
 
 # ============================================================
-# SITEMAP
+# SITEMAP ERSTELLEN
 # ============================================================
 
 sitemap_lines = [
+
     '<?xml version="1.0" encoding="UTF-8"?>',
+
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+
     "",
+
     "    <url>",
+
     "        <loc>https://kitchenbreeze.github.io/foodblog/</loc>",
+
     "    </url>",
+
     ""
+
 ]
 
 
 # ============================================================
-# Rezeptseiten zur Sitemap hinzufügen
+# REZEPTSEITEN ZUR SITEMAP HINZUFÜGEN
 # ============================================================
 
 for recipe in recipes:
@@ -540,20 +550,26 @@ for recipe in recipes:
         recipe["title"]
     )
 
+
     sitemap_lines.extend([
+
         "    <url>",
+
         (
             "        <loc>"
             f"https://kitchenbreeze.github.io/foodblog/recipes/{slug}.html"
             "</loc>"
         ),
+
         "    </url>",
+
         ""
+
     ])
 
 
 # ============================================================
-# Sitemap schließen
+# SITEMAP SCHLIESSEN
 # ============================================================
 
 sitemap_lines.append(
@@ -586,18 +602,27 @@ print()
 print("========================================")
 print("GENERATOR FERTIG")
 print("========================================")
+
 print(
     f"{created_count} Rezeptseiten erstellt."
 )
+
 print()
+
 print(
     "Sitemap erstellt:"
 )
+
 print(
     os.path.abspath("sitemap.xml")
 )
+
 print()
-print("Alle Bildpfade für recipes/ wurden angepasst.")
+
+print(
+    "Alle Bildpfade für recipes/ wurden angepasst."
+)
+
 print("========================================")
 
 

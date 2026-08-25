@@ -2134,3 +2134,184 @@ body.search-active .home-footer {
     }
 
 }
+
+/* =========================================
+   SLIDER – TITEL + GESAMTZEIT
+========================================= */
+
+.home-slider-track .home-recipe-content {
+    padding: 18px 12px 22px;
+    text-align: center;
+}
+
+.home-slider-track .home-recipe-content h3 {
+    margin: 0 0 9px;
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 500;
+    color: var(--kb-text);
+}
+
+
+/* =========================================
+   GESAMTZEIT
+========================================= */
+
+.home-slider-track .home-recipe-time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    margin: 0;
+
+    color: var(--kb-muted);
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   ELEGANTE UHR
+========================================= */
+
+.home-slider-track .home-time-icon {
+    position: relative;
+
+    display: inline-block;
+
+    width: 15px;
+    height: 15px;
+
+    flex: 0 0 15px;
+
+    border: 1.5px solid var(--kb-accent);
+    border-radius: 50%;
+}
+
+
+/* Stundenzeiger */
+
+.home-slider-track .home-time-icon::before {
+    content: "";
+
+    position: absolute;
+
+    left: 6px;
+    top: 2px;
+
+    width: 1.5px;
+    height: 5px;
+
+    background: var(--kb-accent);
+
+    border-radius: 2px;
+}
+
+
+/* Minutenzeiger */
+
+.home-slider-track .home-time-icon::after {
+    content: "";
+
+    position: absolute;
+
+    left: 6px;
+    top: 6px;
+
+    width: 4px;
+    height: 1.5px;
+
+    background: var(--kb-accent);
+
+    border-radius: 2px;
+}
+
+
+/* =========================================
+   SLIDER-BILDER – ALLE GLEICH GROSS
+   UND KOMPLETT SICHTBAR
+========================================= */
+
+.home-slider-track .home-recipe-image {
+    width: 100%;
+    height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: var(--kb-card);
+}
+
+
+.home-slider-track .home-recipe-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+
+    transform: none;
+}
+
+
+/* Kein Bild-Zoom */
+
+.home-slider-track
+.home-recipe-card:hover
+.home-recipe-image img {
+    transform: none;
+}
+
+
+/* =========================================
+   HANDY
+========================================= */
+
+@media (max-width: 800px) {
+
+    .home-slider-track .home-recipe-image {
+        height: 300px;
+    }
+
+    .home-slider-track .home-recipe-content {
+        padding: 17px 12px 20px;
+    }
+
+    .home-slider-track .home-recipe-content h3 {
+        font-size: 20px;
+    }
+
+    .home-slider-track .home-recipe-time {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================
+   KLEINE HANDYS
+========================================= */
+
+@media (max-width: 500px) {
+
+    .home-slider-track .home-recipe-image {
+        height: 260px;
+    }
+
+    .home-slider-track .home-recipe-content {
+        padding: 16px 10px 19px;
+    }
+
+    .home-slider-track .home-recipe-content h3 {
+        font-size: 19px;
+    }
+
+}

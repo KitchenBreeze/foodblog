@@ -282,7 +282,7 @@ const filterItems =
 
 
 /* =========================================
-   URL-PARAMETER
+   URL AUSLESEN
 ========================================= */
 
 const urlParams =
@@ -291,119 +291,116 @@ const urlParams =
     );
 
 
-/* =========================================
-   KATEGORIEN AUS URL LADEN
-========================================= */
-
 const urlCategories =
-    urlParams.getAll("category");
+    urlParams.get("categories");
 
-
-/* =========================================
-   SCHNELLFILTER AUS URL
-========================================= */
-
-const quickFilter =
+const urlQuick =
     urlParams.get("quick") === "true";
 
-
-/* =========================================
-   AUSGEWÄHLTE KATEGORIEN
-========================================= */
-
-let selectedCategories =
-    urlCategories.length > 0
-        ? urlCategories
-        : ["all"];
+const urlSearch =
+    urlParams.get("search") || "";
 
 
 /* =========================================
-   FILTER-BUTTONS AKTIVIEREN
+   AUS URL GELADENE KATEGORIEN
 ========================================= */
 
-filterItems.forEach(button => {
-
-    const category =
-        button.dataset.cat;
-
-    if (
-        selectedCategories.includes(category)
-    ) {
-
-        button.classList.add("active");
-
-    } else {
-
-        button.classList.remove("active");
-
-    }
-
-});
+let selectedCategories = [];
 
 
-/* =========================================
-   "ALLE" AKTIVIEREN
-========================================= */
+if (urlCategories) {
+
+    selectedCategories =
+        urlCategories
+            .split(",")
+            .map(category =>
+                decodeURIComponent(category)
+            )
+            .filter(Boolean);
+
+}
+
 
 if (
-    selectedCategories.includes("all")
+    selectedCategories.length === 0
 ) {
 
-    const allButton =
-        document.querySelector(
-            '[data-cat="all"]'
+    selectedCategories = ["all"];
+
+}
+
+
+/* =========================================
+   SUCHE AUS URL WIEDERHERSTELLEN
+========================================= */
+
+if (searchInput) {
+
+    searchInput.value = urlSearch;
+
+}
+
+
+/* =========================================
+   FILTER BUTTONS AKTIVIEREN
+========================================= */
+
+function updateFilterButtons() {
+
+    filterItems.forEach(item => {
+
+        const category =
+            item.dataset.cat;
+
+        item.classList.remove(
+            "active"
         );
 
-    if (allButton) {
 
-        allButton.classList.add("active");
+        if (
+            selectedCategories.includes(
+                category
+            )
+        ) {
+
+            item.classList.add(
+                "active"
+            );
+
+        }
+
+    });
+
+
+    if (
+        selectedCategories.includes(
+            "all"
+        )
+    ) {
+
+        const allButton =
+            document.querySelector(
+                '[data-cat="all"]'
+            );
+
+        if (allButton) {
+
+            allButton.classList.add(
+                "active"
+            );
+
+        }
 
     }
 
 }
 
 
-/* =========================================
-   FILTER MENÜ
-========================================= */
-
-filterBtn.addEventListener(
-    "click",
-    event => {
-
-        event.stopPropagation();
-
-        filterDropdown.classList.toggle(
-            "open"
-        );
-
-    }
-);
-
-
-document.addEventListener(
-    "click",
-    event => {
-
-        if (
-            !filterDropdown.contains(
-                event.target
-            ) &&
-            event.target !== filterBtn
-        ) {
-
-            filterDropdown.classList.remove(
-                "open"
-            );
-
-        }
-
-    }
-);
+updateFilterButtons();
 
 
 /* =========================================
-   URL MIT AKTUELLEM FILTER AKTUALISIEREN
+   URL AKTUALISIEREN
 ========================================= */
 
 function updateUrl() {
@@ -412,25 +409,40 @@ function updateUrl() {
         new URLSearchParams();
 
 
-    /* Kategorien */
+    /* -----------------------------------------
+       KATEGORIEN
+    ----------------------------------------- */
 
-    selectedCategories
-        .filter(category =>
-            category !== "all"
-        )
-        .forEach(category => {
-
-            params.append(
-                "category",
-                category
-            );
-
-        });
+    const categories =
+        selectedCategories.filter(
+            category =>
+                category !== "all"
+        );
 
 
-    /* Schnellfilter */
+    if (
+        categories.length > 0
+    ) {
 
-    if (quickFilter) {
+        params.set(
+            "categories",
+            categories
+                .map(category =>
+                    encodeURIComponent(
+                        category
+                    )
+                )
+                .join(",")
+        );
+
+    }
+
+
+    /* -----------------------------------------
+       SCHNELLFILTER
+    ----------------------------------------- */
+
+    if (urlQuick) {
 
         params.set(
             "quick",
@@ -440,20 +452,90 @@ function updateUrl() {
     }
 
 
+    /* -----------------------------------------
+       SUCHE
+    ----------------------------------------- */
+
+    const search =
+        searchInput
+            ? searchInput.value.trim()
+            : "";
+
+
+    if (search) {
+
+        params.set(
+            "search",
+            search
+        );
+
+    }
+
+
+    /* -----------------------------------------
+       URL SETZEN
+    ----------------------------------------- */
+
     const query =
         params.toString();
 
 
     const newUrl =
         query
-            ? "rezepte.html?" + query
-            : "rezepte.html";
+            ? `${window.location.pathname}?${query}`
+            : window.location.pathname;
 
 
     window.history.replaceState(
         {},
         "",
         newUrl
+    );
+
+}
+
+
+/* =========================================
+   FILTER MENÜ
+========================================= */
+
+if (
+    filterBtn &&
+    filterDropdown
+) {
+
+    filterBtn.addEventListener(
+        "click",
+        event => {
+
+            event.stopPropagation();
+
+            filterDropdown.classList.toggle(
+                "open"
+            );
+
+        }
+    );
+
+
+    document.addEventListener(
+        "click",
+        event => {
+
+            if (
+                !filterDropdown.contains(
+                    event.target
+                ) &&
+                event.target !== filterBtn
+            ) {
+
+                filterDropdown.classList.remove(
+                    "open"
+                );
+
+            }
+
+        }
     );
 
 }
@@ -481,25 +563,12 @@ filterItems.forEach(item => {
                 category === "all"
             ) {
 
-                selectedCategories =
-                    ["all"];
+                selectedCategories = [
+                    "all"
+                ];
 
 
-                filterItems.forEach(
-                    button => {
-
-                        button.classList.remove(
-                            "active"
-                        );
-
-                    }
-                );
-
-
-                item.classList.add(
-                    "active"
-                );
-
+                updateFilterButtons();
 
                 updateUrl();
 
@@ -522,7 +591,7 @@ filterItems.forEach(item => {
 
 
             /* =============================
-               KATEGORIE AN / AUS
+               FILTER AN / AUS
             ============================= */
 
             if (
@@ -537,75 +606,35 @@ filterItems.forEach(item => {
                             cat !== category
                     );
 
+            }
 
-                item.classList.remove(
-                    "active"
-                );
-
-            } else {
+            else {
 
                 selectedCategories.push(
                     category
-                );
-
-
-                item.classList.add(
-                    "active"
                 );
 
             }
 
 
             /* =============================
-               KEINE KATEGORIE
+               KEIN FILTER
             ============================= */
 
             if (
                 selectedCategories.length === 0
             ) {
 
-                selectedCategories =
-                    ["all"];
-
-
-                filterItems.forEach(
-                    button => {
-
-                        button.classList.remove(
-                            "active"
-                        );
-
-                    }
-                );
-
-
-                const allButton =
-                    document.querySelector(
-                        '[data-cat="all"]'
-                    );
-
-
-                if (allButton) {
-
-                    allButton.classList.add(
-                        "active"
-                    );
-
-                }
+                selectedCategories = [
+                    "all"
+                ];
 
             }
 
 
-            /* =============================
-               URL SPEICHERN
-            ============================= */
+            updateFilterButtons();
 
             updateUrl();
-
-
-            /* =============================
-               REZEPTE NEU RENDERN
-            ============================= */
 
             render();
 
@@ -616,9 +645,27 @@ filterItems.forEach(item => {
 
 
 /* =========================================
-   GESAMTZEIT IN MINUTEN UMRECHNEN
+   SUCHE
+========================================= */
 
-   NUR recipe.time.total
+if (searchInput) {
+
+    searchInput.addEventListener(
+        "input",
+        () => {
+
+            updateUrl();
+
+            render();
+
+        }
+    );
+
+}
+
+
+/* =========================================
+   GESAMTZEIT IN MINUTEN
 ========================================= */
 
 function getTotalMinutes(recipe) {
@@ -629,12 +676,12 @@ function getTotalMinutes(recipe) {
         !recipe.time.total
     ) {
 
-        return null;
+        return Infinity;
 
     }
 
 
-    const total =
+    const time =
         String(
             recipe.time.total
         )
@@ -649,20 +696,21 @@ function getTotalMinutes(recipe) {
        STUNDEN
     ===================================== */
 
-    const hours =
-        total.match(
-            /(\d+(?:[.,]\d+)?)\s*(?:std\.?|stunde(?:n)?|h)/
+    const hoursMatch =
+        time.match(
+            /(\d+(?:[.,]\d+)?)\s*(?:stunden?|std\.?|h)/
         );
 
 
-    if (hours) {
+    if (hoursMatch) {
 
         minutes +=
             parseFloat(
-                hours[1].replace(
-                    ",",
-                    "."
-                )
+                hoursMatch[1]
+                    .replace(
+                        ",",
+                        "."
+                    )
             ) * 60;
 
     }
@@ -672,65 +720,54 @@ function getTotalMinutes(recipe) {
        MINUTEN
     ===================================== */
 
-    const mins =
-        total.match(
-            /(\d+)\s*(?:min\.?|minute(?:n)?)/
+    const minutesMatch =
+        time.match(
+            /(\d+)\s*(?:minuten?|min\.?|m)/
         );
 
 
-    if (mins) {
+    if (minutesMatch) {
 
         minutes +=
-            Number(
-                mins[1]
+            parseInt(
+                minutesMatch[1],
+                10
             );
 
     }
 
 
     /* =====================================
-       FALLS NUR ZAHL GESPEICHERT IST
+       NUR ZAHL
     ===================================== */
 
     if (
-        !hours &&
-        !mins
+        !hoursMatch &&
+        !minutesMatch
     ) {
 
-        const number =
-            total.match(
-                /\d+/
+        const numberOnly =
+            time.match(
+                /^\d+$/
             );
 
 
-        if (!number) {
+        if (numberOnly) {
 
-            return null;
+            minutes =
+                parseInt(
+                    numberOnly[0],
+                    10
+                );
 
         }
-
-
-        minutes =
-            Number(
-                number[0]
-            );
 
     }
 
 
-    return minutes;
+    return minutes || Infinity;
 
 }
-
-
-/* =========================================
-   SUCHE
-========================================= */
-
-searchInput.addEventListener(
-    "input",
-    render
-);
 
 
 /* =========================================
@@ -740,6 +777,7 @@ searchInput.addEventListener(
 function getIngredientsText(recipe) {
 
     if (
+        !recipe ||
         !recipe.ingredients
     ) {
 
@@ -748,7 +786,9 @@ function getIngredientsText(recipe) {
     }
 
 
-    /* ARRAY */
+    /* =====================================
+       ARRAY
+    ===================================== */
 
     if (
         Array.isArray(
@@ -763,7 +803,9 @@ function getIngredientsText(recipe) {
     }
 
 
-    /* OBJEKT */
+    /* =====================================
+       OBJEKT
+    ===================================== */
 
     if (
         typeof recipe.ingredients ===
@@ -788,7 +830,7 @@ function getIngredientsText(recipe) {
 
 
 /* =========================================
-   REZEPTE RENDERN
+   RENDER
 ========================================= */
 
 function render() {
@@ -808,12 +850,19 @@ function render() {
 
 
     const search =
-        searchInput.value
-            .trim()
-            .toLowerCase();
+        searchInput
+            ? searchInput.value
+                .trim()
+                .toLowerCase()
+            : "";
 
+
+    /* =====================================
+       REZEPTE FILTERN
+    ===================================== */
 
     const filtered =
+
         RECIPES
 
             .slice()
@@ -834,168 +883,144 @@ function render() {
                KATEGORIEN
             ============================= */
 
-            .filter(
-                recipe => {
+            .filter(recipe => {
 
-                    if (
-                        selectedCategories.includes(
-                            "all"
-                        )
-                    ) {
+                if (
+                    selectedCategories.includes(
+                        "all"
+                    )
+                ) {
 
-                        return true;
-
-                    }
-
-
-                    const categories =
-                        Array.isArray(
-                            recipe.category
-                        )
-                            ? recipe.category
-                            : [];
-
-
-                    /*
-                       Mehrere Kategorien:
-
-                       Vegetarisch + Pasta
-
-                       bedeutet:
-                       Vegetarisch ODER Pasta
-                    */
-
-                    return selectedCategories.some(
-                        category =>
-                            categories.includes(
-                                category
-                            )
-                    );
+                    return true;
 
                 }
-            )
+
+
+                const categories =
+                    Array.isArray(
+                        recipe.category
+                    )
+                        ? recipe.category
+                        : [];
+
+
+                return selectedCategories.some(
+                    category =>
+                        categories.includes(
+                            category
+                        )
+                );
+
+            })
 
 
             /* =============================
                SCHNELL & EINFACH
-               
-               GESAMTZEIT <= 45 MINUTEN
+               MAX. 45 MINUTEN
             ============================= */
 
-            .filter(
-                recipe => {
+            .filter(recipe => {
 
-                    if (
-                        !quickFilter
-                    ) {
+                if (!urlQuick) {
 
-                        return true;
-
-                    }
-
-
-                    const totalMinutes =
-                        getTotalMinutes(
-                            recipe
-                        );
-
-
-                    if (
-                        totalMinutes === null
-                    ) {
-
-                        return false;
-
-                    }
-
-
-                    return (
-                        totalMinutes <= 45
-                    );
+                    return true;
 
                 }
-            )
+
+
+                return (
+                    getTotalMinutes(
+                        recipe
+                    ) <= 45
+                );
+
+            })
 
 
             /* =============================
                SUCHE
             ============================= */
 
-            .filter(
-                recipe => {
+            .filter(recipe => {
 
-                    if (!search) {
+                if (!search) {
 
-                        return true;
-
-                    }
-
-
-                    const title =
-                        String(
-                            recipe.title ||
-                            ""
-                        )
-                        .toLowerCase();
-
-
-                    const description =
-                        String(
-                            recipe.description ||
-                            ""
-                        )
-                        .toLowerCase();
-
-
-                    const ingredients =
-                        getIngredientsText(
-                            recipe
-                        );
-
-
-                    const category =
-                        Array.isArray(
-                            recipe.category
-                        )
-                            ? recipe.category
-                                .join(" ")
-                                .toLowerCase()
-                            : "";
-
-
-                    return (
-
-                        title.includes(
-                            search
-                        )
-
-                        ||
-
-                        description.includes(
-                            search
-                        )
-
-                        ||
-
-                        ingredients.includes(
-                            search
-                        )
-
-                        ||
-
-                        category.includes(
-                            search
-                        )
-
-                    );
+                    return true;
 
                 }
-            );
+
+
+                const title =
+                    String(
+                        recipe.title ||
+                        ""
+                    )
+                    .toLowerCase();
+
+
+                const description =
+                    String(
+                        recipe.description ||
+                        ""
+                    )
+                    .toLowerCase();
+
+
+                const ingredients =
+                    getIngredientsText(
+                        recipe
+                    );
+
+
+                const category =
+                    Array.isArray(
+                        recipe.category
+                    )
+                        ? recipe.category
+                            .join(" ")
+                            .toLowerCase()
+                        : "";
+
+
+                return (
+
+                    title.includes(
+                        search
+                    )
+
+                    ||
+
+                    description.includes(
+                        search
+                    )
+
+                    ||
+
+                    ingredients.includes(
+                        search
+                    )
+
+                    ||
+
+                    category.includes(
+                        search
+                    )
+
+                );
+
+            });
 
 
     /* =====================================
        GRID LEEREN
     ===================================== */
+
+    if (!grid) {
+
+        return;
+
+    }
+
 
     grid.innerHTML = "";
 
@@ -1004,129 +1029,140 @@ function render() {
        REZEPTE AUSGEBEN
     ===================================== */
 
-    filtered.forEach(
-        recipe => {
+    filtered.forEach(recipe => {
 
 
-            /* =============================
-               REZEPT-URL
-            ============================= */
+        /* =================================
+           PARAMETER FÜR REZEPTSEITE
+        ================================= */
 
-            let recipeUrl =
-                "recipes/" +
-                createSlug(
-                    recipe.title
-                ) +
-                ".html";
+        const params =
+            new URLSearchParams();
 
 
-            const filterParams =
-                new URLSearchParams();
+        /* ---------------------------------
+           KATEGORIEN
+        --------------------------------- */
 
-
-            /* =============================
-               AKTUELLE KATEGORIEN MITGEBEN
-            ============================= */
-
-            const activeCategories =
-                selectedCategories.filter(
-                    category =>
-                        category !== "all"
-                );
-
-
-            activeCategories.forEach(
-                category => {
-
-                    filterParams.append(
-                        "category",
-                        category
-                    );
-
-                }
+        const activeCategories =
+            selectedCategories.filter(
+                category =>
+                    category !== "all"
             );
 
 
-            /* =============================
-               SCHNELLFILTER MITGEBEN
-            ============================= */
+        if (
+            activeCategories.length > 0
+        ) {
 
-            if (
-                quickFilter
-            ) {
-
-                filterParams.set(
-                    "quick",
-                    "true"
-                );
-
-            }
-
-
-            /* =============================
-               PARAMETER AN REZEPT ANHÄNGEN
-            ============================= */
-
-            const queryString =
-                filterParams.toString();
-
-
-            if (queryString) {
-
-                recipeUrl +=
-                    "?" +
-                    queryString;
-
-            }
-
-
-            /* =============================
-               REZEPTKARTE
-            ============================= */
-
-            grid.innerHTML += `
-
-                <a
-                    class="recipe-card"
-                    href="${recipeUrl}"
-                >
-
-                    <div
-                        class="recipe-card-image"
-                    >
-
-                        <img
-                            src="${recipe.image}"
-                            alt="${recipe.title}"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-
-                    <div
-                        class="recipe-card-content"
-                    >
-
-                        <h2>
-                            ${recipe.title}
-                        </h2>
-
-                        <p>
-                            ${
-                                recipe.description ||
-                                ""
-                            }
-                        </p>
-
-                    </div>
-
-                </a>
-
-            `;
+            params.set(
+                "categories",
+                activeCategories
+                    .map(category =>
+                        encodeURIComponent(
+                            category
+                        )
+                    )
+                    .join(",")
+            );
 
         }
-    );
+
+
+        /* ---------------------------------
+           SCHNELLFILTER
+        --------------------------------- */
+
+        if (urlQuick) {
+
+            params.set(
+                "quick",
+                "true"
+            );
+
+        }
+
+
+        /* ---------------------------------
+           SUCHE
+        --------------------------------- */
+
+        if (search) {
+
+            params.set(
+                "search",
+                search
+            );
+
+        }
+
+
+        /* =================================
+           REZEPT URL
+        ================================= */
+
+        let recipeUrl =
+            `recipes/${createSlug(
+                recipe.title
+            )}.html`;
+
+
+        const query =
+            params.toString();
+
+
+        if (query) {
+
+            recipeUrl +=
+                `?${query}`;
+
+        }
+
+
+        /* =================================
+           REZEPTKARTE
+        ================================= */
+
+        grid.innerHTML += `
+
+            <a
+                class="recipe-card"
+                href="${recipeUrl}"
+            >
+
+                <div
+                    class="recipe-card-image"
+                >
+
+                    <img
+                        src="${recipe.image}"
+                        alt="${recipe.title}"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <div
+                    class="recipe-card-content"
+                >
+
+                    <h2>
+                        ${recipe.title}
+                    </h2>
+
+
+                    <p>
+                        ${recipe.description || ""}
+                    </p>
+
+                </div>
+
+            </a>
+
+        `;
+
+    });
 
 
     /* =====================================
@@ -1142,7 +1178,7 @@ function render() {
 
 
         if (
-            quickFilter &&
+            urlQuick &&
             !search
         ) {
 

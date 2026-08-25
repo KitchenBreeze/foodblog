@@ -671,24 +671,62 @@ body {
 
 
 /* =========================================
-   REZEPT-GRID
+   NEUESTE REZEPTE – SLIDER
 ========================================= */
 
-.home-recipe-grid {
-    display: grid;
+.home-slider {
 
-    grid-template-columns:
-        repeat(3, 1fr);
+    width: 100%;
+    position: relative;
 
-    gap: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
 }
 
 
 /* =========================================
-   REZEPTKARTE
+   SLIDER FENSTER
 ========================================= */
 
-.home-recipe-card {
+.home-slider-window {
+
+    width: 100%;
+    max-width: 900px;
+
+    overflow: hidden;
+
+    border-radius: var(--kb-radius);
+}
+
+
+/* =========================================
+   SLIDER TRACK
+========================================= */
+
+.home-slider-track {
+
+    display: flex;
+
+    width: 100%;
+
+    transition:
+        transform 0.55s ease;
+}
+
+
+/* =========================================
+   SLIDER KARTE
+========================================= */
+
+.home-slider .home-recipe-card {
+
+    flex: 0 0 100%;
+
+    width: 100%;
+
     overflow: hidden;
 
     background:
@@ -706,27 +744,271 @@ body {
     text-decoration: none;
 
     box-shadow:
-        0 8px 24px
-        rgba(0, 0, 0, 0.25);
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        background 0.25s ease;
+        0 10px 30px
+        rgba(0, 0, 0, 0.30);
 }
 
-.home-recipe-card:hover {
+
+/* =========================================
+   SLIDER BILD
+========================================= */
+
+.home-slider .home-recipe-image {
+
+    width: 100%;
+
+    aspect-ratio:
+        16 / 8;
+
+    overflow: hidden;
+}
+
+
+.home-slider .home-recipe-image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+.home-slider .home-recipe-card:hover
+.home-recipe-image img {
+
     transform:
-        translateY(-5px);
+        scale(1.04);
+}
+
+
+/* =========================================
+   SLIDER CONTENT
+========================================= */
+
+.home-slider .home-recipe-content {
+
+    padding:
+        24px 28px 26px;
+}
+
+
+.home-slider .home-recipe-content h3 {
+
+    margin:
+        0 0 9px;
+
+    font-size:
+        27px;
+
+    font-weight:
+        500;
+
+    color:
+        var(--kb-text);
+}
+
+
+.home-slider .home-recipe-content p {
+
+    margin:
+        0;
+
+    color:
+        var(--kb-muted);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.55;
+
+    display:
+        -webkit-box;
+
+    -webkit-line-clamp:
+        2;
+
+    -webkit-box-orient:
+        vertical;
+
+    overflow:
+        hidden;
+}
+
+
+/* =========================================
+   SLIDER PFEILE
+========================================= */
+
+.home-slider-arrow {
+
+    width: 46px;
+    height: 46px;
+
+    min-width: 46px;
+
+    border:
+        1px solid var(--kb-border);
+
+    border-radius: 50%;
+
+    background:
+        var(--kb-card);
+
+    color:
+        var(--kb-text);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 32px;
+
+    line-height: 1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.30);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.home-slider-arrow:hover {
 
     background:
         var(--kb-card-hover);
 
-    box-shadow:
-        0 16px 35px
-        rgba(0, 0, 0, 0.40);
+    transform:
+        scale(1.06);
 }
 
+
+/* =========================================
+   SLIDER PUNKTE
+========================================= */
+
+.home-slider-dots {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+
+.home-slider-dot {
+
+    width: 8px;
+    height: 8px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        #555;
+
+    cursor: pointer;
+
+    transition:
+        width 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.home-slider-dot.active {
+
+    width: 22px;
+
+    border-radius: 10px;
+
+    background:
+        var(--kb-accent);
+}
+
+
+/* =========================================
+   MEHR BUTTON
+========================================= */
+
+.home-more {
+
+    text-align:
+        center;
+
+    margin-top:
+        30px;
+}
+
+
+.home-more a {
+
+    display:
+        inline-block;
+
+    padding:
+        13px 22px;
+
+    border:
+        1px solid
+        var(--kb-accent);
+
+    border-radius:
+        12px;
+
+    color:
+        var(--kb-accent);
+
+    text-decoration:
+        none;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        14px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.home-more a:hover {
+
+    background:
+        var(--kb-accent);
+
+    color:
+        #fff;
+}
 
 /* =========================================
    REZEPTBILD
@@ -1253,4 +1535,268 @@ body.search-active .home-footer {
     .home-search-result-content h3 {
         font-size: 20px;
     }
+}
+
+/* =========================================
+   SUCHERGEBNISSE
+========================================= */
+
+.home-search-results {
+    display: none;
+}
+
+.home-search-results.active {
+    display: block;
+}
+
+
+/* =========================================
+   SUCHFELD – KREUZ
+========================================= */
+
+.home-search-clear {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 32px;
+    height: 32px;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: transparent;
+    color: var(--kb-muted);
+
+    font-family: Arial, sans-serif;
+    font-size: 26px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.home-search-clear.visible {
+    display: flex;
+}
+
+.home-search-clear:hover {
+    background: rgba(242, 238, 233, 0.08);
+    color: var(--kb-text);
+}
+
+
+/* =========================================
+   SUCHERGEBNISSE – KARTEN
+========================================= */
+
+.home-search-results .home-recipe-card {
+    background: var(--kb-card);
+}
+
+
+/* =========================================
+   SLIDER
+========================================= */
+
+.home-slider {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+}
+
+
+.home-slider-window {
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--kb-radius);
+}
+
+
+.home-slider-track {
+    display: flex;
+
+    width: 100%;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.home-slider-track .home-recipe-card {
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+
+/* =========================================
+   SLIDER PFEILE
+========================================= */
+
+.home-slider-arrow {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 5;
+
+    width: 46px;
+    height: 46px;
+
+    border: 1px solid var(--kb-border);
+    border-radius: 50%;
+
+    background: rgba(23, 23, 24, 0.92);
+
+    color: var(--kb-text);
+
+    font-family: Arial, sans-serif;
+    font-size: 34px;
+    line-height: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.35);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.home-slider-arrow:hover {
+    background: #222223;
+}
+
+
+.home-slider-prev {
+    left: 15px;
+}
+
+
+.home-slider-next {
+    right: 15px;
+}
+
+
+/* =========================================
+   SLIDER PUNKTE
+========================================= */
+
+.home-slider-dots {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+
+.home-slider-dot {
+    width: 9px;
+    height: 9px;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: #555;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.home-slider-dot.active {
+    background: var(--kb-accent);
+
+    transform: scale(1.25);
+}
+
+
+/* =========================================
+   SLIDER MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .home-slider-arrow {
+        width: 40px;
+        height: 40px;
+
+        font-size: 29px;
+    }
+
+
+    .home-slider-prev {
+        left: 10px;
+    }
+
+
+    .home-slider-next {
+        right: 10px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .home-slider-arrow {
+        width: 36px;
+        height: 36px;
+
+        font-size: 27px;
+    }
+
+
+    .home-search input {
+        padding-right: 58px;
+    }
+
+}
+
+/* =========================================
+   SLIDER-BILDER DESKTOP
+   Komplettes Bild ohne Abschneiden
+========================================= */
+
+@media (min-width: 801px) {
+
+    .home-slider-track .home-recipe-image {
+        height: 500px;
+        background: var(--kb-card);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .home-slider-track .home-recipe-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
 }

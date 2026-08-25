@@ -3631,5 +3631,150 @@ related: ["45", "7", "20"],
     ]
 },
 
+{
+    id: "62",
+    title: "Saftiger Zwetschgenkuchen",
+    category: ["Vegetarisch", "süßes Gebäck"],
+    image: "images/zwetschgenkuchen.jpeg",
+
+    time: {
+        preparation: "25 min",
+        rising: "1 Std",
+        baking: "35 min",
+        cooling: "30 min",
+        total: "ca. 2 Std 30 min"
+    },
+
+    related: ["1", "3", "50"],
+
+    portions: "9 große Stücke",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Saftiger Zwetschgenkuchen mit dünnem Boden, saftigem Fruchtbelag und dicker Streuselschicht.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "Boden": [
+            "250g Mehl (Type 405)",
+            "45g Zucker",
+            "1 Pck. Trockenhefe",
+            "3g Salz",
+            "130ml lauwarme Milch <i>(ca. 30°C)</i>",
+            "1 Ei",
+            "50g weiche Butter"
+        ],
+
+        "Belag": [
+            "750g Zwetschgen"
+        ],
+
+        "Streusel": [
+            "300g Mehl (Type 405)",
+            "100g Zucker",
+            "1 Prise Salz",
+            "200g kalte Butter"
+        ],
+
+        "Zuckerguss": [
+            "100g Puderzucker",
+            "ca. 2 EL Wasser"
+        ]
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+
+        "Für den Boden Mehl, Zucker, Trockenhefe und Salz in einer Rührschüssel vermengen. In der Mitte eine Mulde formen. Das Ei und die lauwarme Milch hineingeben und auf mittlerer Stufe etwa 8 Minuten zu einem einigermaßen glatten Teig kneten.",
+
+        "Die weiche Butter in kleine Stücke schneiden, nach und nach zum Teig geben und weitere ca. 5 Minuten auf mittlerer Stufe kneten, bis ein glatter, elastischer und leicht klebriger Teig entsteht. Eine Schüssel leicht einölen, den Teig mit einer Teigkarte oder einem Löffel in die Schüssel geben, abdecken und bei Raumtemperatur etwa 1 Stunde ruhen lassen, bis er sein Volumen ungefähr verdoppelt hat.",
+
+        "Währenddessen für die Streusel Mehl, Zucker und Salz in einer großen Schüssel vermengen. Die kalte Butter in kleine Stücke schneiden, dazugeben und mit den Händen zu groben Streuseln verkneten. Anschließend in den Kühlschrank stellen.",
+
+        "Nach der Ruhezeit den Ofen auf 180 Grad Ober-/Unterhitze vorheizen und eine 28 × 28 cm große Form mit Backpapier auslegen. Den aufgegangenen Teig mit etwas Mehl bestäuben und mit bemehlten Händen gleichmäßig in die Form drücken. Anschließend weitere 10-15 Minuten ruhen lassen.",
+
+        "In der Zwischenzeit die Zwetschgen waschen, entsteinen, Stängel entfernen und das Fruchtfleisch halbieren.",
+
+        "Die Zwetschgen dicht an dicht und gleichmäßig mit der Schnittfläche nach oben auf dem Hefeboden verteilen. <b>(Nicht andrücken!)</b> Anschließend die kalten Streusel großzügig darüberstreuen.",
+
+        "Den Kuchen im vorgeheizten Backofen auf mittlerer Schiene etwa 35-40 Minuten backen, bis die Streusel goldbraun sind. Den Kuchen aus dem Ofen nehmen und etwa 30 Minuten abkühlen lassen.",
+
+        "Für den Zuckerguss den Puderzucker mit zunächst 2 EL Wasser zu einer dickflüssigen Masse verrühren. Falls nötig, tropfenweise weiteres Wasser hinzufügen. Den Zuckerguss anschließend in dünnen Linien über dem Kuchen verteilen und nach Belieben vollständig trocknen lassen oder gleich servieren."
+    ]
+},
+
+{
+    id: "63",
+    title: "Honigmelonensalat",
+    category: ["Salate"],
+    image: "images/honigmelonensalat.jpeg",
+
+    time: {
+        preparation: "15 min",
+        total: "15 min"
+    },
+
+    related: ["5", "55", "60"],
+
+    portions: "8 Portionen",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Süße Honigmelone mit knackigen Pinienkernen, salzigem Schinken, frischem Rucola und cremigem Mozzarella.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "": [
+            "1 Honigmelone (ca. 2,9kg)",
+            "200g Serrano-Rohschinken (z.B. Jamón)",
+            "2 Pck. Mini-Mozzarella (à 250g)",
+            "60g Rucola",
+            "30g Parmesan",
+            "20g Pinienkerne",
+            "Balsamicocreme",
+            "Salz",
+            "Pfeffer"
+        ],
+
+        "Beilage": [
+            "Ciabatta"
+        ]
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+
+        {
+            text: "Die Pinienkerne in einer Pfanne ohne Öl unter Schwenken kurz goldbraun anrösten, bis sie duften. Aus der Pfanne nehmen und beiseitestellen."
+        },
+
+        {
+            text: "Die Honigmelone halbieren, die Kerne mit einem Löffel entfernen, jede Hälfte erneut vierteln, jedes Viertel ebenfalls vierteln und in ca. 1-2 cm dicke Stücke schneiden.",
+            images: [
+                "images/honigmelone-schneiden.jpeg"
+            ]
+        },
+
+        {
+            text: "Den Rucola waschen, abtropfen lassen, gut abtrocknen und nach Belieben etwas kleiner zupfen."
+        },
+
+        {
+            text: "Die Mozzarellakugeln abgießen, halbieren und zusammen mit dem Rucola unter die Honigmelone heben. Mit Salz und Pfeffer abschmecken."
+        },
+
+        {
+            text: "Den Schinken in kleinere Stücke zupfen und den Parmesan klein hobeln. Den Salat mit einem Teil des Schinkens, dem Parmesan und einem Teil der Pinienkerne toppen."
+        },
+
+        {
+            text: "Etwas Balsamicocreme darübergeben und mit dem restlichen Schinken, den restlichen Pinienkernen und etwas Balsamicocreme servieren."
+        }
+
+    ]
+},
+
 ];
 module.exports = { RECIPES };

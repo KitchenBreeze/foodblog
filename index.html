@@ -5,19 +5,35 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
 <meta
     name="description"
     content="KitchenBreeze – einfache, selbstgemachte Rezepte für jeden Tag."
 >
 
-<title>KitchenBreeze – Selbst gemacht schmeckt einfach besser.</title>
+<title>
+    KitchenBreeze – Selbst gemacht schmeckt einfach besser.
+</title>
 
-<link rel="icon" type="image/png" href="facion.png">
-<link rel="apple-touch-icon" href="facion.png">
+<link
+    rel="icon"
+    type="image/png"
+    href="facion.png"
+>
 
-<link rel="stylesheet" href="home.css">
+<link
+    rel="apple-touch-icon"
+    href="facion.png"
+>
+
+<link
+    rel="stylesheet"
+    href="home.css"
+>
 
 <script src="recipes.js"></script>
 
@@ -62,17 +78,23 @@
     </div>
 
 
-    <a href="index.html" class="active">
+    <a
+        href="index.html"
+        class="active"
+    >
         Startseite
     </a>
+
 
     <a href="rezepte.html">
         Rezepte
     </a>
 
+
     <a href="zutatenfinder.html">
         Zutatenfinder
     </a>
+
 
     <a href="favoriten.html">
         Favoriten
@@ -133,7 +155,10 @@
             id="homeSearch"
         >
 
-            <span class="search-icon">
+            <span
+                class="search-icon"
+                aria-hidden="true"
+            >
                 ⌕
             </span>
 
@@ -145,6 +170,17 @@
                 autocomplete="off"
                 aria-label="Rezepte durchsuchen"
             >
+
+
+            <button
+                type="button"
+                class="home-search-clear"
+                id="searchClear"
+                aria-label="Suche löschen"
+                title="Suche löschen"
+            >
+                ×
+            </button>
 
         </form>
 
@@ -171,6 +207,10 @@
 
 <!-- =========================================
      SUCHERGEBNISSE
+     
+     Dieser Bereich ist standardmäßig leer/
+     unsichtbar und wird erst bei einer Suche
+     aktiviert.
 ========================================= -->
 
 <section
@@ -251,7 +291,9 @@
     <div class="home-category-grid">
 
 
-        <!-- ALLE REZEPTE -->
+        <!-- =================================
+             ALLE REZEPTE
+        ================================== -->
 
         <a
             href="rezepte.html"
@@ -278,7 +320,9 @@
 
 
 
-        <!-- VEGETARISCH -->
+        <!-- =================================
+             VEGETARISCH
+        ================================== -->
 
         <a
             href="rezepte.html?category=Vegetarisch"
@@ -305,7 +349,9 @@
 
 
 
-        <!-- VEGAN -->
+        <!-- =================================
+             VEGAN
+        ================================== -->
 
         <a
             href="rezepte.html?category=Vegan"
@@ -332,40 +378,39 @@
 
 
 
-        <!-- SCHNELL -->
+<!-- =================================
+     SCHNELL
+================================= -->
 
-        <a
-            href="rezepte.html?quick=true"
-            class="home-category-card category-quick"
-        >
+<a
+    href="rezepte.html?quick=true"
+    class="home-category-card category-quick"
+>
 
-            <div class="category-content">
+    <div class="category-content">
 
-                <span>
-                    Schnell & einfach
-                </span>
+        <span>
+            Schnell & einfach
+        </span>
 
-                <h3>
-                    Wenn es schnell gehen soll
-                </h3>
+        <h3>
+            In 45 Minuten auf dem Tisch
+        </h3>
 
-                <p>
-                    Leckere Gerichte ohne lange Wartezeit.
-                </p>
-
-            </div>
-
-        </a>
-
+        <p>
+            Leckere Rezepte mit einer Gesamtzeit von höchstens 45 Minuten.
+        </p>
 
     </div>
+
+</a>
 
 </section>
 
 
 
 <!-- =========================================
-     NEUESTE REZEPTE
+     NEUESTE REZEPTE – SLIDER
 ========================================= -->
 
 <section class="home-latest">
@@ -389,17 +434,70 @@
 
 
     <div
-        class="home-recipe-grid"
-        id="latestRecipes"
+        class="home-slider"
+        id="latestSlider"
+    >
+
+
+        <!-- VORHERIGES -->
+
+        <button
+            type="button"
+            class="home-slider-arrow home-slider-prev"
+            id="sliderPrev"
+            aria-label="Vorheriges Rezept"
+        >
+            ‹
+        </button>
+
+
+
+        <!-- SLIDER FENSTER -->
+
+        <div class="home-slider-window">
+
+            <div
+                class="home-slider-track"
+                id="latestRecipes"
+            >
+            </div>
+
+        </div>
+
+
+
+        <!-- NÄCHSTES -->
+
+        <button
+            type="button"
+            class="home-slider-arrow home-slider-next"
+            id="sliderNext"
+            aria-label="Nächstes Rezept"
+        >
+            ›
+        </button>
+
+
+    </div>
+
+
+
+    <!-- PUNKTE -->
+
+    <div
+        class="home-slider-dots"
+        id="sliderDots"
     >
     </div>
 
 
 
+    <!-- ALLE REZEPTE -->
+
     <div class="home-more">
 
         <a href="rezepte.html">
-            Alle Rezepte ansehen
+            Alle Rezepte anzeigen
         </a>
 
     </div>
@@ -408,9 +506,6 @@
 
 
 </div>
-
-
-</main>
 
 
 
@@ -434,7 +529,6 @@
         </p>
 
     </div>
-
 
 
     <div class="footer-links">
@@ -465,13 +559,21 @@
 ========================================= */
 
 const menuBtn =
-    document.getElementById("menuBtn");
+    document.getElementById(
+        "menuBtn"
+    );
+
 
 const sideMenu =
-    document.getElementById("sideMenu");
+    document.getElementById(
+        "sideMenu"
+    );
+
 
 const overlay =
-    document.getElementById("overlay");
+    document.getElementById(
+        "overlay"
+    );
 
 
 menuBtn.addEventListener(
@@ -479,16 +581,20 @@ menuBtn.addEventListener(
     () => {
 
         const open =
-            sideMenu.classList.toggle("open");
+            sideMenu.classList.toggle(
+                "open"
+            );
+
 
         overlay.classList.toggle(
             "show",
             open
         );
 
+
         menuBtn.setAttribute(
             "aria-expanded",
-            open
+            String(open)
         );
 
     }
@@ -499,9 +605,15 @@ overlay.addEventListener(
     "click",
     () => {
 
-        sideMenu.classList.remove("open");
+        sideMenu.classList.remove(
+            "open"
+        );
 
-        overlay.classList.remove("show");
+
+        overlay.classList.remove(
+            "show"
+        );
+
 
         menuBtn.setAttribute(
             "aria-expanded",
@@ -519,7 +631,7 @@ overlay.addEventListener(
 
 function createSlug(title) {
 
-    return title
+    return String(title || "")
         .toLowerCase()
         .replaceAll("ä", "ae")
         .replaceAll("ö", "oe")
@@ -548,6 +660,30 @@ const latestContainer =
     );
 
 
+const latestSlider =
+    document.getElementById(
+        "latestSlider"
+    );
+
+
+const sliderDots =
+    document.getElementById(
+        "sliderDots"
+    );
+
+
+const sliderPrev =
+    document.getElementById(
+        "sliderPrev"
+    );
+
+
+const sliderNext =
+    document.getElementById(
+        "sliderNext"
+    );
+
+
 const searchForm =
     document.getElementById(
         "homeSearch"
@@ -557,6 +693,12 @@ const searchForm =
 const searchInput =
     document.getElementById(
         "searchInput"
+    );
+
+
+const searchClear =
+    document.getElementById(
+        "searchClear"
     );
 
 
@@ -598,68 +740,335 @@ const ingredientButton =
 
 
 /* =========================================
-   NEUESTE REZEPTE
+   SLIDER
 ========================================= */
+
+let currentSlide = 0;
+
+let sliderTimer = null;
+
 
 if (
     typeof RECIPES !== "undefined" &&
-    latestContainer
+    latestContainer &&
+    latestSlider &&
+    sliderDots
 ) {
 
-    RECIPES
-        .slice()
-        .sort(
-            (a, b) =>
-                Number(b.id) -
-                Number(a.id)
-        )
-        .slice(0, 6)
-        .forEach(
-            recipe => {
 
-                latestContainer.innerHTML += `
+    /* =====================================
+       DIE 5 NEUESTEN REZEPTE
+    ====================================== */
 
-                    <a
-                        class="home-recipe-card"
-                        href="recipes/${createSlug(recipe.title)}.html"
-                    >
-
-                        <div class="home-recipe-image">
-
-                            <img
-                                src="${recipe.image}"
-                                alt="${recipe.title}"
-                                loading="lazy"
-                            >
-
-                        </div>
+    const latestRecipes =
+        RECIPES
+            .slice()
+            .sort(
+                (a, b) =>
+                    Number(b.id) -
+                    Number(a.id)
+            )
+            .slice(0, 5);
 
 
-                        <div class="home-recipe-content">
 
-                            <h3>
-                                ${recipe.title}
-                            </h3>
+    /* =====================================
+       REZEPTKARTEN ERSTELLEN
+    ====================================== */
 
-                            <p>
-                                ${recipe.description}
-                            </p>
+    latestRecipes.forEach(
+        recipe => {
 
-                        </div>
+            latestContainer.innerHTML += `
 
-                    </a>
+                <a
+                    class="home-recipe-card"
+                    href="recipes/${createSlug(recipe.title)}.html"
+                >
 
-                `;
+                    <div class="home-recipe-image">
+
+                        <img
+                            src="${recipe.image}"
+                            alt="${recipe.title}"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="home-recipe-content">
+
+                        <h3>
+                            ${recipe.title}
+                        </h3>
+
+                        <p>
+                            ${recipe.description || ""}
+                        </p>
+
+                    </div>
+
+                </a>
+
+            `;
+
+        }
+    );
+
+
+
+    /* =====================================
+       PUNKTE ERSTELLEN
+    ====================================== */
+
+    latestRecipes.forEach(
+        (recipe, index) => {
+
+            const dot =
+                document.createElement(
+                    "button"
+                );
+
+
+            dot.type = "button";
+
+
+            dot.className =
+                "home-slider-dot";
+
+
+            dot.setAttribute(
+                "aria-label",
+                `Rezept ${index + 1} anzeigen`
+            );
+
+
+            dot.addEventListener(
+                "click",
+                () => {
+
+                    showSlide(index);
+
+                    restartSlider();
+
+                }
+            );
+
+
+            sliderDots.appendChild(
+                dot
+            );
+
+        }
+    );
+
+
+
+    /* =====================================
+       SLIDE ANZEIGEN
+    ====================================== */
+
+    function showSlide(index) {
+
+        if (
+            latestRecipes.length === 0
+        ) {
+            return;
+        }
+
+
+        if (index < 0) {
+
+            index =
+                latestRecipes.length - 1;
+
+        }
+
+
+        if (
+            index >=
+            latestRecipes.length
+        ) {
+
+            index = 0;
+
+        }
+
+
+        currentSlide = index;
+
+
+        latestContainer.style.transform =
+            `translateX(-${currentSlide * 100}%)`;
+
+
+        const dots =
+            document.querySelectorAll(
+                ".home-slider-dot"
+            );
+
+
+        dots.forEach(
+            (dot, dotIndex) => {
+
+                dot.classList.toggle(
+                    "active",
+                    dotIndex === currentSlide
+                );
 
             }
         );
+
+    }
+
+
+
+    /* =====================================
+       NÄCHSTES REZEPT
+    ====================================== */
+
+    function nextSlide() {
+
+        showSlide(
+            currentSlide + 1
+        );
+
+    }
+
+
+
+    /* =====================================
+       VORHERIGES REZEPT
+    ====================================== */
+
+    function previousSlide() {
+
+        showSlide(
+            currentSlide - 1
+        );
+
+    }
+
+
+
+    /* =====================================
+       PFEIL NÄCHSTES
+    ====================================== */
+
+    sliderNext.addEventListener(
+        "click",
+        () => {
+
+            nextSlide();
+
+            restartSlider();
+
+        }
+    );
+
+
+
+    /* =====================================
+       PFEIL VORHERIGES
+    ====================================== */
+
+    sliderPrev.addEventListener(
+        "click",
+        () => {
+
+            previousSlide();
+
+            restartSlider();
+
+        }
+    );
+
+
+
+    /* =====================================
+       AUTOMATISCHER WECHSEL
+       ALLE 5 SEKUNDEN
+    ====================================== */
+
+    function startSlider() {
+
+        clearInterval(
+            sliderTimer
+        );
+
+
+        sliderTimer =
+            setInterval(
+                () => {
+
+                    nextSlide();
+
+                },
+                5000
+            );
+
+    }
+
+
+
+    /* =====================================
+       SLIDER NEU STARTEN
+    ====================================== */
+
+    function restartSlider() {
+
+        clearInterval(
+            sliderTimer
+        );
+
+        startSlider();
+
+    }
+
+
+
+    /* =====================================
+       START
+    ====================================== */
+
+    showSlide(0);
+
+    startSlider();
+
+
+
+    /* =====================================
+       PAUSE BEI MOUSEOVER
+    ====================================== */
+
+    latestSlider.addEventListener(
+        "mouseenter",
+        () => {
+
+            clearInterval(
+                sliderTimer
+            );
+
+        }
+    );
+
+
+    latestSlider.addEventListener(
+        "mouseleave",
+        () => {
+
+            startSlider();
+
+        }
+    );
 
 }
 
 
 
 /* =========================================
-   REZEPTKARTE ERSTELLEN
+   REZEPTKARTE FÜR SUCHERGEBNISSE
 ========================================= */
 
 function createRecipeCard(recipe) {
@@ -689,7 +1098,7 @@ function createRecipeCard(recipe) {
                 </h3>
 
                 <p>
-                    ${recipe.description}
+                    ${recipe.description || ""}
                 </p>
 
             </div>
@@ -703,7 +1112,7 @@ function createRecipeCard(recipe) {
 
 
 /* =========================================
-   SUCHE
+   SUCHERGEBNISSE ANZEIGEN
 ========================================= */
 
 function showSearchResults() {
@@ -717,7 +1126,7 @@ function showSearchResults() {
 
     /* =====================================
        SUCHFELD LEER
-    ===================================== */
+    ====================================== */
 
     if (!query) {
 
@@ -746,6 +1155,11 @@ function showSearchResults() {
             "none";
 
 
+        searchClear.classList.remove(
+            "visible"
+        );
+
+
         return;
 
     }
@@ -754,7 +1168,7 @@ function showSearchResults() {
 
     /* =====================================
        SUCHE AKTIV
-    ===================================== */
+    ====================================== */
 
     searchResults.classList.add(
         "active"
@@ -773,89 +1187,99 @@ function showSearchResults() {
         "none";
 
 
+    searchClear.classList.add(
+        "visible"
+    );
+
+
 
     /* =====================================
        REZEPTE FILTERN
-    ===================================== */
+    ====================================== */
 
     const results =
         typeof RECIPES !== "undefined"
-            ? RECIPES.filter(recipe => {
+            ? RECIPES.filter(
+                recipe => {
 
-                const title =
-                    String(
-                        recipe.title || ""
-                    ).toLowerCase();
-
-
-                const description =
-                    String(
-                        recipe.description || ""
-                    ).toLowerCase();
-
-
-                const category =
-                    Array.isArray(
-                        recipe.category
-                    )
-                        ? recipe.category
-                            .join(" ")
-                            .toLowerCase()
-                        : String(
-                            recipe.category || ""
+                    const title =
+                        String(
+                            recipe.title || ""
                         ).toLowerCase();
 
 
-                let ingredients = "";
+                    const description =
+                        String(
+                            recipe.description || ""
+                        ).toLowerCase();
 
 
-                if (
-                    Array.isArray(
+                    const category =
+                        Array.isArray(
+                            recipe.category
+                        )
+                            ? recipe.category
+                                .join(" ")
+                                .toLowerCase()
+                            : String(
+                                recipe.category || ""
+                            ).toLowerCase();
+
+
+                    let ingredients = "";
+
+
+                    if (
+                        Array.isArray(
+                            recipe.ingredients
+                        )
+                    ) {
+
+                        ingredients =
+                            recipe.ingredients
+                                .join(" ")
+                                .toLowerCase();
+
+                    }
+                    else if (
                         recipe.ingredients
-                    )
-                ) {
+                    ) {
 
-                    ingredients =
-                        recipe.ingredients
+                        ingredients =
+                            Object.values(
+                                recipe.ingredients
+                            )
+                            .flat()
                             .join(" ")
                             .toLowerCase();
 
-                } else if (
-                    recipe.ingredients
-                ) {
+                    }
 
-                    ingredients =
-                        Object.values(
-                            recipe.ingredients
-                        )
-                        .flat()
-                        .join(" ")
-                        .toLowerCase();
+
+                    return (
+                        title.includes(query) ||
+                        description.includes(query) ||
+                        category.includes(query) ||
+                        ingredients.includes(query)
+                    );
 
                 }
-
-
-                return (
-                    title.includes(query) ||
-                    description.includes(query) ||
-                    category.includes(query) ||
-                    ingredients.includes(query)
-                );
-
-            })
+            )
             : [];
 
 
 
     /* =====================================
        ERGEBNISSE AUSGEBEN
-    ===================================== */
+    ====================================== */
 
     searchResultsGrid.innerHTML =
         results
             .map(
                 recipe =>
-                    createRecipeCard(recipe)
+                    createRecipeCard(
+                        recipe
+                    )
             )
             .join("");
 
@@ -863,14 +1287,17 @@ function showSearchResults() {
 
     /* =====================================
        KEINE ERGEBNISSE
-    ===================================== */
+    ====================================== */
 
-    if (results.length === 0) {
+    if (
+        results.length === 0
+    ) {
 
         noSearchResults.style.display =
             "block";
 
-    } else {
+    }
+    else {
 
         noSearchResults.style.display =
             "none";
@@ -891,6 +1318,8 @@ searchForm.addEventListener(
 
         event.preventDefault();
 
+        showSearchResults();
+
     }
 );
 
@@ -903,6 +1332,48 @@ searchForm.addEventListener(
 searchInput.addEventListener(
     "input",
     showSearchResults
+);
+
+
+
+/* =========================================
+   SUCHFELD LÖSCHEN
+========================================= */
+
+searchClear.addEventListener(
+    "click",
+    () => {
+
+        searchInput.value = "";
+
+        searchInput.focus();
+
+        showSearchResults();
+
+    }
+);
+
+
+
+/* =========================================
+   ESC = SUCHE LÖSCHEN
+========================================= */
+
+searchInput.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            searchInput.value = "";
+
+            showSearchResults();
+
+        }
+
+    }
 );
 
 

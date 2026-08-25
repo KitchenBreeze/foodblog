@@ -809,20 +809,22 @@ if (
 
                     <div class="home-recipe-content">
 
-                        <h3>
-                            ${recipe.title}
-                        </h3>
+    <h3>
+        ${recipe.title}
+    </h3>
 
-                        <p>
-                            ${
-                                recipe.totalTime ||
-                                recipe.time ||
-                                recipe.duration ||
-                                ""
-                            }
-                        </p>
+    <p>
+        Gesamtzeit:
+        ${
+            recipe.totalTime ||
+            recipe.time ||
+            recipe.duration ||
+            ""
+        }
+        Minuten
+    </p>
 
-                    </div>
+</div>
 
                 </a>
 

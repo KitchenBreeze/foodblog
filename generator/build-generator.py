@@ -20,7 +20,7 @@ content = content.replace(
 
 eval(content);
 
-console.log(JSON.stringify(RECIPES));
+console.log(JSON.stringify(global.RECIPES));
 """
 
 
@@ -32,17 +32,25 @@ result = subprocess.run(
 
 
 if result.returncode != 0:
-    print("❌ Fehler beim Auslesen von recipes.js:")
+    print("FEHLER beim Auslesen von recipes.js:")
     print(result.stderr)
-    exit(1)
+    raise SystemExit(1)
 
 
 try:
     recipes = json.loads(result.stdout)
 except json.JSONDecodeError:
-    print("❌ recipes.js konnte nicht als JSON gelesen werden.")
+    print("FEHLER: recipes.js konnte nicht als JSON gelesen werden.")
     print(result.stdout)
-    exit(1)
+    raise SystemExit(1)
+
+
+print()
+print("========================================")
+print("RECIPES ERFOLGREICH GELADEN")
+print(f"{len(recipes)} Rezepte gefunden.")
+print("========================================")
+print()
 
 
 # ============================================================
@@ -58,7 +66,7 @@ os.makedirs("recipes", exist_ok=True)
 
 def create_slug(title):
 
-    slug = title.lower()
+    slug = str(title).lower()
 
     slug = (
         slug
@@ -80,7 +88,13 @@ def create_slug(title):
         slug
     )
 
-    return slug
+    slug = re.sub(
+        r"-+",
+        "-",
+        slug
+    )
+
+    return slug.strip("-")
 
 
 # ============================================================
@@ -92,14 +106,18 @@ def replace_recipe_links(text):
     if not isinstance(text, str):
         return text
 
-    pattern = r"\[\[(.*?)\|(.*?)\]\]"
+    pattern = r"\[\[([^|\]]+)\|([^\]]+)\]\]"
 
     def replace(match):
 
-        slug = match.group(1)
-        title = match.group(2)
+        slug = match.group(1).strip()
+        title = match.group(2).strip()
 
-        return f'<a href="{slug}.html">{title}</a>'
+        return (
+            f'<a href="{slug}.html">'
+            f'{title}'
+            f'</a>'
+        )
 
     return re.sub(
         pattern,
@@ -110,7 +128,6 @@ def replace_recipe_links(text):
 
 # ============================================================
 # Alle Rezepte als JSON vorbereiten
-# Für "Das könnte dich auch interessieren"
 # ============================================================
 
 all_recipes_data = json.dumps(
@@ -121,7 +138,7 @@ all_recipes_data = json.dumps(
 
 
 # ============================================================
-# Template einmal laden
+# Template laden
 # ============================================================
 
 template_path = "templates/recipe-template.html"
@@ -129,10 +146,10 @@ template_path = "templates/recipe-template.html"
 
 if not os.path.exists(template_path):
 
-    print("❌ Template nicht gefunden:")
+    print("FEHLER: Template nicht gefunden:")
     print(template_path)
 
-    exit(1)
+    raise SystemExit(1)
 
 
 with open(
@@ -145,10 +162,36 @@ with open(
 
 
 # ============================================================
+# Prüfen, ob Platzhalter vorhanden ist
+# ============================================================
+
+if "<!-- RECIPE_DATA -->" not in template_original:
+
+    print(
+        "FEHLER: <!-- RECIPE_DATA --> "
+        "wurde im recipe-template.html nicht gefunden."
+    )
+
+    raise SystemExit(1)
+
+
+# ============================================================
 # Jedes Rezept erzeugen
 # ============================================================
 
 for recipe in recipes:
+
+    # --------------------------------------------------------
+    # Titel prüfen
+    # --------------------------------------------------------
+
+    if "title" not in recipe:
+
+        print("FEHLER: Ein Rezept besitzt keinen Titel.")
+        print(recipe)
+
+        raise SystemExit(1)
+
 
     # --------------------------------------------------------
     # Slug
@@ -176,7 +219,13 @@ for recipe in recipes:
 
         image = recipe_copy["image"]
 
-        if image and not image.startswith("../"):
+        if (
+            isinstance(image, str)
+            and image
+            and not image.startswith("../")
+            and not image.startswith("http://")
+            and not image.startswith("https://")
+        ):
 
             recipe_copy["image"] = (
                 "../" + image
@@ -202,8 +251,11 @@ for recipe in recipes:
             for img in step["images"]:
 
                 if (
-                    img
+                    isinstance(img, str)
+                    and img
                     and not img.startswith("../")
+                    and not img.startswith("http://")
+                    and not img.startswith("https://")
                 ):
 
                     new_images.append(
@@ -233,13 +285,12 @@ for recipe in recipes:
 
         for section, items in ingredients.items():
 
-            recipe_copy["ingredients"][section] = [
+            if isinstance(items, list):
 
-                replace_recipe_links(item)
-
-                for item in items
-
-            ]
+                recipe_copy["ingredients"][section] = [
+                    replace_recipe_links(item)
+                    for item in items
+                ]
 
 
     elif isinstance(
@@ -248,11 +299,8 @@ for recipe in recipes:
     ):
 
         recipe_copy["ingredients"] = [
-
             replace_recipe_links(item)
-
             for item in ingredients
-
         ]
 
 
@@ -262,13 +310,15 @@ for recipe in recipes:
 
     if "tips" in recipe_copy:
 
-        recipe_copy["tips"] = [
+        if isinstance(
+            recipe_copy["tips"],
+            list
+        ):
 
-            replace_recipe_links(tip)
-
-            for tip in recipe_copy["tips"]
-
-        ]
+            recipe_copy["tips"] = [
+                replace_recipe_links(tip)
+                for tip in recipe_copy["tips"]
+            ]
 
 
     # --------------------------------------------------------
@@ -280,7 +330,6 @@ for recipe in recipes:
     )
 
 
-    print("")
     print("========================================")
     print("Verarbeite Rezept:")
     print(recipe["title"])
@@ -308,7 +357,7 @@ for recipe in recipes:
 
 
     # --------------------------------------------------------
-    # RECIPE_DATA + RECIPES ins Template einsetzen
+    # RECIPE_DATA + RECIPES einsetzen
     # --------------------------------------------------------
 
     replacement = f"""
@@ -319,19 +368,10 @@ const RECIPES = {all_recipes_data};
 """
 
 
-    if "<!-- RECIPE_DATA -->" not in template:
-
-        print(
-            "❌ FEHLER: <!-- RECIPE_DATA --> "
-            "wurde im Template nicht gefunden!"
-        )
-
-        exit(1)
-
-
     template = template.replace(
         "<!-- RECIPE_DATA -->",
-        replacement
+        replacement,
+        1
     )
 
 
@@ -349,27 +389,25 @@ const RECIPES = {all_recipes_data};
 
 
     # --------------------------------------------------------
-    # Prüfen, ob Datei wirklich existiert
+    # Prüfen
     # --------------------------------------------------------
 
     if os.path.exists(filename):
 
-        print("✅ ERSTELLT:")
+        print("ERSTELLT:")
         print(
             os.path.abspath(filename)
         )
+        print()
 
     else:
 
-        print(
-            "❌ FEHLER – Datei wurde NICHT erstellt:"
-        )
-
+        print("FEHLER: Datei wurde nicht erstellt:")
         print(
             os.path.abspath(filename)
         )
 
-        exit(1)
+        raise SystemExit(1)
 
 
 # ============================================================
@@ -377,23 +415,13 @@ const RECIPES = {all_recipes_data};
 # ============================================================
 
 sitemap_lines = [
-
     '<?xml version="1.0" encoding="UTF-8"?>',
-
-    '',
-
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-
-    '',
-
-    '    <url>',
-
-    '        <loc>https://kitchenbreeze.github.io/foodblog/</loc>',
-
-    '    </url>',
-
-    ''
-
+    "",
+    "    <url>",
+    "        <loc>https://kitchenbreeze.github.io/foodblog/</loc>",
+    "    </url>",
+    ""
 ]
 
 
@@ -409,24 +437,23 @@ for recipe in recipes:
 
 
     sitemap_lines.extend([
-
-        '    <url>',
-
+        "    <url>",
         (
-            '        <loc>'
-            f'https://kitchenbreeze.github.io/foodblog/recipes/{slug}.html'
-            '</loc>'
+            "        <loc>"
+            f"https://kitchenbreeze.github.io/foodblog/recipes/{slug}.html"
+            "</loc>"
         ),
-
-        '    </url>',
-
-        ''
-
+        "    </url>",
+        ""
     ])
 
 
+# ============================================================
+# Sitemap schließen
+# ============================================================
+
 sitemap_lines.append(
-    '</urlset>'
+    "</urlset>"
 )
 
 
@@ -447,13 +474,18 @@ with open(
     )
 
 
-print("")
+# ============================================================
+# FERTIG
+# ============================================================
+
+print()
 print("========================================")
-print("✅ SITEMAP ERSTELLT")
+print("SITEMAP ERSTELLT")
 print("sitemap.xml")
 print("========================================")
-print("")
-print("✅ GENERATOR ERFOLGREICH ABGESCHLOSSEN")
-print(
-    f"{len(recipes)} Rezepte verarbeitet."
-)
+print()
+
+print("========================================")
+print("GENERATOR ERFOLGREICH ABGESCHLOSSEN")
+print(f"{len(recipes)} Rezepte verarbeitet.")
+print("========================================")

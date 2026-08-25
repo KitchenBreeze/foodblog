@@ -3,37 +3,47 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<meta
-    name="description"
-    content="Alle KitchenBreeze Rezepte – einfache, selbstgemachte Rezepte zum Kochen und Backen."
->
+    <meta
+        name="description"
+        content="Alle KitchenBreeze Rezepte – einfache, selbstgemachte Rezepte zum Kochen und Backen."
+    >
 
-<title>Rezepte – KitchenBreeze</title>
+    <title>Rezepte – KitchenBreeze</title>
 
-<link
-    rel="icon"
-    type="image/png"
-    href="facion.png"
->
+    <link
+        rel="icon"
+        type="image/png"
+        href="facion.png"
+    >
 
-<link
-    rel="stylesheet"
-    href="rezepte.css"
->
+    <link
+        rel="stylesheet"
+        href="rezepte.css"
+    >
 
 </head>
 
+
 <body>
 
+
+<!-- =========================================
+     ZURÜCK
+========================================= -->
+
 <div class="recipes-back">
-    <a href="index.html">← Zur Übersicht</a>
+
+    <a href="index.html">
+        ← Zur Übersicht
+    </a>
+
 </div>
 
 
@@ -58,7 +68,6 @@
 </header>
 
 
-
 <main>
 
 
@@ -70,25 +79,23 @@
 
     <div class="recipes-hero-inner">
 
-        
-
         <h1>
             Rezeptsammlung
         </h1>
-
-       
 
     </div>
 
 </section>
 
 
-
 <!-- =========================================
-     SUCHE
+     SUCHE + FILTER
 ========================================= -->
 
 <section class="recipes-tools">
+
+
+    <!-- SUCHE -->
 
     <div class="recipes-search">
 
@@ -107,6 +114,7 @@
     </div>
 
 
+    <!-- FILTER -->
 
     <div class="filter-container">
 
@@ -115,8 +123,13 @@
             id="filterBtn"
             type="button"
         >
+
             Kategorien
-            <span>⌄</span>
+
+            <span>
+                ⌄
+            </span>
+
         </button>
 
 
@@ -124,6 +137,7 @@
             class="filter-dropdown"
             id="filterDropdown"
         >
+
 
             <button
                 class="filter-item active"
@@ -133,72 +147,147 @@
                 Alle
             </button>
 
-            <button class="filter-item" data-cat="Pasta" type="button">
+
+            <button
+                class="filter-item"
+                data-cat="Pasta"
+                type="button"
+            >
                 Pasta
             </button>
 
-            <button class="filter-item" data-cat="Reis" type="button">
+
+            <button
+                class="filter-item"
+                data-cat="Reis"
+                type="button"
+            >
                 Reis
             </button>
 
-            <button class="filter-item" data-cat="Suppen & Eintöpfe" type="button">
+
+            <button
+                class="filter-item"
+                data-cat="Suppen & Eintöpfe"
+                type="button"
+            >
                 Suppen & Eintöpfe
             </button>
 
-            <button class="filter-item" data-cat="Salate" type="button">
+
+            <button
+                class="filter-item"
+                data-cat="Salate"
+                type="button"
+            >
                 Salate
             </button>
 
-            <button class="filter-item" data-cat="Beilagen" type="button">
+
+            <button
+                class="filter-item"
+                data-cat="Beilagen"
+                type="button"
+            >
                 Beilagen
             </button>
 
-            <button class="filter-item" data-cat="Aufstriche & Dips" type="button">
+
+            <button
+                class="filter-item"
+                data-cat="Aufstriche & Dips"
+                type="button"
+            >
                 Aufstriche & Dips
             </button>
 
-            <button class="filter-item" data-cat="Snacks" type="button">
+
+            <button
+                class="filter-item"
+                data-cat="Snacks"
+                type="button"
+            >
                 Snacks
             </button>
 
-            <button class="filter-item" data-cat="süße Hauptgerichte" type="button">
+
+            <button
+                class="filter-item"
+                data-cat="süße Hauptgerichte"
+                type="button"
+            >
                 Süße Hauptgerichte
             </button>
 
-            <button class="filter-item" data-cat="süßes Gebäck" type="button">
+
+            <button
+                class="filter-item"
+                data-cat="süßes Gebäck"
+                type="button"
+            >
                 Süßes Gebäck
             </button>
 
-            <button class="filter-item" data-cat="Ofengerichte" type="button">
+
+            <button
+                class="filter-item"
+                data-cat="Ofengerichte"
+                type="button"
+            >
                 Ofengerichte
             </button>
 
-            <button class="filter-item" data-cat="herzhaftes Gebäck" type="button">
+
+            <button
+                class="filter-item"
+                data-cat="herzhaftes Gebäck"
+                type="button"
+            >
                 Herzhaftes Gebäck
             </button>
 
-            <button class="filter-item" data-cat="Fleisch" type="button">
+
+            <button
+                class="filter-item"
+                data-cat="Fleisch"
+                type="button"
+            >
                 Fleisch
             </button>
 
-            <button class="filter-item" data-cat="Fisch" type="button">
+
+            <button
+                class="filter-item"
+                data-cat="Fisch"
+                type="button"
+            >
                 Fisch
             </button>
 
-            <button class="filter-item" data-cat="Vegetarisch" type="button">
+
+            <button
+                class="filter-item"
+                data-cat="Vegetarisch"
+                type="button"
+            >
                 Vegetarisch
             </button>
 
-            <button class="filter-item" data-cat="Vegan" type="button">
+
+            <button
+                class="filter-item"
+                data-cat="Vegan"
+                type="button"
+            >
                 Vegan
             </button>
+
 
         </div>
 
     </div>
 
 </section>
-
 
 
 <!-- =========================================
@@ -215,9 +304,7 @@
 </section>
 
 
-
 </main>
-
 
 
 <!-- =========================================
@@ -237,26 +324,32 @@
 </footer>
 
 
+<!-- =========================================
+     REZEPTE DATEN
+========================================= -->
 
 <script src="recipes.js"></script>
 
 
 <script>
 
+
 /* =========================================
-   SLUG
+   SLUG ERSTELLEN
 ========================================= */
 
 function createSlug(title) {
 
-    return title
+    return String(title || "")
         .toLowerCase()
         .replaceAll("ä", "ae")
         .replaceAll("ö", "oe")
         .replaceAll("ü", "ue")
         .replaceAll("ß", "ss")
         .replace(/[^a-z0-9\s-]/g, "")
-        .replace(/\s+/g, "-");
+        .replace(/\s+/g, "-")
+        .replace(/-+/g, "-")
+        .replace(/^-|-$/g, "");
 
 }
 
@@ -282,6 +375,19 @@ const filterItems =
 
 
 /* =========================================
+   RECIPES PRÜFEN
+========================================= */
+
+if (typeof RECIPES === "undefined") {
+
+    console.error(
+        "❌ RECIPES ist nicht geladen! recipes.js prüfen!"
+    );
+
+}
+
+
+/* =========================================
    URL AUSLESEN
 ========================================= */
 
@@ -294,8 +400,10 @@ const urlParams =
 const urlCategories =
     urlParams.get("categories");
 
+
 const urlQuick =
     urlParams.get("quick") === "true";
+
 
 const urlSearch =
     urlParams.get("search") || "";
@@ -313,9 +421,23 @@ if (urlCategories) {
     selectedCategories =
         urlCategories
             .split(",")
-            .map(category =>
-                decodeURIComponent(category)
-            )
+            .map(category => {
+
+                try {
+
+                    return decodeURIComponent(
+                        category
+                    );
+
+                }
+
+                catch {
+
+                    return category;
+
+                }
+
+            })
             .filter(Boolean);
 
 }
@@ -342,7 +464,7 @@ if (searchInput) {
 
 
 /* =========================================
-   FILTER BUTTONS AKTIVIEREN
+   FILTER BUTTONS AKTUALISIEREN
 ========================================= */
 
 function updateFilterButtons() {
@@ -352,9 +474,7 @@ function updateFilterButtons() {
         const category =
             item.dataset.cat;
 
-        item.classList.remove(
-            "active"
-        );
+        item.classList.remove("active");
 
 
         if (
@@ -363,9 +483,7 @@ function updateFilterButtons() {
             )
         ) {
 
-            item.classList.add(
-                "active"
-            );
+            item.classList.add("active");
 
         }
 
@@ -373,15 +491,14 @@ function updateFilterButtons() {
 
 
     if (
-        selectedCategories.includes(
-            "all"
-        )
+        selectedCategories.includes("all")
     ) {
 
         const allButton =
             document.querySelector(
                 '[data-cat="all"]'
             );
+
 
         if (allButton) {
 
@@ -396,22 +513,20 @@ function updateFilterButtons() {
 }
 
 
-updateFilterButtons();
-
-
 /* =========================================
    URL AKTUALISIEREN
 ========================================= */
 
 function updateUrl() {
 
+
     const params =
         new URLSearchParams();
 
 
-    /* -----------------------------------------
+    /* -------------------------------------
        KATEGORIEN
-    ----------------------------------------- */
+    ------------------------------------- */
 
     const categories =
         selectedCategories.filter(
@@ -438,9 +553,9 @@ function updateUrl() {
     }
 
 
-    /* -----------------------------------------
+    /* -------------------------------------
        SCHNELLFILTER
-    ----------------------------------------- */
+    ------------------------------------- */
 
     if (urlQuick) {
 
@@ -452,9 +567,9 @@ function updateUrl() {
     }
 
 
-    /* -----------------------------------------
+    /* -------------------------------------
        SUCHE
-    ----------------------------------------- */
+    ------------------------------------- */
 
     const search =
         searchInput
@@ -472,9 +587,9 @@ function updateUrl() {
     }
 
 
-    /* -----------------------------------------
+    /* -------------------------------------
        URL SETZEN
-    ----------------------------------------- */
+    ------------------------------------- */
 
     const query =
         params.toString();
@@ -496,13 +611,14 @@ function updateUrl() {
 
 
 /* =========================================
-   FILTER MENÜ
+   FILTER MENÜ ÖFFNEN / SCHLIESSEN
 ========================================= */
 
 if (
     filterBtn &&
     filterDropdown
 ) {
+
 
     filterBtn.addEventListener(
         "click",
@@ -547,9 +663,11 @@ if (
 
 filterItems.forEach(item => {
 
+
     item.addEventListener(
         "click",
         () => {
+
 
             const category =
                 item.dataset.cat;
@@ -567,7 +685,6 @@ filterItems.forEach(item => {
                     "all"
                 ];
 
-
                 updateFilterButtons();
 
                 updateUrl();
@@ -580,7 +697,7 @@ filterItems.forEach(item => {
 
 
             /* =============================
-               "ALLE" ENTFERNEN
+               ALLE ENTFERNEN
             ============================= */
 
             selectedCategories =
@@ -669,6 +786,7 @@ if (searchInput) {
 ========================================= */
 
 function getTotalMinutes(recipe) {
+
 
     if (
         !recipe ||
@@ -776,6 +894,7 @@ function getTotalMinutes(recipe) {
 
 function getIngredientsText(recipe) {
 
+
     if (
         !recipe ||
         !recipe.ingredients
@@ -835,14 +954,22 @@ function getIngredientsText(recipe) {
 
 function render() {
 
+
     if (
         typeof RECIPES ===
         "undefined"
     ) {
 
         console.error(
-            "RECIPES fehlt! recipes.js prüfen!"
+            "❌ RECIPES fehlt! recipes.js prüfen!"
         );
+
+        return;
+
+    }
+
+
+    if (!grid) {
 
         return;
 
@@ -864,7 +991,6 @@ function render() {
     const filtered =
 
         RECIPES
-
             .slice()
 
 
@@ -884,6 +1010,7 @@ function render() {
             ============================= */
 
             .filter(recipe => {
+
 
                 if (
                     selectedCategories.includes(
@@ -921,6 +1048,7 @@ function render() {
 
             .filter(recipe => {
 
+
                 if (!urlQuick) {
 
                     return true;
@@ -942,6 +1070,7 @@ function render() {
             ============================= */
 
             .filter(recipe => {
+
 
                 if (!search) {
 
@@ -979,7 +1108,10 @@ function render() {
                         ? recipe.category
                             .join(" ")
                             .toLowerCase()
-                        : "";
+                        : String(
+                            recipe.category ||
+                            ""
+                        ).toLowerCase();
 
 
                 return (
@@ -1014,13 +1146,6 @@ function render() {
     /* =====================================
        GRID LEEREN
     ===================================== */
-
-    if (!grid) {
-
-        return;
-
-    }
-
 
     grid.innerHTML = "";
 
@@ -1173,6 +1298,7 @@ function render() {
         !filtered.length
     ) {
 
+
         let message =
             "Versuche eine andere Suche oder Kategorie.";
 
@@ -1212,14 +1338,22 @@ function render() {
 
 
 /* =========================================
+   FILTER AUS URL AKTIVIEREN
+========================================= */
+
+updateFilterButtons();
+
+
+/* =========================================
    START
 ========================================= */
 
 render();
 
+
 </script>
 
 
 </body>
-</html>
 
+</html>

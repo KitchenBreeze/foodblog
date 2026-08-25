@@ -1821,15 +1821,20 @@ body.search-active .home-footer {
 
     .home-slider-track {
         width: 100%;
+        display: flex;
     }
 
     .home-slider-track .home-recipe-card {
         flex: 0 0 100%;
         width: 100%;
-        border: none;
+
+        border: 1px solid var(--kb-border);
         border-radius: 18px;
+
         background: var(--kb-card);
+
         overflow: hidden;
+
         box-shadow: none;
     }
 
@@ -1840,13 +1845,15 @@ body.search-active .home-footer {
 
     .home-slider-track .home-recipe-image {
         width: 100%;
-        height: 280px;
-        aspect-ratio: auto;
-        background: var(--kb-card);
+        height: 300px;
+
         display: flex;
         align-items: center;
         justify-content: center;
+
         overflow: hidden;
+
+        background: var(--kb-card);
     }
 
 
@@ -1857,9 +1864,12 @@ body.search-active .home-footer {
     .home-slider-track .home-recipe-image img {
         width: 100%;
         height: 100%;
+
         display: block;
+
         object-fit: contain;
         object-position: center;
+
         transform: none !important;
     }
 
@@ -1869,7 +1879,8 @@ body.search-active .home-footer {
     ===================================== */
 
     .home-slider-track .home-recipe-content {
-        padding: 18px 12px 20px;
+        padding: 17px 12px 20px;
+
         text-align: center;
     }
 
@@ -1879,12 +1890,101 @@ body.search-active .home-footer {
     ===================================== */
 
     .home-slider-track .home-recipe-content h3 {
-        margin: 0;
+        margin: 0 0 8px;
+
         color: var(--kb-text);
-        font-size: 21px;
+
+        font-size: 20px;
         line-height: 1.25;
+
         font-weight: 500;
+
         text-align: center;
+    }
+
+
+    /* =====================================
+       GESAMTZEIT
+    ===================================== */
+
+    .home-slider-track .home-recipe-time {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 7px;
+
+        margin: 0;
+
+        color: var(--kb-muted);
+
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.4;
+
+        text-align: center;
+    }
+
+
+    /* =====================================
+       ELEGANTE UHR
+    ===================================== */
+
+    .home-slider-track .home-time-icon {
+        position: relative;
+
+        display: inline-block;
+
+        width: 15px;
+        height: 15px;
+
+        flex: 0 0 15px;
+
+        border: 1.5px solid var(--kb-accent);
+        border-radius: 50%;
+    }
+
+
+    /* Stundenzeiger */
+
+    .home-slider-track .home-time-icon::before {
+        content: "";
+
+        position: absolute;
+
+        left: 50%;
+        top: 2.5px;
+
+        width: 1.5px;
+        height: 5px;
+
+        transform: translateX(-50%);
+
+        background: var(--kb-accent);
+
+        border-radius: 2px;
+    }
+
+
+    /* Minutenzeiger */
+
+    .home-slider-track .home-time-icon::after {
+        content: "";
+
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+
+        width: 4px;
+        height: 1.5px;
+
+        transform: translateY(-50%);
+
+        background: var(--kb-accent);
+
+        border-radius: 2px;
     }
 
 
@@ -1892,24 +1992,9 @@ body.search-active .home-footer {
        BESCHREIBUNG AUSBLENDEN
     ===================================== */
 
-    .home-slider-track .home-recipe-content p {
+    .home-slider-track .home-recipe-content
+    > p:not(.home-recipe-time) {
         display: none;
-    }
-
-
-    /* =====================================
-       GESAMTZEIT
-       Wird über data-time angezeigt
-    ===================================== */
-
-    .home-slider-track .home-recipe-content::after {
-        content: attr(data-time);
-        display: block;
-        margin-top: 8px;
-        color: var(--kb-muted);
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        text-align: center;
     }
 
 
@@ -1920,7 +2005,9 @@ body.search-active .home-footer {
     .home-slider-arrow {
         width: 38px;
         height: 38px;
+
         min-width: 38px;
+
         font-size: 26px;
     }
 
@@ -1940,18 +2027,28 @@ body.search-active .home-footer {
     .home-slider-dots {
         margin-top: 14px;
     }
-
 }
+
 
 /* =========================================
    SLIDER – EINHEITLICHE BILDER
 ========================================= */
 
 .home-slider-track .home-recipe-card {
+    flex: 0 0 100%;
+    width: 100%;
+
     overflow: hidden;
+
     border: 1px solid var(--kb-border);
     border-radius: var(--kb-radius);
+
     background: var(--kb-card);
+
+    color: var(--kb-text);
+    text-decoration: none;
+
+    box-shadow: none;
 }
 
 
@@ -1964,6 +2061,7 @@ body.search-active .home-footer {
     height: 500px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1984,10 +2082,9 @@ body.search-active .home-footer {
     display: block;
 
     object-fit: contain;
-
     object-position: center;
 
-    transform: none;
+    transform: none !important;
 }
 
 
@@ -1996,159 +2093,29 @@ body.search-active .home-footer {
 .home-slider-track
 .home-recipe-card:hover
 .home-recipe-image img {
-    transform: none;
+    transform: none !important;
 }
 
 
 /* =========================================
-   TITEL + ZEIT
-========================================= */
-
-.home-slider-track .home-recipe-content {
-    padding: 20px 16px 22px;
-
-    text-align: center;
-}
-
-
-.home-slider-track .home-recipe-content h3 {
-    margin: 0 0 9px;
-
-    font-size: 23px;
-    line-height: 1.25;
-
-    font-weight: 500;
-
-    color: var(--kb-text);
-}
-
-
-.home-slider-track .home-recipe-time {
-    margin: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 8px;
-
-    color: var(--kb-muted);
-
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-}
-
-
-/* =========================================
-   KLEINE UHR
-========================================= */
-
-.home-slider-track .home-time-icon {
-    position: relative;
-
-    width: 15px;
-    height: 15px;
-
-    flex: 0 0 15px;
-
-    border: 1.5px solid var(--kb-accent);
-    border-radius: 50%;
-}
-
-
-.home-slider-track .home-time-icon::before {
-    content: "";
-
-    position: absolute;
-
-    width: 1.5px;
-    height: 5px;
-
-    left: 50%;
-    top: 3px;
-
-    transform: translateX(-50%);
-
-    background: var(--kb-accent);
-
-    border-radius: 2px;
-}
-
-
-.home-slider-track .home-time-icon::after {
-    content: "";
-
-    position: absolute;
-
-    width: 4px;
-    height: 1.5px;
-
-    left: 50%;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    background: var(--kb-accent);
-
-    border-radius: 2px;
-}
-
-
-/* =========================================
-   HANDY
-========================================= */
-
-@media (max-width: 800px) {
-
-    .home-slider-track .home-recipe-image {
-        height: 300px;
-    }
-
-    .home-slider-track .home-recipe-content {
-        padding: 17px 12px 20px;
-    }
-
-    .home-slider-track .home-recipe-content h3 {
-        font-size: 20px;
-    }
-
-}
-
-
-/* =========================================
-   KLEINE HANDYS
-========================================= */
-
-@media (max-width: 500px) {
-
-    .home-slider-track .home-recipe-image {
-        height: 260px;
-    }
-
-    .home-slider-track .home-recipe-content {
-        padding: 16px 10px 19px;
-    }
-
-    .home-slider-track .home-recipe-content h3 {
-        font-size: 19px;
-    }
-
-}
-
-/* =========================================
-   SLIDER – TITEL + GESAMTZEIT
+   TITEL + GESAMTZEIT
 ========================================= */
 
 .home-slider-track .home-recipe-content {
     padding: 18px 12px 22px;
+
     text-align: center;
 }
 
+
 .home-slider-track .home-recipe-content h3 {
     margin: 0 0 9px;
+
     font-size: 22px;
     line-height: 1.25;
+
     font-weight: 500;
+
     color: var(--kb-text);
 }
 
@@ -2159,8 +2126,10 @@ body.search-active .home-footer {
 
 .home-slider-track .home-recipe-time {
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     gap: 7px;
 
     margin: 0;
@@ -2170,6 +2139,8 @@ body.search-active .home-footer {
     font-family: Arial, sans-serif;
     font-size: 14px;
     line-height: 1.4;
+
+    text-align: center;
 }
 
 
@@ -2199,11 +2170,13 @@ body.search-active .home-footer {
 
     position: absolute;
 
-    left: 6px;
-    top: 2px;
+    left: 50%;
+    top: 2.5px;
 
     width: 1.5px;
     height: 5px;
+
+    transform: translateX(-50%);
 
     background: var(--kb-accent);
 
@@ -2218,56 +2191,17 @@ body.search-active .home-footer {
 
     position: absolute;
 
-    left: 6px;
-    top: 6px;
+    left: 50%;
+    top: 50%;
 
     width: 4px;
     height: 1.5px;
 
+    transform: translateY(-50%);
+
     background: var(--kb-accent);
 
     border-radius: 2px;
-}
-
-
-/* =========================================
-   SLIDER-BILDER – ALLE GLEICH GROSS
-   UND KOMPLETT SICHTBAR
-========================================= */
-
-.home-slider-track .home-recipe-image {
-    width: 100%;
-    height: 500px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    overflow: hidden;
-
-    background: var(--kb-card);
-}
-
-
-.home-slider-track .home-recipe-image img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: contain;
-    object-position: center;
-
-    transform: none;
-}
-
-
-/* Kein Bild-Zoom */
-
-.home-slider-track
-.home-recipe-card:hover
-.home-recipe-image img {
-    transform: none;
 }
 
 
@@ -2292,7 +2226,6 @@ body.search-active .home-footer {
     .home-slider-track .home-recipe-time {
         font-size: 14px;
     }
-
 }
 
 
@@ -2314,4 +2247,7 @@ body.search-active .home-footer {
         font-size: 19px;
     }
 
+    .home-slider-track .home-recipe-time {
+        font-size: 13px;
+    }
 }

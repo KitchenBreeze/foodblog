@@ -39,6 +39,7 @@ if result.returncode != 0:
 
 try:
     recipes = json.loads(result.stdout)
+
 except json.JSONDecodeError:
     print("FEHLER: recipes.js konnte nicht als JSON gelesen werden.")
     print(result.stdout)
@@ -57,7 +58,10 @@ print()
 # recipes-Ordner erstellen
 # ============================================================
 
-os.makedirs("recipes", exist_ok=True)
+os.makedirs(
+    "recipes",
+    exist_ok=True
+)
 
 
 # ============================================================
@@ -98,6 +102,58 @@ def create_slug(title):
 
 
 # ============================================================
+# Bildpfad für Rezeptseiten korrigieren
+#
+# Die Rezeptseiten liegen in:
+#
+# recipes/rezept-name.html
+#
+# Bilder liegen normalerweise z.B. in:
+#
+# images/rezept.jpg
+#
+# Deshalb muss auf der Rezeptseite daraus werden:
+#
+# ../images/rezept.jpg
+# ============================================================
+
+def recipe_page_image_path(path):
+
+    if not isinstance(path, str):
+        return path
+
+    path = path.strip()
+
+    if not path:
+        return path
+
+    # Externe Bilder nicht verändern
+    if path.startswith("http://"):
+        return path
+
+    if path.startswith("https://"):
+        return path
+
+    # Daten-URLs nicht verändern
+    if path.startswith("data:"):
+        return path
+
+    # Bereits korrekter relativer Pfad
+    if path.startswith("../"):
+        return path
+
+    # Absolute Website-Pfade nicht verändern
+    if path.startswith("/"):
+        return path
+
+    # Bereits ./ entfernen
+    if path.startswith("./"):
+        path = path[2:]
+
+    return "../" + path
+
+
+# ============================================================
 # [[slug|Text]] in HTML-Link umwandeln
 # ============================================================
 
@@ -127,113 +183,28 @@ def replace_recipe_links(text):
 
 
 # ============================================================
-# Alle Rezepte als JSON vorbereiten
+# Rezept für Rezeptseite vorbereiten
 # ============================================================
 
-all_recipes_data = json.dumps(
-    recipes,
-    ensure_ascii=False,
-    indent=4
-)
-
-
-# ============================================================
-# Template laden
-# ============================================================
-
-template_path = "templates/recipe-template.html"
-
-
-if not os.path.exists(template_path):
-
-    print("FEHLER: Template nicht gefunden:")
-    print(template_path)
-
-    raise SystemExit(1)
-
-
-with open(
-    template_path,
-    "r",
-    encoding="utf-8"
-) as file:
-
-    template_original = file.read()
-
-
-# ============================================================
-# Prüfen, ob Platzhalter vorhanden ist
-# ============================================================
-
-if "<!-- RECIPE_DATA -->" not in template_original:
-
-    print(
-        "FEHLER: <!-- RECIPE_DATA --> "
-        "wurde im recipe-template.html nicht gefunden."
-    )
-
-    raise SystemExit(1)
-
-
-# ============================================================
-# Jedes Rezept erzeugen
-# ============================================================
-
-for recipe in recipes:
-
-    # --------------------------------------------------------
-    # Titel prüfen
-    # --------------------------------------------------------
-
-    if "title" not in recipe:
-
-        print("FEHLER: Ein Rezept besitzt keinen Titel.")
-        print(recipe)
-
-        raise SystemExit(1)
-
-
-    # --------------------------------------------------------
-    # Slug
-    # --------------------------------------------------------
-
-    slug = create_slug(
-        recipe["title"]
-    )
-
-
-    # --------------------------------------------------------
-    # Kopie erstellen
-    # --------------------------------------------------------
+def prepare_recipe_for_page(recipe):
 
     recipe_copy = json.loads(
         json.dumps(recipe)
     )
 
-
     # --------------------------------------------------------
-    # Hauptbild für recipes-Unterordner
+    # Hauptbild
     # --------------------------------------------------------
 
     if "image" in recipe_copy:
 
-        image = recipe_copy["image"]
-
-        if (
-            isinstance(image, str)
-            and image
-            and not image.startswith("../")
-            and not image.startswith("http://")
-            and not image.startswith("https://")
-        ):
-
-            recipe_copy["image"] = (
-                "../" + image
-            )
+        recipe_copy["image"] = recipe_page_image_path(
+            recipe_copy["image"]
+        )
 
 
     # --------------------------------------------------------
-    # Schrittbilder für recipes-Unterordner
+    # Schrittbilder
     # --------------------------------------------------------
 
     for step in recipe_copy.get(
@@ -241,32 +212,22 @@ for recipe in recipes:
         []
     ):
 
-        if (
-            isinstance(step, dict)
-            and "images" in step
+        if not isinstance(step, dict):
+            continue
+
+        if "images" not in step:
+            continue
+
+        if not isinstance(
+            step["images"],
+            list
         ):
+            continue
 
-            new_images = []
-
-            for img in step["images"]:
-
-                if (
-                    isinstance(img, str)
-                    and img
-                    and not img.startswith("../")
-                    and not img.startswith("http://")
-                    and not img.startswith("https://")
-                ):
-
-                    new_images.append(
-                        "../" + img
-                    )
-
-                else:
-
-                    new_images.append(img)
-
-            step["images"] = new_images
+        step["images"] = [
+            recipe_page_image_path(image)
+            for image in step["images"]
+        ]
 
 
     # --------------------------------------------------------
@@ -285,7 +246,10 @@ for recipe in recipes:
 
         for section, items in ingredients.items():
 
-            if isinstance(items, list):
+            if isinstance(
+                items,
+                list
+            ):
 
                 recipe_copy["ingredients"][section] = [
                     replace_recipe_links(item)
@@ -305,7 +269,7 @@ for recipe in recipes:
 
 
     # --------------------------------------------------------
-    # Tipps verlinken
+    # Tipps
     # --------------------------------------------------------
 
     if "tips" in recipe_copy:
@@ -321,6 +285,140 @@ for recipe in recipes:
             ]
 
 
+    return recipe_copy
+
+
+# ============================================================
+# ALLE REZEPTE FÜR REZEPTSEITEN VORBEREITEN
+#
+# Wichtig:
+# Auch "Das könnte dich auch interessieren"
+# befindet sich auf einer Seite im recipes/-Ordner.
+#
+# Deshalb brauchen auch dort die Bilder ../
+# ============================================================
+
+recipes_for_recipe_pages = []
+
+for recipe in recipes:
+
+    recipes_for_recipe_pages.append(
+        prepare_recipe_for_page(recipe)
+    )
+
+
+all_recipes_data = json.dumps(
+    recipes_for_recipe_pages,
+    ensure_ascii=False,
+    indent=4
+)
+
+
+# ============================================================
+# Template laden
+# ============================================================
+
+template_path = (
+    "templates/recipe-template.html"
+)
+
+
+if not os.path.exists(
+    template_path
+):
+
+    print()
+    print("FEHLER:")
+    print("Template nicht gefunden:")
+    print(template_path)
+    print()
+
+    raise SystemExit(1)
+
+
+with open(
+    template_path,
+    "r",
+    encoding="utf-8"
+) as file:
+
+    template_original = file.read()
+
+
+# ============================================================
+# RECIPE_DATA Platzhalter prüfen
+# ============================================================
+
+if "<!-- RECIPE_DATA -->" not in template_original:
+
+    print()
+    print("FEHLER:")
+    print(
+        "<!-- RECIPE_DATA --> "
+        "wurde in recipe-template.html nicht gefunden."
+    )
+    print()
+
+    raise SystemExit(1)
+
+
+# ============================================================
+# ALLE REZEPTE ERZEUGEN
+# ============================================================
+
+created_count = 0
+
+
+for recipe in recipes:
+
+    # --------------------------------------------------------
+    # Titel prüfen
+    # --------------------------------------------------------
+
+    if "title" not in recipe:
+
+        print()
+        print("FEHLER:")
+        print("Ein Rezept besitzt keinen Titel.")
+        print(recipe)
+        print()
+
+        raise SystemExit(1)
+
+
+    title = recipe["title"]
+
+
+    # --------------------------------------------------------
+    # Slug
+    # --------------------------------------------------------
+
+    slug = create_slug(
+        title
+    )
+
+
+    if not slug:
+
+        print()
+        print("FEHLER:")
+        print(
+            f"Kein gültiger Dateiname für: {title}"
+        )
+        print()
+
+        raise SystemExit(1)
+
+
+    # --------------------------------------------------------
+    # Rezeptdaten für diese Rezeptseite
+    # --------------------------------------------------------
+
+    recipe_copy = prepare_recipe_for_page(
+        recipe
+    )
+
+
     # --------------------------------------------------------
     # Dateiname
     # --------------------------------------------------------
@@ -330,12 +428,11 @@ for recipe in recipes:
     )
 
 
-    print("========================================")
-    print("Verarbeite Rezept:")
-    print(recipe["title"])
+    print("----------------------------------------")
+    print("Verarbeite:")
+    print(title)
     print("Datei:")
     print(filename)
-    print("========================================")
 
 
     # --------------------------------------------------------
@@ -346,7 +443,7 @@ for recipe in recipes:
 
 
     # --------------------------------------------------------
-    # Aktuelles Rezept als JSON
+    # RECIPE_DATA als JSON
     # --------------------------------------------------------
 
     recipe_data = json.dumps(
@@ -357,7 +454,7 @@ for recipe in recipes:
 
 
     # --------------------------------------------------------
-    # RECIPE_DATA + RECIPES einsetzen
+    # Daten in Template einsetzen
     # --------------------------------------------------------
 
     replacement = f"""
@@ -376,7 +473,7 @@ const RECIPES = {all_recipes_data};
 
 
     # --------------------------------------------------------
-    # HTML speichern
+    # HTML schreiben
     # --------------------------------------------------------
 
     with open(
@@ -385,24 +482,24 @@ const RECIPES = {all_recipes_data};
         encoding="utf-8"
     ) as file:
 
-        file.write(template)
+        file.write(
+            template
+        )
 
 
     # --------------------------------------------------------
     # Prüfen
     # --------------------------------------------------------
 
-    if os.path.exists(filename):
+    if not os.path.isfile(
+        filename
+    ):
 
-        print("ERSTELLT:")
-        print(
-            os.path.abspath(filename)
-        )
         print()
-
-    else:
-
-        print("FEHLER: Datei wurde nicht erstellt:")
+        print("FEHLER:")
+        print(
+            "Datei wurde nicht erstellt:"
+        )
         print(
             os.path.abspath(filename)
         )
@@ -410,8 +507,16 @@ const RECIPES = {all_recipes_data};
         raise SystemExit(1)
 
 
+    created_count += 1
+
+    print("OK:")
+    print(
+        os.path.abspath(filename)
+    )
+
+
 # ============================================================
-# SITEMAP ERSTELLEN
+# SITEMAP
 # ============================================================
 
 sitemap_lines = [
@@ -434,7 +539,6 @@ for recipe in recipes:
     slug = create_slug(
         recipe["title"]
     )
-
 
     sitemap_lines.extend([
         "    <url>",
@@ -480,12 +584,18 @@ with open(
 
 print()
 print("========================================")
-print("SITEMAP ERSTELLT")
-print("sitemap.xml")
+print("GENERATOR FERTIG")
 print("========================================")
+print(
+    f"{created_count} Rezeptseiten erstellt."
+)
 print()
-
-print("========================================")
-print("GENERATOR ERFOLGREICH ABGESCHLOSSEN")
-print(f"{len(recipes)} Rezepte verarbeitet.")
+print(
+    "Sitemap erstellt:"
+)
+print(
+    os.path.abspath("sitemap.xml")
+)
+print()
+print("Alle Bildpfade für recipes/ wurden angepasst.")
 print("========================================")

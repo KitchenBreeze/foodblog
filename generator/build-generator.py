@@ -252,17 +252,19 @@ const RECIPES = {all_recipes_data};
     # --------------------------------------------------------
 
     with open(
-        filename,
-        "w",
-        encoding="utf-8"
-    ) as file:
+    filename,
+    "w",
+    encoding="utf-8"
+) as file:
+    file.write(template)
 
-        file.write(template)
-
-
-    print("Erstellt:")
-    print(filename)
-
+if os.path.exists(filename):
+    print("✅ ERSTELLT:")
+    print(os.path.abspath(filename))
+else:
+    print("❌ FEHLER – Datei wurde NICHT erstellt:")
+    print(os.path.abspath(filename))
+    
     # ============================================================
 # SITEMAP AUTOMATISCH ERSTELLEN
 # ============================================================

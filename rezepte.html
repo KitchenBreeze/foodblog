@@ -1353,6 +1353,113 @@ render();
 
 </script>
 
+<script>
+/* =========================================
+   SCROLLPOSITION DER REZEPTSEITE MERKEN
+========================================= */
+
+const RECIPE_SCROLL_KEY =
+    "kitchenbreeze_recipe_scroll";
+
+
+/* =========================================
+   BROWSER-SCROLL-WIEDERHERSTELLUNG DEAKTIVIEREN
+========================================= */
+
+if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+}
+
+
+/* =========================================
+   SCROLLPOSITION SPEICHERN
+========================================= */
+
+function saveRecipeScrollPosition() {
+
+    sessionStorage.setItem(
+        RECIPE_SCROLL_KEY,
+        String(window.scrollY)
+    );
+
+}
+
+
+/* =========================================
+   BEIM ÖFFNEN EINES REZEPTS SPEICHERN
+========================================= */
+
+document.addEventListener(
+    "click",
+    function(event) {
+
+        const recipeCard =
+            event.target.closest(
+                ".recipe-card"
+            );
+
+        if (!recipeCard) {
+            return;
+        }
+
+        saveRecipeScrollPosition();
+
+    }
+);
+
+
+/* =========================================
+   AUCH BEIM VERLASSEN SPEICHERN
+========================================= */
+
+window.addEventListener(
+    "pagehide",
+    saveRecipeScrollPosition
+);
+
+
+/* =========================================
+   POSITION BEIM ZURÜCKKEHREN HERSTELLEN
+========================================= */
+
+window.addEventListener(
+    "pageshow",
+    function() {
+
+        const savedPosition =
+            sessionStorage.getItem(
+                RECIPE_SCROLL_KEY
+            );
+
+        if (
+            savedPosition === null
+        ) {
+            return;
+        }
+
+
+        /*
+           Warten, bis die Rezeptkarten
+           vollständig gerendert wurden.
+        */
+
+        requestAnimationFrame(() => {
+
+            requestAnimationFrame(() => {
+
+                window.scrollTo(
+                    0,
+                    Number(savedPosition)
+                );
+
+            });
+
+        });
+
+    }
+);
+</script>
+
 
 </body>
 

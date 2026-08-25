@@ -207,10 +207,6 @@
 
 <!-- =========================================
      SUCHERGEBNISSE
-     
-     Dieser Bereich ist standardmäßig leer/
-     unsichtbar und wird erst bei einer Suche
-     aktiviert.
 ========================================= -->
 
 <section
@@ -241,6 +237,7 @@
     <div
         class="home-no-results"
         id="noSearchResults"
+        style="display: none;"
     >
 
         <h3>
@@ -262,141 +259,6 @@
 ========================================= -->
 
 <div id="normalHomeContent">
-
-
-<!-- =========================================
-     REZEPT-BEREICHE
-========================================= -->
-
-<section class="home-sections">
-
-    <div class="home-section-heading">
-
-        <span>
-            Entdecken
-        </span>
-
-        <h2>
-            Was passt heute?
-        </h2>
-
-        <p>
-            Finde schnell das passende Rezept für deinen Tag.
-        </p>
-
-    </div>
-
-
-
-    <div class="home-category-grid">
-
-
-        <!-- =================================
-             ALLE REZEPTE
-        ================================== -->
-
-        <a
-            href="rezepte.html"
-            class="home-category-card category-all"
-        >
-
-            <div class="category-content">
-
-                <span>
-                    Alle Rezepte
-                </span>
-
-                <h3>
-                    Rezeptwelt
-                </h3>
-
-                <p>
-                    Alle KitchenBreeze-Rezepte auf einen Blick.
-                </p>
-
-            </div>
-
-        </a>
-
-
-
-        <!-- =================================
-             VEGETARISCH
-        ================================== -->
-
-      <a href="rezepte.html?categories=Vegetarisch" class="home-category-card category-vegetarian">
-
-            <div class="category-content">
-
-                <span>
-                    Vegetarisch
-                </span>
-
-                <h3>
-                    Frisch & vegetarisch
-                </h3>
-
-                <p>
-                    Leckere Ideen ganz ohne Fleisch.
-                </p>
-
-            </div>
-
-        </a>
-
-
-
-        <!-- =================================
-             VEGAN
-        ================================== -->
-
-<a href="rezepte.html?categories=Vegan" class="home-category-card category-vegan">
-
-            <div class="category-content">
-
-                <span>
-                    Vegan
-                </span>
-
-                <h3>
-                    Pflanzlich genießen
-                </h3>
-
-                <p>
-                    Einfache vegane Rezepte für jeden Tag.
-                </p>
-
-            </div>
-
-        </a>
-
-
-
-<!-- =================================
-     SCHNELL
-================================= -->
-
-<a href="rezepte.html?quick=true" class="home-category-card category-quick">
-
-    <div class="category-content">
-
-        <span>
-            Schnell & einfach
-        </span>
-
-        <h3>
-            In 45 Minuten auf dem Tisch
-        </h3>
-
-        <p>
-            Leckere Rezepte mit einer Gesamtzeit von höchstens 45 Minuten.
-        </p>
-
-    </div>
-
-</a>
-
-</section>
 
 
 
@@ -490,6 +352,155 @@
         <a href="rezepte.html">
             Alle Rezepte anzeigen
         </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     WAS PASST HEUTE?
+========================================= -->
+
+<section class="home-sections">
+
+    <div class="home-section-heading">
+
+        <span>
+            Entdecken
+        </span>
+
+        <h2>
+            Was passt heute?
+        </h2>
+
+        <p>
+            Finde schnell das passende Rezept für deinen Tag.
+        </p>
+
+    </div>
+
+
+
+    <div class="home-category-grid">
+
+
+
+        <!-- =================================
+             ALLE REZEPTE
+        ================================== -->
+
+        <a
+            href="rezepte.html"
+            class="home-category-card category-all"
+        >
+
+            <div class="category-content">
+
+                <span>
+                    Alle Rezepte
+                </span>
+
+                <h3>
+                    Rezeptwelt
+                </h3>
+
+                <p>
+                    Alle KitchenBreeze-Rezepte auf einen Blick.
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             VEGETARISCH
+        ================================== -->
+
+        <a
+            href="rezepte.html?categories=Vegetarisch"
+            class="home-category-card category-vegetarian"
+        >
+
+            <div class="category-content">
+
+                <span>
+                    Vegetarisch
+                </span>
+
+                <h3>
+                    Frisch & vegetarisch
+                </h3>
+
+                <p>
+                    Leckere Ideen ganz ohne Fleisch.
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             VEGAN
+        ================================== -->
+
+        <a
+            href="rezepte.html?categories=Vegan"
+            class="home-category-card category-vegan"
+        >
+
+            <div class="category-content">
+
+                <span>
+                    Vegan
+                </span>
+
+                <h3>
+                    Pflanzlich genießen
+                </h3>
+
+                <p>
+                    Einfache vegane Rezepte für jeden Tag.
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- =================================
+             SCHNELL
+        ================================== -->
+
+        <a
+            href="rezepte.html?quick=true"
+            class="home-category-card category-quick"
+        >
+
+            <div class="category-content">
+
+                <span>
+                    Schnell & einfach
+                </span>
+
+                <h3>
+                    In 45 Minuten auf dem Tisch
+                </h3>
+
+                <p>
+                    Leckere Rezepte mit einer Gesamtzeit von höchstens 45 Minuten.
+                </p>
+
+            </div>
+
+        </a>
+
 
     </div>
 
@@ -635,6 +646,14 @@ function createSlug(title) {
         .replace(
             /\s+/g,
             "-"
+        )
+        .replace(
+            /-+/g,
+            "-"
+        )
+        .replace(
+            /^-|-$/g,
+            ""
         );
 
 }
@@ -795,7 +814,12 @@ if (
                         </h3>
 
                         <p>
-                            ${recipe.description || ""}
+                            ${
+                                recipe.totalTime ||
+                                recipe.time ||
+                                recipe.duration ||
+                                ""
+                            }
                         </p>
 
                     </div>
@@ -1369,6 +1393,174 @@ searchInput.addEventListener(
 
 
 </script>
+
+
+<!-- =========================================
+     MOBILE SLIDER DESIGN
+     
+     Wird bewusst hier eingebunden, damit
+     der Slider unabhängig von alten Regeln
+     in home.css korrekt dargestellt wird.
+========================================= -->
+
+<style>
+
+@media (max-width: 800px) {
+
+    /*
+       Slider-Fenster
+    */
+
+    .home-slider-window {
+        border-radius: 18px;
+        overflow: hidden;
+        width: 100%;
+    }
+
+
+    /*
+       Jede Slide exakt gleich groß
+    */
+
+    .home-slider-track .home-recipe-card {
+        flex: 0 0 100%;
+        width: 100%;
+        min-width: 100%;
+        border-radius: 18px;
+        overflow: hidden;
+    }
+
+
+    /*
+       Einheitliche Bildfläche
+    */
+
+    .home-slider-track .home-recipe-image {
+        width: 100%;
+        height: 280px;
+        aspect-ratio: auto;
+        background: var(--kb-card);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+
+    /*
+       Komplettes Bild anzeigen
+       ohne Abschneiden
+    */
+
+    .home-slider-track .home-recipe-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        display: block;
+    }
+
+
+    /*
+       Rezeptinformationen
+    */
+
+    .home-slider-track .home-recipe-content {
+        padding: 17px 14px 20px;
+        text-align: center;
+    }
+
+
+    /*
+       Titel mittig
+    */
+
+    .home-slider-track .home-recipe-content h3 {
+        margin: 0 0 7px;
+        font-size: 21px;
+        line-height: 1.25;
+        text-align: center;
+    }
+
+
+    /*
+       Gesamtzeit mittig
+    */
+
+    .home-slider-track .home-recipe-content p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: center;
+        color: var(--kb-muted);
+        display: block;
+        -webkit-line-clamp: unset;
+        -webkit-box-orient: unset;
+        overflow: visible;
+    }
+
+
+    /*
+       Pfeile
+    */
+
+    .home-slider-arrow {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        font-size: 27px;
+    }
+
+
+    .home-slider-prev {
+        left: 8px;
+    }
+
+
+    .home-slider-next {
+        right: 8px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    /*
+       Auf kleinen Smartphones
+       ebenfalls exakt dieselbe Höhe
+    */
+
+    .home-slider-track .home-recipe-image {
+        height: 240px;
+    }
+
+
+    .home-slider-track .home-recipe-content {
+        padding: 15px 10px 18px;
+    }
+
+
+    .home-slider-track .home-recipe-content h3 {
+        font-size: 19px;
+    }
+
+
+    .home-slider-track .home-recipe-content p {
+        font-size: 13px;
+    }
+
+
+    .home-slider-arrow {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+        font-size: 25px;
+    }
+
+}
+
+</style>
 
 
 </body>

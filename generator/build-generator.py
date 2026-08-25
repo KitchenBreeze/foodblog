@@ -599,3 +599,5 @@ print(
 print()
 print("Alle Bildpfade für recipes/ wurden angepasst.")
 print("========================================")
+
+

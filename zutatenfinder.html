@@ -349,8 +349,10 @@ Der KitchenBreeze Zutatenfinder hilft dir dabei, passende Rezepte zu entdecken.
 
 
 <input 
-id="ingredientInput"
-placeholder="z.B. Kartoffeln Käse Tomaten"
+    id="ingredientInput"
+    type="search"
+    placeholder="z.B. Kartoffeln Käse Tomaten"
+    autocomplete="off"
 >
 
 
@@ -391,14 +393,6 @@ Mindestens eine Zutat reicht
 
 
 
-<br>
-
-
-<button onclick="searchIngredients()">
-🔍 Suchen
-</button>
-
-
 </div>
 
 
@@ -418,44 +412,44 @@ Mindestens eine Zutat reicht
 
 
 
+<script src="recipes.js"></script>
+
 <script>
 
+/* =========================================
+   ZUTATEN AUS REZEPT AUSLESEN
+========================================= */
 
-function getAllIngredients(recipe){
+function getAllIngredients(recipe) {
 
-    if(!recipe.ingredients){
+    if (!recipe.ingredients) {
         return [];
     }
 
-
-    if(Array.isArray(recipe.ingredients)){
+    if (Array.isArray(recipe.ingredients)) {
         return recipe.ingredients;
     }
 
-
-    let all=[];
-
+    let all = [];
 
     Object.values(recipe.ingredients)
-    .forEach(group=>{
+        .forEach(group => {
 
-        if(Array.isArray(group)){
-            all.push(...group);
-        }
+            if (Array.isArray(group)) {
+                all.push(...group);
+            }
 
-    });
-
+        });
 
     return all;
-
 }
 
 
-
-
+/* =========================================
+   ZUTATEN SUCHEN
+========================================= */
 
 function searchIngredients() {
-
 
     const input = document
         .getElementById("ingredientInput")
@@ -463,6 +457,9 @@ function searchIngredients() {
         .toLowerCase();
 
 
+    /* =====================================
+       EINGABE AUFTEILEN
+    ====================================== */
 
     const wanted = input
         .split(/[\s,]+/)
@@ -470,87 +467,120 @@ function searchIngredients() {
         .filter(i => i);
 
 
-
     const mode = document.querySelector(
         'input[name="mode"]:checked'
     ).value;
 
 
+    const results =
+        document.getElementById("results");
 
-    const results = document.getElementById("results");
 
     results.innerHTML = "";
 
+
+    /* =====================================
+       KEINE ZUTATEN EINGEGEBEN
+    ====================================== */
+
+    if (wanted.length === 0) {
+
+        return;
+
+    }
 
 
     let matches = [];
 
 
+    /* =====================================
+       ALLE REZEPTE DURCHSUCHEN
+    ====================================== */
 
     RECIPES.forEach(recipe => {
 
 
-
         const ingredients = getAllIngredients(recipe)
             .map(i =>
-                i.replace(/<[^>]*>/g, "")
-                .toLowerCase()
+
+                String(i)
+                    .replace(/<[^>]*>/g, "")
+                    .toLowerCase()
+
             );
 
 
-
         let found = [];
-
         let missing = [];
 
 
+        /* =================================
+           JEDE GESUCHTE ZUTAT PRÜFEN
+        ================================= */
 
         wanted.forEach(search => {
-
 
 
             const match = ingredients.find(i => {
 
 
                 const cleanIngredient = i
-                    .replace(/[0-9.,\/½¼¾]+/g, "")
-                    .replace(/\b(g|kg|ml|l|tl|el)\b/g, "")
+
+                    .replace(/[0-9.,*\/½¼¾]+/g, "")
+
+                    .replace(
+                        /\b(g|kg|mg|ml|l|tl|el)\b/g,
+                        ""
+                    )
+
                     .trim()
                     .toLowerCase();
-
 
 
                 let a = cleanIngredient;
                 let b = search;
 
 
+                /* =========================
+                   SONDERFALL LAUCH
+                ========================= */
 
-                // Sonderfall: Lauch soll nicht Knoblauch finden
                 if (
                     b === "lauch" &&
                     a.includes("knoblauch")
                 ) {
+
                     return false;
+
                 }
 
 
+                /* =========================
+                   WÖRTER AUFTEILEN
+                ========================= */
 
-                // Wörter einzeln prüfen
                 const words = a.split(/\s+/);
 
 
+                /* =========================
+                   KURZE BEGRIFFE
+                   z.B. Ei, Öl, Salz
+                ========================= */
 
-                // kurze Begriffe (Ei, Öl, Salz)
-                // nur echte Wörter oder einfache Pluralformen
                 if (b.length <= 3) {
 
                     return words.some(word => {
 
                         return (
+
                             word === b ||
+
                             word === b + "e" ||
+
                             word === b + "er" ||
+
                             word === b + "en"
+
                         );
 
                     });
@@ -558,14 +588,20 @@ function searchIngredients() {
                 }
 
 
+                /* =========================
+                   LÄNGERE BEGRIFFE
+                ========================= */
 
-                // längere Begriffe
                 return words.some(word => {
 
                     return (
+
                         word === b ||
+
                         word.startsWith(b) ||
+
                         word.includes(b)
+
                     );
 
                 });
@@ -574,41 +610,41 @@ function searchIngredients() {
             });
 
 
-
-            if(match){
+            if (match) {
 
                 found.push(search);
 
-            } else {
+            }
+            else {
 
                 missing.push(search);
 
             }
 
 
-
         });
 
 
-
+        /* =================================
+           ERGEBNIS PRÜFEN
+        ================================= */
 
         let ok;
 
 
-
-        if(mode === "all"){
+        if (mode === "all") {
 
             ok = missing.length === 0;
 
-        } else {
+        }
+        else {
 
             ok = found.length > 0;
 
         }
 
 
-
-        if(ok){
+        if (ok) {
 
             matches.push({
 
@@ -621,109 +657,163 @@ function searchIngredients() {
         }
 
 
-
     });
 
 
+    /* =====================================
+       BESTE TREFFER ZUERST
+    ====================================== */
 
+    matches.sort((a, b) =>
 
-
-    matches.sort((a,b) =>
-
-        a.missing.length - b.missing.length
+        a.missing.length -
+        b.missing.length
 
     );
 
 
-
-
+    /* =====================================
+       ANZAHL DER ERGEBNISSE
+    ====================================== */
 
     results.innerHTML = `
 
-    <p style="
-    text-align:center;
-    color:#b8b2aa;
-    margin-top:20px;
-    ">
+        <p style="
+            text-align:center;
+            color:#b8b2aa;
+            margin-top:20px;
+        ">
 
-    ${matches.length} passende Rezepte gefunden
+            ${matches.length}
+            passende Rezepte gefunden
 
-    </p>
+        </p>
 
     `;
 
 
-
-
+    /* =====================================
+       REZEPTE AUSGEBEN
+    ====================================== */
 
     matches.forEach(match => {
 
 
-
         results.innerHTML += `
 
+            <a
+                href="recipe.html?id=${match.recipe.id}"
+            >
 
-<a href="recipe.html?id=${match.recipe.id}">
+                <div class="recipe-card">
 
-
-<div class="recipe-card">
-
-
-<img src="${match.recipe.image}">
-
-
-<div>
-
-
-<h2>${match.recipe.title}</h2>
+                    <img
+                        src="${match.recipe.image}"
+                        alt="${match.recipe.title}"
+                    >
 
 
-<p>${match.recipe.description}</p>
+                    <div>
+
+                        <h2>
+                            ${match.recipe.title}
+                        </h2>
 
 
-
-${
-match.missing.length === 0
-
-?
-
-`
-<p style="color:#8fd18f;">
-✅ Alle Zutaten vorhanden
-</p>
-`
-
-:
-
-`
-<p style="color:#e5c66b;">
-Fehlt noch:<br>
-${match.missing.join(", ")}
-</p>
-`
-
-}
+                        <p>
+                            ${match.recipe.description || ""}
+                        </p>
 
 
+                        ${
+                            match.missing.length === 0
 
-</div>
+                            ?
 
+                            `
+                            <p style="color:#8fd18f;">
 
-</div>
+                                ✓ Alle Zutaten vorhanden
 
+                            </p>
+                            `
 
-</a>
+                            :
 
+                            `
+                            <p style="color:#e5c66b;">
 
-`;
+                                Fehlt noch:<br>
 
+                                ${match.missing.join(", ")}
 
+                            </p>
+                            `
+
+                        }
+
+                    </div>
+
+                </div>
+
+            </a>
+
+        `;
 
     });
 
 
+    /* =====================================
+       AUF DEM HANDY ZU DEN ERGEBNISSEN
+    ====================================== */
+
+    if (
+        window.innerWidth <= 800 &&
+        matches.length > 0
+    ) {
+
+        setTimeout(() => {
+
+            document
+                .getElementById("results")
+                .scrollIntoView({
+
+                    behavior: "smooth",
+                    block: "start"
+
+                });
+
+        }, 100);
+
+    }
+
 }
 
+
+/* =========================================
+   ENTER = SUCHE STARTEN
+========================================= */
+
+const ingredientInput =
+    document.getElementById(
+        "ingredientInput"
+    );
+
+
+ingredientInput.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Enter") {
+
+            event.preventDefault();
+
+            searchIngredients();
+
+        }
+
+    }
+);
 
 </script>
 

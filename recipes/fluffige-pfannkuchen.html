@@ -3814,6 +3814,48 @@ const RECIPES = [
                 "text": "Etwas Balsamicocreme darübergeben und mit dem restlichen Schinken, den restlichen Pinienkernen und etwas Balsamicocreme servieren."
             }
         ]
+    },
+    {
+        "id": "64",
+        "title": "Cremige Tortellini mit getrockneten Tomaten & Rucola",
+        "category": [
+            "Pasta"
+        ],
+        "image": "images/tortellini-mit-getrockneten-Tomaten-Rucola.jpeg",
+        "time": {
+            "preparation": "5 min",
+            "cooking": "15 min",
+            "total": "20 min"
+        },
+        "related": [
+            "56",
+            "1",
+            "12"
+        ],
+        "portions": "8 Portionen",
+        "difficulty": "Einfach",
+        "rating": 4.6,
+        "description": "Leckere Tortellini in cremiger Parmesansoße mit getrockneten Tomaten und Rucola.",
+        "ingredients": {
+            "": [
+                "1,5kg Tortellini <i>(z.B. mit Fleischfüllung)</i>",
+                "250ml Kochsahne",
+                "160g Parmesan",
+                "60g Rucola",
+                "100g getrocknete Tomaten",
+                "3 Knoblauchzehen",
+                "Olivenöl",
+                "Salz",
+                "Pfeffer"
+            ]
+        },
+        "steps": [
+            "Einen großen Topf mit Salzwasser zum Kochen bringen.",
+            "Den Parmesan fein reiben, die Tomaten in kleinere Stücke schneiden, den Knoblauch schälen und fein hacken. Den Rucola waschen, trocken tupfen und nach Belieben etwas kleiner zupfen.",
+            "Etwas Olivenöl in einem Topf erhitzen und die Tortellini im kochenden Salzwasser nach Packungsbeilage garen.",
+            "In der Zwischenzeit den Knoblauch kurz im Öl anschwitzen, bis er duftet. Die Tomaten dazugeben und ca. 1-2 Minuten mitbraten. Mit der Sahne ablöschen, die Tortellini mit einer Schaumkelle dazugeben und 2 Kellen Pastawasser hinzufügen. Alles gut umrühren, aufkochen, mit reichlich Pfeffer und etwas Salz würzen und ca. 2-3 Minuten bei mittlerer Hitze köcheln lassen, bis die Soße schön cremig ist.",
+            "Den Parmesan unterrühren, bis er geschmolzen ist. Den Topf vom Herd nehmen, den Rucola unterheben und servieren."
+        ]
     }
 ];
 
@@ -3869,12 +3911,10 @@ function getBackUrl() {
     ----------------------------------------- */
 
     if (
-        params.get("from") === "zutatenfinder"
-    ) {
-
-        return "../zutatenfinder.html";
-
-    }
+    params.get("from") === "zutatenfinder"
+) {
+    return "zutatenfinder.html";
+}
 
 
     const backParams =

@@ -598,7 +598,6 @@ a {
 
 <script src="recipes.js"></script>
 
-
 <script>
 
 /* =========================================
@@ -617,14 +616,13 @@ function getAllIngredients(recipe) {
 
     let all = [];
 
-    Object.values(recipe.ingredients)
-        .forEach(group => {
+    Object.values(recipe.ingredients).forEach(group => {
 
-            if (Array.isArray(group)) {
-                all.push(...group);
-            }
+        if (Array.isArray(group)) {
+            all.push(...group);
+        }
 
-        });
+    });
 
     return all;
 }
@@ -673,7 +671,7 @@ function getRecipeUrl(recipe) {
 
 
 /* =========================================
-   ZUTATENFINDER SUCHZUSTAND SPEICHERN
+   SUCHZUSTAND SPEICHERN
 ========================================= */
 
 function saveFinderState() {
@@ -704,7 +702,7 @@ function saveFinderState() {
 
 
 /* =========================================
-   ZUTATENFINDER SUCHZUSTAND LADEN
+   SUCHZUSTAND LADEN
 ========================================= */
 
 function loadFinderState() {
@@ -720,7 +718,9 @@ function loadFinderState() {
         );
 
 
-    if (savedInput) {
+    /* Suchfeld wiederherstellen */
+
+    if (savedInput !== null) {
 
         document.getElementById(
             "ingredientInput"
@@ -729,7 +729,9 @@ function loadFinderState() {
     }
 
 
-    if (savedMode) {
+    /* Auswahl wiederherstellen */
+
+    if (savedMode !== null) {
 
         const modeInput =
             document.querySelector(
@@ -745,9 +747,61 @@ function loadFinderState() {
 
     /* Suche automatisch wieder ausführen */
 
-    if (savedInput && savedInput.trim() !== "") {
+    if (
+        savedInput !== null &&
+        savedInput.trim() !== ""
+    ) {
+
         searchIngredients();
+
     }
+
+}
+
+
+/* =========================================
+   SCROLLPOSITION SPEICHERN
+========================================= */
+
+function saveFinderScrollPosition() {
+
+    sessionStorage.setItem(
+        "zutatenfinderScroll",
+        window.scrollY
+    );
+
+}
+
+
+/* =========================================
+   SCROLLPOSITION WIEDERHERSTELLEN
+========================================= */
+
+function restoreFinderScrollPosition() {
+
+    const savedScroll =
+        sessionStorage.getItem(
+            "zutatenfinderScroll"
+        );
+
+
+    if (savedScroll !== null) {
+
+        setTimeout(() => {
+
+            window.scrollTo({
+                top: Number(savedScroll),
+                behavior: "instant"
+            });
+
+            sessionStorage.removeItem(
+                "zutatenfinderScroll"
+            );
+
+        }, 150);
+
+    }
+
 }
 
 
@@ -773,10 +827,11 @@ function searchIngredients() {
        EINGABE AUFTEILEN
     ====================================== */
 
-    const wanted = input
-        .split(/[\s,]+/)
-        .map(i => i.trim())
-        .filter(i => i);
+    const wanted =
+        input
+            .split(/[\s,]+/)
+            .map(i => i.trim())
+            .filter(i => i);
 
 
     const mode =
@@ -911,10 +966,14 @@ function searchIngredients() {
 
 
             if (match) {
+
                 found.push(search);
+
             }
             else {
+
                 missing.push(search);
+
             }
 
         });
@@ -928,10 +987,16 @@ function searchIngredients() {
 
 
         if (mode === "all") {
-            ok = missing.length === 0;
+
+            ok =
+                missing.length === 0;
+
         }
         else {
-            ok = found.length > 0;
+
+            ok =
+                found.length > 0;
+
         }
 
 
@@ -993,6 +1058,7 @@ function searchIngredients() {
 
             <a
                 href="${recipeUrl}?from=zutatenfinder"
+                onclick="saveFinderScrollPosition()"
             >
 
                 <div class="recipe-card">
@@ -1011,7 +1077,6 @@ function searchIngredients() {
                         <p>
                             ${match.recipe.description || ""}
                         </p>
-
 
                         ${
                             match.missing.length === 0
@@ -1097,6 +1162,13 @@ ingredientSearchForm.addEventListener(
 ========================================= */
 
 loadFinderState();
+
+
+/* =========================================
+   SCROLLPOSITION WIEDERHERSTELLEN
+========================================= */
+
+restoreFinderScrollPosition();
 
 </script>
 

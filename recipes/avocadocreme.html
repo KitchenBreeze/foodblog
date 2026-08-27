@@ -2,7 +2,9 @@
 <html lang="de">
 
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>KitchenBreeze Rezept</title>
@@ -12,26 +14,27 @@
 <script id="recipeSchema" type="application/ld+json"></script>
 
 <link rel="icon" type="image/png" href="../logo1.png">
+
 <link rel="stylesheet" href="../recipe-style.css">
 
 <style>
+
 .step-images {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    width:100%;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-top:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .step-image {
-    width:280px;
-    height:280px;
-    object-fit:contain;
-    border-radius:20px;
+    width: 280px;
+    height: 280px;
+    object-fit: contain;
+    border-radius: 20px;
 }
-    
 
 body {
     margin: 0;
@@ -41,6 +44,7 @@ body {
 }
 
 /* TOP */
+
 .topbar {
     max-width: 900px;
     margin: auto;
@@ -54,6 +58,7 @@ body {
 }
 
 /* HERO */
+
 .hero-img {
     width: 100%;
     max-height: 500px;
@@ -62,6 +67,7 @@ body {
 }
 
 /* CONTAINER */
+
 .container {
     max-width: 900px;
     margin: auto;
@@ -69,6 +75,7 @@ body {
 }
 
 /* TITLE */
+
 .title {
     font-size: 40px;
     font-weight: 300;
@@ -77,6 +84,7 @@ body {
 }
 
 /* TIME + INFO */
+
 .time-row,
 .info-row {
     display: flex;
@@ -103,6 +111,7 @@ body {
 }
 
 /* BUTTONS */
+
 .buttons {
     display: flex;
     justify-content: center;
@@ -124,6 +133,7 @@ button:hover {
 }
 
 /* CARD */
+
 .card {
     background: transparent;
     border-radius: 0;
@@ -144,6 +154,7 @@ button:hover {
 }
 
 /* INGREDIENTS */
+
 .ingredient-list {
     list-style: none;
     padding: 0;
@@ -169,6 +180,7 @@ button:hover {
 }
 
 /* STEPS */
+
 .step {
     display: flex;
     gap: 12px;
@@ -188,8 +200,9 @@ button:hover {
 
 .step-text {
     color: #ddd;
-    flex:1;
+    flex: 1;
 }
+
 @media print {
 
     @page {
@@ -204,7 +217,6 @@ button:hover {
         font-size: 12pt;
     }
 
-
     /* AUSBLENDEN */
 
     .topbar,
@@ -216,7 +228,6 @@ button:hover {
         display: none !important;
     }
 
-
     /* CONTAINER */
 
     .container {
@@ -224,7 +235,6 @@ button:hover {
         padding: 0;
         margin: 0 auto;
     }
-
 
     /* TITEL */
 
@@ -235,7 +245,6 @@ button:hover {
         margin-bottom: 20px;
         page-break-after: avoid;
     }
-
 
     /* HAUPTBILD */
 
@@ -248,13 +257,11 @@ button:hover {
         border-radius: 10px;
     }
 
-
     /* BESCHREIBUNG AUSBLENDEN */
 
     p[style*="text-align:center"] {
         display: none !important;
     }
-
 
     /* ZEITEN + INFOS */
 
@@ -270,7 +277,6 @@ button:hover {
         font-size: 11pt;
     }
 
-
     .time-row strong {
         display: block;
         font-size: 13pt;
@@ -278,141 +284,93 @@ button:hover {
         color: black !important;
     }
 
-
     /* ZUTATEN / ZUBEREITUNG BOXEN */
 
     .card {
-
         background: white !important;
         color: black !important;
-
         border: none;
         padding: 0;
         margin-top: 15px;
-
         page-break-inside: avoid;
     }
 
-
     .card h2 {
-
         color: black !important;
-
         border-bottom: 1px solid #999;
         padding-bottom: 5px;
         margin-bottom: 15px;
     }
 
-
-
     /* ZUTATEN */
 
     .ingredient-list {
-
         list-style: disc;
         padding-left: 20px;
     }
 
-
     .ingredient-list label {
-
         display: inline;
         color: black !important;
     }
 
-
     .ingredient-list input {
-
         display: none;
     }
-
-
 
     /* ZUBEREITUNG */
 
     .step {
-
         display: flex !important;
-
         gap: 12px;
-
         margin-bottom: 15px;
-
         page-break-inside: avoid;
     }
 
-
     .step-number {
-
         display: flex !important;
-
         align-items: center;
         justify-content: center;
-
         background: none !important;
-
         color: black !important;
-
         font-weight: bold;
-
         width: 25px;
         min-width: 25px;
     }
 
-
     .step-text {
-
         display: block !important;
-
         flex: 1;
-
         color: black !important;
     }
-
 
     .step-text p {
-
         color: black !important;
     }
-
-
 
     /* SCHRITTBILDER AUSBLENDEN */
 
     .step-images {
-
         display: none !important;
     }
-
-
 
     /* LISTEN / TIPPS */
 
     ul {
-
         color: black !important;
     }
-
 
     li {
-
         color: black !important;
     }
-
-
 
     /* PRINT FOOTER */
 
     .print-footer {
-
         display: block;
-
         text-align: center;
-
         font-size: 8pt;
-
         color: #888;
-
         margin-top: 60px;
     }
 
@@ -422,9 +380,11 @@ button:hover {
 
 </head>
 
+
 <body>
 
 <div id="content"></div>
+
 
 
 <script>
@@ -3879,6 +3839,7 @@ function createSlug(title) {
 
 /* =========================================
    ZURÜCK-LINK
+
    FILTER + SCHNELLFILTER BEIBEHALTEN
 ========================================= */
 
@@ -3981,6 +3942,7 @@ if (recipe) {
         );
 
     }
+
 
     /* =====================================
        GOOGLE RECIPE SCHEMA
@@ -4147,12 +4109,17 @@ else {
                 ${
                     recipe.time?.preparation
                         ? `
+
                             <div>
+
                                 Zubereitung<br>
+
                                 <strong>
                                     ${recipe.time.preparation}
                                 </strong>
+
                             </div>
+
                           `
                         : ""
                 }
@@ -4161,12 +4128,17 @@ else {
                 ${
                     recipe.time?.cooking
                         ? `
+
                             <div>
+
                                 Kochen<br>
+
                                 <strong>
                                     ${recipe.time.cooking}
                                 </strong>
+
                             </div>
+
                           `
                         : ""
                 }
@@ -4175,12 +4147,17 @@ else {
                 ${
                     recipe.time?.baking
                         ? `
+
                             <div>
+
                                 Backen<br>
+
                                 <strong>
                                     ${recipe.time.baking}
                                 </strong>
+
                             </div>
+
                           `
                         : ""
                 }
@@ -4189,12 +4166,17 @@ else {
                 ${
                     recipe.time?.rising
                         ? `
+
                             <div>
+
                                 Gehzeit<br>
+
                                 <strong>
                                     ${recipe.time.rising}
                                 </strong>
+
                             </div>
+
                           `
                         : ""
                 }
@@ -4203,12 +4185,17 @@ else {
                 ${
                     recipe.time?.resting
                         ? `
+
                             <div>
+
                                 Ruhen<br>
+
                                 <strong>
                                     ${recipe.time.resting}
                                 </strong>
+
                             </div>
+
                           `
                         : ""
                 }
@@ -4217,12 +4204,17 @@ else {
                 ${
                     recipe.time?.cooling
                         ? `
+
                             <div>
+
                                 Abkühlen<br>
+
                                 <strong>
                                     ${recipe.time.cooling}
                                 </strong>
+
                             </div>
+
                           `
                         : ""
                 }
@@ -4231,12 +4223,17 @@ else {
                 ${
                     recipe.time?.total
                         ? `
+
                             <div>
+
                                 Gesamt<br>
+
                                 <strong>
                                     ${recipe.time.total}
                                 </strong>
+
                             </div>
+
                           `
                         : ""
                 }
@@ -4251,19 +4248,25 @@ else {
             <div class="info-row">
 
                 <div>
+
                     Portionen:
                     ${recipe.portions || ""}
+
                 </div>
 
 
                 <div>
+
                     Schwierigkeit:
                     ${recipe.difficulty || ""}
+
                 </div>
 
 
                 <div>
+
                     Kategorie:
+
                     ${
                         Array.isArray(
                             recipe.category
@@ -4271,6 +4274,7 @@ else {
                             ? recipe.category.join(", ")
                             : recipe.category || ""
                     }
+
                 </div>
 
             </div>
@@ -4327,7 +4331,6 @@ else {
                     Array.isArray(
                         recipe.ingredients
                     )
-
                         ? `
 
                             <ul class="ingredient-list">
@@ -4346,9 +4349,11 @@ else {
                                                         >
 
                                                         <span>
+
                                                             ${replaceRecipeLinks(
                                                                 ingredient
                                                             )}
+
                                                         </span>
 
                                                     </label>
@@ -4363,7 +4368,6 @@ else {
                             </ul>
 
                           `
-
                         : Object.entries(
                             recipe.ingredients || {}
                           )
@@ -4397,9 +4401,11 @@ else {
                                                                 >
 
                                                                 <span>
+
                                                                     ${replaceRecipeLinks(
                                                                         ingredient
                                                                     )}
+
                                                                 </span>
 
                                                             </label>
@@ -4436,7 +4442,9 @@ else {
                     Array.isArray(recipe.steps)
 
                         ? recipe.steps
+
                             .map(
+
                                 (step, i) => `
 
                                     <div class="step">
@@ -4453,11 +4461,13 @@ else {
                                         >
 
                                             <p>
+
                                                 ${
                                                     typeof step === "string"
                                                         ? step
                                                         : step.text
                                                 }
+
                                             </p>
 
 
@@ -4465,6 +4475,7 @@ else {
                                                 typeof step !== "string" &&
                                                 step.images &&
                                                 step.images.length
+
                                                     ? `
 
                                                         <div
@@ -4491,6 +4502,7 @@ else {
                                                         </div>
 
                                                       `
+
                                                     : ""
                                             }
 
@@ -4499,10 +4511,13 @@ else {
                                     </div>
 
                                 `
+
                             )
+
                             .join("")
 
                         : ""
+
                 }
 
             </div>
@@ -4533,9 +4548,11 @@ else {
                                             tip => `
 
                                                 <li>
+
                                                     ${replaceRecipeLinks(
                                                         tip
                                                     )}
+
                                                 </li>
 
                                             `
@@ -4550,6 +4567,7 @@ else {
                       `
 
                     : ""
+
             }
 
 
@@ -4594,9 +4612,13 @@ function replaceRecipeLinks(text) {
         (match, slug, title) => {
 
             return `
+
                 <a href="../recipes/${slug}.html">
+
                     ${title}
+
                 </a>
+
             `;
 
         }
@@ -4629,7 +4651,9 @@ function updateFavoriteButton() {
         !favoriteBtn ||
         !recipe
     ) {
+
         return;
+
     }
 
 
@@ -4779,4 +4803,5 @@ if (
 
 
 </body>
+
 </html>

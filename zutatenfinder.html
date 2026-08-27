@@ -4,293 +4,412 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>KitchenBreeze Zutatenfinder</title>
-<link rel="icon" type="image/png" href="logo1.png">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    KitchenBreeze Zutatenfinder
+</title>
+
+<link
+    rel="icon"
+    type="image/png"
+    href="logo1.png"
+>
 
 
 <style>
 
-    .logo-container {
-    text-align:center;
-    margin-bottom:20px;
-}
-
-.logo {
-    width:180px;
-}
-
-
-/* Einführung */
-
-.intro {
-    text-align:center;
-    color:#ddd;
-    margin-bottom:35px;
-}
-
-
-.steps-info {
-
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-
-    margin-bottom:40px;
-
-}
-
-
-.info-step {
-
-    background:#171718;
-
-    padding:20px;
-
-    border-radius:16px;
-
-    width:220px;
-
-    text-align:center;
-
-}
-
-
-.info-step span {
-
-    display:block;
-
-    font-size:30px;
-
-    margin-bottom:10px;
-
-}
+/* =========================================
+   GRUNDLAYOUT
+========================================= */
 
 body {
-    margin:0;
-    font-family:Georgia, serif;
-    background:#0f0f10;
-    color:#f2eee9;
+
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    background: #0f0f10;
+
+    color: #f2eee9;
+
 }
 
 
 .container {
-    max-width:900px;
-    margin:auto;
-    padding:30px;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 30px;
+
 }
 
 
 h1 {
-    text-align:center;
-    font-weight:300;
-    font-size:40px;
+
+    text-align: center;
+
+    font-weight: 300;
+
+    font-size: 40px;
+
 }
 
 
 .back {
-    color:#b8b2aa;
-    text-decoration:none;
+
+    color: #b8b2aa;
+
+    text-decoration: none;
+
 }
 
 
-/* SUCHFELD */
+/* =========================================
+   EINFÜHRUNG
+========================================= */
+
+.intro {
+
+    text-align: center;
+
+    color: #ddd;
+
+    margin-bottom: 35px;
+
+}
+
+
+.finder-steps {
+
+    max-width: 700px;
+
+    margin: 0 auto 40px;
+
+    color: #b8b2aa;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================
+   SUCHBEREICH
+========================================= */
 
 .search-box {
-    margin-top:40px;
-    text-align:center;
+
+    margin-top: 40px;
+
+    text-align: center;
+
 }
 
 
 #ingredientInput {
 
-    width:80%;
-    max-width:500px;
+    width: 80%;
 
-    padding:15px;
+    max-width: 500px;
 
-    border-radius:12px;
+    padding: 15px;
 
-    border:1px solid #333;
+    border-radius: 12px;
 
-    background:#171718;
+    border: 1px solid #333;
 
-    color:white;
+    background: #171718;
 
-    font-size:16px;
+    color: white;
+
+    font-size: 16px;
+
+    font-family: Georgia, serif;
+
+    box-sizing: border-box;
 
 }
 
 
+#ingredientInput:focus {
 
-/* AUSWAHL */
+    outline: none;
+
+    border-color: #777;
+
+}
+
+
+/* =========================================
+   AUSWAHL
+========================================= */
 
 .options {
 
-    margin:25px auto;
+    margin: 25px auto;
 
-    text-align:center;
+    text-align: center;
 
 }
-
 
 
 .mode-option {
 
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    align-items: center;
 
-    justify-content:center;
+    justify-content: center;
 
-    gap:10px;
+    gap: 10px;
 
-    color:#ddd;
+    color: #ddd;
 
-    cursor:pointer;
+    cursor: pointer;
 
-    margin:12px 0;
+    margin: 12px 0;
 
 }
-
 
 
 .mode-option input {
 
-    display:none;
+    display: none;
 
 }
-
 
 
 .mode-option span {
 
-    width:18px;
+    width: 18px;
 
-    height:18px;
+    height: 18px;
 
-    border:2px solid #777;
+    border: 2px solid #777;
 
-    border-radius:4px;
+    border-radius: 4px;
 
-    display:inline-block;
+    display: inline-block;
 
-    position:relative;
+    position: relative;
 
 }
-
 
 
 .mode-option input:checked + span {
 
-    background:white;
+    background: white;
 
-    border-color:white;
+    border-color: white;
 
 }
-
 
 
 .mode-option input:checked + span::after {
 
-    content:"✓";
+    content: "✓";
 
-    color:#111;
+    color: #111;
 
-    position:absolute;
+    position: absolute;
 
-    font-size:14px;
+    font-size: 14px;
 
-    left:2px;
+    left: 2px;
 
-    top:-2px;
-
-}
-
-
-
-/* BUTTON */
-
-button {
-
-    background:#171718;
-
-    border:1px solid #333;
-
-    color:white;
-
-    padding:12px 20px;
-
-    border-radius:12px;
-
-    cursor:pointer;
+    top: -2px;
 
 }
 
 
+/* =========================================
+   SICHTBAREN SUCHBUTTON AUSBLENDEN
+========================================= */
 
-button:hover {
+.search-button {
 
-    background:#222;
+    display: none;
 
 }
 
 
+/* =========================================
+   REZEPTE
+========================================= */
 
-/* REZEPTE */
+#results {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+}
+
 
 .recipe-card {
 
-    display:flex;
+    display: flex;
 
-    gap:20px;
+    gap: 20px;
 
-    background:#171718;
+    background: #171718;
 
-    padding:15px;
+    padding: 15px;
 
-    border-radius:16px;
+    border-radius: 16px;
 
-    margin-top:20px;
+    margin-top: 20px;
 
 }
-
 
 
 .recipe-card img {
 
-    width:120px;
+    width: 120px;
 
-    height:120px;
+    height: 120px;
 
-    object-fit:cover;
+    object-fit: cover;
 
-    border-radius:12px;
+    border-radius: 12px;
 
 }
-
 
 
 .recipe-card h2 {
 
-    margin:0;
+    margin: 0;
 
-    font-weight:300;
+    font-weight: 300;
 
 }
 
+
+.recipe-card p {
+
+    color: #b8b2aa;
+
+    line-height: 1.5;
+
+}
 
 
 a {
 
-    color:white;
+    color: white;
 
-    text-decoration:none;
+    text-decoration: none;
 
 }
 
+
+/* =========================================
+   HANDY
+========================================= */
+
+@media (max-width: 800px) {
+
+    .container {
+
+        padding: 20px;
+
+    }
+
+
+    h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    #ingredientInput {
+
+        width: 100%;
+
+        max-width: none;
+
+    }
+
+
+    .finder-steps {
+
+        font-size: 15px;
+
+    }
+
+
+    .recipe-card {
+
+        gap: 14px;
+
+        padding: 12px;
+
+    }
+
+
+    .recipe-card img {
+
+        width: 95px;
+
+        height: 95px;
+
+        flex-shrink: 0;
+
+    }
+
+
+    .recipe-card h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .recipe-card p {
+
+        font-size: 14px;
+
+    }
+
+}
+
+
+/* =========================================
+   KLEINE HANDYS
+========================================= */
+
+@media (max-width: 500px) {
+
+    .container {
+
+        padding: 16px;
+
+    }
+
+
+    h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .recipe-card img {
+
+        width: 85px;
+
+        height: 85px;
+
+    }
+
+}
 
 </style>
 
@@ -302,118 +421,195 @@ a {
 
 <div class="container">
 
-    <a class="back" href="index.html">
-← Zurück
-</a>
+
+    <!-- =====================================
+         ZURÜCK
+    ====================================== -->
+
+    <a
+        class="back"
+        href="index.html"
+    >
+
+        ← Zurück
+
+    </a>
 
 
+    <!-- =====================================
+         TITEL
+    ====================================== -->
 
-<h1>
-Zutatenfinder
-</h1>
+    <h1>
 
-<div class="intro">
+        Zutatenfinder
+
+    </h1>
 
 
-<p>
-Du hast Zutaten zuhause und weißt nicht, was du damit kochen sollst?
-Der KitchenBreeze Zutatenfinder hilft dir dabei, passende Rezepte zu entdecken.
-</p>
+    <!-- =====================================
+         EINLEITUNG
+    ====================================== -->
+
+    <div class="intro">
+
+        <p>
+
+            Du hast Zutaten zuhause und weißt nicht,
+            was du damit kochen sollst?
+
+            Der KitchenBreeze Zutatenfinder hilft dir dabei,
+            passende Rezepte zu entdecken.
+
+        </p>
+
+    </div>
+
+
+    <!-- =====================================
+         SCHRITTE
+    ====================================== -->
+
+    <div class="finder-steps">
+
+        <p>
+
+            1. Schreibe die Zutaten, die du zuhause hast,
+            in das Suchfeld.
+
+        </p>
+
+        <p>
+
+            2. Wähle aus, ob alle oder nur einzelne
+            Zutaten enthalten sein sollen.
+
+        </p>
+
+        <p>
+
+            3. Wähle das passende Rezept aus und
+            los geht's mit dem Kochen!
+
+        </p>
+
+    </div>
+
 
 </div>
 
 
-<div class="finder-steps">
+<!-- =========================================
+     SUCHBEREICH
 
-<p>
-1. Schreibe die Zutaten, die du zuhause hast, in das Suchfeld.</p>
+     WICHTIG:
+     Das Ganze ist jetzt ein FORMULAR.
 
-<p>
-    2. Wähle aus ob alle oder nur einzelne Zutaten enthalten sein sollen</p>
+     Dadurch erkennt die Handy-Tastatur
+     den Suchvorgang richtig und der blaue
+     Haken löst die Suche aus.
+========================================= -->
 
-
-<p>
-    3. Wähle das passende Rezept aus und Los geht's mit dem Kochen!</p>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<div class="search-box">
-
-
-<input
-    id="ingredientInput"
-    type="search"
-    enterkeyhint="search"
-    placeholder="z.B. Kartoffeln Käse Tomaten"
-    autocomplete="off"
+<form
+    class="search-box"
+    id="ingredientSearchForm"
 >
 
 
+    <!-- =====================================
+         SUCHFELD
+    ====================================== -->
 
-<div class="options">
-
-
-<label class="mode-option">
-
-<input 
-type="radio" 
-name="mode" 
-value="all" 
-checked
->
-
-<span></span>
-
-Alle Zutaten müssen enthalten sein
-
-</label>
+    <input
+        id="ingredientInput"
+        type="search"
+        enterkeyhint="search"
+        inputmode="text"
+        placeholder="z.B. Kartoffeln Käse Tomaten"
+        autocomplete="off"
+        aria-label="Zutaten eingeben"
+    >
 
 
+    <!-- =====================================
+         AUSWAHL
+    ====================================== -->
 
-<label class="mode-option">
-
-<input 
-type="radio" 
-name="mode" 
-value="one"
->
-
-<span></span>
-
-Mindestens eine Zutat reicht
-
-</label>
+    <div class="options">
 
 
+        <label class="mode-option">
 
-</div>
+            <input
+                type="radio"
+                name="mode"
+                value="all"
+                checked
+            >
+
+            <span></span>
+
+            Alle Zutaten müssen enthalten sein
+
+        </label>
 
 
-</div>
+        <label class="mode-option">
+
+            <input
+                type="radio"
+                name="mode"
+                value="one"
+            >
+
+            <span></span>
+
+            Mindestens eine Zutat reicht
+
+        </label>
 
 
+    </div>
+
+
+    <!-- =====================================
+         UNSICHTBARER SUBMIT-BUTTON
+
+         Dieser ist nicht sichtbar.
+
+         Er sorgt dafür, dass der blaue
+         Haken der Handy-Tastatur das
+         Formular absendet.
+    ====================================== -->
+
+    <button
+        type="submit"
+        class="search-button"
+        aria-hidden="true"
+        tabindex="-1"
+    >
+
+        Suchen
+
+    </button>
+
+
+</form>
+
+
+<!-- =========================================
+     ERGEBNISSE
+========================================= -->
 
 <div id="results"></div>
 
 
-
-</div>
-
-
-
-<script src="recipes.js"></script>
-
-
+<!-- =========================================
+     REZEPTE
+========================================= -->
 
 <script src="recipes.js"></script>
+
 
 <script>
 
@@ -424,25 +620,37 @@ Mindestens eine Zutat reicht
 function getAllIngredients(recipe) {
 
     if (!recipe.ingredients) {
+
         return [];
+
     }
 
+
     if (Array.isArray(recipe.ingredients)) {
+
         return recipe.ingredients;
+
     }
+
 
     let all = [];
 
+
     Object.values(recipe.ingredients)
+
         .forEach(group => {
 
             if (Array.isArray(group)) {
+
                 all.push(...group);
+
             }
 
         });
 
+
     return all;
+
 }
 
 
@@ -452,9 +660,13 @@ function getAllIngredients(recipe) {
 
 function searchIngredients() {
 
+
     const input = document
+
         .getElementById("ingredientInput")
+
         .value
+
         .toLowerCase();
 
 
@@ -463,25 +675,29 @@ function searchIngredients() {
     ====================================== */
 
     const wanted = input
+
         .split(/[\s,]+/)
+
         .map(i => i.trim())
+
         .filter(i => i);
 
 
     const mode = document.querySelector(
+
         'input[name="mode"]:checked'
+
     ).value;
 
 
-    const results =
-        document.getElementById("results");
+    const results = document.getElementById("results");
 
 
     results.innerHTML = "";
 
 
     /* =====================================
-       KEINE ZUTATEN EINGEGEBEN
+       KEINE ZUTATEN
     ====================================== */
 
     if (wanted.length === 0) {
@@ -502,16 +718,20 @@ function searchIngredients() {
 
 
         const ingredients = getAllIngredients(recipe)
+
             .map(i =>
 
                 String(i)
+
                     .replace(/<[^>]*>/g, "")
+
                     .toLowerCase()
 
             );
 
 
         let found = [];
+
         let missing = [];
 
 
@@ -527,7 +747,10 @@ function searchIngredients() {
 
                 const cleanIngredient = i
 
-                    .replace(/[0-9.,*\/½¼¾]+/g, "")
+                    .replace(
+                        /[0-9.,*\/½¼¾]+/g,
+                        ""
+                    )
 
                     .replace(
                         /\b(g|kg|mg|ml|l|tl|el)\b/g,
@@ -535,10 +758,12 @@ function searchIngredients() {
                     )
 
                     .trim()
+
                     .toLowerCase();
 
 
                 let a = cleanIngredient;
+
                 let b = search;
 
 
@@ -547,8 +772,11 @@ function searchIngredients() {
                 ========================= */
 
                 if (
+
                     b === "lauch" &&
+
                     a.includes("knoblauch")
+
                 ) {
 
                     return false;
@@ -565,7 +793,6 @@ function searchIngredients() {
 
                 /* =========================
                    KURZE BEGRIFFE
-                   z.B. Ei, Öl, Salz
                 ========================= */
 
                 if (b.length <= 3) {
@@ -616,6 +843,7 @@ function searchIngredients() {
                 found.push(search);
 
             }
+
             else {
 
                 missing.push(search);
@@ -638,6 +866,7 @@ function searchIngredients() {
             ok = missing.length === 0;
 
         }
+
         else {
 
             ok = found.length > 0;
@@ -650,7 +879,9 @@ function searchIngredients() {
             matches.push({
 
                 recipe,
+
                 found,
+
                 missing
 
             });
@@ -668,6 +899,7 @@ function searchIngredients() {
     matches.sort((a, b) =>
 
         a.missing.length -
+
         b.missing.length
 
     );
@@ -680,12 +912,19 @@ function searchIngredients() {
     results.innerHTML = `
 
         <p style="
+
             text-align:center;
+
             color:#b8b2aa;
-            margin-top:20px;
+
+            margin-top:30px;
+
+            margin-bottom:20px;
+
         ">
 
             ${matches.length}
+
             passende Rezepte gefunden
 
         </p>
@@ -703,45 +942,60 @@ function searchIngredients() {
         results.innerHTML += `
 
             <a
+
                 href="recipe.html?id=${match.recipe.id}"
+
             >
 
                 <div class="recipe-card">
 
+
                     <img
+
                         src="${match.recipe.image}"
+
                         alt="${match.recipe.title}"
+
                     >
 
 
                     <div>
 
+
                         <h2>
+
                             ${match.recipe.title}
+
                         </h2>
 
 
                         <p>
+
                             ${match.recipe.description || ""}
+
                         </p>
 
 
                         ${
+
                             match.missing.length === 0
 
                             ?
 
                             `
+
                             <p style="color:#8fd18f;">
 
                                 ✓ Alle Zutaten vorhanden
 
                             </p>
+
                             `
 
                             :
 
                             `
+
                             <p style="color:#e5c66b;">
 
                                 Fehlt noch:<br>
@@ -749,11 +1003,14 @@ function searchIngredients() {
                                 ${match.missing.join(", ")}
 
                             </p>
+
                             `
 
                         }
 
+
                     </div>
+
 
                 </div>
 
@@ -769,17 +1026,23 @@ function searchIngredients() {
     ====================================== */
 
     if (
+
         window.innerWidth <= 800 &&
+
         matches.length > 0
+
     ) {
 
         setTimeout(() => {
 
             document
+
                 .getElementById("results")
+
                 .scrollIntoView({
 
                     behavior: "smooth",
+
                     block: "start"
 
                 });
@@ -792,32 +1055,36 @@ function searchIngredients() {
 
 
 /* =========================================
-   ENTER / SUCHEN = SUCHE STARTEN
+   FORMULAR ABSENDEN
+
+   Das ist der entscheidende Teil:
+
+   - Enter funktioniert
+   - blauer Haken funktioniert
+   - sichtbarer Suchen-Button wird nicht benötigt
 ========================================= */
 
-const ingredientInput =
+const ingredientSearchForm =
+
     document.getElementById(
-        "ingredientInput"
+
+        "ingredientSearchForm"
+
     );
 
-ingredientInput.addEventListener(
-    "keydown",
+
+ingredientSearchForm.addEventListener(
+
+    "submit",
+
     function(event) {
 
-        if (
-            event.key === "Enter" ||
-            event.key === "Go" ||
-            event.key === "Search" ||
-            event.key === "Done"
-        ) {
+        event.preventDefault();
 
-            event.preventDefault();
-
-            searchIngredients();
-
-        }
+        searchIngredients();
 
     }
+
 );
 
 </script>

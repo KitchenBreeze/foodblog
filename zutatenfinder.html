@@ -457,7 +457,6 @@ a {
 
             Du hast Zutaten zuhause und weißt nicht,
             was du damit kochen sollst?
-
             Der KitchenBreeze Zutatenfinder hilft dir dabei,
             passende Rezepte zu entdecken.
 
@@ -479,12 +478,14 @@ a {
 
         </p>
 
+
         <p>
 
             2. Wähle aus, ob alle oder nur einzelne
             Zutaten enthalten sein sollen.
 
         </p>
+
 
         <p>
 
@@ -501,11 +502,6 @@ a {
 
 <!-- =========================================
      SUCHBEREICH
-
-     Das Suchfeld ist ein Formular.
-
-     Dadurch funktionieren Enter und
-     der blaue Haken der Handy-Tastatur.
 ========================================= -->
 
 <form
@@ -572,12 +568,6 @@ a {
 
     <!-- =====================================
          UNSICHTBARER SUBMIT-BUTTON
-
-         Er wird nicht angezeigt.
-
-         Er sorgt dafür, dass das Formular
-         auch über den blauen Haken der
-         Handy-Tastatur abgeschickt wird.
     ====================================== -->
 
     <button
@@ -648,6 +638,96 @@ function getAllIngredients(recipe) {
 
 
     return all;
+
+}
+
+
+/* =========================================
+   REZEPT-DATEI ERMITTELN
+========================================= */
+
+function getRecipeUrl(recipe) {
+
+    /*
+       Die generierten Rezeptseiten liegen
+       im Ordner "recipes".
+
+       Beispiel:
+
+       recipes/baguette.html
+       recipes/erdbeermuffins.html
+       recipes/brezeln.html
+    */
+
+
+    if (recipe.slug) {
+
+        return `recipes/${recipe.slug}.html`;
+
+    }
+
+
+    if (recipe.filename) {
+
+        return `recipes/${recipe.filename}`;
+
+    }
+
+
+    if (recipe.file) {
+
+        return `recipes/${recipe.file}`;
+
+    }
+
+
+    /*
+       Falls dein recipes.js die Datei
+       direkt als url speichert.
+    */
+
+    if (recipe.url) {
+
+        return recipe.url;
+
+    }
+
+
+    /*
+       Falls kein Dateiname vorhanden ist,
+       versuchen wir den Titel in einen
+       passenden Dateinamen umzuwandeln.
+    */
+
+    if (recipe.title) {
+
+        const slug = recipe.title
+
+            .toLowerCase()
+
+            .normalize("NFD")
+
+            .replace(/[\u0300-\u036f]/g, "")
+
+            .replace(/ä/g, "ae")
+
+            .replace(/ö/g, "oe")
+
+            .replace(/ü/g, "ue")
+
+            .replace(/ß/g, "ss")
+
+            .replace(/[^a-z0-9]+/g, "-")
+
+            .replace(/^-+|-+$/g, "");
+
+
+        return `recipes/${slug}.html`;
+
+    }
+
+
+    return "#";
 
 }
 
@@ -943,11 +1023,18 @@ function searchIngredients() {
     matches.forEach(match => {
 
 
+        const recipeUrl = getRecipeUrl(
+
+            match.recipe
+
+        );
+
+
         results.innerHTML += `
 
             <a
 
-                href="recipe.html?id=${match.recipe.id}&from=zutatenfinder"
+                href="${recipeUrl}?from=zutatenfinder"
 
             >
 
@@ -1060,9 +1147,6 @@ function searchIngredients() {
 
 /* =========================================
    FORMULAR ABSENDEN
-
-   Enter und der blaue Haken der
-   Handy-Tastatur lösen die Suche aus.
 ========================================= */
 
 const ingredientSearchForm =

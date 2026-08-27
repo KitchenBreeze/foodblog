@@ -2273,15 +2273,18 @@ body.search-active .home-footer {
 ========================================= */
 
 .home-footer {
+    display: flex;
     flex-wrap: wrap;
 }
 
 .footer-copyright {
-    flex-basis: 100%;
+    flex: 0 0 100%;
     width: 100%;
-    margin: 25px 0 0;
+    margin-top: 25px;
+    padding-top: 15px;
     text-align: center;
     color: var(--kb-muted);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 12px;
+    line-height: 1.5;
 }

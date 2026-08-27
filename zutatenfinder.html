@@ -229,7 +229,7 @@ h1 {
 
 
 /* =========================================
-   SICHTBAREN SUCHBUTTON AUSBLENDEN
+   UNSICHTBARER SUCHBUTTON
 ========================================= */
 
 .search-button {
@@ -502,12 +502,9 @@ a {
 <!-- =========================================
      SUCHBEREICH
 
-     WICHTIG:
-     Das Ganze ist jetzt ein FORMULAR.
-
-     Dadurch erkennt die Handy-Tastatur
-     den Suchvorgang richtig und der blaue
-     Haken löst die Suche aus.
+     Das Suchfeld ist ein Formular.
+     Dadurch funktionieren Enter und
+     der blaue Haken der Handy-Tastatur.
 ========================================= -->
 
 <form
@@ -575,11 +572,11 @@ a {
     <!-- =====================================
          UNSICHTBARER SUBMIT-BUTTON
 
-         Dieser ist nicht sichtbar.
+         Er wird nicht angezeigt.
 
-         Er sorgt dafür, dass der blaue
-         Haken der Handy-Tastatur das
-         Formular absendet.
+         Er sorgt dafür, dass das Formular
+         auch über den blauen Haken der
+         Handy-Tastatur abgeschickt wird.
     ====================================== -->
 
     <button
@@ -748,13 +745,19 @@ function searchIngredients() {
                 const cleanIngredient = i
 
                     .replace(
+
                         /[0-9.,*\/½¼¾]+/g,
+
                         ""
+
                     )
 
                     .replace(
+
                         /\b(g|kg|mg|ml|l|tl|el)\b/g,
+
                         ""
+
                     )
 
                     .trim()
@@ -941,9 +944,9 @@ function searchIngredients() {
 
         results.innerHTML += `
 
-            <a 
+            <a
 
-            href="recipe.html?id=${match.recipe.id}&from=zutatenfinder" 
+                href="recipe.html?id=${match.recipe.id}&from=zutatenfinder"
 
             >
 
@@ -1057,11 +1060,8 @@ function searchIngredients() {
 /* =========================================
    FORMULAR ABSENDEN
 
-   Das ist der entscheidende Teil:
-
-   - Enter funktioniert
-   - blauer Haken funktioniert
-   - sichtbarer Suchen-Button wird nicht benötigt
+   Enter und der blaue Haken der
+   Handy-Tastatur lösen die Suche aus.
 ========================================= */
 
 const ingredientSearchForm =

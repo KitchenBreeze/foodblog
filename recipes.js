@@ -3860,5 +3860,6 @@ related: ["45", "7", "20"],
     ]
 },
 
+
 ];
 module.exports = { RECIPES };

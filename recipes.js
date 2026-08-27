@@ -3638,11 +3638,11 @@ related: ["45", "7", "20"],
     image: "images/zwetschgenkuchen.jpeg",
 
     time: {
-        preparation: "25 min",
+        preparation: "22 min",
         rising: "1 Std",
-        baking: "35 min",
+        baking: "38 min",
         cooling: "30 min",
-        total: "ca. 2 Std 30 min"
+        total: "2 Std 30 min"
     },
 
     related: ["1", "3", "50"],
@@ -3685,32 +3685,58 @@ related: ["45", "7", "20"],
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
-{text: "Für den Boden Mehl, Zucker, Trockenhefe und Salz in einer Rührschüssel vermengen. In der Mitte eine Mulde formen. Ei und lauwarme Milch hineingeben und auf mittlerer bis hoher  Stufe etwa 8 Minuten zu einem einigermaßen glatten, elastischen Teig kneten."
-},
-{text: "Die weiche Butter in kleine Stücke schneiden, nach und nach auf mittlerer Stufe zum Teig geben und weitere ca. 5 Minuten auf mittlerer bis hoher Stufe kneten, bis ein glänzender, elastischer, leicht klebriger Teig entsteht. Eine Schüssel etwas einölen, den Teig mit einer Teigkarte oder einem  Löffel in die Schüssel geben, abdecken und bei Raumtemperatur etwa 1 Stunde ruhen lassen, bis er sein Volumen ungefähr verdoppelt hat."},
 
-{text: "Währenddessen für die Streusel Mehl, Zucker und Salz in einer großen Schüssel vermengen. Die kalte Butter in kleine Stücke schneiden, dazugeben, mit den Händen zu groben Streuseln verkneten und in den Kühlschrank stellen.",},
+        {
+            text: "Für den Boden Mehl, Zucker, Trockenhefe und Salz in einer Rührschüssel vermengen. In der Mitte eine Mulde formen. Das Ei und die lauwarme Milch hineingeben und auf mittlerer bis hoher Stufe etwa 8 Minuten zu einem einigermaßen glatten und elastischen Teig kneten."
+        },
 
-{text: "Nach der Ruhezeit eine 28 × 28 cm große Form mit Backpapier auslegen, mit etwas Mehl bestäuben, den  aufgegangenen Teig in die Form geben, mit bemehlten Händen gleichmäßig in die Form drücken und weitere 10-15min ruhen lassen."},
-{images: [
-    "images/teig1.jpeg",
-    "images/teig2.jpeg"
-]
-},
-{text: "In der Zwischenzeit den Ofen auf 180 Grad Ober/Unterhitze vorheizen, die Zwetschgen entsteinen, die Stängel entfernen und das Fruchtfleisch halbieren. Die Zwetschgen dicht an dicht, gleichmäßig mit der Schnittfläche nach oben auf dem Hefeboden verteilen und leicht andrücken.", },
-{images: [
-    "images/plaume1.jpeg",
-]
-},
-{text: "Anschließend die kalten Streusel großzügig darüberstreuen."},
-{images: [
-    "images/streusel.jpeg",
-]
-},
+        {
+            text: "Die weiche Butter in kleine Stücke schneiden, nach und nach zum Teig geben und weitere ca. 5 Minuten auf mittlerer bis hoher Stufe kneten, bis ein glänzender, elastischer und leicht klebriger Teig entsteht. Eine Schüssel etwas einölen, den Teig mit einer Teigkarte oder einem Löffel in die Schüssel geben, abdecken und bei Raumtemperatur etwa 1 Stunde ruhen lassen, bis er sein Volumen ungefähr verdoppelt hat."
+        },
 
-{text: "Den Kuchen im vorgeheizten Backofen auf mittlerer Schiene etwa 35-40 Minuten backen, bis die Streusel schön goldbraun sind. Den Kuchen aus dem Ofen nehmen und etwa 30 Minuten abkühlen lassen."},
+        {
+            text: "Währenddessen für die Streusel Mehl, Zucker und Salz in einer großen Schüssel vermengen. Die kalte Butter in kleine Stücke schneiden, dazugeben, mit den Händen zu groben Streuseln verkneten und anschließend in den Kühlschrank stellen."
+        },
 
-{ text: "Für den Zuckerguss den Puderzucker mit zunächst 2 EL Wasser zu einer dickflüssigen Masse verrühren. Falls nötig, tropfenweise weiteres Wasser hinzufügen. Den Zuckerguss anschließend in dünnen Linien über dem Kuchen verteilen und vollständig trocknen lassen."},
+        {
+            text: "Nach der Ruhezeit eine 28 × 28 cm große Form mit Backpapier auslegen. Den aufgegangenen Teig mit etwas Mehl bestäuben, in die Form geben und mit bemehlten Händen gleichmäßig in die Form drücken. Anschließend weitere 10-15 Minuten ruhen lassen."
+        },
+
+        {
+            images: [
+                "images/teig1.jpeg",
+                "images/teig2.jpeg"
+            ]
+        },
+
+        {
+            text: "In der Zwischenzeit den Ofen auf 180 Grad Ober-/Unterhitze vorheizen. Die Zwetschgen entsteinen, die Stängel entfernen und das Fruchtfleisch halbieren. Die Zwetschgen dicht an dicht und gleichmäßig mit der Schnittfläche nach oben auf dem Hefeboden verteilen und leicht andrücken."
+        },
+
+        {
+            images: [
+                "images/plaume1.jpeg"
+            ]
+        },
+
+        {
+            text: "Anschließend die kalten Streusel großzügig darüberstreuen."
+        },
+
+        {
+            images: [
+                "images/streusel.jpeg"
+            ]
+        },
+
+        {
+            text: "Den Kuchen im vorgeheizten Backofen auf mittlerer Schiene etwa 35-40 Minuten backen, bis die Streusel schön goldbraun sind. Den Kuchen aus dem Ofen nehmen und etwa 30 Minuten abkühlen lassen."
+        },
+
+        {
+            text: "Für den Zuckerguss den Puderzucker mit zunächst 2 EL Wasser zu einer dickflüssigen Masse verrühren. Falls nötig, tropfenweise weiteres Wasser hinzufügen. Den Zuckerguss anschließend in dünnen Linien über dem Kuchen verteilen und vollständig trocknen lassen."
+        }
+
     ]
 },
 

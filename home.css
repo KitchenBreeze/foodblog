@@ -1136,6 +1136,7 @@ body {
 ========================================= */
 
 .home-footer {
+
     margin-top: 30px;
 
     padding:
@@ -1144,27 +1145,47 @@ body {
             calc((100vw - 1180px) / 2)
         );
 
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 30px;
-
-    background:
-        #171718;
+    background: #171718;
 
     border-top:
         1px solid var(--kb-border);
 
     color:
         var(--kb-text);
+
 }
 
-.home-footer strong {
+
+/* =========================================
+   HAUPTBEREICH
+========================================= */
+
+.footer-main {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+/* =========================================
+   KITCHENBREEZE
+========================================= */
+
+.footer-main strong {
+
     font-size: 20px;
+
 }
 
-.home-footer p {
+
+.footer-main p {
+
     margin:
         8px 0 0;
 
@@ -1176,9 +1197,16 @@ body {
         sans-serif;
 
     font-size: 14px;
+
 }
 
+
+/* =========================================
+   LINKS
+========================================= */
+
 .footer-links {
+
     display: flex;
 
     gap: 22px;
@@ -1186,9 +1214,12 @@ body {
     align-items: center;
 
     flex-wrap: wrap;
+
 }
 
+
 .footer-links a {
+
     color:
         var(--kb-text);
 
@@ -1202,28 +1233,69 @@ body {
 
     transition:
         color 0.2s ease;
+
 }
 
+
 .footer-links a:hover {
+
     color:
         var(--kb-accent);
+
 }
+
+
+/* =========================================
+   COPYRIGHT
+========================================= */
+
 .footer-copyright {
 
     width: 100%;
 
     margin-top: 25px;
 
+    padding-top: 18px;
+
+    border-top:
+        1px solid var(--kb-border);
+
     text-align: center;
 
-    color: var(--kb-muted);
+    color:
+        var(--kb-muted);
 
     font-family:
         Arial,
         Helvetica,
         sans-serif;
 
-    font-size: 13px;
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .footer-main {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+    .footer-links {
+
+        justify-content: center;
+
+    }
 
 }
 
@@ -2267,43 +2339,4 @@ body.search-active .home-footer {
     .home-slider-track .home-recipe-time {
         font-size: 13px;
     }
-}
-/* =========================================
-   COPYRIGHT IM FOOTER
-========================================= */
-
-.home-footer {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-/* =========================================
-   COPYRIGHT
-========================================= */
-
-.footer-copyright {
-
-    width: 100% !important;
-
-    flex-basis: 100% !important;
-
-    display: block !important;
-
-    margin: 25px 0 0 !important;
-
-    padding: 0;
-
-    text-align: center !important;
-
-    color: var(--kb-muted);
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size: 12px;
-
-    line-height: 1.5;
-
 }

@@ -599,6 +599,8 @@ a {
 <script src="recipes.js"></script>
 
 
+<script src="recipes.js"></script>
+
 <script>
 
 /* =========================================
@@ -608,37 +610,25 @@ a {
 function getAllIngredients(recipe) {
 
     if (!recipe.ingredients) {
-
         return [];
-
     }
-
 
     if (Array.isArray(recipe.ingredients)) {
-
         return recipe.ingredients;
-
     }
-
 
     let all = [];
 
-
     Object.values(recipe.ingredients)
-
         .forEach(group => {
 
             if (Array.isArray(group)) {
-
                 all.push(...group);
-
             }
 
         });
 
-
     return all;
-
 }
 
 
@@ -648,87 +638,118 @@ function getAllIngredients(recipe) {
 
 function getRecipeUrl(recipe) {
 
-    /*
-       Die generierten Rezeptseiten liegen
-       im Ordner "recipes".
-
-       Beispiel:
-
-       recipes/baguette.html
-       recipes/erdbeermuffins.html
-       recipes/brezeln.html
-    */
-
-
     if (recipe.slug) {
-
         return `recipes/${recipe.slug}.html`;
-
     }
-
 
     if (recipe.filename) {
-
         return `recipes/${recipe.filename}`;
-
     }
-
 
     if (recipe.file) {
-
         return `recipes/${recipe.file}`;
-
     }
-
-
-    /*
-       Falls dein recipes.js die Datei
-       direkt als url speichert.
-    */
 
     if (recipe.url) {
-
         return recipe.url;
-
     }
-
-
-    /*
-       Falls kein Dateiname vorhanden ist,
-       versuchen wir den Titel in einen
-       passenden Dateinamen umzuwandeln.
-    */
 
     if (recipe.title) {
 
         const slug = recipe.title
-
             .toLowerCase()
-
             .normalize("NFD")
-
             .replace(/[\u0300-\u036f]/g, "")
-
             .replace(/ä/g, "ae")
-
             .replace(/ö/g, "oe")
-
             .replace(/ü/g, "ue")
-
             .replace(/ß/g, "ss")
-
             .replace(/[^a-z0-9]+/g, "-")
-
             .replace(/^-+|-+$/g, "");
 
-
         return `recipes/${slug}.html`;
+    }
+
+    return "#";
+}
+
+
+/* =========================================
+   ZUTATENFINDER SUCHZUSTAND SPEICHERN
+========================================= */
+
+function saveFinderState() {
+
+    const input =
+        document.getElementById("ingredientInput").value;
+
+    const selectedMode =
+        document.querySelector(
+            'input[name="mode"]:checked'
+        );
+
+    const mode =
+        selectedMode
+            ? selectedMode.value
+            : "all";
+
+    localStorage.setItem(
+        "zutatenfinderInput",
+        input
+    );
+
+    localStorage.setItem(
+        "zutatenfinderMode",
+        mode
+    );
+}
+
+
+/* =========================================
+   ZUTATENFINDER SUCHZUSTAND LADEN
+========================================= */
+
+function loadFinderState() {
+
+    const savedInput =
+        localStorage.getItem(
+            "zutatenfinderInput"
+        );
+
+    const savedMode =
+        localStorage.getItem(
+            "zutatenfinderMode"
+        );
+
+
+    if (savedInput) {
+
+        document.getElementById(
+            "ingredientInput"
+        ).value = savedInput;
 
     }
 
 
-    return "#";
+    if (savedMode) {
 
+        const modeInput =
+            document.querySelector(
+                `input[name="mode"][value="${savedMode}"]`
+            );
+
+        if (modeInput) {
+            modeInput.checked = true;
+        }
+
+    }
+
+
+    /* Suche automatisch wieder ausführen */
+
+    if (savedInput && savedInput.trim() !== "") {
+        searchIngredients();
+    }
 }
 
 
@@ -738,14 +759,16 @@ function getRecipeUrl(recipe) {
 
 function searchIngredients() {
 
+    const input =
+        document
+            .getElementById("ingredientInput")
+            .value
+            .toLowerCase();
 
-    const input = document
 
-        .getElementById("ingredientInput")
+    /* Suchzustand speichern */
 
-        .value
-
-        .toLowerCase();
+    saveFinderState();
 
 
     /* =====================================
@@ -753,22 +776,19 @@ function searchIngredients() {
     ====================================== */
 
     const wanted = input
-
         .split(/[\s,]+/)
-
         .map(i => i.trim())
-
         .filter(i => i);
 
 
-    const mode = document.querySelector(
+    const mode =
+        document.querySelector(
+            'input[name="mode"]:checked'
+        ).value;
 
-        'input[name="mode"]:checked'
 
-    ).value;
-
-
-    const results = document.getElementById("results");
+    const results =
+        document.getElementById("results");
 
 
     results.innerHTML = "";
@@ -779,9 +799,7 @@ function searchIngredients() {
     ====================================== */
 
     if (wanted.length === 0) {
-
         return;
-
     }
 
 
@@ -794,22 +812,16 @@ function searchIngredients() {
 
     RECIPES.forEach(recipe => {
 
-
-        const ingredients = getAllIngredients(recipe)
-
-            .map(i =>
-
-                String(i)
-
-                    .replace(/<[^>]*>/g, "")
-
-                    .toLowerCase()
-
-            );
+        const ingredients =
+            getAllIngredients(recipe)
+                .map(i =>
+                    String(i)
+                        .replace(/<[^>]*>/g, "")
+                        .toLowerCase()
+                );
 
 
         let found = [];
-
         let missing = [];
 
 
@@ -819,121 +831,93 @@ function searchIngredients() {
 
         wanted.forEach(search => {
 
+            const match =
+                ingredients.find(i => {
 
-            const match = ingredients.find(i => {
-
-
-                const cleanIngredient = i
-
-                    .replace(
-
-                        /[0-9.,*\/½¼¾]+/g,
-
-                        ""
-
-                    )
-
-                    .replace(
-
-                        /\b(g|kg|mg|ml|l|tl|el)\b/g,
-
-                        ""
-
-                    )
-
-                    .trim()
-
-                    .toLowerCase();
+                    const cleanIngredient =
+                        i
+                            .replace(
+                                /[0-9.,*\/½¼¾]+/g,
+                                ""
+                            )
+                            .replace(
+                                /\b(g|kg|mg|ml|l|tl|el)\b/g,
+                                ""
+                            )
+                            .trim()
+                            .toLowerCase();
 
 
-                let a = cleanIngredient;
+                    let a =
+                        cleanIngredient;
 
-                let b = search;
-
-
-                /* =========================
-                   SONDERFALL LAUCH
-                ========================= */
-
-                if (
-
-                    b === "lauch" &&
-
-                    a.includes("knoblauch")
-
-                ) {
-
-                    return false;
-
-                }
+                    let b =
+                        search;
 
 
-                /* =========================
-                   WÖRTER AUFTEILEN
-                ========================= */
+                    /* =========================
+                       SONDERFALL LAUCH
+                    ========================= */
 
-                const words = a.split(/\s+/);
+                    if (
+                        b === "lauch" &&
+                        a.includes("knoblauch")
+                    ) {
+                        return false;
+                    }
 
 
-                /* =========================
-                   KURZE BEGRIFFE
-                ========================= */
+                    /* =========================
+                       WÖRTER AUFTEILEN
+                    ========================= */
 
-                if (b.length <= 3) {
+                    const words =
+                        a.split(/\s+/);
+
+
+                    /* =========================
+                       KURZE BEGRIFFE
+                    ========================= */
+
+                    if (b.length <= 3) {
+
+                        return words.some(word => {
+
+                            return (
+                                word === b ||
+                                word === b + "e" ||
+                                word === b + "er" ||
+                                word === b + "en"
+                            );
+
+                        });
+
+                    }
+
+
+                    /* =========================
+                       LÄNGERE BEGRIFFE
+                    ========================= */
 
                     return words.some(word => {
 
                         return (
-
                             word === b ||
-
-                            word === b + "e" ||
-
-                            word === b + "er" ||
-
-                            word === b + "en"
-
+                            word.startsWith(b) ||
+                            word.includes(b)
                         );
 
                     });
 
-                }
-
-
-                /* =========================
-                   LÄNGERE BEGRIFFE
-                ========================= */
-
-                return words.some(word => {
-
-                    return (
-
-                        word === b ||
-
-                        word.startsWith(b) ||
-
-                        word.includes(b)
-
-                    );
-
                 });
 
 
-            });
-
-
             if (match) {
-
                 found.push(search);
-
             }
-
             else {
-
                 missing.push(search);
-
             }
-
 
         });
 
@@ -946,32 +930,22 @@ function searchIngredients() {
 
 
         if (mode === "all") {
-
             ok = missing.length === 0;
-
         }
-
         else {
-
             ok = found.length > 0;
-
         }
 
 
         if (ok) {
 
             matches.push({
-
                 recipe,
-
                 found,
-
                 missing
-
             });
 
         }
-
 
     });
 
@@ -981,11 +955,8 @@ function searchIngredients() {
     ====================================== */
 
     matches.sort((a, b) =>
-
         a.missing.length -
-
         b.missing.length
-
     );
 
 
@@ -996,19 +967,13 @@ function searchIngredients() {
     results.innerHTML = `
 
         <p style="
-
             text-align:center;
-
             color:#b8b2aa;
-
             margin-top:30px;
-
             margin-bottom:20px;
-
         ">
 
             ${matches.length}
-
             passende Rezepte gefunden
 
         </p>
@@ -1022,86 +987,56 @@ function searchIngredients() {
 
     matches.forEach(match => {
 
-
-        const recipeUrl = getRecipeUrl(
-
-            match.recipe
-
-        );
+        const recipeUrl =
+            getRecipeUrl(match.recipe);
 
 
         results.innerHTML += `
 
             <a
-
                 href="${recipeUrl}?from=zutatenfinder"
-
             >
 
                 <div class="recipe-card">
 
-
                     <img
-
                         src="${match.recipe.image}"
-
                         alt="${match.recipe.title}"
-
                     >
-
 
                     <div>
 
-
                         <h2>
-
                             ${match.recipe.title}
-
                         </h2>
 
-
                         <p>
-
                             ${match.recipe.description || ""}
-
                         </p>
 
 
                         ${
-
                             match.missing.length === 0
 
                             ?
 
                             `
-
                             <p style="color:#8fd18f;">
-
                                 ✓ Alle Zutaten vorhanden
-
                             </p>
-
                             `
 
                             :
 
                             `
-
                             <p style="color:#e5c66b;">
-
                                 Fehlt noch:<br>
-
                                 ${match.missing.join(", ")}
-
                             </p>
-
                             `
-
                         }
 
-
                     </div>
-
 
                 </div>
 
@@ -1117,25 +1052,17 @@ function searchIngredients() {
     ====================================== */
 
     if (
-
         window.innerWidth <= 800 &&
-
         matches.length > 0
-
     ) {
 
         setTimeout(() => {
 
             document
-
                 .getElementById("results")
-
                 .scrollIntoView({
-
                     behavior: "smooth",
-
                     block: "start"
-
                 });
 
         }, 100);
@@ -1150,18 +1077,13 @@ function searchIngredients() {
 ========================================= */
 
 const ingredientSearchForm =
-
     document.getElementById(
-
         "ingredientSearchForm"
-
     );
 
 
 ingredientSearchForm.addEventListener(
-
     "submit",
-
     function(event) {
 
         event.preventDefault();
@@ -1169,8 +1091,14 @@ ingredientSearchForm.addEventListener(
         searchIngredients();
 
     }
-
 );
+
+
+/* =========================================
+   SUCHZUSTAND BEIM ÖFFNEN WIEDERHERSTELLEN
+========================================= */
+
+loadFinderState();
 
 </script>
 

@@ -3939,10 +3939,10 @@ function getBackUrl() {
     ----------------------------------------- */
 
     if (
-    params.get("from") === "zutatenfinder"
-) {
-    return "zutatenfinder.html";
-}
+        params.get("from") === "zutatenfinder"
+    ) {
+       return "../zutatenfinder.html";
+    }
 
 
     const backParams =
@@ -3951,9 +3951,6 @@ function getBackUrl() {
 
     /* -----------------------------------------
        KATEGORIEN
-
-       Beispiel:
-       ?categories=Vegetarisch,Pasta
     ----------------------------------------- */
 
     const categories =
@@ -3993,8 +3990,8 @@ function getBackUrl() {
         backParams.toString();
 
     return query
-        ? `../rezepte.html?${query}`
-        : "../rezepte.html";
+        ? `rezepte.html?${query}`
+        : "rezepte.html";
 
 }
 

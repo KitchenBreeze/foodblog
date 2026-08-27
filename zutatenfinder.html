@@ -348,9 +348,10 @@ Der KitchenBreeze Zutatenfinder hilft dir dabei, passende Rezepte zu entdecken.
 <div class="search-box">
 
 
-<input 
+<input
     id="ingredientInput"
     type="search"
+    enterkeyhint="search"
     placeholder="z.B. Kartoffeln Käse Tomaten"
     autocomplete="off"
 >
@@ -791,7 +792,7 @@ function searchIngredients() {
 
 
 /* =========================================
-   ENTER = SUCHE STARTEN
+   ENTER / SUCHEN = SUCHE STARTEN
 ========================================= */
 
 const ingredientInput =
@@ -799,12 +800,16 @@ const ingredientInput =
         "ingredientInput"
     );
 
-
 ingredientInput.addEventListener(
     "keydown",
     function(event) {
 
-        if (event.key === "Enter") {
+        if (
+            event.key === "Enter" ||
+            event.key === "Go" ||
+            event.key === "Search" ||
+            event.key === "Done"
+        ) {
 
             event.preventDefault();
 

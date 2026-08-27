@@ -3699,10 +3699,8 @@ related: ["45", "7", "20"],
         },
 
         {
-            text: "Nach der Ruhezeit eine 28 × 28 cm große Form mit Backpapier auslegen. Den aufgegangenen Teig mit etwas Mehl bestäuben, in die Form geben und mit bemehlten Händen gleichmäßig in die Form drücken. Anschließend weitere 10-15 Minuten ruhen lassen."
-        },
+            text: "Nach der Ruhezeit eine 28 × 28 cm große Form mit Backpapier auslegen. Den aufgegangenen Teig mit etwas Mehl bestäuben, in die Form geben und mit bemehlten Händen gleichmäßig in die Form drücken. Anschließend weitere 10-15 Minuten ruhen lassen.",
 
-        {
             images: [
                 "images/teig1.jpeg",
                 "images/teig2.jpeg"
@@ -3710,20 +3708,14 @@ related: ["45", "7", "20"],
         },
 
         {
-            text: "In der Zwischenzeit den Ofen auf 180 Grad Ober-/Unterhitze vorheizen. Die Zwetschgen entsteinen, die Stängel entfernen und das Fruchtfleisch halbieren. Die Zwetschgen dicht an dicht und gleichmäßig mit der Schnittfläche nach oben auf dem Hefeboden verteilen und leicht andrücken."
-        },
-
-        {
+            text: "In der Zwischenzeit den Ofen auf 180 Grad Ober-/Unterhitze vorheizen. Die Zwetschgen entsteinen, die Stängel entfernen und das Fruchtfleisch halbieren. Die Zwetschgen dicht an dicht und gleichmäßig mit der Schnittfläche nach oben auf dem Hefeboden verteilen und leicht andrücken.",
             images: [
-                "images/plaume1.jpeg"
+                "images/pflaume1.jpeg"
             ]
         },
 
         {
-            text: "Anschließend die kalten Streusel großzügig darüberstreuen."
-        },
-
-        {
+            text: "Anschließend die kalten Streusel großzügig darüberstreuen.",
             images: [
                 "images/streusel.jpeg"
             ]

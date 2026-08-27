@@ -3634,6 +3634,9 @@ related: ["45", "7", "20"],
 {
     id: "62",
     title: "Saftiger Zwetschgenkuchen",
+       tips: [
+        "Für die Streusel sollte die Butter möglichst kalt sein und auch beim Verarbeiten kalt bleiben. Falls du sehr warme Hände hast, kannst du sie vor dem Kneten der Streusel mit kaltem Wasser abspülen.",
+    ],
     category: ["Vegetarisch", "süßes Gebäck"],
     image: "images/zwetschgenkuchen.jpeg",
 

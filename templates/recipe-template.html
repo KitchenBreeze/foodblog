@@ -470,13 +470,27 @@ function getBackUrl() {
             window.location.search
         );
 
+
+    /* -----------------------------------------
+       ZUTATENFINDER
+    ----------------------------------------- */
+
+    if (
+        params.get("from") === "zutatenfinder"
+    ) {
+
+        return "../zutatenfinder.html";
+
+    }
+
+
     const backParams =
         new URLSearchParams();
 
 
     /* -----------------------------------------
        KATEGORIEN
-       
+
        Beispiel:
        ?categories=Vegetarisch,Pasta
     ----------------------------------------- */
@@ -548,7 +562,6 @@ if (recipe) {
         );
 
     }
-
 
     /* =====================================
        GOOGLE RECIPE SCHEMA
@@ -1344,6 +1357,7 @@ if (
 }
 
 </script>
+
 
 </body>
 </html>

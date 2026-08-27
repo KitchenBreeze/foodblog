@@ -4123,12 +4123,16 @@ else {
         <div class="topbar">
 
             <a
-                class="back"
-                id="backToRecipes"
-                href="${getBackUrl()}"
-            >
-                ← Zur Rezeptsammlung
-            </a>
+    class="back"
+    id="backToRecipes"
+    href="${getBackUrl()}"
+>
+    ${
+        new URLSearchParams(window.location.search).get("from") === "zutatenfinder"
+            ? "← Zurück zum Zutatenfinder"
+            : "← Zur Rezeptsammlung"
+    }
+</a>
 
         </div>
 

@@ -3921,7 +3921,7 @@ related: ["45", "7", "20"],
             text: "Rechts und links neben dem Teigling jeweils ein Küchentuch unter dem Backpapier aufrollen und als Stütze eng anlegen, sodass der Teigling beim Aufgehen nicht zur Seite läuft.",
             images: [
                 "images/ciabatta-formen1.jpeg",
-                "images/ciabatta-formen2.jpeg"
+                "images/ciabatta-formen2.jpeg",
             ]
         },
 

@@ -3821,7 +3821,7 @@ related: ["45", "7", "20"],
 
     related: ["56", "1", "12"],
 
-    portions: "8 Portionen",
+    portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
 

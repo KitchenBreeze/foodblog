@@ -3944,5 +3944,58 @@ related: ["45", "7", "20"],
     ]
 },
 
+{
+    id: "66",
+    title: "cremiges Vanilleeis",
+    tips: [
+        "Das Eis hält sich im Gefrierfach ca. 1-2 Wochen, wenn du es also länger als einen Tag im Gefrierfach lagerst, wird es etwas fester werden, lasse es deshalb vor dem Servieren ca. 5-10min antauen, dass es wieder schön cremig wird."
+    ],
+    category: ["Desserts", "Vegetarisch"],
+    image: "images/vanilleeis.jpeg",
+
+    time: {
+        preparation: "10 min",
+        cooling: "5 Std 10 min",
+        total: "5 Std 20 min"
+    },
+
+    related: ["44", "54", "34"],
+
+    portions: "ca. 12 Kugeln",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Herrlich cremiges Vanilleeis, ganz einfach mit nur 4 Zutaten selbst gemacht.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "": [
+            "300g gezuckerte Kondensmilch",
+            "1 EL Vanilleextrakt",
+            "1/4 TL Salz",
+            "500ml <b>kalte</b> Schlagsahne <i>(mind. 30% am besten 32% Fett)</i>",
+        ]
+
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+
+        "Mind. 10 Min. vorher die Rührschüssel für die Sahne in den Kühlschrank und eine gefriertaugliche Box mit Deckel (ca. 24cmx18cmx7cm) ins Gefrierfach stellen, damit sie schön kalt sind.",
+
+        "In der Zwischenzeit die Kondensmilch mit dem Salz und dem Vanilleextrakt verrühren. Die Mischung in den Kühlschrank stellen und dafür die kalte Rührschüssel und die Rührstäbe aus dem Kühlschrank holen.",
+
+        "Die kalte Sahne in die gekühlte Rührschüssel geben und aufschlagen, bis sie luftig und cremig-fest ist. <i>(Ca. 1-2min)</i> Wenn du die Rührstäbe herausziehst, sollen sich weiche Spitzen bilden, die sich leicht nach unten neigen. Wenn du die Schüssel vorsichtig kippst, soll sich die Sahne noch ganz leicht bewegen. Sie darf also noch nicht komplett fest sein. <b>D.h. Sie soll nicht fließen, wenn du die Schüssel kippst, sondern sich nur ganz leicht verschieben.</b>",
+
+        "Einen kleinen Teil der geschlagenen Sahne zur Kondensmilchmischung geben und vorsichtig unterrühren, bis alles gut miteinander vermischt und etwas cremiger ist.",
+
+        "Anschließend die restliche Sahne dazugeben und vorsichtig mit einem Teigschaber unterheben, damit möglichst viel Luft in der Masse bleibt. Dabei nur so lange unterheben, bis keine weißen Sahnestreifen mehr zu sehen sind. <b>(Aber: Lass dir hier ruhig Zeit, versuche nicht hektisch die Sahne unterzuheben, sondern langsam und vorsichtig (;)</b>",
+
+        "Alles vorsichtig in die gekühlte Box mit Deckel geben, glattstreichen und für ca. 5 Stunden ins Gefrierfach geben. Danach mit einem Eisportionierer beliebig viele Kugeln herausholen und servieren."
+
+    ]
+},
+
 ];
 module.exports = { RECIPES };

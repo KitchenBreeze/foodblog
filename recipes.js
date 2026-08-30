@@ -3948,7 +3948,7 @@ related: ["45", "7", "20"],
     id: "66",
     title: "cremiges Vanilleeis",
     tips: [
-        "Das Eis hält sich im Gefrierfach ca. 1-2 Wochen, wenn du es also länger als einen Tag im Gefrierfach lagerst, wird es etwas fester werden, lasse es deshalb vor dem Servieren ca. 5-10min antauen, dass es wieder schön cremig wird."
+        "Das Eis hält sich im Gefrierfach ca. 1 Woche, wenn du es also länger als einen Tag im Gefrierfach lagerst, wird es etwas fester werden, lasse es deshalb vor dem Servieren ca. 5-10min antauen, dass es wieder schön cremig wird."
     ],
     category: ["Desserts", "Vegetarisch"],
     image: "images/vanilleeis.jpeg",
@@ -3961,7 +3961,7 @@ related: ["45", "7", "20"],
 
     related: ["44", "54", "34"],
 
-    portions: "ca. 12 Kugeln",
+    portions: "ca. 15 Kugeln",
     difficulty: "Einfach",
     rating: 4.6,
 

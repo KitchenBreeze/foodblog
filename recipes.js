@@ -714,6 +714,7 @@ related: ["45", "7", "20"],
     title: "Bruschetta",
     tips: [
         "Je länger das Topping zieht, desto besser und intensiver schmeckt es.",
+        "Wenn du möchtest kannst du auch die Brotscheiben mit etwas Olivenöl bestreichen und in einer Pfanne ohne Öl kurz knusprig anbraten."
     ],
     category: ["Brot", "Vegetarisch"],
     image: "images/bruschetta.jpg",
@@ -729,7 +730,7 @@ related: ["45", "7", "20"],
     description: "Knusprig-fluffiges italienisches Brot mit herrlich aromatischem Tomatentopping.",
 
     ingredients: {
-        "": [
+        "Topping": [
             "7 große Tomaten",
             "5 Knoblauchzehen",
             "2 TL getrockneter Basilikum",
@@ -738,6 +739,10 @@ related: ["45", "7", "20"],
             "Pfeffer"
         ],
 
+        "Außerdem": [
+            "2 [[ciabatta|Ciabatta]]"
+        ]
+
       
     },
     steps: [
@@ -745,9 +750,7 @@ related: ["45", "7", "20"],
 
         "Den Knoblauch schälen und zu den Tomaten pressen. Mit Salz und Pfeffer würzen, den Basilikum sowie das Öl dazugeben, alles vermengen, mit dem Deckel verschließen und mind. eine Stunde im Kühlschrank ziehen lassen.",
 
-        "Das Brot in Scheiben schneiden, mit etwas Olivenöl bestreichen und in einer beschichteten Pfanne ohne Öl kurz anrösten.",
-
-        "Das Topping auf die Brotscheiben geben und servieren.",
+        "Das Ciabatta in Scheiben schneiden, das Topping auf die Brotscheiben geben und servieren.",
     ]
 },
 
@@ -3770,7 +3773,7 @@ related: ["45", "7", "20"],
         ],
 
         "Beilage": [
-            "Ciabatta"
+            "1 [[ciabatta|Ciabatta]]"
         ]
     },
 
@@ -3860,6 +3863,86 @@ related: ["45", "7", "20"],
     ]
 },
 
+{
+    id: "65",
+    title: "Ciabatta",
+    category: ["herzhaftes Gebäck", "Vegetarisch", "Vegan"],
+    image: "images/ciabatta.jpeg",
+
+    time: {
+        preparation: "12 min",
+        rising: "14 Std",
+        baking: "18 min",
+        cooling: "10 min",
+        total: "14 Std 40 min "
+    },
+
+    related: ["63", "1", "0"],
+
+    portions: "1 Brot",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Fluffiges italienisches Brot mit knuspriger Kruste.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "": [
+            "200g Mehl (Type 550)",
+            "170ml Wasser",
+            "5g Salz",
+            "3g Trockenhefe",
+            "12g Olivenöl"
+        ]
+
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+
+        {
+            text: "Das Mehl mit dem Salz und der Trockenhefe in einer Schüssel vermengen. Wasser und Olivenöl dazugeben und so lange mit einem Löffel vermengen, bis sich alle Zutaten verbunden haben. Den Teig in eine gut gefettete Box mit Deckel geben, abdecken und ca. 30 Minuten bei Raumtemperatur ruhen lassen."
+        },
+
+        {
+            text: "Dann den Teig mit feuchten Händen einmal rundherum falten. Dazu immer etwas Teig vom Rand nehmen, vorsichtig ziehen, bis du einen leichten Widerstand spürst, zur Mitte falten und den Vorgang rundherum wiederholen, bis du den Teig einmal komplett gefaltet hast. Die Box wieder abdecken und weitere 30 Minuten ruhen lassen. Anschließend den Faltvorgang erneut wiederholen, die Box wieder abdecken und den Teig für ca. 12-14 Stunden in den Kühlschrank stellen."
+        },
+
+        {
+            text: "Am nächsten Tag ein Backblech mit Backpapier belegen und gut bemehlen. Die Box mit dem Teig vorsichtig umdrehen und den Teig auf das bemehlte Backblech gleiten lassen."
+        },
+
+        {
+            text: "Den Teig ebenfalls gut mit Mehl bestreuen und mit einer Teigkarte vorsichtig zu einem ca. 25 cm langen Rechteck zurechtschieben. <b>(Dabei so wenig Luft wie möglich herausdrücken!)</b>"
+        },
+
+        {
+            text: "Rechts und links neben dem Teigling jeweils ein Küchentuch unter dem Backpapier aufrollen und als Stütze eng anlegen, sodass der Teigling beim Aufgehen nicht zur Seite läuft.",
+            images: [
+                "images/ciabatta-falten1.jpeg",
+                "images/ciabatta-falten2.jpeg"
+            ]
+        },
+
+        {
+            text: "Das Ciabatta abdecken und ca. 30-60 Minuten ruhen lassen, bis es deutlich an Volumen zugenommen hat."
+        },
+
+        {
+            text: "Währenddessen den Ofen auf 240 Grad Ober-/Unterhitze vorheizen und eine feuerfeste Schale mit Wasser auf den Boden des Ofens stellen."
+        },
+
+        {
+            text: "Nach der Ruhezeit die Küchentücher vom Blech entfernen. Das Ciabatta mit etwas Mehl bestäuben und im vorgeheizten Backofen ca. 18-22 Minuten goldbraun backen, bis es sich beim Klopfen auf die Unterseite hohl anhört. Nach ca. 15 Minuten die Schale mit dem Wasser entfernen und den Dampf aus dem Ofen entweichen lassen."
+        },
+
+        {
+            text: "Das Ciabatta aus dem Ofen nehmen und auf einem Gitterrost mindestens 10 Minuten abkühlen lassen."
+        }
+
+    ]
+},
 
 ];
 module.exports = { RECIPES };

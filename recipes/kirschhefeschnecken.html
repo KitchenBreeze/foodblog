@@ -3875,7 +3875,7 @@ const RECIPES = [
             "1",
             "12"
         ],
-        "portions": "8 Portionen",
+        "portions": "6 Portionen",
         "difficulty": "Einfach",
         "rating": 4.6,
         "description": "Leckere Tortellini in cremiger Parmesansoße mit getrockneten Tomaten und Rucola.",
@@ -3998,15 +3998,15 @@ function getBackUrl() {
 
 
     /* -----------------------------------------
-       ZURÜCK ZU REZEPTE.HTML
-    ----------------------------------------- */
+   ZURÜCK ZU REZEPTE.HTML
+----------------------------------------- */
 
-    const query =
-        backParams.toString();
+const query =
+    backParams.toString();
 
-    return query
-        ? `rezepte.html?${query}`
-        : "rezepte.html";
+return query
+    ? `../rezepte.html?${query}`
+    : "../rezepte.html";
 
 }
 

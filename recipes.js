@@ -4433,7 +4433,7 @@ related: ["45", "7", "20"],
     },  
   
     related: ["1", "6", "73"],  
-    portions: "6 Portionen",  
+    portions: "15 Stück",  
     difficulty: "Einfach",  
     rating: 4.6,  
   
@@ -4459,6 +4459,8 @@ related: ["45", "7", "20"],
             "ca. 3 EL Butterschmalz" 
         ] 
     },  
+
+    
   
     /* 👨‍🍳 ZUBEREITUNG */  
     steps: [  

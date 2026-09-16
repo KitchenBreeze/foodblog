@@ -4802,8 +4802,8 @@ related: ["45", "7", "20"],
     image: "images/roestzwiebeln.jpeg",
     time: {
         preparation: "5 min",
-        baking: "35–40 min",
-        total: "40–45 min"
+        baking: "35 min",
+        total: "40 min"
     },
 
     related: ["80", "100", "76"],

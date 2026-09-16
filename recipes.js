@@ -4,7 +4,7 @@ const RECIPES = [
 {
     id: "1",
     title: "Spaghetti aglio e olio",
-    category: [ "Pasta" ],
+    category: [ "Pasta", "Hauptgerichte"],
     image: "images/spaghetti-aglio-e-olio.jpeg",
     time:{
         preparation:"5 min",
@@ -49,7 +49,7 @@ const RECIPES = [
 {
     id: "2",
     title: "Ananassalat",
-    category: ["Salate"],
+    category: ["Salate", "Hauptgerichte"],
     image: "images/ananassalat.jpeg",
     time:{
         preparation:"45 min",
@@ -218,7 +218,7 @@ const RECIPES = [
 {
     id: "5",
     title: "Asianstyle Pilz-Brokkoli-Pfanne",
-    category: ["Vegetarisch", "Vegan", "Reis"],
+    category: ["Vegetarisch", "Vegan", "Reis" , "Hauptgerichte"],
     image: "images/Asianstyle-Pilz-Brokkoli-Pfanne.jpeg",
     time:{
         preparation:"22 min",
@@ -360,7 +360,7 @@ const RECIPES = [
 {
     id: "8",
     title: "Blauschimmelkäsesalat",
-    category: ["Salate", "Vegetarisch"],
+    category: ["Salate", "Vegetarisch" , "Hauptgerichte"],
     image: "images/blauschimmelkäsesalat.jpg",
     time:{
         preparation:"45 min",
@@ -421,7 +421,7 @@ const RECIPES = [
 {
 id: "9",
     title: "Crispy Chicken Salad",
-    category: ["Salate"],
+    category: ["Salate" , "Hauptgerichte"],
     image: "images/Crispy-Chicken-Salad.jpeg",
                      time:{
     preparation:"40 min",
@@ -517,7 +517,7 @@ related: ["45", "7", "20"],
 {
     id: "10",
     title: "Dreierlei Karlsbader Schnitte",
-    category: ["herzhaftes Gebäck", "Ofengerichte"],
+    category: ["herzhaftes Gebäck", "Ofengerichte", "Hauptgerichte"],
     image: "images/Karlsbader-Schnitte.jpeg",
     time:{
         preparation:"5 min",
@@ -575,7 +575,7 @@ related: ["45", "7", "20"],
 {
     id: "11",
     title: "Brezel Hawaii",
-    category: ["herzhaftes Gebäck"],
+    category: ["herzhaftes Gebäck", "Snacks"],
     image: "images/brezel-hawaii.jpeg",
     time:{
         preparation:"15 min",
@@ -611,7 +611,7 @@ related: ["45", "7", "20"],
 {
     id: "12",
     title: "Bohneneintopf",
-    category: ["Vegetarisch"],
+    category: ["Vegetarisch", "Hauptgerichte"],
     image: "images/bohneneintopf.jpg",
     time:{
         preparation:"5 min",
@@ -668,7 +668,7 @@ related: ["45", "7", "20"],
         "Dazu schmecken Garnelen oder Pfannenbrot hervorragend.",
         "Falls dir die Suppe zu dick ist, kannst du nach dem Kochen noch mehr Gemüsebrühe dazugeben."
     ],
-    category: ["Suppen & Eintöpfe", "Vegetarisch"],
+    category: ["Suppen & Eintöpfe", "Vegetarisch", "Hauptgerichte"],
     image: "images/brokkolisuppe.jpeg",
     time:{
         preparation:"10 min",
@@ -716,7 +716,7 @@ related: ["45", "7", "20"],
         "Je länger das Topping zieht, desto besser und intensiver schmeckt es.",
         "Wenn du möchtest kannst du auch die Brotscheiben mit etwas Olivenöl bestreichen und in einer Pfanne ohne Öl kurz knusprig anbraten."
     ],
-    category: ["Brot", "Vegetarisch"],
+    category: ["Brot", "Vegetarisch", "Hauptgerichte"],
     image: "images/bruschetta.jpg",
     time:{
         preparation:"10 min",
@@ -758,7 +758,7 @@ related: ["45", "7", "20"],
 {
     id: "14",
     title: "Cannelloni Caprese",
-    category: ["Pasta", "Ofengerichte"],
+    category: ["Pasta", "Ofengerichte", "Hauptgerichte"],
     image: "images/canneloni-caprese.jpeg",
     time:{
         preparation:"30 min",
@@ -871,7 +871,7 @@ related: ["45", "7", "20"],
     tips: [
     "Die fertigen Cordon bleues kannst du im Ofen bei ca. 50°C auf einem Kuchenrost warm halten.",
 ],
-    category: ["Fleisch"], 
+    category: ["Fleisch", "Hauptgerichte"], 
     image: "images/cordon-bleu.jpeg",
         time:{
     preparation:"30 min",
@@ -926,7 +926,7 @@ related: ["45", "7", "20"],
 {
     id: "17",
     title: "Cowboy Shakshuka",
-    category: ["Vegetarisch"], 
+    category: ["Vegetarisch", "Hauptgerichte"], 
     image: "images/Cowboy-shakshuka.jpeg",
        time:{
     preparation:"5 min",
@@ -1042,7 +1042,7 @@ related: ["45", "7", "20"],
 {
     id: "19",
     title: "Eiersalat",
-    category: ["Aufstriche & Dips"], 
+    category: ["Aufstriche & Dips", "Beilagen"], 
     image: "images/eiersalat.jpeg",
         time:{
     preparation:"10 min",
@@ -1091,7 +1091,7 @@ related: ["45", "7", "20"],
 {
     id: "20",
     title: "Veganer gebratener Blumenkohl",
-    category: ["Vegan"], 
+    category: ["Vegan","Vegetarisch" ,"Hauptgerichte"], 
     image: "images/Veganer-gebratener-Blumenkohl.jpeg",
         time:{
     preparation:"15 min",
@@ -1150,7 +1150,7 @@ related: ["45", "7", "20"],
     tips: [
         "Die fertigen Brote kannst du im 50°C warmen Ofen warm halten, bis die anderen fertig sind."
     ],
-    category: ["Brot"], 
+    category: ["Brot", "Pfannengerichte", "Hauptgerichte"], 
     image: "images/Eifreies-Frenchtoast.jpeg",
         time:{
     preparation:"12 min",
@@ -1213,7 +1213,7 @@ related: ["45", "7", "20"],
     title: "einfacher Couscoussalat",
     category: ["Vegetarisch", 
         "Salate",
-        "Vegan"
+        "Vegan", "Hauptgerichte"
      ],
     image: "images/einfacher-Couscoussalat.jpeg",
         time:{
@@ -1265,7 +1265,7 @@ related: ["45", "7", "20"],
     tips: [
         "Alles, was übrig bleibt, kannst du abgekühlt, luftdicht verpackt (z.B. in Alufolie oder einer Box) und dann ca. 2 Tage im Kühlschrank aufbewahren."
     ],
-    category: ["Fleisch", "Ofengerichte"], 
+    category: ["Fleisch", "Ofengerichte", "Hauptgerichte"], 
     image: "images/einfaches-Wiesnhendl.jpeg",
         time:{
     preparation:"30 min",
@@ -1389,7 +1389,7 @@ related: ["45", "7", "20"],
 {
     id: "25",
     title: "Erdbeersalat",
-    category: ["Salate", "Vegetarisch"], 
+    category: ["Salate", "Vegetarisch", "Hauptgerichte"], 
     image: "images/Erdbeersalat.jpeg",
         time:{
     preparation:"30 min",
@@ -1519,7 +1519,7 @@ related: ["45", "7", "20"],
 {
     id: "27",
     title: "Erdnusscurry",
-    category: ["Vegetarisch", "Vegan", "Reis"], 
+    category: ["Vegetarisch", "Vegan", "Reis", "Hauptgerichte"], 
     image: "images/Erdnusscurry.jpeg",
     time:{
         preparation:"20 min",
@@ -1584,7 +1584,7 @@ related: ["45", "7", "20"],
 {
     id: "28",
     title: "Bulgursalat",
-    category: ["Vegetarisch", "Vegan", "Salate"], 
+    category: ["Vegetarisch", "Vegan", "Salate", "Hauptgerichte"], 
     image: "images/Bulgursalat.jpeg",
     time:{
         preparation:"35 min",
@@ -1636,7 +1636,7 @@ related: ["45", "7", "20"],
 {
     id: "29",
     title: "Flammkuchenspaghetti",
-    category: ["Fleisch", "Pasta"], 
+    category: ["Fleisch", "Pasta", "Hauptgerichte"], 
     image: "images/Flammkuchenspaghetti.jpeg",
     time:{
         preparation:"5 min",
@@ -1682,7 +1682,7 @@ related: ["45", "7", "20"],
     tips:[
         "Die bereits fertigen Pfannkuchen kannst du auf einem Teller bei 50°C im Backofen warm halten."
     ],
-    category:["süße Hauptgerichte"], 
+    category:["süße Hauptgerichte", "Hauptgerichte"], 
     image:"images/fluffige-Pfannkuchen.jpeg",
     time:{
         preparation:"15 min",
@@ -1888,7 +1888,7 @@ related: ["45", "7", "20"],
 {
     id: "34",
     title: "Frikadellen mit Rahmsoße und Nudeln",
-    category: ["Fleisch", "Pasta"], 
+    category: ["Fleisch", "Pasta", "Hauptgerichte"], 
     image: "images/Frikadellen-mit-Rahmsoße-und-Nudeln.jpeg",
     time:{
         preparation:"15 min",
@@ -2124,7 +2124,7 @@ related: ["45", "7", "20"],
     tips:[
         "Du kannst den Salat auch gut schon 1–2 Tage vorher vorbereiten und im Kühlschrank aufbewahren. Dann schmeckt er sogar noch besser."
     ],
-    category:["Vegetarisch", "Salate", "Vegan"], 
+    category:["Vegetarisch", "Salate", "Vegan", "Hauptgerichte"], 
     image:"images/Frühlingskartoffelsalat.jpeg",
     time:{
         preparation:"20 min",
@@ -2222,7 +2222,7 @@ related: ["45", "7", "20"],
 {
     id: "39",
     title: "Fischfilet aus dem Ofen",
-    category: ["Fisch", "Ofengerichte"], 
+    category: ["Fisch", "Ofengerichte", "Hauptgerichte"], 
     image: "images/Fischfilet-aus-dem-Ofen.jpeg",
     time:{
         preparation: "45 min",
@@ -2300,7 +2300,7 @@ related: ["45", "7", "20"],
 {
     id: "40",
     title: "Thunfisch-Nudel-Salat",
-    category: ["Fisch", "Salate"], 
+    category: ["Fisch", "Salate", "Hauptgerichte"], 
     image: "images/Thunfisch-Nudel-Salat.jpeg",
     time:{
         preparation: "5 min",
@@ -2337,7 +2337,7 @@ related: ["45", "7", "20"],
 {
     id: "41",
     title: "Überbackene Gnocchipfanne",
-    category: ["Pasta", "Ofengerichte"], 
+    category: ["Pasta", "Ofengerichte", "Hauptgerichte"], 
     image: "images/Überbackene-Gnocchipfanne.jpeg",
     time:{
         preparation: "5 min",
@@ -2397,7 +2397,7 @@ related: ["45", "7", "20"],
 {
     id: "42",
     title: "Glasnudelsalat",
-    category: ["Vegetarisch", "Vegan", "Salate"], 
+    category: ["Vegetarisch", "Vegan", "Salate", "Hauptgerichte"], 
     image: "images/Glasnudelsalat.jpeg",
     time:{
         preparation: "25 min",
@@ -2457,7 +2457,7 @@ related: ["45", "7", "20"],
 {
     id: "43",
     title: "Marillenknödel",
-    category: ["süßes Gebäck"], 
+    category: ["süßes Gebäck", "süße Hauptgerichte" , "Hauptgerichte"], 
     image: "images/Marillenknödel.jpeg",
     time:{
         preparation: "20 min",
@@ -2526,7 +2526,7 @@ related: ["45", "7", "20"],
 {
     id: "44",
     title: "Gnocchisalat",
-    category: ["Salate"], 
+    category: ["Salate", "Fleisch", "Hauptgerichte"], 
     image: "images/Gnocchisalat.jpeg",
     time:{
         preparation: "20 min",
@@ -2674,7 +2674,7 @@ related: ["45", "7", "20"],
         },
 
         {
-            text:"Die Schnecken im vorgeheizten Backofen ca. 30 Minuten goldbraun backen. Werden sie zu dunkel, die letzten 10 Minuten locker mit Alufolie abdecken."
+            text:"Die Schnecken im vorgeheizten Backofen ca. 30 Minuten backen, bis sie bei leichtem Fingerdurck in der Mitte zurückfedern. Werden sie zu dunkel, die letzten 10 Minuten locker mit Alufolie abdecken."
         },
 
         {
@@ -2686,7 +2686,7 @@ related: ["45", "7", "20"],
 {
     id: "46",
     title: "Gyrospasta",
-    category: ["Pasta", "Fleisch", "Ofengerichte"], 
+    category: ["Pasta", "Fleisch", "Ofengerichte", "Hauptgerichte"], 
     image: "images/Gyrospasta.jpeg",
     time:{
         preparation: "10 min",
@@ -2844,7 +2844,7 @@ related: ["45", "7", "20"],
     tips: [
         "Zu diesem Salat passen [[griechische-mini-lagana|Griechische Mini-Lagana]] super."
     ],
-    category: ["Salate", "Vegetarisch"],
+    category: ["Salate", "Vegetarisch", "Hauptgerichte"],
     image: "images/griechischer-Salat.jpg",
     time:{
         preparation: "30 min",
@@ -2953,7 +2953,7 @@ related: ["45", "7", "20"],
       tips: [
         "Aus dem restlichen Quark kannst du super fluffige [[gluecksschweinchen|Glücksschweinchen]] backen."
     ],
-    category: ["Pasta", "Fleisch"],
+    category: ["Pasta", "Fleisch", "Hauptgerichte"],
     image: "images/hackbällchen-nudelpfanne.jpeg",
     time:{
         preparation: "35 min",
@@ -2970,7 +2970,7 @@ related: ["45", "7", "20"],
     ingredients:{
 
         "Hackbällchen":[
-            "500g Rinderhack",
+            "500g Rinderhackfleisch",
             "1 Ei",
             "100g Magerquark",
             "50g Paniermehl",
@@ -3124,7 +3124,7 @@ related: ["45", "7", "20"],
     tips: [
         "Zu den Köttbullar passt [[kartoffelpueree|Kartoffelpüree]] super."
     ],
-    category: ["Fleisch", "Ofengerichte"],
+    category: ["Fleisch", "Ofengerichte", "Hauptgerichte"],
     image: "images/köttbullar-ofen.jpeg",
     time:{
         preparation: "15 min",
@@ -3189,7 +3189,7 @@ related: ["45", "7", "20"],
     tips: [
         "Im Prinzip kannst du jede Kartoffelsorte für das Püree nehmen, am cremigsten wird es allerdings mit mehligkochenden Kartoffeln."
     ],
-    category: ["Beilage", "Vegetarisch"],
+    category: ["Beilagen", "Vegetarisch"],
     image: "images/kartoffelpüree.jpeg",
     time:{
         preparation: "10 min",
@@ -3225,7 +3225,7 @@ related: ["45", "7", "20"],
 {
     id: "55",
     title: "Linsen mit Spätzle",
-    category: ["Fleisch"],
+    category: ["Fleisch", "Hauptgerichte"],
     image: "images/linsen-mit-spätzle.jpeg",
     time:{
         preparation: "5 min",
@@ -3285,7 +3285,7 @@ related: ["45", "7", "20"],
 {
     id: "56",
     title: "Tortellinisalat",
-    category: ["Pasta", "Salate"],
+    category: ["Pasta", "Salate", "Hauptgerichte"],
     image: "images/tortellinisalat.jpeg",
     time:{
         preparation: "30 min",
@@ -3401,7 +3401,7 @@ related: ["45", "7", "20"],
 {
     id: "58",
     title: "Kartoffelsalat ohne Mayo",
-    category: ["Vegetarisch", "Vegan", "Salate"],
+    category: ["Vegetarisch", "Vegan", "Salate", "Hauptgerichte"],
     image: "images/kartoffelsalat-ohne-mayo.jpeg",
     time: {
         preparation: "10 min",
@@ -3528,7 +3528,7 @@ related: ["45", "7", "20"],
     tips: [
         "Der Salat schmeckt sowohl warm als auch kalt oder am nächsten Tag hervorragend."
     ],
-    category: ["Pasta", "Salate"],
+    category: ["Pasta", "Salate", "Hauptgerichte"],
     image: "images/pizzapasta-salat.jpeg",
     time: {
         preparation: "20 min",
@@ -3577,7 +3577,7 @@ related: ["45", "7", "20"],
 {
     id: "61",
     title: "Reisauflauf",
-    category: ["Reis", "Ofengerichte", "Vegetarisch"],
+    category: ["Reis", "Ofengerichte", "Vegetarisch", "Hauptgerichte"],
     image: "images/reisauflauf.jpeg",
     time: {
         preparation: "20 min",
@@ -3741,7 +3741,7 @@ related: ["45", "7", "20"],
 {
     id: "63",
     title: "Honigmelonensalat",
-    category: ["Salate"],
+    category: ["Salate", "Hauptgerichte"],
     image: "images/honigmelonensalat.jpeg",
 
     time: {
@@ -3813,7 +3813,7 @@ related: ["45", "7", "20"],
 {
     id: "64",
     title: "Cremige Tortellini mit getrockneten Tomaten & Rucola",
-    category: ["Pasta"],
+    category: ["Pasta", "Hauptgerichte"],
     image: "images/tortellini-mit-getrockneten-Tomaten-Rucola.jpeg",
 
     time: {
@@ -4000,7 +4000,7 @@ related: ["45", "7", "20"],
 {
     id: "67",
     title: "Bohnensalat",
-    category: ["Salate"],
+    category: ["Salate", "Hauptgerichte"],
     image: "images/bohnensalat.jpeg",
 
     time: {
@@ -4249,7 +4249,7 @@ related: ["45", "7", "20"],
         "Wenn es anfängt, am Boden zu kleben, einfach noch etwas mehr Öl hinzufügen", 
         "Wenn du keinen Wok hast, der groß genug ist für die Rezeptmenge, kannst du das Gericht auch in 2-3 Portionen in einem kleineren Wok braten." 
     ], 
-    category: ["Pasta"], 
+    category: ["Pasta", "Hauptgerichte"], 
     image: "images/gebratene-nudeln.jpeg", 
  
     time: { 
@@ -4315,7 +4315,7 @@ related: ["45", "7", "20"],
     tips: [
         "Tomate-Mozzarella-Salat ist dir zu langweilig? Dann probier den Salat doch mal mit ein paar grünen Oliven..."
     ],
-    category: ["Salate"], 
+    category: ["Salate", "Hauptgerichte"], 
     image: "images/caprese-salat.jpeg", 
  
     time: { 
@@ -4420,10 +4420,10 @@ related: ["45", "7", "20"],
     id: "74",  
     title: "Kaspressknödel",  
     tips: [ 
-        "Passende Beilagen sind beispielsweise ein leckeres Spiegelei und knackiger Gurkensalat mit Sahne.", 
+        "Passende Beilagen sind beispielsweise ein leckeres Spiegelei und ein [[sahniger-gurkensalat|sahniger Gurkensalat]].", 
         "Die fertigen Knödel kannst du im Ofen bei 50 Grad Ober-/Unterhitze warm halten." 
     ], 
-    category: ["Pfannengerichte"],  
+    category: ["Pfannengerichte", "Hauptgerichte"],  
     image: "images/kaaspressknödel.jpeg",  
   
     time: {  
@@ -4495,6 +4495,414 @@ related: ["45", "7", "20"],
             text: "In einer Pfanne 1 guten EL Butterschmalz erhitzen, ca. 5 Knödel in die Pfanne geben und bei mittlerer bis hoher Stufe <i>(bei einem Herd mit 9 Stufen ca. Stufe 7)</i> die Knödel ca. 3-4 min pro Seite, bei gelegentlichem Bewegen, goldbraun ausbacken. Diesen Schritt für alle weiteren Knödel wiederholen, bis alle Knödel gebraten sind."
         }, 
     ] 
+},
+
+ 
+    {  
+    id: "74",  
+    title: "Apfel-Zimt-Schnecken",  
+    category: ["Süßes Gebäck"],  
+    image: "images/apfel-zimt-schnecken.jpeg",  
+  
+    time: {  
+        preparation: "30 min",
+        rising: "1 Std 30 min",
+        baking: "40 min",
+        cooling: "10 min",
+        total: "2 Std 50 min"
+    },  
+  
+    related: ["45", "78", "23"],  
+    portions: "8 Stück",  
+    difficulty: "Einfach",  
+    rating: 4.6,  
+  
+    description: "Fluffige Hefeschnecken mit süßer Apfelfüllung und einem herrlichen Zimtaroma.",
+    
+    /* 🍽️ ZUTATEN */  
+    ingredients: {  
+  
+        "Teig": [  
+            "300 g Mehl (Type 405)", 
+            "185 ml lauwarme Milch <i>(ca. 30 °C)</i>", 
+            "7 g Trockenhefe",
+            "5 g Salz",
+            "1/4 TL Zimt",
+            "15 g weißer Zucker",
+            "15 g brauner Zucker",
+            "30 g weiche Butter"
+        ],  
+        
+        "Apfel-Füllung": [ 
+            "400 g Äpfel",
+            "1 EL weißer Zucker",
+            "1 TL Vanillezucker",
+            "1/2 TL Zimt",
+            "1/4 TL Zitronenschale",
+            "1 EL Wasser",
+            "1 Prise Salz"
+        ],
+
+        "Zimt-Füllung": [
+            "35 g sehr weiche Butter",
+            "1/2 TL Zimt",
+            "20 g brauner Zucker",
+            "1 Prise Salz"
+        ],
+
+        "Topping": [
+            "70 g Puderzucker",
+            "ca. 2 TL Wasser"
+        ]
+    },  
+
+    /* 👨‍🍳 ZUBEREITUNG */  
+    steps: [  
+        "Für den Teig das Mehl mit dem weißen Zucker, dem braunen Zucker, dem Salz, dem Zimt und der Hefe in einer Schüssel vermengen. In der Mitte eine Mulde formen und die lauwarme Milch hineingießen. Alles mit dem Knethaken der Küchenmaschine ca. 5 min auf mittlerer Stufe zu einem elastischen Teig kneten.",
+
+        "In der Zwischenzeit die Butter in kleine Stücke schneiden. Dann die Butter zu dem Teig geben und weitere 5 min zu einem elastischen, nicht mehr klebrigen Teig kneten. Eine Box mit Deckel leicht einölen, den Teig hineingeben, etwas flach drücken und abgedeckt ca. 60 min bei Raumtemperatur ruhen lassen, bis er sein Volumen verdoppelt hat.",
+
+        "Währenddessen für die Apfel-Füllung die Äpfel schälen, das Kerngehäuse entfernen und die Äpfel in kleine Stücke schneiden, in einem Topf mit den restlichen Zutaten für die Apfel-Füllung vermengen, unter ständigem Rühren aufkochen und auf mittlerer Hitze bei gelegentlichem Rühren ca. 5 min köcheln, bis die Äpfel etwas weicher sind. Vom Herd nehmen, beiseite stellen und etwas abkühlen lassen.",
+
+        "Für die Zimt-Füllung die Butter mit dem Zimt, dem Zucker und dem Salz verrühren und beiseite stellen.",
+
+        "Wenn der Teig sein Volumen verdoppelt hat, eine Arbeitsfläche etwas mit Mehl bestäuben und eine Auflaufform (28 × 18 cm) einfetten.",
+
+        "Den Teig vorsichtig auf die bemehlte Arbeitsfläche geben, mit Mehl bestäuben und zu einem ca. 35 × 35 cm großen Rechteck ausrollen. Die Zimtmasse dünn auf dem ganzen Boden verstreichen, die Apfelmasse gleichmäßig darüber verteilen und dabei an den Rändern einen ca. 2 cm breiten Rand lassen.",
+
+        "Den Teig von der langen Seite aus eng zu einem Strang aufrollen, die Enden mit einem scharfen Messer abschneiden, sodass man eine 40 cm lange Rolle erhält. Alle 5 cm mit einem scharfen Messer oder einem Stück Zahnseide bzw. Garn je eine Schnecke abschneiden. Die Schnecken mit etwas Abstand zueinander in die Form geben, abdecken und ca. 30 min bei Raumtemperatur ruhen lassen.",
+
+        "In der Zwischenzeit den Ofen auf 180 Grad Ober-/Unterhitze vorheizen.",
+
+        "Die aufgegangenen Schnecken im vorgeheizten Backofen ca. 40 min backen, bis sie bei leichtem Fingerdruck in der Mitte zurückfedern. <i>(Wenn sie dir zu dunkel werden, einfach locker mit Alufolie abdecken.)</i>",
+
+        "Wenn du die Schnecken aus dem Ofen nimmst, den Puderzucker mit dem Wasser zu einer dickflüssigen, aber vom Löffel laufenden Paste verrühren.",
+
+        "Mit einem Löffel in schwenkenden Bewegungen auf den warmen Schnecken verteilen und noch mind. 10 min abkühlen lassen."
+    ] 
+},
+
+{ 
+    id: "75", 
+    title: "Sahniger Gurkensalat", 
+    category: ["Salate", "Beilagen"], 
+    image: "images/sahniger-gurkensalat.jpeg", 
+    time: { 
+        resting: "15 min",
+        preparation: "5 min", 
+        total: "20 min" 
+    }, 
+ 
+    related: ["48", "47", "73"], 
+    portions: "4 Portionen", 
+    difficulty: "Einfach", 
+    rating: 4.6, 
+ 
+    description: "Knackige Gurkenscheiben in cremigem Sahnedressing.",
+    
+    /* 🍽️ ZUTATEN */ 
+    ingredients: { 
+ 
+        "": [ 
+            "1 Salatgurke <i>(ca. 420 g)</i>",
+            "1/2 TL Salz",
+            "100 ml Kochsahne",
+            "1/2 Pck. Knorr Dill-Kräuter"
+        ], 
+
+    }, 
+ 
+    /* 👨‍🍳 ZUBEREITUNG */ 
+    steps: [ 
+        "Die Gurke gut waschen, die Enden entfernen und die Gurke in dünne Scheiben <i>(ca. 2 mm)</i> hobeln oder schneiden.",
+
+        "Die Scheiben in einer Schüssel mit dem Salz vermengen und mind. 15 min ziehen lassen.",
+
+        "Dann die Gurken etwas ausdrücken und das entstandene Wasser abgießen. Die Scheiben mit der Sahne und dem Knorr vermengen und servieren."
+    ]
+},
+
+{ 
+    id: "76", 
+    title: "Schokocookies", 
+    tips: [
+        "Die Kekse sind noch recht weich, wenn sie aus dem Ofen kommen, werden aber beim Abkühlen fester."
+    ],
+    category: ["Snacks", "Süßes Gebäck", "Vegetarisch"], 
+    image: "images/schokocookies.jpeg", 
+    time: { 
+        resting: "1 Std",
+        preparation: "12 min", 
+        baking: "18 min",
+        cooling: "30 min",
+        total: "2 Std" 
+    }, 
+ 
+    related: ["45", "7", "3"], 
+    portions: "9 Stück", 
+    difficulty: "Einfach", 
+    rating: 4.6, 
+ 
+    description: "Knusprige Schokocookies mit zartem, mürbem Kern und viel Schokolade.",
+    
+    /* 🍽️ ZUTATEN */ 
+    ingredients: { 
+ 
+        "": [ 
+            "180 g Mehl (Type 405)",
+            "20 g Speisestärke",
+            "1/4 TL Backpulver",
+            "15 g brauner Zucker",
+            "85 g weißer Zucker",
+            "1 TL Vanilleextrakt",
+            "1/4 TL Zimt",
+            "1/2 TL Salz",
+            "1 Eigelb",
+            "90 g weiche Butter",
+            "120 g Zartbitterkuvertüre",
+            "50 g Vollmilchkuvertüre"
+        ], 
+
+    }, 
+ 
+    /* 👨‍🍳 ZUBEREITUNG */ 
+    steps: [ 
+        "Die Kuvertüren grob hacken.",
+
+        "In einer Schüssel Mehl und Backpulver vermischen. Die weiche Butter mit dem Zucker, dem Salz, dem Zimt und dem Eigelb mit einem Löffel verrühren, bis sich alles gleichmäßig verbunden hat. Die Mehlmischung unter die Buttermasse heben und mit den Händen zu einem glatten Teig kneten. Die Schokolade unterheben und so lange vermengen, bis sich alles verbunden hat.",
+
+        "Den Teig in Frischhaltefolie wickeln und <b>mind.</b> 1 Stunde in den Kühlschrank stellen.",
+
+        "Nach der Ruhezeit den Ofen auf 180 Grad Ober-/Unterhitze vorheizen und ein Backblech mit Backpapier belegen.",
+
+        "Den Teig zu 9 Kugeln à ca. 65 g formen. <b>(Nicht wundern, der Teig ist sehr krümelig.)</b>",
+
+        "Jede Kugel zuerst auf das Backblech geben, dann mit der Hand etwas flacher drücken und nach Belieben etwas zurechtformen.",
+
+        "Die Kekse auf mittlerer Schiene ca. 18 min backen, bis die Ränder leicht gebräunt sind. <b>(Also etwas dunkler als der restliche Teig sind.)</b>",
+
+        "Aus dem Ofen nehmen und vollständig abkühlen lassen."
+    ]
+},
+
+{  
+    id: "77",  
+    title: "Hähnchen-Frischkäse-Pasta",  
+    category: ["Pasta", "Fleisch", "Hauptgerichte"],  
+    image: "images/hähnchen-frischkäse-pasta.jpeg",  
+    time: {  
+        preparation: "10 min",  
+        cooking: "20 min", 
+        total: "30 min"  
+    },  
+  
+    related: ["1", "46", "29"],  
+    portions: "8 Portionen",  
+    difficulty: "Einfach",  
+    rating: 4.6,  
+  
+    description: "Cremige Pasta mit zartem Hähnchen in Frischkäse-Sahne-Soße mit einem Hauch Pistazie – einfach und super schnell zubereitet.", 
+     
+    /* 🍽️ ZUTATEN */  
+    ingredients: {  
+  
+        "": [  
+            "100 g Pistazien <i>(geröstet und gesalzen)</i>", 
+            "150 g Frischkäse <i>(Doppelrahmstufe)</i>", 
+            "250 ml Kochsahne", 
+            "500 g Capellini", 
+            "400 g Hähnchen-Innenfilets", 
+            "1 große Knoblauchzehe", 
+            "neutrales Öl", 
+            "Salz", 
+            "Pfeffer" 
+        ], 
+ 
+    },  
+  
+    /* 👨‍🍳 ZUBEREITUNG */  
+    steps: [  
+        "Einen Topf mit Salzwasser zum Kochen bringen.", 
+ 
+        "In der Zwischenzeit die Pistazien aus der Schale lösen und die Knoblauchzehe schälen. Die Hähnchenstücke trocken tupfen und rundherum mit Salz und Pfeffer würzen.", 
+ 
+        "Etwas Öl in einem Topf erhitzen. Die geschälte Knoblauchzehe dazugeben und kurz anschwitzen, bis sie duftet, anschließend herausnehmen.", 
+ 
+        "Die Hähnchenteile in dem Topf mit dem Knoblauchöl 1-2 min pro Seite bei höchster Stufe kräftig anbraten, bis sie schön gebräunt sind. Danach die Hitze auf mittlere Stufe reduzieren und die Stücke je nach Dicke noch ca. 2-3 min fertig braten. Dann die Hähnchenstücke aus dem Topf nehmen und beiseite stellen.", 
+ 
+        "In der Zwischenzeit die Pistazien und die angeschwitzte Knoblauchzehe sehr fein zerhäckseln. Die Nudeln in das kochende Salzwasser geben und nach Packungsbeilage zubereiten, abgießen und dabei ca. 500 ml Pastawasser auffangen.", 
+ 
+        "Dann die Kochsahne, den Frischkäse, 250 ml des Pastawassers und etwas Pfeffer mit zu den Pistazien geben und alles glatt pürieren. Die Pistazien-Soße in den Topf mit dem Bratfett geben, aufkochen und ca. 2-3 min auf mittlerer Hitze köcheln.", 
+ 
+        "Die Capellini zur Soße geben und alles gut verrühren. Ca. 1-2 min kräftig verrühren, bis die Soße schön cremig ist und die Nudeln vollständig umhüllt. Falls die Soße zu dick ist, nach und nach weiteres Pastawasser dazugeben. Das Hähnchen in kleine Stücke schneiden, unterheben, den Topf vom Herd nehmen und nach Belieben mit gehackten Pistazienstücken servieren.", 
+    ] 
+},
+
+{
+    id: "78",
+    title: "Linsenfrikadellen",
+    category: ["Pfannengerichte", "Vegetarisch", "Vegan", "Hauptgerichte"],
+    image: "images/linsenfrikadellen.jpeg",
+    time: {
+        preparation: "15 min",
+        cooking: "25 min",
+        resting: "20 min",
+        total: "1 Std."
+    },
+
+    related: ["5", "12", "20"],
+    portions: "18 Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Herzhafte Linsenfrikadellen mit knuspriger Kruste und würzigem Geschmack – einfach, vegan, proteinreich und super lecker.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "": [
+            "300 g Berglinsen",
+            "900 ml Gemüsebrühe",
+            "1 rote Zwiebel",
+            "1 Knoblauchzehe",
+            "60 g Haferflocken",
+            "1 EL Senf",
+            "1 TL Sojasauce",
+            "45 g Paniermehl",
+            "1 TL Paprikapulver, edelsüß",
+            "1 EL gefriergetrocknete Gartenkräuter",
+            "Salz",
+            "Pfeffer"
+        ],
+
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+        "Die Linsen mit der Gemüsebrühe aufkochen und nach Packungsbeilage auf mittlerer Hitze gar kochen, in ein Sieb abgießen und ca. 20 min ausdampfen lassen.",
+
+        "Dann die Zwiebel schälen und fein hacken. Den Knoblauch ebenfalls schälen und mit ca. 450 g der Linsen sowie den Haferflocken pürieren.",
+
+        "Die pürierten Linsen mit den übrigen Linsen und den restlichen Zutaten zu einer formbaren Masse verkneten und ca. 5 min ruhen lassen.",
+
+        "Jeweils etwas Teig nehmen, zu einer Kugel formen und leicht flach drücken.",
+
+        "Dann so viel Öl in einer Pfanne erhitzen, sodass der Boden gerade so bedeckt ist.",
+
+        "Jede Frikadelle auf höchster Stufe ca. 3 min pro Seite knusprig anbraten, bis sie schön gebräunt ist.",
+
+        "Die fertigen Frikadellen auf einem Kuchenrost mit Küchenrolle abtropfen lassen und kalt oder warm genießen."
+    ]
+},
+
+{
+    id: "79",
+    title: "Röstzwiebeln aus dem Airfryer",
+    category: ["Beilagen", "Vegetarisch", "Vegan", "Airfryer"],
+    image: "images/roestzwiebeln.jpeg",
+    time: {
+        preparation: "5 min",
+        baking: "35–40 min",
+        total: "40–45 min"
+    },
+
+    related: ["80", "100", "76"],
+    portions: "6 kleine Portionen",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Knusprige Röstzwiebeln mit nur wenigen Zutaten im Airfryer ganz einfach zu Hause gemacht.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "": [
+            "2 große weiße Zwiebeln",
+            "2 EL Mehl",
+            "1 TL Paprikapulver",
+            "1 TL Salz",
+            "1 EL Öl"
+        ]
+
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+
+        "Die Zwiebeln schälen, halbieren und in dünne halbe Ringe schneiden. In eine Box mit Deckel geben, mit allen trockenen Zutaten gut schütteln, bis alles gleichmäßig bedeckt ist. Das Öl dazugeben und erneut gut durchschütteln.",
+
+        "In den Airfryerkorb geben, gleichmäßig auf dem Boden verteilen und ca. 35–40 min bei 160 Grad rösten, bis sie braun und knusprig sind. Dabei alle 5 min einmal gut durchschütteln.",
+
+        "In eine Schale geben, etwas abkühlen lassen und in kleinere Stücke brechen."
+
+    ]
+},
+
+{
+    id: "80",
+    title: "Maultaschen n' Cheese",
+    category: ["Ofengerichte", "Pasta", "Hauptgerichte"],
+    image: "images/maultaschen-n-cheese.jpeg",
+    time: {
+        preparation: "15 min",
+        cooking: "15 min",
+        baking: "30 min",
+        cooling: "5 min",
+        total: "1 Std 5 min"
+    },
+
+    related: ["77", "46", "27"],
+    portions: "6 Portionen",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Cremige Maultaschen in einer würzigen Käse-Soße, mit ordentlich Käse überbacken und knusprigen Röstzwiebeln – einfaches Comfort Food aus dem Ofen.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "": [
+            "3 Pck. Maultaschen <i>(à 360 g)</i>",
+            "150 g Limburger",
+            "50 g Bergkäse",
+            "1 Pck. Mozzarella <i>(à 250 g)</i>"
+        ],
+
+        "Soße": [
+            "400 ml Milch",
+            "2 EL Butter",
+            "2 EL Mehl",
+            "100 g Bergkäse",
+            "100 g Gouda <i>mittelalt</i>",
+            "1/2 TL Paprikapulver",
+            "1/4 TL Knoblauchpulver",
+            "1 TL Senf",
+            "Salz",
+            "Pfeffer"
+        ],
+
+        "Außerdem": [
+            "[[roestzwiebeln-aus-dem-arfryer|Röstzwiebeln]]"
+        ]
+
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+
+        "Den Bergkäse und den Gouda grob reiben, den Limburger in kleine Würfel schneiden und den Mozzarella abgießen und in Scheiben schneiden.",
+
+        "Die Maultaschen in Streifen schneiden und in etwas Öl unter gelegentlichem Rühren knusprig anbraten und in eine Auflaufform geben.",
+
+        "In der Zwischenzeit den Ofen auf 200 Grad Ober-/Unterhitze vorheizen.",
+
+        "Währenddessen für die Soße die Butter in einem Topf schmelzen, die Gewürze dazugeben und kurz anrösten, bis es duftet. Das Mehl mit einem Schneebesen unterrühren und rühren, bis es fast krümelig wird. Dann immer etwas Milch dazugeben, unterrühren, andicken lassen und nach und nach die restliche Milch dazugeben. Unter Rühren aufkochen, den Senf unterrühren, mit Salz und Pfeffer würzen und ca. 2 min auf mittlerer Hitze köcheln lassen, bis die Soße etwas angedickt ist. Den Gouda und den Bergkäse für die Soße unterrühren und unter gelegentlichem Rühren weitere 2–3 min sanft köcheln lassen.",
+
+        "Die Soße gleichmäßig über den Maultaschen verteilen und unterheben. Den restlichen Käse gleichmäßig auf der Oberfläche verteilen und im vorgeheizten Backofen ca. 25–30 min backen, bis der Käse goldbraun ist und die Soße blubbert.",
+
+        "Aus dem Ofen nehmen, mind. 5 min abkühlen lassen und nach Belieben mit Röstzwiebeln servieren."
+
+    ]
 },
 
 ];

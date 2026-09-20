@@ -4747,7 +4747,7 @@ related: ["45", "7", "20"],
         preparation: "15 min",
         cooking: "25 min",
         resting: "20 min",
-        total: "1 Std."
+        total: "1 Std"
     },
 
     related: ["5", "12", "20"],

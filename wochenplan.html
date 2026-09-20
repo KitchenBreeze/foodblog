@@ -214,15 +214,30 @@ main {
     background: var(--kb-accent);
     border-radius: 2px;
 }
+
+.back-link {
+    display: inline-block;
+    margin: 35px 30px 0;
+    color: var(--kb-text);
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
 </style>
 
 </head>
 
 <body>
 
+<a href="index.html" class="back-link">
+    ← Zurück zur Übersicht
+</a>
+
 <header>
 
-<h1>🍽️ Wochenplan</h1>
+<h1> Wochenplan</h1>
 
 <p>Dein zufälliger Wochenplan aus den Hauptgerichten</p>
 
@@ -248,15 +263,17 @@ main {
     type="button"
     data-filter="Vegetarisch"
 >
-    🥬 Vegetarisch
+     Vegetarisch
 </button>
 
 <button
     type="button"
     data-filter="Vegan"
 >
-    🌱 Vegan
+     Vegan
 </button>
+
+<button type="button" data-filter="Schnell & einfach"> Schnell & einfach</button>
 
 </div>
 
@@ -265,7 +282,7 @@ main {
     class="generate-button"
     id="generatePlan"
 >
-    🎲 Wochenplan erstellen
+     Wochenplan erstellen
 </button>
 
 <div
@@ -345,8 +362,15 @@ generateButton.addEventListener(
             });
 
 
+        /*
+        =====================================
+        VEGETARISCH / VEGAN
+        =====================================
+        */
+
         if (
-            selectedFilter !== "Alle"
+            selectedFilter === "Vegetarisch" ||
+            selectedFilter === "Vegan"
         ) {
 
             mainDishes =
@@ -370,7 +394,84 @@ generateButton.addEventListener(
         }
 
 
-        if (mainDishes.length < 7) {
+        /*
+        =====================================
+        SCHNELL & EINFACH
+        Maximal 45 Minuten
+        Schwierigkeit: Einfach
+        =====================================
+        */
+
+        if (
+            selectedFilter ===
+            "Schnell & einfach"
+        ) {
+
+            mainDishes =
+                mainDishes.filter(
+                    recipe => {
+
+                        if (
+                            recipe.difficulty !==
+                            "Einfach"
+                        ) {
+                            return false;
+                        }
+
+
+                        const total =
+                            recipe.time?.total ||
+                            "";
+
+
+                        const hours =
+                            total.match(
+                                /(\d+)\s*Std/
+                            );
+
+
+                        const minutes =
+                            total.match(
+                                /(\d+)\s*min/
+                            );
+
+
+                        const totalMinutes =
+                            (
+                                hours
+                                    ? Number(
+                                        hours[1]
+                                    ) * 60
+                                    : 0
+                            ) +
+                            (
+                                minutes
+                                    ? Number(
+                                        minutes[1]
+                                    )
+                                    : 0
+                            );
+
+
+                        return (
+                            totalMinutes <= 45
+                        );
+
+                    }
+                );
+
+        }
+
+
+        /*
+        =====================================
+        NICHT GENUG REZEPTE
+        =====================================
+        */
+
+        if (
+            mainDishes.length < 7
+        ) {
 
             weekPlan.innerHTML =
                 "<p>Für diese Auswahl sind nicht genug verschiedene Hauptgerichte vorhanden.</p>";
@@ -380,17 +481,57 @@ generateButton.addEventListener(
         }
 
 
+        /*
+        =====================================
+        REZEPTE ZUFÄLLIG MISCHEN
+        =====================================
+        */
+
         const shuffled =
             [...mainDishes].sort(
-                () => Math.random() - 0.5
+                () =>
+                    Math.random() - 0.5
             );
 
 
-        const selectedRecipes =
-            shuffled.slice(0, 7);
+        const selectedRecipes = [];
 
+let pastaCount = 0;
+
+for (const recipe of shuffled) {
+
+    const categories =
+        Array.isArray(recipe.category)
+            ? recipe.category
+            : [];
+
+    const isPasta =
+        categories.includes("Pasta");
+
+    if (isPasta && pastaCount >= 2) {
+        continue;
+    }
+
+    selectedRecipes.push(recipe);
+
+    if (isPasta) {
+        pastaCount++;
+    }
+
+    if (selectedRecipes.length === 7) {
+        break;
+    }
+}
+
+
+        /*
+        =====================================
+        WOCHENTAGE
+        =====================================
+        */
 
         const days = [
+
             "Montag",
             "Dienstag",
             "Mittwoch",
@@ -398,8 +539,15 @@ generateButton.addEventListener(
             "Freitag",
             "Samstag",
             "Sonntag"
+
         ];
 
+
+        /*
+        =====================================
+        WOCHENPLAN AUSGEBEN
+        =====================================
+        */
 
         weekPlan.innerHTML =
             selectedRecipes.map(
@@ -409,16 +557,20 @@ generateButton.addEventListener(
                         recipe.title
                             .toLowerCase()
                             .replace(
-                                /ä/g, "ae"
+                                /ä/g,
+                                "ae"
                             )
                             .replace(
-                                /ö/g, "oe"
+                                /ö/g,
+                                "oe"
                             )
                             .replace(
-                                /ü/g, "ue"
+                                /ü/g,
+                                "ue"
                             )
                             .replace(
-                                /ß/g, "ss"
+                                /ß/g,
+                                "ss"
                             )
                             .replace(
                                 /[^a-z0-9]+/g,
@@ -429,12 +581,15 @@ generateButton.addEventListener(
                                 ""
                             );
 
-                 return `
+
+                    return `
+
     <div class="day">
 
         <div class="day-name">
             ${days[index]}
         </div>
+
 
         <a
             class="recipe-card"
@@ -446,30 +601,33 @@ generateButton.addEventListener(
                 alt="${recipe.title}"
             >
 
+
             <div class="recipe-card-content">
 
                 <div class="recipe-card-title">
                     ${recipe.title}
                 </div>
 
+
                 <div class="recipe-card-time">
 
-    <span
-        class="recipe-time-icon"
-        aria-hidden="true"
-    ></span>
+                    <span
+                        class="recipe-time-icon"
+                        aria-hidden="true"
+                    ></span>
 
-    <span>
-        ${recipe.time?.total || ""}
-    </span>
+                    <span>
+                        ${recipe.time?.total || ""}
+                    </span>
 
-</div>
+                </div>
 
             </div>
 
         </a>
 
     </div>
+
 `;
 
                 }

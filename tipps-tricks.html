@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tipps & Tricks - KitchenBreeze</title>
+
+<link rel="icon" type="image/png" href="logo1.png">
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: #0f0f10;
+    color: #f2eee9;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 35px;
+}
+
+.back {
+    color: #b8b2aa;
+    text-decoration: none;
+}
+
+.tip-card {
+    display: flex;
+    gap: 20px;
+
+    background: #171718;
+
+    padding: 15px;
+
+    border-radius: 16px;
+
+    margin-top: 20px;
+
+    transition: transform 0.2s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-2px);
+}
+
+.tip-card img {
+    width: 160px;
+    height: 120px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    flex-shrink: 0;
+}
+
+.tip-card-content {
+    width: 100%;
+}
+
+.tip-card h2 {
+    margin: 5px 0 10px;
+
+    font-weight: 400;
+}
+
+.tip-card p {
+    margin: 0;
+
+    color: #b8b2aa;
+
+    line-height: 1.6;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    .tip-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tip-card img {
+        width: 100%;
+        max-width: 300px;
+        height: 180px;
+    }
+
+    .tip-card h2 {
+        margin-top: 5px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<a
+    class="back"
+    href="index.html"
+>
+    ← Zurück
+</a>
+
+
+<h1>
+    💡 Tipps & Tricks
+</h1>
+
+
+<div id="tips">
+
+
+<a href="tipps-tricks/rundwirken.html">
+
+    <div class="tip-card">
+
+        <img
+            src="images/rundwirken.jpeg"
+            alt="Rundwirken eines Teiglings"
+        >
+
+        <div class="tip-card-content">
+
+            <h2>
+                Rundwirken
+            </h2>
+
+            <p>
+                So formst du einen Teigling zu einer
+                schönen, runden Kugel und gibst ihm
+                die nötige Spannung.
+            </p>
+
+        </div>
+
+    </div>
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

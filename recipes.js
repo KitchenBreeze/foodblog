@@ -4798,7 +4798,7 @@ related: ["45", "7", "20"],
 {
     id: "79",
     title: "Röstzwiebeln aus dem Airfryer",
-    category: ["Beilagen", "Vegetarisch", "Vegan", "Airfryer", "Backen"],
+    category: ["Beilagen", "Vegetarisch","ohne Ei", "Vegan", "Airfryer", "Backen"],
     image: "images/roestzwiebeln.jpeg",
     time: {
         preparation: "5 min",
@@ -4961,7 +4961,7 @@ related: ["45", "7", "20"],
     tips: [
         "Dass der Teig elastisch ist, sieht man gut daran, dass der Teig beim Herausziehen des Knethakens ohne zu reißen mitgezogen wird."
     ],
-    category: ["Süßes Gebäck", "Übernachtgare", "Backen"],
+    category: ["Brot & Brötchen", "Übernachtgare", "Backen"],
     image: "images/brioche-mit-übernachtgare.jpeg",
     time: {
         preparation: "25 min",
@@ -5147,7 +5147,7 @@ related: ["45", "7", "20"],
 {
     id: "85",
     title: "Super schnelle Frühstücksbrötchen",
-    category: ["Süßes Gebäck", "Vegetarisch", "Backen"],
+    category: ["Brot & Brötchen", "ohne Ei", "Vegetarisch", "Backen"],
     image: "images/super-schnelle-Frühstücksbrötchen.jpeg",
     time: {
         preparation: "5 min",

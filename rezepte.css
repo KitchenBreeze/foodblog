@@ -896,3 +896,44 @@ body {
     color: var(--kb-accent);
 
 }
+.filter-subcategories {
+    display: none;
+    padding-left: 10px;
+}
+
+.filter-subcategories.open {
+    display: block;
+}
+
+.filter-main-category {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 15px;
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: transparent;
+    color: var(--kb-text);
+
+    font-size: 16px;
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.filter-main-category:hover {
+    background: #222223;
+}
+
+.filter-main-category span {
+    transition: transform 0.2s ease;
+}
+
+.filter-main-category.open span {
+    transform: rotate(180deg);
+}

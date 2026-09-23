@@ -192,199 +192,291 @@
 
 
         <div
-            class="filter-dropdown"
-            id="filterDropdown"
+    class="filter-dropdown"
+    id="filterDropdown"
+>
+
+    <button
+        class="filter-item active"
+        data-cat="all"
+        type="button"
+    >
+        Alle
+    </button>
+
+
+    <!-- KOCHEN -->
+
+    <button
+        class="filter-main-category"
+        type="button"
+        data-category-toggle="kochen"
+    >
+         Kochen
+        <span>⌄</span>
+    </button>
+
+
+    <div
+        class="filter-subcategories"
+        id="category-kochen"
+    >
+
+        <button
+            class="filter-item"
+            data-cat="Pasta"
+            type="button"
         >
+            Pasta
+        </button>
 
+        <button
+            class="filter-item"
+            data-cat="Reis"
+            type="button"
+        >
+            Reis
+        </button>
 
-            <button
-                class="filter-item active"
-                data-cat="all"
-                type="button"
-            >
-                Alle
-            </button>
+        <button
+            class="filter-item"
+            data-cat="Suppen & Eintöpfe"
+            type="button"
+        >
+            Suppen & Eintöpfe
+        </button>
 
+        <button
+            class="filter-item"
+            data-cat="Salate"
+            type="button"
+        >
+            Salate
+        </button>
 
-            <button
-                class="filter-item"
-                data-cat="Pasta"
-                type="button"
-            >
-                Pasta
-            </button>
+        <button
+            class="filter-item"
+            data-cat="Beilagen"
+            type="button"
+        >
+            Beilagen
+        </button>
 
+        <button
+            class="filter-item"
+            data-cat="Aufstriche & Dips"
+            type="button"
+        >
+            Aufstriche & Dips
+        </button>
 
-            <button
-                class="filter-item"
-                data-cat="Reis"
-                type="button"
-            >
-                Reis
-            </button>
+        <button
+            class="filter-item"
+            data-cat="Snacks"
+            type="button"
+        >
+            Snacks
+        </button>
 
+        <button
+            class="filter-item"
+            data-cat="süße Hauptgerichte"
+            type="button"
+        >
+            Süße Hauptgerichte
+        </button>
 
-            <button
-                class="filter-item"
-                data-cat="Suppen & Eintöpfe"
-                type="button"
-            >
-                Suppen & Eintöpfe
-            </button>
+        <button
+            class="filter-item"
+            data-cat="Desserts"
+            type="button"
+        >
+            Desserts
+        </button>
 
+        <button
+            class="filter-item"
+            data-cat="Pfannengerichte"
+            type="button"
+        >
+            Pfannengerichte
+        </button>
 
-            <button
-                class="filter-item"
-                data-cat="Salate"
-                type="button"
-            >
-                Salate
-            </button>
+        <button
+            class="filter-item"
+            data-cat="Hauptgerichte"
+            type="button"
+        >
+            Hauptgerichte
+        </button>
 
+        <button
+            class="filter-item"
+            data-cat="Ofengerichte"
+            type="button"
+        >
+            Ofengerichte
+        </button>
 
-            <button
-                class="filter-item"
-                data-cat="Beilagen"
-                type="button"
-            >
-                Beilagen
-            </button>
+        <button
+            class="filter-item"
+            data-cat="Fleisch"
+            type="button"
+        >
+            Fleisch
+        </button>
 
+        <button
+            class="filter-item"
+            data-cat="Fisch"
+            type="button"
+        >
+            Fisch
+        </button>
 
-            <button
-                class="filter-item"
-                data-cat="Aufstriche & Dips"
-                type="button"
-            >
-                Aufstriche & Dips
-            </button>
+        <button
+            class="filter-item"
+            data-cat="Vegetarisch"
+            type="button"
+        >
+            Vegetarisch
+        </button>
 
+        <button
+            class="filter-item"
+            data-cat="Vegan"
+            type="button"
+        >
+            Vegan
+        </button>
 
-            <button
-                class="filter-item"
-                data-cat="Snacks"
-                type="button"
-            >
-                Snacks
-            </button>
-
-
-            <button
-                class="filter-item"
-                data-cat="süße Hauptgerichte"
-                type="button"
-            >
-                Süße Hauptgerichte
-            </button>
-
-            <button
-                class="filter-item"
-                data-cat="Desserts"
-                type="button"
-            >
-                Desserts
-            </button>
-
-             <button
-                class="filter-item"
-                data-cat="Pfannengerichte"
-                type="button"
-            >
-                Pfannengerichte
-            </button>
-
-              <button
-                class="filter-item"
-                data-cat="Hauptgerichte"
-                type="button"
-            >
-                Hauptgerichte
-            </button>
-
-
-            <button
-                class="filter-item"
-                data-cat="süßes Gebäck"
-                type="button"
-            >
-                Süßes Gebäck
-            </button>
-
-
-            <button
-                class="filter-item"
-                data-cat="Ofengerichte"
-                type="button"
-            >
-                Ofengerichte
-            </button>
-
-
-            <button
-                class="filter-item"
-                data-cat="herzhaftes Gebäck"
-                type="button"
-            >
-                Herzhaftes Gebäck
-            </button>
-
-
-            <button
-                class="filter-item"
-                data-cat="Fleisch"
-                type="button"
-            >
-                Fleisch
-            </button>
-
-
-            <button
-                class="filter-item"
-                data-cat="Fisch"
-                type="button"
-            >
-                Fisch
-            </button>
-
-
-            <button
-                class="filter-item"
-                data-cat="Vegetarisch"
-                type="button"
-            >
-                Vegetarisch
-            </button>
-
-
-            <button
-                class="filter-item"
-                data-cat="Vegan"
-                type="button"
-            >
-                Vegan
-            </button>
-
-            <button
-                class="filter-item"
-                data-cat="Airfryer"
-                type="button"
-            >
-                Airfryer
-            </button>
-
-            <button
-                class="filter-item"
-                data-cat="Übernachtgare"
-                type="button"
-            >
-                Übernachtgare
-            </button>
-
-
-
-        </div>
+        <button
+            class="filter-item"
+            data-cat="Airfryer"
+            type="button"
+        >
+            Airfryer
+        </button>
 
     </div>
+
+
+    <!-- BACKEN -->
+
+    <button
+        class="filter-main-category"
+        type="button"
+        data-category-toggle="backen"
+    >
+         Backen
+        <span>⌄</span>
+    </button>
+
+
+    <div
+        class="filter-subcategories"
+        id="category-backen"
+    >
+
+        <button
+            class="filter-item"
+            data-cat="Snacks"
+            type="button"
+        >
+            Snacks
+        </button>
+
+        <button
+            class="filter-item"
+            data-cat="Teilchen"
+            type="button"
+        >
+            Teilchen
+        </button>
+
+        <button
+            class="filter-item"
+            data-cat="Kekse"
+            type="button"
+        >
+            Kekse
+        </button>
+
+        <button
+            class="filter-item"
+            data-cat="Brot & Brötchen"
+            type="button"
+        >
+            Brot & Brötchen
+        </button>
+
+        <button
+            class="filter-item"
+            data-cat="Kuchen & Torten"
+            type="button"
+        >
+            Kuchen & Torten
+        </button>
+
+        <button
+            class="filter-item"
+            data-cat="Muffins"
+            type="button"
+        >
+            Muffins
+        </button>
+
+        <button
+            class="filter-item"
+            data-cat="Ohne Ei"
+            type="button"
+        >
+            Ohne Ei
+        </button>
+
+        <button
+            class="filter-item"
+            data-cat="Belegte Backwaren"
+            type="button"
+        >
+            Belegte Backwaren
+        </button>
+
+        <button
+            class="filter-item"
+            data-cat="Vegetarisch"
+            type="button"
+        >
+            Vegetarisch
+        </button>
+
+        <button
+            class="filter-item"
+            data-cat="Vegan"
+            type="button"
+        >
+            Vegan
+        </button>
+
+        <button
+            class="filter-item"
+            data-cat="Airfryer"
+            type="button"
+        >
+            Airfryer
+        </button>
+
+        <button
+            class="filter-item"
+            data-cat="Übernachtgare"
+            type="button"
+        >
+            Übernachtgare
+        </button>
+
+    </div>
+
+</div>
 
 </section>
 
@@ -1655,6 +1747,45 @@ backToTop.addEventListener(
             top: 0,
             behavior: "smooth"
         });
+
+    }
+);
+
+</script>
+<script>
+
+const categoryButtons =
+    document.querySelectorAll(
+        "[data-category-toggle]"
+    );
+
+
+categoryButtons.forEach(
+    button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                const category =
+                    button.dataset.categoryToggle;
+
+                const subcategories =
+                    document.getElementById(
+                        "category-" + category
+                    );
+
+
+                subcategories.classList.toggle(
+                    "open"
+                );
+
+                button.classList.toggle(
+                    "open"
+                );
+
+            }
+        );
 
     }
 );

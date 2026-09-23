@@ -231,6 +231,61 @@ main {
 
 <body>
 
+<button
+    class="home-menu-button right-menu-button"
+    id="menuBtn"
+    aria-label="Menü öffnen"
+    aria-controls="sideMenu"
+    aria-expanded="false"
+>
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+</button>
+
+<nav
+    class="home-side-menu right-side-menu"
+    id="sideMenu"
+    aria-label="Hauptnavigation"
+>
+
+    <div class="home-menu-logo">
+
+        <img
+            src="images/logo1.png"
+            alt="KitchenBreeze"
+        >
+
+    </div>
+
+    <a href="index.html">
+        Startseite
+    </a>
+
+    <a href="rezepte.html">
+        Rezepte
+    </a>
+
+    <a href="zutatenfinder.html">
+        Zutatenfinder
+    </a>
+
+    <a href="favoriten.html">
+        Favoriten
+    </a>
+
+    <a href="wochenplan.html" class="active">
+        Wochenplan
+    </a>
+
+    <a href="tipps-tricks.html">
+        Tipps & Tricks
+    </a>
+
+</nav>
+
 <a href="index.html" class="back-link">
     ← Zurück zur Übersicht
 </a>
@@ -487,43 +542,90 @@ generateButton.addEventListener(
         =====================================
         */
 
-        const shuffled =
-            [...mainDishes].sort(
-                () =>
-                    Math.random() - 0.5
-            );
+const shuffled =
+    [...mainDishes].sort(
+        () =>
+            Math.random() - 0.5
+    );
 
 
-        const selectedRecipes = [];
+const selectedRecipes = [];
 
 let pastaCount = 0;
+let sweetCount = 0;
+let saladCount = 0;
+
 
 for (const recipe of shuffled) {
+
+    if (selectedRecipes.length >= 7) {
+        break;
+    }
+
 
     const categories =
         Array.isArray(recipe.category)
             ? recipe.category
             : [];
 
+
     const isPasta =
         categories.includes("Pasta");
 
-    if (isPasta && pastaCount >= 2) {
+
+    const isSweet =
+        categories.includes("Süß");
+
+
+    const isSalad =
+        categories.includes("Salate");
+
+
+    // Pasta maximal 2
+    if (
+        isPasta &&
+        pastaCount >= 2
+    ) {
         continue;
     }
 
+
+    // Süße Hauptgerichte maximal 1
+    if (
+        isSweet &&
+        sweetCount >= 1
+    ) {
+        continue;
+    }
+
+
+    // Salate maximal 3
+    if (
+        isSalad &&
+        saladCount >= 3
+    ) {
+        continue;
+    }
+
+
     selectedRecipes.push(recipe);
+
 
     if (isPasta) {
         pastaCount++;
     }
 
-    if (selectedRecipes.length === 7) {
-        break;
+
+    if (isSweet) {
+        sweetCount++;
     }
+
+
+    if (isSalad) {
+        saladCount++;
+    }
+
 }
-
-
         /*
         =====================================
         WOCHENTAGE
@@ -632,6 +734,58 @@ for (const recipe of shuffled) {
 
                 }
             ).join("");
+
+    }
+);
+
+</script>
+
+<script>
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const sideMenu =
+    document.getElementById("sideMenu");
+
+
+menuBtn.addEventListener(
+    "click",
+    (event) => {
+
+        event.stopPropagation();
+
+        sideMenu.classList.toggle("open");
+
+        const isOpen =
+            sideMenu.classList.contains("open");
+
+        menuBtn.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+    }
+);
+
+
+document.addEventListener(
+    "click",
+    (event) => {
+
+        if (
+            !sideMenu.contains(event.target) &&
+            !menuBtn.contains(event.target)
+        ) {
+
+            sideMenu.classList.remove("open");
+
+            menuBtn.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        }
 
     }
 );

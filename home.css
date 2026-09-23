@@ -78,6 +78,11 @@ body {
         background 0.2s ease;
 }
 
+.right-menu-button {
+    left: auto;
+    right: 22px;
+}
+
 .home-menu-button:hover {
     transform: translateY(-2px);
 
@@ -126,6 +131,17 @@ body {
 
     display: flex;
     flex-direction: column;
+}
+.right-side-menu {
+    left: auto;
+    right: 0;
+    transform: translateX(105%);
+    box-shadow:
+        -12px 0 40px rgba(0, 0, 0, 0.55);
+}
+
+.right-side-menu.open {
+    transform: translateX(0);
 }
 
 .home-side-menu.open {

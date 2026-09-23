@@ -859,3 +859,40 @@ body {
     background: #e9e2d8;
     color: var(--kb-text);
 }
+.back-to-top {
+
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid var(--kb-border);
+    border-radius: 50%;
+
+    background: var(--kb-card);
+    color: var(--kb-text);
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    box-shadow: var(--kb-shadow);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 999;
+}
+
+.back-to-top:hover {
+
+    background: #222223;
+
+    color: var(--kb-accent);
+
+}

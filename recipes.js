@@ -4,7 +4,7 @@ const RECIPES = [
 {
     id: "1",
     title: "Spaghetti aglio e olio",
-    category: [ "Pasta", "Hauptgerichte"],
+    category: [ "Pasta", "Hauptgerichte", "Kochen"],
     image: "images/spaghetti-aglio-e-olio.jpeg",
     time:{
         preparation:"5 min",
@@ -49,7 +49,7 @@ const RECIPES = [
 {
     id: "2",
     title: "Ananassalat",
-    category: ["Salate", "Hauptgerichte"],
+    category: ["Salate", "Hauptgerichte", "Kochen"],
     image: "images/ananassalat.jpeg",
     time:{
         preparation:"45 min",
@@ -110,7 +110,7 @@ const RECIPES = [
 {
     id: "3",
     title: "Ameisenkuchen mit Kirschen",
-    category: ["süßes Gebäck"],
+    category: [ "Backen", "Kuchen & Torten"],
     image: "images/ameisenkuchen-mit-kirschen.jpeg",
     time:{
         preparation:"10 min",
@@ -165,7 +165,7 @@ const RECIPES = [
 {
     id: "4",
     title: "Thüringer Klöße",
-    category: ["Beilage"],
+    category: ["Beilage", "Kochen"],
     image: "images/Thüringer-Klöße.jpeg",
     time:{
         preparation:"35 min",
@@ -218,7 +218,7 @@ const RECIPES = [
 {
     id: "5",
     title: "Asianstyle Pilz-Brokkoli-Pfanne",
-    category: ["Vegetarisch", "Vegan", "Reis" , "Hauptgerichte"],
+    category: ["Vegetarisch", "Vegan", "Reis" , "Hauptgerichte", "Kochen"],
     image: "images/Asianstyle-Pilz-Brokkoli-Pfanne.jpeg",
     time:{
         preparation:"22 min",
@@ -288,7 +288,7 @@ const RECIPES = [
 {
     id: "6",
     title: "Avocadocreme",
-    category: ["Aufstriche & Dips", "Vegetarisch"],
+    category: ["Aufstriche & Dips", "Vegetarisch", "Kochen"],
     image: "images/avocadocreme.jpeg",
     time: "5 min",
     related: ["9", "5", "38"],
@@ -318,7 +318,7 @@ const RECIPES = [
 {
     id: "7",
     title: "Bananenmuffins",
-    category: ["süßes Gebäck"],
+    category: ["Teilchen", "Muffins", "Backen", "ohne Ei"],
     image: "images/bananenmuffin.jpg",
     time:{
         preparation:"5 min",
@@ -360,7 +360,7 @@ const RECIPES = [
 {
     id: "8",
     title: "Blauschimmelkäsesalat",
-    category: ["Salate", "Vegetarisch" , "Hauptgerichte"],
+    category: ["Salate", "Vegetarisch" , "Hauptgerichte", "Kochen"],
     image: "images/blauschimmelkäsesalat.jpg",
     time:{
         preparation:"45 min",
@@ -421,7 +421,7 @@ const RECIPES = [
 {
 id: "9",
     title: "Crispy Chicken Salad",
-    category: ["Salate" , "Hauptgerichte"],
+    category: ["Salate" , "Hauptgerichte", "Kochen"],
     image: "images/Crispy-Chicken-Salad.jpeg",
                      time:{
     preparation:"40 min",
@@ -517,7 +517,7 @@ related: ["45", "7", "20"],
 {
     id: "10",
     title: "Dreierlei Karlsbader Schnitte",
-    category: ["herzhaftes Gebäck", "Ofengerichte", "Hauptgerichte"],
+    category: ["Ofengerichte", "Hauptgerichte", "Kochen", "Backen","belegte Backwaren" ],
     image: "images/Karlsbader-Schnitte.jpeg",
     time:{
         preparation:"5 min",
@@ -575,7 +575,7 @@ related: ["45", "7", "20"],
 {
     id: "11",
     title: "Brezel Hawaii",
-    category: ["herzhaftes Gebäck", "Snacks"],
+    category: [ "Snacks", "Backen", "Teilchen", "ohne Ei", "belegte Backwaren"],
     image: "images/brezel-hawaii.jpeg",
     time:{
         preparation:"15 min",
@@ -611,7 +611,7 @@ related: ["45", "7", "20"],
 {
     id: "12",
     title: "Bohneneintopf",
-    category: ["Vegetarisch", "Hauptgerichte"],
+    category: ["Vegetarisch", "Hauptgerichte", "Kochen"],
     image: "images/bohneneintopf.jpg",
     time:{
         preparation:"5 min",
@@ -668,7 +668,7 @@ related: ["45", "7", "20"],
         "Dazu schmecken Garnelen oder Pfannenbrot hervorragend.",
         "Falls dir die Suppe zu dick ist, kannst du nach dem Kochen noch mehr Gemüsebrühe dazugeben."
     ],
-    category: ["Suppen & Eintöpfe", "Vegetarisch", "Hauptgerichte"],
+    category: ["Suppen & Eintöpfe", "Vegetarisch", "Hauptgerichte", "Kochen"],
     image: "images/brokkolisuppe.jpeg",
     time:{
         preparation:"10 min",
@@ -716,7 +716,7 @@ related: ["45", "7", "20"],
         "Je länger das Topping zieht, desto besser und intensiver schmeckt es.",
         "Wenn du möchtest kannst du auch die Brotscheiben mit etwas Olivenöl bestreichen und in einer Pfanne ohne Öl kurz knusprig anbraten."
     ],
-    category: ["Brot", "Vegetarisch", "Hauptgerichte"],
+    category: ["Brot", "Vegetarisch", "Hauptgerichte", "Kochen"],
     image: "images/bruschetta.jpg",
     time:{
         preparation:"10 min",
@@ -758,7 +758,7 @@ related: ["45", "7", "20"],
 {
     id: "14",
     title: "Cannelloni Caprese",
-    category: ["Pasta", "Ofengerichte", "Hauptgerichte"],
+    category: ["Pasta", "Ofengerichte", "Hauptgerichte", "Kochen"],
     image: "images/canneloni-caprese.jpeg",
     time:{
         preparation:"30 min",
@@ -814,7 +814,7 @@ related: ["45", "7", "20"],
     tips: [
     "Lieber zu wenig als zu viel kneten, damit die Butter nicht zu warm wird."
 ],
-    category: ["herzhaftes Gebäck"], 
+    category: [ "Backen", "Brot & Brötchen", "Teilchen", "ohne Ei"], 
     image: "images/cheesescone.jpeg",
             time:{
     preparation:"10 min",
@@ -871,7 +871,7 @@ related: ["45", "7", "20"],
     tips: [
     "Die fertigen Cordon bleues kannst du im Ofen bei ca. 50°C auf einem Kuchenrost warm halten.",
 ],
-    category: ["Fleisch", "Hauptgerichte"], 
+    category: ["Fleisch", "Hauptgerichte", "Kochen"], 
     image: "images/cordon-bleu.jpeg",
         time:{
     preparation:"30 min",
@@ -926,7 +926,7 @@ related: ["45", "7", "20"],
 {
     id: "17",
     title: "Cowboy Shakshuka",
-    category: ["Vegetarisch", "Hauptgerichte"], 
+    category: ["Vegetarisch", "Hauptgerichte", "Kochen"], 
     image: "images/Cowboy-shakshuka.jpeg",
        time:{
     preparation:"5 min",
@@ -981,7 +981,7 @@ related: ["45", "7", "20"],
 {
     id: "18",
     title: "Cracker",
-    category: ["Snacks"], 
+    category: ["Snacks", "Backen", "ohne Ei"], 
     image: "images/cracker.jpeg",
     time:{
     preparation:"10 min",
@@ -1042,7 +1042,7 @@ related: ["45", "7", "20"],
 {
     id: "19",
     title: "Eiersalat",
-    category: ["Aufstriche & Dips", "Beilagen"], 
+    category: ["Aufstriche & Dips", "Beilagen", "Kochen"], 
     image: "images/eiersalat.jpeg",
         time:{
     preparation:"10 min",
@@ -1091,7 +1091,7 @@ related: ["45", "7", "20"],
 {
     id: "20",
     title: "Veganer gebratener Blumenkohl",
-    category: ["Vegan","Vegetarisch" ,"Hauptgerichte"], 
+    category: ["Vegan","Vegetarisch" ,"Hauptgerichte", "Kochen"], 
     image: "images/Veganer-gebratener-Blumenkohl.jpeg",
         time:{
     preparation:"15 min",
@@ -1150,7 +1150,7 @@ related: ["45", "7", "20"],
     tips: [
         "Die fertigen Brote kannst du im 50°C warmen Ofen warm halten, bis die anderen fertig sind."
     ],
-    category: ["Brot", "Pfannengerichte", "Hauptgerichte"], 
+    category: ["Brot", "Pfannengerichte", "Hauptgerichte", "Kochen"], 
     image: "images/Eifreies-Frenchtoast.jpeg",
         time:{
     preparation:"12 min",
@@ -1213,7 +1213,7 @@ related: ["45", "7", "20"],
     title: "einfacher Couscoussalat",
     category: ["Vegetarisch", 
         "Salate",
-        "Vegan", "Hauptgerichte"
+        "Vegan", "Hauptgerichte", "Kochen"
      ],
     image: "images/einfacher-Couscoussalat.jpeg",
         time:{
@@ -1265,7 +1265,7 @@ related: ["45", "7", "20"],
     tips: [
         "Alles, was übrig bleibt, kannst du abgekühlt, luftdicht verpackt (z.B. in Alufolie oder einer Box) und dann ca. 2 Tage im Kühlschrank aufbewahren."
     ],
-    category: ["Fleisch", "Ofengerichte", "Hauptgerichte"], 
+    category: ["Fleisch", "Ofengerichte", "Hauptgerichte", "Kochen"], 
     image: "images/einfaches-Wiesnhendl.jpeg",
         time:{
     preparation:"30 min",
@@ -1330,7 +1330,7 @@ related: ["45", "7", "20"],
 {
     id: "24",
     title: "Erdbeermuffins",
-    category: ["süßes Gebäck"], 
+    category: [ "Backen", "ohne Ei", "Muffins", "Teilchen"], 
     image: "images/Erdbeermuffins.jpeg",
         time:{
     preparation:"5 min",
@@ -1389,7 +1389,7 @@ related: ["45", "7", "20"],
 {
     id: "25",
     title: "Erdbeersalat",
-    category: ["Salate", "Vegetarisch", "Hauptgerichte"], 
+    category: ["Salate", "Vegetarisch", "Hauptgerichte", "Kochen"], 
     image: "images/Erdbeersalat.jpeg",
         time:{
     preparation:"30 min",
@@ -1460,7 +1460,7 @@ related: ["45", "7", "20"],
         "Bei ungefrorenen Bananen gilt: Je brauner die Banane, desto süßer und aromatischer ist sie.",
     
     ],
-    category: ["süßes Gebäck"], 
+    category: [ "Backen", "Kuchen & Torten"], 
     image: "images/Erdnuss-Bananen-Kuchen.jpeg",
         time:{
     preparation:"15 min",
@@ -1519,7 +1519,7 @@ related: ["45", "7", "20"],
 {
     id: "27",
     title: "Erdnusscurry",
-    category: ["Vegetarisch", "Vegan", "Reis", "Hauptgerichte"], 
+    category: ["Vegetarisch", "Vegan", "Reis", "Hauptgerichte", "Kochen"], 
     image: "images/Erdnusscurry.jpeg",
     time:{
         preparation:"20 min",
@@ -1584,7 +1584,7 @@ related: ["45", "7", "20"],
 {
     id: "28",
     title: "Bulgursalat",
-    category: ["Vegetarisch", "Vegan", "Salate", "Hauptgerichte"], 
+    category: ["Vegetarisch", "Vegan", "Salate", "Hauptgerichte", "Kochen"], 
     image: "images/Bulgursalat.jpeg",
     time:{
         preparation:"35 min",
@@ -1636,7 +1636,7 @@ related: ["45", "7", "20"],
 {
     id: "29",
     title: "Flammkuchenspaghetti",
-    category: ["Fleisch", "Pasta", "Hauptgerichte"], 
+    category: ["Fleisch", "Pasta", "Hauptgerichte", "Kochen"], 
     image: "images/Flammkuchenspaghetti.jpeg",
     time:{
         preparation:"5 min",
@@ -1682,7 +1682,7 @@ related: ["45", "7", "20"],
     tips:[
         "Die bereits fertigen Pfannkuchen kannst du auf einem Teller bei 50°C im Backofen warm halten."
     ],
-    category:["süße Hauptgerichte", "Hauptgerichte"], 
+    category:["süße Hauptgerichte", "Hauptgerichte", "Kochen"], 
     image:"images/fluffige-Pfannkuchen.jpeg",
     time:{
         preparation:"15 min",
@@ -1726,7 +1726,7 @@ related: ["45", "7", "20"],
 {
     id: "31",
     title: "Baguette",
-    category: ["herzhaftes Gebäck", "Übernachtgare"],
+    category: [ "Übernachtgare", "Backen", "Brot & Brötchen", "ohne Ei", "Vegan", "Vegetarisch"],
     image: "images/Baguette.jpeg",
     time:{
         preparation:"20 min",
@@ -1781,7 +1781,7 @@ related: ["45", "7", "20"],
         "Du kannst diese Bällchen auch wunderbar mit gefrorenen Bananen zubereiten. Dafür nimmst du sie am Abend vorher aus dem Tiefkühler und lässt sie über Nacht im Kühlschrank auftauen.",
         "Bei ungefrorenen Bananen gilt: Je brauner die Banane, desto süßer und aromatischer ist sie."
     ],
-    category: ["süßes Gebäck"], 
+    category: ["Snacks", "Teilchen","Backen", "ohne Ei"], 
     image: "images/Bananenbällchen.jpeg",
     time:{
         preparation:"12 min",
@@ -1825,7 +1825,7 @@ related: ["45", "7", "20"],
 {
     id: "33",
     title: "fluffiges Weißbrot",
-    category: [ "herzhaftes Gebäck" ], 
+    category: [ "Brot & Brötchen" , "Backen"], 
     image: "images/fluffiges-Weißbrot.jpeg",
     time:{
         preparation:"50 min",
@@ -1888,7 +1888,7 @@ related: ["45", "7", "20"],
 {
     id: "34",
     title: "Frikadellen mit Rahmsoße und Nudeln",
-    category: ["Fleisch", "Pasta", "Hauptgerichte"], 
+    category: ["Fleisch", "Pasta", "Hauptgerichte", "Kochen"], 
     image: "images/Frikadellen-mit-Rahmsoße-und-Nudeln.jpeg",
     time:{
         preparation:"15 min",
@@ -1956,7 +1956,7 @@ related: ["45", "7", "20"],
     tips: [
         "Du wirst die Brezeln auf zwei Bleche aufteilen müssen. Deshalb kannst du die eine Hälfte der fertigen Teiglinge nach bestandenem Fingertest in den Tiefkühler und die andere Hälfte in den Kühlschrank stellen. Sobald du die eine Hälfte zum Belaugen holst, kannst du die andere in den Tiefkühler stellen."
     ],
-    category: ["herzhaftes Gebäck"], 
+    category: ["Brot & Brötchen", "ohne Ei","Backen"], 
     image: "images/Brezeln.jpeg",
     time:{
         preparation:"30 min",
@@ -2044,7 +2044,7 @@ related: ["45", "7", "20"],
     tips: [
         "Du wirst die Laugenstangen auf zwei Bleche aufteilen müssen. Deshalb kannst du die eine Hälfte der fertigen Teiglinge nach bestandenem Fingertest in den Tiefkühler und die andere Hälfte in den Kühlschrank stellen. Sobald du die eine Hälfte zum Belaugen holst, kannst du die andere in den Tiefkühler stellen."
     ],
-    category: ["herzhaftes Gebäck"], 
+    category: ["ohne Ei","Brot & Brötchen", "Backen"], 
     image: "images/Laugenstangen.jpeg",
     time:{
         preparation:"30 min",
@@ -2124,7 +2124,7 @@ related: ["45", "7", "20"],
     tips:[
         "Du kannst den Salat auch gut schon 1–2 Tage vorher vorbereiten und im Kühlschrank aufbewahren. Dann schmeckt er sogar noch besser."
     ],
-    category:["Vegetarisch", "Salate", "Vegan", "Hauptgerichte"], 
+    category:["Vegetarisch", "Salate", "Vegan", "Hauptgerichte", "Kochen"], 
     image:"images/Frühlingskartoffelsalat.jpeg",
     time:{
         preparation:"20 min",
@@ -2176,7 +2176,7 @@ related: ["45", "7", "20"],
 {
     id: "38",
     title: "Auberginen-Zucchini-Pfanne",
-    category: ["Vegetarisch", "Beilage", "Vegan"], 
+    category: ["Vegetarisch", "Beilage", "Vegan", "Kochen"], 
     image: "images/Auberginen-Zucchini-Pfanne.jpeg",
     time:{
         preparation: "5 min",
@@ -2222,7 +2222,7 @@ related: ["45", "7", "20"],
 {
     id: "39",
     title: "Fischfilet aus dem Ofen",
-    category: ["Fisch", "Ofengerichte", "Hauptgerichte"], 
+    category: ["Fisch", "Ofengerichte", "Hauptgerichte", "Kochen"], 
     image: "images/Fischfilet-aus-dem-Ofen.jpeg",
     time:{
         preparation: "45 min",
@@ -2300,7 +2300,7 @@ related: ["45", "7", "20"],
 {
     id: "40",
     title: "Thunfisch-Nudel-Salat",
-    category: ["Fisch", "Salate", "Hauptgerichte"], 
+    category: ["Fisch", "Salate", "Hauptgerichte", "Kochen"], 
     image: "images/Thunfisch-Nudel-Salat.jpeg",
     time:{
         preparation: "5 min",
@@ -2337,7 +2337,7 @@ related: ["45", "7", "20"],
 {
     id: "41",
     title: "Überbackene Gnocchipfanne",
-    category: ["Pasta", "Ofengerichte", "Hauptgerichte"], 
+    category: ["Pasta", "Ofengerichte", "Hauptgerichte", "Kochen"], 
     image: "images/Überbackene-Gnocchipfanne.jpeg",
     time:{
         preparation: "5 min",
@@ -2397,7 +2397,7 @@ related: ["45", "7", "20"],
 {
     id: "42",
     title: "Glasnudelsalat",
-    category: ["Vegetarisch", "Vegan", "Salate", "Hauptgerichte"], 
+    category: ["Vegetarisch", "Vegan", "Salate", "Hauptgerichte", "Kochen"], 
     image: "images/Glasnudelsalat.jpeg",
     time:{
         preparation: "25 min",
@@ -2457,7 +2457,7 @@ related: ["45", "7", "20"],
 {
     id: "43",
     title: "Marillenknödel",
-    category: ["süßes Gebäck", "süße Hauptgerichte" , "Hauptgerichte"], 
+    category: ["süßes Gebäck", "süße Hauptgerichte" , "Hauptgerichte", "Kochen"], 
     image: "images/Marillenknödel.jpeg",
     time:{
         preparation: "20 min",
@@ -2526,7 +2526,7 @@ related: ["45", "7", "20"],
 {
     id: "44",
     title: "Gnocchisalat",
-    category: ["Salate", "Fleisch", "Hauptgerichte"], 
+    category: ["Salate", "Fleisch", "Hauptgerichte", "Kochen"], 
     image: "images/Gnocchisalat.jpeg",
     time:{
         preparation: "20 min",
@@ -2594,7 +2594,7 @@ related: ["45", "7", "20"],
 {
     id: "45",
     title: "Kirschhefeschnecken",
-    category: ["süßes Gebäck", "Vegetarisch"],
+    category: ["Teilchen","ohne Ei", "Vegetarisch", "Backen"],
     image: "images/Kirschhefeschnecken.jpeg",
     time:{
         preparation: "45 min",
@@ -2686,7 +2686,7 @@ related: ["45", "7", "20"],
 {
     id: "46",
     title: "Gyrospasta",
-    category: ["Pasta", "Fleisch", "Ofengerichte", "Hauptgerichte"], 
+    category: ["Pasta", "Fleisch", "Ofengerichte", "Hauptgerichte", "Kochen"], 
     image: "images/Gyrospasta.jpeg",
     time:{
         preparation: "10 min",
@@ -2746,7 +2746,7 @@ related: ["45", "7", "20"],
 {
     id: "47",
     title: "Gurkensalat",
-    category: ["Salate", "Beilagen", "Vegan", "Vegetarisch"], 
+    category: ["Salate", "Beilagen", "Vegan", "Vegetarisch", "Kochen"], 
     image: "images/Gurkensalat.jpeg",
     time:{
         preparation: "5 min",
@@ -2791,7 +2791,7 @@ related: ["45", "7", "20"],
 {
     id: "48",
     title: "Johannisbeer-Joghurt-Muffins",
-    category: ["süßes Gebäck", "Vegetarisch"], 
+    category: ["Muffins","Teilchen", "Vegetarisch", "Backen"], 
     image: "images/Johannisbeer-Joghurt-Muffins.jpeg",
     time:{
         preparation: "10 min",
@@ -2844,7 +2844,7 @@ related: ["45", "7", "20"],
     tips: [
         "Zu diesem Salat passen [[griechische-mini-lagana|Griechische Mini-Lagana]] super."
     ],
-    category: ["Salate", "Vegetarisch", "Hauptgerichte"],
+    category: ["Salate", "Vegetarisch", "Hauptgerichte", "Kochen"],
     image: "images/griechischer-Salat.jpg",
     time:{
         preparation: "30 min",
@@ -2895,7 +2895,7 @@ related: ["45", "7", "20"],
 {
     id: "50",
     title: "Griechische Mini-Lagana",
-    category: ["herzhaftes Gebäck", "Vegetarisch", "Vegan"], 
+    category: ["Brot & Brötchen","ohne Ei", "Vegetarisch", "Vegan", "Backen"], 
     image: "images/Mini-Lagana.jpeg",
     time:{
         preparation: "25 min",
@@ -2953,7 +2953,7 @@ related: ["45", "7", "20"],
       tips: [
         "Aus dem restlichen Quark kannst du super fluffige [[gluecksschweinchen|Glücksschweinchen]] backen."
     ],
-    category: ["Pasta", "Fleisch", "Hauptgerichte"],
+    category: ["Pasta", "Fleisch", "Hauptgerichte", "Kochen"],
     image: "images/hackbällchen-nudelpfanne.jpeg",
     time:{
         preparation: "35 min",
@@ -3054,7 +3054,7 @@ related: ["45", "7", "20"],
 {
     id: "51",
     title: "Glücksschweinchen",
-    category: ["süßes Gebäck", "Vegetarisch"],
+    category: ["Teilchen", "Vegetarisch","ohne Ei", "Backen"],
     image: "images/glücksschweinchen.jpeg",
     time:{
         preparation: "10 min",
@@ -3124,7 +3124,7 @@ related: ["45", "7", "20"],
     tips: [
         "Zu den Köttbullar passt [[kartoffelpueree|Kartoffelpüree]] super."
     ],
-    category: ["Fleisch", "Ofengerichte", "Hauptgerichte"],
+    category: ["Fleisch", "Ofengerichte", "Hauptgerichte", "Kochen"],
     image: "images/köttbullar-ofen.jpeg",
     time:{
         preparation: "15 min",
@@ -3189,7 +3189,7 @@ related: ["45", "7", "20"],
     tips: [
         "Im Prinzip kannst du jede Kartoffelsorte für das Püree nehmen, am cremigsten wird es allerdings mit mehligkochenden Kartoffeln."
     ],
-    category: ["Beilagen", "Vegetarisch"],
+    category: ["Beilagen", "Vegetarisch", "Kochen"],
     image: "images/kartoffelpüree.jpeg",
     time:{
         preparation: "10 min",
@@ -3225,7 +3225,7 @@ related: ["45", "7", "20"],
 {
     id: "55",
     title: "Linsen mit Spätzle",
-    category: ["Fleisch", "Hauptgerichte"],
+    category: ["Fleisch", "Hauptgerichte", "Kochen"],
     image: "images/linsen-mit-spätzle.jpeg",
     time:{
         preparation: "5 min",
@@ -3285,7 +3285,7 @@ related: ["45", "7", "20"],
 {
     id: "56",
     title: "Tortellinisalat",
-    category: ["Pasta", "Salate", "Hauptgerichte"],
+    category: ["Pasta", "Salate", "Hauptgerichte", "Kochen"],
     image: "images/tortellinisalat.jpeg",
     time:{
         preparation: "30 min",
@@ -3342,7 +3342,7 @@ related: ["45", "7", "20"],
 {
     id: "57",
     title: "Apfel-Aprikosenmus-Tartelettes",
-    category: ["süßes Gebäck", "Vegetarisch"],
+    category: ["Teilchen","Kuchen & Torten","ohne Ei", "Vegetarisch", "Backen"],
     image: "images/apfel-aprikosenmus-tartelettes.jpeg",
     time: {
         preparation: "15 min",
@@ -3401,7 +3401,7 @@ related: ["45", "7", "20"],
 {
     id: "58",
     title: "Kartoffelsalat ohne Mayo",
-    category: ["Vegetarisch", "Vegan", "Salate", "Hauptgerichte"],
+    category: ["Vegetarisch", "Vegan", "Salate", "Hauptgerichte", "Kochen"],
     image: "images/kartoffelsalat-ohne-mayo.jpeg",
     time: {
         preparation: "10 min",
@@ -3460,7 +3460,7 @@ related: ["45", "7", "20"],
     tips: [
         "Du kannst den Kuchen auch super am Abend vorher backen und bis zum nächsten Tag abkühlen lassen.",
     ],
-    category: ["süßes Gebäck"],
+    category: ["Kuchen & Torten", "Backen"],
     image: "images/mini-russischer-Zupfkuchen.jpeg",
     time: {
         preparation: "30 min",
@@ -3528,7 +3528,7 @@ related: ["45", "7", "20"],
     tips: [
         "Der Salat schmeckt sowohl warm als auch kalt oder am nächsten Tag hervorragend."
     ],
-    category: ["Pasta", "Salate", "Hauptgerichte"],
+    category: ["Pasta", "Salate", "Hauptgerichte", "Kochen"],
     image: "images/pizzapasta-salat.jpeg",
     time: {
         preparation: "20 min",
@@ -3577,7 +3577,7 @@ related: ["45", "7", "20"],
 {
     id: "61",
     title: "Reisauflauf",
-    category: ["Reis", "Ofengerichte", "Vegetarisch", "Hauptgerichte"],
+    category: ["Reis", "Ofengerichte", "Vegetarisch", "Hauptgerichte", "Kochen"],
     image: "images/reisauflauf.jpeg",
     time: {
         preparation: "20 min",
@@ -3640,7 +3640,7 @@ related: ["45", "7", "20"],
        tips: [
         "Für die Streusel sollte die Butter möglichst kalt sein und auch beim Verarbeiten kalt bleiben. Falls du sehr warme Hände hast, kannst du sie vor dem Kneten der Streusel mit kaltem Wasser abspülen.",
     ],
-    category: ["Vegetarisch", "süßes Gebäck"],
+    category: ["Vegetarisch", "Kuchen & Torten", "Backen"],
     image: "images/zwetschgenkuchen.jpeg",
 
     time: {
@@ -3741,7 +3741,7 @@ related: ["45", "7", "20"],
 {
     id: "63",
     title: "Honigmelonensalat",
-    category: ["Salate", "Hauptgerichte"],
+    category: ["Salate", "Hauptgerichte", "Kochen"],
     image: "images/honigmelonensalat.jpeg",
 
     time: {
@@ -3813,7 +3813,7 @@ related: ["45", "7", "20"],
 {
     id: "64",
     title: "Cremige Tortellini mit getrockneten Tomaten & Rucola",
-    category: ["Pasta", "Hauptgerichte"],
+    category: ["Pasta", "Hauptgerichte", "Kochen"],
     image: "images/tortellini-mit-getrockneten-Tomaten-Rucola.jpeg",
 
     time: {
@@ -3866,7 +3866,7 @@ related: ["45", "7", "20"],
 {
     id: "65",
     title: "Ciabatta",
-    category: ["herzhaftes Gebäck", "Vegetarisch", "Vegan", "Übernachtgare"],
+    category: ["Brot & Brötchen", "ohne Ei", "Vegetarisch", "Vegan", "Übernachtgare", "Backen"],
     image: "images/ciabatta.jpeg",
 
     time: {
@@ -3950,7 +3950,7 @@ related: ["45", "7", "20"],
     tips: [
         "Das Eis hält sich im Gefrierfach ca. 1 Woche, wenn du es also länger als einen Tag im Gefrierfach lagerst, wird es etwas fester werden, lasse es deshalb vor dem Servieren ca. 5-10min antauen, dass es wieder schön cremig wird."
     ],
-    category: ["Desserts", "Vegetarisch"],
+    category: ["Desserts", "Vegetarisch", "Kochen"],
     image: "images/vanilleeis.jpeg",
 
     time: {
@@ -4000,7 +4000,7 @@ related: ["45", "7", "20"],
 {
     id: "67",
     title: "Bohnensalat",
-    category: ["Salate", "Hauptgerichte"],
+    category: ["Salate", "Hauptgerichte", "Kochen"],
     image: "images/bohnensalat.jpeg",
 
     time: {
@@ -4063,7 +4063,7 @@ related: ["45", "7", "20"],
     tips: [
         "Teig und Streusel kannst du auch schon super am Vorabend vorbereiten und bis zur Verwendung im Kühlschrank aufbewahren."
     ],
-    category: ["süßes Gebäck"],
+    category: ["Teilchen","Muffins", "Backen"],
     image: "images/kirschtörtchen.jpeg",
 
     time: {
@@ -4138,7 +4138,7 @@ related: ["45", "7", "20"],
 {
     id: "69",
     title: "Kürbiskern-Karotten Brötchen",
-    category: ["herzhaftes Gebäck", "Vegetarisch", "Vegan"],
+    category: ["Brot & Brötchen", "ohne Ei", "Vegetarisch", "Vegan", "Backen"],
     image: "images/kürbiskern-karotten-brötchen.jpeg",
 
     time: {
@@ -4196,7 +4196,7 @@ related: ["45", "7", "20"],
 {
     id: "70",
     title: "Chocolatechip-Bananenmuffins",
-    category: ["süßes Gebäck"],
+    category: ["Teilchen","Muffins","ohne Ei","Vegetarisch", "Backen"],
     image: "images/chocolatechip-bananenmuffins.jpeg",
 
     time: {
@@ -4249,7 +4249,7 @@ related: ["45", "7", "20"],
         "Wenn es anfängt, am Boden zu kleben, einfach noch etwas mehr Öl hinzufügen", 
         "Wenn du keinen Wok hast, der groß genug ist für die Rezeptmenge, kannst du das Gericht auch in 2-3 Portionen in einem kleineren Wok braten." 
     ], 
-    category: ["Pasta", "Hauptgerichte"], 
+    category: ["Pasta", "Hauptgerichte", "Kochen"], 
     image: "images/gebratene-nudeln.jpeg", 
  
     time: { 
@@ -4315,7 +4315,7 @@ related: ["45", "7", "20"],
     tips: [
         "Tomate-Mozzarella-Salat ist dir zu langweilig? Dann probier den Salat doch mal mit ein paar grünen Oliven..."
     ],
-    category: ["Salate", "Hauptgerichte"], 
+    category: ["Salate", "Hauptgerichte", "Kochen"], 
     image: "images/caprese-salat.jpeg", 
  
     time: { 
@@ -4358,7 +4358,7 @@ related: ["45", "7", "20"],
         "[[caprese-salat|Caprese-Salat]] passt wunderbar zu dem Focaccia.", 
         "Für eine knusprige Kruste das Focaccia nach dem Backen mit Olivenöl bestreichen und nochmals ca. 2-3 min in den abgeschalteten Backofen stellen." 
     ], 
-    category: ["Herzhaftes Gebäck", "Übernachtgare"],  
+    category: ["Brot & Brötchen","ohne Ei", "Vegan", "Vegetarisch", "Übernachtgare", "Backen"],  
     image: "images/fluffiges-foccacia.jpeg",  
   
     time: {  
@@ -4423,7 +4423,7 @@ related: ["45", "7", "20"],
         "Passende Beilagen sind beispielsweise ein leckeres Spiegelei und ein [[sahniger-gurkensalat|sahniger Gurkensalat]].", 
         "Die fertigen Knödel kannst du im Ofen bei 50 Grad Ober-/Unterhitze warm halten." 
     ], 
-    category: ["Pfannengerichte", "Hauptgerichte"],  
+    category: ["Pfannengerichte", "Hauptgerichte", "Kochen"],  
     image: "images/kaaspressknödel.jpeg",  
   
     time: {  
@@ -4501,7 +4501,7 @@ related: ["45", "7", "20"],
     {  
     id: "74",  
     title: "Apfel-Zimt-Schnecken",  
-    category: ["Süßes Gebäck"],  
+    category: ["ohne Ei", "Backen", "Vegetarisch", "Teilchen"],  
     image: "images/apfel-zimt-schnecken.jpeg",  
   
     time: {  
@@ -4585,7 +4585,7 @@ related: ["45", "7", "20"],
 { 
     id: "75", 
     title: "Sahniger Gurkensalat", 
-    category: ["Salate", "Beilagen"], 
+    category: ["Salate", "Beilagen", "Kochen"], 
     image: "images/sahniger-gurkensalat.jpeg", 
     time: { 
         resting: "15 min",
@@ -4628,7 +4628,7 @@ related: ["45", "7", "20"],
     tips: [
         "Die Kekse sind noch recht weich, wenn sie aus dem Ofen kommen, werden aber beim Abkühlen fester."
     ],
-    category: ["Snacks", "Süßes Gebäck", "Vegetarisch"], 
+    category: ["Snacks", "Kekse","Teilchen", "Vegetarisch", "Backen"], 
     image: "images/schokocookies.jpeg", 
     time: { 
         resting: "1 Std",
@@ -4688,7 +4688,7 @@ related: ["45", "7", "20"],
 {  
     id: "77",  
     title: "Hähnchen-Frischkäse-Pasta",  
-    category: ["Pasta", "Fleisch", "Hauptgerichte"],  
+    category: ["Pasta", "Fleisch", "Hauptgerichte", "Kochen"],  
     image: "images/hähnchen-frischkäse-pasta.jpeg",  
     time: {  
         preparation: "10 min",  
@@ -4741,7 +4741,7 @@ related: ["45", "7", "20"],
 {
     id: "78",
     title: "Linsenfrikadellen",
-    category: ["Pfannengerichte", "Vegetarisch", "Vegan", "Hauptgerichte"],
+    category: ["Pfannengerichte", "Vegetarisch", "Vegan", "Hauptgerichte", "Kochen"],
     image: "images/linsenfrikadellen.jpeg",
     time: {
         preparation: "15 min",
@@ -4798,7 +4798,7 @@ related: ["45", "7", "20"],
 {
     id: "79",
     title: "Röstzwiebeln aus dem Airfryer",
-    category: ["Beilagen", "Vegetarisch", "Vegan", "Airfryer"],
+    category: ["Beilagen", "Vegetarisch", "Vegan", "Airfryer", "Backen"],
     image: "images/roestzwiebeln.jpeg",
     time: {
         preparation: "5 min",
@@ -4841,7 +4841,7 @@ related: ["45", "7", "20"],
 {
     id: "80",
     title: "Maultaschen n' Cheese",
-    category: ["Ofengerichte", "Pasta", "Hauptgerichte"],
+    category: ["Ofengerichte", "Pasta", "Hauptgerichte", "Kochen"],
     image: "images/maultaschen-n-cheese.jpeg",
     time: {
         preparation: "15 min",
@@ -4908,7 +4908,7 @@ related: ["45", "7", "20"],
 {
     id: "81",
     title: "Kartoffel-Fenchelblech mit Blauschimmelkäse",
-    category: ["Ofengerichte", "Hauptgerichte"],
+    category: ["Ofengerichte", "Hauptgerichte", "Kochen"],
     image: "images/kartoffel-fenchelblech-mit-blauschimmelkäse.jpeg",
     time: {
         preparation: "10 min",
@@ -4961,7 +4961,7 @@ related: ["45", "7", "20"],
     tips: [
         "Dass der Teig elastisch ist, sieht man gut daran, dass der Teig beim Herausziehen des Knethakens ohne zu reißen mitgezogen wird."
     ],
-    category: ["Süßes Gebäck", "Übernachtgare"],
+    category: ["Süßes Gebäck", "Übernachtgare", "Backen"],
     image: "images/brioche-mit-übernachtgare.jpeg",
     time: {
         preparation: "25 min",
@@ -5027,7 +5027,7 @@ related: ["45", "7", "20"],
         "Das French Toast schmeckt super mit Schokocreme, Ahornsirup, Eiscreme, Beeren ... – die Möglichkeiten sind unbegrenzt. Serviere es einfach mit allem, was dir gut schmeckt.",
     "Das French Toast schmeckt auch am nächsten Tag noch super. Dafür einfach nach dem Abkühlen mit Frischhaltefolie abdecken und im Kühlschrank aufbewahren. Dann schmeckt es etwas wie Käsekuchen.",
     ],
-    category: ["Süßes Gebäck", "Pfannengerichte", "Vegetarisch", "Süße Hauptgerichte", "Hauptgerichte"],
+    category: [ "Pfannengerichte", "Vegetarisch", "Süße Hauptgerichte", "Hauptgerichte", "Kochen"],
     image: "images/french-toast.jpeg",
     time: {
         preparation: "15 min",
@@ -5081,7 +5081,7 @@ related: ["45", "7", "20"],
 {
     id: "84",
     title: "Mexikanischer Salat",
-    category: ["Salate", "Vegan", "Vegetarisch", "Hauptgerichte"],
+    category: ["Salate", "Vegan", "Vegetarisch", "Hauptgerichte", "Kochen"],
     image: "images/mexikanischer-salat.jpeg",
     time: {
         preparation: "15 min",
@@ -5147,7 +5147,7 @@ related: ["45", "7", "20"],
 {
     id: "85",
     title: "Super schnelle Frühstücksbrötchen",
-    category: ["Süßes Gebäck", "Vegetarisch"],
+    category: ["Süßes Gebäck", "Vegetarisch", "Backen"],
     image: "images/super-schnelle-Frühstücksbrötchen.jpeg",
     time: {
         preparation: "5 min",

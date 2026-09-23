@@ -22,17 +22,75 @@
         type="image/png"
         href="facion.png"
     >
+    <link
+    rel="stylesheet"
+    href="home.css"
+>
 
     <link
         rel="stylesheet"
         href="rezepte.css"
     >
 
+
 </head>
 
 
 <body>
+<button
+    class="home-menu-button right-menu-button"
+    id="menuBtn"
+    aria-label="Menü öffnen"
+    aria-controls="sideMenu"
+    aria-expanded="false"
+>
 
+    <span></span>
+    <span></span>
+    <span></span>
+
+</button>
+
+<nav
+    class="home-side-menu right-side-menu"
+    id="sideMenu"
+    aria-label="Hauptnavigation"
+>
+
+    <div class="home-menu-logo">
+
+        <img
+            src="images/logo1.png"
+            alt="KitchenBreeze"
+        >
+
+    </div>
+
+    <a href="index.html">
+        Startseite
+    </a>
+
+    <a href="rezepte.html" class="active">
+        Rezepte
+    </a>
+
+    <a href="zutatenfinder.html">
+        Zutatenfinder
+    </a>
+
+    <a href="favoriten.html">
+        Favoriten
+    </a>
+
+    <a href="wochenplan.html">
+        Wochenplan
+    </a>
+
+    <a href="tipps-tricks.html">
+        Tipps & Tricks
+    </a>
+
+</nav>
 
 <!-- =========================================
      ZURÜCK
@@ -1505,7 +1563,103 @@ window.addEventListener(
 );
 </script>
 
+<script>
 
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const sideMenu =
+    document.getElementById("sideMenu");
+
+
+menuBtn.addEventListener(
+    "click",
+    (event) => {
+
+        event.stopPropagation();
+
+        sideMenu.classList.toggle("open");
+
+        const isOpen =
+            sideMenu.classList.contains("open");
+
+        menuBtn.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+    }
+);
+
+
+document.addEventListener(
+    "click",
+    (event) => {
+
+        if (
+            !sideMenu.contains(event.target) &&
+            !menuBtn.contains(event.target)
+        ) {
+
+            sideMenu.classList.remove("open");
+
+            menuBtn.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        }
+
+    }
+);
+
+</script>
+<button
+    id="backToTop"
+    class="back-to-top"
+    aria-label="Nach oben"
+>
+    ↑
+</button>
+<script>
+
+const backToTop =
+    document.getElementById("backToTop");
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        if (window.scrollY > 400) {
+
+            backToTop.style.display =
+                "flex";
+
+        } else {
+
+            backToTop.style.display =
+                "none";
+
+        }
+
+    }
+);
+
+
+backToTop.addEventListener(
+    "click",
+    () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+);
+
+</script>
 </body>
 
 </html>

@@ -473,23 +473,19 @@ generateButton.addEventListener(
                             return false;
                         }
 
-
                         const total =
                             recipe.time?.total ||
                             "";
-
 
                         const hours =
                             total.match(
                                 /(\d+)\s*Std/
                             );
 
-
                         const minutes =
                             total.match(
                                 /(\d+)\s*min/
                             );
-
 
                         const totalMinutes =
                             (
@@ -506,7 +502,6 @@ generateButton.addEventListener(
                                     )
                                     : 0
                             );
-
 
                         return (
                             totalMinutes <= 45
@@ -542,90 +537,250 @@ generateButton.addEventListener(
         =====================================
         */
 
-const shuffled =
-    [...mainDishes].sort(
-        () =>
-            Math.random() - 0.5
-    );
+        const shuffled =
+            [...mainDishes].sort(
+                () =>
+                    Math.random() - 0.5
+            );
 
 
-const selectedRecipes = [];
+        const selectedRecipes = [];
 
-let pastaCount = 0;
-let sweetCount = 0;
-let saladCount = 0;
-
-
-for (const recipe of shuffled) {
-
-    if (selectedRecipes.length >= 7) {
-        break;
-    }
+        let pastaCount = 0;
+        let sweetCount = 0;
+        let saladCount = 0;
 
 
-    const categories =
-        Array.isArray(recipe.category)
-            ? recipe.category
-            : [];
+        for (const recipe of shuffled) {
+
+            if (
+                selectedRecipes.length >= 7
+            ) {
+                break;
+            }
+
+            const categories =
+                Array.isArray(
+                    recipe.category
+                )
+                    ? recipe.category
+                    : [];
 
 
-    const isPasta =
-        categories.includes("Pasta");
+            const isPasta =
+                categories.includes(
+                    "Pasta"
+                );
+
+            const isSweet =
+                categories.includes(
+                    "Süß"
+                );
+
+            const isSalad =
+                categories.includes(
+                    "Salate"
+                );
 
 
-    const isSweet =
-        categories.includes("Süß");
+            // Pasta maximal 2
+            if (
+                isPasta &&
+                pastaCount >= 2
+            ) {
+                continue;
+            }
 
 
-    const isSalad =
-        categories.includes("Salate");
+            // Süße Hauptgerichte maximal 1
+            if (
+                isSweet &&
+                sweetCount >= 1
+            ) {
+                continue;
+            }
 
 
-    // Pasta maximal 2
-    if (
-        isPasta &&
-        pastaCount >= 2
-    ) {
-        continue;
-    }
+            // Salate maximal 3
+            if (
+                isSalad &&
+                saladCount >= 3
+            ) {
+                continue;
+            }
 
 
-    // Süße Hauptgerichte maximal 1
-    if (
-        isSweet &&
-        sweetCount >= 1
-    ) {
-        continue;
-    }
+            selectedRecipes.push(
+                recipe
+            );
 
 
-    // Salate maximal 3
-    if (
-        isSalad &&
-        saladCount >= 3
-    ) {
-        continue;
-    }
+            if (isPasta) {
+                pastaCount++;
+            }
+
+            if (isSweet) {
+                sweetCount++;
+            }
+
+            if (isSalad) {
+                saladCount++;
+            }
+
+        }
 
 
-    selectedRecipes.push(recipe);
+        /*
+        =====================================
+        SELTENE BACKWAREN-CHANCE
+        =====================================
+        */
+
+        // 5 % Chance pro Wochenplan
+        if (
+            Math.random() < 0.05
+        ) {
+
+            const bakeryRecipes =
+                RECIPES.filter(
+                    recipe => {
+
+                        const categories =
+                            Array.isArray(
+                                recipe.category
+                            )
+                                ? recipe.category
+                                : [];
 
 
-    if (isPasta) {
-        pastaCount++;
-    }
+                        const isBakery =
+                            categories.includes(
+                                "Backen"
+                            ) &&
+                            (
+                                categories.includes(
+                                    "Brot & Brötchen"
+                                ) ||
+                                categories.includes(
+                                    "Belegte Backwaren"
+                                )
+                            );
 
 
-    if (isSweet) {
-        sweetCount++;
-    }
+                        if (!isBakery) {
+                            return false;
+                        }
 
 
-    if (isSalad) {
-        saladCount++;
-    }
+                        // Vegetarisch / Vegan beachten
+                        if (
+                            selectedFilter ===
+                                "Vegetarisch" ||
+                            selectedFilter ===
+                                "Vegan"
+                        ) {
 
-}
+                            if (
+                                !categories.includes(
+                                    selectedFilter
+                                )
+                            ) {
+                                return false;
+                            }
+
+                        }
+
+
+                        // Schnell & einfach beachten
+                        if (
+                            selectedFilter ===
+                            "Schnell & einfach"
+                        ) {
+
+                            if (
+                                recipe.difficulty !==
+                                "Einfach"
+                            ) {
+                                return false;
+                            }
+
+                            const total =
+                                recipe.time?.total ||
+                                "";
+
+                            const hours =
+                                total.match(
+                                    /(\d+)\s*Std/
+                                );
+
+                            const minutes =
+                                total.match(
+                                    /(\d+)\s*min/
+                                );
+
+                            const totalMinutes =
+                                (
+                                    hours
+                                        ? Number(
+                                            hours[1]
+                                        ) * 60
+                                        : 0
+                                ) +
+                                (
+                                    minutes
+                                        ? Number(
+                                            minutes[1]
+                                        )
+                                        : 0
+                                );
+
+                            if (
+                                totalMinutes > 45
+                            ) {
+                                return false;
+                            }
+
+                        }
+
+                        return true;
+
+                    }
+                );
+
+
+            // Nur wenn passende Backwaren vorhanden sind
+            if (
+                bakeryRecipes.length > 0
+            ) {
+
+                const randomBakery =
+                    bakeryRecipes[
+                        Math.floor(
+                            Math.random() *
+                            bakeryRecipes.length
+                        )
+                    ];
+
+
+                // Höchstens ein Backwaren-Rezept
+                if (
+                    selectedRecipes.length === 7
+                ) {
+
+                    selectedRecipes.pop();
+
+                }
+
+
+                selectedRecipes.push(
+                    randomBakery
+                );
+
+            }
+
+        }
+
+
         /*
         =====================================
         WOCHENTAGE

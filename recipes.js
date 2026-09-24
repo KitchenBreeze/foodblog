@@ -110,7 +110,7 @@ const RECIPES = [
 {
     id: "3",
     title: "Ameisenkuchen mit Kirschen",
-    category: [ "Backen", "Kuchen & Torten"],
+    category: [ "Backen", "Kuchen & Torten", "Vegetarisch"],
     image: "images/ameisenkuchen-mit-kirschen.jpeg",
     time:{
         preparation:"10 min",
@@ -3460,7 +3460,7 @@ related: ["45", "7", "20"],
     tips: [
         "Du kannst den Kuchen auch super am Abend vorher backen und bis zum nächsten Tag abkühlen lassen.",
     ],
-    category: ["Kuchen & Torten", "Backen"],
+    category: ["Kuchen & Torten","Vegetarisch", "Backen"],
     image: "images/mini-russischer-Zupfkuchen.jpeg",
     time: {
         preparation: "30 min",
@@ -3577,7 +3577,7 @@ related: ["45", "7", "20"],
 {
     id: "61",
     title: "Reisauflauf",
-    category: ["Reis", "Ofengerichte", "Vegetarisch", "Hauptgerichte", "Kochen"],
+    category: ["Reis", "Ofengerichte", "Hauptgerichte", "Kochen"],
     image: "images/reisauflauf.jpeg",
     time: {
         preparation: "20 min",
@@ -4063,7 +4063,7 @@ related: ["45", "7", "20"],
     tips: [
         "Teig und Streusel kannst du auch schon super am Vorabend vorbereiten und bis zur Verwendung im Kühlschrank aufbewahren."
     ],
-    category: ["Teilchen","Muffins", "Backen"],
+    category: ["Teilchen","Muffins", "Vegetarisch", "Backen"],
     image: "images/kirschtörtchen.jpeg",
 
     time: {
@@ -4585,7 +4585,7 @@ related: ["45", "7", "20"],
 { 
     id: "75", 
     title: "Sahniger Gurkensalat", 
-    category: ["Salate", "Beilagen", "Kochen"], 
+    category: ["Salate", "Beilagen","Vegetarisch", "Kochen"], 
     image: "images/sahniger-gurkensalat.jpeg", 
     time: { 
         resting: "15 min",
@@ -4798,7 +4798,7 @@ related: ["45", "7", "20"],
 {
     id: "79",
     title: "Röstzwiebeln aus dem Airfryer",
-    category: ["Beilagen", "Vegetarisch","ohne Ei", "Vegan", "Airfryer", "Backen"],
+    category: ["Beilagen", "Vegetarisch","ohne Ei", "Vegan", "Airfryer", "Kochen"],
     image: "images/roestzwiebeln.jpeg",
     time: {
         preparation: "5 min",
@@ -4961,7 +4961,7 @@ related: ["45", "7", "20"],
     tips: [
         "Dass der Teig elastisch ist, sieht man gut daran, dass der Teig beim Herausziehen des Knethakens ohne zu reißen mitgezogen wird."
     ],
-    category: ["Brot & Brötchen", "Übernachtgare", "Backen"],
+    category: ["Brot & Brötchen", "Übernachtgare", "Vegetarisch", "Backen"],
     image: "images/brioche-mit-übernachtgare.jpeg",
     time: {
         preparation: "25 min",

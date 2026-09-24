@@ -900,6 +900,32 @@ body {
     display: none;
     padding-left: 10px;
 }
+.filter-subcategories.open {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 15px;
+}
+
+.filter-item {
+    padding: 8px 14px;
+    border: 1px solid var(--kb-border);
+    border-radius: 20px;
+    background: var(--kb-card);
+    color: var(--kb-text);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.filter-item:hover {
+    background: #e9e2d8;
+}
+
+.filter-item.active {
+    background: var(--kb-text);
+    color: var(--kb-card);
+    border-color: var(--kb-text);
+}
 
 .filter-subcategories.open {
     display: block;
@@ -936,4 +962,13 @@ body {
 
 .filter-main-category.open span {
     transform: rotate(180deg);
+}
+
+/* Burger-Menü rechts */
+.menu-toggle {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
 }

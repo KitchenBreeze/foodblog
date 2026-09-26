@@ -5211,7 +5211,7 @@ related: ["45", "7", "20"],
         total: "35 min"
     },
 
-    related: ["82", "4", "61"],
+    related: ["12", "77", "66"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,

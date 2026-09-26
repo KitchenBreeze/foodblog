@@ -374,8 +374,37 @@ button:hover {
         margin-top: 60px;
     }
 
+
 }
 
+/* Kategorien auf der Rezeptseite */
+
+.recipe-categories {
+    margin-top: 15px;
+}
+
+.recipe-category-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.recipe-category-tag {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid var(--kb-border);
+    border-radius: 20px;
+    background: var(--kb-card);
+    color: var(--kb-text);
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.recipe-category-tag:hover {
+    background: #e9e2d8;
+}
 </style>
 
 </head>
@@ -2736,7 +2765,6 @@ const RECIPES = [
         "id": "43",
         "title": "Marillenknödel",
         "category": [
-            "süßes Gebäck",
             "süße Hauptgerichte",
             "Hauptgerichte",
             "Kochen"
@@ -5648,19 +5676,37 @@ else {
                 </div>
 
 
-                <div>
+                <div class="recipe-categories">
 
-                    Kategorie:
+    <strong>Kategorien:</strong>
 
-                    ${
-                        Array.isArray(
-                            recipe.category
-                        )
-                            ? recipe.category.join(", ")
-                            : recipe.category || ""
-                    }
+    <div class="recipe-category-tags">
 
-                </div>
+        ${
+            (
+                Array.isArray(recipe.category)
+                    ? recipe.category
+                    : [recipe.category]
+            )
+            .filter(category =>
+                category &&
+                category !== "Kochen" &&
+                category !== "Backen"
+            )
+            .map(category => `
+                <a
+                    class="recipe-category-tag"
+                    href="../rezepte.html?category=${encodeURIComponent(category)}"
+                >
+                    ${category}
+                </a>
+            `)
+            .join("")
+        }
+
+    </div>
+
+</div>
 
             </div>
 

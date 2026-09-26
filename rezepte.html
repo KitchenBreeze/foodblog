@@ -481,22 +481,19 @@ if (typeof RECIPES === "undefined") {
    URL AUSLESEN
 ========================================= */
 
-const urlParams =
-    new URLSearchParams(
-        window.location.search
-    );
+const urlParams = new URLSearchParams(
+    window.location.search
+);
 
+const urlCategories = urlParams.get("categories");
 
-const urlCategories =
-    urlParams.get("categories");
+const urlQuick = urlParams.get("quick") === "true";
 
+const urlSearch = urlParams.get("search") || "";
 
-const urlQuick =
-    urlParams.get("quick") === "true";
+const urlCategory = urlParams.get("category");
 
-
-const urlSearch =
-    urlParams.get("search") || "";
+const urlMain = urlParams.get("main");
 
 
 /* =========================================
@@ -505,37 +502,37 @@ const urlSearch =
 
 let selectedCategories = [];
 
-
+// Mehrere Kategorien aus der URL laden
 if (urlCategories) {
 
-    selectedCategories =
-        urlCategories
-            .split(",")
-            .map(category => {
-
-                try {
-
-                    return decodeURIComponent(
-                        category
-                    );
-
-                }
-
-                catch {
-
-                    return category;
-
-                }
-
-            })
-            .filter(Boolean);
+    selectedCategories = urlCategories
+        .split(",")
+        .map(category => {
+            try {
+                return decodeURIComponent(category);
+            } catch {
+                return category;
+            }
+        })
+        .filter(Boolean);
 
 }
 
+// Einzelne Kategorie von einer Rezeptdetailseite laden
+else if (urlCategory) {
 
-if (
-    selectedCategories.length === 0
-) {
+    if (urlMain) {
+        selectedCategories = [
+            `${urlMain}|${urlCategory}`
+        ];
+    } else {
+        selectedCategories = [urlCategory];
+    }
+
+}
+
+// Standard: Alle Rezepte
+if (selectedCategories.length === 0) {
 
     selectedCategories = ["all"];
 
@@ -561,41 +558,24 @@ function updateFilterButtons() {
 
     filterItems.forEach(item => {
 
-        const category =
-            item.dataset.cat;
+        const category = item.dataset.cat;
 
         item.classList.remove("active");
 
-
-        if (
-            selectedCategories.includes(
-                category
-            )
-        ) {
-
+        if (selectedCategories.includes(category)) {
             item.classList.add("active");
-
         }
 
     });
 
+    if (selectedCategories.includes("all")) {
 
-    if (
-        selectedCategories.includes("all")
-    ) {
-
-        const allButton =
-            document.querySelector(
-                '[data-cat="all"]'
-            );
-
+        const allButton = document.querySelector(
+            '[data-cat="all"]'
+        );
 
         if (allButton) {
-
-            allButton.classList.add(
-                "active"
-            );
-
+            allButton.classList.add("active");
         }
 
     }
@@ -609,43 +589,24 @@ function updateFilterButtons() {
 
 function updateUrl() {
 
+    const params = new URLSearchParams();
 
-    const params =
-        new URLSearchParams();
+    /* KATEGORIEN */
 
+    const categories = selectedCategories.filter(
+        category => category !== "all"
+    );
 
-    /* -------------------------------------
-       KATEGORIEN
-    ------------------------------------- */
-
-    const categories =
-        selectedCategories.filter(
-            category =>
-                category !== "all"
-        );
-
-
-    if (
-        categories.length > 0
-    ) {
+    if (categories.length > 0) {
 
         params.set(
             "categories",
-            categories
-                .map(category =>
-                    encodeURIComponent(
-                        category
-                    )
-                )
-                .join(",")
+            categories.join(",")
         );
 
     }
 
-
-    /* -------------------------------------
-       SCHNELLFILTER
-    ------------------------------------- */
+    /* SCHNELLFILTER */
 
     if (urlQuick) {
 
@@ -656,16 +617,11 @@ function updateUrl() {
 
     }
 
+    /* SUCHE */
 
-    /* -------------------------------------
-       SUCHE
-    ------------------------------------- */
-
-    const search =
-        searchInput
-            ? searchInput.value.trim()
-            : "";
-
+    const search = searchInput
+        ? searchInput.value.trim()
+        : "";
 
     if (search) {
 
@@ -676,7 +632,21 @@ function updateUrl() {
 
     }
 
+    /* URL SETZEN */
 
+    const query = params.toString();
+
+    const newUrl = query
+        ? `${window.location.pathname}?${query}`
+        : window.location.pathname;
+
+    window.history.replaceState(
+        {},
+        "",
+        newUrl
+    );
+
+}
     /* -------------------------------------
        URL SETZEN
     ------------------------------------- */
@@ -697,7 +667,6 @@ function updateUrl() {
         newUrl
     );
 
-}
 
 
 /* =========================================
@@ -1356,51 +1325,56 @@ function render() {
 
 
         /* =================================
-           REZEPTKARTE
-        ================================= */
+   REZEPTKARTE
+================================= */
 
-        grid.innerHTML += `
+const favorites = JSON.parse(
+    localStorage.getItem("kitchenBreezeFavorites") || "[]"
+);
 
-            <a
-                class="recipe-card"
-                href="${recipeUrl}"
-            >
+grid.innerHTML += `
 
-                <div
-                    class="recipe-card-image"
+    <div class="recipe-card">
+
+        <div class="recipe-card-image">
+
+            <a href="${recipeUrl}">
+
+                <img
+                    src="${recipe.image}"
+                    alt="${recipe.title}"
+                    loading="lazy"
                 >
-
-                    <img
-                        src="${recipe.image}"
-                        alt="${recipe.title}"
-                        loading="lazy"
-                    >
-
-                </div>
-
-
-                <div
-                    class="recipe-card-content"
-                >
-
-                    <h2>
-                        ${recipe.title}
-                    </h2>
-
-
-                    <p>
-                        ${recipe.description || ""}
-                    </p>
-
-                </div>
 
             </a>
 
-        `;
+            <button
+                class="favorite-button ${favorites.includes(String(recipe.id)) ? "is-favorite" : ""}"
+                data-favorite-id="${recipe.id}"
+                aria-label="Als Favorit markieren"
+                aria-pressed="${favorites.includes(String(recipe.id))}"
+                type="button"
+            >
+                ${favorites.includes(String(recipe.id)) ? "♥" : "♡"}
+            </button>
+
+        </div>
+
+        <div class="recipe-card-content">
+
+            <a href="${recipeUrl}" class="recipe-card-title">
+
+                <h2>${recipe.title}</h2>
+
+            </a>
+
+        </div>
+
+    </div>
+
+`;
 
     });
-
-
     /* =====================================
        KEINE ERGEBNISSE
     ===================================== */
@@ -1446,7 +1420,72 @@ function render() {
     }
 
 }
+/* =========================================
+   FAVORITEN SPEICHERN UND UMSCHALTEN
+========================================= */
 
+grid.addEventListener("click", function(event) {
+
+    const button = event.target.closest(".favorite-button");
+
+    // Nur reagieren, wenn ein Herz angeklickt wurde
+    if (!button) {
+        return;
+    }
+
+    // Verhindern, dass die Rezeptkarte geöffnet wird
+    event.preventDefault();
+    event.stopPropagation();
+
+    const recipeId = String(button.dataset.favoriteId);
+
+    // Gespeicherte Favoriten laden
+    let favorites = JSON.parse(
+        localStorage.getItem("kitchenBreezeFavorites") || "[]"
+    );
+
+    // Favorit entfernen oder hinzufügen
+    if (favorites.includes(recipeId)) {
+
+        favorites = favorites.filter(
+            id => id !== recipeId
+        );
+
+    } else {
+
+        favorites.push(recipeId);
+
+    }
+
+    // Favoriten im Browser speichern
+    localStorage.setItem(
+        "kitchenBreezeFavorites",
+        JSON.stringify(favorites)
+    );
+
+    // Herz aktualisieren
+    const isFavorite = favorites.includes(recipeId);
+
+    button.classList.toggle(
+        "is-favorite",
+        isFavorite
+    );
+
+    button.textContent = isFavorite ? "♥" : "♡";
+
+    button.setAttribute(
+        "aria-pressed",
+        String(isFavorite)
+    );
+
+    button.setAttribute(
+        "aria-label",
+        isFavorite
+            ? "Aus Favoriten entfernen"
+            : "Als Favorit markieren"
+    );
+
+});
 
 /* =========================================
    FILTER AUS URL AKTIVIEREN

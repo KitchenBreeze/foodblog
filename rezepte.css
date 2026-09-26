@@ -972,3 +972,26 @@ body {
     transform: translateY(-50%);
     z-index: 1000;
 }
+/* Rezeptkarten: 2 Spalten auf dem Handy */
+@media (max-width: 600px) {
+
+    .recipe-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .recipe-grid .recipe-card {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .recipe-grid .recipe-card img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+    }
+
+}

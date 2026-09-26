@@ -351,548 +351,381 @@ main {
 <script src="recipes.js"></script>
 
 <script>
-
-const filterButtons =
-    document.querySelectorAll(
-        ".filter-buttons button"
-    );
-
-const generateButton =
-    document.getElementById(
-        "generatePlan"
-    );
-
-const weekPlan =
-    document.getElementById(
-        "weekPlan"
-    );
+const filterButtons = document.querySelectorAll(".filter-buttons button");
+const generateButton = document.getElementById("generatePlan");
+const weekPlan = document.getElementById("weekPlan");
 
 let selectedFilter = "Alle";
 
-
 filterButtons.forEach(button => {
-
-    button.addEventListener(
-        "click",
-        () => {
-
-            filterButtons.forEach(
-                btn =>
-                    btn.classList.remove(
-                        "active"
-                    )
-            );
-
-            button.classList.add(
-                "active"
-            );
-
-            selectedFilter =
-                button.dataset.filter;
-
-        }
-    );
-
+    button.addEventListener("click", () => {
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+        selectedFilter = button.dataset.filter;
+    });
 });
 
+// Zeit in Minuten berechnen
+function getTotalMinutes(recipe) {
+    const total = recipe.time?.total || "";
+    const hours = total.match(/(\d+)\s*Std/i);
+    const minutes = total.match(/(\d+)\s*min/i);
 
-generateButton.addEventListener(
-    "click",
-    () => {
+    return (hours ? Number(hours[1]) * 60 : 0) +
+           (minutes ? Number(minutes[1]) : 0);
+}
 
-        let mainDishes =
-            RECIPES.filter(recipe => {
+// Kategorien eines Rezepts auslesen
+function getCategories(recipe) {
+    return Array.isArray(recipe.category) ? recipe.category : [];
+}
 
-                const categories =
-                    Array.isArray(
-                        recipe.category
-                    )
-                        ? recipe.category
-                        : [];
+// Zufälliges Element auswählen
+function randomItem(array) {
+    return array[Math.floor(Math.random() * array.length)];
+}
 
-                return categories.includes(
-                    "Hauptgerichte"
+// Rezepte zufällig mischen
+function shuffle(array) {
+    const result = [...array];
+
+    for (let i = result.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [result[i], result[j]] = [result[j], result[i]];
+    }
+
+    return result;
+}
+
+generateButton.addEventListener("click", () => {
+
+    // =====================================
+    // 1. HAUPTGERICHTE FILTERN
+    // =====================================
+
+    let mainDishes = RECIPES.filter(recipe => {
+        const categories = getCategories(recipe);
+
+        return categories.includes("Hauptgerichte");
+    });
+
+    // Vegetarisch / Vegan
+    if (
+        selectedFilter === "Vegetarisch" ||
+        selectedFilter === "Vegan"
+    ) {
+        mainDishes = mainDishes.filter(recipe =>
+            getCategories(recipe).includes(selectedFilter)
+        );
+    }
+
+    // Schnell & einfach
+    if (selectedFilter === "Schnell & einfach") {
+        mainDishes = mainDishes.filter(recipe =>
+            recipe.difficulty === "Einfach" &&
+            getTotalMinutes(recipe) <= 45
+        );
+    }
+
+    // Doppelte Rezepte anhand der ID oder des Titels entfernen
+    const uniqueRecipes = [];
+    const seenRecipes = new Set();
+
+    mainDishes.forEach(recipe => {
+        const key = recipe.id ?? recipe.title;
+
+        if (!seenRecipes.has(key)) {
+            seenRecipes.add(key);
+            uniqueRecipes.push(recipe);
+        }
+    });
+
+    mainDishes = uniqueRecipes;
+
+    if (mainDishes.length < 7) {
+        weekPlan.innerHTML =
+            "<p>Für diese Auswahl sind nicht genug verschiedene Hauptgerichte vorhanden.</p>";
+        return;
+    }
+
+    // =====================================
+    // 2. BACKWAREN SELTEN BERÜCKSICHTIGEN
+    // =====================================
+
+    // Nur 5 % Chance, überhaupt ein Backwaren-Rezept
+    // in den Wochenplan aufzunehmen.
+    let bakeryRecipe = null;
+
+    if (Math.random() < 0.05) {
+
+        let bakeryRecipes = RECIPES.filter(recipe => {
+            const categories = getCategories(recipe);
+
+            const isBakery =
+                categories.includes("Backen") &&
+                (
+                    categories.includes("Brot & Brötchen") ||
+                    categories.includes("Belegte Backwaren")
                 );
 
-            });
-
-
-        /*
-        =====================================
-        VEGETARISCH / VEGAN
-        =====================================
-        */
-
-        if (
-            selectedFilter === "Vegetarisch" ||
-            selectedFilter === "Vegan"
-        ) {
-
-            mainDishes =
-                mainDishes.filter(
-                    recipe => {
-
-                        const categories =
-                            Array.isArray(
-                                recipe.category
-                            )
-                                ? recipe.category
-                                : [];
-
-                        return categories.includes(
-                            selectedFilter
-                        );
-
-                    }
-                );
-
-        }
-
-
-        /*
-        =====================================
-        SCHNELL & EINFACH
-        Maximal 45 Minuten
-        Schwierigkeit: Einfach
-        =====================================
-        */
-
-        if (
-            selectedFilter ===
-            "Schnell & einfach"
-        ) {
-
-            mainDishes =
-                mainDishes.filter(
-                    recipe => {
-
-                        if (
-                            recipe.difficulty !==
-                            "Einfach"
-                        ) {
-                            return false;
-                        }
-
-                        const total =
-                            recipe.time?.total ||
-                            "";
-
-                        const hours =
-                            total.match(
-                                /(\d+)\s*Std/
-                            );
-
-                        const minutes =
-                            total.match(
-                                /(\d+)\s*min/
-                            );
-
-                        const totalMinutes =
-                            (
-                                hours
-                                    ? Number(
-                                        hours[1]
-                                    ) * 60
-                                    : 0
-                            ) +
-                            (
-                                minutes
-                                    ? Number(
-                                        minutes[1]
-                                    )
-                                    : 0
-                            );
-
-                        return (
-                            totalMinutes <= 45
-                        );
-
-                    }
-                );
-
-        }
-
-
-        /*
-        =====================================
-        NICHT GENUG REZEPTE
-        =====================================
-        */
-
-        if (
-            mainDishes.length < 7
-        ) {
-
-            weekPlan.innerHTML =
-                "<p>Für diese Auswahl sind nicht genug verschiedene Hauptgerichte vorhanden.</p>";
-
-            return;
-
-        }
-
-
-        /*
-        =====================================
-        REZEPTE ZUFÄLLIG MISCHEN
-        =====================================
-        */
-
-        const shuffled =
-            [...mainDishes].sort(
-                () =>
-                    Math.random() - 0.5
-            );
-
-
-        const selectedRecipes = [];
-
-        let pastaCount = 0;
-        let sweetCount = 0;
-        let saladCount = 0;
-
-
-        for (const recipe of shuffled) {
+            if (!isBakery) return false;
 
             if (
-                selectedRecipes.length >= 7
+                selectedFilter === "Vegetarisch" ||
+                selectedFilter === "Vegan"
             ) {
-                break;
+                if (!categories.includes(selectedFilter)) {
+                    return false;
+                }
             }
 
-            const categories =
-                Array.isArray(
-                    recipe.category
-                )
-                    ? recipe.category
-                    : [];
+            if (selectedFilter === "Schnell & einfach") {
+                if (
+                    recipe.difficulty !== "Einfach" ||
+                    getTotalMinutes(recipe) > 45
+                ) {
+                    return false;
+                }
+            }
 
+            return true;
+        });
 
-            const isPasta =
-                categories.includes(
-                    "Pasta"
-                );
+        // Keine doppelten Rezepte im Plan
+        bakeryRecipes = bakeryRecipes.filter(recipe =>
+            !mainDishes.some(main =>
+                main.id === recipe.id ||
+                main.title === recipe.title
+            )
+        );
+
+        if (bakeryRecipes.length > 0) {
+            bakeryRecipe = randomItem(bakeryRecipes);
+        }
+    }
+
+    // =====================================
+    // 3. AUSWAHL MIT ABWECHSLUNG
+    // =====================================
+
+    const selectedRecipes = [];
+    const selectedIds = new Set();
+
+    let pastaCount = 0;
+    let riceCount = 0;
+    let saladCount = 0;
+    let soupCount = 0;
+    let sweetCount = 0;
+    let bakeryCount = 0;
+
+    // Kategorien, die möglichst abwechslungsreich
+    // vorkommen sollen.
+    const varietyCategories = [
+        "Fleisch",
+        "Fisch",
+        "Vegetarisch",
+        "Vegan",
+        "Pasta",
+        "Reis",
+        "Salate",
+        "Suppen & Eintöpfe",
+        "Beilagen",
+        "Pfannengerichte",
+        "Ofengerichte",
+        "Airfryer"
+    ];
+
+    // =====================================
+    // 4. BACKWAREN FÜR EINEN TAG RESERVIEREN
+    // =====================================
+
+    if (bakeryRecipe) {
+        selectedRecipes.push(bakeryRecipe);
+
+        selectedIds.add(
+            bakeryRecipe.id ?? bakeryRecipe.title
+        );
+
+        bakeryCount++;
+    }
+
+    // =====================================
+    // 5. HAUPTGERICHTE AUSWÄHLEN
+    // =====================================
+
+    let candidates = shuffle(mainDishes);
+
+    while (selectedRecipes.length < 7) {
+
+        // Bereits verwendete Rezepte ausschließen
+        candidates = candidates.filter(recipe => {
+            const key = recipe.id ?? recipe.title;
+            return !selectedIds.has(key);
+        });
+
+        if (candidates.length === 0) break;
+
+        // Für jedes Rezept eine Punktzahl berechnen.
+        // Rezepte aus bisher wenig vertretenen Kategorien
+        // erhalten höhere Chancen.
+        const scoredRecipes = candidates.map(recipe => {
+
+            const categories = getCategories(recipe);
+            let score = Math.random() * 3;
+
+            const isPasta = categories.includes("Pasta");
+            const isRice = categories.includes("Reis");
+
+            const isSalad = categories.includes("Salate");
+
+            const isSoup =
+                categories.includes("Suppen & Eintöpfe") ||
+                categories.includes("Suppen") ||
+                categories.includes("Eintöpfe");
 
             const isSweet =
-                categories.includes(
-                    "Süß"
-                );
+                categories.includes("Süß") ||
+                categories.includes("süße Hauptgerichte");
 
-            const isSalad =
-                categories.includes(
-                    "Salate"
-                );
+            const isBakery =
+                categories.includes("Brot & Brötchen") ||
+                categories.includes("Belegte Backwaren");
 
+            // Höchstgrenzen
+            if (isPasta && pastaCount >= 2) return null;
+            if (isRice && riceCount >= 2) return null;
+            if (isSalad && saladCount >= 3) return null;
+            if (isSoup && soupCount >= 2) return null;
+            if (isSweet && sweetCount >= 1) return null;
+            if (isBakery && bakeryCount >= 1) return null;
 
-            // Pasta maximal 2
-            if (
-                isPasta &&
-                pastaCount >= 2
-            ) {
-                continue;
-            }
+            // Süße Hauptgerichte und Backwaren selten halten
+            if (isSweet) score -= 5;
+            if (isBakery) score -= 5;
 
+            // Neue Kategorien bevorzugen
+            varietyCategories.forEach(category => {
+                if (categories.includes(category)) {
 
-            // Süße Hauptgerichte maximal 1
-            if (
-                isSweet &&
-                sweetCount >= 1
-            ) {
-                continue;
-            }
+                    const alreadyRepresented =
+                        selectedRecipes.some(selected =>
+                            getCategories(selected).includes(category)
+                        );
 
-
-            // Salate maximal 3
-            if (
-                isSalad &&
-                saladCount >= 3
-            ) {
-                continue;
-            }
-
-
-            selectedRecipes.push(
-                recipe
-            );
-
-
-            if (isPasta) {
-                pastaCount++;
-            }
-
-            if (isSweet) {
-                sweetCount++;
-            }
-
-            if (isSalad) {
-                saladCount++;
-            }
-
-        }
-
-
-        /*
-        =====================================
-        SELTENE BACKWAREN-CHANCE
-        =====================================
-        */
-
-        // 5 % Chance pro Wochenplan
-        if (
-            Math.random() < 0.05
-        ) {
-
-            const bakeryRecipes =
-                RECIPES.filter(
-                    recipe => {
-
-                        const categories =
-                            Array.isArray(
-                                recipe.category
-                            )
-                                ? recipe.category
-                                : [];
-
-
-                        const isBakery =
-                            categories.includes(
-                                "Backen"
-                            ) &&
-                            (
-                                categories.includes(
-                                    "Brot & Brötchen"
-                                ) ||
-                                categories.includes(
-                                    "Belegte Backwaren"
-                                )
-                            );
-
-
-                        if (!isBakery) {
-                            return false;
-                        }
-
-
-                        // Vegetarisch / Vegan beachten
-                        if (
-                            selectedFilter ===
-                                "Vegetarisch" ||
-                            selectedFilter ===
-                                "Vegan"
-                        ) {
-
-                            if (
-                                !categories.includes(
-                                    selectedFilter
-                                )
-                            ) {
-                                return false;
-                            }
-
-                        }
-
-
-                        // Schnell & einfach beachten
-                        if (
-                            selectedFilter ===
-                            "Schnell & einfach"
-                        ) {
-
-                            if (
-                                recipe.difficulty !==
-                                "Einfach"
-                            ) {
-                                return false;
-                            }
-
-                            const total =
-                                recipe.time?.total ||
-                                "";
-
-                            const hours =
-                                total.match(
-                                    /(\d+)\s*Std/
-                                );
-
-                            const minutes =
-                                total.match(
-                                    /(\d+)\s*min/
-                                );
-
-                            const totalMinutes =
-                                (
-                                    hours
-                                        ? Number(
-                                            hours[1]
-                                        ) * 60
-                                        : 0
-                                ) +
-                                (
-                                    minutes
-                                        ? Number(
-                                            minutes[1]
-                                        )
-                                        : 0
-                                );
-
-                            if (
-                                totalMinutes > 45
-                            ) {
-                                return false;
-                            }
-
-                        }
-
-                        return true;
-
+                    if (!alreadyRepresented) {
+                        score += 5;
                     }
-                );
-
-
-            // Nur wenn passende Backwaren vorhanden sind
-            if (
-                bakeryRecipes.length > 0
-            ) {
-
-                const randomBakery =
-                    bakeryRecipes[
-                        Math.floor(
-                            Math.random() *
-                            bakeryRecipes.length
-                        )
-                    ];
-
-
-                // Höchstens ein Backwaren-Rezept
-                if (
-                    selectedRecipes.length === 7
-                ) {
-
-                    selectedRecipes.pop();
-
                 }
+            });
 
+            // Gerichte mit mehreren bereits vertretenen
+            // Kategorien nicht automatisch bevorzugen
+            return { recipe, score };
+        }).filter(Boolean);
 
-                selectedRecipes.push(
-                    randomBakery
-                );
+        if (scoredRecipes.length === 0) break;
 
-            }
+        scoredRecipes.sort((a, b) => b.score - a.score);
 
+        // Aus den drei bestbewerteten Rezepten zufällig wählen,
+        // damit nicht jede Woche dieselben Gerichte erscheinen.
+        const topRecipes = scoredRecipes.slice(0, 3);
+        const chosen = randomItem(topRecipes).recipe;
+
+        const categories = getCategories(chosen);
+
+        selectedRecipes.push(chosen);
+
+        selectedIds.add(chosen.id ?? chosen.title);
+
+        if (categories.includes("Pasta")) pastaCount++;
+        if (categories.includes("Reis")) riceCount++;
+        if (categories.includes("Salate")) saladCount++;
+
+        if (
+            categories.includes("Suppen & Eintöpfe") ||
+            categories.includes("Suppen") ||
+            categories.includes("Eintöpfe")
+        ) {
+            soupCount++;
         }
 
+        if (
+            categories.includes("Süß") ||
+            categories.includes("süße Hauptgerichte")
+        ) {
+            sweetCount++;
+        }
 
-        /*
-        =====================================
-        WOCHENTAGE
-        =====================================
-        */
+        if (
+            categories.includes("Brot & Brötchen") ||
+            categories.includes("Belegte Backwaren")
+        ) {
+            bakeryCount++;
+        }
 
-        const days = [
-
-            "Montag",
-            "Dienstag",
-            "Mittwoch",
-            "Donnerstag",
-            "Freitag",
-            "Samstag",
-            "Sonntag"
-
-        ];
-
-
-        /*
-        =====================================
-        WOCHENPLAN AUSGEBEN
-        =====================================
-        */
-
-        weekPlan.innerHTML =
-            selectedRecipes.map(
-                (recipe, index) => {
-
-                    const slug =
-                        recipe.title
-                            .toLowerCase()
-                            .replace(
-                                /ä/g,
-                                "ae"
-                            )
-                            .replace(
-                                /ö/g,
-                                "oe"
-                            )
-                            .replace(
-                                /ü/g,
-                                "ue"
-                            )
-                            .replace(
-                                /ß/g,
-                                "ss"
-                            )
-                            .replace(
-                                /[^a-z0-9]+/g,
-                                "-"
-                            )
-                            .replace(
-                                /^-+|-+$/g,
-                                ""
-                            );
-
-
-                    return `
-
-    <div class="day">
-
-        <div class="day-name">
-            ${days[index]}
-        </div>
-
-
-        <a
-            class="recipe-card"
-            href="recipes/${slug}.html"
-        >
-
-            <img
-                src="${recipe.image}"
-                alt="${recipe.title}"
-            >
-
-
-            <div class="recipe-card-content">
-
-                <div class="recipe-card-title">
-                    ${recipe.title}
-                </div>
-
-
-                <div class="recipe-card-time">
-
-                    <span
-                        class="recipe-time-icon"
-                        aria-hidden="true"
-                    ></span>
-
-                    <span>
-                        ${recipe.time?.total || ""}
-                    </span>
-
-                </div>
-
-            </div>
-
-        </a>
-
-    </div>
-
-`;
-
-                }
-            ).join("");
-
+        candidates = candidates.filter(recipe =>
+            (recipe.id ?? recipe.title) !==
+            (chosen.id ?? chosen.title)
+        );
     }
-);
 
+    // =====================================
+    // 6. WOCHENPLAN AUSGEBEN
+    // =====================================
+
+    const days = [
+        "Montag",
+        "Dienstag",
+        "Mittwoch",
+        "Donnerstag",
+        "Freitag",
+        "Samstag",
+        "Sonntag"
+    ];
+
+    if (selectedRecipes.length < 7) {
+        weekPlan.innerHTML =
+            "<p>Es konnten nicht genügend unterschiedliche Rezepte mit den gewählten Regeln gefunden werden. Bitte versuche es erneut oder prüfe die Kategorien deiner Rezepte.</p>";
+        return;
+    }
+
+    weekPlan.innerHTML = selectedRecipes.map((recipe, index) => {
+
+        const slug = recipe.title
+            .toLowerCase()
+            .replace(/ä/g, "ae")
+            .replace(/ö/g, "oe")
+            .replace(/ü/g, "ue")
+            .replace(/ß/g, "ss")
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/^-+|-+$/g, "");
+
+        return `
+            <div class="day">
+                <div class="day-name">
+                    ${days[index]}
+                </div>
+
+                <a class="recipe-card" href="recipes/${slug}.html">
+                    <img src="${recipe.image}" alt="${recipe.title}">
+
+                    <div class="recipe-card-content">
+                        <div class="recipe-card-title">
+                            ${recipe.title}
+                        </div>
+
+                        <div class="recipe-card-time">
+                            <span class="recipe-time-icon" aria-hidden="true"></span>
+                            <span>${recipe.time?.total || ""}</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        `;
+    }).join("");
+
+});
 </script>
 
 <script>

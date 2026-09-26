@@ -1113,7 +1113,6 @@ function render() {
             ? recipe.category
             : [];
 
-    // Alle ausgewählten Filter zerlegen
     const selected = selectedCategories.map(
         category => {
 
@@ -1127,38 +1126,33 @@ function render() {
         }
     );
 
-    // Hauptkategorien herausfiltern
     const mainCategories = selected.filter(
         item => !item.sub
     );
 
-    // Unterkategorien herausfiltern
     const subCategories = selected.filter(
         item => item.sub
     );
 
-    // Hauptkategorien müssen passen
     const mainMatches =
         mainCategories.length === 0 ||
         mainCategories.some(
             item => categories.includes(item.main)
         );
 
-    // Vegan und Vegetarisch müssen passen,
-    // alle anderen Unterkategorien dürfen ODER sein
-    const dietaryCategories =
-        subCategories.filter(
-            item =>
-                item.sub === "Vegan" ||
-                item.sub === "Vegetarisch"
-        );
+    // Diese Kategorien gelten als UND-Filter
+    const dietaryCategories = subCategories.filter(
+        item =>
+            ["Vegan", "Vegetarisch", "Fleisch", "Fisch"]
+                .includes(item.sub)
+    );
 
-    const otherCategories =
-        subCategories.filter(
-            item =>
-                item.sub !== "Vegan" &&
-                item.sub !== "Vegetarisch"
-        );
+    // Alle anderen Unterkategorien gelten als ODER-Filter
+    const otherCategories = subCategories.filter(
+        item =>
+            !["Vegan", "Vegetarisch", "Fleisch", "Fisch"]
+                .includes(item.sub)
+    );
 
     const dietaryMatches =
         dietaryCategories.every(

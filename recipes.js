@@ -2457,7 +2457,7 @@ related: ["45", "7", "20"],
 {
     id: "43",
     title: "Marillenknödel",
-    category: ["süßes Gebäck", "süße Hauptgerichte" , "Hauptgerichte", "Kochen"], 
+    category: ["süße Hauptgerichte" , "Hauptgerichte", "Kochen"], 
     image: "images/Marillenknödel.jpeg",
     time:{
         preparation: "20 min",

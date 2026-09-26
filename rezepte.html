@@ -1324,14 +1324,33 @@ function render() {
         }
 
 
-        /* =================================
+/* =================================
    REZEPTKARTE
 ================================= */
 
-const favorites = JSON.parse(
-    localStorage.getItem("kitchenBreezeFavorites") || "[]"
-);
+// Favoriten laden
+let favorites = [];
 
+try {
+
+    favorites = JSON.parse(
+        localStorage.getItem("kitchenBreezeFavorites") || "[]"
+    );
+
+    if (!Array.isArray(favorites)) {
+        favorites = [];
+    }
+
+    favorites = favorites.map(String);
+
+} catch (error) {
+
+    favorites = [];
+
+}
+
+
+// Rezeptkarte ausgeben
 grid.innerHTML += `
 
     <div class="recipe-card">
@@ -1351,7 +1370,7 @@ grid.innerHTML += `
             <button
                 class="favorite-button ${favorites.includes(String(recipe.id)) ? "is-favorite" : ""}"
                 data-favorite-id="${recipe.id}"
-                aria-label="Als Favorit markieren"
+                aria-label="${favorites.includes(String(recipe.id)) ? "Aus Favoriten entfernen" : "Als Favorit markieren"}"
                 aria-pressed="${favorites.includes(String(recipe.id))}"
                 type="button"
             >
@@ -1362,7 +1381,10 @@ grid.innerHTML += `
 
         <div class="recipe-card-content">
 
-            <a href="${recipeUrl}" class="recipe-card-title">
+            <a
+                href="${recipeUrl}"
+                class="recipe-card-title"
+            >
 
                 <h2>${recipe.title}</h2>
 

@@ -846,19 +846,25 @@ body {
         box-sizing: border-box;
     }
 
-    .recipe-grid .recipe-card .recipe-card-image {
-        width: 100%;
-        aspect-ratio: 4 / 3;
-        overflow: hidden;
-    }
+    /* =========================================
+   REZEPTBILDER – GRÖSSER UND VOLLSTÄNDIG
+========================================= */
 
-    .recipe-grid .recipe-card .recipe-card-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: center;
-        transform: none;
-    }
+.recipe-grid .recipe-card .recipe-card-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: var(--kb-card);
+}
+
+.recipe-grid .recipe-card .recipe-card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center;
+}
 
     .recipe-card-content {
         padding: 14px 10px;

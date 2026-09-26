@@ -549,7 +549,6 @@ if (searchInput) {
 
 }
 
-
 /* =========================================
    FILTER BUTTONS AKTUALISIEREN
 ========================================= */
@@ -647,26 +646,6 @@ function updateUrl() {
     );
 
 }
-    /* -------------------------------------
-       URL SETZEN
-    ------------------------------------- */
-
-    const query =
-        params.toString();
-
-
-    const newUrl =
-        query
-            ? `${window.location.pathname}?${query}`
-            : window.location.pathname;
-
-
-    window.history.replaceState(
-        {},
-        "",
-        newUrl
-    );
-
 
 
 /* =========================================
@@ -677,7 +656,6 @@ if (
     filterBtn &&
     filterDropdown
 ) {
-
 
     filterBtn.addEventListener(
         "click",
@@ -714,8 +692,6 @@ if (
     );
 
 }
-
-
 /* =========================================
    KATEGORIEN
 ========================================= */
@@ -1446,68 +1422,101 @@ grid.innerHTML += `
    FAVORITEN SPEICHERN UND UMSCHALTEN
 ========================================= */
 
-grid.addEventListener("click", function(event) {
+if (grid) {
 
-    const button = event.target.closest(".favorite-button");
+    grid.addEventListener("click", function(event) {
 
-    // Nur reagieren, wenn ein Herz angeklickt wurde
-    if (!button) {
-        return;
-    }
+        const button = event.target.closest(".favorite-button");
 
-    // Verhindern, dass die Rezeptkarte geöffnet wird
-    event.preventDefault();
-    event.stopPropagation();
+        // Nur reagieren, wenn ein Herz angeklickt wurde
+        if (!button) {
+            return;
+        }
 
-    const recipeId = String(button.dataset.favoriteId);
+        // Verhindern, dass die Rezeptkarte geöffnet wird
+        event.preventDefault();
+        event.stopPropagation();
 
-    // Gespeicherte Favoriten laden
-    let favorites = JSON.parse(
-        localStorage.getItem("kitchenBreezeFavorites") || "[]"
-    );
+        const recipeId = String(button.dataset.favoriteId);
 
-    // Favorit entfernen oder hinzufügen
-    if (favorites.includes(recipeId)) {
+        // Gespeicherte Favoriten sicher laden
+        let favorites = [];
 
-        favorites = favorites.filter(
-            id => id !== recipeId
+        try {
+
+            favorites = JSON.parse(
+                localStorage.getItem("kitchenBreezeFavorites") || "[]"
+            );
+
+            if (!Array.isArray(favorites)) {
+                favorites = [];
+            }
+
+            favorites = favorites.map(String);
+
+        } catch (error) {
+
+            favorites = [];
+
+        }
+
+        // Favorit entfernen oder hinzufügen
+        if (favorites.includes(recipeId)) {
+
+            favorites = favorites.filter(
+                id => id !== recipeId
+            );
+
+        } else {
+
+            favorites.push(recipeId);
+
+        }
+
+        // Favoriten im Browser speichern
+        try {
+
+            localStorage.setItem(
+                "kitchenBreezeFavorites",
+                JSON.stringify(favorites)
+            );
+
+        } catch (error) {
+
+            console.error(
+                "Favoriten konnten nicht gespeichert werden:",
+                error
+            );
+
+            return;
+
+        }
+
+        // Herz aktualisieren
+        const isFavorite = favorites.includes(recipeId);
+
+        button.classList.toggle(
+            "is-favorite",
+            isFavorite
         );
 
-    } else {
+        button.textContent = isFavorite ? "♥" : "♡";
 
-        favorites.push(recipeId);
+        button.setAttribute(
+            "aria-pressed",
+            String(isFavorite)
+        );
 
-    }
+        button.setAttribute(
+            "aria-label",
+            isFavorite
+                ? "Aus Favoriten entfernen"
+                : "Als Favorit markieren"
+        );
 
-    // Favoriten im Browser speichern
-    localStorage.setItem(
-        "kitchenBreezeFavorites",
-        JSON.stringify(favorites)
-    );
+    });
 
-    // Herz aktualisieren
-    const isFavorite = favorites.includes(recipeId);
-
-    button.classList.toggle(
-        "is-favorite",
-        isFavorite
-    );
-
-    button.textContent = isFavorite ? "♥" : "♡";
-
-    button.setAttribute(
-        "aria-pressed",
-        String(isFavorite)
-    );
-
-    button.setAttribute(
-        "aria-label",
-        isFavorite
-            ? "Aus Favoriten entfernen"
-            : "Als Favorit markieren"
-    );
-
-});
+}
 
 /* =========================================
    FILTER AUS URL AKTIVIEREN

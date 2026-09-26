@@ -128,69 +128,175 @@ a {
 
 <script>
 
+/* =========================================
+   FAVORITEN LADEN
+========================================= */
 
 const container = document.getElementById("favorites");
 
+let favorites = [];
 
-const favorites = JSON.parse(
-    localStorage.getItem("favorites")
-) || [];
+try {
+
+    favorites = JSON.parse(
+        localStorage.getItem("kitchenBreezeFavorites") || "[]"
+    );
+
+    if (!Array.isArray(favorites)) {
+        favorites = [];
+    }
+
+    favorites = favorites.map(String);
+
+} catch (error) {
+
+    favorites = [];
+
+}
 
 
+/* =========================================
+   REZEPTE FILTERN
+========================================= */
 
-const recipes = RECIPES.filter(recipe =>
-    favorites.includes(recipe.id)
+const favoriteRecipes = RECIPES.filter(recipe =>
+    favorites.includes(String(recipe.id))
 );
 
 
+/* =========================================
+   KEINE FAVORITEN
+========================================= */
 
-if(recipes.length === 0){
+if (favoriteRecipes.length === 0) {
 
     container.innerHTML = `
-    <p style="text-align:center;color:#b8b2aa;">
-    Noch keine Favoriten gespeichert.
-    </p>
+        <p style="text-align:center;color:#b8b2aa;">
+            Noch keine Favoriten gespeichert.
+        </p>
     `;
 
 }
 
 
+/* =========================================
+   FAVORITEN AUSGEBEN
+========================================= */
 
-recipes.forEach(recipe => {
+favoriteRecipes.forEach(recipe => {
 
+    const recipeUrl =
+        `recipes/${String(recipe.title || "")
+            .toLowerCase()
+            .replaceAll("ä", "ae")
+            .replaceAll("ö", "oe")
+            .replaceAll("ü", "ue")
+            .replaceAll("ß", "ss")
+            .replace(/[^a-z0-9\s-]/g, "")
+            .replace(/\s+/g, "-")
+            .replace(/-+/g, "-")
+            .replace(/^-|-$/g, "")
+        }.html`;
 
-container.innerHTML += `
+    container.innerHTML += `
 
-<a href="recipe.html?id=${recipe.id}">
+        <div class="recipe-card">
 
+            <a href="${recipeUrl}">
 
-<div class="recipe-card">
+                <img
+                    src="${recipe.image}"
+                    alt="${recipe.title}"
+                    loading="lazy"
+                >
 
+            </a>
 
-<img src="${recipe.image}">
+            <div>
 
+                <a href="${recipeUrl}">
 
-<div>
+                    <h2>${recipe.title}</h2>
 
-<h2>${recipe.title}</h2>
+                </a>
 
-<p>${recipe.description}</p>
+                <p>${recipe.description || ""}</p>
 
+                <button
+                    class="favorite-button is-favorite"
+                    data-favorite-id="${recipe.id}"
+                    type="button"
+                    aria-label="Aus Favoriten entfernen"
+                    aria-pressed="true"
+                >
+                    ♥
+                </button>
 
-</div>
+            </div>
 
+        </div>
 
-</div>
-
-
-</a>
-
-
-`;
-
+    `;
 
 });
 
+
+/* =========================================
+   FAVORITEN ENTFERNEN
+========================================= */
+
+container.addEventListener("click", function(event) {
+
+    const button = event.target.closest(".favorite-button");
+
+    if (!button) {
+        return;
+    }
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    const recipeId = String(button.dataset.favoriteId);
+
+    favorites = favorites.filter(
+        id => id !== recipeId
+    );
+
+    try {
+
+        localStorage.setItem(
+            "kitchenBreezeFavorites",
+            JSON.stringify(favorites)
+        );
+
+    } catch (error) {
+
+        console.error(
+            "Favoriten konnten nicht gespeichert werden:",
+            error
+        );
+
+        return;
+
+    }
+
+    const card = button.closest(".recipe-card");
+
+    if (card) {
+        card.remove();
+    }
+
+    if (favorites.length === 0) {
+
+        container.innerHTML = `
+            <p style="text-align:center;color:#b8b2aa;">
+                Noch keine Favoriten gespeichert.
+            </p>
+        `;
+
+    }
+
+});
 
 </script>
 

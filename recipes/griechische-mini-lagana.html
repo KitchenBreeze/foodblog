@@ -5688,7 +5688,9 @@ else {
             .map(category => `
                 <a
                     class="recipe-category-tag"
-                    href="../rezepte.html?category=${encodeURIComponent(category)}"
+                    href="../rezepte.html?category=${encodeURIComponent(category)}&main=${encodeURIComponent(
+    recipe.category.includes("Backen") ? "Backen" : "Kochen"
+)}"
                 >
                     ${category}
                 </a>

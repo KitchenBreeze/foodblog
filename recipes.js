@@ -5015,16 +5015,16 @@ related: ["45", "7", "20"],
             images: ["images/teigbälle.jpeg"]
         },
         {text:"Eine Kastenform <i>(30 cm × 11 cm)</i> einfetten und die Kugeln etwas ausrollen, sodass sie eine ovale Form erhalten, je zwei nebeneinander in die Form geben und großzügig mit Milch bestreichen. ",
-         images: ["images/teigovale",
-         "images/ovale-in-form",
+         images: ["images/teigovale.jpeg",
+         "images/ovale-in-form.jpeg",
          ],
         },
 
         {text: "Die Form abdecken und für ca. 1 1/2 Stunden im Ofen bei 30 Grad ruhen lassen, bis sich das Volumen deutlich vergrößert hat. Dann aus dem Ofen nehmen und den Ofen auf 190 Grad Ober-/Unterhitze mit einer feuerfesten Schale, gefüllt mit Wasser, vorheizen.",
-images: ["images/ovale-in-form-aufgegangen"]
+images: ["images/ovale-in-form-aufgegangen.jpeg"]
         },
     
-   
+
         {text:"Das aufgegangene Brioche erneut großzügig mit Milch bestreichen und im vorgeheizten Backofen im unteren Drittel ca. 30 min backen. Dabei nach ca. 15 min Backzeit die Wasserschale aus dem Ofen entfernen und das Brot locker mit Alufolie abdecken. Dann gegebenenfalls die Temperatur auf 170 Grad reduzieren, die Alufolie entfernen und weitere 5–10 min fertig backen, bis es beim leichten Drücken in die Mitte zurückfedert.",
         },
         {text:"Das Brot nach dem Backen aus dem Ofen holen, die Oberfläche sofort mit einem kleinen Stück Butter einreiben und vor dem Lösen aus der Form mind. 15 min abkühlen lassen."

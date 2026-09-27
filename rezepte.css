@@ -1166,3 +1166,73 @@ body {
         z-index: 99999 !important;
     }
 }
+/* =========================================
+   FINALER FIX – UNTERKATEGORIEN
+   HANDY UND LAPTOP
+   Muss GANZ UNTEN in recipe-style.css stehen
+========================================= */
+
+/* Unterkategorien IMMER geschlossen,
+   solange die Klasse .open fehlt */
+.filter-subcategories {
+    display: none !important;
+}
+
+/* Nur bei geöffnetem Zustand anzeigen */
+.filter-subcategories.open {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+
+    width: 100% !important;
+    box-sizing: border-box !important;
+
+    padding: 10px 0 !important;
+    margin: 0 auto !important;
+}
+
+/* Einzelne Unterkategorie-Buttons */
+.filter-subcategories .filter-item {
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    max-width: 100% !important;
+
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+
+    box-sizing: border-box !important;
+    margin: 0 !important;
+}
+
+/* Handy */
+@media screen and (max-width: 600px) {
+
+    .recipes-tools .filter-subcategories {
+        display: none !important;
+    }
+
+    .recipes-tools .filter-subcategories.open {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+
+        padding: 10px 0 !important;
+        margin: 0 auto !important;
+    }
+
+    .recipes-tools .filter-subcategories.open .filter-item {
+        display: inline-flex !important;
+        flex: 0 0 auto !important;
+        width: auto !important;
+        text-align: center !important;
+    }
+}

@@ -637,6 +637,10 @@ body {
     text-decoration: none;
 }
 
+/* =========================================
+   REZEPTTITEL – DEUTSCHE SILBENTRENNUNG
+========================================= */
+
 .recipe-card h2 {
     margin: 0;
     color: var(--kb-text);
@@ -645,11 +649,18 @@ body {
     font-weight: 500;
     text-align: center;
 
-    /* Vollständiger Titel, kein Abschneiden */
     display: block;
     overflow: visible;
     white-space: normal;
-    overflow-wrap: anywhere;
+
+    /* Deutsche Silbentrennung */
+    hyphens: auto;
+    -webkit-hyphens: auto;
+
+    /* Keine willkürlichen Wortumbrüche */
+    overflow-wrap: normal;
+    word-break: normal;
+
     -webkit-line-clamp: unset;
     -webkit-box-orient: initial;
 }
@@ -846,24 +857,25 @@ body {
         box-sizing: border-box;
     }
 
-    /* =========================================
+/* =========================================
    REZEPTBILDER – GRÖSSER UND VOLLSTÄNDIG
 ========================================= */
 
 .recipe-grid .recipe-card .recipe-card-image {
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    background: var(--kb-card);
+    aspect-ratio: auto;
+    overflow: visible;
+    background: transparent;
 }
 
 .recipe-grid .recipe-card .recipe-card-image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
     object-fit: contain;
     object-position: center;
+    background: transparent;
 }
 
     .recipe-card-content {
@@ -871,9 +883,13 @@ body {
     }
 
     .recipe-card h2 {
-        font-size: 16px;
-        line-height: 1.4;
-    }
+    font-size: 16px;
+    line-height: 1.4;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    overflow-wrap: normal;
+    word-break: normal;
+}
 
     .favorite-button {
         width: 38px;
@@ -1022,4 +1038,42 @@ body {
     top: 50%;
     transform: translateY(-50%);
     z-index: 1000;
+}
+/* =========================================
+   KATEGORIEN – MITTIG AUSRICHTEN
+========================================= */
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+/* Kategorie-Überschrift */
+
+.filter-main-category {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Kategorien und Unterkategorien */
+
+.filter-subcategories,
+.filter-subcategories.open {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Einzelne Kategorie-Buttons */
+
+.filter-item {
+    text-align: center;
 }

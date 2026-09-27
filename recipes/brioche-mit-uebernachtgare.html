@@ -412,8 +412,63 @@ button:hover {
 
 <body>
 
-<div id="content"></div>
+<!-- =========================================
+     MENÜ
+========================================= -->
 
+<button
+    class="home-menu-button right-menu-button"
+    id="menuBtn"
+    aria-label="Menü öffnen"
+    aria-controls="sideMenu"
+    aria-expanded="false"
+>
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<nav
+    class="home-side-menu right-side-menu"
+    id="sideMenu"
+    aria-label="Hauptnavigation"
+>
+
+    <div class="home-menu-logo">
+        <img
+            src="../images/logo1.png"
+            alt="KitchenBreeze"
+        >
+    </div>
+
+    <a href="../index.html">
+        Startseite
+    </a>
+
+    <a href="../rezepte.html">
+        Rezepte
+    </a>
+
+    <a href="../zutatenfinder.html">
+        Zutatenfinder
+    </a>
+
+    <a href="../favoriten.html">
+        Favoriten
+    </a>
+
+    <a href="../wochenplan.html">
+        Wochenplan
+    </a>
+
+</nav>
+
+<div
+    class="home-overlay"
+    id="overlay"
+></div>
+
+<div id="content"></div>
 
 
 <script>
@@ -6574,7 +6629,31 @@ if (
 
 }
 
+/* =========================================
+   MENÜ
+========================================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const sideMenu = document.getElementById("sideMenu");
+const overlay = document.getElementById("overlay");
+
+menuBtn.addEventListener("click", () => {
+    const open = sideMenu.classList.toggle("open");
+
+    overlay.classList.toggle("show", open);
+
+    menuBtn.setAttribute("aria-expanded", String(open));
+});
+
+overlay.addEventListener("click", () => {
+    sideMenu.classList.remove("open");
+    overlay.classList.remove("show");
+    menuBtn.setAttribute("aria-expanded", "false");
+});
+
 </script>
+
+
 
 
 </body>

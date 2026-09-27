@@ -657,12 +657,9 @@ body {
     hyphens: auto;
     -webkit-hyphens: auto;
 
-    /* Keine willkürlichen Wortumbrüche */
+    /* Keine Trennung mitten im Wort erzwingen */
     overflow-wrap: normal;
     word-break: normal;
-
-    -webkit-line-clamp: unset;
-    -webkit-box-orient: initial;
 }
 
 .recipe-card-title:hover h2 {
@@ -882,14 +879,16 @@ body {
         padding: 14px 10px;
     }
 
+
     .recipe-card h2 {
-    font-size: 16px;
-    line-height: 1.4;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    overflow-wrap: normal;
-    word-break: normal;
-}
+        font-size: 16px;
+        line-height: 1.4;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
 
     .favorite-button {
         width: 38px;
@@ -1076,4 +1075,102 @@ body {
 
 .filter-item {
     text-align: center;
+}
+
+/* =========================================
+   HANDY – KATEGORIEN ZENTRIEREN
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* Gesamter Kategorienbereich */
+    .recipes-tools .filter-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        align-self: center !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    /* Kategorie-Überschrift */
+    .recipes-tools .filter-main-category {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    /* Dropdown mit den Kategorie-Buttons */
+    .recipes-tools .filter-dropdown {
+        position: static !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Buttons innerhalb des Dropdowns */
+    .recipes-tools .filter-subcategories,
+    .recipes-tools .filter-subcategories.open {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+
+        width: 100% !important;
+        box-sizing: border-box !important;
+
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Einzelne Kategorie-Buttons */
+    .recipes-tools .filter-item {
+        flex: 0 0 auto !important;
+        text-align: center !important;
+    }
+}
+
+/* ========================================
+   BURGERMENÜ IMMER RECHTS
+   Auch auf der Rezeptseite und am Handy
+======================================== */
+
+header {
+    position: relative;
+}
+
+header .menu-toggle,
+header .hamburger,
+header .burger-menu,
+header .hamburger-menu {
+    position: absolute !important;
+    right: 15px !important;
+    left: auto !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+/* Handy */
+@media (max-width: 768px) {
+    header .menu-toggle,
+    header .hamburger,
+    header .burger-menu,
+    header .hamburger-menu {
+        position: absolute !important;
+        right: 15px !important;
+        left: auto !important;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+    }
 }

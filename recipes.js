@@ -5428,5 +5428,58 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
     ]
 },
 
+{
+    id: "90",
+    title: "Honig-Nuss-Muffins",
+    category: ["Vegetarisch", "Muffins", "Snacks", "Backen"],
+    image: "images/honig-nuss-muffins.jpeg",
+    time: {
+        preparation: "5 min",
+        baking: "15 min",
+        cooling: "5 min",
+        total: "25 min"
+    },
+
+    related: ["7", "24", "41"],
+    portions: "6 Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Saftige, Muffins mit feinem Honiggeschmack und gemahlenen Haselnüssen. Schnell zusammengerührt und perfekt zum Frühstück, als Snack oder zum Kaffee.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "": [
+            "120 g Mehl (Type 405)",
+            "30 g gemahlene Haselnüsse",
+            "25 g Honig",
+            "10 g Backpulver",
+            "1 TL Vanilleextrakt",
+            "1 Prise Salz",
+            "80 ml Milch",
+            "1 Ei",
+            "45 ml Öl"
+        ]
+
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+
+        "Den Ofen auf 180 Grad Ober-/Unterhitze vorheizen und ein Muffinblech mit Papierförmchen auskleiden oder einfetten.",
+
+        "Dann das Mehl mit den gemahlenen Haselnüssen, dem Salz und dem Backpulver in einer Schüssel vermengen.",
+
+        "In einer separaten Schüssel Milch, Öl, Ei, Vanilleextrakt und Honig mit einem Schneebesen so lange verrühren, bis sich der Honig aufgelöst hat.",
+
+        "Die Milchmischung zur Mehlmischung geben und alles mit dem Schneebesen nur so lange verrühren, bis kein trockenes Mehl mehr zu sehen ist.",
+
+        "Den Teig gleichmäßig auf die vorbereiteten Förmchen aufteilen und im vorgeheizten Backofen ca. 15 min backen. <b>(Stäbchenprobe!)</b>",
+
+        "Aus dem Ofen nehmen und mindestens 5 min auskühlen lassen."
+    ]
+},
+
 ];
 module.exports = { RECIPES };

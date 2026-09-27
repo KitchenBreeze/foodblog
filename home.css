@@ -2356,3 +2356,37 @@ body.search-active .home-footer {
         font-size: 13px;
     }
 }
+
+/* ========================================
+   BURGERMENÜ IMMER RECHTS
+   Auch auf der Rezeptseite und am Handy
+======================================== */
+
+header {
+    position: relative;
+}
+
+header .menu-toggle,
+header .hamburger,
+header .burger-menu,
+header .hamburger-menu {
+    position: absolute !important;
+    right: 15px !important;
+    left: auto !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+/* Handy */
+@media (max-width: 768px) {
+    header .menu-toggle,
+    header .hamburger,
+    header .burger-menu,
+    header .hamburger-menu {
+        position: absolute !important;
+        right: 15px !important;
+        left: auto !important;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+    }
+}

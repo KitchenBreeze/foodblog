@@ -195,3 +195,52 @@
     }
 
 }
+
+/* ========================================
+   KATEGORIE-BUTTONS – JEDE ZEILE MITTIG
+======================================== */
+
+.filter-subcategories.open {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    width: 100% !important;
+    box-sizing: border-box !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Jeder Button behält seine natürliche Breite */
+.filter-subcategories.open .filter-item {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    margin: 0 !important;
+    text-align: center !important;
+}
+
+/* Auch auf dem Handy */
+@media (max-width: 600px) {
+    .recipes-tools .filter-subcategories.open {
+        justify-content: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+
+
+/* Burger rechts oben auf den Rezeptseiten */
+
+body #menuBtn.home-menu-button.right-menu-button {
+    position: fixed !important;
+    left: auto !important;
+    right: 20px !important;
+    top: 20px !important;
+    bottom: auto !important;
+    margin: 0 !important;
+    transform: none !important;
+    z-index: 99999 !important;
+}

@@ -6600,19 +6600,29 @@ const menuBtn = document.getElementById("menuBtn");
 const sideMenu = document.getElementById("sideMenu");
 const overlay = document.getElementById("overlay");
 
-menuBtn.addEventListener("click", () => {
-    const open = sideMenu.classList.toggle("open");
+if (menuBtn && sideMenu && overlay) {
 
-    overlay.classList.toggle("show", open);
+    menuBtn.addEventListener("click", () => {
 
-    menuBtn.setAttribute("aria-expanded", String(open));
-});
+        const open = sideMenu.classList.toggle("open");
 
-overlay.addEventListener("click", () => {
-    sideMenu.classList.remove("open");
-    overlay.classList.remove("show");
-    menuBtn.setAttribute("aria-expanded", "false");
-});
+        overlay.classList.toggle("show", open);
+
+        menuBtn.setAttribute("aria-expanded", String(open));
+
+    });
+
+    overlay.addEventListener("click", () => {
+
+        sideMenu.classList.remove("open");
+
+        overlay.classList.remove("show");
+
+        menuBtn.setAttribute("aria-expanded", "false");
+
+    });
+
+}
 
 </script>
 

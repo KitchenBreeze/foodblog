@@ -1141,35 +1141,3 @@ body {
     }
 }
 
-/* BURGERMENÜ AUF DEM HANDY RECHTS */
-
-@media screen and (max-width: 768px) {
-
-    header,
-    .header,
-    .site-header,
-    .navbar,
-    .nav-container {
-        position: relative !important;
-    }
-
-    header .menu-toggle,
-    header .hamburger,
-    header .burger-menu,
-    header .hamburger-menu,
-    .header .menu-toggle,
-    .header .hamburger,
-    .site-header .menu-toggle,
-    .site-header .hamburger,
-    .navbar .menu-toggle,
-    .navbar .hamburger,
-    .nav-container .menu-toggle,
-    .nav-container .hamburger {
-        position: absolute !important;
-        left: auto !important;
-        right: 15px !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        transform: none !important;
-    }
-}

@@ -5785,10 +5785,10 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
     category: ["Kuchen & Torten", "Backen", "ohne Ei", "Vegetarisch"],
     image: "images/orangen-maracuja-kuchen.jpeg",
     time: {
-        preparation:"10",
-        baking: "20 min",
-        cooling:"1 Std",
-        total: "1 Std 30 min "
+        preparation: "10 min",
+        baking: "25 min",
+        cooling: "1 Std",
+        total: "1 Std 35 min"
     },
 
     related: ["2", "93", "65"],
@@ -5796,26 +5796,28 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
     difficulty: "Einfach",
     rating: 4.6,
 
-    description: "",
+    description: "Saftiger Orangen-Maracuja-Kuchen mit feiner Orangennote und einer süß-säuerlichen Glasur. Schnell gemacht, wunderbar weich und ganz ohne Ei.",
+
     /* 🍽️ ZUTATEN */
     ingredients: {
 
         "Teig": [
-           "120g Mehl <i>(type 405)</i>",
-           "20g Speisestärke",
-           "50g Zucker",
-           "1 TL Backpulver",
-           "1/2 TL Natron",
-           "1/2 Pck. Vanillezucker",
-           "4g Orangenschale",
-           "1 Prise Salz",
-           "100ml Orangen-Maracuja-Nektar",
-           "65ml neutrales Öl",
-           "50g Magerquark"
+            "120 g Mehl <i>(Type 405)</i>",
+            "20 g Speisestärke",
+            "50 g Zucker",
+            "1 TL Backpulver",
+            "1/2 TL Natron",
+            "1/2 Pck. Vanillezucker",
+            "4 g Orangenschale",
+            "1 Prise Salz",
+            "100 ml Orangen-Maracuja-Nektar",
+            "65 ml neutrales Öl",
+            "50 g Magerquark"
         ],
+
         "Glasur": [
-            "90g Puderzucker",
-            "ca. 4 TL Orangen-Maracuja-Nektar",
+            "90 g Puderzucker",
+            "ca. 4 TL Orangen-Maracuja-Nektar"
         ]
 
     },
@@ -5823,18 +5825,116 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
 
-        "Den Ofen auf 180 Grad Ober/Unterhitze vorheizen und eine Springenform (18cm) mit Backpapier auslegen und die Ränder gut einfetten.",
+        "Den Ofen auf 180 Grad Ober-/Unterhitze vorheizen und eine Springform <i>(18 cm)</i> mit Backpapier auslegen und die Ränder gut einfetten.",
 
-"Den Quark mit dem Zucker, dem Öl, dem Salz, dem Vanillezucker, dem Nektar und der Orangenschale mit einem Schneebesen kräftig verrühren.",
+        "Den Quark mit dem Zucker, dem Öl, dem Salz, dem Vanillezucker, dem Nektar und der Orangenschale mit einem Schneebesen kräftig verrühren.",
 
-"Das Mehl mit der Speisestärke, dem Backpulver und dem Natron in einer separaten Schüssel verrühren, zu den flüssigen Zutaten geben und alles nur noch solange mit dem Schneebesen verrühren, bis keine Mehlklümpchen mehr zu sehen sind.",
+        "Das Mehl mit der Speisestärke, dem Backpulver und dem Natron in einer separaten Schüssel vermengen, zu den flüssigen Zutaten geben und alles nur so lange mit dem Schneebesen verrühren, bis keine Mehlklümpchen mehr zu sehen sind.",
 
-"Den Teig in die Form füllen, glattstreichen und im vorgeheizten Backofen im untersten Drittel ca. 20-25min backen. <b>(Stäbchenprobe!!!)</b>",
+        "Den Teig in die Form füllen, glattstreichen und im vorgeheizten Backofen im untersten Drittel ca. 20–25 min backen. <b>(Stäbchenprobe!)</b>",
 
-"Den Kuchen ca. 20min abkühlen lassen, dann aus der Form lösen, weitere 10min auf einem Kuchenrost abkühlen lassen.",
+        "Den Kuchen ca. 20 min abkühlen lassen, dann aus der Form lösen und weitere 10 min auf einem Kuchenrost abkühlen lassen.",
 
-"Dann für die Glasur den Puderzucker nach und nach mit etwas Nektar vermischen, bis eine dickflüssige Paste entsteht. Die Glasur gleichmäßig auf dem Kuchen verteilen und vollständig trocknen lassen."
+        "Dann für die Glasur den Puderzucker nach und nach mit etwas Nektar vermischen, bis eine dickflüssige Paste entsteht. Die Glasur gleichmäßig auf dem Kuchen verteilen und vollständig trocknen lassen."
     ]
+},
+
+{
+    id: "97",
+    title: "Wednesdaypizza",
+    category: ["Belegte Backwaren", "Backen", "ohne Ei", "Kochen", "Ofengerichte"],
+    image: "images/wednesdaypizza.jpeg",
+    time: {
+        preparation: "34 min",
+        baking: "16 min",
+        rising: "1 Std 30 min",
+        total: "2 Std 20 min"
+    },
+
+    related: ["44", "93", "5"],
+    portions: "2 Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Dunkle Wednesdaypizza mit lila Hefeteig, schwarzem Käse und einer cremigen, weißen Knoblauch-Schmand-Soße. Perfekt für Halloween und Wednesday.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "Teig": [
+            "300 g Mehl <i>(Type 405)</i>",
+            "180 ml Wasser",
+            "5 g Trockenhefe",
+            "1 EL Olivenöl",
+            "6 g Salz",
+            "lila Lebensmittelfarbe",
+            "Hartweizengrieß"
+        ],
+
+        "Soße": [
+            "1 große Knoblauchzehe",
+            "140 g Schmand",
+            "1 EL Olivenöl",
+            "Salz"
+        ],
+
+        "Belag": [
+            "50 g Scheiben Salami",
+            "200 g geriebener Gouda",
+            "schwarze Lebensmittelfarbe"
+        ]
+
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+        {
+            text: "Das Mehl mit der Hefe und dem Salz in einer Schüssel vermischen, in der Mitte eine Mulde formen und das Wasser hineingießen."
+        },
+
+        {
+            text: "Dann die Lebensmittelfarbe in das Wasser einrühren, bis es eine dunkle lila Farbe hat (du kannst jederzeit, auch beim Kneten, noch mehr nachgeben, falls es zu hell ist), und alles mit einem Löffel vermengen, bis die Flüssigkeit vollständig aufgenommen wurde."
+        },
+
+        {
+            text: "Daraufhin mit dem Knethaken der Küchenmaschine ca. 10 min zu einem glatten, leicht klebrigen, elastischen Teig kneten. Eine Schüssel mit etwas Öl einfetten, den Teig mit geölten Händen zu einer Kugel formen, in die Schüssel geben, mit etwas Öl bestreichen, abdecken und ca. 1 Std bei Raumtemperatur ruhen lassen, bis er sein Volumen ungefähr verdoppelt hat.",
+            images: ["images/teigwednesday.jpeg"]
+        },
+
+        {
+            text: "Nach Ende der Ruhezeit den Teig auf einer leicht mit Hartweizengrieß bestreuten Arbeitsfläche in 2 Teile à ca. 243 g teilen, jedes Teil zu einer Kugel rundwirken und auf einem mit Grieß bestäubten Untergrund, abgedeckt, weitere 30 min ruhen lassen."
+        },
+
+        {
+            text: "In der Zwischenzeit für die Soße den Knoblauch schälen, pressen und mit dem Olivenöl in einer kleinen Pfanne bei mittlerer Hitze ca. 6 min erhitzen, bis es leicht sprudelt und duftet. Den gesamten Pfanneninhalt mit dem Schmand und etwas Salz in einer kleinen Schale vermengen und beiseitestellen."
+        },
+
+        {
+            text: "15 min vor Ende der Ruhezeit den Ofen auf 260 Grad Ober-/Unterhitze mit einem umgedrehten <b>(sodass die glatte Seite nach oben und die Seite mit den Rändern nach unten zeigt)</b> Backblech vorheizen."
+        },
+
+        {
+            text: "Den Käse mit den Händen <b>(zieh am besten Handschuhe an)</b> mit der Lebensmittelfarbe vermengen, bis er gleichmäßig schwarz bzw. dunkelgrau gefärbt ist."
+        },
+
+        {
+            text: "Dann ein Backpapier mit etwas Grieß bestäuben, eine Teigkugel darauf geben, mit Grieß bestäuben und mit den Händen zu einem Kreis mit ca. 25 cm Durchmesser und einem dünnen Rand ziehen und drücken.",
+            images: ["images/teigwednesday1.jpeg"]
+        },
+
+        {
+            text: "Dann die Hälfte der Soße auf dem Teig verstreichen, die Hälfte der Salami und darauf die Hälfte des Käses verteilen.",
+            images: ["images/teigwednesday2.jpeg"]
+        },
+
+        {
+            text: "Mitsamt Backpapier auf ein großes Brett oder Ähnliches heben, mit dem Backpapier von dem Brett auf das vorgeheizte, umgedrehte Backblech ziehen und im vorgeheizten Backofen ca. 8 min backen."
+        },
+
+        {
+            text: "In der Zwischenzeit die zweite Pizza zubereiten."
+        }
+    ],
 },
 
 ];

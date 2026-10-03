@@ -981,62 +981,61 @@ related: ["45", "7", "20"],
 {
     id: "18",
     title: "Cracker",
-    category: ["Snacks", "Backen", "ohne Ei"], 
+    category: ["Snacks", "Backen", "ohne Ei"],
     image: "images/cracker.jpeg",
-    time:{
-    preparation:"10 min",
-    baking:"10 min",
-    cooling:"2 Std.",
-    total:" 3 Std."
-},
+    time: {
+        preparation: "12 min",
+        baking: "8 min",
+        cooling: "2 Std",
+        resting: "30 min",
+        total: "2 Std. 50 min"
+    },
     related: ["10", "9", "3"],
     portions: "1 Blech",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Knusprige Cracker, in leckerer Würze.",
+    description: "Knusprige Cracker mit leckerer Würze.",
 
     /* 🍽️ ZUTATEN */
     ingredients: {
 
-       "Mürbeteig":  [ 
-        "40g Mehl (Type 405)",
-        "20g sehr kalte Butter",
-        "10ml eiskaltes Wasser",
-    ],
+        "Mürbeteig": [
+            "40 g Mehl <i>(Type 405)</i>",
+            "20 g kalte Butter",
+            "10 ml eiskaltes Wasser",
+            "1/2 TL Salz"
+        ],
 
-        "Paste": [ 
-        "1 EL Olivenöl",
-        "1 TL Sojasauce",
-        "1 TL Salz",
-        "1/2 TL Paprikapulver edelsüß",
-        "1/2 TL Knoblauchpulver",
+        "Paste": [
+            "1 EL Olivenöl",
+            "1 TL Sojasauce",
+            "1 TL Salz",
+            "1/2 TL Paprikapulver, edelsüß",
+            "1/2 TL Knoblauchpulver"
+        ],
 
-    ],
-
-    "Panade": [
-        "1 TL Salz",
-        "1/4 TL Paprikapulver",
-        "1/4 TL Knoblauchpulver edelsüß"
-
-    ]
-},
+        "Panade": [
+            "1 gestrichener TL Salz",
+            "1/4 TL Paprikapulver",
+            "1/4 TL Knoblauchpulver, edelsüß"
+        ]
+    },
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
 
-"Mehl, Butter und Salz für den Teig mit den Händen verkneten, sodass krümeliger „Sand“ entsteht. Eine Mulde in der Mitte formen, Wasser dazugeben und die Mehlkrümel von der Seite unterschieben (am besten nicht mehr kneten), bis alles gerade so zusammenhält. In Frischhaltefolie wickeln und für mind. 2 Stunden im Kühlschrank ruhen lassen. (Am besten über Nacht)",
+        "Mehl, Butter und Salz für den Teig mit den Händen verkneten, sodass krümeliger „Sand“ entsteht. Eine Mulde in der Mitte formen, das Wasser dazugeben und die Mehlkrümel von der Seite unterschieben (am besten nicht mehr kneten), bis alles gerade so zusammenhält. In Frischhaltefolie wickeln und für mind. 2 Stunden im Kühlschrank ruhen lassen. <b>(Am besten über Nacht.)</b>",
 
-"Den Teig aus dem Kühlschrank nehmen, damit er ca. 30 Minuten vor dem Ausrollen aus dem Kühlschrank kommt. In der Zwischenzeit den Ofen auf 200°C Ober-/Unterhitze vorheizen und ein Backblech mit Backpapier belegen.",
+        "Den Teig aus dem Kühlschrank nehmen und ca. 30 min bei Raumtemperatur stehen lassen. Anschließend auf einer leicht bemehlten Arbeitsfläche ca. 3 mm dick ausrollen und kleine Formen ausstechen <i>(alternativ kleine Vierecke ausschneiden)</i>.",
 
-"Dann den Teig auf einer bemehlten Arbeitsfläche circa 3 mm dick ausrollen und kleine Formen ausstechen. (Alternativ kleine Vierecke ausschneiden)",
+        "Die ausgestochenen Teile auf ein mit Backpapier belegtes Backblech legen. Für die Panade alle Zutaten in einer kleinen Schale verrühren und den Ofen auf 200 Grad Ober-/Unterhitze vorheizen.",
 
-"Für die Paste alle Zutaten gut miteinander vermengen und die Cracker damit bestreichen.",
+        "Alle Teile mithilfe eines Pinsels mit der Paste bestreichen und im vorgeheizten Backofen ca. 8 min goldgelb backen.",
 
-"Die Cracker im vorgeheizten Backofen ca. 9 min backen.",
+        "In der Zwischenzeit die Panade in einer Box mit Deckel vermengen.",
 
-"Währenddessen die Zutaten für die Panade in einer Box mit Deckel vermengen, die warmen Kekse dazugeben und einmal ordentlich durchschütteln.",
-  ]
-
+        "Die fertigen Cracker direkt warm aus dem Ofen in die Box mit der Panade geben und einmal ordentlich durchschütteln."
+    ]
 },
 
 {
@@ -5484,7 +5483,7 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
 {
     id: "91",
     title: "Low-Carb-Flammkuchen",
-    category: ["Ofengerichte", "Kochen", "Belegte Backwaren", "Backen"],
+    category: ["Ofengerichte", "Kochen", "Belegte Backwaren", "Backen", "Hauptgerichte"],
     image: "images/lowcarb-flammkuchen.jpeg",
     time: {
         preparation: "10 min",
@@ -5534,6 +5533,307 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
         "Den Boden aus dem Ofen nehmen, mit 100 g Crème fraîche, 95 g Speck sowie der Hälfte der Zwiebelringe belegen und im Ofen auf höchster Grillstufe ca. 1–2 min auf der obersten Schiene fertig backen. <b>(Achtung, es wird schnell zu dunkel!)</b>",
 
         "Die Schritte für den anderen Flammkuchen wiederholen."
+    ]
+},
+
+{
+    id: "92",
+    title: "Vanille-Mirabellenkuchen",
+    category: ["Kuchen & Torten", "Backen", "ohne Ei", "Vegetarisch"],
+    image: "images/vanille-mirabellen-kuchen.jpeg",
+    time: {
+        preparation: "10 min",
+        baking: "40 min",
+        cooling: "1 Std",
+        total: "1 Std 50 min"
+    },
+
+    related: ["4", "42", "61"],
+    portions: "1 Kuchen",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Weicher, saftiger Mirabellenkuchen mit einer feinen Vanillenote und vielen fruchtigen Mirabellen. – ganz ohne Ei.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "": [
+            "400 g Mirabellen",
+            "250 g Mehl <i>(Type 405)</i>",
+            "120 g Zucker",
+            "1/2 Pck. Vanillezucker",
+            "100 g weiche Butter",
+            "350 g kalte Vanillesoße",
+            "1 Pck. Backpulver",
+            "1 Prise Salz"
+        ]
+
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+
+        "Die Mirabellen waschen, abtrocknen, halbieren und die Kerne entfernen.",
+
+        "Dann den Ofen auf 180 Grad Ober-/Unterhitze vorheizen und eine Springform <i>(25 cm)</i> mit Backpapier auslegen und die Seiten gut einfetten.",
+
+        "Die Butter mit dem Zucker, dem Vanillezucker und dem Salz in eine Schüssel geben und mit dem Rührhaken des Handmixers ca. 2–3 min auf höchster Stufe cremig schlagen.",
+
+        "Die Vanillesoße mit einem Schneebesen unterrühren, bis sich die Butter-Zucker-Mischung bis auf kleine Stückchen darin aufgelöst hat.",
+
+        "Mehl und Backpulver vermengen und mit einem Schneebesen nur kurz unter den Teig rühren, bis kein trockenes Mehl mehr zu sehen ist.",
+
+        "Die Mirabellen vorsichtig mit einem Teigspatel einigermaßen gleichmäßig unter den Teig heben, den Teig in die Form geben, glattstreichen und im vorgeheizten Backofen ca. 40 min im unteren Drittel backen. <b>(Stäbchenprobe! Ein paar feuchte Krümel dürfen noch am Stäbchen kleben.)</b>",
+
+        "Aus dem Ofen nehmen und mindestens 1 Stunde abkühlen lassen. Dann aus der Form lösen und servieren."
+    ]
+},
+
+{
+    id: "93",
+    title: "Kartoffelsuppe mit Würstchen",
+    category: ["Suppen & Eintöpfe", "Kochen", "Hauptgerichte"],
+    image: "images/kartoffelsuppe-mit-würstchen.jpeg",
+    time: {
+        preparation: "15 min",
+        cooking: "25 min",
+        total: "40 min"
+    },
+
+    related: ["7", "67", "6"],
+    portions: "3 Portionen",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Cremige Kartoffelsuppe mit goldbraun angebratenen Zwiebeln, würzigem Majoran und herzhaften Wiener-Würstchen. Einfach, sättigend und perfekt für kalte Regentage.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "": [
+            "1 kg Kartoffeln",
+            "600 ml Gemüsebrühe",
+            "2 kleine weiße Zwiebeln",
+            "15 g Butter",
+            "1/2 TL getrockneter Majoran",
+            "1 Prise Muskat",
+            "1/2 TL Salz",
+            "Pfeffer",
+            "200 g Wiener-Würstchen"
+        ]
+
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+
+        "Die Kartoffeln schälen und in kleine Würfel schneiden.",
+
+        "Die Zwiebeln ebenfalls schälen und sechsteln.",
+
+        "Die Butter in einem Topf bei höchster Stufe schmelzen, bis sie sprudelt. Die Zwiebeln dazugeben und unter Rühren ca. 2 min goldbraun anbraten.",
+
+        "Die Kartoffeln dazugeben, alles mit der Gemüsebrühe ablöschen, Majoran, Salz, Pfeffer und Muskat unterrühren, aufkochen und bei mittlerer Hitze sowie geschlossenem Deckel ca. 20–25 min köcheln lassen, bis die Kartoffeln sehr weich sind.",
+
+        "In der Zwischenzeit die Enden der Würstchen entfernen und die Würstchen in grobe Scheiben schneiden.",
+
+        "Die Suppe vom Herd nehmen, gut durchpürieren, die Würstchen unterheben und servieren."
+    ]
+},
+
+{
+    id: "94",
+    title: "Quiche Lorraine",
+    tips: [
+        "Aus übrig gebliebenem Teig kannst du super [[cracker||Cracker]] backen.",
+        "Du kannst den Teig auch schon am Vortag oder 2 Tage vorher zubereiten und dann im Kühlschrank, eingepackt in Frischhaltefolie, zwischenlagern."
+    ],
+    category: ["Backen", "Belegte Backwaren", "Ofengerichte", "Kochen", "Hauptgerichte"],
+    image: "images/quiche-lorraine.jpeg",
+    time: {
+        preparation: "20 min",
+        baking: "40 min",
+        cooling: "2 Std 5 min",
+        total: "3 Std 5 min"
+    },
+
+    related: ["18", "92", "9"],
+    portions: "1 Quiche",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Cremige Füllung mit salzigem Speck, würzigem Käse und knusprig-mürbem Teig.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "Teig": [
+            "200 g Mehl <i>(Type 405)</i>",
+            "100 g kalte Butter",
+            "50 ml eiskaltes Wasser",
+            "1 gute Prise Salz"
+        ],
+
+        "Füllung": [
+            "250 g Tiroler Speckwürfel",
+            "250 g geriebener Emmentaler",
+            "200 g Crème fraîche",
+            "4 Eier",
+            "50 g Milch",
+            "Salz"
+        ]
+
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+
+        {text:"Mehl, Butter und Salz für den Teig mit den Händen verkneten, sodass krümeliger „Sand“ entsteht. Eine Mulde in der Mitte formen, das Wasser dazugeben und die Mehl-Butter-Krümel mit einem Löffel unterrühren, bis große, einigermaßen zusammenhaltende Krümel entstehen.",
+        },
+        {
+        text:"Den Teig in Frischhaltefolie wickeln und für mind. 2 Std., besser über Nacht, im Kühlschrank ruhen lassen. <i>(Ich habe ihn einfach am Morgen vorbereitet.)</i>",
+        },
+        {
+        text:"Den Teig ca. 30 min vor der Verwendung aus dem Kühlschrank nehmen.",
+        },
+        {
+        text:"Dann den Ofen auf 180 Grad Ober-/Unterhitze vorheizen. Den Teig auf eine bemehlte Arbeitsfläche geben, mit etwas Mehl bestäuben und ausrollen. Dabei immer wieder wenden und mit Mehl bestäuben, sodass er nicht an der Arbeitsfläche kleben bleibt.",
+        },
+        {
+        text:"Wenn der Teig ca. 4–5 cm länger als deine Form ist, in eine gefettete Tarteform <i>(ca. 26 cm)</i> geben, mit einer Gabel den Boden mehrfach einstechen und die Ränder so abschneiden, dass sie oben an der Form aufhören. <i>(Der Teig wird beim Backen noch etwas nach unten gehen.)</i>",
+        },
+        {
+        text:"Die Eier verquirlen, die Milch, die Crème fraîche und das Salz dazugeben und glatt rühren.",
+        },
+        {
+        text:"Die Speckwürfel auf dem Boden und den Käse oben drauf verteilen und die Eiermischung gleichmäßig darübergießen.",
+        },
+        {
+        text:"Dann die Form ein paar Mal hin und her bewegen, sodass sich die Eimasse gleichmäßig verteilt.",
+        images: [
+            "images/quiche-lorraine1.jpeg"
+        ],
+        },
+        {
+        text:"Die Quiche ca. 40 min im vorgeheizten Ofen goldbraun backen."
+        },
+        {
+        text:"Aus dem Ofen nehmen, mind 5 min abkühlen lassen und kalt oder warm servieren.",
+        images: [
+            "images/quiche-lorraine2.jpeg"
+        ],
+        },
+    ]
+},
+
+{
+    id: "95",
+    title: "Schnelles Chili con Carne",
+    category: ["Pfannengerichte", "Kochen", "Fleisch", "Hauptgerichte"],
+    image: "images/schnelles-chilli-con-carne.jpeg",
+    time: {
+        cooking: "30 min",
+        total: "30 min"
+    },
+
+    related: ["88", "56", "69"],
+    portions: "6 Portionen",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Schnelles, unkompliziertes und aromatisches Chili con Carne, das ganz ohne Schneiden, Vorbereitungszeit und langes Kochen auskommt.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "": [
+            "800 g Rinderhack",
+            "400 g Tomate al Frito",
+            "2 EL Tomatenmark",
+            "3 Dosen Kidneybohnen <i>(à 400 g)</i>",
+            "1 Dose Mais <i>(à 400 g)</i>",
+            "1 EL Worcestersauce",
+            "neutrales Öl",
+            "Salz",
+            "Pfeffer",
+            "Chiliflocken <i>(Menge nach Belieben)</i>"
+        ]
+
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+
+        "Etwas Öl in einem beschichteten Topf erhitzen.",
+
+        "Das Hackfleisch dazugeben, salzen, pfeffern und auf höchster Stufe unter gelegentlichem Rühren ca. 15 min krümelig braun braten, bis keine Flüssigkeit mehr zu sehen ist.",
+
+        "In der Zwischenzeit die Bohnen und den Mais abgießen und abspülen.",
+
+        "Das Tomatenmark unter das Hackfleisch rühren und ca. 2 weitere Minuten mitbraten.",
+
+        "Mit der Worcestersauce ablöschen, die Tomate al Frito, den Mais und die Bohnen unterrühren, aufkochen und ca. 10 weitere Minuten bei mittlerer Hitze köcheln lassen.",
+
+        "Mit Salz, Pfeffer und Chiliflocken abschmecken und nach Belieben mit Reis oder Brot servieren."
+    ]
+},
+
+{
+    id: "96",
+    title: "Orangen-Maracuja-Kuchen",
+    category: ["Kuchen & Torten", "Backen", "ohne Ei", "Vegetarisch"],
+    image: "images/orangen-maracuja-kuchen.jpeg",
+    time: {
+        preparation:"10",
+        baking: "20 min",
+        cooling:"1 Std",
+        total: "1 Std 30 min "
+    },
+
+    related: ["2", "93", "65"],
+    portions: "1 Kuchen",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "",
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "Teig": [
+           "120g Mehl <i>(type 405)</i>",
+           "20g Speisestärke",
+           "50g Zucker",
+           "1 TL Backpulver",
+           "1/2 TL Natron",
+           "1/2 Pck. Vanillezucker",
+           "4g Orangenschale",
+           "1 Prise Salz",
+           "100ml Orangen-Maracuja-Nektar",
+           "65ml neutrales Öl",
+           "50g Magerquark"
+        ],
+        "Glasur": [
+            "90g Puderzucker",
+            "ca. 4 TL Orangen-Maracuja-Nektar",
+        ]
+
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+
+        "Den Ofen auf 180 Grad Ober/Unterhitze vorheizen und eine Springenform (18cm) mit Backpapier auslegen und die Ränder gut einfetten.",
+
+"Den Quark mit dem Zucker, dem Öl, dem Salz, dem Vanillezucker, dem Nektar und der Orangenschale mit einem Schneebesen kräftig verrühren.",
+
+"Das Mehl mit der Speisestärke, dem Backpulver und dem Natron in einer separaten Schüssel verrühren, zu den flüssigen Zutaten geben und alles nur noch solange mit dem Schneebesen verrühren, bis keine Mehlklümpchen mehr zu sehen sind.",
+
+"Den Teig in die Form füllen, glattstreichen und im vorgeheizten Backofen im untersten Drittel ca. 20-25min backen. <b>(Stäbchenprobe!!!)</b>",
+
+"Den Kuchen ca. 20min abkühlen lassen, dann aus der Form lösen, weitere 10min auf einem Kuchenrost abkühlen lassen.",
+
+"Dann für die Glasur den Puderzucker nach und nach mit etwas Nektar vermischen, bis eine dickflüssige Paste entsteht. Die Glasur gleichmäßig auf dem Kuchen verteilen und vollständig trocknen lassen."
     ]
 },
 

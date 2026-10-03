@@ -5842,7 +5842,7 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
 {
     id: "97",
     title: "Wednesdaypizza",
-    category: ["Belegte Backwaren", "Backen", "ohne Ei", "Kochen", "Ofengerichte"],
+    category: ["Belegte Backwaren", "Backen", "ohne Ei", "Kochen", "Ofengerichte", "Hauptgerichte"],
     image: "images/wednesdaypizza.jpeg",
     time: {
         preparation: "34 min",

@@ -244,3 +244,64 @@ body #menuBtn.home-menu-button.right-menu-button {
     transform: none !important;
     z-index: 99999 !important;
 }
+/* =========================================
+   ABGEHAKTE ZUTATEN DURCHSTREICHEN
+========================================= */
+
+.ingredient-list li:has(input[type="checkbox"]:checked) span {
+    text-decoration: line-through;
+    opacity: 0.55;
+}
+/* =========================================
+   DRUCKANSICHT
+========================================= */
+
+@media print {
+
+    /* Burgermenü und Overlay ausblenden */
+    #menuBtn,
+    #sideMenu,
+    #overlay,
+    .home-menu-button,
+    .home-side-menu,
+    .home-overlay {
+        display: none !important;
+    }
+
+    /* Normale Seitenbreite beim Drucken */
+    html,
+    body {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: white !important;
+        color: black !important;
+    }
+
+    /* Rezeptinhalt nicht verschieben */
+    #content {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Keine Elemente abschneiden */
+    .card {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    /* Zutaten und Zubereitung sauber drucken */
+    .ingredient-list,
+    ol,
+    ul {
+        break-inside: auto;
+    }
+
+    /* Bilder nicht über die Seite hinausragen lassen */
+    img {
+        max-width: 100% !important;
+    }
+
+}

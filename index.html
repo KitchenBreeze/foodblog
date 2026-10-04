@@ -37,6 +37,8 @@
     href="home.css"
 >
 
+<link rel="stylesheet" href="rezepte.css">
+
 <script src="recipes.js"></script>
 
 </head>
@@ -1112,40 +1114,53 @@ if (
 
 function createRecipeCard(recipe) {
 
+    const recipeUrl =
+        `recipes/${createSlug(recipe.title)}.html`;
+
     return `
 
-        <a
-            class="home-recipe-card"
-            href="recipes/${createSlug(recipe.title)}.html"
-        >
+        <div class="recipe-card">
 
-            <div class="home-recipe-image">
+            <div class="recipe-card-image">
 
-                <img
-                    src="${recipe.image}"
-                    alt="${recipe.title}"
-                    loading="lazy"
+                <a href="${recipeUrl}">
+
+                    <img
+                        src="${recipe.image}"
+                        alt="${recipe.title}"
+                        loading="lazy"
+                    >
+
+                </a>
+
+                <button
+                    class="favorite-button"
+                    data-favorite-id="${recipe.id}"
+                    aria-label="Als Favorit markieren"
+                    aria-pressed="false"
+                    type="button"
+                >
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="recipe-card-content">
+
+                <a
+                    href="${recipeUrl}"
+                    class="recipe-card-title"
                 >
 
-            </div>
+                    <h2>${recipe.title}</h2>
 
-
-            <div class="home-recipe-content">
-
-                <h3>
-                    ${recipe.title}
-                </h3>
-
-                <p>
-                    ${recipe.description || ""}
-                </p>
+                </a>
 
             </div>
 
-        </a>
+        </div>
 
     `;
-
 }
 
 
@@ -1582,6 +1597,24 @@ searchInput.addEventListener(
         font-size: 25px;
     }
 
+}
+
+#searchResultsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+@media (max-width: 800px) {
+    #searchResultsGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    #searchResultsGrid {
+        grid-template-columns: 1fr;
+    }
 }
 
 </style>

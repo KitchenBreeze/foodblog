@@ -411,6 +411,53 @@ a {
 
 }
 
+/* =========================================
+   ZUTATEN-SUCHE
+========================================= */
+
+.ingredient-search {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.ingredient-search #ingredientInput {
+    flex: 1;
+    margin: 0;
+    border-radius: 12px 0 0 12px;
+}
+
+.ingredient-search #searchButton {
+    width: 52px;
+    min-width: 52px;
+    border: none;
+    border-radius: 0 12px 12px 0;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+#searchButton {
+    background: #171718;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0 16px;
+    margin-left: 6px;
+}
+
+#searchButton:hover {
+    background: #171718;
+    border-color: #777;
+}
+
 </style>
 
 </head>
@@ -504,7 +551,8 @@ a {
      SUCHFELD
 ====================================== -->
 
-<div class="ingredient-search">
+<div class="ingredient-search home-search">
+
     <input
         id="ingredientInput"
         type="search"
@@ -518,13 +566,14 @@ a {
     <button
         id="searchButton"
         type="button"
+        class="search-icon"
         aria-label="Zutaten suchen"
         title="Suchen"
     >
-        🔍
+        ⌕
     </button>
-</div>
 
+</div>
 
     <!-- =====================================
          AUSWAHL
@@ -1250,6 +1299,11 @@ function searchIngredients(saveState = true) {
     }
 
 }
+document
+    .getElementById("searchButton")
+    .addEventListener("click", function () {
+        searchIngredients();
+    });
 
 
 

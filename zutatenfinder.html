@@ -501,9 +501,10 @@ a {
 >
 
     <!-- =====================================
-         SUCHFELD
-    ====================================== -->
+     SUCHFELD
+====================================== -->
 
+<div class="ingredient-search">
     <input
         id="ingredientInput"
         type="search"
@@ -514,6 +515,15 @@ a {
         aria-label="Zutaten eingeben"
     >
 
+    <button
+        id="searchButton"
+        type="button"
+        aria-label="Zutaten suchen"
+        title="Suchen"
+    >
+        🔍
+    </button>
+</div>
 
 
     <!-- =====================================
@@ -644,22 +654,16 @@ function getRecipeUrl(recipe) {
 
     if (recipe.title) {
 
-        const slug = recipe.title
-
+        const slug = String(recipe.title || "")
             .toLowerCase()
-
-            .normalize("NFD")
-
-            .replace(/[\u0300-\u036f]/g, "")
-
-            .replace(/ä/g, "ae")
-            .replace(/ö/g, "oe")
-            .replace(/ü/g, "ue")
-            .replace(/ß/g, "ss")
-
-            .replace(/[^a-z0-9]+/g, "-")
-
-            .replace(/^-+|-+$/g, "");
+            .replaceAll("ä", "ae")
+            .replaceAll("ö", "oe")
+            .replaceAll("ü", "ue")
+            .replaceAll("ß", "ss")
+            .replace(/[^a-z0-9\s-]/g, "")
+            .replace(/\s+/g, "-")
+            .replace(/-+/g, "-")
+            .replace(/^-|-$/g, "");
 
         return `recipes/${slug}.html`;
     }

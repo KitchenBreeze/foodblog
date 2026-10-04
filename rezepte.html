@@ -362,6 +362,10 @@
         Vegan
     </button>
 
+    <button class="filter-item" data-cat="Backen|Glutenfrei" type="button">
+        Glutenfrei
+    </button>
+
     <button class="filter-item" data-cat="Backen|Airfryer" type="button">
         Airfryer
     </button>
@@ -1088,14 +1092,14 @@ function render() {
     // Diese Kategorien gelten als UND-Filter
     const dietaryCategories = subCategories.filter(
         item =>
-            ["Vegan", "Vegetarisch", "Fleisch", "Fisch"]
+            ["Vegan", "Vegetarisch", "Fleisch", "Fisch", "Glutenfrei"]
                 .includes(item.sub)
     );
 
     // Alle anderen Unterkategorien gelten als ODER-Filter
     const otherCategories = subCategories.filter(
         item =>
-            !["Vegan", "Vegetarisch", "Fleisch", "Fisch"]
+            !["Vegan", "Vegetarisch", "Fleisch", "Fisch", "Glutenfrei"]
                 .includes(item.sub)
     );
 

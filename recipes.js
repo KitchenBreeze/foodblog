@@ -6217,7 +6217,7 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
 {
     id: "103",
     title: "Wikingertopf",
-    category: ["Ofengerichte", "Fleisch", "Kochen"],
+    category: ["Hauptgerichte", "Fleisch", "Kochen"],
     image: "images/wikingertopf.jpeg",
     time: {
         preparation: "25 min",

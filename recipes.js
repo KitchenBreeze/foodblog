@@ -172,7 +172,7 @@ const RECIPES = [
         cooking:"15 min",
         total:"50 min"
     },
-    related: ["2", "7", "33"],
+    related: ["89", "97", "109"],
     portions: "12 kleine Klöße",
     difficulty: "Einfach",
     rating: 1,
@@ -1097,7 +1097,7 @@ related: ["45", "7", "20"],
     cooking:"30 min",
     total:" 45 min"
 },
-    related: ["47","3","2"],
+    related: ["107","73","29"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -1156,7 +1156,7 @@ related: ["45", "7", "20"],
     cooking:"18 min",
     total:" 30 min"
 },
-    related: ["42", "49", "1"],
+    related: ["102", "94", "88"],
     portions: "6 Stück",
     difficulty: "Einfach",
     rating: 4.6,
@@ -2693,7 +2693,7 @@ related: ["45", "7", "20"],
         cooking: "20 min",
         total:"2 std"
     },
-      related: ["47", "13", "12"],
+      related: ["47", "103", "92"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
@@ -6175,6 +6175,79 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
         "Daraufhin erneut gut durchrühren und weitere 30 min <b>(unter nach wie vor denselben Bedingungen, d. h. ohne Deckel bei niedriger Hitze (ca. Stufe 3))</b> köcheln lassen und dabei alle 5 min gut durchrühren.",
 
         "Vom Herd nehmen, nach Belieben glatt pürieren und in ein ausgekochtes Glas oder bei baldigem Verzehr in ein beliebiges Gefäß mit Deckel füllen."
+    ]
+},
+{
+    id: "102",
+    title: "Bratwürstchen aus dem Ofen",
+    category: ["Ofengerichte", "Fleisch", "Kochen"],
+    image: "images/bratwuerstchen-aus-ofen.jpeg",
+    time: {
+        preparation: "2 min",
+        baking: "8 min",
+        total: "10 min"
+    },
+
+    related: ["106", "52", "9"],
+    portions: "28 Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Nürnberger Rostbratwürstchen aus dem Ofen – schnell, unkompliziert und ganz ohne Pfanne.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "": [
+            "28 Nürnberger Rostbratwürste <i>(ca. 600 g)</i>"
+        ]
+
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+        "Den Ofen auf höchste Grillstufe vorheizen.",
+
+        "In der Zwischenzeit ein Backblech mit Backpapier belegen und die Würstchen gleichmäßig darauf verteilen.",
+
+        "Die Würstchen im vorgeheizten Ofen ca. 5 min im obersten Drittel braun braten, dann aus dem Ofen nehmen, mit zwei Gabeln wenden und von der anderen Seite ca. 2–3 min fertig backen, bis sie auch von dieser Seite schön braun sind. <b>(Achtung: Die Würstchen sind sehr schnell fertig!)</b>"
+    ]
+},
+
+{
+    id: "102",
+    title: "Bratwürstchen aus dem Ofen",
+    category: ["Ofengerichte", "Fleisch", "Kochen"],
+    image: "images/bratwuerstchen-aus-ofen.jpeg",
+    time: {
+        preparation: "2 min",
+        baking: "8 min",
+        total: "10 min"
+    },
+
+    related: ["106", "52", "9"],
+    portions: "28 Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Nürnberger Rostbratwürstchen aus dem Ofen – schnell, unkompliziert und ganz ohne Pfanne.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "": [
+            "28 Nürnberger Rostbratwürste <i>(ca. 600 g)</i>"
+        ]
+
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+        "Den Ofen auf höchste Grillstufe vorheizen.",
+
+        "In der Zwischenzeit ein Backblech mit Backpapier belegen und die Würstchen gleichmäßig darauf verteilen.",
+
+        "Die Würstchen im vorgeheizten Ofen ca. 5 min im obersten Drittel braun braten, dann aus dem Ofen nehmen, mit zwei Gabeln wenden und von der anderen Seite ca. 2–3 min fertig backen, bis sie auch von dieser Seite schön braun sind. <b>(Achtung: Die Würstchen sind sehr schnell fertig!)</b>"
     ]
 },
 ];

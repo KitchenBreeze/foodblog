@@ -138,37 +138,53 @@ a {
 
 
 <div id="tips">
-
-
-<a href="tipps-tricks/rundwirken.html">
-
-    <div class="tip-card">
-
-        <img
-            src="images/rundwirken.jpeg"
-            alt="Rundwirken eines Teiglings"
-        >
-
-        <div class="tip-card-content">
-
-            <h2>
-                Rundwirken
-            </h2>
-
-            <p>
-                So formst du einen Teigling zu einer
-                schönen, runden Kugel und gibst ihm
-                die nötige Spannung.
-            </p>
-
-        </div>
-
-    </div>
-
-</a>
-
-
 </div>
+
+
+<script src="tipps.js"></script>
+
+<script>
+
+const tipsContainer =
+    document.getElementById("tips");
+
+tipsContainer.innerHTML =
+    TIPS
+        .map(
+            tip => `
+
+                <a
+                    href="tipps-tricks/${tip.id}.html"
+                >
+
+                    <div class="tip-card">
+
+                        <img
+                            src="${tip.image}"
+                            alt="${tip.title}"
+                        >
+
+                        <div class="tip-card-content">
+
+                            <h2>
+                                ${tip.title}
+                            </h2>
+
+                            <p>
+                                ${tip.description}
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            `
+        )
+        .join("");
+
+</script>
 
 
 </div>

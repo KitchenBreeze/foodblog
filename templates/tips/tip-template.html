@@ -240,24 +240,35 @@ if (
 
             if (section.image) {
 
-                const image =
-                    document.createElement(
-                        "img"
-                    );
+    const images =
+        Array.isArray(section.image)
+            ? section.image
+            : [section.image];
 
-                image.src =
-                    "../" + section.image;
+    images.forEach(
+        imagePath => {
 
-                image.alt =
-                    section.alt ||
-                    section.title ||
-                    TIP_DATA.title;
-
-                sectionElement.appendChild(
-                    image
+            const image =
+                document.createElement(
+                    "img"
                 );
 
-            }
+            image.src =
+                "../" + imagePath;
+
+            image.alt =
+                section.alt ||
+                section.title ||
+                TIP_DATA.title;
+
+            sectionElement.appendChild(
+                image
+            );
+
+        }
+    );
+
+}
 
 
             if (section.video) {

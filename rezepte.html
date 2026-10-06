@@ -1027,7 +1027,7 @@ function render() {
        REZEPTE FILTERN
     ===================================== */
 
-    const filtered =
+    let filtered =
 
         RECIPES
             .slice()
@@ -1201,7 +1201,18 @@ function render() {
                 );
 
             });
+/* =============================
+   SCHNELLFILTER – MAX. 45 MINUTEN
+============================= */
 
+if (urlQuick) {
+
+    filtered = filtered.filter(
+        recipe =>
+            getTotalMinutes(recipe) <= 45
+    );
+
+}
 
     /* =====================================
        GRID LEEREN

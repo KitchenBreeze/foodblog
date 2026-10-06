@@ -6282,6 +6282,7 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
         "Daraufhin das Mehl mit einem Schneebesen einrühren und ca. 30 sek weiterrühren. Dann nach und nach die Flüssigkeit unter ständigem Rühren mit dem Schneebesen dazugeben <b>(d. h. immer etwas Flüssigkeit einrühren, andicken lassen und anschließend weitere Flüssigkeit dazugeben)</b>.",
 
         "Erbsen, Möhrchen und Hackbällchen unterrühren, salzen, pfeffern, aufkochen und bei mittlerer Hitze ca. 5 min bei geschlossenem Deckel fertig köcheln."
+    
     ]
 },
 ];

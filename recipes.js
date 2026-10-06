@@ -6016,7 +6016,7 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
 {
     id: "99",
     title: "Thunfischsalat",
-    category: ["Salate", "Fisch", "Kochen"],
+    category: ["Salate", "Fisch", "Kochen","Hauptgerichte"],
     image: "images/thunfischsalat.jpeg",
     time: {
         preparation: "15 min",
@@ -6077,7 +6077,7 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
 {
     id: "100",
     title: "Maultaschen Caprese",
-    category: ["Ofengerichte", "Pasta", "Kochen"],
+    category: ["Ofengerichte", "Pasta", "Kochen","Hauptgerichte"],
     image: "images/maultaschen-caprese.jpeg",
     time: {
         preparation: "10 min",
@@ -6180,7 +6180,7 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
 {
     id: "102",
     title: "Bratwürstchen aus dem Ofen",
-    category: ["Ofengerichte", "Fleisch", "Kochen"],
+    category: ["Ofengerichte", "Fleisch", "Kochen", "Hauptgerichte"],
     image: "images/bratwuerstchen-aus-ofen.jpeg",
     time: {
         preparation: "2 min",
@@ -6216,38 +6216,72 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
 
 {
     id: "102",
-    title: "Bratwürstchen aus dem Ofen",
+    title: "Wikingertopf",
     category: ["Ofengerichte", "Fleisch", "Kochen"],
-    image: "images/bratwuerstchen-aus-ofen.jpeg",
+    image: "images/wikingertopf.jpeg",
     time: {
-        preparation: "2 min",
-        baking: "8 min",
-        total: "10 min"
+        preparation: "25 min",
+        cooking: "30 min",
+        total: "55 min"
     },
 
-    related: ["106", "52", "9"],
-    portions: "28 Stück",
+    related: ["15", "82", "99"],
+    portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
 
-    description: "Nürnberger Rostbratwürstchen aus dem Ofen – schnell, unkompliziert und ganz ohne Pfanne.",
+    description: "Herzhafter Wikingertopf mit saftigen Hackbällchen, Erbsen und Möhrchen in einer cremigen Sahnesoße. Zusammen mit Kartoffelpüree ein einfaches, sättigendes und wunderbar gemütliches Familienessen.",
 
     /* 🍽️ ZUTATEN */
     ingredients: {
 
-        "": [
-            "28 Nürnberger Rostbratwürste <i>(ca. 600 g)</i>"
+        "Hackbällchen": [
+            "800 g gemischtes Hackfleisch",
+            "1 weiße Zwiebel",
+            "3 Eier",
+            "1 EL Senf",
+            "1 EL Worcestersauce",
+            "100 g Paniermehl",
+            "1 Prise Muskat",
+            "Salz",
+            "Pfeffer"
+        ],
+
+        "Soße": [
+            "1 Dose Möhrchen <i>(à 400 g)</i>",
+            "1 Dose Erbsen <i>(à 400 g)</i>",
+            "2 kleine weiße Zwiebeln",
+            "40 g Butter",
+            "40 g Mehl",
+            "400 ml Sahne",
+            "250 ml Rinderbrühe",
+            "Salz",
+            "Pfeffer"
+        ],
+
+        "Dazu": [
+            "[[cremiges-kartoffelpueree|Kartoffelpüree]]"
         ]
 
     },
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
-        "Den Ofen auf höchste Grillstufe vorheizen.",
+        "Die Zwiebel für die Hackbällchen schälen und fein hacken.",
 
-        "In der Zwischenzeit ein Backblech mit Backpapier belegen und die Würstchen gleichmäßig darauf verteilen.",
+        "Das Hackfleisch in eine große Schüssel geben und mit den Zwiebelwürfeln, der Worcestersauce, den Eiern, dem Senf, dem Paniermehl, Salz, Pfeffer und Muskat kräftig zu einer formbaren Masse verkneten.",
 
-        "Die Würstchen im vorgeheizten Ofen ca. 5 min im obersten Drittel braun braten, dann aus dem Ofen nehmen, mit zwei Gabeln wenden und von der anderen Seite ca. 2–3 min fertig backen, bis sie auch von dieser Seite schön braun sind. <b>(Achtung: Die Würstchen sind sehr schnell fertig!)</b>"
+        "Je ca. 1 leicht gehäuften TL der Masse nehmen und zu einem Bällchen formen.",
+
+        "Die Butter in einem beschichteten Topf schmelzen, bis sie sprudelt. Die Hälfte der Bällchen hineingeben und unter gelegentlichem Wenden bei höchster Stufe ca. 9 min rundherum knusprig anbraten, mit einer Schaumkelle herausnehmen und beiseitestellen. Die zweite Ladung im Topf ebenfalls ca. 9 min rundherum knusprig anbraten, mit einer Schaumkelle herausnehmen und beiseitestellen.",
+
+        "Währenddessen die Zwiebeln für die Soße schälen und fein hacken und die Rinderbrühe mit der Sahne verrühren.",
+
+        "Dann die Zwiebelwürfel im Bratfett ca. 1–2 min glasig dünsten.",
+
+        "Daraufhin das Mehl mit einem Schneebesen einrühren und ca. 30 sek weiterrühren. Dann nach und nach die Flüssigkeit unter ständigem Rühren mit dem Schneebesen dazugeben <b>(d. h. immer etwas Flüssigkeit einrühren, andicken lassen und anschließend weitere Flüssigkeit dazugeben)</b>.",
+
+        "Erbsen, Möhrchen und Hackbällchen unterrühren, salzen, pfeffern, aufkochen und bei mittlerer Hitze ca. 5 min bei geschlossenem Deckel fertig köcheln."
     ]
 },
 ];

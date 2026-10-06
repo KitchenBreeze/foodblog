@@ -6215,7 +6215,7 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
 },
 
 {
-    id: "102",
+    id: "103",
     title: "Wikingertopf",
     category: ["Ofengerichte", "Fleisch", "Kochen"],
     image: "images/wikingertopf.jpeg",

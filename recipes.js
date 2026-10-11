@@ -6625,6 +6625,7 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
         {
             text: "Den Teig in 4 Teile à ca. 180 g teilen. Jedes Teigstück zu einer Kugel rundschleifen, sodass es eine glatte Oberfläche erhält."
         },
+        
         {
             text: "Die Teigkugeln mit der glatten Seite nach unten auf die Arbeitsfläche legen und zu ca. 1 cm dicken Kreisen flach drücken. <b>(Dabei ruhig in der Mitte etwas dicker bleiben als an den Rändern.)</b> In die Mitte jeweils einen gut gehäuften TL Pflaumenmus geben.",
             images: [

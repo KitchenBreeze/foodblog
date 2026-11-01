@@ -425,22 +425,22 @@ const container = document.getElementById("content");
 
 // SEO Daten setzen
 
-if(recipe){
+// SEO-Daten setzen
 
-    // Titel im Browser ändern
-    document.title = recipe.title + " – KitchenBreeze";
+if (recipe) {
 
+    // Individuellen SEO-Titel verwenden
+    document.title =
+        (recipe.seoTitle || recipe.title) + " – KitchenBreeze";
 
-    // Google Beschreibung setzen
+    // Meta-Beschreibung setzen
     const metaDescription = document.getElementById("metaDescription");
 
-    if(metaDescription){
-
+    if (metaDescription) {
         metaDescription.setAttribute(
             "content",
-            recipe.description
+            recipe.metaDescription || recipe.description || ""
         );
-
     }
     // Google Rezept Schema
 
@@ -453,13 +453,13 @@ if(schema){
         "@context": "https://schema.org",
         "@type": "Recipe",
 
-        "name": recipe.title,
+       "name": recipe.title,
 
-        "image": [
-            window.location.origin + "/" + recipe.image
-        ],
+      "image": [
+    new URL(recipe.image, window.location.href).href
+],
 
-        "description": recipe.description,
+"description": recipe.metaDescription || recipe.description || "",
 
         "author": {
             "@type": "Organization",

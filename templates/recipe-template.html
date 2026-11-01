@@ -586,8 +586,8 @@ return query
 if (recipe) {
 
     document.title =
-        recipe.title +
-        " – KitchenBreeze";
+    (recipe.seoTitle || recipe.title) +
+    " – KitchenBreeze";
 
 
     const metaDescription =

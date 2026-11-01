@@ -12,7 +12,12 @@ const RECIPES = [
         "Spaghetti mit Knoblauch und Öl",
         "Spaghetti mit Knoblauch und Chili",
         "italienische Pasta",
-        "schnelle Pasta"
+        "schnelle Pasta",
+        "Leckeres Abendessen",
+        "Leckere Gerichte",
+        "Leckere Rezepte",
+        "italiensiche Rezepte",
+        "Knoblauch"
     ],
 
     category: ["Pasta", "Hauptgerichte", "Kochen"],
@@ -98,7 +103,10 @@ const RECIPES = [
             "1 TL Limettensaft",
             "1/2 TL Chiliflocken",
             "Salz",
-            "Pfeffer"
+            "Pfeffer",
+            "Leckeres Abendessen",
+        "Leckere Gerichte",
+        "Leckere Rezepte"
         ]
     },
 
@@ -208,7 +216,10 @@ const RECIPES = [
         "Thüringer Klöße mit Semmelbröseln",
         "Weihnachten Beilagen",
         "Beilagen",
-        "Festessen"
+        "Festessen",
+        "Leckeres Abendessen",
+        "Leckere Gerichte",
+        "Leckere Rezepte"
     ],
     category: ["Beilagen", "Kochen"],
     image: "images/Thüringer-Klöße.jpeg",
@@ -273,7 +284,10 @@ const RECIPES = [
         "asiatische Gemüsepfanne mit Reis",
         "vegetarische Gemüsepfanne",
         "vegane Brokkoli-Pfanne",
-        "Champignon-Brokkoli-Pfanne mit Sojasoße"
+        "Champignon-Brokkoli-Pfanne mit Sojasoße",
+        "Leckeres Abendessen",
+        "Leckere Gerichte",
+        "Leckere Rezepte"
     ],
     category: ["Vegetarisch", "Vegan", "Reis", "Hauptgerichte", "Kochen"],
     image: "images/Asianstyle-Pilz-Brokkoli-Pfanne.jpeg",
@@ -452,7 +466,12 @@ const RECIPES = [
         "Salat mit Blauschimmelkäse und Walnüssen",
         "Feldsalat mit Blauschimmelkäse",
         "Salat mit Birne und Walnüssen",
-        "herzhafter Herbstsalat"
+        "herzhafter Herbstsalat",
+        "Kartoffelsalat",
+        "Salat mit Kartoffeln",
+        "Leckeres Abendessen",
+        "Leckere Gerichte",
+        "Leckere Rezepte"
     ],
     category: ["Salate", "Vegetarisch", "Hauptgerichte", "Kochen"],
     image: "images/blauschimmelkäsesalat.jpg",
@@ -530,7 +549,10 @@ const RECIPES = [
         "Cesar Salad Varianten",
         "Chicken Salad",
         "Leckere Salate",
-        "Gesundes Abendessen"
+        "Gesundes Abendessen",
+        "Leckeres Abendessen",
+        "Leckere Gerichte",
+        "Leckere Rezepte"
     ],
     category: ["Salate", "Hauptgerichte", "Kochen"],
     image: "images/Crispy-Chicken-Salad.jpeg",
@@ -628,162 +650,206 @@ const RECIPES = [
 
 {
     id: "10",
-    title: "Dreierlei Karlsbader Schnitte",
-    seoTitle: "Dein SEO-Titel",
-    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    title: "Dreierlei Karlsbader Schnitten",
+    seoTitle: "Karlsbader Schnitten – 3 einfache Varianten",
+    metaDescription: "Karlsbader Schnitten in 3 leckeren Varianten: mit Schinken und Ei, Salami oder Schinken und Ananas. Schnell vorbereitet, mit geschmolzenem Käse überbacken und ideal für die ganze Familie.",
     keywords: [
-        
+        "Karlsbader Schnitten",
+        "Karlsbader Schnitten Rezept",
+        "Karlsbader Schnitten selber machen",
+        "überbackene Brote",
+        "überbackenes Brot mit Käse",
+        "belegte Brote aus dem Ofen",
+        "Karlsbader Schnitten mit Schinken",
+        "Karlsbader Schnitten mit Salami",
+        "überbackene Brote mit Ananas",
+        "schnelle Ofengerichte",
+        "Toast Hawaii",
+        "Leckeres Abendessen",
+        "Leckere Gerichte",
+        "Leckere Rezepte"
     ],
-    category: ["Ofengerichte", "Hauptgerichte", "Kochen", "Backen","Belegte Backwaren" ],
+    category: ["Ofengerichte", "Hauptgerichte", "Kochen", "Backen", "Belegte Backwaren"],
     image: "images/Karlsbader-Schnitte.jpeg",
-    time:{
-        preparation:"5 min",
-        baking:"15 min",
-        total:"20 min"
+    time: {
+        preparation: "5 min",
+        baking: "15 min",
+        total: "20 min"
     },
     related: ["42", "36", "27"],
     portions: "20 Brote",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Drei verschiedene Varianten. Aber eins haben sie alle gemeinsam: Schnell, einfach und super lecker!",
+    description: "Drei leckere Varianten der klassischen Karlsbader Schnitte: mit Schinken und Ei, mit Salami oder mit Schinken und Ananas. Die überbackenen Brote sind schnell vorbereitet, einfach zubereitet und perfekt für eine unkomplizierte Mahlzeit.",
 
+    /* 🍽️ ZUTATEN */
     ingredients: {
-        " ": [
-            "1 großes Weißbrot (z.B. 750g Brotbackmischung oder 20 Scheiben Toastbrot)"
+        "Brot": [
+            "1 großes Weißbrot (z. B. aus einer 750-g-Brotbackmischung oder 20 Scheiben Toastbrot)"
         ],
 
-        "Schinken, Ei (8 Brote)": [
-            "4 Scheiben Prosciutto Cotto (ca. 115g)",
-            "4 Scheiben Emmentaler (ca. 125g)",
+        "Schinken und Ei (8 Brote)": [
+            "4 Scheiben Prosciutto Cotto (ca. 115 g)",
+            "4 Scheiben Emmentaler (ca. 125 g)",
             "8 Eier"
         ],
 
         "Salami (6 Brote)": [
-            "30 kleine Scheiben Edelsalami (ca. 100g)",
+            "30 kleine Scheiben Edelsalami (ca. 100 g)",
             "6 Scheiben Schmelzkäse"
         ],
 
-        "Schinken, Ananas": [
-            "3 Scheiben Prosciutto Cotto (ca. 85g)",
+        "Schinken und Ananas (6 Brote)": [
+            "3 Scheiben Prosciutto Cotto (ca. 85 g)",
             "6 Scheiben Ananas",
-            "6 Schmelzkäsescheiben",
+            "6 Scheiben Schmelzkäse"
         ],
 
         "Nach Belieben": [
-            "Paprikapulver edelsüß"
+            "Paprikapulver, edelsüß",
+            "Etwas Öl zum Braten der Spiegeleier"
         ]
     },
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
-        "Den Ofen auf 180°C Ober-/Unterhitze vorheizen.",
+        "Den Backofen auf 180 °C Ober-/Unterhitze vorheizen.",
 
-        "Das Brot in Scheiben schneiden und auf einem mit Backpapier belegten Backblech verteilen.",
+        "Das Weißbrot in etwa gleich dicke Scheiben schneiden und auf einem mit Backpapier belegten Backblech verteilen.",
 
-        "Nach Belieben belegen, z.B. 1. halbe Scheibe Schinken, halbe Scheibe Emmentaler und Spiegelei; 2. 5 Scheiben Salami und 1 Scheibe Schmelzkäse; 3. halbe Scheibe Schinken, (eine Scheibe Ananas), 1 Scheibe Schmelzkäse und evtl. mit etwas Paprikapulver bestreuen.",
+        "Die Brotscheiben nach Belieben belegen: Für die erste Variante jeweils eine halbe Scheibe Prosciutto Cotto und eine halbe Scheibe Emmentaler auf das Brot legen. Für die zweite Variante jeweils etwa 5 kleine Salamischeiben und eine Scheibe Schmelzkäse verwenden. Für die dritte Variante jeweils eine halbe Scheibe Prosciutto Cotto, eine Scheibe Ananas und eine Scheibe Schmelzkäse auf das Brot legen. Nach Wunsch mit etwas edelsüßem Paprikapulver bestreuen.",
 
-        "Die Brote im Ofen ca. 10–15 min backen, bis der Käse schön geschmolzen ist.",
+        "Die belegten Brote im vorgeheizten Backofen etwa 10–15 min backen, bis der Käse geschmolzen ist und die Brotränder leicht knusprig sind.",
 
-        "Für die Ei-Variante in der Zwischenzeit die Spiegeleier braten. Dafür etwas Öl in einer Pfanne erhitzen, die Eier hineinschlagen, ca. 5 min braten, umdrehen und ca. 2 min fertig braten (für ein festes Eigelb).",
+        "Während die Brote backen, etwas Öl in einer Pfanne erhitzen. Die Eier einzeln hineinschlagen und zu Spiegeleiern braten. Für ein vollständig gestocktes Eigelb die Eier wenden und weitere etwa 2 min braten.",
+
+        "Die Spiegeleier auf die Schinken-Käse-Brote legen und die Karlsbader Schnitten frisch und warm servieren."
     ]
 },
 
 
 {
     id: "11",
-    title: "Brezel Hawaii",
-    seoTitle: "Dein SEO-Titel",
-    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    title: "Brezel Hawaii – überbacken mit Schinken und Käse",
+    seoTitle: "Brezel Hawaii – einfach mit Schinken und Käse",
+    metaDescription: "Brezel Hawaii mit saftiger Ananas, herzhaftem Kochschinken und geschmolzenem Gouda. Der schnelle Snack ist in nur 30 Minuten fertig und einfach im Backofen zubereitet.",
     keywords: [
-        
+        "Brezel Hawaii",
+        "Brezel Hawaii Rezept",
+        "überbackene Brezel",
+        "Brezel mit Schinken und Käse",
+        "Brezel mit Ananas",
+        "Brezel überbacken",
+        "herzhafter Brezel-Snack",
+        "schnelle Snacks aus dem Ofen",
+        "Brezeln Ideen"
     ],
-    category: [ "Snacks", "Backen", "Teilchen", "ohne Ei", "Belegte Backwaren"],
+    category: ["Snacks", "Backen", "Teilchen", "ohne Ei", "Belegte Backwaren"],
     image: "images/brezel-hawaii.jpeg",
-    time:{
-        preparation:"15 min",
-        baking:"15 min",
-        total:"30 min"
+    time: {
+        preparation: "15 min",
+        baking: "15 min",
+        total: "30 min"
     },
     related: ["2", "19", "41"],
     portions: "3 Stück",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Fluffiger Brezelteig getoppt mit salzigem Schinken, saftiger Ananas und leckerem Käse.",
+    description: "Knusprige Laugenbrezeln treffen auf herzhaften Kochschinken, süße Ananas und geschmolzenen Gouda. Dieser herzhafte Hawaii-Snack ist schnell vorbereitet und perfekt für den kleinen Hunger oder ein unkompliziertes Abendessen.",
 
+    /* 🍽️ ZUTATEN */
     ingredients: {
-        "":[
-        "3 80g-gelaugte [[brezeln|Brezelteiglinge]] <i>(alternativ 3 angetaute TK-Brezeln)</i>",
-        "30g Kochschinken",
-        "50g Dosenananas",
-        "120g geriebener Gouda (z.B. mittelalt)",
-    ],
-},
+        "": [
+            "3 gelaugte Brezeln à 80 g [[brezeln|Brezelteiglinge]] <i>(alternativ 3 angetaute TK-Brezeln)</i>",
+            "30 g Kochschinken",
+            "50 g Dosenananas",
+            "120 g geriebener Gouda (z. B. mittelalt)"
+        ]
+    },
 
+    /* 👨‍🍳 ZUBEREITUNG */
     steps: [
-        "Den Ofen mind. 15 min auf 230°C Ober-/Unterhitze vorheizen.",
+        "Den Backofen mindestens 15 min auf 230 °C Ober-/Unterhitze vorheizen.",
 
-        "Die Ananasstücke in kleine Würfel schneiden und den Schinken in kleinere Stücke reißen.",
+        "Die Ananasstücke gut abtropfen lassen und in kleine Würfel schneiden. Den Kochschinken in kleinere Stücke zupfen oder schneiden.",
 
-        "Ca. 3/4 des Käses gleichmäßig über den Brezeln verteilen, die Ananas und den Schinken darauf verteilen und den restlichen Käse darüber streuen.",
+        "Etwa drei Viertel des geriebenen Goudas gleichmäßig auf den Brezeln verteilen. Anschließend die Ananasstücke und den Kochschinken daraufgeben und mit dem restlichen Käse bestreuen.",
 
-        "Die Brezeln ca. 15 min im vorgeheizten Backofen backen.",
+        "Die belegten Brezeln im vorgeheizten Backofen etwa 15 min backen, bis der Käse geschmolzen und leicht goldbraun ist. Je nach Größe und Backofen kann die Backzeit etwas variieren."
     ]
 },
 
 {
     id: "12",
-    title: "Bohneneintopf",
-    seoTitle: "Dein SEO-Titel",
-    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    title: "Bohneneintopf mit weißen Bohnen in Tomatensoße",
+    seoTitle: "Bohneneintopf mit weißen Bohnen – einfach & würzig",
+    metaDescription: "Dieser würzige Bohneneintopf mit weißen Bohnen, Tomaten und aromatischen Gewürzen ist einfach zubereitet und wunderbar sättigend. Perfekt für ein unkompliziertes vegetarisches Mittag- oder Abendessen.",
     keywords: [
-        
+        "Bohneneintopf",
+        "Bohneneintopf mit weißen Bohnen",
+        "Bohneneintopf Rezept",
+        "weiße Bohnen in Tomatensoße",
+        "vegetarischer Bohneneintopf",
+        "Bohneneintopf mit Tomaten",
+        "Bohneneintopf einfach",
+        "weiße Bohnen Rezept",
+        "Bohneneintopf mit Kreuzkümmel",
+        "Leckeres Abendessen",
+        "Leckere Gerichte",
+        "Leckere Rezepte",
+        "einfache Gerichte",
+        "schnelle Rezepte"
+
     ],
     category: ["Vegetarisch", "Hauptgerichte", "Kochen"],
     image: "images/bohneneintopf.jpg",
-    time:{
-        preparation:"5 min",
-        cooking:"40 min",
-        total:"45 min"
+    time: {
+        preparation: "5 min",
+        cooking: "40 min",
+        total: "45 min"
     },
     related: ["10", "13", "32"],
     portions: "6",
     difficulty: "Einfach",
     rating: 5,
-    description: "Leckere Bohnen in würziger Tomatensoße.",
+    description: "Dieser herzhafte Bohneneintopf kombiniert weiße Bohnen mit einer würzigen Tomatensoße, Knoblauch, Zwiebeln und aromatischen Gewürzen. Er ist unkompliziert zubereitet, sättigend und schmeckt besonders gut mit frischen Brötchen.",
 
+    /* 🍽️ ZUTATEN */
     ingredients: {
-        "":[
-        "2 Dosen weiße Bohnen (à 800g)",
-        "2 EL Tomatenmark",
-        "400g gehackte Tomaten",
-        "400g Tomate al Frito",
-        "125ml Gemüsebrühe",
-        "6 Knoblauchzehen",
-        "2 Zwiebeln",
-        "2 TL Kreuzkümmelpulver",
-        "1 TL Paprikapulver",
-        "1/2 TL Kurkumapulver",
-        "1/4 TL Ingwerpulver",
-        "1 TL getrocknete Petersilie",
-        "Salz",
-        "Pfeffer",
-    ],
-},
+        "": [
+            "2 Dosen weiße Bohnen (à 800 g)",
+            "2 EL Tomatenmark",
+            "400 g gehackte Tomaten",
+            "400 g Tomate al Frito",
+            "125 ml Gemüsebrühe",
+            "6 Knoblauchzehen",
+            "2 Zwiebeln",
+            "2 TL Kreuzkümmelpulver",
+            "1 TL Paprikapulver",
+            "1/2 TL Kurkumapulver",
+            "1/4 TL Ingwerpulver",
+            "1 TL getrocknete Petersilie",
+            "Salz",
+            "Pfeffer",
+            "Olivenöl zum Anbraten"
+        ]
+    },
 
+    /* 👨‍🍳 ZUBEREITUNG */
     steps: [
-        "Die Zwiebeln schälen und fein hacken. Den Knoblauch schälen und pressen.",
+        "Die Zwiebeln schälen und fein hacken. Den Knoblauch schälen und fein hacken oder durch eine Knoblauchpresse drücken.",
 
-        "Etwas Olivenöl in einem beschichteten Topf erhitzen und die Zwiebeln bei mittlerer bis hoher Hitze ca. 5 min glasig dünsten.",
+        "Etwas Olivenöl in einem beschichteten Topf erhitzen. Die Zwiebeln darin bei mittlerer bis hoher Hitze etwa 5 min glasig dünsten.",
 
-        "Den Knoblauch dazugeben und ca. 1 Minute mit anschwitzen. Das Tomatenmark unterrühren und ca. 2 min mitbraten. Die Gewürze, Salz und Pfeffer dazugeben und ca. 30 sek unterrühren und mit anschwitzen.",
+        "Den Knoblauch hinzufügen und etwa 1 min mitdünsten. Das Tomatenmark unterrühren und weitere 2 min anrösten. Kreuzkümmel, Paprikapulver, Kurkuma, Ingwerpulver sowie etwas Salz und Pfeffer dazugeben und etwa 30 sek unter Rühren mitrösten.",
 
-        "Mit Gemüsebrühe und gehackten Tomaten ablöschen, aufkochen und auf mittlerer Hitze ca. 10 min köcheln.",
+        "Mit der Gemüsebrühe ablöschen. Die gehackten Tomaten hinzufügen, alles aufkochen und bei mittlerer Hitze etwa 10 min köcheln lassen.",
 
-        "In der Zwischenzeit die Bohnen abgießen.",
+        "In der Zwischenzeit die weißen Bohnen in ein Sieb abgießen und gründlich abspülen.",
 
-        "Die Bohnen und das Tomate al Frito dazugeben, erneut aufkochen und ca. 20 min bei mittelhoher Hitze unter gelegentlichem Rühren fertig köcheln.",
+        "Die Bohnen und die Tomate al Frito in den Topf geben. Alles erneut aufkochen und bei mittlerer Hitze etwa 20 min unter gelegentlichem Rühren köcheln lassen, bis der Eintopf schön aromatisch ist.",
 
-        "Die Petersilie unterrühren, salzen, pfeffern und mit Brötchen servieren.",
+        "Die getrocknete Petersilie unterrühren. Den Bohneneintopf mit Salz und Pfeffer abschmecken und heiß servieren. Dazu passen frische Brötchen."
     ]
 },
 
@@ -791,52 +857,66 @@ const RECIPES = [
 {
     id: "13",
     title: "Brokkolisuppe",
-    seoTitle: "Dein SEO-Titel",
-    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    seoTitle: "Brokkolisuppe – einfach, cremig & schnell gemacht",
+    metaDescription: "Diese cremige Brokkolisuppe mit Kartoffeln und Sahne ist einfach zubereitet und wunderbar sättigend. Das perfekte Rezept für kalte Tage!",
     keywords: [
-        
+        "Brokkolisuppe",
+        "Brokkolisuppe Rezept",
+        "cremige Brokkolisuppe",
+        "Brokkolisuppe mit Kartoffeln",
+        "Brokkolisuppe einfach",
+        "Brokkolisuppe mit Sahne",
+        "Brokkolicremesuppe",
+        "vegetarische Brokkolisuppe",
+        "Brokkolisuppe selber machen",
+         "Leckeres Abendessen",
+        "Leckere Gerichte",
+        "Leckere Rezepte",
+        "einfache Gerichte",
+        "schnelle Rezepte"
     ],
     tips: [
         "Dazu schmecken Garnelen oder Pfannenbrot hervorragend.",
-        "Falls dir die Suppe zu dick ist, kannst du nach dem Kochen noch mehr Gemüsebrühe dazugeben."
+        "Falls dir die Suppe zu dick ist, kannst du nach dem Pürieren noch etwas Gemüsebrühe hinzufügen.",
+        "Für eine besonders cremige Konsistenz kannst du die Suppe vor dem Servieren mit einem Schuss Sahne verfeinern."
     ],
     category: ["Suppen & Eintöpfe", "Vegetarisch", "Hauptgerichte", "Kochen"],
     image: "images/brokkolisuppe.jpeg",
-    time:{
-        preparation:"10 min",
-        cooking:"40 min",
-        total:"50 min"
+    time: {
+        preparation: "10 min",
+        cooking: "40 min",
+        total: "50 min"
     },
-        related: ["29", "5", "42"],
+    related: ["29", "5", "42"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Cremige, warme Brokkolisuppe. Perfekt für kalte Tage.",
+    description: "Diese cremige Brokkolisuppe mit Kartoffeln und Sahne wärmt an kalten Tagen und macht angenehm satt. Sie ist unkompliziert zubereitet und eignet sich ideal als vegetarisches Mittag- oder Abendessen.",
 
     ingredients: {
         "": [
-            "170g TK-Brokkoli",
-            "1,5kg Kartoffeln",
+            "170 g TK-Brokkoli",
+            "1,5 kg Kartoffeln",
             "2 Zwiebeln",
-            "1,2l Gemüsebrühe",
-            "250ml Kochsahne",
+            "1,2 l Gemüsebrühe",
+            "250 ml Kochsahne",
             "1/2 TL Knoblauchpulver",
             "Salz",
-            "Pfeffer"
-        ],
-
-      
+            "Pfeffer",
+            "Öl zum Anbraten"
+        ]
     },
+
     steps: [
         "Die Zwiebeln schälen und vierteln. Die Kartoffeln schälen und in kleine Würfel schneiden.",
 
-        "Etwas Öl in einem großen Topf erhitzen und die Zwiebeln darin ca. 3 min anbraten, die Kartoffeln dazugeben und mit der Gemüsebrühe ablöschen. Den Deckel schließen und die Kartoffeln für circa 20 Minuten gar kochen.",
+        "Etwas Öl in einem großen Topf erhitzen und die Zwiebeln darin etwa 3 min anbraten. Die Kartoffeln hinzufügen und alles mit der Gemüsebrühe ablöschen. Den Deckel aufsetzen und die Kartoffeln etwa 20 min köcheln lassen, bis sie gar sind.",
 
-        "Wenn die Kartoffeln gar sind, den Brokkoli dazugeben und weitere 10 Minuten köcheln lassen.",
+        "Den gefrorenen Brokkoli hinzufügen und die Suppe weitere 10 min köcheln lassen.",
 
-        "Den Topf vom Herd nehmen, die Sahne dazugeben. Salzen, pfeffern, das Knoblauchpulver dazugeben und alles gut durchpürieren.",
+        "Den Topf vom Herd nehmen und die Kochsahne hinzufügen. Mit Salz, Pfeffer und Knoblauchpulver würzen. Anschließend alles mit einem Pürierstab fein pürieren.",
 
-        "Noch einmal aufkochen lassen und servieren.",
+        "Die Suppe noch einmal kurz aufkochen lassen, abschmecken und heiß servieren."
     ]
 },
 
@@ -844,27 +924,38 @@ const RECIPES = [
 {
     id: "0",
     title: "Bruschetta",
-    seoTitle: "Dein SEO-Titel",
-    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    seoTitle: "Bruschetta selber machen – einfach mit Tomaten",
+    metaDescription: "Knusprige Bruschetta mit frischen Tomaten, Knoblauch und Basilikum: Dieses einfache italienische Rezept ist schnell vorbereitet und ideal als Vorspeise oder Snack.",
     keywords: [
-        
+        "Bruschetta",
+        "Bruschetta Rezept",
+        "Bruschetta selber machen",
+        "Bruschetta mit Tomaten",
+        "italienische Bruschetta",
+        "Tomaten-Bruschetta",
+        "Bruschetta mit Knoblauch",
+        "Bruschetta mit Basilikum",
+        "Bruschetta als Vorspeise",
+        "italienische Grichte",
+        "Rezepte mit Tomaten",
+        "Rezepte it übrigen Tomaten"
     ],
     tips: [
-        "Je länger das Topping zieht, desto besser und intensiver schmeckt es.",
-        "Wenn du möchtest kannst du auch die Brotscheiben mit etwas Olivenöl bestreichen und in einer Pfanne ohne Öl kurz knusprig anbraten."
+        "Je länger das Topping durchzieht, desto intensiver entfalten sich die Aromen.",
+        "Für besonders knusprige Brotscheiben kannst du sie mit etwas Olivenöl bestreichen und in einer Pfanne ohne zusätzliches Öl kurz anrösten."
     ],
-    category: ["Brot", "Vegetarisch", "Hauptgerichte", "Kochen"],
+    category: ["Brot", "Vegetarisch", "Vorspeisen", "Kochen"],
     image: "images/bruschetta.jpg",
-    time:{
-        preparation:"10 min",
-        cooling:"2 Std.",
-        total:"2 Std. 10 min"
+    time: {
+        preparation: "10 min",
+        cooling: "2 Std",
+        total: "2 Std 10 min"
     },
-        related: ["1", "19", "32"],
+    related: ["1", "19", "32"],
     portions: "12 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Knusprig-fluffiges italienisches Brot mit herrlich aromatischem Tomatentopping.",
+    description: "Knuspriges Ciabatta trifft auf ein aromatisches Topping aus frischen Tomaten, Knoblauch, Basilikum und Olivenöl. Diese italienische Bruschetta ist einfach zubereitet und eignet sich perfekt als Vorspeise, Snack oder Beilage.",
 
     ingredients: {
         "Topping": [
@@ -879,15 +970,16 @@ const RECIPES = [
         "Außerdem": [
             "2 [[ciabatta|Ciabatta]]"
         ]
-
-      
     },
+
     steps: [
         "Die Tomaten fein würfeln und in eine Schüssel mit Deckel geben.",
 
-        "Den Knoblauch schälen und zu den Tomaten pressen. Mit Salz und Pfeffer würzen, den Basilikum sowie das Öl dazugeben, alles vermengen, mit dem Deckel verschließen und mind. eine Stunde im Kühlschrank ziehen lassen.",
+        "Den Knoblauch schälen und zu den Tomaten pressen. Basilikum und Olivenöl hinzufügen und alles mit Salz und Pfeffer würzen. Gut vermengen, die Schüssel verschließen und das Topping mindestens 1 Std im Kühlschrank durchziehen lassen.",
 
-        "Das Ciabatta in Scheiben schneiden, das Topping auf die Brotscheiben geben und servieren.",
+        "Das Ciabatta in Scheiben schneiden. Für besonders knusprige Bruschetta die Brotscheiben nach Wunsch kurz in einer Pfanne oder im Ofen anrösten.",
+
+        "Das Tomatentopping auf den Brotscheiben verteilen und die Bruschetta frisch servieren."
     ]
 },
 
@@ -895,274 +987,327 @@ const RECIPES = [
 {
     id: "14",
     title: "Cannelloni Caprese",
-    seoTitle: "Dein SEO-Titel",
-    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    seoTitle: "Cannelloni Caprese – mit Tomaten & Mozzarella",
+    metaDescription: "Diese Cannelloni Caprese sind mit Mozzarella und frischen Tomaten gefüllt und werden in cremiger Tomatensahnesauce mit Käse überbacken. Einfaches Ofenrezept für die ganze Familie!",
     keywords: [
-        
+        "Cannelloni Caprese",
+        "Cannelloni Rezept",
+        "Cannelloni mit Mozzarella",
+        "Cannelloni mit Tomaten",
+        "Cannelloni Caprese Rezept",
+        "Cannelloni mit Tomatensahnesauce",
+        "vegetarische Cannelloni",
+        "Cannelloni aus dem Ofen",
+        "Cannelloni überbacken",
+        "Caprese",
+        "Rezepte mit Tomaten",
+        "Rezepte mit Mozzarella",
+        "leckere Gerichte",
+        "leckere Rezepte",
+        "schnelles Abendessen",
+        "einfaches Abendessen"
     ],
     category: ["Pasta", "Ofengerichte", "Hauptgerichte", "Kochen"],
     image: "images/canneloni-caprese.jpeg",
-    time:{
-        preparation:"30 min",
-        cooking:"30 min",
-        total:"1 Std."
+    time: {
+        preparation: "30 min",
+        cooking: "30 min",
+        total: "1 Std"
     },
-        related: ["1", "4", "26"],
+    related: ["1", "4", "26"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Leckere Cannelloni, gefüllt mit saftigen Tomaten und geschmolzenem Mozzarella, in einer cremigen Tomatensauce.",
+    description: "Diese Cannelloni Caprese sind mit saftigen Tomaten und cremigem Mozzarella gefüllt. In einer aromatischen Tomatensahnesauce und mit goldbraun überbackenem Käse werden sie zu einem herzhaften Ofengericht für die ganze Familie.",
 
     ingredients: {
         "Nudeln": [
-            "270g Cannelloni (30 Stück)",
-            "5 Pck. Mini-Mozzarella (à 250g)",
-            "450g Datteltomaten",
-            "250g geriebener Käse (z.B. Gouda)"
+            "270 g Cannelloni (30 Stück)",
+            "5 Pck. Mini-Mozzarella (à 250 g)",
+            "450 g Datteltomaten",
+            "250 g geriebener Käse (z. B. Gouda)"
         ],
 
         "Sauce": [
-            "500g passierte Tomaten",
+            "500 g passierte Tomaten",
             "1 EL Tomatenmark",
             "3 Knoblauchzehen",
             "2 EL Olivenöl",
-            "500ml Kochsahne",
+            "500 ml Kochsahne",
             "1 TL italienische Kräuter",
             "Salz",
             "Pfeffer"
-        ],
+        ]
     },
 
     steps: [
-        {text:"Den Knoblauch schälen und pressen.",},
-
-        {text:"Das Olivenöl in einem kleinen Topf erhitzen. Den Knoblauch bei mittlerer Hitze ca. 30 sek in dem Öl anschwitzen, bis es duftet. Das Tomatenmark dazugeben und unter Rühren ca. 1–2 min mitrösten. Mit den passierten Tomaten ablöschen, die italienischen Kräuter dazugeben, aufkochen und bei mittlerer Hitze ca. 15 min sanft köcheln lassen.",
+        {
+            text: "Den Knoblauch schälen und pressen."
         },
-       { text:"In der zwischenzeit die Tomaten halbieren und den Mozzarella abgießen.",
-       },
-        {text:"Dann den Ofen auf 200°C Ober-/Unterhitze vorheizen, jede Cannelloni mit 1 Mozzarellakugel, 1-2 Tomatenhälfte, 1 Mozzarellakugel und 1 Tomatenhälfte füllen. <b>(Je nach größe der Tomaten ruhig noch eine Tomatenhälfte hineingeben, sodass jede Canneloni gut gefüllt ist.)</b> Dies solange wiederholen, bis alle Cannelloni gefüllt sind.",
+        {
+            text: "Das Olivenöl in einem kleinen Topf erhitzen. Den Knoblauch bei mittlerer Hitze etwa 30 sek darin anschwitzen, bis er duftet. Das Tomatenmark hinzufügen und unter Rühren 1–2 min mitrösten. Mit den passierten Tomaten ablöschen, die italienischen Kräuter hinzufügen und die Sauce aufkochen lassen. Anschließend bei mittlerer Hitze etwa 15 min sanft köcheln lassen."
         },
-        {text:"Die Cannelloni einschichtig in eine große Auflaufform <i>(ca. 40cm x 30cm)</i> geben.",
+        {
+            text: "In der Zwischenzeit die Datteltomaten halbieren und den Mini-Mozzarella abgießen. Den Backofen auf 200 °C Ober-/Unterhitze vorheizen."
         },
-        {text:"Die restlichen Mozzarellakugeln halbieren. Die Tomatensauce vom Herd nehmen, ordentlich salzen und pfeffern und die Sahne unterrühren. Die Sauce gleichmäßig über die Cannelloni gießen, den geriebenen Käse darüber streuen und die halbierten Mozzarellakugeln gleichmäßig darüber verteilen.",
-            images: ["images/canneloni-soße.jpeg"],
+        {
+            text: "Die Cannelloni jeweils mit einer Mozzarellakugel, ein bis zwei Tomatenhälften, einer weiteren Mozzarellakugel und einer Tomatenhälfte füllen. Je nach Größe der Tomaten können weitere Hälften hineingegeben werden, damit die Cannelloni gut gefüllt sind. Diesen Vorgang wiederholen, bis alle Cannelloni gefüllt sind."
         },
-        {text:"Die Cannelloni im vorgeheizten Backofen ca. 30 min backen, bis der Käse goldbraun ist und die Nudeln weich sind."
+        {
+            text: "Die gefüllten Cannelloni nebeneinander und möglichst einschichtig in eine große Auflaufform (ca. 40 × 30 cm) legen."
         },
-        ]
+        {
+            text: "Die restlichen Mozzarellakugeln halbieren. Die Tomatensauce vom Herd nehmen, kräftig mit Salz und Pfeffer abschmecken und die Kochsahne unterrühren. Die Sauce gleichmäßig über die Cannelloni gießen. Den geriebenen Käse darüberstreuen und die halbierten Mozzarellakugeln darauf verteilen.",
+            images: ["images/canneloni-soße.jpeg"]
+        },
+        {
+            text: "Die Cannelloni im vorgeheizten Backofen etwa 30 min backen, bis der Käse goldbraun ist und die Nudeln weich sind."
+        }
+    ]
 },
 
 {
     id: "15",
-    title: "Cheesescones",
-    seoTitle: "Dein SEO-Titel",
-    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    title: "Cheese Scones",
+    seoTitle: "Cheese Scones – englische Käsebrötchen einfach backen",
+    metaDescription: "Diese herzhaften Cheese Scones mit würzigem Käse und Paprika sind außen goldbraun und innen wunderbar weich. Das einfache englische Rezept kommt ohne Ei aus.",
     keywords: [
-        
+        "Cheese Scones",
+        "Cheese Scones Rezept",
+        "englische Käsebrötchen",
+        "herzhafte Scones",
+        "Scones mit Käse",
+        "Käse-Scones ohne Ei",
+        "englisches Gebäck",
+        "Scones selber machen",
+        "Cheese Scones einfach",
+        "Scones",
+        "Scones Rezept",
+        "englische Rezepte"
     ],
     tips: [
-    "Lieber zu wenig als zu viel kneten, damit die Butter nicht zu warm wird."
-],
-    category: [ "Backen", "Brot & Brötchen", "Teilchen", "ohne Ei"], 
+        "Lieber zu wenig als zu viel kneten, damit die Butter kalt bleibt und die Scones schön locker werden.",
+        "Für besonders lockere Scones sollten die Zutaten möglichst kalt sein und der Teig nur kurz verarbeitet werden."
+    ],
+    category: ["Backen", "Brot & Brötchen", "Teilchen", "Ohne Ei"],
     image: "images/cheesescone.jpeg",
-            time:{
-    preparation:"10 min",
-   baking:"15 min",
-   cooling: "15 min",
-    total:" 40 min"
-},
+    time: {
+        preparation: "10 min",
+        baking: "15 min",
+        cooling: "15 min",
+        total: "40 min"
+    },
     related: ["17", "16", "37"],
     portions: "8 Stück",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Der englische Teeklassiker, mal anders.",
+    description: "Diese herzhaften englischen Cheese Scones sind eine würzige Variante des beliebten Teeklassikers. Mit kräftigem Käse und einer feinen Paprikanote schmecken sie frisch aus dem Ofen besonders gut und passen zum Frühstück, Brunch oder als herzhafter Snack.",
 
     /* 🍽️ ZUTATEN */
     ingredients: {
-        "":[
-        
-        "250g Mehl (Type 405)",
-        "60g sehr kalte Butter",
-        "1 Pck. Backpulver",
-        "80g kräftiger Käse (z.B. Red Leicester)",
-        "150ml kalte Milch (und etwas mehr zum Bestreichen)",
-        "1/2 TL Salz",
-        "1 TL Paprikapulver",
-    ],
-},
+        "": [
+            "250 g Mehl (Type 405)",
+            "60 g sehr kalte Butter",
+            "1 Pck. Backpulver",
+            "80 g kräftiger Käse (z. B. Red Leicester)",
+            "150 ml kalte Milch (plus etwas zum Bestreichen)",
+            "1/2 TL Salz",
+            "1 TL Paprikapulver"
+        ]
+    },
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
-        "Den Ofen auf 220°C Ober-/Unterhitze vorheizen.",
+        "Den Backofen auf 220 °C Ober-/Unterhitze vorheizen.",
 
-"Das Mehl mit dem Salz und dem Paprikapulver in einer Schüssel vermengen. Die Butter in sehr kleine Stücke schneiden und alles mit den Händen zu einem krümeligen Sand kneten und reiben.",
+        "Das Mehl mit Salz, Paprikapulver und Backpulver in einer Schüssel vermengen. Die kalte Butter in kleine Stücke schneiden und mit den Händen rasch in die Mehlmischung einarbeiten, bis eine krümelige, sandartige Masse entsteht.",
 
-"Den Käse fein dazureiben und unterrühren.",
+        "Den Käse fein reiben und unter die Mehl-Butter-Mischung heben.",
 
-"In der Mitte eine Mulde formen, die Milch hineinschütten und mit einem Löffel das Mehl unterheben, nur solange, bis die Milch sich gut verteilt hat. (Jetzt solltest du eine Art großen Klümpchen-Teig haben)",
+        "In der Mitte eine Mulde formen und die kalte Milch hineingießen. Mit einem Löffel die trockenen Zutaten vorsichtig unterheben, bis sich die Milch verteilt hat und ein grober, leicht klumpiger Teig entsteht. Nicht zu lange rühren oder kneten.",
 
-"Etwas zusammendrücken, damit man ihn auf eine Arbeitsfläche geben kann. Dann den Teig zu einem ca. 2 cm dicken Rechteck vorsichtig ausrollen, das obere Drittel zur Mitte falten und das untere Drittel darüber klappen. Den Teig um 90 Grad drehen, erneut vorsichtig zu einem ca. 2 cm dicken Rechteck ausrollen, wieder das obere Drittel zur Mitte falten und das untere Drittel darüber klappen. Noch einmal um 90 Grad drehen und zu einem ca. 3 cm dicken Rechteck ausrollen.",
+        "Den Teig vorsichtig zusammendrücken und auf eine leicht bemehlte Arbeitsfläche geben. Zu einem etwa 2 cm dicken Rechteck formen oder ausrollen. Das obere Drittel zur Mitte falten und das untere Drittel darüberklappen. Den Teig um 90 Grad drehen, erneut vorsichtig zu einem etwa 2 cm dicken Rechteck ausrollen und wieder auf dieselbe Weise falten. Noch einmal um 90 Grad drehen und den Teig zu einem etwa 3 cm dicken Rechteck ausrollen.",
 
-"Mit einem Glas Kreise ausstechen, hierbei nur herunterdrücken und nicht drehen, sodass die Schichten an den Seiten nicht verschlossen werden. (Alternativ kannst du auch Vierecke ausschneiden)",
+        "Mit einem Glas Kreise ausstechen. Dabei das Glas gerade nach unten drücken und nicht drehen, damit die Teigschichten an den Seiten offen bleiben. Alternativ kannst du den Teig in Vierecke schneiden.",
 
-"<i><b>Wenn du noch etwas Zeit hast, stell die Scones am besten noch 10-15 min in den Kühlschrank, sodass die Butter schön kalt ist und die Scones besser aufgehen.</b></i>",
+        "Die ausgestochenen Scones für 10–15 min in den Kühlschrank stellen. So bleibt die Butter kalt und die Scones können beim Backen besser aufgehen.",
 
-"Die Teiglinge auf ein Backblech mit Backpapier legen, mit etwas Milch bestreichen. Die Ofentemperatur auf 200 Grad reduzieren, die Scones in den Ofen schieben und im vorgeheizten Ofen ca. 12-15 min goldbraun backen.",
-       
+        "Die Teiglinge auf ein mit Backpapier belegtes Backblech legen und mit etwas Milch bestreichen. Die Backofentemperatur auf 200 °C reduzieren. Die Scones im vorgeheizten Ofen etwa 12–15 min goldbraun backen."
     ]
-
-    
 },
 
 {
     id: "16",
     title: "Cordon bleu",
-    seoTitle: "Dein SEO-Titel",
-    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    seoTitle: "Putenschnitzel Cordon bleu – einfach selber machen",
+    metaDescription: "Knuspriges Cordon bleu aus zartem Putenschnitzel, gefüllt mit Prosciutto Cotto und geschmolzenem Käse. Mit dieser einfachen Anleitung gelingt die goldbraune Panade auch zu Hause.",
     keywords: [
-        
+        "Cordon bleu",
+        "Cordon bleu Rezept",
+        "Putenschnitzel Cordon bleu",
+        "Cordon bleu selber machen",
+        "Cordon bleu mit Pute",
+        "Cordon bleu mit Käse",
+        "gefülltes Putenschnitzel",
+        "Cordon bleu knusprig",
+        "Cordon bleu panieren"
     ],
     tips: [
-    "Die fertigen Cordon bleues kannst du im Ofen bei ca. 50°C auf einem Kuchenrost warm halten.",
-],
-    category: ["Fleisch", "Hauptgerichte", "Kochen"], 
+        "Die fertigen Cordon bleus kannst du auf einem Kuchenrost im Backofen bei etwa 50 °C warm halten. So bleibt die Panade möglichst knusprig."
+    ],
+    category: ["Fleisch", "Hauptgerichte", "Kochen"],
     image: "images/cordon-bleu.jpeg",
-        time:{
-    preparation:"30 min",
-    cooking:"30 min",
-    total:" 1 std"
-},
+    time: {
+        preparation: "30 min",
+        cooking: "30 min",
+        total: "1 Std"
+    },
     related: ["44", "46", "12"],
     portions: "7 Stück",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Das unwiderstehliche Schnitzelupgrade.",
+    description: "Knusprig paniertes Putenschnitzel mit einer herzhaften Füllung aus Prosciutto Cotto und geschmolzenem Käse. Dieses selbst gemachte Cordon bleu ist ein echter Klassiker und schmeckt besonders gut mit Kartoffelsalat, Pommes oder Gemüse.",
 
     /* 🍽️ ZUTATEN */
     ingredients: {
-        "":[
-        
-        "7 Putenschnitzel",
-        "7 Scheiben Prosciutto Cotto",
-        "7 Scheiben Käse (z.B. Emmentaler oder Gouda)",
-        "3 Eier (Größe L)",
-        "180g Paniermehl",
-        "60g Mehl",
-        "10g Speisestärke",
-        "1 TL Paprikapulver",
-        "1/2 TL Knoblauchpulver",
-        "Salz",
-        "Pfeffer",
-        "Butterschmalz",
-    ],
+        "": [
+            "7 Putenschnitzel",
+            "7 Scheiben Prosciutto Cotto",
+            "7 Scheiben Käse (z. B. Emmentaler oder Gouda)",
+            "3 Eier (Größe L)",
+            "180 g Paniermehl",
+            "60 g Mehl",
+            "10 g Speisestärke",
+            "1 TL Paprikapulver",
+            "1/2 TL Knoblauchpulver",
+            "Salz",
+            "Pfeffer",
+            "Butterschmalz zum Ausbacken"
+        ]
     },
+
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
+        "Die Putenschnitzel einzeln zwischen zwei Lagen Frischhaltefolie legen und mit einem Fleischklopfer vorsichtig sehr dünn klopfen.",
 
-"Die Schnitzel jeweils auf einem großen Brett zwischen zwei Stück Frischhaltefolie legen und mit einem Fleischklopfer sehr dünn klopfen.",
+        "Die Schnitzel von beiden Seiten mit Salz und Pfeffer würzen und beiseitelegen.",
 
-"Jedes Schnitzel auf beiden Seiten ordentlich salzen und pfeffern und beiseite stellen.",
+        "Für die Panierstraße drei tiefe Teller bereitstellen. Auf dem ersten Teller das Mehl mit der Speisestärke, dem Knoblauchpulver und dem Paprikapulver vermischen. Auf dem zweiten Teller die Eier verquirlen und mit etwas Salz und Pfeffer würzen. Das Paniermehl auf dem dritten Teller verteilen.",
 
-"Für die Panierstraße Mehl, Stärke, Knoblauch und Paprikapulver vermengen und auf dem ersten Teller verteilen, das Ei verquirlt mit Salz und Pfeffer auf dem nächsten und das Paniermehl auf dem letzten tiefen Teller verteilen.",
+        "Die Käsescheiben je nach Größe der Schnitzel halbieren oder vierteln. Die Stücke übereinanderlegen. Eine Scheibe Prosciutto Cotto zur Hälfte um den Käse falten, sodass ein kleines Päckchen entsteht.",
 
-"In einer großen Pfanne 2 große EL Butterschmalz auf mittelhoher Hitze erhitzen.",
+        "Das Schinken-Käse-Päckchen auf eine Hälfte eines Putenschnitzels legen. Dabei einen kleinen Rand freilassen. Die andere Schnitzelhälfte darüberklappen und die Ränder gut zusammendrücken, damit möglichst wenig Käse beim Braten austritt.",
 
-"Die Käsescheiben vierteln oder halbieren (je nach Größe des Schnitzels) und die 4 Viertel bzw. 2 Hälften aufeinander legen. Den Stapel auf die eine Hälfte der Schinkenscheibe legen, die andere Hälfte darüber klappen. Das Schinkenpäckchen auf die eine Hälfte des Schnitzels legen, dabei einen kleinen Rand lassen. Die andere Hälfte des Schnitzels darüber klappen und an den Rändern gut andrücken.",
+        "Jedes gefüllte Schnitzel zuerst in der Mehlmischung wenden und überschüssiges Mehl leicht abschütteln. Anschließend durch das Ei ziehen und zuletzt im Paniermehl wenden. Die Panade rundherum gut andrücken.",
 
-"Jedes Cordon bleu im Mehl und in dem Ei wenden, ins Paniermehl geben, mehrfach wenden und gut andrücken.",
+        "In einer großen Pfanne ausreichend Butterschmalz erhitzen, sodass der Pfannenboden gut bedeckt ist. Die Cordon bleus bei mittlerer bis mittelhoher Hitze von jeder Seite etwa 6 min goldbraun ausbacken. Bei Bedarf die Hitze reduzieren, damit die Panade nicht zu dunkel wird, bevor das Fleisch vollständig gar ist.",
 
-"In die heiße Pfanne geben und ca. 6 min pro Seite in genügend (sodass der Boden gut bedeckt ist) Butterschmalz ausbacken.",
-
+        "Die Cordon bleus aus der Pfanne nehmen und kurz auf einem Kuchenrost abtropfen lassen. Anschließend heiß servieren."
     ]
-
 },
 
 {
     id: "17",
     title: "Cowboy Shakshuka",
-    seoTitle: "Dein SEO-Titel",
-    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    seoTitle: "Cowboy Shakshuka – würzige Bohnenpfanne mit Ei",
+    metaDescription: "Cowboy Shakshuka mit würzigen Baked Beans, knusprigem Speck und Eiern in einer herzhaften Tomatensoße. Ein einfaches Pfannengericht für Frühstück, Brunch oder Abendessen.",
     keywords: [
-        
+        "Cowboy Shakshuka",
+        "Shakshuka mit Bohnen",
+        "Cowboy Shakshuka Rezept",
+        "Bohnenpfanne mit Ei",
+        "Baked Beans mit Ei",
+        "Shakshuka mit Speck",
+        "herzhafte Bohnenpfanne",
+        "Bohnen mit Spiegelei",
+        "einfaches Pfannengericht",
+        "schnelle Gerichte",
+        "einfache Gerichte",
+        "schnelles Abendessen",
+        "einfaches Abnedessen"
     ],
-    category: ["Vegetarisch", "Hauptgerichte", "Kochen"], 
+    category: ["Hauptgerichte", "Kochen"],
     image: "images/Cowboy-shakshuka.jpeg",
-       time:{
-    preparation:"5 min",
-    cooking:"30 min",
-    total:" 35 min"
-},
+    time: {
+        preparation: "5 min",
+        cooking: "30 min",
+        total: "35 min"
+    },
     related: ["37", "31", "42"],
     portions: "4 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Western-Bohnenpfanne im Shakshuka-Style.",
+    description: "Diese Cowboy Shakshuka kombiniert würzige Baked Beans mit aromatischen Gewürzen, herzhaftem Speck und Eiern direkt aus der Pfanne. Das unkomplizierte Gericht im Western-Stil schmeckt besonders gut mit knusprigem Toast.",
 
     /* 🍽️ ZUTATEN */
     ingredients: {
-        "":[
-        
-        "3 Dosen baked beans (à 400g)",
-        "1 TL Worcestershire Sauce",
-        "2 große weiße Zwiebeln",
-        "2 große Knoblauchzehen",
-        "125g Speckwürfel",
-        "1 TL Paprikapulver rosenscharf",
-        "1 TL Paprikapulver edelsüß",
-        "1/4 TL getrockneter Thymian",
-        "4 Eier",
-        "Olivenöl",
-        "Salz",
-        "Pfeffer",
-
-    ],
-
-},
+        "": [
+            "3 Dosen Baked Beans (à 400 g)",
+            "1 TL Worcestersauce",
+            "2 große weiße Zwiebeln",
+            "2 große Knoblauchzehen",
+            "125 g Speckwürfel",
+            "1 TL rosenscharfes Paprikapulver",
+            "1 TL edelsüßes Paprikapulver",
+            "1/4 TL getrockneter Thymian",
+            "4 Eier",
+            "Olivenöl zum Anbraten",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
-        "Den Knoblauch schälen und pressen.",
+        "Die Zwiebeln schälen und grob hacken. Den Knoblauch schälen und fein hacken oder durch eine Knoblauchpresse drücken.",
 
-"Die Zwiebeln schälen und grob hacken. Den Knoblauch ebenfalls schälen und fein hacken.",
+        "Etwas Olivenöl in einer großen Pfanne erhitzen. Die Zwiebeln darin bei mittlerer Hitze etwa 2–3 min anbraten, bis sie leicht gebräunt sind.",
 
-"Eine Pfanne mit etwas Olivenöl erhitzen, die Zwiebeln dazugeben und ca. 2-3 min leicht braun braten.",
+        "Die Speckwürfel hinzufügen und etwa 3 min mitbraten. Den Knoblauch sowie das rosenscharfe und das edelsüße Paprikapulver und den Thymian dazugeben. Alles unter Rühren kurz mitrösten, bis die Gewürze duften.",
 
-"Den Speck hinzufügen und ca. 3 min mitbraten. Die Gewürze und den Knoblauch unter Rühren mitrösten, bis es duftet.",
+        "Die Baked Beans samt Soße in die Pfanne geben. Die Worcestersauce hinzufügen, alles gut vermengen und mit Salz und Pfeffer abschmecken. Aufkochen lassen und bei mittlerer Hitze etwa 3 min köcheln lassen.",
 
-"Die Bohnen dazugeben, alles mit Salz, Pfeffer, Worcestersauce und Thymian vermischen, aufkochen und auf mittlerer Hitze ca. 3 min köcheln.",
+        "Die Bohnenmischung gleichmäßig in der Pfanne verteilen und die Oberfläche glatt streichen. Mit einem Löffel vier Mulden formen und jeweils ein Ei hineinschlagen.",
 
-"Nochmals gut durchmischen und glatt streichen. Mit einem Löffel 4 Mulden für die Eier hineindrücken, die Eier wie Spiegeleier hineinschlagen und bei geschlossenem Deckel auf niedriger bis mittlerer Hitze ca. 20 min sanft köcheln, bis die Eier gar sind.",
+        "Die Pfanne mit einem Deckel verschließen und die Shakshuka bei niedriger bis mittlerer Hitze etwa 10–15 min sanft köcheln lassen, bis das Eiweiß gestockt und das Eigelb nach Wunsch gegart ist. Bei Bedarf etwas länger garen.",
 
-"Nach Belieben mit Toast servieren.",
-  ]
-
+        "Die Cowboy Shakshuka nach Belieben mit Toast servieren."
+    ]
 },
 {
     id: "18",
     title: "Cracker",
-    seoTitle: "Dein SEO-Titel",
-    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    seoTitle: "Cracker selber machen – knusprig & würzig",
+    metaDescription: "Knusprige Cracker einfach selber machen: Mit einem mürben Teig, würziger Paprikapaste und aromatischer Gewürzpanade gelingen diese herzhaften Snacks im Handumdrehen.",
     keywords: [
-        
+        "Cracker selber machen",
+        "Cracker Rezept",
+        "herzhafte Cracker",
+        "knusprige Cracker",
+        "Cracker selbst backen",
+        "gewürzte Cracker",
+        "Cracker ohne Ei",
+        "salzige Cracker",
+        "Cracker mit Paprika",
+        "Snacks"
     ],
-    category: ["Snacks", "Backen", "ohne Ei"],
+    category: ["Snacks", "Backen", "Ohne Ei"],
     image: "images/cracker.jpeg",
     time: {
         preparation: "12 min",
         baking: "8 min",
         cooling: "2 Std",
         resting: "30 min",
-        total: "2 Std. 50 min"
+        total: "2 Std 50 min"
     },
     related: ["10", "9", "3"],
     portions: "1 Blech",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Knusprige Cracker mit leckerer Würze.",
+    description: "Diese selbst gemachten Cracker sind herrlich knusprig und würzig. Ein mürber Teig, eine aromatische Paprikapaste und eine würzige Gewürzpanade machen sie zum perfekten Snack für gemütliche Abende, Partys oder zum Dippen.",
 
     /* 🍽️ ZUTATEN */
     ingredients: {
-
         "Mürbeteig": [
             "40 g Mehl <i>(Type 405)</i>",
             "20 g kalte Butter",
@@ -1174,147 +1319,164 @@ const RECIPES = [
             "1 EL Olivenöl",
             "1 TL Sojasauce",
             "1 TL Salz",
-            "1/2 TL Paprikapulver, edelsüß",
+            "1/2 TL Paprikapulver",
             "1/2 TL Knoblauchpulver"
         ],
 
         "Panade": [
             "1 gestrichener TL Salz",
             "1/4 TL Paprikapulver",
-            "1/4 TL Knoblauchpulver, edelsüß"
+            "1/4 TL Knoblauchpulver"
         ]
     },
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
+        "Das Mehl mit der kalten Butter und dem Salz mit den Händen vermengen, bis eine krümelige, sandartige Masse entsteht. In der Mitte eine Mulde formen und das eiskalte Wasser hineingeben. Die Mehlkrümel von außen vorsichtig nach innen schieben, bis der Teig gerade so zusammenhält. Möglichst nicht weiterkneten. Den Teig in Frischhaltefolie wickeln und mindestens 2 Std im Kühlschrank ruhen lassen. Am besten bereitest du ihn bereits am Vorabend zu.",
 
-        "Mehl, Butter und Salz für den Teig mit den Händen verkneten, sodass krümeliger „Sand“ entsteht. Eine Mulde in der Mitte formen, das Wasser dazugeben und die Mehlkrümel von der Seite unterschieben (am besten nicht mehr kneten), bis alles gerade so zusammenhält. In Frischhaltefolie wickeln und für mind. 2 Stunden im Kühlschrank ruhen lassen. <b>(Am besten über Nacht.)</b>",
+        "Den Teig aus dem Kühlschrank nehmen und etwa 30 min bei Raumtemperatur stehen lassen. Anschließend auf einer leicht bemehlten Arbeitsfläche etwa 3 mm dick ausrollen und kleine Formen ausstechen. Alternativ kannst du den Teig in kleine Vierecke schneiden.",
 
-        "Den Teig aus dem Kühlschrank nehmen und ca. 30 min bei Raumtemperatur stehen lassen. Anschließend auf einer leicht bemehlten Arbeitsfläche ca. 3 mm dick ausrollen und kleine Formen ausstechen <i>(alternativ kleine Vierecke ausschneiden)</i>.",
+        "Die ausgestochenen Teigstücke auf ein mit Backpapier belegtes Backblech legen. Für die Paste Olivenöl, Sojasauce, Salz, Paprikapulver und Knoblauchpulver in einer kleinen Schüssel verrühren. Den Backofen auf 200 °C Ober-/Unterhitze vorheizen.",
 
-        "Die ausgestochenen Teile auf ein mit Backpapier belegtes Backblech legen. Für die Panade alle Zutaten in einer kleinen Schale verrühren und den Ofen auf 200 Grad Ober-/Unterhitze vorheizen.",
+        "Die Teigstücke mithilfe eines Pinsels gleichmäßig mit der Paste bestreichen und im vorgeheizten Backofen etwa 8 min goldgelb backen. Behalte die Cracker gegen Ende der Backzeit im Blick, da sie aufgrund ihrer geringen Dicke schnell dunkel werden können.",
 
-        "Alle Teile mithilfe eines Pinsels mit der Paste bestreichen und im vorgeheizten Backofen ca. 8 min goldgelb backen.",
+        "Während die Cracker backen, Salz, Paprikapulver und Knoblauchpulver für die Gewürzpanade in einer verschließbaren Dose vermengen.",
 
-        "In der Zwischenzeit die Panade in einer Box mit Deckel vermengen.",
-
-        "Die fertigen Cracker direkt warm aus dem Ofen in die Box mit der Panade geben und einmal ordentlich durchschütteln."
+        "Die fertigen Cracker direkt nach dem Backen vorsichtig in die Dose geben, den Deckel schließen und alles gut durchschütteln, sodass sich die Gewürze gleichmäßig verteilen. Anschließend die Cracker vollständig auskühlen lassen."
     ]
 },
 
 {
     id: "19",
     title: "Eiersalat",
-    seoTitle: "Dein SEO-Titel",
-    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    seoTitle: "Eiersalat mit Speck – einfach & cremig",
+    metaDescription: "Dieser cremige Eiersalat mit knusprigen Speckwürfeln, Cornichons und einer würzigen Schmand-Mayonnaise-Sauce ist einfach zubereitet und ideal zum Frühstück, Brunch oder Abendbrot.",
     keywords: [
-        
+        "Eiersalat",
+        "Eiersalat Rezept",
+        "Eiersalat mit Speck",
+        "cremiger Eiersalat",
+        "Eiersalat selber machen",
+        "Eiersalat mit Mayonnaise",
+        "Eiersalat mit Schmand",
+        "Eiersalat mit Cornichons",
+        "einfacher Eiersalat"
     ],
-    category: ["Aufstriche & Dips", "Beilagen", "Kochen"], 
+    category: ["Aufstriche & Dips", "Beilagen", "Kochen"],
     image: "images/eiersalat.jpeg",
-        time:{
-    preparation:"10 min",
-    cooking:"10 min",
-    total:" 20 min"
-},
+    time: {
+        preparation: "10 min",
+        cooking: "10 min",
+        total: "20 min"
+    },
     related: ["10", "13", "32"],
     portions: "10 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Der Eierklassiker, verfeinert mit leckeren Speckwürfeln.",
+    description: "Dieser cremige Eiersalat bekommt durch knusprige Speckwürfel, würzige Cornichons und eine feine Schmand-Mayonnaise-Sauce eine herzhafte Note. Er passt hervorragend aufs Brot, zum Brunch oder als Beilage zu frischen Brötchen.",
 
     /* 🍽️ ZUTATEN */
     ingredients: {
-        "":[
-        
-        "10 Eier",
-        "25g Mayonnaise",
-        "200g Schmand",
-        "1 TL Senf",
-        "6 Cornichons",
-        "130g Tiroler Speckwürfel",
-        "4 TL saure Gurkenwasser",
-        "Schnittlauch",
-        "etwas Öl",
-        "Salz",
-        "Pfeffer"
-    ],
+        "": [
+            "10 Eier",
+            "25 g Mayonnaise",
+            "200 g Schmand",
+            "1 TL Senf",
+            "6 Cornichons",
+            "130 g Tiroler Speckwürfel",
+            "4 TL Gurkenwasser aus dem Cornichonglas",
+            "Schnittlauch",
+            "etwas Öl zum Braten",
+            "Salz",
+            "Pfeffer"
+        ]
     },
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
+        "Die Eier in einem Topf mit kochendem Wasser etwa 10 min hart kochen. Anschließend mit kaltem Wasser abschrecken und etwas abkühlen lassen.",
 
-"Die Eier ca. 10 min hart kochen. Abschrecken und etwas abkühlen lassen.",
+        "Währenddessen etwas Öl in einer beschichteten Pfanne erhitzen. Die Speckwürfel darin bei hoher Hitze etwa 4 min knusprig braten. Anschließend kurz abkühlen lassen.",
 
-"Währenddessen etwas Öl in einer beschichteten Pfanne erhitzen und die Speckwürfel darin ca. 4 min auf höchster Stufe braten.",
+        "Den Schmand mit der Mayonnaise, dem Senf und dem Gurkenwasser glatt rühren. Die Cornichons in kleine Würfel schneiden und den Schnittlauch in feine Ringe schneiden. Beides zusammen mit den Speckwürfeln und etwas Bratfett zur Sauce geben und unterrühren.",
 
-"In der Zwischenzeit den Schmand mit der Mayonnaise, dem Senf und dem Gurkenwasser verrühren. Die Cornichons klein schneiden, den Schnittlauch mit einer Schere in feine Ringe schneiden, den Speck mitsamt der Bratflüssigkeit dazugeben und unterrühren.",
+        "Die Eier schälen und mit einem Eierschneider in Scheiben schneiden. Die Scheiben um 90 Grad drehen und erneut durchschneiden, sodass kleine Stücke entstehen. Die Eier vorsichtig unter die Sauce heben und den Eiersalat mit Salz und Pfeffer abschmecken.",
 
-"Die Eier schälen und im Eierschneider in Scheiben schneiden, um 90 Grad drehen und erneut durchschneiden. Die Eier unterheben, salzen und pfeffern und nach Belieben mit Schnittlauch garnieren.",
-
+        "Den Eiersalat nach Belieben mit frischem Schnittlauch garnieren und servieren."
     ]
-
 },
 
 {
     id: "20",
     title: "Veganer gebratener Blumenkohl",
-    seoTitle: "Dein SEO-Titel",
-    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    seoTitle: "Veganer gebratener Blumenkohl – knusprig & einfach",
+    metaDescription: "Veganer gebratener Blumenkohl mit knuspriger Panade – ganz ohne Ei. Einfach zubereitet, würzig und goldbraun gebraten. Perfekt als Hauptgericht oder Beilage.",
     keywords: [
-        
+        "veganer gebratener Blumenkohl",
+        "Blumenkohl knusprig braten",
+        "Blumenkohl ohne Ei",
+        "panierter Blumenkohl vegan",
+        "Blumenkohl in Panade",
+        "veganes Blumenkohl Rezept",
+        "vegane Rezepte",
+        "vegane Gerichte",
+        "vegane Panade",
+     "schnelles Abendessen",
+     "einfaches Abendessen",
+     "schelle Gerichte",
+     "schnelle Rezepte",
+     "einfache Gerichte",
+     "einfache Rezepte"
     ],
-    category: ["Vegan","Vegetarisch" ,"Hauptgerichte", "Kochen"], 
+    category: ["Vegan", "Vegetarisch", "Hauptgerichte", "Kochen"],
     image: "images/Veganer-gebratener-Blumenkohl.jpeg",
-        time:{
-    preparation:"15 min",
-    cooking:"30 min",
-    total:" 45 min"
-},
-    related: ["107","73","29"],
+    time: {
+        preparation: "15 min",
+        cooking: "30 min",
+        total: "45 min"
+    },
+    related: ["107", "73", "29"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Blumenkohl in knuspriger Panade, ganz ohne Ei.",
+    description: "Knusprig panierter Blumenkohl, würzig abgeschmeckt und goldbraun gebraten – ganz ohne Ei und komplett vegan.",
 
     /* 🍽️ ZUTATEN */
     ingredients: {
-
-        "":[
+        "Blumenkohl": [
             "1 großer Blumenkohl",
-            "45g Mehl"
-    ],
+            "45 g Mehl"
+        ],
 
-    "Eiersatz": [
-    "125g Speisestärke",
-    "1 TL Senf",
-    "1 TL Paprikapulver",
-    "1 TL Knoblauchpulver",
-    "1 TL Salz",
-    "Pfeffer"
-    ],
+        "Eiersatz": [
+            "125 g Speisestärke",
+            "1 TL Senf",
+            "1 TL Paprikapulver",
+            "1 TL Knoblauchpulver",
+            "1 TL Salz",
+            "Pfeffer"
+        ],
 
-    "Paniermehl": [
-        "150g Paniermehl",
-        "etwas Salz"
-    ]
-},
+        "Paniermehl": [
+            "150 g Paniermehl",
+            "etwas Salz"
+        ]
+    },
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
+        "Einen großen Topf mit Salzwasser zum Kochen bringen. Währenddessen den Blumenkohl in grobe Röschen teilen.",
 
-"Einen großen Topf mit Salzwasser zum Kochen bringen und den Blumenkohl in grobe Röschen schneiden.",
+        "Die Hitze reduzieren, sodass das Wasser nur noch siedet. Die Blumenkohlröschen etwa 2 min blanchieren. Anschließend mit einer Schaumkelle herausnehmen, in ein Sieb geben, mit kaltem Wasser abschrecken und gründlich abtrocknen.",
 
-"Die Temperatur des Wassers etwas verringern, sodass es nur noch siedet, und die Röschen darin ca. 2 min blanchieren. Mit einer Schaumkelle herausholen, in ein Sieb geben, mit kaltem Wasser abschrecken und gut abtrocknen.",
+        "Das Mehl in eine kleine Schüssel geben. Die Speisestärke in einer weiteren Schüssel mit etwa 120 ml kaltem Wasser glatt rühren, bis eine dünnflüssige, crêpe-ähnliche Konsistenz entsteht. Wird die Mischung beim Panieren zu dick, einfach etwas Wasser hinzufügen.",
 
-"Das Mehl in eine kleine Schale geben. Die Stärke in einer Schüssel mit ca. 120ml kaltem Wasser anrühren (sodass es eine Konsistenz wie ein dünner Crêpe-Teig bekommt). Falls die Mischung im Laufe des Panierens zu dick wird, einfach noch etwas Wasser unterrühren.",
+        "Senf, Paprikapulver, Knoblauchpulver, Salz und Pfeffer unter die Stärkemischung rühren. Das Paniermehl in einer separaten Schüssel mit etwas Salz vermengen. Anschließend eine Pfanne mit reichlich Öl erhitzen, sodass der Boden gut bedeckt ist.",
 
-"Die Stärkemischung mit dem Senf, dem Paprikapulver, dem Salz, dem Pfeffer und dem Knoblauchpulver vermengen. Das Paniermehl in einer Schüssel mit etwas Salz vermengen und eine Pfanne mit reichlich Öl erhitzen, sodass der Boden gut bedeckt ist.",
+        "Die Blumenkohlröschen zuerst im Mehl wenden. Anschließend mithilfe einer Gabel in die Stärkemischung tauchen und überschüssige Flüssigkeit abtropfen lassen. Danach im Paniermehl wenden und die Panade gut andrücken.",
 
-"Jedes Röschen zuerst im Mehl wenden, dann mit einer Gabel in die Stärkemischung tauchen und abtropfen lassen, sodass es gut benetzt ist. Daraufhin im Paniermehl wenden und gut andrücken. Jedes Röschen ca. 5-6 min bei mittlerer Hitze goldbraun anbraten, dabei immer wieder wenden. Auf etwas Küchenpapier abtropfen lassen und nach Belieben mit Ketchup servieren.",
-    
+        "Die panierten Röschen portionsweise bei mittlerer Hitze etwa 5–6 min rundherum goldbraun braten. Dabei regelmäßig wenden. Auf Küchenpapier abtropfen lassen und nach Belieben mit Ketchup servieren."
     ]
-
 },
 
 {

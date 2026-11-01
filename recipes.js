@@ -3,106 +3,128 @@ const RECIPES = [
 /* 🍝 BEISPIEL REZEPT */
 {
     id: "1",
-    title: "Spaghetti aglio e olio",
-    category: [ "Pasta", "Hauptgerichte", "Kochen"],
+    title: "Spaghetti Aglio e Olio",
+    seoTitle: "Spaghetti Aglio e Olio – Original italienisch",
+    metaDescription: "Spaghetti Aglio e Olio mit Knoblauch, Olivenöl und Chili. Einfaches italienisches Pastarezept mit wenigen Zutaten und intensivem Geschmack.",
+    keywords: [
+        "Spaghetti Aglio e Olio",
+        "Aglio e Olio Rezept",
+        "Spaghetti mit Knoblauch und Öl",
+        "Spaghetti mit Knoblauch und Chili",
+        "italienische Pasta",
+        "schnelle Pasta"
+    ],
+
+    category: ["Pasta", "Hauptgerichte", "Kochen"],
     image: "images/spaghetti-aglio-e-olio.jpeg",
-    time:{
-        preparation:"5 min",
+    time: {
+        preparation: "5 min",
         cooking: "25 min",
-        total:"30 min"
+        total: "30 min"
     },
     related: ["2", "5", "8"],
     portions: 6,
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Der italienische Klassiker. Mit wenigen Zutaten zum großen Genuss.",
+
+    description: "Spaghetti Aglio e Olio ist ein italienischer Pasta-Klassiker aus wenigen Zutaten: Knoblauch, Olivenöl und Chili sorgen für ein würziges Aroma. Einfach zubereitet und perfekt für alle, die unkomplizierte italienische Küche lieben.",
 
     /* 🍽️ ZUTATEN */
-    ingredients:{
+    ingredients: {
         "": [
-        "600g Spaghetti (Nr. 5)",
-        "7 große Knoblauchzehen",
-        "1/2 TL Chiliflocken",
-        "80ml Olivenöl",
-        "Salz",
-        "Pfeffer",
-        "Parmesan (optional)",
-    ],
+            "600 g Spaghetti (Nr. 5)",
+            "7 große Knoblauchzehen",
+            "1/2 TL Chiliflocken",
+            "80 ml Olivenöl",
+            "Salz",
+            "Pfeffer",
+            "Parmesan (optional)"
+        ]
     },
+
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
-        "Den Knoblauch schälen, 4 der Knoblauchzehen mit einer Knoblauchpresse in eine kleine Schale pressen, den Rest in dünne Scheiben schneiden und mit in die Schale geben.",
+        "Den Knoblauch schälen. Vier Knoblauchzehen mit einer Knoblauchpresse in eine kleine Schüssel pressen und die übrigen Zehen in dünne Scheiben schneiden. Beides zusammen mit den Chiliflocken bereitstellen.",
 
-        "In einer Pfanne das Olivenöl bei mittlerer Hitze <b>MIT</b> dem Knoblauch und dem Chili zusammen unter gelegentlichem Rühren langsam erhitzen, bis der Knoblauch stark duftet und leicht goldgelb wird (ca. 15 min).",
+        "Das Olivenöl in einer Pfanne bei mittlerer Hitze zusammen mit dem Knoblauch und den Chiliflocken langsam erhitzen. Unter gelegentlichem Rühren ca. 15 min ziehen lassen, bis der Knoblauch intensiv duftet und leicht goldgelb wird. Darauf achten, dass er nicht zu dunkel wird, da er sonst bitter schmeckt.",
 
-        "Währenddessen die Spaghetti in kochendem Salzwasser (3,5l mit ca. 35g Salz) kochen.",
+        "Währenddessen die Spaghetti in reichlich kochendem Salzwasser al dente kochen. Für 600 g Spaghetti kannst du etwa 3,5 l Wasser und 35 g Salz verwenden.",
 
-        "Dann die Pfanne von der heißen Herdplatte ziehen, die Nudeln ca. 2 min vor Ende der Kochzeit in die Soße geben und einrühren.",
+        "Die Pfanne vom Herd ziehen. Die Spaghetti etwa 2 min vor Ende der Kochzeit direkt aus dem Kochwasser in die Pfanne geben.",
 
-        "Auf die Herdplatte zurückziehen, ca. 2 Kellen Pastawasser dazugeben und die Nudeln unter Rühren auf höchster Stufe fertig kochen.",
+        "Die Pfanne wieder auf den Herd stellen, etwa 2 Kellen Pastawasser hinzufügen und die Spaghetti bei hoher Hitze unter ständigem Schwenken oder Rühren fertig garen, bis sich Öl und Pastawasser zu einer leicht cremigen Soße verbinden. Bei Bedarf etwas mehr Pastawasser hinzufügen.",
 
-        "Pfeffern und nach Belieben mit Parmesan servieren.",
+        "Mit Pfeffer abschmecken und nach Belieben mit frisch geriebenem Parmesan servieren."
     ]
 },
 
 
 {
     id: "2",
-    title: "Ananassalat",
+    title: "Ananassalat mit Ziegenkäse und Bacon",
+    seoTitle: "Ananassalat mit Ziegenkäse und Bacon",
+    metaDescription: "Fruchtiger Ananassalat mit knackigem Gemüse, würzigem Dressing und Ziegenkäse im knusprigen Baconmantel. Eine besondere Kombination aus süß und herzhaft!",
+    keywords: [
+        "Ananassalat",
+        "Ananassalat mit Ziegenkäse",
+        "Ananassalat mit Bacon",
+        "Salat mit Ananas",
+        "herzhafter Ananassalat",
+        "Salat mit Ziegenkäse und Bacon"
+    ],
     category: ["Salate", "Hauptgerichte", "Kochen"],
     image: "images/ananassalat.jpeg",
-    time:{
-        preparation:"45 min",
-        total:"45 min"
+    time: {
+        preparation: "45 min",
+        total: "45 min"
     },
     related: ["1", "10", "20"],
     portions: 6,
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Süß-sauer trifft auf herzhaft-salzig.",
+    description: "Süß trifft herzhaft: Dieser fruchtige Ananassalat kombiniert saftige Ananas mit knackigem Gemüse und einem würzigen Limetten-Chili-Dressing. Das Highlight sind die Ziegenkäsestückchen im knusprigen Baconmantel, die dem Salat eine köstlich herzhafte Note verleihen.",
 
     /* 🍽️ ZUTATEN */
     ingredients: {
-        "":[
-        "450g TK-Prinzessinnenbohnen",
-        "1 Ananas (ca. 1,6kg)",
-        "1 Salatgurke",
-        "3 rote Spitzpaprika",
-        "1 große rote Zwiebel",
-        "2 Rollen Ziegenkäse (à 180g)",
-        "150g Bacon",
-
-        "3 EL Olivenöl",
-        "1 TL Limettensaft",
-        "1/2 TL Chiliflocken",
-        "Salz",
-        "Pfeffer",
-    ],
+        "": [
+            "450 g TK-Prinzessinnenbohnen",
+            "1 Ananas (ca. 1,6 kg)",
+            "1 Salatgurke",
+            "3 rote Spitzpaprika",
+            "1 große rote Zwiebel",
+            "2 Rollen Ziegenkäse (à 180 g)",
+            "150 g Bacon",
+            "3 EL Olivenöl",
+            "1 TL Limettensaft",
+            "1/2 TL Chiliflocken",
+            "Salz",
+            "Pfeffer"
+        ]
     },
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
         "Einen kleinen Topf mit Salzwasser zum Kochen bringen.",
 
-        "Jede Ziegenkäserolle in 10 Scheiben schneiden und jede Scheibe nochmals vierteln.",
+        "Jede Ziegenkäserolle in 10 Scheiben schneiden und jede Scheibe anschließend vierteln.",
 
-        "Jede Baconscheibe in 8 gleich große Stücke schneiden, jedes Ziegenkäsestück mit einem Baconstück umwickeln und auf ein mit Backpapier belegtes Backblech legen.",
+        "Jede Baconscheibe in 8 gleich große Stücke schneiden. Jedes Ziegenkäsestück mit einem Stück Bacon umwickeln und auf ein mit Backpapier belegtes Backblech legen.",
 
-        "Die Bohnen in das Wasser geben, aufkochen, ca. 7 min sanft köcheln lassen, in ein Sieb abgießen, kalt abspülen und abtropfen lassen.",
+        "Die Bohnen in das kochende Wasser geben, erneut aufkochen lassen und ca. 7 min sanft köcheln lassen. Anschließend in ein Sieb abgießen, kalt abspülen und gut abtropfen lassen.",
 
-        "Die Gurke schälen, halbieren, erneut vierteln und in kleine Würfel schneiden.",
+        "Die Gurke schälen, längs halbieren, die Hälften nochmals längs vierteln und in kleine Würfel schneiden.",
 
         "Die Zwiebel schälen und fein hacken.",
 
-        "Die Paprika in kleine Würfel schneiden.",
+        "Die Spitzpaprika waschen, entkernen und in kleine Würfel schneiden.",
 
-        "Für das Dressing alle Zutaten vermengen.",
+        "Für das Dressing das Olivenöl, den Limettensaft und die Chiliflocken miteinander verrühren. Mit Salz und Pfeffer abschmecken.",
 
-        "Die Ziegenkäsescheiben im Ofen bei höchster Grillstufe ca. 7 min im oberen Drittel backen, bis der Bacon knusprig ist.",
+        "Die Ziegenkäsestückchen im Backofen bei höchster Grillstufe im oberen Drittel ca. 7 min grillen, bis der Bacon knusprig ist. Dabei im Auge behalten, damit der Bacon nicht verbrennt.",
 
-        "In der Zwischenzeit den Strunk von der Ananas entfernen, die Schale abschneiden und das Fruchtfleisch in Würfel schneiden, dabei die holzige Mitte herausschneiden.",
+        "In der Zwischenzeit den Strunk der Ananas entfernen, die Schale abschneiden und das Fruchtfleisch in Würfel schneiden. Dabei den holzigen Mittelteil herausschneiden.",
 
-        "Den Käse aus dem Ofen nehmen, die Ananas, die Bohnen, die Gurke, die Zwiebel und die Paprika in eine große Schüssel geben, mit dem Dressing vermengen und mit einem Teil der Ziegenkäsestückchen toppen.",
+        "Ananas, Bohnen, Gurke, Zwiebel und Spitzpaprika in eine große Schüssel geben und mit dem Dressing vermengen. Den Salat auf Tellern oder einer Servierplatte anrichten und mit einem Teil der knusprigen Ziegenkäse-Bacon-Stückchen toppen. Die übrigen Stückchen separat dazu servieren."
     ]
 },
 
@@ -110,177 +132,212 @@ const RECIPES = [
 {
     id: "3",
     title: "Ameisenkuchen mit Kirschen",
-    category: [ "Backen", "Kuchen & Torten", "Vegetarisch"],
+    seoTitle: "Ameisenkuchen mit Kirschen – saftig & einfach",
+    metaDescription: "Saftiger Ameisenkuchen mit Kirschen und Schokostreuseln: einfach zubereitet, herrlich schokoladig und ganz ohne Ei. Perfekt zum Nachmittagskaffee!",
+    keywords: [
+        "Ameisenkuchen mit Kirschen",
+        "Ameisenkuchen",
+        "Ameisenkuchen ohne Ei",
+        "saftiger Ameisenkuchen",
+        "Ameisenkuchen mit Schokostreuseln",
+        "einfacher Kuchen ohne Ei"
+    ],
+    category: ["Backen", "Kuchen & Torten", "Vegetarisch", "ohne Ei"],
     image: "images/ameisenkuchen-mit-kirschen.jpeg",
-    time:{
-        preparation:"10 min",
-        baking:"45 min",
-        cooling:"1 Std.",
-        total:"1 Std. 55 min"
+    time: {
+        preparation: "10 min",
+        baking: "45 min",
+        cooling: "1 Std",
+        total: "1 Std 55 min"
     },
     related: ["9", "40", "36"],
     portions: "1 Kuchen",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Der einfache Klassiker mit Kirschen.",
+    description: "Dieser saftige Ameisenkuchen mit Kirschen und Schokostreuseln ist schnell zusammengerührt und kommt ganz ohne Ei aus. Die fruchtigen Kirschen sorgen für eine angenehme Frische, während die Schokostreusel den einfachen Rührkuchen schön schokoladig machen. Perfekt für den Nachmittagskaffee oder den Kuchen auf der Kaffeetafel.",
 
     /* 🍽️ ZUTATEN */
     ingredients: {
-        "":[
-        "115g Glaskirschen (abgetropft)",
-        "280g Mehl",
-        "20g Speisestärke",
-        "175g Zucker",
-        "1 TL Zitronenschale",
-        "1 TL Vanilleextrakt",
-        "300ml Milch",
-        "100ml neutrales Öl",
-        "1/2 Pck. Backpulver",
-        "1/2 TL Natron",
-        "1 EL Apfelessig",
-        "100g Schokostreusel",
-        "1 Prise Salz",
-    ],
+        "": [
+            "115 g Glaskirschen <i>(abgetropft)</i>",
+            "280 g Mehl",
+            "20 g Speisestärke",
+            "175 g Zucker",
+            "1 TL Zitronenschale",
+            "1 TL Vanilleextrakt",
+            "300 ml Milch",
+            "100 ml neutrales Öl",
+            "1/2 Pck. Backpulver",
+            "1/2 TL Natron",
+            "1 EL Apfelessig",
+            "100 g Schokostreusel",
+            "1 Prise Salz"
+        ]
     },
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
-        "Den Ofen auf 180°C Ober-/Unterhitze vorheizen und eine Kastenform (30x11cm) gut einfetten.",
+        "Den Backofen auf 180 °C Ober-/Unterhitze vorheizen und eine Kastenform (30 × 11 cm) gut einfetten.",
 
-        "Die Kirschen halbieren.",
+        "Die Kirschen abtropfen lassen und halbieren.",
 
         "Das Mehl mit der Speisestärke, dem Zucker, dem Backpulver, dem Salz, dem Natron und der Zitronenschale vermengen und in der Mitte eine Mulde formen.",
 
-        "Die Milch, das Öl, den Apfelessig sowie den Vanilleextrakt dazugeben und alles kurz mit einem Schneebesen verrühren, bis sich alles verbunden hat.",
+        "Die Milch, das Öl, den Apfelessig und den Vanilleextrakt dazugeben. Alles mit einem Schneebesen kurz verrühren, bis sich die Zutaten gerade so verbunden haben.",
 
-        "Die Kirschen und die Streusel dazugeben und vorsichtig unterheben, in die Kastenform geben und glattstreichen.",
+        "Die Kirschen und die Schokostreusel dazugeben und vorsichtig unterheben. Den Teig in die vorbereitete Kastenform füllen und glatt streichen.",
 
-        "Im vorgeheizten Backofen ca. 45 min backen (Stäbchenprobe!) und nach ca. 15 min einmal der Länge nach einschneiden.",
+        "Den Kuchen im vorgeheizten Backofen ca. 45 min backen. Nach etwa 15 min den Kuchen der Länge nach vorsichtig einschneiden. Mit der Stäbchenprobe prüfen, ob er durchgebacken ist.",
 
-        "Vollständig auskühlen lassen und dann aus der Form lösen.",
+        "Den Kuchen vollständig auskühlen lassen und anschließend vorsichtig aus der Form lösen."
     ]
 },
 
 
 {
     id: "4",
-    title: "Thüringer Klöße",
-    category: ["Beilage", "Kochen"],
+    title: "Thüringer Klöße selber machen",
+    seoTitle: "Thüringer Klöße – einfach selber machen",
+    metaDescription: "Thüringer Klöße aus rohen und gekochten Kartoffeln selber machen: mit knusprigen Semmelbröseln gefüllt und Schritt für Schritt erklärt.",
+    keywords: [
+        "Thüringer Klöße",
+        "Thüringer Klöße Rezept",
+        "Thüringer Klöße selber machen",
+        "Thüringer Kartoffelklöße",
+        "Kartoffelklöße aus rohen und gekochten Kartoffeln",
+        "Thüringer Klöße mit Semmelbröseln",
+        "Weihnachten Beilagen",
+        "Beilagen",
+        "Festessen"
+    ],
+    category: ["Beilagen", "Kochen"],
     image: "images/Thüringer-Klöße.jpeg",
-    time:{
-        preparation:"35 min",
-        cooking:"15 min",
-        total:"50 min"
+    time: {
+        preparation: "35 min",
+        cooking: "15 min",
+        total: "50 min"
     },
     related: ["89", "97", "109"],
     portions: "12 kleine Klöße",
-    difficulty: "Einfach",
+    difficulty: "Mittel",
     rating: 1,
-    description: "Der Beilagenklassiker. Ob zu Fleisch, Soße oder Gemüse. Einfach immer köstlich.",
+    description: "Thüringer Klöße sind ein echter Klassiker der deutschen Küche. Sie werden aus rohen und gekochten Kartoffeln zubereitet und mit knusprigen, in Butter gerösteten Semmelwürfeln gefüllt. Mit ihrer weichen Konsistenz passen sie hervorragend zu Braten, kräftigen Soßen und festlichen Sonntagsgerichten.",
 
     /* 🍽️ ZUTATEN */
     ingredients: {
 
-    "Kloßteig": [
-        "1,5kg mehligkochende Kartoffeln",
-        "1/2 TL Salz"
-    ],
+        "Kloßteig": [
+            "1,5 kg mehligkochende Kartoffeln",
+            "1/2 TL Salz"
+        ],
 
-    "Semmelbrösel": [
-        "1 Kaisersemmel",
-        "30g Butter",
-        "Salz",
-        "Pfeffer",
-    ]
-},
+        "Semmelbrösel": [
+            "1 Kaisersemmel",
+            "30 g Butter",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
-        "1/3 der Kartoffeln (=500g) ungeschält in Salzwasser ca. 25 min weich kochen und abkühlen. (Diesen Schritt kannst du auch schon am Vortag machen)",
+        "Ein Drittel der Kartoffeln (500 g) ungeschält in Salzwasser ca. 25 min weich kochen. Anschließend abgießen und abkühlen lassen. Diesen Schritt kannst du auch bereits am Vortag erledigen.",
 
-        "Ein Küchentuch in eine Glasschüssel legen und die restlichen 2/3 der rohen Kartoffeln (=1kg) schälen und mit einer Sternreibe fein hineinraspeln.",
+        "Ein sauberes Küchentuch in eine große Schüssel legen. Die restlichen zwei Drittel der Kartoffeln (1 kg) schälen und mit einer feinen Reibe in das Tuch raspeln.",
 
-        "Die Flüssigkeit aus den geraspelten Kartoffeln mit dem Tuch gut auspressen und beiseitestellen, bis sich die Stärke abgesetzt hat (ca. 10 min).",
+        "Die Flüssigkeit aus den geriebenen Kartoffeln mithilfe des Küchentuchs kräftig auspressen und in einer Schüssel auffangen. Die Flüssigkeit ca. 10 min stehen lassen, damit sich die Kartoffelstärke am Boden absetzen kann.",
 
-        "In der Zwischenzeit die Butter in einer Pfanne schmelzen, das Brötchen in Würfel schneiden und in der Pfanne mit Salz und Pfeffer knusprig braten.",
+        "In der Zwischenzeit die Butter in einer Pfanne schmelzen. Die Kaisersemmel in kleine Würfel schneiden und in der Butter mit Salz und Pfeffer knusprig rösten.",
 
-        "Dann einen großen Topf mit Salzwasser zum Kochen bringen.",
+        "Einen großen Topf mit Salzwasser zum Kochen bringen.",
 
-        "Vorsichtig das Wasser von der abgesetzten Stärke abgießen, mit einem Löffel gut umrühren, die gekochten Kartoffeln durch eine Kartoffelpresse pressen und mit den geraspelten Kartoffeln, Stärke und dem Salz gut vermengen, bis sich alles gut verbunden hat und man einen gut formbaren Teig erhält. (Nicht zu lange, da er sonst zäh wird)",
+        "Das Wasser vorsichtig von der abgesetzten Kartoffelstärke abgießen. Die Stärke mit einem Löffel vom Schüsselboden lösen. Die gekochten Kartoffeln pellen und durch eine Kartoffelpresse drücken. Anschließend mit den geriebenen Kartoffeln, der aufgefangenen Stärke und dem Salz gründlich vermengen, bis ein gut formbarer Teig entsteht. Nicht länger als nötig kneten, damit die Masse nicht klebrig wird.",
 
-        "Je ein Stück Teig nehmen, zu einer Kugel formen, flach drücken, einen Semmelbrösel hineingeben, verschließen und wieder zu einer Kugel formen.",
+        "Jeweils etwas Teig abnehmen, zu einer Kugel formen und flach drücken. Einige geröstete Semmelwürfel in die Mitte geben, den Teig darüber verschließen und wieder zu einer gleichmäßigen Kugel formen.",
 
-        "Die Hitze reduzieren, bis das Salzwasser nur noch siedet.",
+        "Die Hitze unter dem Topf reduzieren, bis das Salzwasser nur noch siedet und nicht mehr sprudelnd kocht.",
 
-        "Die Klöße mit einer Schaumkelle hineingeben und bei geschlossenem Deckel auf mittlerer Hitze ca. 15 min ziehen lassen, bis sie an der Oberfläche schwimmen, und mit einer Schaumkelle herausnehmen.",
+        "Die Klöße vorsichtig mit einer Schaumkelle in das siedende Wasser geben. Bei geschlossenem Deckel ca. 15 min ziehen lassen, bis sie an der Oberfläche schwimmen und gar sind. Anschließend vorsichtig mit einer Schaumkelle herausheben."
     ]
 },
 {
     id: "5",
-    title: "Asianstyle Pilz-Brokkoli-Pfanne",
-    category: ["Vegetarisch", "Vegan", "Reis" , "Hauptgerichte", "Kochen"],
+    title: "Asiatische Pilz-Brokkoli-Pfanne",
+    seoTitle: "Asiatische Pilz-Brokkoli-Pfanne mit Reis",
+    metaDescription: "Diese asiatische Pilz-Brokkoli-Pfanne mit Champignons, knackigem Brokkoli und würziger Sojasoße ist einfach zubereitet und wird mit Basmatireis serviert.",
+    keywords: [
+        "Pilz-Brokkoli-Pfanne",
+        "asiatische Gemüsepfanne",
+        "Brokkoli-Pilz-Pfanne",
+        "Brokkoli mit Champignons",
+        "asiatische Gemüsepfanne mit Reis",
+        "vegetarische Gemüsepfanne",
+        "vegane Brokkoli-Pfanne",
+        "Champignon-Brokkoli-Pfanne mit Sojasoße"
+    ],
+    category: ["Vegetarisch", "Vegan", "Reis", "Hauptgerichte", "Kochen"],
     image: "images/Asianstyle-Pilz-Brokkoli-Pfanne.jpeg",
-    time:{
-        preparation:"22 min",
-        cooking:"18 min",
-        total:"40 min"
+    time: {
+        preparation: "22 min",
+        cooking: "18 min",
+        total: "40 min"
     },
     related: ["2", "10", "25"],
     portions: 6,
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Pilz-Brokkoli-Pfanne mit einem Hauch von Asien",
+    description: "Diese asiatisch inspirierte Gemüsepfanne kombiniert aromatische Champignons und knackigen Brokkoli mit einer würzigen Sojasoße. Zusammen mit lockerem Basmatireis entsteht ein unkompliziertes Gericht für die ganze Familie.",
 
     /* 🍽️ ZUTATEN */
     ingredients: {
         "Gemüse": [
-            "800g Champignons",
+            "800 g Champignons",
             "2 Brokkoli",
             "1 große Gemüsezwiebel",
             "2 Knoblauchzehen",
-            "Erdnussöl"
+            "Erdnussöl zum Braten"
         ],
 
         "Soße": [
-            "150ml Gemüsebrühe",
-            "4 EL Sojasauce",
+            "150 ml Gemüsebrühe",
+            "4 EL Sojasoße",
             "1 TL Reisessig",
-            "1 TL Honig",
+            "1 TL Agavendicksaft",
             "2 EL Speisestärke",
             "1 TL Sesamöl",
             "1/2 TL Chiliflocken"
         ],
 
         "Beilage": [
-            "300g Basmatireis",
-            "450ml Wasser",
+            "300 g Basmatireis",
+            "450 ml Wasser",
             "Salz"
-        ],
+        ]
     },
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
-        "Einen Topf mit Salzwasser zum Kochen bringen.",
+        "Den Reis unter fließendem Wasser waschen, bis das Wasser klar bleibt. In einen Topf geben, mit dem Wasser bedecken und etwa 15 min einweichen lassen.",
 
-        "Den Reis waschen, bis das Wasser klar ist, in einen Topf mit dem Wasser geben und ca. 15 min einweichen lassen, aufkochen und bei mittlerer Hitze und geschlossenem Deckel ca. 8 min sanft köcheln, bis das Wasser absorbiert wurde.",
+        "Den Reis anschließend aufkochen und bei niedriger bis mittlerer Hitze mit geschlossenem Deckel etwa 8 min sanft köcheln lassen, bis das Wasser aufgenommen wurde. Den Topf vom Herd nehmen und den Reis zugedeckt quellen lassen, bis das Gemüse fertig ist.",
 
-        "Währenddessen die Zwiebel schälen, vierteln und in Streifen schneiden. Vom Brokkoli den Strunk entfernen und den Kopf in kleinere Röschen schneiden. Die Pilze putzen, halbieren und in Scheiben schneiden.",
+        "Währenddessen die Gemüsezwiebel schälen, vierteln und in Streifen schneiden. Den Brokkoli in kleine Röschen teilen. Die Champignons putzen, halbieren und in Scheiben schneiden. Den Knoblauch schälen und fein hacken.",
 
-        "Den Brokkoli in das kochende Salzwasser geben und 1 min blanchieren. Mit einer Schaumkelle herausnehmen und mit kaltem Wasser abschrecken.",
+        "Einen Topf mit Salzwasser zum Kochen bringen. Die Brokkoliröschen darin etwa 1 min blanchieren, anschließend mit einer Schaumkelle herausnehmen und mit kaltem Wasser abschrecken. Gut abtropfen lassen.",
 
-        "Für die Soße die Stärke in etwas Wasser glattrühren und mit den restlichen Zutaten für die Soße vermischen.",
+        "Für die Soße die Speisestärke mit etwas kaltem Wasser glatt rühren. Anschließend mit Gemüsebrühe, Sojasoße, Reisessig, Honig oder Agavendicksaft, Sesamöl und Chiliflocken vermischen.",
 
-        "In der Zwischenzeit in einer beschichteten Pfanne etwas Erdnussöl erhitzen.",
+        "Etwas Erdnussöl in einer großen beschichteten Pfanne oder einem Wok erhitzen. Die Zwiebelstreifen darin 1–2 min unter Rühren anbraten.",
 
-        "Die Zwiebeln dazugeben und ca. 1–2 min unter Rühren braten.",
+        "Den gehackten Knoblauch hinzufügen und kurz mitbraten, bis er duftet.",
 
-        "Den Knoblauch solange unterrühren, bis er duftet. Dann die Pilze dazugeben und ca. 5 min unter gelegentlichem Rühren braten, bis sie braun sind.",
+        "Die Champignons dazugeben und etwa 5 min unter gelegentlichem Rühren braten, bis sie gebräunt sind und ein Großteil der Flüssigkeit verdampft ist.",
 
-        "Den Brokkoli in die Pfanne geben und weitere 5 Minuten unter gelegentlichem Rühren braten. Dabei nach ca. 1–2 min das Wasser abgießen.",
+        "Den blanchierten Brokkoli hinzufügen und weitere 3–5 min unter gelegentlichem Rühren braten, bis er bissfest ist.",
 
-        "Die Soße dazugeben, aufkochen und ca. 5 min fertig köcheln.",
+        "Die Soße nochmals gut umrühren, in die Pfanne geben und kurz aufkochen lassen. Unter Rühren etwa 1–2 min köcheln, bis sie eindickt und das Gemüse gleichmäßig überzieht.",
 
-        "Vom Herd nehmen und ca. 5 min abkühlen lassen, sodass die Soße noch etwas andicken kann. Gut durchrühren und mit Reis servieren.",
+        "Die Pfanne vom Herd nehmen und kurz ruhen lassen. Das Gemüse bei Bedarf abschmecken und zusammen mit dem Basmatireis servieren."
     ]
 },
 
@@ -288,6 +345,18 @@ const RECIPES = [
 {
     id: "6",
     title: "Avocadocreme",
+    seoTitle: "Avocadocreme selber machen – einfach & cremig",
+    metaDescription: "Diese cremige Avocadocreme mit Frischkäse und Limettensaft ist in nur 5 Minuten fertig. Perfekt als Brotaufstrich, Dip oder für Burger und Wraps.",
+    keywords: [
+        "Avocadocreme",
+        "Avocadocreme Rezept",
+        "Avocadocreme selber machen",
+        "Avocado-Aufstrich",
+        "Avocado-Dip mit Frischkäse",
+        "Avocadocreme für Burger",
+        "Avocadocreme für Wraps",
+        "cremiger Avocado-Aufstrich"
+    ],
     category: ["Aufstriche & Dips", "Vegetarisch", "Kochen"],
     image: "images/avocadocreme.jpeg",
     time: "5 min",
@@ -295,95 +364,121 @@ const RECIPES = [
     portions: "6 kleine Portionen",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Ein cremiger Aufstrich. Perfekt für Burger, Sandwiches, Wraps & Co.",
+    description: "Diese cremige Avocadocreme mit Frischkäse und einem Spritzer Limettensaft ist blitzschnell zubereitet. Sie schmeckt als Brotaufstrich ebenso gut wie zu Burgern, Sandwiches und Wraps.",
 
     /* 🍽️ ZUTATEN */
     ingredients: {
-        "":[
-        "2 Avocados",
-        "100g Frischkäse",
-        "1 Spritzer Limettensaft",
-        "Salz",
-        "Pfeffer",
-    ],
-},
+        "": [
+            "2 Avocados",
+            "100 g Frischkäse",
+            "1 Spritzer Limettensaft",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
-        "Die Avocados schälen, den Kern entfernen und mit den restlichen Zutaten in einem Häcksler glatt pürieren.",
+        "Die Avocados halbieren, die Kerne entfernen und das Fruchtfleisch mit einem Löffel aus der Schale lösen. Zusammen mit dem Frischkäse und dem Limettensaft in einen Mixer oder Zerkleinerer geben und cremig pürieren. Mit Salz und Pfeffer abschmecken."
     ]
 },
 
-
 {
     id: "7",
-    title: "Bananenmuffins",
+    title: "Bananenmuffins ohne Ei",
+    seoTitle: "Bananenmuffins ohne Ei – einfach & schnell",
+    metaDescription: "Diese einfachen Bananenmuffins ohne Ei und frische Bananen sind in nur 25 Minuten fertig. Mit wenigen Zutaten schnell zusammengerührt – ideal, wenn es unkompliziert sein soll.",
+    keywords: [
+        "Bananenmuffins ohne Ei",
+        "Bananenmuffins",
+        "Bananenmuffins Rezept",
+        "Muffins ohne Ei",
+        "einfache Muffins ohne Ei",
+        "schnelle Muffins",
+        "Muffins ohne Ei backen",
+        "Bananenmuffins einfach"
+    ],
     category: ["Teilchen", "Muffins", "Backen", "ohne Ei"],
     image: "images/bananenmuffin.jpg",
-    time:{
-        preparation:"5 min",
-        baking:"20 min",
-        total:"25 min"
+    time: {
+        preparation: "5 min",
+        baking: "20 min",
+        total: "25 min"
     },
     related: ["2", "22", "32"],
     portions: "4 Stück",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Schnelle Muffins mit Zutaten, die du sicher schon zuhause hast.",
+    description: "Diese kleinen Bananenmuffins ohne Ei und frische Bananen sind schnell zusammengerührt und mit wenigen Zutaten gebacken. Perfekt, wenn du spontan Lust auf etwas Süßes hast.",
 
     /* 🍽️ ZUTATEN */
     ingredients: {
-        "":[
-        "50g Mehl (Type 405)",
-        "20g Zucker",
-        "2g Backpulver",
-        "2g Natron",
-        "1 Prise Salz",
-        "15g Bananenkabapulver",
-        "50ml Milch",
-        "15ml Sprudelwasser",
-        "20ml neutrales Öl",
-        "1 TL Apfelessig",
-    ],
+        "": [
+            "50 g Mehl (Type 405)",
+            "20 g Zucker",
+            "2 g Backpulver",
+            "2 g Natron",
+            "1 Prise Salz",
+            "15 g Bananenkabapulver",
+            "50 ml Milch",
+            "15 ml Sprudelwasser",
+            "20 ml neutrales Öl",
+            "1 TL Apfelessig"
+        ]
     },
+
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
-        "Den Ofen auf 180°C Ober-/Unterhitze vorheizen und ein Muffinblech einfetten (alternativ mit Muffinförmchen auskleiden).",
+        "Den Backofen auf 180 °C Ober-/Unterhitze vorheizen. Ein Muffinblech einfetten oder mit Muffinförmchen auskleiden.",
 
-        "Alle trockenen Zutaten in einer Schüssel vermengen, in der Mitte eine Mulde formen, die flüssigen Zutaten dazugeben und alles mit einem Schneebesen nur solange verrühren, bis sich alle Zutaten miteinander verbunden haben und kein trockenes Mehl mehr zu sehen ist.",
+        "Alle trockenen Zutaten in einer Schüssel vermischen. In der Mitte eine Mulde formen und die flüssigen Zutaten hineingeben. Alles mit einem Schneebesen nur so lange verrühren, bis sich die Zutaten verbunden haben und kein trockenes Mehl mehr zu sehen ist.",
 
-        "Den Teig in die vorbereitete Muffinform geben und im vorgeheizten Backofen auf mittlerer Schiene ca. 20 min backen. (Stäbchenprobe!)",
+        "Den Teig gleichmäßig auf 4 Muffinförmchen verteilen und im vorgeheizten Backofen auf mittlerer Schiene etwa 20 min backen. Mit der Stäbchenprobe prüfen, ob die Muffins fertig sind."
     ]
 },
 
 
 {
     id: "8",
-    title: "Blauschimmelkäsesalat",
-    category: ["Salate", "Vegetarisch" , "Hauptgerichte", "Kochen"],
+    title: "Blauschimmelkäsesalat mit Birne und Walnüssen",
+    seoTitle: "Blauschimmelkäsesalat mit Birne & Walnüssen",
+    metaDescription: "Dieser herbstliche Blauschimmelkäsesalat mit süßen Birnen, Weintrauben, knusprigen Kartoffeln und Walnüssen wird mit einem aromatischen Honig-Senf-Dressing abgerundet.",
+    keywords: [
+        "Blauschimmelkäsesalat",
+        "Blauschimmelkäsesalat mit Birne",
+        "Salat mit Blauschimmelkäse",
+        "Birnen-Blauschimmelkäse-Salat",
+        "Herbstsalat mit Birne",
+        "Salat mit Blauschimmelkäse und Walnüssen",
+        "Feldsalat mit Blauschimmelkäse",
+        "Salat mit Birne und Walnüssen",
+        "herzhafter Herbstsalat"
+    ],
+    category: ["Salate", "Vegetarisch", "Hauptgerichte", "Kochen"],
     image: "images/blauschimmelkäsesalat.jpg",
-    time:{
-        preparation:"45 min",
-        total:"45 min"
+    time: {
+        preparation: "45 min",
+        total: "45 min"
     },
     related: ["15", "38", "28"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Ein einfacher Herbstsalat mit cremigem Blauschimmelkäse, süßem Obst und knackigen Nüssen.",
+    description: "Dieser herbstliche Salat kombiniert cremigen Blauschimmelkäse mit süßen Birnen und Weintrauben, frischem Feldsalat und knackigen Walnüssen. Knusprige Ofenkartoffeln und ein fruchtig-würziges Honig-Senf-Dressing machen ihn zu einer sättigenden Mahlzeit.",
 
+    /* 🍽️ ZUTATEN */
     ingredients: {
         "Salat": [
-            "400g Blauschimmelkäse",
+            "400 g Blauschimmelkäse",
             "2 Birnen",
-            "150g Feldsalat",
+            "150 g Feldsalat",
             "2 rote Zwiebeln",
-            "300g rote Weintrauben",
-            "50g gehackte Walnüsse"
+            "300 g rote Weintrauben",
+            "50 g gehackte Walnüsse"
         ],
 
         "Kartoffeln": [
-            "500g Drillingskartoffeln",
+            "500 g Drillingskartoffeln",
             "1 TL getrockneter Thymian",
             "1 EL Olivenöl",
             "1 TL Salz",
@@ -404,119 +499,141 @@ const RECIPES = [
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
-        "Die Kartoffeln in kleine Würfel schneiden, mit Salz und Wasser bedecken, aufkochen und ca. 8 min garen, abgießen und ca. 10 min (am besten auf einer flachen Fläche) ausdampfen lassen.",
+        "Die Drillingskartoffeln waschen und in kleine Würfel schneiden. In einen Topf geben, mit Salzwasser bedecken und aufkochen. Etwa 8 min garen, anschließend abgießen und auf einer flachen Fläche etwa 10 min ausdampfen lassen.",
 
-        "In der Zwischenzeit den Ofen auf 200°C Umluft vorheizen.",
+        "Währenddessen den Backofen auf 200 °C Umluft vorheizen.",
 
-        "Die Kartoffeln mit den restlichen Zutaten vermengen, auf ein mit Backpapier belegtes Backblech nicht überlappend verteilen und im vorgeheizten Backofen ca. 30 min goldbraun backen. In den letzten 5 min auf Grill knusprig backen und nach der Hälfte der Zeit einmal wenden.",
+        "Die Kartoffelwürfel mit Thymian, Olivenöl, Salz und Pfeffer vermengen. Auf einem mit Backpapier belegten Backblech verteilen, sodass sie sich möglichst nicht überlappen. Im vorgeheizten Backofen etwa 30 min goldbraun backen. Nach der Hälfte der Backzeit wenden und in den letzten 5 min bei Grillfunktion knusprig bräunen. Dabei gut im Auge behalten.",
 
-        "Die Zwiebel schälen und in kleine Würfel hacken. Die Strünke von den Weintrauben entfernen, halbieren und die Birnen in Würfel schneiden.",
+        "Die roten Zwiebeln schälen und fein würfeln. Die Weintrauben von den Stielen lösen und halbieren. Die Birnen waschen, entkernen und in Würfel schneiden. Den Feldsalat gründlich waschen und trocken schleudern.",
 
-        "Für das Dressing alle Zutaten mit einem Schneebesen gut verrühren.",
+        "Für das Dressing Olivenöl, Wasser, Balsamicoessig, Honig, Senf und Orangenschale mit einem Schneebesen verrühren. Mit Salz und Pfeffer abschmecken.",
 
-        "Die Kartoffeln in eine große Schüssel geben, das Gemüse, den Salat und das Dressing hinzufügen und vermengen. Den Käse würfeln, vorsichtig unterheben und mit den Nüssen servieren.",
+        "Die abgekühlten oder noch leicht warmen Kartoffeln mit Feldsalat, Zwiebeln, Weintrauben und Birnen in eine große Schüssel geben. Das Dressing hinzufügen und vorsichtig vermengen. Den Blauschimmelkäse würfeln, behutsam unterheben und den Salat mit den gehackten Walnüssen servieren."
     ]
 },
 
 {
-id: "9",
+    id: "9",
     title: "Crispy Chicken Salad",
-    category: ["Salate" , "Hauptgerichte", "Kochen"],
+    seoTitle: "Crispy Chicken Salad – knuspriger Hähnchensalat",
+    metaDescription: "Dieser Crispy Chicken Salad kombiniert knusprig paniertes Hähnchen mit frischem Gemüse, Avocado und Parmesan. Dazu gibt es ein cremiges Joghurt-Dressing – perfekt als sättigender Salat.",
+    keywords: [
+        "Crispy Chicken Salad",
+        "Crispy Chicken Salad Rezept",
+        "knuspriger Hähnchensalat",
+        "Salat mit knusprigem Hähnchen",
+        "Hähnchensalat mit Avocado",
+        "Hähnchensalat mit Joghurt-Dressing",
+        "Salat mit paniertem Hähnchen",
+        "Chicken Salad mit Parmesan",
+        "Cesar Salad Varianten",
+        "Chicken Salad",
+        "Leckere Salate",
+        "Gesundes Abendessen"
+    ],
+    category: ["Salate", "Hauptgerichte", "Kochen"],
     image: "images/Crispy-Chicken-Salad.jpeg",
-                     time:{
-    preparation:"40 min",
-    cooling: "2 Std",
-    cooking: "20 min",
-    total:"3 Std."
-},
-related: ["45", "7", "20"],
+    time: {
+        preparation: "40 min",
+        cooling: "2 Std",
+        cooking: "20 min",
+        total: "3 Std"
+    },
+    related: ["45", "7", "20"],
     portions: "6 Portionen",
     difficulty: "Einfach",
     rating: 4.6,
-    description: "Frisches, buntes und knackiges Gemüse mit saftigem Hähnchen in knuspriger Panade.",
+    description: "Dieser Crispy Chicken Salad verbindet knackiges Gemüse und cremige Avocado mit goldbraun paniertem Hähnchen. Frischer Parmesan und ein würziges Joghurt-Dressing runden den bunten Salat ab.",
 
- ingredients: {
-    "Hähnchen": [
-        "3 Hähnchenbrustfilets",
-        "200g Joghurt",
-        "1 TL Knoblauchpulver",
-        "1 TL Paprikapulver",
-        "1 TL italienische Kräuter",
-        "1/4 TL Zitronenschale",
-        "Salz",
-        "Pfeffer"
-    ],
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+        "Hähnchen": [
+            "3 Hähnchenbrustfilets",
+            "200 g Joghurt",
+            "1 TL Knoblauchpulver",
+            "1 TL Paprikapulver",
+            "1 TL italienische Kräuter",
+            "1/4 TL Zitronenschale",
+            "Salz",
+            "Pfeffer"
+        ],
 
-    "Panade": [
-        "40g Mehl",
-        "10g Speisestärke",
-        "1/2 TL Paprikapulver",
-        "1/2 TL Knoblauchpulver",
-        "100g Paniermehl",
-        "Salz",
-        "Pfeffer",
-        "neutrales Öl",
-    ],
+        "Panade": [
+            "40 g Mehl",
+            "10 g Speisestärke",
+            "1/2 TL Paprikapulver",
+            "1/2 TL Knoblauchpulver",
+            "100 g Paniermehl",
+            "Salz",
+            "Pfeffer",
+            "Neutrales Öl zum Braten"
+        ],
 
-    "Salat": [
-        "1 Romanasalat",
-        "400g Kirschtomaten",
-        "1 Salatgurke",
-        "1 Avocado",
-        "1 rote Zwiebel",
-        "1 rote Spitzpaprika",
-        "60g Parmesan",
-     
-    ],
+        "Salat": [
+            "1 Romanasalat",
+            "400 g Kirschtomaten",
+            "1 Salatgurke",
+            "1 Avocado",
+            "1 rote Zwiebel",
+            "1 rote Spitzpaprika",
+            "60 g Parmesan"
+        ],
 
-    "Dressing":[
-        "80g Joghurt",
-        "2 TL Olivenöl",
-        "2 EL Wasser",
-        "1 EL getrocknete Salatkräuter",
-        "1 TL Balsamicoessig",
-        "1/2 TL Knoblauchpulver",
-        "1/2 TL Senf",
-        "Salz",
-        "Pfeffer"
-    ]
-},
+        "Dressing": [
+            "80 g Joghurt",
+            "2 TL Olivenöl",
+            "2 EL Wasser",
+            "1 EL getrocknete Salatkräuter",
+            "1 TL Balsamicoessig",
+            "1/2 TL Knoblauchpulver",
+            "1/2 TL Senf",
+            "Salz",
+            "Pfeffer"
+        ]
+    },
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
-       
-       {
-        text: "Die Filets längs halbieren, sodass flachere und möglichst gleichmäßig dicke Stücke entstehen.",
-       },
+        {
+            text: "Die Hähnchenbrustfilets längs halbieren, sodass möglichst flache und gleichmäßig dicke Stücke entstehen."
+        },
 
-{
-    text:"Den Joghurt mit den Gewürzen vermischen und über die Hähnchenstücke in einen flachen Behälter geben. Alles gut einmassieren, sodass das Fleisch vollständig bedeckt ist. Abdecken und für 2-3 Stunden im Kühlschrank marinieren lassen.",
-},
+        {
+            text: "Den Joghurt mit Knoblauchpulver, Paprikapulver, italienischen Kräutern, Zitronenschale, Salz und Pfeffer verrühren. Die Hähnchenstücke in einen flachen Behälter legen, mit der Marinade bedecken und alles gut vermengen. Abdecken und 2–3 Std im Kühlschrank marinieren lassen."
+        },
 
-"Etwa kurz vor Ende der Marinierzeit den Romanasalat für den Salat klein schneiden, waschen und gut trocknen. Die Zwiebel schälen und fein hacken. Die Gurke und die Paprika in kleine Würfel schneiden, die Avocado schälen, entkernen und ebenfalls würfeln. Die Tomaten je nach Größe halbieren oder vierteln und den Parmesan hobeln.", 
+        "Den Romanasalat in mundgerechte Stücke schneiden, gründlich waschen und gut trocknen. Die rote Zwiebel schälen und fein hacken. Gurke und Spitzpaprika in kleine Würfel schneiden. Die Avocado halbieren, den Kern entfernen, das Fruchtfleisch aus der Schale lösen und würfeln. Die Kirschtomaten je nach Größe halbieren oder vierteln. Den Parmesan hobeln.",
 
-{
-    text:"Alles zusammen in eine große Schüssel geben.",
-    images: 
-    ["images/wow.jpeg"]
-},
+        {
+            text: "Alle vorbereiteten Salatzutaten in eine große Schüssel geben und vorsichtig vermengen.",
+            images: [
+                "images/wow.jpeg"
+            ]
+        },
 
-"Für die Panade zwei Teller vorbereiten: Auf dem ersten Teller das Mehl mit der Speisestärke und den Gewürzen vermischen. Auf dem zweiten Teller das Paniermehl verteilen.",
+        "Für die Panade zwei tiefe Teller vorbereiten. Auf dem ersten Teller Mehl, Speisestärke, Paprikapulver, Knoblauchpulver, Salz und Pfeffer vermischen. Auf dem zweiten Teller das Paniermehl verteilen.",
 
-"Währenddessen so viel Öl in einer Pfanne bei mittlerer Hitze erhitzen, dass der Boden <b>gerade so</b> bedeckt ist.",
+        "Kurz vor dem Braten so viel neutrales Öl in einer Pfanne bei mittlerer Hitze erhitzen, dass der Pfannenboden gerade eben bedeckt ist.",
 
-"Die Hähnchenstücke etwas abtropfen lassen und gegebenenfalls leicht abstreifen. Zuerst im Mehl wenden, sodass sie leicht bedeckt sind, anschließend mehrfach im Paniermehl wenden und die Panade gut andrücken. Die panierten Hähnchenstücke in die Pfanne geben und bei mittlerer Hitze ca. 5 Minuten pro Seite goldbraun braten. Nach dem Braten etwa 5 Minuten ruhen lassen und anschließend in mundgerechte Stücke schneiden.",
+        "Die marinierten Hähnchenstücke etwas abtropfen lassen und überschüssige Marinade bei Bedarf leicht abstreifen. Die Stücke zuerst in der Mehlmischung wenden, anschließend im Paniermehl panieren und die Panade gut andrücken.",
 
-"Während das Hähnchen ruht, alle Zutaten für das Dressing miteinander verrühren, bis ein cremiges Dressing entsteht. Dieses über den Salat geben und alles gut vermengen.",
+        "Die panierten Hähnchenstücke in das heiße Öl geben und bei mittlerer Hitze etwa 5 min pro Seite goldbraun braten. Je nach Dicke kann die Garzeit variieren. Das Hähnchen muss vollständig durchgegart sein; im Kern sollte es mindestens 74 °C erreichen. Anschließend etwa 5 min ruhen lassen und in mundgerechte Stücke schneiden.",
 
-"Zum Servieren den Salat auf Tellern anrichten und das knusprige Hähnchen darauf verteilen.",
+        "Während das Hähnchen ruht, alle Zutaten für das Dressing in einer kleinen Schüssel mit einem Schneebesen verrühren, bis ein cremiges Dressing entsteht. Bei Bedarf mit etwas Wasser verdünnen und mit Salz und Pfeffer abschmecken.",
 
-    ],
+        "Das Dressing erst kurz vor dem Servieren unter den Salat mischen. Den Salat auf Tellern anrichten, das knusprige Hähnchen darauf verteilen und mit dem gehobelten Parmesan servieren."
+    ]
 },
 
 {
     id: "10",
     title: "Dreierlei Karlsbader Schnitte",
+    seoTitle: "Dein SEO-Titel",
+    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    keywords: [
+        
+    ],
     category: ["Ofengerichte", "Hauptgerichte", "Kochen", "Backen","Belegte Backwaren" ],
     image: "images/Karlsbader-Schnitte.jpeg",
     time:{
@@ -575,6 +692,11 @@ related: ["45", "7", "20"],
 {
     id: "11",
     title: "Brezel Hawaii",
+    seoTitle: "Dein SEO-Titel",
+    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    keywords: [
+        
+    ],
     category: [ "Snacks", "Backen", "Teilchen", "ohne Ei", "Belegte Backwaren"],
     image: "images/brezel-hawaii.jpeg",
     time:{
@@ -611,6 +733,11 @@ related: ["45", "7", "20"],
 {
     id: "12",
     title: "Bohneneintopf",
+    seoTitle: "Dein SEO-Titel",
+    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    keywords: [
+        
+    ],
     category: ["Vegetarisch", "Hauptgerichte", "Kochen"],
     image: "images/bohneneintopf.jpg",
     time:{
@@ -664,6 +791,11 @@ related: ["45", "7", "20"],
 {
     id: "13",
     title: "Brokkolisuppe",
+    seoTitle: "Dein SEO-Titel",
+    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    keywords: [
+        
+    ],
     tips: [
         "Dazu schmecken Garnelen oder Pfannenbrot hervorragend.",
         "Falls dir die Suppe zu dick ist, kannst du nach dem Kochen noch mehr Gemüsebrühe dazugeben."
@@ -712,6 +844,11 @@ related: ["45", "7", "20"],
 {
     id: "0",
     title: "Bruschetta",
+    seoTitle: "Dein SEO-Titel",
+    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    keywords: [
+        
+    ],
     tips: [
         "Je länger das Topping zieht, desto besser und intensiver schmeckt es.",
         "Wenn du möchtest kannst du auch die Brotscheiben mit etwas Olivenöl bestreichen und in einer Pfanne ohne Öl kurz knusprig anbraten."
@@ -758,6 +895,11 @@ related: ["45", "7", "20"],
 {
     id: "14",
     title: "Cannelloni Caprese",
+    seoTitle: "Dein SEO-Titel",
+    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    keywords: [
+        
+    ],
     category: ["Pasta", "Ofengerichte", "Hauptgerichte", "Kochen"],
     image: "images/canneloni-caprese.jpeg",
     time:{
@@ -813,6 +955,11 @@ related: ["45", "7", "20"],
 {
     id: "15",
     title: "Cheesescones",
+    seoTitle: "Dein SEO-Titel",
+    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    keywords: [
+        
+    ],
     tips: [
     "Lieber zu wenig als zu viel kneten, damit die Butter nicht zu warm wird."
 ],
@@ -870,6 +1017,11 @@ related: ["45", "7", "20"],
 {
     id: "16",
     title: "Cordon bleu",
+    seoTitle: "Dein SEO-Titel",
+    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    keywords: [
+        
+    ],
     tips: [
     "Die fertigen Cordon bleues kannst du im Ofen bei ca. 50°C auf einem Kuchenrost warm halten.",
 ],
@@ -928,6 +1080,11 @@ related: ["45", "7", "20"],
 {
     id: "17",
     title: "Cowboy Shakshuka",
+    seoTitle: "Dein SEO-Titel",
+    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    keywords: [
+        
+    ],
     category: ["Vegetarisch", "Hauptgerichte", "Kochen"], 
     image: "images/Cowboy-shakshuka.jpeg",
        time:{
@@ -983,6 +1140,11 @@ related: ["45", "7", "20"],
 {
     id: "18",
     title: "Cracker",
+    seoTitle: "Dein SEO-Titel",
+    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    keywords: [
+        
+    ],
     category: ["Snacks", "Backen", "ohne Ei"],
     image: "images/cracker.jpeg",
     time: {
@@ -1043,6 +1205,11 @@ related: ["45", "7", "20"],
 {
     id: "19",
     title: "Eiersalat",
+    seoTitle: "Dein SEO-Titel",
+    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    keywords: [
+        
+    ],
     category: ["Aufstriche & Dips", "Beilagen", "Kochen"], 
     image: "images/eiersalat.jpeg",
         time:{
@@ -1092,6 +1259,11 @@ related: ["45", "7", "20"],
 {
     id: "20",
     title: "Veganer gebratener Blumenkohl",
+    seoTitle: "Dein SEO-Titel",
+    metaDescription: "Deine kurze Rezeptbeschreibung für Google.",
+    keywords: [
+        
+    ],
     category: ["Vegan","Vegetarisch" ,"Hauptgerichte", "Kochen"], 
     image: "images/Veganer-gebratener-Blumenkohl.jpeg",
         time:{
@@ -7412,8 +7584,17 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
 {
     id: "123",
     title: "Gruseliger Caprese-Salat",
+    seoTitle: "Halloween-Salat: Gruseliger Caprese-Salat",
+    metaDescription: "Dieser gruselige Caprese-Salat mit Mozzarella-Augen, Tomaten und Oliven ist die perfekte Halloween-Idee. In nur 10 Minuten zubereitet!",
+    keywords: [
+        "Halloween-Salat",
+        "Halloween-Essen",
+        "gruseliger Caprese-Salat",
+        "Tomate Mozzarella",
+        "Halloween-Rezepte"
+    ],
     category: ["Kochen", "Salate", "Halloween"],
-    image: "images/gruseliger-capresesalat.jpeg",
+    image: "images/gruseliger-Capresesalat.jpeg",
     time: {
         preparation: "10 min",
         total: "10 min"
@@ -7424,7 +7605,7 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
     difficulty: "Einfach",
     rating: 4.6,
 
-    description: "Einfacher, leckerer Caprese-Salat mit gruseligen Mozzarella-Augen – perfekt für das Halloween-Buffet und schnell zubereitet.",
+    description: "Dieser gruselige Caprese-Salat bringt Halloween auf den Teller: Mozzarella-Augen, saftige Tomaten und schwarze Oliven machen ihn zum originellen Hingucker auf dem Halloween-Buffet. Der einfache Tomate-Mozzarella-Salat ist in nur 10 Minuten fertig und eignet sich perfekt als gruselige Vorspeise oder Beilage.",
 
     /* 🍽️ ZUTATEN */
     ingredients: {
@@ -7441,7 +7622,7 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
         {
-            text: "Die Oliven in dünne Scheiben schneiden und jeweils eine Scheibe leicht an eine Mozzarellakugel drücken, bis sie hält. So entstehen die Augen."
+            text: "Die Oliven in dünne Scheiben schneiden und jeweils eine Scheibe leicht an eine Mozzarellakugel drücken, bis sie hält. So entstehen die gruseligen Augen."
         },
         {
             text: "Die Tomaten waschen und halbieren. Die Mozzarella-Augen und die Tomatenhälften auf einem Teller anrichten und mit etwas Balsamicocreme garnieren."

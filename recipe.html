@@ -427,8 +427,10 @@ const container = document.getElementById("content");
 
 // SEO-Daten setzen
 
-if (recipe) {
+let recipeImageUrl = "";
 
+if (recipe) {
+    recipeImageUrl = new URL(recipe.image, window.location.href).href;
     // Individuellen SEO-Titel verwenden
     document.title =
         (recipe.seoTitle || recipe.title) + " – KitchenBreeze";
@@ -442,6 +444,7 @@ if (recipe) {
             recipe.metaDescription || recipe.description || ""
         );
     }
+
     // Google Rezept Schema
 
 const schema = document.getElementById("recipeSchema");
@@ -456,7 +459,7 @@ if(schema){
        "name": recipe.title,
 
       "image": [
-    new URL(recipe.image, window.location.href).href
+    recipeImageUrl
 ],
 
 "description": recipe.metaDescription || recipe.description || "",
@@ -516,7 +519,7 @@ container.innerHTML = `
 
   <img 
 class="hero-img" 
-src="${recipe.image}" 
+src="${recipeImageUrl}"
 alt="${recipe.title} – KitchenBreeze">
 
     <h1 class="title">${recipe.title}</h1>
@@ -692,49 +695,46 @@ let favorites = JSON.parse(
     localStorage.getItem("favorites")
 ) || [];
 
+if (favoriteBtn && recipe) {
 
-function updateFavoriteButton(){
+    function updateFavoriteButton() {
 
-    if(favorites.includes(recipe.id)){
-
-        favoriteBtn.innerHTML = "❤️ Gespeichert";
-
-    } else {
-
-        favoriteBtn.innerHTML = "♡ Favorit";
+        if (favorites.includes(recipe.id)) {
+            favoriteBtn.innerHTML = "❤️ Gespeichert";
+        } else {
+            favoriteBtn.innerHTML = "♡ Favorit";
+        }
 
     }
+
+    favoriteBtn.onclick = function() {
+
+        if (favorites.includes(recipe.id)) {
+
+            favorites = favorites.filter(
+                id => id !== recipe.id
+            );
+
+        } else {
+
+            favorites.push(recipe.id);
+
+        }
+
+        localStorage.setItem(
+            "favorites",
+            JSON.stringify(favorites)
+        );
+
+        updateFavoriteButton();
+
+    };
+
+    updateFavoriteButton();
 
 }
 
 
-favoriteBtn.onclick = function(){
-
-    if(favorites.includes(recipe.id)){
-
-        favorites = favorites.filter(
-            id => id !== recipe.id
-        );
-
-    } else {
-
-        favorites.push(recipe.id);
-
-    }
-
-
-    localStorage.setItem(
-        "favorites",
-        JSON.stringify(favorites)
-    );
-
-
-    updateFavoriteButton();
-
-};
-
-
-updateFavoriteButton();
 const relatedContainer = document.getElementById("relatedRecipes");
 
 if(recipe.related && relatedContainer){

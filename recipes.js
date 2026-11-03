@@ -11758,5 +11758,187 @@ images:["images/ny-style-bagel-formen5.jpeg",
         "In der Zwischenzeit die Tomaten halbieren oder je nach Größe dritteln, die Oliven halbieren und den Feta in kleine Würfel schneiden. Alles unter den abgekühlten Bulgur heben und sofort servieren oder abgedeckt noch etwas durchziehen lassen."
     ]
 },
+
+{
+    id: "136",
+    title: "vegane Fleischbällchen",
+    tips: [
+        "Noch keine Idee für Halloween? Dann probier doch mal die [[vegetarische-augenbaellchen|vegetarische Halloweenvariante]] dieser veganen Fleischbällchen."
+    ],
+    seoTitle: "Vegane Fleischbällchen aus Linsen – einfach und knusprig",
+    metaDescription: "Vegane Fleischbällchen aus Berglinsen mit Haferflocken und würzigen Kräutern. Außen knusprig, innen saftig und einfach selbst gemacht.",
+    keywords: [
+        "vegane Fleischbällchen",
+        "vegane Fleischbällchen Rezept",
+        "vegane Bällchen",
+        "Linsenbällchen",
+        "Linsenbällchen Rezept",
+        "vegane Frikadellen",
+        "vegane Frikadellen aus Linsen",
+        "Bällchen aus Berglinsen",
+        "Berglinsen Rezept",
+        "Linsenfrikadellen",
+        "Linsenbällchen selber machen",
+        "vegane Hackbällchen",
+        "Fleischbällchen ohne Fleisch",
+        "Bällchen mit Haferflocken",
+        "vegane Bällchen mit Leinsamen",
+        "herzhafte Linsenbällchen",
+        "knusprige Linsenbällchen",
+        "einfache vegane Rezepte",
+        "einfache vegane Hauptgerichte",
+        "vegane Rezepte mit Linsen",
+        "pflanzliche Fleischalternative",
+        "vegane Halloween Rezepte"
+    ],
+    category: ["Kochen", "Hauptgerichte", "Beilagen", "Vegan", "Vegetarisch"],
+    image: "images/vegane-fleischbällchen.jpeg",
+    time: {
+        preparation: "10 min",
+        cooking: "30 min",
+        resting: "10 min",
+        total: "50 min"
+    },
+
+    related: ["13", "177", "65"],
+    portions: "22 Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Diese veganen Fleischbällchen aus Berglinsen sind eine leckere pflanzliche Alternative zu klassischen Hackbällchen. H Bällchen eine herzhafte Würze verleihen. Sie schmecken warm genauso gut wie kalt und eignen sich als Hauptgericht, Beilage oder für ein Buffet.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+        "": [
+            "150g Berglinsen",
+            "450ml Gemüsebrühe",
+            "35g Haferflocken",
+            "1 kleine weiße Zwiebel",
+            "5g Leinsamen",
+            "1 EL heißes Wasser",
+            "1 TL Sojasauce",
+            "1 TL Senf",
+            "1 gestrichener TL geräuchertes Paprikapulver",
+            "1 gestrichener EL Tomatenmark",
+            "1 kleine Knoblauchzehe",
+            "1/2 TL getrockneter Majoran",
+            "1 EL Öl",
+            "Salz",
+            "Pfeffer"
+        ],
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+        "Die Linsen mit der Gemüsebrühe in einen Topf geben, aufkochen und nach Packungsanleitung gar kochen. Anschließend in ein Sieb abgießen und gut abtropfen lassen.",
+
+        "In der Zwischenzeit die Leinsamen mit dem heißen Wasser vermengen und 10 Min. quellen lassen. Die Zwiebel und den Knoblauch schälen und fein hacken.",
+
+        "Das Öl in einer kleinen Pfanne erhitzen und das Tomatenmark darin bei höchster Stufe unter gelegentlichem Rühren 1 Min. scharf anbraten. Die Zwiebel dazugeben und weitere 2 Min. unter Rühren mitbraten. Knoblauch und Gewürze hinzufügen und unter Rühren noch ca. 30 Sek. mitbraten, bis alles duftet. Anschließend auf einen kleinen Teller geben und beiseitestellen.",
+
+        "Dann ca. 130g der gekochten Linsen zusammen mit den Haferflocken möglichst fein pürieren <i>(nicht wundern: Die Masse wird sehr trocken und bröselig).</i>",
+
+        "Die restlichen Linsen, die Zwiebelmischung, Senf, Sojasauce, Salz und Pfeffer sowie die gequollenen Leinsamen dazugeben. Alles mit den Händen kräftig durchkneten, abdecken und mindestens 10 Min. in den Kühlschrank stellen.",
+
+        "Anschließend mit leicht geölten Händen jeweils 1 gehäuften TL der Masse zu einem Bällchen formen. Eine Pfanne mit so viel Öl erhitzen, dass der Boden gerade bedeckt ist.",
+
+        "Die Bällchen ca. 5 Min. rundherum bei hoher Hitze knusprig braun anbraten. Auf ein mit Küchenpapier belegtes Gitterrost legen, kurz abtropfen lassen und warm oder kalt servieren."
+    ]
+},
+
+{
+    id: "137",
+    title: "vegetarische Augenbällchen",
+    seoTitle: "Vegetarische Augenbällchen – gruseliges Halloween-Fingerfood",
+    metaDescription: "Vegetarische Augenbällchen aus würzigen Linsen mit Mozzarella und Oliven. Einfaches Halloween-Fingerfood, das auf jedem Gruselbuffet für Aufsehen sorgt.",
+    keywords: [
+        "vegetarische Augenbällchen",
+        "Augenbällchen",
+        "Halloween Augen",
+        "Halloween Fingerfood",
+        "vegetarisches Halloween Fingerfood",
+        "Halloween Snacks",
+        "Halloween Essen",
+        "Halloween Rezepte vegetarisch",
+        "gruselige Snacks",
+        "essbare Augen",
+        "Mozzarella Augen",
+        "Oliven Augen",
+        "Linsenbällchen",
+        "vegetarische Linsenbällchen",
+        "Linsenfrikadellen",
+        "vegetarische Frikadellen",
+        "Bällchen aus Berglinsen",
+        "herzhafte Halloween Snacks",
+        "Halloween Buffet",
+        "Halloween Party Essen",
+        "Fingerfood mit Mozzarella",
+        "Halloween Rezept einfach"
+    ],
+    category: ["Kochen", "Halloween", "Vegetarisch"],
+    image: "images/vegetarische-augenbällchen.jpeg",
+    time: {
+        preparation: "10 min",
+        cooking: "30 min",
+        resting: "10 min",
+        total: "50 min"
+    },
+
+    related: ["129", "97", "127"],
+    portions: "22 Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Diese vegetarischen Augenbällchen sind das perfekte herzhafte Fingerfood für Halloween! Die würzigen Linsenbällchen werden mit geschmolzenem Mozzarella und schwarzen Oliven in gruselige Augen verwandelt. Sie lassen sich wunderbar vorbereiten und schmecken sowohl warm als auch kalt. Ein schaurig leckerer Hingucker für jedes Halloweenbuffet und jede Gruselparty.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+        "Bällchen": [
+            "150g Berglinsen",
+            "450ml Gemüsebrühe",
+            "35g Haferflocken",
+            "1 kleine weiße Zwiebel",
+            "5g Leinsamen",
+            "1 EL heißes Wasser",
+            "1 TL Sojasauce",
+            "1 TL Senf",
+            "1 gestrichener TL geräuchertes Paprikapulver",
+            "1 gestrichener EL Tomatenmark",
+            "1 kleine Knoblauchzehe",
+            "1/2 TL getrockneter Majoran",
+            "1 EL Öl",
+            "Salz",
+            "Pfeffer"
+        ],
+
+        "Topping": [
+            "4 Mini-Mozzarellakugeln",
+            "4 schwarze Oliven <i>entsteint</i>"
+        ]
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+        {text:"Die Linsen mit der Gemüsebrühe in einen Topf geben, aufkochen und nach Packungsanleitung gar kochen. Anschließend in ein Sieb abgießen und gut abtropfen lassen.",
+        },
+        {text:"In der Zwischenzeit die Leinsamen mit dem heißen Wasser vermengen und 10 Min. quellen lassen. Die Zwiebel und den Knoblauch schälen und fein hacken.",
+        },
+        {text:"Das Öl in einer kleinen Pfanne erhitzen und das Tomatenmark darin bei höchster Stufe unter gelegentlichem Rühren 1 Min. scharf anbraten. Die Zwiebel dazugeben und weitere 2 Min. unter Rühren mitbraten. Knoblauch und Gewürze hinzufügen und unter Rühren noch ca. 30 Sek. mitbraten, bis alles duftet. Anschließend auf einen kleinen Teller geben und beiseitestellen.",
+        },
+        {text:"Dann ca. 130g der gekochten Linsen zusammen mit den Haferflocken möglichst fein pürieren <i>(nicht wundern: Die Masse wird sehr trocken und bröselig).</i>",
+        },
+        {text:"Die restlichen Linsen, die Zwiebelmischung, Senf, Sojasauce, Salz und Pfeffer sowie die gequollenen Leinsamen dazugeben. Alles mit den Händen kräftig durchkneten, abdecken und mindestens 10 Min. in den Kühlschrank stellen.",
+        },
+        {text:"Anschließend mit leicht geölten Händen jeweils 1 gehäuften TL der Masse zu einem Bällchen formen. Eine Pfanne mit so viel Öl erhitzen, dass der Boden gerade bedeckt ist.",
+        },
+        {text:"Die Bällchen ca. 5 Min. rundherum bei hoher Hitze knusprig braun anbraten. Auf ein mit Küchenpapier belegtes Gitterrost legen, kurz abtropfen lassen und etwas abkühlen lassen.",
+        },
+        {text:"Dann die Bällchen auf einen großen, feuerfesten Teller legen. Die Mozzarellakugeln und die Oliven in jeweils 22 dünne Scheiben schneiden. Je eine Mozzarellascheibe auf ein Bällchen und darauf eine Olivenscheibe legen.",
+       images: ["images/vegetarische-augenbällchen-vorbereitung.jpeg"]
+        },
+        {text:"Die Augen im Ofen bei höchster Grillstufe im obersten Drittel überbacken, bis der Käse geschmolzen ist. Anschließend warm oder kalt servieren."
+        }
+        ]
+},
 ];
 module.exports = { RECIPES };

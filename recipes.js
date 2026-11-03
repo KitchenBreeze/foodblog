@@ -11222,5 +11222,194 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
         }
     ]
 },
+
+{
+    id: "130",
+    title: "Saftkornbrötchen ohne Übernachtgare",
+      seoTitle: "Saftkornbrötchen selber machen – kernige Brötchen mit Sauerteig",
+    metaDescription:"Saftige Saftkornbrötchen mit Haferflocken, Leinsamen und Sonnenblumenkernen. Einfaches Rezept mit Sauerteig-Discard und knuspriger Kruste.",
+     keywords: [
+        "Saftkornbrötchen",
+        "Saftkornbrötchen Rezept",
+        "Saftkornbrötchen selber machen",
+        "kernige Brötchen",
+        "saftige Körnerbrötchen",
+        "Brötchen mit Haferflocken",
+        "Brötchen mit Leinsamen",
+        "Brötchen mit Sonnenblumenkernen",
+        "Vollkornbrötchen",
+        "Roggenbrötchen",
+        "Dinkelbrötchen",
+        "Brötchen mit Sauerteig",
+        "Sauerteig Discard Rezepte",
+        "Sauerteigreste verwerten",
+        "Brötchen mit Sauerteigdiscard",
+        "Brötchen mit Trockenhefe",
+        "kernige Frühstücksbrötchen",
+        "selbstgemachte Körnerbrötchen",
+        "vegane Brötchen",
+        "Brötchen ohne Ei",
+        "schnelle Saftkornbrötchen",
+        "Same day Brötchen",
+        "Same day Sauerteigrezepte",
+        "vegetarische Brötchen",
+        "einfache Brötchen backen",
+        "Brötchen mit Roggenvollkornmehl",
+        "Brötchen mit Dinkelvollkornmehl"
+    ],
+    tips: [
+"Der Sauerteig-Discard dient hier nur als zusätzlicher Geschmacksträger und nicht als Triebmittel. Wenn du also keinen zu Hause hast, kannst du stattdessen einfach 15 g mehr Roggenvollkornmehl und 15 g mehr Wasser verwenden."
+    ],
+    category: ["Backen", "Brot & Brötchen",  "ohne Ei", "Vegan", "Vegetarisch"],
+    image: "images/saftkornbrötchen.jpeg",
+    time: {
+        preparation: "18 min",
+        rising: "1 Std 20 min",
+        baking: "22 min",
+        total: "2 Std"
+    },
+
+    related: ["12", "24", "25"],
+    portions: "6 Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Saftige, kernige Saftkornbrötchen mit Haferflocken, Leinsamen und Sonnenblumenkernen. Durch das Quellstück bleiben sie wunderbar weich und saftig, während die Kruste beim Backen schön knusprig wird. Ein einfaches Rezept mit Sauerteig-Discard und Trockenhefe – perfekt zum Frühstück oder Abendessen.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "Quellstück": [
+            "30 g Haferflocken <i>(zart)</i>",
+            "15 g geschrotete Leinsamen",
+            "10 g Sonnenblumenkerne",
+            "100 ml kochendes Wasser"
+        ],
+        "Teig": [
+            "30 g Roggenvollkornmehl",
+            "200 g Weizenmehl <i>(Type 550)</i>",
+            "10 g Dinkelvollkornmehl",
+            "30 g Roggensauerteig-Discard <i>(alternativ siehe Tipps)</i>",
+            "3 g Trockenhefe",
+            "6 g Salz",
+            "175 ml lauwarmes Wasser"
+        ]
+
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+        {
+            text: "Für das Quellstück die Sonnenblumenkerne grob hacken. Zusammen mit den Haferflocken und den Leinsamen in eine Schüssel geben, mit dem Wasser vermischen und abgedeckt ca. 30 min quellen lassen.", 
+        },
+
+{text: "Anschließend das Roggenmehl mit dem Dinkelmehl, dem Weizenmehl, dem Salz und der Hefe in einer Schüssel vermengen. In der Mitte eine Mulde formen und das Wasser, das Quellstück sowie den Sauerteig hineingeben. Alles mit einem Löffel vermengen, bis sich die Zutaten gut miteinander verbunden haben. Den Teig abdecken und 10 min ruhen lassen. Anschließend das erste Mal dehnen und falten (Stretch and Fold).",
+},
+
+{text: "Den Teig wieder abdecken und 30 min bei Raumtemperatur ruhen lassen. Anschließend ein zweites Mal dehnen und falten. Erneut abdecken und weitere 30 min ruhen lassen."},
+{text:"Nach der Ruhezeit den Teig auf eine leicht bemehlte Arbeitsfläche geben und mithilfe einer feuchten Teigkarte und nassen Händen zu einem Rechteck von ca. 24 × 18 cm formen.", },
+
+{text: "Den Backofen auf 220 °C Ober-/Unterhitze vorheizen und das Teigrechteck nach Belieben mit weiteren Haferflocken und gehackten Sonnenblumenkernen bestreuen."},
+
+{text: "Den Teig mit der feuchten Teigkarte in 6 ungefähr gleich große Stücke teilen. Die Teiglinge auf ein mit Backpapier belegtes Backblech heben und noch ca. 10 min ruhen lassen.",
+    images:["images/saftkornbrötchen1.jpeg"]
+},
+
+{text:"Die Brötchen anschließend in den Ofen geben, etwas Wasser auf den Ofenboden schütten, die Ofentür schließen und die Brötchen 12 min backen.",
+},
+
+{text: "Anschließend die Ofentür einmal kurz öffnen, damit der Dampf entweichen kann. Die Brötchen weitere ca. 10 min backen, bis sie sich beim Klopfen auf die Unterseite hohl anhören.",
+},
+
+{text:"Den Backofen ausschalten, die Ofentür öffnen und die Brötchen bei leicht geöffneter Tür noch ca. 10 min im ausgeschalteten Ofen ruhen lassen. Anschließend herausnehmen und entweder sofort genießen oder auf einem Gitterrost vollständig auskühlen lassen."
+},
+    ]
+},
+
+{
+    id: "131",
+    title: "vegane Kürbissuppe",
+      seoTitle: "Vegane Kürbissuppe mit Kokosmilch – cremig & einfach",
+    metaDescription:"Cremige vegane Kürbissuppe mit Hokkaido, Butternut, Karotten und Kokosmilch. Einfach zubereitet, aromatisch mit Ingwer und Curry.",
+     keywords: [
+        "vegane Kürbissuppe",
+        "Kürbissuppe vegan",
+        "vegane Kürbissuppe Rezept",
+        "Kürbissuppe mit Kokosmilch",
+        "cremige Kürbissuppe",
+        "Kürbissuppe mit Hokkaido",
+        "Kürbissuppe mit Butternut",
+        "Hokkaido Butternut Suppe",
+        "Kürbis Karotten Suppe",
+        "Kürbissuppe mit Karotten",
+        "Kürbissuppe mit Ingwer",
+        "Kürbissuppe mit Curry",
+        "Kürbissuppe mit Kokosmilch und Ingwer",
+        "vegane Suppe",
+        "vegetarische Kürbissuppe",
+        "Kürbissuppe ohne Sahne",
+        "Kürbissuppe ohne tierische Produkte",
+        "einfaches Kürbissuppen Rezept",
+        "schnelle Kürbissuppe",
+        "herbstliche Suppe",
+        "Kürbis Rezepte vegan",
+        "Kürbissuppe mit Kürbiskernöl",
+        "Kürbissuppe mit Kürbiskernen",
+        "cremige Gemüsesuppe"
+    ],
+    tips: [
+        "Knusprige [[saftkornbroetchen|Saftkornbrötchen]] sind eine hervorragende Beilage zu dieser cremigen Kürbissuppe."
+    ],
+    category: ["Kochen", "Suppen & Eintöpfe",  "Hauptgerichte", "Vegan", "Vegetarisch"],
+    image: "images/vegane-kürbissuppe.jpeg",
+    time: {
+        preparation: "14 min",
+       cooking: "26 min",
+        total: "40 min"
+    },
+
+    related: ["86", "69", "25"],
+    portions: "8 Portionen",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Diese cremige vegane Kürbissuppe vereint Hokkaido, Butternut und Karotten mit aromatischem Ingwer, Curry und Kokosmilch. Sie ist wunderbar sämig, angenehm würzig und einfach zubereitet – perfekt für gemütliche Herbst- und Wintertage.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+"": [
+    "1 kleiner Butternutkürbis <i>(ca. 850 g)</i>",
+    "1 kleiner Hokkaidokürbis <i>(ca. 1,5 kg)</i>",
+    "1 L Gemüsebrühe",
+    "500 g Karotten",
+    "1 Dose Kokosmilch <i>(à 400 g)</i>",
+    "1 gestrichener TL Currypulver",
+    "30 g frischer Ingwer",
+    "Olivenöl",
+    "Salz",
+    "Pfeffer"
+],
+"Zum Servieren":[
+    "Kürbiskernöl <i>optional</i>",
+    "Kürbiskerne <i>optional</i>",
+]
+
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+       "Die Kerne aus den Kürbissen entfernen, den Hokkaidokürbis schälen und die Enden der Karotten abschneiden. Anschließend beide Kürbisse sowie die Karotten in Würfel schneiden. <b>(Je kleiner die Würfel sind, desto schneller werden sie gar.)</b>",
+
+"Den Ingwer schälen und in kleinere Stücke schneiden.",
+
+"Etwas Olivenöl in einem großen Topf erhitzen und den Ingwer darin ca. 1 min anschwitzen.",
+
+"Kürbis und Karotten dazugeben und unter gelegentlichem Rühren ca. 5 min anbraten, bis die Würfel etwas Farbe bekommen.",
+
+"Alles mit der Gemüsebrühe ablöschen, aufkochen und bei mittlerer Hitze mit geschlossenem Deckel ca. 20 min köcheln lassen, bis der Kürbis weich ist und sich mit einem Kochlöffel leicht durchschneiden lässt.",
+
+"Den Topf vom Herd nehmen, die Kokosmilch und das Currypulver hinzufügen, mit Salz und Pfeffer abschmecken und alles mit dem Pürierstab cremig pürieren."
+    ]
+},
 ];
 module.exports = { RECIPES };

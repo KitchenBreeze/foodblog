@@ -11830,20 +11830,22 @@ images:["images/ny-style-bagel-formen5.jpeg",
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
-        "Die Linsen mit der Gemüsebrühe in einen Topf geben, aufkochen und nach Packungsanleitung gar kochen. Anschließend in ein Sieb abgießen und gut abtropfen lassen.",
-
-        "In der Zwischenzeit die Leinsamen mit dem heißen Wasser vermengen und 10 Min. quellen lassen. Die Zwiebel und den Knoblauch schälen und fein hacken.",
-
-        "Das Öl in einer kleinen Pfanne erhitzen und das Tomatenmark darin bei höchster Stufe unter gelegentlichem Rühren 1 Min. scharf anbraten. Die Zwiebel dazugeben und weitere 2 Min. unter Rühren mitbraten. Knoblauch und Gewürze hinzufügen und unter Rühren noch ca. 30 Sek. mitbraten, bis alles duftet. Anschließend auf einen kleinen Teller geben und beiseitestellen.",
-
-        "Dann ca. 130g der gekochten Linsen zusammen mit den Haferflocken möglichst fein pürieren <i>(nicht wundern: Die Masse wird sehr trocken und bröselig).</i>",
-
-        "Die restlichen Linsen, die Zwiebelmischung, Senf, Sojasauce, Salz und Pfeffer sowie die gequollenen Leinsamen dazugeben. Alles mit den Händen kräftig durchkneten, abdecken und mindestens 10 Min. in den Kühlschrank stellen.",
-
-        "Anschließend mit leicht geölten Händen jeweils 1 gehäuften TL der Masse zu einem Bällchen formen. Eine Pfanne mit so viel Öl erhitzen, dass der Boden gerade bedeckt ist.",
-
-        "Die Bällchen ca. 5 Min. rundherum bei hoher Hitze knusprig braun anbraten. Auf ein mit Küchenpapier belegtes Gitterrost legen, kurz abtropfen lassen und warm oder kalt servieren."
-    ]
+        {text:"Die Linsen mit der Gemüsebrühe in einen Topf geben, aufkochen und nach Packungsanleitung gar kochen. Anschließend in ein Sieb abgießen und gut abtropfen lassen.",
+        },
+        {text:"In der Zwischenzeit die Leinsamen mit dem heißen Wasser vermengen und 10 Min. quellen lassen. Die Zwiebel und den Knoblauch schälen und fein hacken.",
+        },
+        {text:"Das Öl in einer kleinen Pfanne erhitzen und das Tomatenmark darin bei höchster Stufe unter gelegentlichem Rühren 1 Min. scharf anbraten. Die Zwiebel dazugeben und weitere 2 Min. unter Rühren mitbraten. Knoblauch und Gewürze hinzufügen und unter Rühren noch ca. 30 Sek. mitbraten, bis alles duftet. Anschließend auf einen kleinen Teller geben und beiseitestellen.",
+        },
+        {text:"Dann ca. 130g der gekochten Linsen zusammen mit den Haferflocken möglichst fein pürieren <i>(nicht wundern: Die Masse wird sehr trocken und bröselig).</i>",
+        images: ["images/linsenbällchenteig1.jpeg"]
+        },
+        {text:"Die restlichen Linsen, die Zwiebelmischung, Senf, Sojasauce, Salz und Pfeffer sowie die gequollenen Leinsamen dazugeben. Alles mit den Händen kräftig durchkneten, abdecken und mindestens 10 Min. in den Kühlschrank stellen.",
+        images: ["images/linsenbällchenteig2.jpeg"]
+        },
+        {text:"Anschließend mit leicht geölten Händen jeweils 1 gehäuften TL der Masse zu einem Bällchen formen. Eine Pfanne mit so viel Öl erhitzen, dass der Boden gerade bedeckt ist.",
+        },
+        {text:"Die Bällchen ca. 5 Min. rundherum bei hoher Hitze knusprig braun anbraten. Auf ein mit Küchenpapier belegtes Gitterrost legen, kurz abtropfen lassen und warm oder kalt servieren.",
+        }, ]
 },
 
 {
@@ -11926,8 +11928,10 @@ images:["images/ny-style-bagel-formen5.jpeg",
         {text:"Das Öl in einer kleinen Pfanne erhitzen und das Tomatenmark darin bei höchster Stufe unter gelegentlichem Rühren 1 Min. scharf anbraten. Die Zwiebel dazugeben und weitere 2 Min. unter Rühren mitbraten. Knoblauch und Gewürze hinzufügen und unter Rühren noch ca. 30 Sek. mitbraten, bis alles duftet. Anschließend auf einen kleinen Teller geben und beiseitestellen.",
         },
         {text:"Dann ca. 130g der gekochten Linsen zusammen mit den Haferflocken möglichst fein pürieren <i>(nicht wundern: Die Masse wird sehr trocken und bröselig).</i>",
+        images: ["images/linsenbällchenteig1.jpeg"]
         },
         {text:"Die restlichen Linsen, die Zwiebelmischung, Senf, Sojasauce, Salz und Pfeffer sowie die gequollenen Leinsamen dazugeben. Alles mit den Händen kräftig durchkneten, abdecken und mindestens 10 Min. in den Kühlschrank stellen.",
+        images: ["images/linsenbällchenteig2.jpeg"]
         },
         {text:"Anschließend mit leicht geölten Händen jeweils 1 gehäuften TL der Masse zu einem Bällchen formen. Eine Pfanne mit so viel Öl erhitzen, dass der Boden gerade bedeckt ist.",
         },
@@ -11939,6 +11943,138 @@ images:["images/ny-style-bagel-formen5.jpeg",
         {text:"Die Augen im Ofen bei höchster Grillstufe im obersten Drittel überbacken, bis der Käse geschmolzen ist. Anschließend warm oder kalt servieren."
         }
         ]
+},
+
+{
+    id: "138",
+    title: "fluffige Reformationsbrötchen ohne Ei",
+    seoTitle: "Reformationsbrötchen ohne Ei – fluffig und mit Rosinen",
+    metaDescription: "Fluffige Reformationsbrötchen ohne Ei mit Rosinen, fruchtiger Marmeladenfüllung und süßem Zuckerguss. Einfach selbst backen und genießen.",
+    keywords: [
+        "Reformationsbrötchen ohne Ei",
+        "Reformationsbrötchen",
+        "Reformationstag Rezepte",
+        "Reformationstag Gebäck",
+        "Reformationsbrötchen Rezept",
+        "Reformationsbrötchen selber backen",
+        "Reformationsbrötchen einfach",
+        "fluffige Reformationsbrötchen",
+        "Reformationsbrötchen mit Rosinen",
+        "Reformationsbrötchen mit Marmelade",
+        "Reformationsbrötchen mit Zuckerguss",
+        "Reformationsbrötchen ohne Eier",
+        "süße Brötchen ohne Ei",
+        "Hefegebäck ohne Ei",
+        "Hefeteilchen ohne Ei",
+        "Rosinenbrötchen ohne Ei",
+        "süße Hefebrötchen",
+        "Brötchen mit Rosinen",
+        "Hefeteig mit Tangzhong",
+        "Tangzhong Rezept",
+        "fluffiger Hefeteig",
+        "traditionelles Gebäck",
+        "Backen zum Reformationstag",
+        "Gebäck zum Reformationstag",
+        "einfache Backrezepte ohne Ei"
+    ],
+    category: ["Backen", "Teilchen", "ohne Ei", "Vegetarisch"],
+    image: "images/reformationsbrötchen.jpeg",
+    time: {
+        preparation: "10 min",
+        cooking: "30 min",
+        resting: "10 min",
+        total: "50 min"
+    },
+
+    related: ["129", "97", "127"],
+    portions: "7 Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Fluffige Reformationsbrötchen - Der Klassiker zum Reformationstag. Dank Tangzhong werden sie besonders weich und locker, während Rosinen für eine angenehme Süße sorgen. In der Mitte versteckt sich eine fruchtige Marmeladenfüllung, und ein großzügiger Überzug aus süßem Zuckerguss macht die Hefeteilchen perfekt. Ein wunderbar leckeres Gebäck zum Selberbacken und Genießen!",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+        "Tangzhong": [
+            "15g Mehl <i>(Type 550)</i>",
+            "75ml Milch"
+        ],
+
+        "Teig": [
+            "275g Mehl <i>(Type 550)</i>",
+            "120ml lauwarme Milch <i>(ca. 30 °C)</i>",
+            "7g Trockenhefe",
+            "50g weiche Butter",
+            "30g Zucker",
+            "1/2 TL Zitronenschale",
+            "90g Rosinen",
+            "3g Salz"
+        ],
+        "Topping": [
+            "7 TL Erdbeermarmelade",
+            "70g Puderzucker",
+            "Milch"
+        ],
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+        {
+            text: "Für den Tangzhong das Mehl mit der Milch in einem kleinen Topf vermengen und bei mittlerer Hitze unter ständigem Rühren erhitzen, bis eine Art fester Pudding entsteht. Vom Herd nehmen, auf einen flachen Teller geben und ohne Abdeckung ca. 5–10 Min. abkühlen lassen.",
+            images: ["images/cinamonrolls-tangzhong.jpeg"]
+        },
+        {
+            text: "Während der Tangzhong abkühlt, die Rosinen in eine Schüssel geben und vollständig mit warmem Wasser bedecken."
+        },
+        {
+            text: "Dann das Mehl mit der Hefe, dem Salz, der Zitronenschale und dem Zucker vermengen. In der Mitte eine Mulde formen, Milch und Tangzhong hineingeben und alles mit einem Löffel vermengen, bis sich die Zutaten einigermaßen verbunden haben."
+        },
+        {
+            text: "Anschließend den Teig mit dem Knethaken der Küchenmaschine zunächst 3 Min. auf mittlerer Stufe kneten. In den nächsten 2–3 Min. die Butter in kleinen Stücken nach und nach dazugeben. Danach den Teig 2 Min. auf höchster und anschließend weitere 2–3 Min. auf mittlerer Stufe zu einem glatten Teig kneten."
+        },
+        {
+            text: "In der Zwischenzeit die Rosinen gut abtropfen lassen und zum glatten Teig geben. Erneut 1 Min. auf höchster und anschließend weitere 1–2 Min. auf mittlerer Stufe fertig kneten, bis alle Rosinen gleichmäßig im Teig verteilt sind."
+        },
+        {
+            text: "Den Teig zu einer Kugel formen, in eine geölte Schüssel geben, abdecken und 1 Stunde im Ofen bei 30 °C ruhen lassen, bis er sein Volumen ungefähr verdoppelt hat.",
+            images: [
+                "images/reformationsbrötchen-teig1.jpeg",
+                "images/reformationsbrötchen-teig2.jpeg"
+            ]
+        },
+        {
+            text: "Dann den Teig auf einer Arbeitsfläche ohne zusätzliches Mehl in 7 Teile à ca. 96g teilen, zu Kugeln rundwirken und mit etwas Abstand auf ein mit Backpapier belegtes Backblech legen.",
+            images: ["images/reformationsbrötchen-teig3.jpeg"]
+        },
+        {
+            text: "Dann jede Kugel mit einer Schere fast bis zum Boden kreuzförmig einschneiden.",
+            images: [
+                "images/reformationsbrötchen-teig4.jpeg",
+                "images/reformationsbrötchen-teig5.jpeg",
+                "images/reformationsbrötchen-teig6.jpeg"
+            ]
+        },
+        {
+            text: "Die entstandenen vier Zacken nach unten klappen und den ganzen Teigling etwas flacher drücken. Erneut abdecken und im Ofen bei 30 °C weitere 30 Min. ruhen lassen.",
+            images: ["images/reformationsbrötchen-teig7.jpeg"]
+        },
+        {
+            text: "10 Min. vor Ende der Ruhezeit die abgedeckten Teiglinge aus dem Ofen holen und den Ofen auf 200 °C Ober-/Unterhitze vorheizen."
+        },
+        {
+            text: "Nach der Ruhezeit mit einem Teelöffel in die Mitte jedes Teiglings eine Mulde drücken und jeweils einen TL Marmelade hineingeben. Die Teiglinge mit Milch bestreichen und im Ofen ca. 15 Min. goldbraun backen.",
+            images: [
+                "images/reformationsbrötchen-teig8.jpeg",
+                "images/reformationsbrötchen-teig9.jpeg"
+            ]
+        },
+        {
+            text: "In der Zwischenzeit für den Zuckerguss den Puderzucker nach und nach mit etwas Milch verrühren, bis ein dickflüssiger Zuckerguss entsteht."
+        },
+        {
+            text: "Sobald die Brötchen aus dem Ofen kommen, jedes großzügig mit Zuckerguss bestreichen und noch mindestens 5 Min. abkühlen lassen."
+        }
+    ]
 },
 ];
 module.exports = { RECIPES };

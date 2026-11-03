@@ -520,7 +520,7 @@ container.innerHTML = `
   <img 
 class="hero-img" 
 src="${recipeImageUrl}"
-alt="${recipe.title} – KitchenBreeze">
+alt="${recipe.imageAlt || recipe.title + ' – KitchenBreeze'}">
 
     <h1 class="title">${recipe.title}</h1>
 

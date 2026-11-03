@@ -11411,5 +11411,352 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
 "Den Topf vom Herd nehmen, die Kokosmilch und das Currypulver hinzufügen, mit Salz und Pfeffer abschmecken und alles mit dem Pürierstab cremig pürieren."
     ]
 },
+
+{
+    id: "132",
+    title: "New York Style Bagel",
+      seoTitle: "New York Style Bagels – original amerikanisches Rezept",
+    metaDescription:"New York Style Bagels selber machen: außen goldbraun, innen  typisch chewy. Veganes Rezept ohne Öl mit Übernachtgare.",
+    keywords: [
+        "New York Style Bagel",
+        "New York Style Bagels",
+        "Bagel Rezept",
+        "Bagels selber machen",
+        "amerikanische Bagels",
+        "original New York Bagels",
+        "New York Bagel Rezept",
+        "Bagels ohne Öl",
+        "vegane Bagels",
+        "Bagels ohne Ei",
+        "Bagel Hefeteig",
+        "Bagels mit Trockenhefe",
+        "Bagels mit Übernachtgare",
+        "Bagels über Nacht",
+        "Bagels aus dem Kühlschrank",
+        "Bagels selber backen",
+        "amerikanisches Gebäck",
+        "Frühstücksbagels",
+        "Bagels mit Ahornsirup",
+        "Bagels mit Rübensirup",
+        "Bagels kochen und backen",
+        "Bagels mit knuspriger Kruste",
+        "weiche Bagels",
+        "einfaches Bagel Rezept"
+    ],
+    category: ["Backen", "Brot & Brötchen", "Vegan", "ohne Ei", "Vegetarisch", "Übernachtgare"],
+    image: "images/ny-style-bagel.jpeg",
+    time: {
+        preparation: "32 min",
+        rising: "13 Std",
+        baking: "18 min",
+        total: "13 Std 50 min"
+    },
+
+    related: ["126", "124", "125"],
+    portions: "9 Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "New York Style Bagel: außen goldbraun und leicht glänzend, innen  typisch chewy. Das traditionelle Rezept ganz ohne Öl.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+
+        "Teig": [
+            "500 g Mehl <i>(Type 550)</i>",
+            "250 ml lauwarmes Wasser",
+            "1 EL Ahornsirup <i>(ca. 12 g)</i>",
+            "2 g Trockenhefe",
+            "10 g Salz"
+        ],
+        "Kochwasser": [
+            "1 EL Goldrübensirup",
+            "1 L Wasser",
+            "1 TL Salz"
+        ]
+
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+        {
+            text: "Das Mehl mit der Trockenhefe und dem Salz vermengen. In der Mitte eine Mulde formen, Wasser sowie Ahornsirup hineingeben und alles mit einem Löffel vermischen, bis das Wasser vollständig aufgenommen wurde.",
+        },
+{text: "Anschließend den Teig mit dem Knethaken der Küchenmaschine ca. 5 min auf mittlerer Stufe zu einem einigermaßen glatten Teig kneten. Den Teig anschließend mit den Händen ca. 1 min kräftig durchkneten, in eine Schüssel legen und direkt an der Oberfläche mit einem feuchten Tuch abdecken. Ca. 1 Stunde bei Raumtemperatur ruhen lassen. <i>(Nicht wundern: Der Teig ist sehr kompakt und trocken.)</i>",
+ images:["images/ny-style-bagel-teig.jpeg",
+     ,
+
+    ]
+},
+
+{text: "Nach der Ruhezeit den Teig in 9 Teile à ca. 86 g teilen und so gut es geht rundwirken. Dazu jedes Teigstück flach drücken, die Ränder zur Mitte falten und das Teigstück umdrehen, sodass die glatte Seite nach oben zeigt. Anschließend mit beiden Handkanten zu einer Kugel formen, sodass die Oberseite einigermaßen glatt ist.",
+},
+
+{text: "Jedes Teigstück etwas flach drücken und mit dem Zeigefinger ein Loch in die Mitte stechen.",
+    images:["images/ny-style-bagel-formen1.jpeg",
+        "images/ny-style-bagel-formen2.jpeg",
+
+    ]
+},
+
+{text: "Anschließend mit den Daumen beider Hände in das Loch greifen und es durch ständiges Drehen in der Luft vergrößern. Dabei befinden sich die Daumen innen und die restlichen Finger außen.",
+images:["images/ny-style-bagel-formen5.jpeg",
+        "images/ny-style-bagel-formen6.jpeg",
+        "images/ny-style-bagel-formen7.jpeg",
+
+    ]
+},
+{text: "Den Teigling auf die Arbeitsfläche legen und etwas flach drücken. Den Zeigefinger an den Rand des Lochs setzen und den Teigling auf der Arbeitsfläche um den Finger herumwirbeln lassen, sodass das Loch noch etwas größer wird. Den Teigling erneut etwas flacher drücken, bis du einen ca. 10 cm großen Kreis mit einem ca. 4 cm großen Loch in der Mitte erhältst.",
+    images:["images/ny-style-bagel-formen4.jpeg",
+    ]
+},
+
+{text: "Die Bagels mit etwas Abstand auf ein mit einem feuchten Küchentuch belegtes Backblech legen, mit einem zweiten feuchten Küchentuch abdecken und über Nacht, ca. 12 Stunden, im Kühlschrank ruhen lassen.",
+},
+
+{text: "Nach der Ruhezeit die Bagels aus dem Kühlschrank nehmen und den Backofen auf 220 °C Ober-/Unterhitze vorheizen. Einen Topf mit dem Wasser füllen, den Sirup sowie das Salz mit einem Schneebesen einrühren und das Wasser unter gelegentlichem Rühren zum Kochen bringen.",
+},
+
+{text: "Sobald der Backofen vorgeheizt ist und das Wasserbad kocht, die Hitze reduzieren, sodass das Wasser nur noch siedet. Ein Backblech mit Backpapier belegen.",
+},
+
+{text: "Je nach Größe des Topfes 2–3 Bagels in das Wasserbad geben und ca. 50 Sekunden vollständig darin ziehen lassen. Anschließend mit einer Schaumkelle herausholen, gut abtropfen lassen und mit etwas Abstand auf das Backblech legen."},
+{text:"Die Bagels im vorgeheizten Backofen ca. 18 min goldbraun backen."},
+
+
+{text:"Aus dem Ofen nehmen und entweder direkt oder später im Toaster aufgewärmt genießen."}
+    ]
+},
+
+{
+    id: "133",
+    title: "leckere Baconbagel",
+    seoTitle: "Baconbagel selber machen – herzhaft mit Ei und Avocado",
+    metaDescription: "Herzhafte Baconbagel mit knusprigem Bacon, Spiegelei, Cheddar, Avocado und frischem Gemüse. Einfach zubereitet und perfekt zum Frühstück, Abendessen oder Brunch.",
+    keywords: [
+        "Baconbagel",
+        "Baconbagel Rezept",
+        "Bacon Bagel",
+        "Bagel belegen Ideen",
+        "Bagel Topping Ideen",
+        "Bagel mit Bacon",
+        "Bagels selber machen",
+        "herzhafte Bagels",
+        "Bagel mit Ei",
+        "Bagel mit Spiegelei",
+        "Bagel mit Avocado",
+        "Bagel mit Cheddar",
+        "Bagel mit Käse",
+        "Bagel mit Tomate",
+        "Bagel mit Romanasalat",
+        "Bacon Ei Bagel",
+        "Frühstücksbagel",
+        "Bagel Frühstück",
+        "Bagel Brunch",
+        "amerikanisches Frühstück",
+        "herzhaftes Frühstück",
+        "einfaches Bagel Rezept",
+        "schnelle Bagels",
+        "Bacon Frühstück"
+    ],
+    category: ["Kochen", "Backen", "Hauptgerichte", "Fleisch", "Brot & Brötchen",],
+    image: "images/baconbagel.jpeg",
+    time: {
+        preparation: "14 min",
+        cooking: "26 min",
+        total: "40 min"
+    },
+
+    related: ["132", "77", "67"],
+    portions: "6 Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Herzhafte Baconbagel mit knusprigem Bacon, Spiegelei, Cheddar, Avocado und frischem Gemüse. Einfach zubereitet und perfekt zum Frühstück, Abendessen oder Brunch.",
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+        "": [
+            "6 [[new-york-style-bagel|Bagel]]",
+            "300g Bacon",
+            "1 große Tomate",
+            "6 Mini-Romanasalatblätter",
+            "6 Eier",
+            "6 Scheiben Cheddarkäse",
+            "1 große Avocado",
+            "Öl"
+        ],
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+        "Den Bacon auf ein mit Backpapier belegtes Backblech nicht überlappend legen <b>(du wirst 2 Bleche machen müssen)</b> und im Ofen bei höchster Grillstufe ca. 5-10min knusprig rösten <b>(Achtung die zweite Ladung geht wesentlich schneller weil der Ofen dann schon aufgeheizt ist)</b>",
+
+        "In der Zwischenzeit eine beschichtete Pfanne mit etwas Öl bei mittlerer Hitze erwärmen, die Eier hineinschlagen, die Temperatur erhöhen und ca. 7-10min braten, bis die gewünschte Eigelbtextur erreicht ist.",
+
+        "Währenddessen die Avocado mit einem großen Löffel schälen, den Kern entfernen und sowie die Tomate in dünne Scheiben schneiden, den Salat waschen, gut abtrocknen, den weißen Stängel heraus schneiden und jedes Blatt vierteln.",
+
+        "Jeden Bagel aufschneiden, kurz im Toaster anrösten, dann mit einer Scheibe Käse belegen, ein Spiegelei darauf <i>(so schmilzt der Käse etwas an)</i>, dann Tomate, Salat und Avocado und zum Schluss ein Paar Baconscheiben belegen."
+    ]
+},
+
+{
+    id: "134",
+    title: "Ajvartortellini",
+    seoTitle: "Ajvar-Tortellini aus dem Ofen – cremig mit Cheddar",
+    metaDescription: "Cremige Ajvar-Tortellini mit würziger Paprika-Sahne-Soße und goldbraun überbackenem Cheddar. Einfaches Ofengericht für die ganze Familie.",
+    keywords: [
+        "Ajvar-Tortellini",
+        "Ajvar Resteverwertung",
+        "Ajvar Tortellini",
+        "Tortellini mit Ajvar",
+        "Tortellini Auflauf",
+        "Tortellini aus dem Ofen",
+        "überbackene Tortellini",
+        "Tortellini mit Cheddar",
+        "Tortellini mit Käse überbacken",
+        "cremige Tortellini",
+        "Tortellini in Ajvar-Sahne-Soße",
+        "Tortellini mit Paprikasoße",
+        "Tortellini mit Sahnesoße",
+        "Tortellini mit Fleischfüllung",
+        "Ajvar Rezept",
+        "Tortellini Auflauf einfach",
+        "einfaches Tortellini Rezept",
+        "schnelle Tortellini",
+        "schnelle Ofengerichte",
+        "einfache Ofengerichte",
+        "Nudelauflauf mit Cheddar",
+        "herzhafter Nudelauflauf",
+    ],
+    category: ["Kochen", "Hauptgerichte", "Fleisch", "Pasta",],
+    image: "images/ajvartortellini.jpeg",
+    time: {
+        preparation: "3 min",
+        cooking: "7 min",
+        baking: "10 min",
+        total: "20 min"
+    },
+
+    related: ["132", "77", "67"],
+    portions: "8 Portionen",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Cremigen Ajvar-Tortellini in einer würzigen Soße aus Ajvar, Sahne, Gemüsebrühe und Paprika zubereitet und anschließend mit reichlich Cheddar goldbraun überbacken. Ein unkompliziertes Ofengerich.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+        "": [
+            "2 Zwiebeln",
+            "2 Knoblauchzehen",
+            "20g Butter",
+            "1 EL Paprikapulver <i>edelsüß</i>",
+            "15g Mehl",
+            "350ml Gemüsebrühe",
+            "250ml Kochsahne",
+            "75g Ajvar",
+            "1,5kg Tortellini <i>mit Fleischfüllung</i>",
+            "200g geriebener Cheddar",
+            "Salz",
+            "Pfeffer"
+        ],
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+        "Die Zwiebeln und den Knoblauch schälen und fein hacken.",
+
+        "Die Butter in einem großen, feuerfesten Topf schmelzen. Das Paprikapulver unterrühren und ca. 30 Sek. unter Rühren anbraten, bis es duftet. Dann die Zwiebeln dazugeben und weitere 2 Min. auf höchster Stufe andünsten.",
+
+        "In der Zwischenzeit die Sahne mit der Gemüsebrühe und dem Ajvar verrühren.",
+
+        "Anschließend den Knoblauch mit in den Topf geben und kurz mitrösten, bis er duftet. Das Mehl ca. 30 Sek. mit einem Schneebesen unterrühren. Danach nach und nach die Sahnemischung dazugeben und dabei stetig weiterrühren, damit keine Klümpchen entstehen. Immer erst etwas Flüssigkeit einrühren und leicht andicken lassen, bevor du mehr hinzugibst.",
+
+        "Die Soße einmal aufkochen lassen, die Tortellini unterrühren, bis sie gleichmäßig von der Soße umgeben sind, und alles ca. 3 Min. köcheln lassen.",
+
+        "Den Topf vom Herd nehmen und die Soße mit Salz und Pfeffer abschmecken. Den Käse gleichmäßig auf der Oberfläche verteilen und die Tortellini im Ofen bei höchster Grillstufe ca. 5–10 Min. überbacken, bis der Käse goldbraun ist."
+    ]
+},
+
+{
+    id: "135",
+    title: "schneller Bulgursalat mit Oliven",
+    seoTitle: "Schneller Bulgursalat mit Oliven, Feta und Tomaten",
+    metaDescription: "Schneller Bulgursalat mit schwarzen Oliven, Feta, frischen und getrockneten Tomaten. Einfach zubereitet und ideal als Beilage oder leichtes Mittagessen.",
+    keywords: [
+        "Bulgursalat mit Oliven",
+        "schneller Bulgursalat",
+        "Bulgursalat Rezept",
+        "Bulgursalat mit Feta",
+        "Bulgursalat mit Tomaten",
+        "Bulgursalat mit getrockneten Tomaten",
+        "Bulgursalat mit schwarzen Oliven",
+        "Bulgur Salat",
+        "Rezepte mit Oliven",
+        "Rezepte mit schwarzen Oliven",
+        "mediterraner Bulgursalat",
+        "Bulgursalat mediterran",
+        "Bulgursalat einfach",
+        "einfacher Bulgursalat",
+        "Bulgursalat als Beilage",
+        "Bulgursalat zum Grillen",
+        "Bulgursalat mit Gemüse",
+        "Bulgur mit Feta und Oliven",
+        "Bulgur mit Tomaten und Feta",
+        "Salat mit Bulgur",
+        "schnelle Salate",
+        "einfache Salate",
+        "vegetarischer Bulgursalat",
+        "Bulgursalat ohne Gurke"
+    ],
+    category: ["Kochen", "Hauptgerichte", "Salate", ],
+    image: "images/einfacher-bulgursalat-mit-oliven.jpeg",
+    time: {
+        preparation: "10 min",
+        cooking: "15 min",
+        total: "25 min"
+    },
+
+    related: ["132", "77", "67"],
+    portions: "4 Portionen",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Schneller Bulgursalat mit Oliven, Feta und Tomaten - In nur 25 Minuten zubereitet. ",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+        "": [
+            "200g Bulgur",
+            "445ml Wasser",
+            "100g schwarze Oliven",
+            "100g Feta",
+            "400g kleine Tomaten",
+            "50g getrocknete Tomaten",
+            "2 rote Zwiebeln",
+            "1 Knoblauchzehe",
+            "1/2 TL getrockneter Oregano",
+            "1 EL Olivenöl",
+            "Salz",
+            "Pfeffer"
+    
+        ],
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+        "Den Bulgur mit dem Wasser und etwas Salz in einen Topf geben, aufkochen und 10 Min. bei geschlossenem Deckel auf niedrigster Stufe sanft köcheln lassen. Dann vom Herd nehmen und bei geschlossenem Deckel weitere 5 Min. ruhen lassen.",
+
+        "Währenddessen die Zwiebeln schälen und grob hacken, die getrockneten Tomaten in kleine Stücke schneiden und den Knoblauch schälen und fein hacken.",
+
+        "Das Öl in einer kleinen Pfanne erhitzen und die Zwiebeln darin unter gelegentlichem Rühren ca. 4 Min. glasig dünsten. Die getrockneten Tomaten und den Knoblauch unterrühren und weitere 2 Min. mitbraten.",
+
+        "Dann den Oregano dazugeben und noch ca. 1 Min. mit anschwitzen, bis er duftet.",
+
+        "Den Bulgur mit einer Gabel auflockern, mit dem Pfanneninhalt sowie Salz und Pfeffer vermengen. Alles in eine große Schüssel geben und etwas abkühlen lassen, bis der Bulgur nicht mehr dampft.",
+
+        "In der Zwischenzeit die Tomaten halbieren oder je nach Größe dritteln, die Oliven halbieren und den Feta in kleine Würfel schneiden. Alles unter den abgekühlten Bulgur heben und sofort servieren oder abgedeckt noch etwas durchziehen lassen."
+    ]
+},
 ];
 module.exports = { RECIPES };

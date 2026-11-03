@@ -59,7 +59,29 @@ for ($i = 0; $i -lt $idMatches.Count; $i++) {
         continue
     }
 
-    $recipeUrl = $baseUrl + "recipe.html?id=" + [uri]::EscapeDataString($recipeId)
+   $titleMatch = [regex]::Match(
+    $recipeText,
+    '(?m)\btitle\s*:\s*["'']([^"'']+)["'']'
+)
+
+if (-not $titleMatch.Success) {
+    Write-Host "Kein Rezepttitel für ID $recipeId gefunden."
+    continue
+}
+
+$slug = $titleMatch.Groups[1].Value.ToLowerInvariant()
+
+$slug = $slug.Replace("ä", "ae")
+$slug = $slug.Replace("ö", "oe")
+$slug = $slug.Replace("ü", "ue")
+$slug = $slug.Replace("ß", "ss")
+
+$slug = [regex]::Replace($slug, '[^a-z0-9\s-]', '')
+$slug = [regex]::Replace($slug, '\s+', '-')
+$slug = [regex]::Replace($slug, '-+', '-')
+$slug = $slug.Trim('-')
+
+$recipeUrl = $baseUrl + "recipes/" + $slug + ".html"
 
     [void]$xml.AppendLine("  <url>")
     [void]$xml.AppendLine("    <loc>$recipeUrl</loc>")

@@ -252,7 +252,7 @@ const RECIPES = [
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
-        "Ein Drittel der Kartoffeln (500 g) ungeschält in Salzwasser ca. 25 min weich kochen. Anschließend abgießen und abkühlen lassen. Diesen Schritt kannst du auch bereits am Vortag erledigen.",
+        "Ein Drittel der Kartoffeln (500 g) ungeschält in einen Topf geben, vollständig mit Wasser bedecken, aufkochen und ca. 25min kochen, bis die Kartoffeln beim einstechen mit einer Gabel weich sind. Anschließend abgießen und VOLLSTÄNDIG abkühlen lassen. Diesen Schritt kannst du auch bereits am Vortag erledigen.",
 
         "Ein sauberes Küchentuch in eine große Schüssel legen. Die restlichen zwei Drittel der Kartoffeln (1 kg) schälen und mit einer feinen Reibe in das Tuch raspeln.",
 

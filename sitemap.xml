@@ -138,10 +138,6 @@
     </url>
 
     <url>
-        <loc>https://kitchenbreeze.github.io/foodblog/recipes/fluffiges-weissbrot.html</loc>
-    </url>
-
-    <url>
         <loc>https://kitchenbreeze.github.io/foodblog/recipes/frikadellen-mit-rahmsosse-und-nudeln.html</loc>
     </url>
 
@@ -555,6 +551,14 @@
 
     <url>
         <loc>https://kitchenbreeze.github.io/foodblog/recipes/fluffige-reformationsbroetchen-ohne-ei.html</loc>
+    </url>
+
+    <url>
+        <loc>https://kitchenbreeze.github.io/foodblog/recipes/schoko-bananen-hefeknoten-ohne-ei.html</loc>
+    </url>
+
+    <url>
+        <loc>https://kitchenbreeze.github.io/foodblog/recipes/fluffige-hefe-zimtsterne-ohne-ei.html</loc>
     </url>
 
 </urlset>

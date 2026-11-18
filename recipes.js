@@ -12788,40 +12788,35 @@ images:["images/ny-style-bagel-formen5.jpeg",
 {
     id: "145",
     title: "Nougatkuchen",
-    seoTitle: "Nougatplätzchen – einfache Schokoplätzchen mit Nougatfüllung",
-    metaDescription: "Diese Nougatplätzchen mit zartem Schokoteig und cremiger Nougatfüllung sind einfach gemacht und perfekt für den Weihnachtsteller. Ein köstlicher Genuss!",
+    seoTitle: "Saftiger Nougatkuchen – einfaches Rezept mit Schokolade",
+    metaDescription: "Dieser saftige Nougatkuchen mit geschmolzenem Nussnougat und cremiger Schokoladenglasur ist schnell zusammengerührt und herrlich schokoladig. Einfach selbst backen!",
     keywords: [
-        "Nougatplätzchen",
-        "Nougatplätzchen Rezept",
-        "Nougatplätzchen selber machen",
-        "Plätzchen mit Nougat",
-        "Nougat Kekse",
-        "Nougat Kekse Rezept",
-        "Schokoplätzchen mit Nougat",
-        "Schokoladenplätzchen",
-        "Plätzchen mit Nougatfüllung",
-        "Nougatfüllung",
-        "Plätzchen mit Nussnougat",
-        "Nussnougat Plätzchen",
-        "gefüllte Weihnachtsplätzchen",
-        "Weihnachtsplätzchen",
-        "Weihnachtsgebäck",
-        "Plätzchen Weihnachten",
-        "einfaches Weihnachtsgebäck",
-        "einfache Plätzchen",
-        "einfache Weihnachtsplätzchen",
-        "schnelle Plätzchen",
-        "Weihnachten Backen",
-        "Plätzchen ohne Ei",
-        "Weihnachtsplätzchen ohne Ei",
-        "vegetarische Plätzchen",
-        "Schokokekse mit Füllung",
-        "Kekse mit Schokolade",
-        "Kekse mit Nougat",
-        "Nougatgebäck",
-        "Plätzchen mit Kakao",
-        "kleine Schokoplätzchen",
-        "Nougatplätzchen mit Nussnougat"
+        "Nougatkuchen",
+        "Nougatkuchen Rezept",
+        "Nougatkuchen selber machen",
+        "saftiger Nougatkuchen",
+        "einfacher Nougatkuchen",
+        "Kuchen mit Nougat",
+        "Kuchen mit Nussnougat",
+        "Nussnougat Kuchen",
+        "Schokoladen Nougat Kuchen",
+        "Schokokuchen mit Nougat",
+        "Nougat Schokoladenkuchen",
+        "Kuchen mit Nougatglasur",
+        "Nougatglasur",
+        "Kuchen mit Schokoladenglasur",
+        "saftiger Schokoladenkuchen",
+        "einfacher Schokoladenkuchen",
+        "Kastenkuchen mit Nougat",
+        "Nougatkuchen aus der Kastenform",
+        "Kuchen mit Vollmilchschokolade",
+        "Backen mit Nussnougat",
+        "Kuchen für Nougatliebhaber",
+        "einfacher Kastenkuchen",
+        "schneller Kuchen",
+        "einfache Kuchenrezepte",
+        "Kuchen mit Schokolade",
+        "Rührkuchen mit Nougat"
     ],
 
     category: ["Backen", "Kuchen & Torten", "Vegetarisch"],
@@ -12838,43 +12833,49 @@ images:["images/ny-style-bagel-formen5.jpeg",
     difficulty: "Einfach",
     rating: 4.6,
 
-    description: "Diese Nougatplätzchen sind genau das Richtige für alle Schokoladen- und Nougatliebhaber! Ein zarter, leicht schokoladiger Keks mit aromatischer Nougatfüllung. Sie sind einfach zubereitet, kommen ganz ohne Ei aus und passen perfekt auf den weihnachtlichen Plätzchenteller.",
+    description: "Saftige Nougatkuchen mit aromatisches Schokoladen-Nougat-Aroma und wunderbar weicher Konsistenz.",
 
     /* 🍽️ ZUTATEN */
     ingredients: {
         "Teig": [
             "100 g Mehl <i>(Type 405)</i>",
-            "100g schnittfester Nussnougat",
-            "20g Speisestärke",
+            "100 g schnittfester Nussnougat",
+            "20 g Speisestärke",
             "1 Ei",
-            "100ml Milch",
-            "30g brauner Zucker",
-            "90ml neutrales Öl",
+            "100 ml Milch",
+            "30 g brauner Zucker",
+            "90 ml neutrales Öl",
             "1/2 Pck. Backpulver",
             "1 TL Vanilleextrakt",
             "1 Prise Salz"
-            
         ],
         "Glasur": [
-            "60g"
+            "60 g Vollmilchkuvertüre",
+            "25 g schnittfester Nussnougat"
         ]
     },
 
     /* 👨‍🍳 ZUBEREITUNG */
     steps: [
-        "Die Butter mit dem Puderzucker und dem Salz mit dem Rührhaken der Küchenmaschine cremig rühren.",
+        "Den Ofen auf 180 Grad Ober-/Unterhitze vorheizen.",
 
-        "Mehl, Kakao, Speisestärke und Milch unterrühren und alles zu einem glatten, etwas klebrigen Teig verkneten.",
+        "Den Nougat in Würfel schneiden und zusammen mit der Milch in einem kleinen Topf bei mittlerer Hitze langsam unter Rühren schmelzen <b>(nicht kochen!)</b>. Vom Herd nehmen und beiseitestellen.",
 
-        "Den Ofen auf 180 Grad Ober-/Unterhitze vorheizen. Den Teig in ca. 30 ungefähr gleich große Teile <i>(à ca. 10 g)</i> teilen und jedes Stück zu einer Kugel formen.",
+        "Dann eine Kastenform <b>(20 cm)</b> gut einfetten und das Mehl mit dem Backpulver, der Speisestärke sowie dem Salz in einer Schüssel vermengen.",
 
-        "Die Kugeln mit etwas Abstand auf ein mit Backpapier belegtes Backblech legen und im vorgeheizten Backofen ca. 10 Minuten backen. <b>Nicht wundern: Wenn die Kekse aus dem Ofen kommen, sind sie noch sehr weich, werden beim Abkühlen aber fester.</b>",
+        "In einer größeren Schüssel das Ei mit dem Zucker und dem Vanilleextrakt mit einem Schneebesen kräftig verrühren. Das Öl dazugeben und erneut kräftig durchrühren.",
 
-        "Die Kekse aus dem Ofen nehmen und sofort jeweils mittig mit dem Stiel eines Kochlöffels eindrücken, sodass eine Mulde entsteht. Anschließend mindestens 10 Minuten abkühlen lassen.",
+        "Die Nougatmilch hinzufügen und alles nochmals gut durchrühren. Die Mehlmischung dazugeben und nur so lange mit dem Schneebesen rühren, bis keine Mehlklümpchen oder trockenes Mehl mehr zu sehen sind.",
 
-        "Dann den Nussnougat etwas kleiner schneiden, über einem Wasserbad schmelzen, in einen Spritzbeutel mit kleiner Öffnung füllen und jede Mulde damit befüllen.",
+        "Den Teig in die vorbereitete Form füllen und ca. 25–30 Minuten im vorgeheizten Backofen backen. Dabei nach ca. 12 Minuten mit einem Messer einmal längs in der Mitte einschneiden. <b>Bei der Stäbchenprobe dürfen noch vereinzelte Krümel daran kleben, aber kein flüssiger Teig mehr.</b>",
 
-        "Jeden Keks etwas hin und her schütteln, damit sich der Nougat gut in der Mulde verteilt. Anschließend vollständig abkühlen lassen <i>(am schnellsten geht das im Kühlschrank)</i>."
+        "Aus dem Ofen nehmen und mindestens 30 Minuten abkühlen lassen.",
+
+        "Dann die Kuvertüre fein hacken und den Nougat in kleine Stücke schneiden.",
+
+        "Beides über einem Wasserbad langsam unter gelegentlichem Rühren schmelzen. <b>Das Wasser soll nicht kochen, sondern nur kräftig dampfen. Dann den Topf vom Wasserbad nehmen und weiterrühren, bis Schokolade und Nougat vollständig geschmolzen sind.</b>",
+
+        "Daraufhin den Kuchen vorsichtig aus der Form lösen, die Glasur gleichmäßig auf der Oberfläche verteilen und vollständig auskühlen lassen oder noch mit weicher Glasur servieren."
     ]
 },
 ]

@@ -8342,7 +8342,7 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
         "einfache Pizza Rezepte",
         "vegetarische Pizza ohne Ei"
     ],
-    category: ["Belegte Backwaren", "Backen", "ohne Ei", "Kochen", "Ofengerichte", "Hauptgerichte"],
+    category: ["Belegte Backwaren", "Backen", "ohne Ei", "Kochen", "Ofengerichte", "Hauptgerichte", "Feste", "Halloween"],
     image: "images/wednesdaypizza.jpeg",
     time: {
         preparation: "34 min",
@@ -10460,7 +10460,7 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
         "Snack mit Zuckeraugen",
         "Apfel mit Zuckeraugen"
     ],
-    category: ["Kochen", "Snacks", "Halloween", "Hauptgerichte"],
+    category: ["Kochen", "Snacks", "Halloween", "Feste","Hauptgerichte"],
     image: "images/apfelmonster.jpeg",
     time: {
         preparation: "10 min",
@@ -10530,7 +10530,7 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
         "Salat mit Tomaten und Mozzarella",
         "italienischer Tomaten Mozzarella Salat"
     ],
-    category: ["Kochen", "Salate", "Halloween"],
+    category: ["Kochen", "Salate", "Halloween", "Feste"],
     image: "images/gruseliger-Capresesalat.jpeg",
     time: {
         preparation: "10 min",
@@ -10602,7 +10602,7 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
         "Die Geister schmecken sowohl warm als auch kalt super. Du kannst sie also auch schon früher für dein Buffet vorbereiten.",
         "Zu den Geistern passt [[knoblauchquark|Knoblauchquark]] perfekt, eventuell sogar in [[halloween-knoblauchquark|Lila]]?"
     ],
-    category: ["Kochen", "Backen", "Snacks", "Halloween", "Ofengerichte"],
+    category: ["Kochen", "Backen", "Snacks", "Halloween", "Ofengerichte", "Feste"],
     image: "images/gebackene-kartoffelgeister.jpeg",
     time: {
         preparation: "10 min",
@@ -10747,7 +10747,7 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
         "vegetarischer Halloween Snack",
         "Halloween Snacks für Kinder"
     ],
-    category: ["Kochen", "Aufstriche & Dips", "Halloween", "Beilagen"],
+    category: ["Kochen", "Aufstriche & Dips", "Halloween", "Feste", "Beilagen"],
     image: "images/halloween-knoblauchquark.jpeg",
     time: {
         preparation: "10 min",
@@ -10816,7 +10816,7 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
         "einfaches Halloween Rezept",
         "vegetarisches Halloween Fingerfood"
     ],
-    category: ["Backen", "Belegte Backwaren", "Vegetarisch", "ohne Ei", "Teilchen", "Snacks"],
+    category: ["Backen", "Belegte Backwaren", "Vegetarisch", "Feste", "ohne Ei", "Teilchen", "Snacks"],
     image: "images/halloween-pizzaschnecken.jpeg",
     time: {
         preparation: "25 min",
@@ -11063,7 +11063,7 @@ images: ["images/ovale-in-form-aufgegangen.jpeg"]
         "Würstchen Snacks",
         "Halloween Party Essen"
     ],
-    category: ["Backen", "Snacks", "Halloween", "ohne Ei", "Teilchen"],
+    category: ["Backen", "Snacks", "Halloween", "Feste", "ohne Ei", "Teilchen"],
     image: "images/würstchenmumien-mit-selbstgemachtem-teig.jpeg",
     time: {
         preparation: "13 min",
@@ -11775,7 +11775,7 @@ images:["images/ny-style-bagel-formen5.jpeg",
         "Fingerfood mit Mozzarella",
         "Halloween Rezept einfach"
     ],
-    category: ["Kochen", "Halloween", "Vegetarisch"],
+    category: ["Kochen", "Halloween","Feste", "Vegetarisch"],
     image: "images/vegetarische-augenbällchen.jpeg",
     time: {
         preparation: "10 min",
@@ -12133,7 +12133,7 @@ images:["images/ny-style-bagel-formen5.jpeg",
         "Zimtstern Krapfen",
         "Krapfen aus dem Ofen"
     ],
-    category: ["Backen", "Teilchen", "ohne Ei", "Vegetarisch", "Weihnachten"],
+    category: ["Backen", "Teilchen", "ohne Ei", "Vegetarisch", "Feste", "Weihnachten"],
     image: "images/fluffige-hefe-zimtsterne-ohne-ei.jpeg",
     time: {
         preparation: "57 min",
@@ -12471,6 +12471,410 @@ images:["images/ny-style-bagel-formen5.jpeg",
         {
             text: "Dann die Kichererbsen und Zucchini unterrühren, mit Salz und Pfeffer abschmecken und ca. 2 Minuten fertig braten. Zusammen mit dem Feta servieren."
         }
+    ]
+},
+
+{
+    id: "142",
+    title: "Weihnachtstiramisu",
+    seoTitle: "Weihnachtstiramisu mit Apfel und Zimt – cremiges Dessert",
+    metaDescription: "Dieses Weihnachtstiramisu mit fruchtiger Apfelfüllung, cremiger Zimt-Mascarpone und Schokolade ist das perfekte Dessert für die Weihnachtszeit.",
+    keywords: [
+        "Weihnachtstiramisu",
+        "Weihnachts Tiramisu",
+        "Tiramisu Weihnachten",
+        "Tiramisu mit Apfel",
+        "Apfel Tiramisu",
+        "Tiramisu mit Zimt",
+        "Zimt Tiramisu",
+        "Tiramisu mit Mascarpone",
+        "Weihnachtsdessert",
+        "Dessert Weihnachten",
+        "Weihnachtsdessert mit Apfel",
+        "Apfeldessert Weihnachten",
+        "weihnachtliches Dessert im Glas",
+        "Weihnachtsdessert zum Vorbereiten",
+        "Dessert für Heiligabend",
+        "Dessert für Weihnachten",
+        "cremiges Weihnachtsdessert",
+        "Tiramisu mit Apfelkompott",
+        "Tiramisu mit Löffelbiskuit",
+        "Tiramisu ohne Ei",
+        "einfaches Weihnachtsdessert",
+        "einfache Desserts",
+        "Aldi Zimtsterneis",
+        "Aldi Zimtsterneis als Tiramisu",
+        "Dessert mit Zimt und Apfel",
+        "Mascarpone Dessert mit Apfel",
+        "Quark Mascarpone Dessert",
+        "Tiramisu mit Schokolade",
+        "winterliches Dessert",
+        "festliches Dessert"
+    ],
+    category: ["Backen", "Kochen", "süße Hauptgerichte", "ohne Ei", "Vegetarisch", "Feste", "Weihnachten"],
+    image: "images/weihnachts-tiramisu.jpeg",
+    time: {
+        preparation: "30 min",
+        cooling: "5 min",
+        total: "5 Std 30 min"
+    },
+
+    related: ["139", "143", "4"],
+    portions: "12 Portionen",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Süße, luftige Zimtcreme trifft auf süß-säuerliches Apfelkompott, zartes Löffelbiskuit und knackige Schokolade. -Ein traumhaftes Dessert für die Weihnachtszeit.",
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+        "Apfelfüllung": [
+            "1 kg Äpfel",
+            "150 ml Wasser",
+            "10 g Speisestärke",
+            "1 EL Zitronensaft",
+            "30 g Zucker",
+            "1 Prise Salz"
+        ],
+
+        "Creme": [
+            "500 g Mascarpone",
+            "500 g Quark",
+            "2 Pck. Schlagcremepulver <i>(à 80 g)</i> <b>+</b> 500 ml Milch <i>(alternativ: 500 ml Schlagsahne mit optional 1 Pck. Vanillezucker)</i>",
+            "100 g Zucker",
+            "1 Pck. Vanillezucker",
+            "1 Prise Salz",
+            "6 g Zimt"
+        ],
+
+        "Löffelbiskuit": [
+            "400 g Löffelbiskuit",
+            "400 ml Milch",
+            "1 TL Zimt"
+        ],
+
+        "Außerdem": [
+            "100 g Zartbitterkuvertüre",
+            "1 EL Backkakao"
+        ]
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+        "Für die Füllung die Äpfel schälen, das Kerngehäuse entfernen und das Fruchtfleisch in kleine Würfel schneiden. Die Speisestärke in einem kleinen Schälchen mit ca. 2 EL Wasser verrühren.",
+
+        "Die Apfelwürfel mit dem Zitronensaft, dem Zucker, dem Salz und dem restlichen Wasser in einen Topf geben, aufkochen und bei mittlerer Hitze unter gelegentlichem Rühren ca. 10 Minuten köcheln lassen.",
+
+        "Dann die glatt gerührte Stärke unterrühren, erneut aufkochen und noch ca. 1–2 Minuten köcheln lassen. Anschließend mit einem Deckel abdecken und vollständig auskühlen lassen.",
+
+        "Nach der Kühlzeit die Zartbitterkuvertüre fein hacken und über einem Wasserbad erhitzen <b>(bis das Wasser stark dampft, aber nicht kocht)</b>. Vom Herd nehmen und unter gelegentlichem Rühren vollständig schmelzen lassen.",
+
+        "Danach für die Creme das Schlagcremepulver mit der Milch <i>(oder alternativ die Sahne mit dem Vanillezucker)</i> mit dem Rührbesen der Küchenmaschine steif schlagen.",
+
+        "In der Zwischenzeit die Mascarpone mit dem Quark, dem Zucker, dem Zimt, dem Vanillezucker und dem Salz mit einem Rührlöffel cremig rühren.",
+
+        "Die geschlagene Creme vorsichtig mit einem Teigspatel unterheben.",
+
+        "Für die Löffelbiskuits den Zimt mit einem Schneebesen so gut wie möglich in der Milch auflösen. Jedes Löffelbiskuit gut darin tränken und in einer Auflaufform <i>(35 cm x 25 cm)</i> verteilen, bis der Boden vollständig bedeckt ist.",
+
+        "Die Hälfte der Kuvertüre in schwingenden Bewegungen mit einem Löffel darüber verteilen.",
+
+        "Die Hälfte der Creme daraufgeben, glatt streichen und das abgekühlte Apfelkompott gleichmäßig darauf verteilen.",
+
+        "Die restlichen Löffelbiskuits in der übrigen Milch tränken und auf dem Kompott verteilen, bis alles bedeckt ist. Die restliche Kuvertüre darauf verteilen, anschließend die übrige Creme daraufgeben und glatt streichen.",
+
+        "Mit einem Sieb den Kakao gleichmäßig auf der Oberfläche verteilen und das Tiramisu für mindestens 3 Stunden <b>(besser über Nacht)</b> im Kühlschrank durchziehen lassen."
+    ]
+},
+
+{
+    id: "143",
+    title: "Stollenkonfekt",
+    seoTitle: "Stollenkonfekt selber machen – einfaches Rezept mit Marzipan",
+    metaDescription: "Dieses saftige Stollenkonfekt mit Rosinen, Mandeln und Marzipan ist perfekt für die Weihnachtszeit. Einfach selbst gemacht und wunderbar aromatisch!",
+    keywords: [
+        "Stollenkonfekt",
+        "Stollenkonfekt Rezept",
+        "Stollenkonfekt selber machen",
+        "Stollenkonfekt mit Marzipan",
+        "einfaches Stollenkonfekt",
+        "saftiges Stollenkonfekt",
+        "Stollenkonfekt mit Rosinen",
+        "Stollenkonfekt mit Mandeln",
+        "Weihnachtsgebäck",
+        "Weihnachtsgebäck selber machen",
+        "Weihnachtsplätzchen",
+        "Plätzchen Weihnachten",
+        "Gebäck für Weihnachten",
+        "Stollen Konfekt",
+        "Mini Christstollen",
+        "Christstollen Konfekt",
+        "kleine Stollen",
+        "Stollen mit Marzipan",
+        "Stollen mit Rosinen",
+        "Hefegebäck Weihnachten",
+        "Hefegebäck mit Rosinen",
+        "Marzipangebäck",
+        "Gebäck mit Mandeln",
+        "süßes Hefegebäck",
+        "einfaches Weihnachtsgebäck",
+        "Weihnachtsgebäck mit Marzipan",
+        "Stollenkonfekt ohne Ei",
+        "vegetarisches Weihnachtsgebäck",
+        "Stollenkonfekt aufbewahren",
+        "Stollenkonfekt wie vom Bäcker"
+    ],
+    tips: [
+        "Je länger das Konfekt in der Dose durchzieht, desto besser schmeckt es."
+    ],
+    category: ["Backen", "Teilchen", "Snacks", "ohne Ei", "Vegetarisch", "Feste", "Weihnachten"],
+    image: "images/stollenkonfekt.jpeg",
+    time: {
+        preparation: "30 min",
+        cooling: "2 Std 30 min",
+        rising: "2 Std",
+        baking:"15 min",
+        total: "5 Std 15 min"
+    },
+
+    related: ["139", "142", "77"],
+    portions: "1 Blech",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Lust auf Christstollen aber keine Lust zu warten? Na dann probier doch mal diese saftigen, kleinen Stollenhäppchen, die auch ganz ohne Ruhezeit lecker aromatisch schmecken.- Perfekt zum Naschen, Verschenken oder für den weihnachtlichen Plätzchenteller!",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+        "Quellstück": [
+            "125 g Rosinen/Sultaninen",
+            "45 g gehackte Mandeln",
+            "60 ml kochender Orangensaft"
+        ],
+
+        "Teig": [
+            "250 g Mehl <i>(Type 550)</i>",
+            "125 g weiche Butter",
+            "60 ml lauwarme Milch <i>(ca. 30 °C)</i>",
+            "1 Pck. Trockenhefe",
+            "1 gestrichener TL Zitronenschale",
+            "30 g Marzipanrohmasse",
+            "3 g Salz",
+            "45 g Zucker"
+        ],
+
+        "Bestreichen": [
+            "100 g Butter",
+            "120 g Puderzucker"
+        ],
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+        "Die Mandeln nach Belieben noch etwas kleiner hacken.",
+
+        "Die Rosinen und Mandeln mit dem Orangensaft in einer Schüssel vermengen und 30 Minuten ziehen lassen.",
+
+        "Dann das Mehl mit der Hefe, dem Zucker, dem Salz und der Zitronenschale vermengen. In der Mitte eine Mulde formen, die Milch hineingießen und alles kurz mit einem Löffel verrühren, bis die Flüssigkeit aufgenommen wurde.",
+
+        "Die Butter und das Marzipan in kleinen Stücken dazugeben und alles mit den Händen nur so lange wie nötig zu einem glatten, leicht klebrigen Teig kneten.",
+
+        "Die Rosinen und Mandeln abgießen, zum Teig geben und so lange mitkneten, bis sich alles gleichmäßig verteilt hat.",
+
+        "Dann den Teig zu einer Kugel formen, abdecken und 2 Stunden bei Raumtemperatur ruhen lassen.",
+
+        "Anschließend den Ofen auf 175 Grad Ober-/Unterhitze vorheizen und ein Backblech mit Backpapier belegen.",
+
+        "Den Teig auf einer leicht bemehlten Arbeitsfläche <i>(immer nur so viel Mehl verwenden, dass der Teig nirgendwo klebt)</i> in zwei Teile teilen und jeweils zu ungefähr 3 cm dicken Strängen rollen.",
+
+        "Mit einem Messer alle 2 cm ein Stück abschneiden, die Stücke mit etwas Abstand auf das Backblech legen und im vorgeheizten Backofen ca. 15–17 Minuten backen, bis die Unterseite goldbraun ist und die Oberseite ebenfalls etwas Farbe bekommen hat.",
+
+        "Währenddessen die Butter schmelzen und den Puderzucker in eine große Schüssel geben.",
+
+        "Das Stollenkonfekt höchstens 5 Minuten abkühlen lassen, dann rundherum mit Butter bestreichen und nach und nach vorsichtig <i>(damit die Stücke nicht zerbrechen)</i> im Puderzucker wälzen.",
+
+        "Das Konfekt auf einem Gitterrost vollständig abkühlen lassen, anschließend in eine Keksdose geben und jederzeit genießen."
+    ]
+},
+
+{
+    id: "144",
+    title: "Nougatplätzchen",
+    seoTitle: "Nougatplätzchen – einfache Schokoplätzchen mit Nougatfüllung",
+    metaDescription: "Diese Nougatplätzchen mit zartem Schokoteig und cremiger Nougatfüllung sind einfach gemacht und perfekt für den Weihnachtsteller. Ein köstlicher Genuss!",
+    keywords: [
+        "Nougatplätzchen",
+        "Nougatplätzchen Rezept",
+        "Nougatplätzchen selber machen",
+        "Plätzchen mit Nougat",
+        "Nougat Kekse",
+        "Nougat Kekse Rezept",
+        "Schokoplätzchen mit Nougat",
+        "Schokoladenplätzchen",
+        "Plätzchen mit Nougatfüllung",
+        "Nougatfüllung",
+        "Plätzchen mit Nussnougat",
+        "Nussnougat Plätzchen",
+        "gefüllte Weihnachtsplätzchen",
+        "Weihnachtsplätzchen",
+        "Weihnachtsgebäck",
+        "Plätzchen Weihnachten",
+        "einfaches Weihnachtsgebäck",
+        "einfache Plätzchen",
+        "einfache Weihnachtsplätzchen",
+        "schnelle Plätzchen",
+        "Weihnachten Backen",
+        "Plätzchen ohne Ei",
+        "Weihnachtsplätzchen ohne Ei",
+        "vegetarische Plätzchen",
+        "Schokokekse mit Füllung",
+        "Kekse mit Schokolade",
+        "Kekse mit Nougat",
+        "Nougatgebäck",
+        "Plätzchen mit Kakao",
+        "kleine Schokoplätzchen",
+        "Nougatplätzchen mit Nussnougat"
+    ],
+
+    category: ["Backen", "Kekse", "Snacks", "ohne Ei", "Vegetarisch", "Feste", "Weihnachten"],
+    image: "images/nougatplätzchen.jpeg",
+    time: {
+        preparation: "20 min",
+        cooling: "2 Std",
+        baking: "10 min",
+        total: "2 Std 30 min"
+    },
+
+    related: ["12", "142", "76"],
+    portions: "30 Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Diese Nougatplätzchen sind genau das Richtige für alle Schokoladen- und Nougatliebhaber! Ein zarter, leicht schokoladiger Keks mit aromatischer Nougatfüllung. Sie sind einfach zubereitet, kommen ganz ohne Ei aus und passen perfekt auf den weihnachtlichen Plätzchenteller.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+        "Teig": [
+            "120 g Mehl <i>(Type 405)</i>",
+            "30 g Speisestärke",
+            "90 g weiche Butter",
+            "70 g Puderzucker",
+            "10 g Backkakao",
+            "2 EL Milch",
+            "1 Prise Salz"
+        ],
+        "Füllung": [
+            "40 g schnittfester Nussnougat"
+        ]
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+        "Die Butter mit dem Puderzucker und dem Salz mit dem Rührhaken der Küchenmaschine cremig rühren.",
+
+        "Mehl, Kakao, Speisestärke und Milch unterrühren und alles zu einem glatten, etwas klebrigen Teig verkneten.",
+
+        "Den Ofen auf 180 Grad Ober-/Unterhitze vorheizen. Den Teig in ca. 30 ungefähr gleich große Teile <i>(à ca. 10 g)</i> teilen und jedes Stück zu einer Kugel formen.",
+
+        "Die Kugeln mit etwas Abstand auf ein mit Backpapier belegtes Backblech legen und im vorgeheizten Backofen ca. 10 Minuten backen. <b>Nicht wundern: Wenn die Kekse aus dem Ofen kommen, sind sie noch sehr weich, werden beim Abkühlen aber fester.</b>",
+
+        "Die Kekse aus dem Ofen nehmen und sofort jeweils mittig mit dem Stiel eines Kochlöffels eindrücken, sodass eine Mulde entsteht. Anschließend mindestens 10 Minuten abkühlen lassen.",
+
+        "Dann den Nussnougat etwas kleiner schneiden, über einem Wasserbad schmelzen, in einen Spritzbeutel mit kleiner Öffnung füllen und jede Mulde damit befüllen.",
+
+        "Jeden Keks etwas hin und her schütteln, damit sich der Nougat gut in der Mulde verteilt. Anschließend vollständig abkühlen lassen <i>(am schnellsten geht das im Kühlschrank)</i>."
+    ]
+},
+
+{
+    id: "145",
+    title: "Nougatkuchen",
+    seoTitle: "Nougatplätzchen – einfache Schokoplätzchen mit Nougatfüllung",
+    metaDescription: "Diese Nougatplätzchen mit zartem Schokoteig und cremiger Nougatfüllung sind einfach gemacht und perfekt für den Weihnachtsteller. Ein köstlicher Genuss!",
+    keywords: [
+        "Nougatplätzchen",
+        "Nougatplätzchen Rezept",
+        "Nougatplätzchen selber machen",
+        "Plätzchen mit Nougat",
+        "Nougat Kekse",
+        "Nougat Kekse Rezept",
+        "Schokoplätzchen mit Nougat",
+        "Schokoladenplätzchen",
+        "Plätzchen mit Nougatfüllung",
+        "Nougatfüllung",
+        "Plätzchen mit Nussnougat",
+        "Nussnougat Plätzchen",
+        "gefüllte Weihnachtsplätzchen",
+        "Weihnachtsplätzchen",
+        "Weihnachtsgebäck",
+        "Plätzchen Weihnachten",
+        "einfaches Weihnachtsgebäck",
+        "einfache Plätzchen",
+        "einfache Weihnachtsplätzchen",
+        "schnelle Plätzchen",
+        "Weihnachten Backen",
+        "Plätzchen ohne Ei",
+        "Weihnachtsplätzchen ohne Ei",
+        "vegetarische Plätzchen",
+        "Schokokekse mit Füllung",
+        "Kekse mit Schokolade",
+        "Kekse mit Nougat",
+        "Nougatgebäck",
+        "Plätzchen mit Kakao",
+        "kleine Schokoplätzchen",
+        "Nougatplätzchen mit Nussnougat"
+    ],
+
+    category: ["Backen", "Kuchen & Torten", "Vegetarisch"],
+    image: "images/nougatkuchen.jpeg",
+    time: {
+        preparation: "15 min",
+        cooling: "1 Std",
+        baking: "30 min",
+        total: "1 Std 45 min"
+    },
+
+    related: ["112", "144", "2"],
+    portions: "1 Kuchen",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Diese Nougatplätzchen sind genau das Richtige für alle Schokoladen- und Nougatliebhaber! Ein zarter, leicht schokoladiger Keks mit aromatischer Nougatfüllung. Sie sind einfach zubereitet, kommen ganz ohne Ei aus und passen perfekt auf den weihnachtlichen Plätzchenteller.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+        "Teig": [
+            "100 g Mehl <i>(Type 405)</i>",
+            "100g schnittfester Nussnougat",
+            "20g Speisestärke",
+            "1 Ei",
+            "100ml Milch",
+            "30g brauner Zucker",
+            "90ml neutrales Öl",
+            "1/2 Pck. Backpulver",
+            "1 TL Vanilleextrakt",
+            "1 Prise Salz"
+            
+        ],
+        "Glasur": [
+            "60g"
+        ]
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+        "Die Butter mit dem Puderzucker und dem Salz mit dem Rührhaken der Küchenmaschine cremig rühren.",
+
+        "Mehl, Kakao, Speisestärke und Milch unterrühren und alles zu einem glatten, etwas klebrigen Teig verkneten.",
+
+        "Den Ofen auf 180 Grad Ober-/Unterhitze vorheizen. Den Teig in ca. 30 ungefähr gleich große Teile <i>(à ca. 10 g)</i> teilen und jedes Stück zu einer Kugel formen.",
+
+        "Die Kugeln mit etwas Abstand auf ein mit Backpapier belegtes Backblech legen und im vorgeheizten Backofen ca. 10 Minuten backen. <b>Nicht wundern: Wenn die Kekse aus dem Ofen kommen, sind sie noch sehr weich, werden beim Abkühlen aber fester.</b>",
+
+        "Die Kekse aus dem Ofen nehmen und sofort jeweils mittig mit dem Stiel eines Kochlöffels eindrücken, sodass eine Mulde entsteht. Anschließend mindestens 10 Minuten abkühlen lassen.",
+
+        "Dann den Nussnougat etwas kleiner schneiden, über einem Wasserbad schmelzen, in einen Spritzbeutel mit kleiner Öffnung füllen und jede Mulde damit befüllen.",
+
+        "Jeden Keks etwas hin und her schütteln, damit sich der Nougat gut in der Mulde verteilt. Anschließend vollständig abkühlen lassen <i>(am schnellsten geht das im Kühlschrank)</i>."
     ]
 },
 ]

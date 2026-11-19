@@ -12539,7 +12539,7 @@ images:["images/ny-style-bagel-formen5.jpeg",
         "Creme": [
             "500 g Mascarpone",
             "500 g Quark",
-            "2 Pck. Schlagcremepulver <i>(à 80 g)</i> <b>+</b> 500 ml Milch <i>(alternativ: 500 ml Schlagsahne mit optional 1 Pck. Vanillezucker)</i>",
+           "2 Pck. Schlagcremepulver (à 80 g) + 500 ml Milch (alternativ: 500 ml Schlagsahne mit optional 1 Pck. Vanillezucker)",
             "100 g Zucker",
             "1 Pck. Vanillezucker",
             "1 Prise Salz",
@@ -12876,6 +12876,399 @@ images:["images/ny-style-bagel-formen5.jpeg",
         "Beides über einem Wasserbad langsam unter gelegentlichem Rühren schmelzen. <b>Das Wasser soll nicht kochen, sondern nur kräftig dampfen. Dann den Topf vom Wasserbad nehmen und weiterrühren, bis Schokolade und Nougat vollständig geschmolzen sind.</b>",
 
         "Daraufhin den Kuchen vorsichtig aus der Form lösen, die Glasur gleichmäßig auf der Oberfläche verteilen und vollständig auskühlen lassen oder noch mit weicher Glasur servieren."
+    ]
+},
+
+{
+    id: "146",
+    title: "Marzipankartoffeln",
+    seoTitle: "Marzipankartoffeln selber machen – einfaches Rezept",
+    metaDescription: "Marzipankartoffeln kannst du mit nur drei Zutaten ganz einfach selber machen. Das beliebte Weihnachtsgebäck ist schnell zubereitet und wunderbar aromatisch.",
+    keywords: [
+        "Marzipankartoffeln",
+        "Marzipankartoffeln Rezept",
+        "Marzipankartoffeln selber machen",
+        "Marzipankartoffeln einfach",
+        "Marzipankartoffeln mit Kakao",
+        "Marzipankugeln",
+        "Marzipankugeln selber machen",
+        "Marzipan Pralinen",
+        "Marzipan selber machen",
+        "Marzipanrohmasse Rezepte",
+        "Marzipan mit Puderzucker",
+        "Marzipan mit Kakao",
+        "Marzipankonfekt",
+        "Marzipan Konfekt selber machen",
+        "Weihnachtsgebäck",
+        "Weihnachtspralinen",
+        "Süßigkeiten selber machen",
+        "einfache Süßigkeiten",
+        "einfache Rezepte",
+        "schnelle Rezepte",
+        "Weihnachtsleckereien",
+        "kleine Naschereien",
+        "Geschenke aus der Küche",
+        "Backen zu Weihnachten"
+    ],
+
+    category: ["Backen", "Kochen", "Feste", "Vegan", "Weihnachten", "Vegetarisch"],
+    image: "images/marzipankartoffeln.jpeg",
+    time: {
+        preparation: "10 min",
+        total: "10 min"
+    },
+
+    related: ["143", "14", "52"],
+    portions: "18 Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Marzipankartoffeln mit nur wenigen Zutaten ganz einfach selber gemacht. Eine köstliche Nascherei, die nicht nur auf dem Weihnachtsteller gut aussieht, sondern sich auch wunderbar verschenken lässt.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+        "": [
+            "150 g Marzipanrohmasse",
+            "30 g Puderzucker",
+            "1/2 TL Backkakao"
+        ],
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+        "Die Marzipanrohmasse in eine Schüssel bröckeln. Den Puderzucker dazusieben und beides zu einem glatten Teig verkneten.",
+
+        "Den Teig in Stücke à 10 g teilen und jedes Stück zwischen den Händen zu einer Kugel formen.",
+
+        "Den Kakao in eine kleine Schale sieben. Die Kugeln portionsweise hineingeben und durch Schwenken der Schale mit Kakao bestäuben. Anschließend jede Kugel noch einmal zwischen den Händen rollen, sodass sie rundherum dünn mit Kakao bedeckt ist."
+    ]
+},
+
+{
+    id: "147",
+    title: "Cremige Ricotta-Pistazienpasta",
+    seoTitle: "Ricotta-Pistazienpasta – cremige Pasta mit Pistazien",
+    metaDescription: "Diese cremige Ricotta-Pistazienpasta mit gerösteten Pistazien und Knoblauch ist einfach zubereitet und herrlich aromatisch. Das perfekte vegetarische Pastagericht!",
+    keywords: [
+        "Ricotta-Pistazienpasta",
+        "Pistazienpasta",
+        "Pistazien Pasta Rezept",
+        "Pasta mit Pistazien",
+        "Pasta mit Ricotta",
+        "Ricotta Pasta",
+        "cremige Pistazienpasta",
+        "cremige Ricotta-Pasta",
+        "Pasta mit Pistazienmus",
+        "Pistaziensauce",
+        "Pasta mit Pistaziensauce",
+        "Tagliatelle mit Pistazien",
+        "Tagliatelle mit Ricotta",
+        "vegetarische Pasta",
+        "vegetarische Nudelgerichte",
+        "einfaches Pastarezept",
+        "einfache Pasta Rezepte",
+        "schnelle Pasta",
+        "schnelle vegetarische Gerichte",
+        "Pasta mit Knoblauch",
+        "Nudeln mit Ricotta",
+        "Nudeln mit Pistazien",
+        "Pasta selber machen",
+        "einfaches Mittagessen"
+    ],
+
+    tips: [
+        "Die Sauce darf vor dem Unterheben der Pasta ruhig etwas flüssiger sein, da die Tagliatelle noch Sauce aufnehmen. Falls die Pasta beim Vermengen zu trocken wirkt, einfach einen kleinen Schuss Pastawasser hinzufügen."
+    ],
+
+    category: ["Kochen", "Pasta", "Vegetarisch"],
+    image: "images/cremige-pistazien-ricotta-pasta.jpeg",
+    time: {
+        preparation: "10 min",
+        cooking:"10 min",
+        total: "20 min"
+    },
+
+    related: ["1", "154", "59"],
+    portions: "6 Portionen",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "cremige Ricotta-Pistazienpasta mit mildem, frischem Geschmack von Ricotta mit nussigem Aroma gerösteter Pistazien. Das einfache vegetarische Pastagericht ist schnell zubereitet und eignet sich ideal für ein unkompliziertes Mittag- oder Abendessen.",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+        "": [
+            "500 g Tagliatelle",
+            "250 g Pistazien <i>(geröstet und gesalzen, ungeschält)</i>",
+            "250 g Ricotta",
+            "1 kleine Knoblauchzehe",
+            "Salz",
+            "Pfeffer"
+        ],
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+        "Einen Topf mit Salzwasser zum Kochen bringen.",
+
+        "In der Zwischenzeit die Pistazien aus den Schalen lösen, die Knoblauchzehe schälen und grob hacken.",
+
+        "Die Tagliatelle nach Packungsanweisung im Salzwasser gar kochen. Währenddessen die Pistazien in einen Mixer geben und zu einem feinen Pulver mahlen.",
+
+        "Sobald die Nudeln einige Minuten gekocht haben, 3 EL Pastawasser zum Pistazienpulver geben und alles im Mixer möglichst fein zerkleinern, bis nur noch sehr kleine Stückchen vorhanden sind. Dabei zwischendurch immer wieder umrühren.",
+
+        "Die Nudeln abgießen und dabei etwa 200 ml Pastawasser auffangen.",
+
+        "Den Ricotta mit dem Pistazienmus und etwa 100 ml Pastawasser verrühren, bis eine dickflüssige, glatte Sauce entsteht. <i>(Falls die Sauce noch zu dick ist, portionsweise weiteres Pastawasser hinzufügen, bis die gewünschte Konsistenz erreicht ist.)</i>",
+
+        "Die Sauce vorsichtig mit den Nudeln vermengen, bis diese gleichmäßig damit überzogen sind. Nach Belieben mit gehackten Pistazien servieren."
+    ]
+},
+
+{
+    id: "148",
+    title: "Fluffige Weckmänner ohne Ei",
+    seoTitle: "Weckmänner ohne Ei – fluffig, weich und einfach selbst gemacht",
+    metaDescription: "Diese fluffigen Weckmänner ohne Ei werden dank Tangzhong besonders weich und saftig. Ein einfaches Rezept mit Hefe, Milch und Butter für die Weihnachtszeit.",
+    keywords: [
+        "Weckmänner ohne Ei",
+        "Weckmann ohne Ei",
+        "Weckmänner Rezept",
+        "Weckmänner selber machen",
+        "Weckmänner backen",
+        "fluffige Weckmänner",
+        "weiche Weckmänner",
+        "Weckmänner mit Hefe",
+        "Hefeteig Weckmänner",
+        "Stutenkerle ohne Ei",
+        "Stutenkerl Rezept",
+        "Stutenkerle selber machen",
+        "Hefemännchen",
+        "Hefemännchen ohne Ei",
+        "Hefeteig ohne Ei",
+        "Gebäck ohne Ei",
+        "Backen ohne Ei",
+        "einfache Rezepte ohne Ei",
+        "einfache Hefeteig Rezepte",
+        "süßes Hefegebäck",
+        "Hefegebäck selber machen",
+        "Weihnachtsgebäck",
+        "Gebäck zum Nikolaus",
+        "Nikolausgebäck",
+        "Tangzhong Rezept"
+    ],
+
+    category: ["Backen", "Teilchen", "Vegetarisch", "ohne Ei", "Feste", "Weihnachten"],
+    image: "images/fluffige-weckmaenner-ohne-ei.jpeg",
+    time: {
+        preparation: "10 min",
+        total: "10 min"
+    },
+
+    related: ["18", "144", "119"],
+    portions: "3 große Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Wunderbar wattige, weiche, süße, lockere Weckmänner. - Ein tolles Gebäck für den Nikolaustag und die Weihnachtszeit – und das ganz ohne Ei!",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+        "Tangzhong": [
+            "15 g Mehl <i>(Type 405)</i>",
+            "75 ml Milch"
+        ],
+        "Teig": [
+            "285 g Mehl <i>(Type 405)</i>",
+            "1 Pck. Trockenhefe",
+            "50 g weiche Butter",
+            "30 g cremiger Honig",
+            "1/4 TL Zitronenschale",
+            "3 g Salz",
+            "120 ml lauwarme Milch <i>(ca. 30 °C)</i>"
+        ],
+        "Außerdem": [
+            "Rosinen",
+            "Nussnougatcreme"
+        ]
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+        "Für den Tangzhong das Mehl mit der Milch in einem kleinen Topf vermengen und bei mittlerer Hitze unter ständigem Rühren zu einer dicklichen, puddingartigen Masse kochen. <i>(Am besten gelingt das mit einem kleinen Schneebesen.)</i> Den Topf vom Herd nehmen, die Masse auf einen flachen Teller geben und ohne Abdeckung etwa 5–10 Minuten abkühlen lassen, bis sie ungefähr handwarm ist.",
+
+        "Den Honig mit einem Schneebesen in der lauwarmen Milch auflösen. Mehl, Trockenhefe, Zitronenschale und Salz in einer Schüssel vermengen und in der Mitte eine Mulde formen. Die Honigmilch und den abgekühlten Tangzhong hineingeben. Alles mit einem Löffel vermengen, bis sich die Zutaten einigermaßen verbunden haben.",
+
+        "Den Teig anschließend mit dem Knethaken der Küchenmaschine etwa 3 Minuten auf mittlerer Stufe kneten.",
+
+        "Die Butter in den nächsten 2–3 Minuten nach und nach in kleinen Stücken dazugeben. Den Teig zunächst 2 Minuten auf höchster und anschließend weitere 2–3 Minuten auf mittlerer Stufe kneten, bis er glatt, elastisch und nicht mehr klebrig ist.",
+
+        {
+            text: "Den Teig zu einer Kugel formen, in eine gefettete Schüssel geben, abdecken und im Ofen bei 30 °C etwa 1 Stunde ruhen lassen, bis sich sein Volumen ungefähr verdoppelt hat.",
+            images: [
+                "images/fluffige-weckmaenner-ohne-ei-teig1.jpeg",
+                "images/fluffige-weckmaenner-ohne-ei-teig2.jpeg"
+            ]
+        },
+
+        {
+            text: "Den Teig auf einer Arbeitsfläche ohne zusätzliches Mehl in 3 Teile à etwa 188 g teilen. Von jedem Teigstück ein kleineres Stück à etwa 45 g abtrennen."
+        },
+
+        {
+            text: "Beide Teigstücke jeweils zu einer Kugel rundwirken. Das größere Stück zusätzlich mit den Händen etwas länglich rollen, sodass es eine Art Ei bildet.",
+            images: [
+                "images/fluffige-weckmaenner-ohne-ei-formen1.jpeg",
+                "images/fluffige-weckmaenner-ohne-ei-formen2.jpeg"
+            ]
+        },
+
+        {
+            text: "Das längliche Teigstück etwas flach drücken und mit einer Schere Arme und Beine einschneiden. Die Arme und Beine vorsichtig zurechtrücken und den Körper erneut etwas flach drücken. Auf ein mit Backpapier belegtes Backblech legen. Die kleine Teigkugel ebenfalls flach drücken, als Kopf direkt an den Körper legen und beides nochmals etwas zusammendrücken.",
+            images: [
+                "images/fluffige-weckmaenner-ohne-ei-formen3.jpeg",
+                "images/fluffige-weckmaenner-ohne-ei-formen4.jpeg",
+                "images/fluffige-weckmaenner-ohne-ei-formen5.jpeg",
+                "images/fluffige-weckmaenner-ohne-ei-formen6.jpeg"
+            ]
+        },
+
+        {
+            text: "Die Schritte für die beiden übrigen Weckmänner wiederholen. Nach Belieben Rosinen als Knöpfe in den Teig drücken. Anschließend die Männchen abdecken und im Ofen bei 30 °C weitere 30 Minuten ruhen lassen."
+        },
+
+        {
+            text: "Die Weckmänner aus dem Ofen nehmen und diesen auf 180 °C Ober-/Unterhitze vorheizen."
+        },
+
+        {
+            text: "Sobald der Ofen vorgeheizt ist, die Weckmänner rundherum mit Milch bestreichen und im vorgeheizten Backofen etwa 18 Minuten backen, bis sie beim Eindrücken an der Seite wieder zurückfedern."
+        },
+
+        {
+            text: "Die Weckmänner aus dem Ofen nehmen und mit einem Pfannenwender vorsichtig vom Backpapier lösen. Mit einem Holzspieß und Nussnougatcreme Augen und einen Mund aufmalen. Anschließend auf einem Gitterrost mindestens 10 Minuten abkühlen lassen.",
+            images: [
+                "images/fluffige-weckmaenner-ohne-ei-fertig.jpeg"
+            ]
+        }
+    ]
+},
+
+{
+    id: "149",
+    title: "Rahmfladen mit Kartoffel und Speck",
+    seoTitle: "Weckmänner ohne Ei – fluffig, weich und einfach selbst gemacht",
+    metaDescription: "Diese fluffigen Weckmänner ohne Ei werden dank Tangzhong besonders weich und saftig. Ein einfaches Rezept mit Hefe, Milch und Butter für die Weihnachtszeit.",
+    keywords: [
+     "Rahmfladen Rezept",
+     "Dinnete Rezept",
+     "Dünne Rezept",
+     "Dinnele Rezept",
+     "Dünnle Rezept",
+     "Dünnet Rezept",
+     "Rahmfladen wie vom Weihnachtsmarkt",
+     "Weihnachtsmarkt Essen",
+     "rustikaler Rahmfladen wie vom Weihnachtsmarkt",
+     "Rezepte mit Speck",
+     "Rezepte mit Kartoffeln",
+     "schwäbische Rezepte",
+     "einfache Rezepte",
+     "Weihnachten Rezepte"
+    ],
+
+    category: ["Backen", "Belegte Backwaren", "Vegetarisch", "ohne Ei", "Feste", "Weihnachten", "Brot und Brötchen"],
+    image: "images/rahmfladen-mit-kartoffeln-und-speck.jpeg",
+    time: {
+        preparation: "10 min",
+        total: "10 min"
+    },
+
+    related: ["18", "144", "119"],
+    portions: "3 große Stück",
+    difficulty: "Einfach",
+    rating: 4.6,
+
+    description: "Wunderbar wattige, weiche, süße, lockere Weckmänner. - Ein tolles Gebäck für den Nikolaustag und die Weihnachtszeit – und das ganz ohne Ei!",
+
+    /* 🍽️ ZUTATEN */
+    ingredients: {
+        "Tangzhong": [
+            "15 g Mehl <i>(Type 405)</i>",
+            "75 ml Milch"
+        ],
+        "Teig": [
+            "285 g Mehl <i>(Type 405)</i>",
+            "1 Pck. Trockenhefe",
+            "50 g weiche Butter",
+            "30 g cremiger Honig",
+            "1/4 TL Zitronenschale",
+            "3 g Salz",
+            "120 ml lauwarme Milch <i>(ca. 30 °C)</i>"
+        ],
+        "Außerdem": [
+            "Rosinen",
+            "Nussnougatcreme"
+        ]
+    },
+
+    /* 👨‍🍳 ZUBEREITUNG */
+    steps: [
+        "Für den Tangzhong das Mehl mit der Milch in einem kleinen Topf vermengen und bei mittlerer Hitze unter ständigem Rühren zu einer dicklichen, puddingartigen Masse kochen. <i>(Am besten gelingt das mit einem kleinen Schneebesen.)</i> Den Topf vom Herd nehmen, die Masse auf einen flachen Teller geben und ohne Abdeckung etwa 5–10 Minuten abkühlen lassen, bis sie ungefähr handwarm ist.",
+
+        "Den Honig mit einem Schneebesen in der lauwarmen Milch auflösen. Mehl, Trockenhefe, Zitronenschale und Salz in einer Schüssel vermengen und in der Mitte eine Mulde formen. Die Honigmilch und den abgekühlten Tangzhong hineingeben. Alles mit einem Löffel vermengen, bis sich die Zutaten einigermaßen verbunden haben.",
+
+        "Den Teig anschließend mit dem Knethaken der Küchenmaschine etwa 3 Minuten auf mittlerer Stufe kneten.",
+
+        "Die Butter in den nächsten 2–3 Minuten nach und nach in kleinen Stücken dazugeben. Den Teig zunächst 2 Minuten auf höchster und anschließend weitere 2–3 Minuten auf mittlerer Stufe kneten, bis er glatt, elastisch und nicht mehr klebrig ist.",
+
+        {
+            text: "Den Teig zu einer Kugel formen, in eine gefettete Schüssel geben, abdecken und im Ofen bei 30 °C etwa 1 Stunde ruhen lassen, bis sich sein Volumen ungefähr verdoppelt hat.",
+            images: [
+                "images/fluffige-weckmaenner-ohne-ei-teig1.jpeg",
+                "images/fluffige-weckmaenner-ohne-ei-teig2.jpeg"
+            ]
+        },
+
+        {
+            text: "Den Teig auf einer Arbeitsfläche ohne zusätzliches Mehl in 3 Teile à etwa 188 g teilen. Von jedem Teigstück ein kleineres Stück à etwa 45 g abtrennen."
+        },
+
+        {
+            text: "Beide Teigstücke jeweils zu einer Kugel rundwirken. Das größere Stück zusätzlich mit den Händen etwas länglich rollen, sodass es eine Art Ei bildet.",
+            images: [
+                "images/fluffige-weckmaenner-ohne-ei-formen1.jpeg",
+                "images/fluffige-weckmaenner-ohne-ei-formen2.jpeg"
+            ]
+        },
+
+        {
+            text: "Das längliche Teigstück etwas flach drücken und mit einer Schere Arme und Beine einschneiden. Die Arme und Beine vorsichtig zurechtrücken und den Körper erneut etwas flach drücken. Auf ein mit Backpapier belegtes Backblech legen. Die kleine Teigkugel ebenfalls flach drücken, als Kopf direkt an den Körper legen und beides nochmals etwas zusammendrücken.",
+            images: [
+                "images/fluffige-weckmaenner-ohne-ei-formen3.jpeg",
+                "images/fluffige-weckmaenner-ohne-ei-formen4.jpeg",
+                "images/fluffige-weckmaenner-ohne-ei-formen5.jpeg",
+                "images/fluffige-weckmaenner-ohne-ei-formen6.jpeg"
+            ]
+        },
+
+        {
+            text: "Die Schritte für die beiden übrigen Weckmänner wiederholen. Nach Belieben Rosinen als Knöpfe in den Teig drücken. Anschließend die Männchen abdecken und im Ofen bei 30 °C weitere 30 Minuten ruhen lassen."
+        },
+
+        {
+            text: "Die Weckmänner aus dem Ofen nehmen und diesen auf 180 °C Ober-/Unterhitze vorheizen."
+        },
+
+        {
+            text: "Sobald der Ofen vorgeheizt ist, die Weckmänner rundherum mit Milch bestreichen und im vorgeheizten Backofen etwa 18 Minuten backen, bis sie beim Eindrücken an der Seite wieder zurückfedern."
+        },
+
+        {
+            text: "Die Weckmänner aus dem Ofen nehmen und mit einem Pfannenwender vorsichtig vom Backpapier lösen. Mit einem Holzspieß und Nussnougatcreme Augen und einen Mund aufmalen. Anschließend auf einem Gitterrost mindestens 10 Minuten abkühlen lassen.",
+            images: [
+                "images/fluffige-weckmaenner-ohne-ei-fertig.jpeg"
+            ]
+        }
     ]
 },
 ]

@@ -582,7 +582,21 @@ return query
 /* =========================================
    SEO
 ========================================= */
+function toIsoDuration(value) {
+    if (!value) return undefined;
 
+    const text = String(value).toLowerCase();
+
+    const hours =
+        Number(text.match(/(\d+)\s*(?:stunden?|std\.?|h)/)?.[1]) || 0;
+
+    const minutes =
+        Number(text.match(/(\d+)\s*(?:minuten?|min\.?)/)?.[1]) || 0;
+
+    if (hours === 0 && minutes === 0) return undefined;
+
+    return `PT${hours ? hours + "H" : ""}${minutes ? minutes + "M" : ""}`;
+}
 if (recipe) {
 
     document.title =
@@ -639,68 +653,55 @@ if (recipe) {
                 "description":
                     recipe.description || "",
 
-                "author": {
+   "author": {
+    "@type": "Organization",
+    "name": "KitchenBreeze"
+},
 
-                    "@type":
-                        "Organization",
+"recipeYield":
+    recipe.portions,
 
-                    "name":
-                        "KitchenBreeze"
+"prepTime":
+    toIsoDuration(recipe.time?.preparation),
 
-                },
+"cookTime":
+    toIsoDuration(
+        recipe.time?.cooking ||
+        recipe.time?.baking
+    ),
 
-                "recipeYield":
-                    recipe.portions,
+"totalTime":
+    toIsoDuration(recipe.time?.total),
 
-                "prepTime":
-                    recipe.time?.preparation,
+"recipeCategory":
+    Array.isArray(recipe.category)
+        ? recipe.category.join(", ")
+        : recipe.category,
 
-                "cookTime":
-                    recipe.time?.cooking ||
-                    recipe.time?.baking ||
-                    undefined,
+"recipeIngredient":
+    recipe.ingredients
+        ? (
+            Array.isArray(recipe.ingredients)
+                ? recipe.ingredients
+                : Object.values(recipe.ingredients).flat()
+        )
+            .map(ingredient =>
+                String(ingredient)
+                    .replace(/<[^>]*>/g, "")
+                    .trim()
+            )
+            .filter(ingredient => ingredient.length > 0)
+        : [],
 
-                "totalTime":
-                    recipe.time?.total,
-
-                "recipeCategory":
-                    Array.isArray(
-                        recipe.category
-                    )
-                        ? recipe.category.join(", ")
-                        : recipe.category,
-
-                "recipeIngredient":
-                    recipe.ingredients
-                        ? (
-                            Array.isArray(
-                                recipe.ingredients
-                            )
-                                ? recipe.ingredients
-                                : Object.values(
-                                    recipe.ingredients
-                                ).flat()
-                        )
-                        : [],
-
-                "recipeInstructions":
-                    Array.isArray(
-                        recipe.steps
-                    )
-                        ? recipe.steps.map(
-                            step => ({
-
-                                "@type":
-                                    "HowToStep",
-
-                                "text":
-                                    typeof step === "string"
-                                        ? step
-                                        : step.text
-
-                            })
-                        )
-                        : []
+"recipeInstructions":
+    Array.isArray(recipe.steps)
+        ? recipe.steps.map(step => ({
+            "@type": "HowToStep",
+            "text": typeof step === "string"
+                ? step
+                : step.text
+        }))
+        : []
 
             });
 
